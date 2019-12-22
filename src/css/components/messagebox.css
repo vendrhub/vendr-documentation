@@ -1,0 +1,11 @@
+.message-box__heading.message-box__heading {
+    @apply mb-2;
+}
+
+.message-box__body.message-box__body > * {
+    @apply mb-2;
+}
+
+.message-box__body.message-box__body > *:last-child{
+    @apply mb-0;
+}

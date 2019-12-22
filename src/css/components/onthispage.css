@@ -1,0 +1,18 @@
+.otp-active.otp-active {
+    @apply font-bold text-brand-blue-dark;
+}
+
+.otp-active.otp-active:hover * {
+    transform: none !important;
+}
+
+.otp-active:before {
+    @apply border-l-2 border-brand-blue-light absolute h-6;
+    content: '';
+    margin-left: calc(-1.5rem - 1px);
+    transition: all .1s ease-in !important;
+}
+
+.ml-4 .otp-active:before {
+    margin-left: calc(-2.5rem - 1px);
+}

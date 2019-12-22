@@ -1,0 +1,175 @@
+const path = require('path')
+const fs = require('fs-extra')
+const yaml = require('js-yaml')
+const glob = require('glob')
+
+const versionedRoutePathPattern = /(\/([a-z0-9]+))?\/([a-z0-9]+)\/(([0-9]+)-([0-9]+)-([0-9]+)(-([a-z0-9]+))?)\//;
+
+const parseVersionedRoute = function (route) {
+    let match = versionedRoutePathPattern.exec(route)
+    if (!match) return null;
+
+    let formattedVersion = `${match[5]}.${match[6]}.${match[7]}`;
+    if (match[8]) formattedVersion += `-${match[8]}`;
+    
+    return {
+        slug: match[3],
+        version:{
+            major: match[5],
+            minor: match[6],
+            patch: match[7],
+            release: match[8],
+            slugified: match[4],
+            formatted: formattedVersion
+        }
+    }
+}
+
+module.exports = function (api) {
+    
+    api.loadSource(({ addCollection, getCollection, addMetadata, store, slugify }) => {
+        
+        // Add global metadata
+        addMetadata('githubUrl', 'https://github.com/vendrhub/vendr-documentation')
+        addMetadata('umbracoUrl', 'https://our.umbraco.com/packages/website-utilities/vendr')
+        addMetadata('twitterUrl', 'https://twitter.com/heyvendr')
+
+        // Setup variables
+        const packageNodes = [];
+        const versionNodes = [];
+        const subPackageNodes = [];
+        const contentPath = path.join(__dirname, 'content')
+
+        // Create collections
+        const versionCollection = addCollection('Version')
+        const packageCollection = addCollection('Package')
+        const subPackageCollection = addCollection('SubPackage')
+
+        // Process packages
+        const packagePathPattern = path.join(contentPath, '**/package.yml')
+        const packageFiles = glob.sync(packagePathPattern)
+
+        packageFiles.forEach((filePath, idx) => {
+
+            let packageRaw = fs.readFileSync(filePath, 'utf8')
+            let package = yaml.safeLoad(packageRaw)
+
+            // Extract useful package info
+            let packagePath = `/${path.relative(contentPath, path.dirname(filePath)).replace(/\\/g, '/')}/`
+            let packageAllVersions = [package.versions.next,package.versions.current,...package.versions.previous].filter(v => v);
+            
+            // Process package versions
+            packageAllVersions.forEach((v,i) => {
+
+                // Create version node
+                let versionNode = {
+                    id: `${package.id}.${v}`,
+                    path: `${packagePath}${slugify(v)}/`,
+                    name: v
+                }
+
+                // Load version links
+                let versionLinksPath = path.join(path.dirname(filePath), v, "links.yml")
+
+                if (fs.existsSync(versionLinksPath)) {
+                    let versionLinksRaw = fs.readFileSync(versionLinksPath, 'utf8')
+                    let versionLinks = yaml.safeLoad(versionLinksRaw)
+                    versionNode.links = versionLinks
+                }
+
+                // Load sub packages
+                let subPackagesPath = path.join(path.dirname(filePath), v, "sub-packages.yml")
+
+                if (fs.existsSync(subPackagesPath)) {
+                    let subPackagesRaw = fs.readFileSync(subPackagesPath, 'utf8')
+                    let subPackages = yaml.safeLoad(subPackagesRaw)
+                    let subPackageRefs = [];
+
+                    subPackages.forEach((subPackage, i) => {
+
+                        // Create sub package node
+                        let subPackageNode = {
+                            id: `${versionNode.id}.${subPackage.alias}`,
+                            path: `${versionNode.path}${subPackage.alias}/`,
+                            name: subPackage.name,
+                            alias: subPackage.alias
+                        }
+
+                        // Load sub-package links
+                        let subPackageLinksPath = path.join(path.dirname(filePath), v, subPackage.alias, "links.yml")
+
+                        if (fs.existsSync(subPackageLinksPath)) {
+                            let subPackageLinksRaw = fs.readFileSync(subPackageLinksPath, 'utf8')
+                            let subPackageLinks = yaml.safeLoad(subPackageLinksRaw)
+                            subPackageNode.links = subPackageLinks
+                        }
+
+                        // Add sub package to collection
+                        subPackageCollection.addNode(subPackageNode)
+
+                        // Add sub package as reference
+                        subPackageRefs.push(store.createReference('SubPackage', `${versionNode.id}.${subPackage.alias}`))
+
+                        // Add to local sub package array
+                        subPackageNodes.push(subPackageNode);
+                    });
+
+                    // Add sub package references to version node
+                    versionNode.subPackages = subPackageRefs;
+
+                }
+
+                // Add version to collection
+                versionCollection.addNode(versionNode)
+
+                // Add to local version nodes array
+                versionNodes.push(versionNode)
+
+            });
+            
+            // Create package node
+            let packageNode = {
+                path: packagePath,
+                ...package,
+            }
+
+            // Convert version info to references
+            if (package.versions.next)
+                packageNode.versions.next = store.createReference('Version', `${package.id}.${package.versions.next}`)
+
+            packageNode.versions.current = store.createReference('Version', `${package.id}.${package.versions.current}`)
+
+            if (package.versions.previous) 
+                packageNode.versions.previous = package.versions.previous.map((v) => store.createReference('Version', `${package.id}.${v}`))
+
+            packageNode.versions.all = [packageNode.versions.next,packageNode.versions.current,...packageNode.versions.previous].filter(v => v)
+
+            // Add package to collection
+            packageCollection.addNode(packageNode)
+
+            // Add to local package nodes array
+            packageNodes.push(packageNode)
+
+        });
+
+        // Inject package / version information into docs pages
+        const docNodes = getCollection('DocPage').data();
+        docNodes.forEach((n, i) => {
+            let packageNode = packageNodes.find(p => n.path.startsWith(p.path))
+            if (packageNode) {
+                let routeInfo = parseVersionedRoute(n.path)
+                let packageId = packageNode.id
+                let versionId = routeInfo ? packageId + '.' + routeInfo.version.formatted : null
+                
+                n.package = packageId
+                n.version = versionId
+
+                let subPackageNode = subPackageNodes.find(p => n.path.startsWith(p.path))
+                if (subPackageNode) {
+                    n.subPackage = subPackageNode.id
+                }
+            }
+        });
+
+    })
+}

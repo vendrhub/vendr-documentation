@@ -1,0 +1,56 @@
+/* purgecss start ignore */
+
+.changelog {
+    @apply w-full block;
+}
+
+.changelog .changelog__row {
+    @apply bg-transparent !important;
+    @apply block;
+}
+
+.changelog tr td {
+    @apply border-0 align-top p-0 block;
+}
+
+.changelog tr td:first-child {
+    @apply mb-4;
+}
+
+.changelog .changelog__category span {
+    @apply py-1 px-4 rounded-lg bg-gray-200 inline-block font-bold mt-1;
+}
+
+.changelog .changelog__category--added span {
+    @apply bg-green-500 text-white;
+}
+.changelog .changelog__category--fixed span {
+    @apply bg-purple-500 text-white;
+}
+.changelog .changelog__category--changed span {
+    @apply bg-blue-500 text-white;
+}
+.changelog .changelog__category--security span,
+.changelog .changelog__category--breaking span {
+    @apply bg-red-500 text-white;
+}
+.changelog .changelog__category--removed span {
+    @apply bg-orange-500 text-white;
+}
+
+@screen lg {
+    .changelog {
+        @apply table;
+    }
+    .changelog .changelog__row {
+        @apply table-row;
+    }
+    .changelog tr td {
+        @apply table-cell;
+    }
+    .changelog tr td:first-child {
+        @apply text-right pr-4 mb-0;
+    }
+}
+
+/* purgecss end ignore */

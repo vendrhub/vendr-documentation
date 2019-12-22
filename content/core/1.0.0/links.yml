@@ -1,0 +1,68 @@
+- title: Getting Started
+  items:
+    - title: Overview
+      link: /getting-started/
+    - title: Installation
+      link: /getting-started/installation
+    - title: Configuration
+      link: /getting-started/configuration
+
+- title: Tutorials
+  items:
+    - title: Overview
+      link: /getting-started/
+    - title: Setting up a Store
+      link: /getting-started/
+
+- title: How-To Guides
+  items:
+    - title: Overview
+      link: /getting-started/
+    - title: How to create a discount
+      link: /getting-started/
+    - title: How to create a gift card
+      link: getting-started/
+    - title: How to create a payment provider
+      link: /getting-started/
+
+- title: Key Concepts
+  items:
+    - title: Overview
+      link: /getting-started/
+    - title: Dependency Injection
+      link: /getting-started/
+    - title: Reading and Writing
+      link: /getting-started/
+    - title: Unit of Work
+      link: /getting-started/
+    - title: Events
+      link: /getting-started/
+    - title: Pipelines
+      link: /getting-started/
+    - title: Calculators
+      link: /getting-started/
+    - title: Payment Providers
+      link: /getting-started/
+
+- title: Reference
+  items:
+    - title: Overview
+      link: /getting-started/
+    - title: Order
+      link: /getting-started/
+    - title: Currency
+      link: /getting-started/
+    - title: Tax Class
+      link: /getting-started/
+    - title: Store
+      link: /getting-started/
+    - title: Session
+      link: /getting-started/
+    - title: Events
+      link: /getting-started/
+    - title: Pipelines
+      link: /getting-started/
+    - title: Calculators
+      link: /getting-started/
+    - title: Payment Providers
+      link: /getting-started/

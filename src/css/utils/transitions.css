@@ -1,0 +1,35 @@
+.trans {
+    transition: all .25s ease-in-out;
+}
+
+.trans-color {
+    transition: color .25s ease-in-out;
+}
+
+.trans-bg {
+    transition: background-color .25s ease-in-out;
+}
+
+.trans-opacity {
+    transition: opacity .25s ease-in-out;
+}
+
+.trans-transform {
+    transition: transform .25s ease-in-out;
+}
+
+.trans-slow {
+    transition-duration: .5s;
+}
+
+.trans-slower {
+    transition-duration: .75s;
+}
+
+.trans-fast {
+    transition-duration: .15s;
+}
+
+.trans-faster {
+    transition-duration: .075s;
+}

@@ -1,0 +1,23 @@
+.table-wrapper {
+    @apply overflow-x-auto mb-8;
+}
+
+.table-wrapper table {
+    @apply mb-0;
+}
+
+/*
+.table-wrapper td,
+.table-wrapper th {
+    word-wrap: break-word;
+    min-width: 230px;
+}
+
+@screen lg {
+    .table-wrapper td,
+    .table-wrapper th {
+        word-wrap: normal;
+        min-width: 0;
+    } 
+}
+*/

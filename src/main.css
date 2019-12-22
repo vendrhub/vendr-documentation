@@ -1,0 +1,61 @@
+  
+@font-face {
+    font-family: 'Nexa';
+    src: url('/assets/fonts/NexaSR-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('/assets/fonts/NexaSR-ExtraBold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@import "css/components/doc.css";
+@import "css/components/container.css";
+@import "css/components/logo.css";
+@import "css/components/markdown.css";
+@import "css/components/changelog.css";
+@import "css/components/onthispage.css";
+@import "css/components/messagebox.css";
+@import "css/components/table.css";
+@import "css/components/tiles.css";
+
+@tailwind utilities;
+
+@import "css/utils/object-fit.css";
+@import "css/utils/transitions.css";
+
+@variants responsive, hover, group-hover {
+  .translate-r-5px {
+    transform: translateX(5px) !important;
+  }
+  .translate-r-0 {
+    transform: translateX(0) !important;
+  }
+}
+
+@supports (position: sticky) {
+    @media (min-width: theme('screens.lg')) {
+        .sticky\?lg\:h-screen {
+            height: 100vh !important;
+        }
+        .sticky\?lg\:h-\(screen-16\) {
+            height: calc(100vh - 4rem) !important;
+        }
+    }
+}
+
+.transition {
+    transition: all .1s ease-in !important;
+}
+
+.appearance-none::-ms-expand {
+    display: none !important;
+}

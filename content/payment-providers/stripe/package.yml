@@ -1,0 +1,19 @@
+id: Vendr.PaymentProviders.Stripe
+name: Stripe
+type: PaymentProvider
+description: 
+supportedBy: core
+providers:
+  - name: Stripe Checkout (One Time)
+    alias: stripe-checkout-onetime
+  - name: Stripe Checkout (Subscription)
+    alias: stripe-checkout-subscription
+links:
+  - title: Versions
+    link: /versions/
+  - title: Changelog
+    link: /changelog/
+versions:
+  current: 1.0.0
+  previous: 
+    - 0.1.0

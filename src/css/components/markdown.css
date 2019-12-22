@@ -1,0 +1,125 @@
+/* purgecss start ignore */
+
+.markdown p,
+.markdown ol,
+.markdown ul,
+.markdown table,
+.markdown blockquote {
+    @apply mb-6;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5 {
+    @apply mb-1 text-brand-blue-dark pt-24 -mt-24;
+}
+
+.markdown h2 {
+    @apply text-xl font-bold mb-4;/* border-b-2 border-gray-200 pb-3 mb-4; */
+}
+
+.markdown h3 {
+    @apply text-lg font-medium mb-4; 
+}
+
+.markdown h2 > a,
+.markdown h3 > a,
+.markdown h4 > a,
+.markdown h5 > a {
+    @apply absolute -ml-5 text-gray-400 font-normal leading-normal pr-2 text-lg;
+}
+
+.markdown h2:hover > a,
+.markdown h3:hover > a,
+.markdown h4:hover > a,
+.markdown h5:hover > a {
+    @apply inline-block;
+}
+
+.markdown h2 > a:hover,
+.markdown h3 > a:hover,
+.markdown h4 > a:hover,
+.markdown h5 > a:hover {
+    @apply text-brand-blue-light;
+}
+
+.markdown a {
+    @apply text-brand-blue-light font-medium;
+    transition: all .1s ease-in !important;
+}
+
+.markdown a:hover,
+.markdown a:focus {
+    @apply text-brand-blue-dark underline;
+}
+
+.markdown li {
+    @apply ml-6;
+}
+
+/* .markdown li + li {
+    @apply mt-1;
+} */
+
+.markdown li:before {
+    @apply text-brand-blue-light font-bold inline-block text-2xl leading-none absolute -ml-5;
+    content: "\2022";
+}
+
+.markdown ol {
+    counter-reset: li;
+}
+
+.markdown ol li {
+    counter-increment: li
+}
+
+.markdown ol li:before {
+    @apply text-sm text-right -ml-12;
+    line-height: 1.75;
+    width: 2rem;
+    content: counter(li);
+}
+
+.markdown code[class*="language-"], 
+.markdown pre[class*="language-"] {
+    @apply mt-0 mb-8 rounded-lg;
+}
+
+.markdown p code[class*="language-"] {
+    @apply text-indigo-600 !important;
+    @apply rounded px-1 py-0;
+    background: rgba(74, 85, 104,.1);
+}
+
+.markdown table {
+    @apply border-b-2;
+}
+
+.markdown table td,
+.markdown table th {
+    @apply border-t border-b border-gray-300 px-4 py-2 text-base text-left;
+}
+
+.markdown table thead th {
+    @apply border-t-0 border-b-2;
+}
+
+.markdown table tr:nth-child(2n) {
+    @apply bg-gray-100;
+}
+
+.markdown hr {
+    @apply mb-8 border-t-2 border-gray-200;
+}
+
+.markdown blockquote {
+    @apply border-l-4 border-gray-300 bg-gray-100 px-4 py-2 italic;
+}
+
+.markdown blockquote *:last-child {
+    @apply mb-0;
+}
+
+/* purgecss end ignore */
