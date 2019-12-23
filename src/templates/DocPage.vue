@@ -26,7 +26,9 @@
 
     <template slot="sidebar">
       <core-back-link v-if="$page.doc.package && $page.doc.package.type == 'PaymentProvider'" />
-      <package-info :package-info="$page.doc.package" :version-info="$page.doc.version" />
+      <package-info :package-info="$page.doc.package" 
+        :version-info="$page.doc.version"
+        :sub-package-info="$page.doc.subPackage" />
       <sub-package-switcher 
           v-if="$page.doc.version && $page.doc.version.subPackages"
           :sub-packages="$page.doc.version.subPackages"
