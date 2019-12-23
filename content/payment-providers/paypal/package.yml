@@ -3,9 +3,6 @@ name: PayPal
 type: PaymentProvider
 description: 
 supportedBy: core
-providers:
-  - name: PayPal
-    alias: paypal
 links:
   - title: Versions
     link: /versions/
