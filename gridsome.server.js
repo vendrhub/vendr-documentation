@@ -183,6 +183,8 @@ module.exports = function (api, options) {
             let redirectsJsonPath = path.join(__dirname, 'dist', '_redirects.json')  
             fs.writeFile(redirectsJsonPath, JSON.stringify(redirects))
 
+            console.log("Redirects written")
+
         })
 
     })
