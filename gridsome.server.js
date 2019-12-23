@@ -188,10 +188,17 @@ module.exports = function (api) {
     })
 
     // Write Netlify redirects
-    api.afterBuild(function() {
-        let redirectsPath = path.join(__dirname, 'dist', '_redirects')            
+    api.afterBuild(function(options) {
+        let redirectsPath = path.join(__dirname, 'dist', '_redirects')
+        if (fs.exists(redirectsPath))
+            fs.unlinkSync(redirectsPath)
+
+        let pathPrefix = options.config.pathPrefix || ''
+        if (pathPrefix !== '') 
+            fs.appendFileSync(redirectsPath, `/ ${pathPrefix}/ 302\n`)
+            
         redirects.forEach((r,i) => {
-            fs.appendFileSync(redirectsPath, `${r.from} ${r.to} 302\n`)
+            fs.appendFileSync(redirectsPath, `${pathPrefix}${r.from} ${pathPrefix}${r.to} 302\n`)
         })
     })
 }

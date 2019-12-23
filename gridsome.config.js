@@ -13,6 +13,8 @@ const siteUrl = process.env.NODE_ENV !== 'production'
 module.exports = {
   siteName: 'Vendr Documentation',
   siteUrl: siteUrl,
+  pathPrefix: '/docs',
+  outputDir: '/dist/docs',
   icon: {
     favicon: './src/favicon.png',
     touchicon: {
@@ -23,9 +25,7 @@ module.exports = {
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
   },
   plugins: [
     {
