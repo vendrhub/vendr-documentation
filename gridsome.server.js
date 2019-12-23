@@ -148,6 +148,14 @@ module.exports = function (api, options) {
 
         });
 
+        // Sort redirects by 'from' URL
+        redirects.sort((a, b) => (a.from > b.from) ? 1 : -1)
+
+        // Pass redirects to front end for registering with VueRouter
+        api.setClientOptions({
+            redirects: redirects
+        })
+
         // Inject package / version information into docs pages
         const docNodes = getCollection('DocPage').data();
         docNodes.forEach((n, i) => {
@@ -169,23 +177,11 @@ module.exports = function (api, options) {
 
     })
 
-    // Write redirects
+    // Write Netlify redirects
     api.afterBuild(function() {
-
-        // Sort redirects by 'from' URL
-        redirects.sort((a, b) => (a.from > b.from) ? 1 : -1)
-
-        // Netlify redirects
         let redirectsPath = path.join(__dirname, 'dist', '_redirects')            
         redirects.forEach((r,i) => {
             fs.appendFileSync(redirectsPath, `${r.from} ${r.to} 302\n`)
         })
-
-        // JS redirects
-        let redirectsJsonPath = path.join(__dirname, 'dist', 'redirects.json')  
-        fs.writeFile(redirectsJsonPath, JSON.stringify(redirects))
-
-        console.log("Redirect files written")
-
     })
 }

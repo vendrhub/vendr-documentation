@@ -1,14 +1,9 @@
 const tailwind = require('tailwindcss')
-const purgecss = require('@fullhuman/postcss-purgecss')
 
 // PostCSS config
 const postcssPlugins = [
 	tailwind(),
 ]
-
-// if (process.env.NODE_ENV === 'production') {
-//   postcssPlugins.push(purgecss())
-// }
 
 // Export
 module.exports = {
