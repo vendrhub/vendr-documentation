@@ -190,13 +190,13 @@ module.exports = function (api) {
     // Write Netlify redirects
     api.afterBuild(function(options) {
         let redirectsPath = path.join(__dirname, 'dist', '_redirects')
-        if (fs.exists(redirectsPath))
+        if (fs.existsSync(redirectsPath))
             fs.unlinkSync(redirectsPath)
 
         let pathPrefix = options.config.pathPrefix || ''
         if (pathPrefix !== '') 
             fs.appendFileSync(redirectsPath, `/ ${pathPrefix}/ 302\n`)
-            
+
         redirects.forEach((r,i) => {
             fs.appendFileSync(redirectsPath, `${pathPrefix}${r.from} ${pathPrefix}${r.to} 302\n`)
         })
