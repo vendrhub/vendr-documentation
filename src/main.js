@@ -16,7 +16,7 @@ export default function (Vue, { router, head, isClient }) {
 
   if (isClient) {
     axios
-      .get('/_redirects.json')
+      .get('/redirects.json')
       .then(resp => {
         if (resp.status === 200) {
           router.addRoutes(resp.data.map(r => {
