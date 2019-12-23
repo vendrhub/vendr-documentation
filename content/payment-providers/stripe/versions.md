@@ -15,7 +15,7 @@ Next version of the Stripe payment provider documentation
 </template>
 <template v-else>
 
-There is currently no next version of the Stripe payment provider documentation
+There is currently no next version of the Stripe payment provider documentation available
 
 </template>
 
@@ -35,6 +35,6 @@ Previous versions of the Stripe payment provider documentation
 </template>
 <template v-else>
 
-There are currently no previous versions of the Stripe payment provider documentation
+There are currently no previous versions of the Stripe payment provider documentation available
 
 </template>

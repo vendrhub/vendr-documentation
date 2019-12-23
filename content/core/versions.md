@@ -15,7 +15,7 @@ Next version of the Vendr product documentation
 </template>
 <template v-else>
 
-There is currently no next version of the Vendr product documentation
+There is currently no next version of the Vendr product documentation available
 
 </template>
 
@@ -35,6 +35,6 @@ Previous versions of the Vendr product documentation
 </template>
 <template v-else>
 
-There are currently no previous versions of the Vendr product documentation
+There are currently no previous versions of the Vendr product documentation available
 
 </template>
