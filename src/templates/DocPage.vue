@@ -174,7 +174,7 @@ export default {
         })
       }
       
-      // Now try package links
+      // Try package links
       if (this.$page.doc.package && this.$page.doc.package.links) {
         return [{
           title: this.$page.doc.package.name,
@@ -208,8 +208,16 @@ export default {
   },
   metaInfo () {
     const { title, headings } = this.$page.doc
+    let metaTitle = (title || (headings.length ? headings[0].value : undefined))
+    if (this.$page.doc.subPackage && this.$page.doc.subPackage.path.replace(/\/$/, '') !== this.$route.path.replace(/\/$/, ''))
+    {
+      metaTitle += " - " + this.$page.doc.subPackage.name
+    }
+    if (this.$page.doc.package && this.$page.doc.package.type !== 'Product') {
+      metaTitle += " - " + this.$page.doc.package.name
+    }
     return {
-      title: title || (headings.length ? headings[0].value : undefined)
+      title: metaTitle
     }
   }
 }
