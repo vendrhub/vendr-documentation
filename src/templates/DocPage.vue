@@ -217,7 +217,10 @@ export default {
       metaTitle += " - " + this.$page.doc.package.name
     }
     return {
-      title: metaTitle
+      title: metaTitle,
+      link: [
+        { rel: 'canonical', href: this.$url(this.$page.doc.path) }
+      ]
     }
   }
 }

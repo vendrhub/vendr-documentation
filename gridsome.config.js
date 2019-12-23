@@ -5,9 +5,14 @@ const postcssPlugins = [
 	tailwind(),
 ]
 
+const siteUrl = process.env.NODE_ENV !== 'production'
+  ? "http://localhost:8080"
+  : "https://getvendr.net";
+
 // Export
 module.exports = {
   siteName: 'Vendr Documentation',
+  siteUrl: siteUrl,
   icon: {
     favicon: './src/favicon.png',
     touchicon: {
@@ -28,7 +33,6 @@ module.exports = {
       options: {
         index: ['README'],
         baseDir: './content/',
-        pathPrefix: '/',
         typeName: 'DocPage',
         template: './src/templates/DocPage.vue',
         refs: {

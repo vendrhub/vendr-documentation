@@ -3,8 +3,8 @@ const fs = require('fs-extra')
 const yaml = require('js-yaml')
 const glob = require('glob')
 
-module.exports = function (api, options) {
-    
+module.exports = function (api) {
+
     // Setup variables
     const packageNodes = [];
     const versionNodes = [];
@@ -121,7 +121,7 @@ module.exports = function (api, options) {
             
             // Create package node
             let packageNode = {
-                path: packagePath,
+                path: `${packagePath}`,
                 ...package,
             }
 
@@ -150,6 +150,16 @@ module.exports = function (api, options) {
 
         // Sort redirects by 'from' URL
         redirects.sort((a, b) => (a.from > b.from) ? 1 : -1)
+
+        // Prefix paths
+        // if (pathPrefix) {
+        //     redirects.forEach((r) => {
+        //         if (r.from.startsWith('/'))
+        //             r.from = pathPrefix + r.from
+        //         if (r.to.startsWith('/'))
+        //             r.to = pathPrefix + r.to
+        //     })
+        // }
 
         // Pass redirects to front end for registering with VueRouter
         api.setClientOptions({
