@@ -66,6 +66,7 @@ query DocPage($id: ID!) {
       name,
       path,
       type,
+      supportedBy,
       links {
         title,
         link
