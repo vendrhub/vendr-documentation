@@ -1,4 +1,0 @@
-# Explicit redirects
-/ /core/
-
-# Dynamic redirects (created at build time)

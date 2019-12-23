@@ -3,30 +3,19 @@ const fs = require('fs-extra')
 const yaml = require('js-yaml')
 const glob = require('glob')
 
-const versionedRoutePathPattern = /(\/([a-z0-9]+))?\/([a-z0-9]+)\/(([0-9]+)-([0-9]+)-([0-9]+)(-([a-z0-9]+))?)\//;
-
-const parseVersionedRoute = function (route) {
-    let match = versionedRoutePathPattern.exec(route)
-    if (!match) return null;
-
-    let formattedVersion = `${match[5]}.${match[6]}.${match[7]}`;
-    if (match[8]) formattedVersion += `-${match[8]}`;
+module.exports = function (api, options) {
     
-    return {
-        slug: match[3],
-        version:{
-            major: match[5],
-            minor: match[6],
-            patch: match[7],
-            release: match[8],
-            slugified: match[4],
-            formatted: formattedVersion
-        }
-    }
-}
+    // Setup variables
+    const packageNodes = [];
+    const versionNodes = [];
+    const subPackageNodes = [];
 
-module.exports = function (api) {
-    
+    // Define redirects
+    // Will get generated into netlify + vue redirects
+    const redirects = [
+        { from: '/', to : '/core/' }
+    ];
+
     api.loadSource(({ addCollection, getCollection, addMetadata, store, slugify }) => {
         
         // Add global metadata
@@ -35,9 +24,6 @@ module.exports = function (api) {
         addMetadata('twitterUrl', 'https://twitter.com/heyvendr')
 
         // Setup variables
-        const packageNodes = [];
-        const versionNodes = [];
-        const subPackageNodes = [];
         const contentPath = path.join(__dirname, 'content')
 
         // Create collections
@@ -117,6 +103,12 @@ module.exports = function (api) {
                     // Add sub package references to version node
                     versionNode.subPackages = subPackageRefs;
 
+                    // Define sub package redirect
+                    if (subPackageRefs.length > 0) {
+                        let firstSubPackageNode = subPackageNodes.find(p => p.id === subPackageRefs[0].id)
+                        redirects.push({ from: versionNode.path, to: firstSubPackageNode.path })
+                    }
+
                 }
 
                 // Add version to collection
@@ -144,6 +136,10 @@ module.exports = function (api) {
 
             packageNode.versions.all = [packageNode.versions.next,packageNode.versions.current,...packageNode.versions.previous].filter(v => v)
 
+            // Define current version redirect
+            let currentVersionNode = versionNodes.find(v => v.id === packageNode.versions.current.id)
+            redirects.push({ from: packagePath, to: currentVersionNode.path })
+
             // Add package to collection
             packageCollection.addNode(packageNode)
 
@@ -152,24 +148,42 @@ module.exports = function (api) {
 
         });
 
+        // Sort redirects by 'from' URL
+        redirects.sort((a, b) => (a.from > b.from) ? 1 : -1)
+
         // Inject package / version information into docs pages
         const docNodes = getCollection('DocPage').data();
         docNodes.forEach((n, i) => {
             let packageNode = packageNodes.find(p => n.path.startsWith(p.path))
             if (packageNode) {
-                let routeInfo = parseVersionedRoute(n.path)
-                let packageId = packageNode.id
-                let versionId = routeInfo ? packageId + '.' + routeInfo.version.formatted : null
-                
-                n.package = packageId
-                n.version = versionId
+                n.package = packageNode.id
 
-                let subPackageNode = subPackageNodes.find(p => n.path.startsWith(p.path))
-                if (subPackageNode) {
-                    n.subPackage = subPackageNode.id
+                let versionNode = versionNodes.find(v => n.path.startsWith(v.path))
+                if (versionNode) {
+                    n.version = versionNode.id
+
+                    let subPackageNode = subPackageNodes.find(p => n.path.startsWith(p.path))
+                    if (subPackageNode) {
+                        n.subPackage = subPackageNode.id
+                    }
                 }
             }
         });
+
+        // Write redirects
+        api.afterBuild(function() {
+
+            // Netlify redirects
+            let redirectsPath = path.join(__dirname, 'dist', '_redirects')            
+            redirects.forEach((r,i) => {
+                fs.appendFileSync(redirectsPath, `${r.from} ${r.to} 302\n`)
+            })
+
+            // JS redirects
+            let redirectsJsonPath = path.join(__dirname, 'dist', '_redirects.json')  
+            fs.writeFile(redirectsJsonPath, JSON.stringify(redirects))
+
+        })
 
     })
 }

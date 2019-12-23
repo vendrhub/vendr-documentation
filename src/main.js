@@ -1,6 +1,8 @@
 import '~/main.css'
 import '~/css/vendor/prism-vscodedark.css'
 
+import axios from 'axios'
+
 import DefaultLayout from '~/layouts/Layout.vue'
 import MessageBox from '~/components/MessageBox.vue'
 import Changelog from '~/components/Changelog.vue'
@@ -11,6 +13,18 @@ import WorkInProgressMessageBox from '~/components/WorkInProgressMessageBox.vue'
 import Badge from '~/components/Badge.vue' 
 
 export default function (Vue, { router, head, isClient }) {
+
+  if (isClient) {
+    axios
+      .get('/_redirects.json')
+      .then(resp => {
+        if (resp.status === 200) {
+          router.addRoutes(resp.data.map(r => {
+            return { path: r.from, redirect: r.to }
+          }))
+        }
+      })
+  }
 
   head.link.push({
     rel: 'stylesheet',
