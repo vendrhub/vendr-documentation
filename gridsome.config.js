@@ -1,20 +1,31 @@
 const tailwind = require('tailwindcss')
 
+// Global settings
+const isProduction = process.env.NODE_ENV === 'production'
+
+const siteUrl = !isProduction
+  ? "http://localhost:8080"
+  : "https://getvendr.net";
+
+const pathPrefix = !isProduction
+  ? ""
+  : "/docs";
+
+const outputDir = !isProduction
+  ? "/dist"
+  : "/dist/docs";
+
 // PostCSS config
 const postcssPlugins = [
 	tailwind(),
 ]
 
-const siteUrl = process.env.NODE_ENV !== 'production'
-  ? "http://localhost:8080"
-  : "https://getvendr.net";
-
 // Export
 module.exports = {
   siteName: 'Vendr Documentation',
   siteUrl: siteUrl,
-  pathPrefix: '/docs',
-  outputDir: '/dist/docs',
+  pathPrefix: pathPrefix,
+  outputDir: outputDir,
   icon: {
     favicon: './src/favicon.png',
     touchicon: {

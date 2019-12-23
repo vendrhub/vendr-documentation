@@ -122,6 +122,16 @@ query DocPage($id: ID!) {
 }
 </page-query>
 
+<static-query>
+query {
+  metadata {
+    siteName
+    siteDescription,
+    siteUrl
+  }
+}
+</static-query>
+
 <script>
 import Layout from '../layouts/Layout'
 import CoreBackLink from '../components/CoreBackLink'
@@ -219,7 +229,7 @@ export default {
     return {
       title: metaTitle,
       link: [
-        { rel: 'canonical', href: this.$url(this.$page.doc.path) }
+        { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }
       ]
     }
   }
