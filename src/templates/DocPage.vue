@@ -229,6 +229,9 @@ export default {
     }
     return {
       title: metaTitle,
+      meta: [
+        { name: 'twitter:title', content: metaTitle }
+      ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }
       ]
