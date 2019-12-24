@@ -98,6 +98,10 @@ export default {
         this.$('#docsearch').trigger("focus")
       })
 
+      this.$("body").on("click", "#sidebar a", function(e) {
+        self.closeSidebar()
+      })
+
     },
     methods : {
 
