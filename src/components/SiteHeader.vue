@@ -95,7 +95,7 @@ export default {
 
       Mousetrap.bind('/', function (e) {
         e.preventDefault()
-        this.$('#docsearch').trigger("focus")
+        self.$('#docsearch').trigger("focus")
       })
 
     },
