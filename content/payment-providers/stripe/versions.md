@@ -10,7 +10,9 @@ import VersionsList from '~/components/VersionsList.vue'
 
 Next version of the Stripe payment provider documentation
 
-<versions-list :versions="[$page.doc.package.docVersions.next]" />
+<div>
+    <versions-list :versions="[$page.doc.package.docVersions.next]" />
+</div>
 
 </template>
 <template v-else>
@@ -22,9 +24,11 @@ There is currently no next version of the Stripe payment provider documentation 
 ## Current Version
 Current version of the Stripe payment provider documentation 
 
-<versions-list :versions="[$page.doc.package.docVersions.current]"
-    :next-version="$page.doc.package.packageVersion"
-    :next-version-inclusive="true" />
+<div>
+    <versions-list :versions="[$page.doc.package.docVersions.current]"
+        :next-version="$page.doc.package.packageVersion"
+        :next-version-inclusive="true" />
+</div>
 
 
 ## Previous Versions
@@ -32,8 +36,10 @@ Current version of the Stripe payment provider documentation
 
 Previous versions of the Stripe payment provider documentation
 
-<versions-list :versions="$page.doc.package.docVersions.previous"
-    :next-version="$page.doc.package.docVersions.current.name" />
+<div>
+    <versions-list :versions="$page.doc.package.docVersions.previous"
+        :next-version="$page.doc.package.docVersions.current.name" />
+</div>
 
 </template>
 <template v-else>
