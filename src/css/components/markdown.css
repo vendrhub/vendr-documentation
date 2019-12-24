@@ -93,21 +93,72 @@
     background: rgba(74, 85, 104,.1);
 }
 
-.markdown table {
+.markdown table,
+.markdown table tbody, 
+.markdown table tr, 
+.markdown table td,
+.markdown table th {
+    @apply block;
+}
+
+.markdown table th {
     @apply border-b-2;
 }
 
 .markdown table td,
 .markdown table th {
-    @apply border-t border-b border-gray-300 px-4 py-2 text-base text-left;
+    @apply border-t border-gray-300 px-4 py-2 text-base text-left;
 }
 
-.markdown table thead th {
-    @apply border-t-0 border-b-2;
+.markdown table td[data-heading] {
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;  
+}
+
+.markdown table td[data-heading]:before {
+    @apply font-bold pr-4 text-sm;
+    content: attr(data-heading);
+    overflow: hidden;
+    flex: 0 0 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: normal;
+}
+
+.markdown table thead {
+    @apply hidden;
 }
 
 .markdown table tr:nth-child(2n) {
     @apply bg-gray-100;
+}
+
+@screen md {
+    .markdown table {
+        display: table;
+    }
+    .markdown table tr {
+        display: table-row;
+    }
+    .markdown table td,
+    .markdown table th,
+    .markdown table td[data-heading] {
+        display: table-cell;
+    }
+    .markdown table tbody {
+        display: table-row-group;
+    }
+    .markdown table thead {
+        display: table-header-group;
+    }
+    .markdown table thead th {
+        @apply border-t-0 border-b-2;
+    }
+    .markdown table td[data-heading]:before {
+        display: none;
+    }
 }
 
 .markdown hr {

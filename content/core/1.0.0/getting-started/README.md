@@ -64,8 +64,6 @@ Nunc in risus rhoncus, laoreet ipsum sit amet, feugiat lacus. Suspendisse et ull
 ## Sub Heading 2
 Nec vehicula dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus sem orci, non semper dolor molestie vitae. Quisque commodo luctus dui. Quisque rutrum, neque vel malesuada gravida, lacus ligula imperdiet nulla, tincidunt faucibus lectus purus ut magna. Pellentesque congue enim at erat facilisis egestas. Donec tempus erat nec pharetra malesuada. Sed sapien orci, ultricies quis augue in, consequat auctor erat. Ut auctor quam ante, vel posuere tellus molestie quis. Integer lacinia lorem ut felis viverra, ac vestibulum sem semper. Sed pharetra leo nunc, in pharetra augue vehicula et. Nam purus dolor, dignissim nec enim sit amet, suscipit mattis velit.
 
-<div class="table-wrapper">
-
 | Key | Description |
 | --- | ----------- |
 | form_url | The url of the page with the Stripe payment form on - e.g. /payment/ |
@@ -75,8 +73,6 @@ Nec vehicula dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspe
 | billing_address_line2_property_alias | The alias of the property containing line 2 of the billing address - e.g. addressLine2. Used by Stripe for Radar verification. |
 | billing_city_property_alias | The alias of the property containing the billing address city - e.g. city. Used by Stripe for Radar verification. | 
 | billing_state_property_alias | The alias of the property containing the billing address state - e.g. state. Used by Stripe for Radar verification. | 
-
-</div>
 
 ### Sub Sub Heading
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, consequat at laoreet id, interdum et lacus. Aenean tincidunt sagittis odio, ac finibus lacus auctor at. Duis iaculis ultrices purus ac consectetur. Nunc in risus rhoncus, laoreet ipsum sit amet, feugiat lacus. Suspendisse et ullamcorper turpis, in ultrices felis. Sed tristique viverra condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer congue eget risus eu laoreet.

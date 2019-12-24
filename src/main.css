@@ -24,7 +24,6 @@
 @import "css/components/changelog.css";
 @import "css/components/onthispage.css";
 @import "css/components/messagebox.css";
-@import "css/components/table.css";
 @import "css/components/tiles.css";
 
 @tailwind utilities;

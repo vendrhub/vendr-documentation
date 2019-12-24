@@ -52,7 +52,9 @@ module.exports = {
           subPackage: 'SubPackage',
         },
         plugins: [
-          '@gridsome/remark-prismjs'
+          '@gridsome/remark-prismjs',
+          'gridsome-plugin-remark-youtube',
+          'remark-responsive-tables'
         ],
         remark: {
           autolinkHeadings: {
