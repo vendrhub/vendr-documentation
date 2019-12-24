@@ -98,10 +98,6 @@ export default {
         this.$('#docsearch').trigger("focus")
       })
 
-      this.$("body").on("click", "#sidebar a", function(e) {
-        self.closeSidebar()
-      })
-
     },
     methods : {
 
@@ -119,6 +115,11 @@ export default {
         this.$('#content-wrapper').removeClass('overflow-hidden max-h-screen fixed')
       }
 
+    },
+    watch: {
+      $route (to, from){
+        this.closeSidebar();
+      }
     }
 }
 </script>
