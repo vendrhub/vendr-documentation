@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="edge in $static.paymentProviders.edges" :key="edge.node.id">
-                <strong>{{ edge.node.name }} - v{{ edge.node.versions.current }}</strong>
+                <strong>{{ edge.node.name }} - v{{ edge.node.docVersions.current }}</strong>
             </li>
         </ul>
     </div>
@@ -17,7 +17,7 @@ query PackageInfo {
         slug,
         name,
         type,
-        versions {
+        docVersions {
           next,
           current,
           previous

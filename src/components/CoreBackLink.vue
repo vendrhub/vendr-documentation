@@ -1,11 +1,11 @@
 <template>
-    <back-link :href="$static.corePackage.versions.current.path" label="Back to Core Docs" />
+    <back-link :href="$static.corePackage.docVersions.current.path" label="Back to Core Docs" />
 </template>
 
 <static-query>
 query {
     corePackage: package(id: "Vendr") {
-        versions {
+        docVersions {
             current {
                 path
             }

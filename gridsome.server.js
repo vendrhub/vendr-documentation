@@ -7,8 +7,8 @@ module.exports = function (api) {
 
     // Setup variables
     const packageNodes = [];
-    const versionNodes = [];
     const subPackageNodes = [];
+    const docVersionNodes = [];
 
     // Define redirects
     // Will get generated into netlify + vue redirects
@@ -27,7 +27,7 @@ module.exports = function (api) {
         const contentPath = path.join(__dirname, 'content')
 
         // Create collections
-        const versionCollection = addCollection('Version')
+        const docVersionCollection = addCollection('DocVersion')
         const packageCollection = addCollection('Package')
         const subPackageCollection = addCollection('SubPackage')
 
@@ -42,25 +42,25 @@ module.exports = function (api) {
 
             // Extract useful package info
             let packagePath = `/${path.relative(contentPath, path.dirname(filePath)).replace(/\\/g, '/')}/`
-            let packageAllVersions = [package.versions.next,package.versions.current,...package.versions.previous].filter(v => v);
+            let packageAllDocsVersions = [package.docVersions.next,package.docVersions.current,...package.docVersions.previous].filter(v => v);
             
-            // Process package versions
-            packageAllVersions.forEach((v,i) => {
+            // Process package doc versions
+            packageAllDocsVersions.forEach((v,i) => {
 
-                // Create version node
-                let versionNode = {
+                // Create doc version node
+                let docVersionNode = {
                     id: `${package.id}.${v}`,
                     path: `${packagePath}${slugify(v)}/`,
                     name: v
                 }
 
-                // Load version links
-                let versionLinksPath = path.join(path.dirname(filePath), v, "links.yml")
+                // Load doc version links
+                let docVersionLinksPath = path.join(path.dirname(filePath), v, "links.yml")
 
-                if (fs.existsSync(versionLinksPath)) {
-                    let versionLinksRaw = fs.readFileSync(versionLinksPath, 'utf8')
-                    let versionLinks = yaml.safeLoad(versionLinksRaw)
-                    versionNode.links = versionLinks
+                if (fs.existsSync(docVersionLinksPath)) {
+                    let docVersionLinksRaw = fs.readFileSync(docVersionLinksPath, 'utf8')
+                    let docVersionLinks = yaml.safeLoad(docVersionLinksRaw)
+                    docVersionNode.links = docVersionLinks
                 }
 
                 // Load sub packages
@@ -75,8 +75,8 @@ module.exports = function (api) {
 
                         // Create sub package node
                         let subPackageNode = {
-                            id: `${versionNode.id}.${subPackage.alias}`,
-                            path: `${versionNode.path}${subPackage.alias}/`,
+                            id: `${docVersionNode.id}.${subPackage.alias}`,
+                            path: `${docVersionNode.path}${subPackage.alias}/`,
                             name: subPackage.name,
                             alias: subPackage.alias
                         }
@@ -94,51 +94,52 @@ module.exports = function (api) {
                         subPackageCollection.addNode(subPackageNode)
 
                         // Add sub package as reference
-                        subPackageRefs.push(store.createReference('SubPackage', `${versionNode.id}.${subPackage.alias}`))
+                        subPackageRefs.push(store.createReference('SubPackage', `${docVersionNode.id}.${subPackage.alias}`))
 
                         // Add to local sub package array
                         subPackageNodes.push(subPackageNode);
                     });
 
-                    // Add sub package references to version node
-                    versionNode.subPackages = subPackageRefs;
+                    // Add sub package references to docs version node
+                    docVersionNode.subPackages = subPackageRefs;
 
                     // Define sub package redirect
                     if (subPackageRefs.length > 0) {
                         let firstSubPackageNode = subPackageNodes.find(p => p.id === subPackageRefs[0].id)
-                        redirects.push({ from: versionNode.path, to: firstSubPackageNode.path })
+                        redirects.push({ from: docVersionNode.path, to: firstSubPackageNode.path })
                     }
 
                 }
 
-                // Add version to collection
-                versionCollection.addNode(versionNode)
+                // Add docs version to collection
+                docVersionCollection.addNode(docVersionNode)
 
                 // Add to local version nodes array
-                versionNodes.push(versionNode)
+                docVersionNodes.push(docVersionNode)
 
             });
             
             // Create package node
             let packageNode = {
                 path: `${packagePath}`,
+                docVersions: {},
                 ...package,
             }
 
             // Convert version info to references
-            if (package.versions.next)
-                packageNode.versions.next = store.createReference('Version', `${package.id}.${package.versions.next}`)
+            if (package.docVersions.next)
+                packageNode.docVersions.next = store.createReference('DocVersion', `${package.id}.${package.docVersions.next}`)
 
-            packageNode.versions.current = store.createReference('Version', `${package.id}.${package.versions.current}`)
+            packageNode.docVersions.current = store.createReference('DocVersion', `${package.id}.${package.docVersions.current}`)
 
-            if (package.versions.previous) 
-                packageNode.versions.previous = package.versions.previous.map((v) => store.createReference('Version', `${package.id}.${v}`))
+            if (package.docVersions.previous) 
+                packageNode.docVersions.previous = package.docVersions.previous.map((v) => store.createReference('DocVersion', `${package.id}.${v}`))
 
-            packageNode.versions.all = [packageNode.versions.next,packageNode.versions.current,...packageNode.versions.previous].filter(v => v)
+            packageNode.docVersions.all = [packageNode.docVersions.next,packageNode.docVersions.current,...packageNode.docVersions.previous].filter(v => v)
 
             // Define current version redirect
-            let currentVersionNode = versionNodes.find(v => v.id === packageNode.versions.current.id)
-            redirects.push({ from: packagePath, to: currentVersionNode.path })
+            let currentDocVersionNode = docVersionNodes.find(v => v.id === packageNode.docVersions.current.id)
+            redirects.push({ from: packagePath, to: currentDocVersionNode.path })
 
             // Add package to collection
             packageCollection.addNode(packageNode)
@@ -173,9 +174,9 @@ module.exports = function (api) {
             if (packageNode) {
                 n.package = packageNode.id
 
-                let versionNode = versionNodes.find(v => n.path.startsWith(v.path))
-                if (versionNode) {
-                    n.version = versionNode.id
+                let dcoVersionNode = docVersionNodes.find(v => n.path.startsWith(v.path))
+                if (dcoVersionNode) {
+                    n.docVersion = dcoVersionNode.id
 
                     let subPackageNode = subPackageNodes.find(p => n.path.startsWith(p.path))
                     if (subPackageNode) {

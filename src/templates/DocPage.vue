@@ -20,18 +20,18 @@
       </div>
     </nav>
 
-    <template slot="page-top" v-if="$page.doc.version && $page.doc.version.name != $page.doc.package.versions.current.name">
-      <version-message-box :package-info="$page.doc.package" :version-info="$page.doc.version" />
+    <template slot="page-top" v-if="$page.doc.docVersion && $page.doc.docVersion.name != $page.doc.package.docVersions.current.name">
+      <version-message-box :package-info="$page.doc.package" :doc-version-info="$page.doc.docVersion" />
     </template>
 
     <template slot="sidebar">
       <core-back-link v-if="$page.doc.package && $page.doc.package.type == 'PaymentProvider'" />
       <package-info :package-info="$page.doc.package" 
-        :version-info="$page.doc.version"
+        :doc-version-info="$page.doc.docVersion"
         :sub-package-info="$page.doc.subPackage" />
       <sub-package-switcher 
-          v-if="$page.doc.version && $page.doc.version.subPackages"
-          :sub-packages="$page.doc.version.subPackages"
+          v-if="$page.doc.docVersion && $page.doc.docVersion.subPackages"
+          :sub-packages="$page.doc.docVersion.subPackages"
           :current-sub-package="$page.doc.subPackage" />
       <grouped-links-list :groups="links" v-if="links && links.length > 0" />
     </template>
@@ -71,7 +71,8 @@ query DocPage($id: ID!) {
         title,
         link
       },
-      versions {
+      packageVersion,
+      docVersions {
         next {
           id,
           name,
@@ -89,7 +90,7 @@ query DocPage($id: ID!) {
         }
       }
     },
-    version {
+    docVersion {
       id,
       name,
       path,
@@ -169,15 +170,15 @@ export default {
         })
       }
 
-      // Try version links
-      if (this.$page.doc.version && this.$page.doc.version.links) {
-        return this.$page.doc.version.links.map(g => {
+      // Try doc version links
+      if (this.$page.doc.docVersion && this.$page.doc.docVersion.links) {
+        return this.$page.doc.docVersion.links.map(g => {
           return {
             title: g.title,
             items: g.items.map(i => {
               return {
                 title: i.title,
-                link: this.$page.doc.version.path + i.link.substr(1)
+                link: this.$page.doc.docVersion.path + i.link.substr(1)
               }
             })
           }

@@ -3,12 +3,15 @@ name: Stripe
 type: PaymentProvider
 description: 
 supportedBy: core
+
+packageVersion: 1.0.0
+docVersions:
+  current: 1.0.0
+  previous: 
+    - 0.1.0
+
 links:
   - title: Versions
     link: /versions/
   - title: Changelog
     link: /changelog/
-versions:
-  current: 1.0.0
-  previous: 
-    - 0.1.0

@@ -6,11 +6,11 @@ description: Index of the past, present and future versions of the documentation
 import VersionsList from '~/components/VersionsList.vue'
 
 ## Next Version
-<template v-if="$page.doc.package && $page.doc.package.versions.next">
+<template v-if="$page.doc.package && $page.doc.package.docVersions.next">
 
 Next version of the Stripe payment provider documentation
 
-<versions-list :versions="[$page.doc.package.versions.next]" />
+<versions-list :versions="[$page.doc.package.docVersions.next]" />
 
 </template>
 <template v-else>
@@ -22,15 +22,18 @@ There is currently no next version of the Stripe payment provider documentation 
 ## Current Version
 Current version of the Stripe payment provider documentation 
 
-<versions-list :versions="[$page.doc.package.versions.current]"/>
+<versions-list :versions="[$page.doc.package.docVersions.current]"
+    :next-version="$page.doc.package.packageVersion"
+    :next-version-inclusive="true" />
 
 
 ## Previous Versions
-<template v-if="$page.doc.package && $page.doc.package.versions.previous">
+<template v-if="$page.doc.package && $page.doc.package.docVersions.previous">
 
 Previous versions of the Stripe payment provider documentation
 
-<versions-list :versions="$page.doc.package.versions.previous" />
+<versions-list :versions="$page.doc.package.docVersions.previous"
+    :next-version="$page.doc.package.docVersions.current.name" />
 
 </template>
 <template v-else>

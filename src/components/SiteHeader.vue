@@ -7,7 +7,7 @@
             <!-- Logo -->
             <div class="lg:w-1/4 xl:w-1/5 pl-6 pr-6 lg:pr-8">
               <div class="flex items-center">
-                <g-link :to="$static.corePackage.versions.current.path" class="block lg:mr-4 text-white">
+                <g-link :to="$static.corePackage.docVersions.current.path" class="block lg:mr-4 text-white">
                   <vendr-logo class="h-7 w-auto hidden md:block fill-current" />
                   <vendr-v class="h-7 w-auto block md:hidden fill-current" />
                 </g-link>
@@ -63,10 +63,10 @@
 <static-query>
 query {
     corePackage: package(id: "Vendr") {
-        versions {
-            current {
-                path
-            }
+        docVersions {
+          current {
+              path
+          }
         }
     },
     metadata {

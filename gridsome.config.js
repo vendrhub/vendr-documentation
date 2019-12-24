@@ -48,7 +48,7 @@ module.exports = {
         template: './src/templates/DocPage.vue',
         refs: {
           package: 'Package',
-          version: 'Version',
+          docVersion: 'DocVersion',
           subPackage: 'SubPackage',
         },
         plugins: [
