@@ -26,7 +26,7 @@
     "gridsome-plugin-remark-youtube": "^1.0.1",
     "js-yaml": "^3.13.1",
     "mousetrap": "^1.6.3",
-    "remark-responsive-tables": "1.0.0",
+    "remark-responsive-tables2": "1.0.0",
     "tailwindcss": "^1.1.2",
     "vue-lazy-hydration": "^1.0.0-beta.9",
     "vue-scrollactive": "^0.8.0",

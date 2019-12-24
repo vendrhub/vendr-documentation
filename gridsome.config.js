@@ -54,7 +54,7 @@ module.exports = {
         plugins: [
           '@gridsome/remark-prismjs',
           'gridsome-plugin-remark-youtube',
-          'remark-responsive-tables'
+          'remark-responsive-tables2'
         ],
         remark: {
           autolinkHeadings: {
