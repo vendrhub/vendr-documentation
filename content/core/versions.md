@@ -10,9 +10,7 @@ import VersionsList from '~/components/VersionsList.vue'
 
 Next version of the Vendr product documentation
 
-<div>
 <versions-list :versions="[$page.doc.package.docVersions.next]" />
-</div>
 
 </template>
 <template v-else>
@@ -24,21 +22,17 @@ There is currently no next version of the Vendr product documentation available
 ## Current Version
 Current version of the Vendr product documentation 
 
-<div>
 <versions-list :versions="[$page.doc.package.docVersions.current]"
     :next-version="$page.doc.package.packageVersion"
     :next-version-inclusive="true" />
-</div>
 
 ## Previous Versions
 <template v-if="$page.doc.package && $page.doc.package.docVersions.previous">
 
 Previous versions of the Vendr product documentation
 
-<div>
 <versions-list :versions="$page.doc.package.docVersions.previous"
     :next-version="$page.doc.package.docVersions.current.name" />
-</div>
 
 </template>
 <template v-else>

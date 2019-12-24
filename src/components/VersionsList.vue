@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <table class="mb-8 -mt-4">
+    <table class="mb-8 -mt-4" v-if="versions && versions.length > 0">
+        <tbody>
             <tr v-for="(version, idx) in versions" :key="version.id">
                 <td class="border p-3 font-bold">{{ versionRange(idx) }}</td>
                 <td class="border p-3"><g-link :to="version.path" class="text-brand-blue-light hover:text-brand-blue-mid hover:underline">Docs</g-link></td>
             </tr>
-        </table>
-    </div>
+        </tbody>
+    </table>
 </template>
 
 <script>

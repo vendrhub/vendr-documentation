@@ -1,5 +1,7 @@
 <template>
     <table class="changelog">
-        <slot />
+        <tbody>
+            <slot />
+        </tbody>
     </table>
 </template>

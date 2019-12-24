@@ -7,7 +7,6 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, consequat at laoreet id, interdum et lacus. Aenean tincidunt sagittis odio, ac finibus lacus auctor at.
 --- 
 
-<div>
 <changelog>
 <changelog-group category="Fixed">  
 
@@ -46,13 +45,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, cons
 
 </changelog-group>
 </changelog>
-</div>
 
 ## v1.0.0 (2019-08-12) 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, consequat at laoreet id, interdum et lacus. Aenean tincidunt sagittis odio, ac finibus lacus auctor at.
 --- 
 
-<div>
 <changelog>
 <changelog-group category="Fixed">  
 
@@ -109,13 +106,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, cons
 
 </changelog-group>
 </changelog>
-</div>
 
 ## v0.1.0 (2018-08-12) 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, consequat at laoreet id, interdum et lacus. Aenean tincidunt sagittis odio, ac finibus lacus auctor at.
 --- 
 
-<div>
 <changelog>
 <changelog-group category="Fixed">  
 
@@ -172,4 +167,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, cons
 
 </changelog-group>
 </changelog>
-</div>
