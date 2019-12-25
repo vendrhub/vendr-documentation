@@ -52,8 +52,8 @@ module.exports = {
           subPackage: 'SubPackage',
         },
         plugins: [
-          '@gridsome/remark-prismjs',
           'gridsome-plugin-remark-youtube',
+          '@gridsome/remark-prismjs',
           'remark-responsive-tables2'
         ],
         remark: {
