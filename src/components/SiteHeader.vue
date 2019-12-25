@@ -102,17 +102,21 @@ export default {
     methods : {
 
       openSidebar() {
-        this.$('#sidebar-open').addClass('hidden')
-        this.$('#sidebar').removeClass('hidden')
-        this.$('#sidebar-close').removeClass('hidden')
-        this.$('#content-wrapper').addClass('overflow-hidden max-h-screen fixed')
+        if (this.$) {
+          this.$('#sidebar-open').addClass('hidden')
+          this.$('#sidebar').removeClass('hidden')
+          this.$('#sidebar-close').removeClass('hidden')
+          this.$('#content-wrapper').addClass('overflow-hidden max-h-screen fixed')
+        }
       },
 
       closeSidebar() {
-        this.$('#sidebar').addClass('hidden')
-        this.$('#sidebar-close').addClass('hidden')
-        this.$('#sidebar-open').removeClass('hidden')
-        this.$('#content-wrapper').removeClass('overflow-hidden max-h-screen fixed')
+        if (this.$) {
+          this.$('#sidebar').addClass('hidden')
+          this.$('#sidebar-close').addClass('hidden')
+          this.$('#sidebar-open').removeClass('hidden')
+          this.$('#content-wrapper').removeClass('overflow-hidden max-h-screen fixed')
+        }
       }
 
     },
