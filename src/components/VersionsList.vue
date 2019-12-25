@@ -1,5 +1,5 @@
 <template>
-    <table class="mb-8 -mt-4" v-if="versions && versions.length > 0">
+    <table class="table--unresponsive mb-8 -mt-4" v-if="versions && versions.length > 0">
         <tbody>
             <tr v-for="(version, idx) in versions" :key="version.id">
                 <td class="border p-3 font-bold">{{ versionRange(idx) }}</td>

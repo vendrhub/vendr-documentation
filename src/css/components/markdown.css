@@ -161,6 +161,26 @@
     }
 }
 
+.markdown table.table--unresponsive {
+    display: table;
+}
+.markdown table.table--unresponsive tr {
+    display: table-row;
+}
+.markdown table.table--unresponsive td,
+.markdown table.table--unresponsive th {
+    display: table-cell;
+}
+.markdown table.table--unresponsive tbody {
+    display: table-row-group;
+}
+.markdown table.table--unresponsive thead {
+    display: table-header-group;
+}
+.markdown table.table--unresponsive thead th {
+    @apply border-t-0 border-b-2;
+}
+
 .markdown hr {
     @apply mb-8 border-t-2 border-gray-200;
 }
