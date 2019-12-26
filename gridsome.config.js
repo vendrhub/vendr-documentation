@@ -52,9 +52,9 @@ module.exports = {
           subPackage: 'SubPackage',
         },
         plugins: [
-          'gridsome-plugin-remark-youtube',
+          'od-remark-youtube-embed',
           '@gridsome/remark-prismjs',
-          'remark-responsive-tables2'
+          'od-remark-responsive-tables'
         ],
         remark: {
           autolinkHeadings: {
