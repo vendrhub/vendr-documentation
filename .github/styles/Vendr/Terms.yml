@@ -1,7 +1,7 @@
 extends: substitution
 message: Prefer %s over '%s.'
 level: warning
-ignorecase: true
+ignorecase: false
 swap:
   back office: backoffice
   back-office: backoffice
