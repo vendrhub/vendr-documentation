@@ -15,7 +15,7 @@ What follows are examples of common tasks you'll need to be able to perform with
 
 Registering dependencies is an important ability to understand as we will need to be able to perform this task in order to register Vendr event handlers, or in order to extend system Pipelines.
 
-To register a dependency you need to do so via a [Composer](https://our.umbraco.com/documentation/implementation/composing/). The recomended stub for a Vendr based composer would be as follows, as this provides all the required using statements to work with Vendr's dependencies and ensures your composer is composed after Vendr's own composer.
+To register a dependency you need to do so via a [Composer](https://our.umbraco.com/documentation/implementation/composing/). The recomended template for a Vendr based composer would be as follows, as this provides all the required using statements to work with Vendr's dependencies and ensures your composer is composed after Vendr's own composer.
 
 ````csharp
 using Umbraco.Core;
