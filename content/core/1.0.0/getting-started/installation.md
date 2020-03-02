@@ -41,7 +41,7 @@ Before upgrading, it is always advisable to take a complete backup of your site/
 
 </message-box>
 
-Vendr uses Umbraco Migrations to install all of it's features meaning upgrades follow the exact same process as the installtion processes detailed above, installing the latest version of a package over the top of the existing package installation. Vendr is then clever enough to detect the current state of your site and only install the features that are missing.
+Vendr uses Umbraco Migrations to install all of it's features meaning upgrades follow the exact same process as the installation processes detailed above, installing the latest version of a package over the top of the existing package installation. Vendr is then clever enough to detect the current state of your site and only install the features that are missing.
 
 ## Installing a License 
 
@@ -51,7 +51,7 @@ Once you have purchased a license you can install it by dropping the license fil
 
 You only need to install a license when you are ready to go live. 
 
-Vendr is fully functional during development, and whilst it is hosted on a local server.
+Vendr is fully functional during development, and whilst it is hosted on a local server (`localhost` or `.local` domains).
 
 You can also host a staging site on a `*.azurewebsite.net` or `*.umbraco.io` domain without the need of a license. However, if you wish to host the site on your own staging URL, then an appropriate license file will be required.
 
