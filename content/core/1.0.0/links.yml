@@ -37,6 +37,8 @@
       link: /key-concepts/unit-of-work/
     - title: ReadOnly and Writable Entities
       link: /key-concepts/readonly-and-writable-entities/
+    - title: Fluent API
+      link: /key-concepts/fluent-api/
     - title: Events
       link: /key-concepts/events/
     - title: Pipelines
