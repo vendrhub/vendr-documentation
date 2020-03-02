@@ -3,66 +3,66 @@
     - title: Overview
       link: /getting-started/
     - title: Installation
-      link: /getting-started/installation
+      link: /getting-started/installation/
     - title: Configuration
-      link: /getting-started/configuration
+      link: /getting-started/configuration/
 
 - title: Tutorials
   items:
     - title: Overview
-      link: /getting-started/
+      link: /tutorials/
     - title: Setting up a Store
-      link: /getting-started/
+      link: /tutorials/setting-up-a-store/
 
 - title: How-To Guides
   items:
     - title: Overview
-      link: /getting-started/
+      link: /how-to-guides/
     - title: How to create a discount
-      link: /getting-started/
+      link: /how-to-guides/
     - title: How to create a gift card
-      link: getting-started/
+      link: /how-to-guides/
     - title: How to create a payment provider
-      link: /getting-started/
+      link: /how-to-guides/
 
 - title: Key Concepts
   items:
     - title: Overview
-      link: /getting-started/
+      link: /key-concepts/
     - title: Dependency Injection
-      link: /getting-started/
+      link: /key-concepts/
     - title: Reading and Writing
-      link: /getting-started/
+      link: /key-concepts/
     - title: Unit of Work
-      link: /getting-started/
+      link: /key-concepts/
     - title: Events
-      link: /getting-started/
+      link: /key-concepts/
     - title: Pipelines
-      link: /getting-started/
+      link: /key-concepts/
     - title: Calculators
-      link: /getting-started/
+      link: /key-concepts/
     - title: Payment Providers
-      link: /getting-started/
+      link: /key-concepts/
 
 - title: Reference
   items:
     - title: Overview
-      link: /getting-started/
+      link: /reference/
     - title: Order
-      link: /getting-started/
+      link: /reference/
     - title: Currency
-      link: /getting-started/
+      link: /reference/
     - title: Tax Class
-      link: /getting-started/
+      link: /reference/
     - title: Store
-      link: /getting-started/
+      link: /reference/
     - title: Session
-      link: /getting-started/
+      link: /reference/
     - title: Events
-      link: /getting-started/
+      link: /reference/
     - title: Pipelines
-      link: /getting-started/
+      link: /reference/
     - title: Calculators
-      link: /getting-started/
+      link: /reference/
     - title: Payment Providers
-      link: /getting-started/
+      link: /reference/

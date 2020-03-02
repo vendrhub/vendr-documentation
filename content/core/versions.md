@@ -27,7 +27,7 @@ Current version of the Vendr product documentation
     :next-version-inclusive="true" />
 
 ## Previous Versions
-<template v-if="$page.doc.package && $page.doc.package.docVersions.previous">
+<template v-if="$page.doc.package && $page.doc.package.docVersions.previous && $page.doc.package.docVersions.previous.length > 0">
 
 Previous versions of the Vendr product documentation
 

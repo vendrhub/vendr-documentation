@@ -42,7 +42,7 @@ module.exports = function (api) {
 
             // Extract useful package info
             let packagePath = `/${path.relative(contentPath, path.dirname(filePath)).replace(/\\/g, '/')}/`
-            let packageAllDocsVersions = [package.docVersions.next,package.docVersions.current,...package.docVersions.previous].filter(v => v);
+            let packageAllDocsVersions = [package.docVersions.next,package.docVersions.current,...(package.docVersions.previous || [])].filter(v => v);
             
             // Process package doc versions
             packageAllDocsVersions.forEach((v,i) => {
@@ -135,7 +135,7 @@ module.exports = function (api) {
             if (package.docVersions.previous) 
                 packageNode.docVersions.previous = package.docVersions.previous.map((v) => store.createReference('DocVersion', `${package.id}.${v}`))
 
-            packageNode.docVersions.all = [packageNode.docVersions.next,packageNode.docVersions.current,...packageNode.docVersions.previous].filter(v => v)
+            packageNode.docVersions.all = [packageNode.docVersions.next,packageNode.docVersions.current,...(packageNode.docVersions.previous || [])].filter(v => v)
 
             // Define current version redirect
             let currentDocVersionNode = docVersionNodes.find(v => v.id === packageNode.docVersions.current.id)

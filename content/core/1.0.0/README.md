@@ -5,7 +5,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
 
 ## Using These Docs
 
-**These docs are aimed at developers** who have at least a basic understanding of  [Umbraco](https://umbraco.com) as well as C# / MVC principals.
+**These docs are aimed at developers** who have at least a basic understanding of  [Umbraco](https://umbraco.com), as well as C# / MVC principals.
 
  To help with the different stages of learning, they have been broken up into 5 key areas, each with a specific focus.
 
@@ -28,7 +28,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
       </span>
       <span>
         <span class="tile__heading">Tutorials</span>
-        <span class="tile__body">Get started with a hands-on introduction to Vendr for developers.</span>
+        <span class="tile__body">Hands-on tutorials to get you familiar with Vendr.</span>
       </span>
     </a>
   </div>
@@ -39,7 +39,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
       </span>
       <span>
         <span class="tile__heading">How-to Guides</span>
-        <span class="tile__body">Step-by-step guides for the developer covering key operations and procedures</span>
+        <span class="tile__body">Step-by-step guides explaining how to solve real-world problems.</span>
       </span>
     </a>
   </div>
@@ -50,7 +50,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
       </span>
       <span>
         <span class="tile__heading">Key Concepts</span>
-        <span class="tile__body">Explanation and discussion of key topics</span>
+        <span class="tile__body">Explanation and discussion of key concepts.</span>
       </span>
     </a>
   </div>
@@ -61,7 +61,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
       </span>
       <span>
         <span class="tile__heading">Reference</span>
-        <span class="tile__body">Technical reference - tools, components and commands</span>
+        <span class="tile__body">Technical reference of the Vendr API.</span>
       </span>
     </a>
   </div>
