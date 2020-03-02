@@ -32,19 +32,23 @@
     - title: Overview
       link: /key-concepts/
     - title: Dependency Injection
-      link: /key-concepts/
-    - title: Reading and Writing
-      link: /key-concepts/
+      link: /key-concepts/dependency-injection/
     - title: Unit of Work
-      link: /key-concepts/
+      link: /key-concepts/unit-of-work/
+    - title: ReadOnly and Writable Entities
+      link: /key-concepts/readonly-and-writable-entities/
     - title: Events
-      link: /key-concepts/
+      link: /key-concepts/events/
     - title: Pipelines
-      link: /key-concepts/
+      link: /key-concepts/pipelines/
     - title: Calculators
-      link: /key-concepts/
+      link: /key-concepts/calculators/
     - title: Payment Providers
-      link: /key-concepts/
+      link: /key-concepts/payment-providers/
+    - title: Product Adapters
+      link: /key-concepts/product-adapters/
+    - title: Order Editor Config
+      link: /key-concepts/order-editor-config/
 
 - title: Reference
   items:
