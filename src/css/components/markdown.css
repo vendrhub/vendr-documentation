@@ -23,6 +23,10 @@
     @apply text-lg font-medium mb-4; 
 }
 
+.markdown .g-image {
+    @apply border rounded;
+}
+
 .markdown h2 > a,
 .markdown h3 > a,
 .markdown h4 > a,
