@@ -4,8 +4,10 @@
       link: /getting-started/
     - title: Installation
       link: /getting-started/installation/
-    - title: Configuration
-      link: /getting-started/configuration/
+    - title: Umbraco Configuration
+      link: /getting-started/umbraco-configuration/
+    - title: User Interface
+      link: /getting-started/user-interface/
 
 - title: Tutorials
   items:

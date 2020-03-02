@@ -1,5 +1,5 @@
 <template>
-    <div class="message-box px-6 py-4 mb-8 border-l-4" :class="cssClasses">
+    <div class="message-box px-6 py-4 mb-6 border-l-4" :class="cssClasses">
         <p class="message-box__heading font-bold" v-if="heading">{{ heading }}</p> 
         <div class="message-box__body">
             <slot />
