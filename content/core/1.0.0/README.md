@@ -69,7 +69,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
 
 ## Getting Help
 
-If you require further assistance, or if you are having a particular issue you can't find an answer to, you can get community support via our support forum over on the [Umbraoco developer portal](https://our.umbraco.com/packages/website-utilities/vendr/vendr-support/).
+If you require further assistance, or if you are having a particular issue you can't find an answer to, you can get community support via our support forum over on the [Umbraco developer portal](https://our.umbraco.com/packages/website-utilities/vendr/vendr-support/).
 
 ## About Vendr
 

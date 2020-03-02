@@ -3,19 +3,19 @@ title: Dependency Injection
 description: Minimising dependencies via dependency injection with Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-Dependency Injection can be quite an intimidating subject, however at it's heart, the main idea is to reduce the number of hard coded dependencies within a codebase by instead providing a means to define those dependencies independantly (an IoC container) and have them be "injected" into your codebase dynamically. These dependencies are often exposed as interfaces, rather that concrete types, thus enabling them to be swapped out or replaced with minimal effort.
+Dependency Injection can be quite an intimidating subject, however at it's heart, the main idea is to reduce the number of hard coded dependencies within a codebase by instead providing a means to define those dependencies independently (an IoC container) and have them be "injected" into your codebase dynamically. These dependencies are often exposed as interfaces, rather that concrete types, thus enabling them to be swapped out or replaced with minimal effort.
 
 The ability to "swap out" dependencies is a very powerful concept and is used in Vendr in a number of places to allow developers to provide alternative implementations of specific features, such as the ability to swap out the default Product Calculator to change how product prices are calculated, or to swap out the default Order Number Generator should you wish to provide an alternative order numbering strategy.
 
 Vendr makes heavy used of the dependency injection mechanism in Umbraco v8 to manage many of it's features, so it is important to understand at the very least how to work with Umbraco's registration process.
 
-What follows are examples of common tasks you'll need to be able to perform with Umbraco's dependency injection interface in order to work effectively with Vendr, however for more detailed documentation of all of Umbraco's dependency injection features, it is highly recomended that you read the [official Umbraco documentation on IoC and Dependency Injection](https://our.umbraco.com/documentation/reference/using-ioc/) on the Umbraco developer portal.
+What follows are examples of common tasks you'll need to be able to perform with Umbraco's dependency injection interface in order to work effectively with Vendr, however for more detailed documentation of all of Umbraco's dependency injection features, it is highly recommended that you read the [official Umbraco documentation on IoC and Dependency Injection](https://our.umbraco.com/documentation/reference/using-ioc/) on the Umbraco developer portal.
 
 ## Registering Dependencies
 
 Registering dependencies is an important ability to understand as we will need to be able to perform this task in order to register Vendr event handlers, or in order to extend system Pipelines.
 
-To register a dependency you need to do so via a [Composer](https://our.umbraco.com/documentation/implementation/composing/). The recomended template for a Vendr based composer would be as follows, as this provides all the required using statements to work with Vendr's dependencies and ensures your composer is composed after Vendr's own composer.
+To register a dependency you need to do so via a [Composer](https://our.umbraco.com/documentation/implementation/composing/). The recommended template for a Vendr based composer would be as follows, as this provides all the required using statements to work with Vendr's dependencies and ensures your composer is composed after Vendr's own composer.
 
 ````csharp
 using Umbraco.Core;
@@ -55,7 +55,7 @@ public void Compose(Composition composition)
 
 As well as the ability to register new dependencies, there are also times that we will want to be able to replace an existing dependency, such as the various Calculators available in Vendr.
 
-Where a feature is replacable, replacing that dependency is also achieved via the `composition` API
+Where a feature is replaceable, replacing that dependency is also achieved via the `composition` API
 
 ````csharp
 public void Compose(Composition composition)
