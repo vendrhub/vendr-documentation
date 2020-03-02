@@ -3,11 +3,11 @@ title: Fluent API
 description: Faster development thanks to the Fluent API of Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-An added side effect of having [ReadOnly and Writable entities](../readonly-and-wrtiable-entities/) is that all of an entities write opperations are now performed via methods, rather than property setters, enabling to us convert Vendr's write API in a fluent API.
+An added side effect of having [ReadOnly and Writable entities](../readonly-and-wrtiable-entities/) is that all of an entities write operations are now performed via methods, rather than property setters, enabling to us convert Vendr's write API in a fluent API.
 
 ## Writing fluently
 
-Where we could perform a write opperation as follows
+Where we could perform a write operation as follows
 
 ````csharp
 using(var uow = _uowProvider.Create())
@@ -18,7 +18,7 @@ using(var uow = _uowProvider.Create())
     // Convert the currency into it's Writable form
     var writableCurrency = currency.AsWritable(uow);
 
-    // Peform our write opperation
+    // Peform our write operation
     writableCurrency.SetName("New Name");
 
     // Persist the changes to the database
