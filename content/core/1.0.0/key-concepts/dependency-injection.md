@@ -30,7 +30,7 @@ namespace MyProject
     {
         public void Compose(Composition composition)
         {
-            // <-- Configuration goes here -->
+            // Configuration goes here
         }
     }
 }
