@@ -3,6 +3,8 @@ title: Changelog
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<!-- vale off -->
+
 ## Unreleased
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, consequat at laoreet id, interdum et lacus. Aenean tincidunt sagittis odio, ac finibus lacus auctor at.
 --- 
@@ -167,3 +169,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit nunc, cons
 
 </changelog-group>
 </changelog>
+
+<!-- vale on -->
