@@ -3,6 +3,6 @@ message: Prefer %s over '%s.'
 level: warning
 ignorecase: false
 swap:
-  back office: backoffice
-  back-office: backoffice
-  app_plugins: backoffice
+  back office: back-office
+  backoffice: back-office
+  app_plugins: App_Plugins

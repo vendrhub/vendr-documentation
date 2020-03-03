@@ -3,7 +3,7 @@ title: Umbraco Configuration
 description: Configuring Umbraco for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-Before we can start to use Vendr, we need to configure Umbraco to allow ourselves access to the relevant sections. The Vendr UI is split over three sections within the Umbraco backoffice:
+Before we can start to use Vendr, we need to configure Umbraco to allow ourselves access to the relevant sections. The Vendr UI is split over three sections within the Umbraco back-office:
 
 * **Settings** For managing the various store settings
 * **Commerce** For managing store related content (orders, discounts, etc)
@@ -23,6 +23,6 @@ To create the **Commerce** User Group you should follow the [instructions on how
 
 ## Accessing the Commerce Section
 
-Once created and assigned, you should be able to refresh the backoffice and see that we now have access to the new **Commerce** section.
+Once created and assigned, you should be able to refresh the back-office and see that we now have access to the new **Commerce** section.
 
 ![Commerce Section in Umbraco Navigation](~/assets/images/screenshots/commerce_section.png)
