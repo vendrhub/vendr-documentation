@@ -37,7 +37,7 @@ export default function (Vue, { head }) {
   head.meta.push({ name: 'twitter:description', content: 'Vendr Documentation' })
 
   head.htmlAttrs = { class: 'doc' }
-  head.bodyAttrs = { class: 'doc font-brand-body text-gray-700 leading-normal antialiased' }
+  head.bodyAttrs = { class: 'doc font-brand-body text-gray-700 leading-normal subpixel-antialiased' }
 
   Vue.component('MessageBox', MessageBox)
   Vue.component('Changelog', Changelog)
