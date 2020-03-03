@@ -9,7 +9,7 @@
 
     <nav class="flex flex-col-reverse border-t-2 border-gray-200 items-stretch w-full pt-6 mt-8 sm:flex-row" v-if="previousPage || nextPage">
       <div class="flex-1 sm:mt-0" v-if="previousPage" :class="{ 'mt-2': nextPage, 'sm:mr-2': nextPage }">
-        <g-link exact class="group rounded transition flex items-center w-full h-full border border-gray-300 px-4 py-3 hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="previousPage.link">
+        <g-link exact class="group rounded transition shadow-md flex items-center w-full h-full border border-gray-300 px-4 py-3 hover:shadow-lg hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="previousPage.link">
           <span class="pr-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-gray-500 w-8 h-8 stroke-current group-hover:text-white" fill="none" stroke-width="1"><g><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></g></svg>
           </span>
@@ -20,7 +20,7 @@
         </g-link>
       </div>
       <div class="flex-1 sm:mb-0" v-if="nextPage" :class="{ 'mb-2': nextPage, 'sm:ml-2': previousPage }">
-        <g-link exact class="group rounded transition flex items-center w-full h-full border border-gray-300 px-4 py-3 hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="nextPage.link">
+        <g-link exact class="group rounded transition shadow-md flex items-center w-full h-full border border-gray-300 px-4 py-3 hover:shadow-lg hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="nextPage.link">
           <span class="flex-1 text-left">
             <span class="block text-gray-500 text-xs font-bold transition group-hover:text-white">{{ nextPage.group }}</span>
             <span class="block text-md">{{ nextPage.title }}</span>
