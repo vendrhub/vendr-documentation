@@ -18,13 +18,13 @@ using(var uow = _uowProvider.Create())
     // Convert the currency into it's Writable form
     var writableCurrency = currency.AsWritable(uow);
 
-    // Peform our write operation
+    // Perform the write operation
     writableCurrency.SetName("New Name");
 
     // Persist the changes to the database
     _currencyService.SaveCurrency(currency);
 
-    // Close our transaction
+    // Close the transaction
     uow.Complete();
 }
 
