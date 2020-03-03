@@ -7,15 +7,27 @@
       <edit-on-github-link :path="$page.doc.fileInfo.path" />
     </p>
 
-    <nav class="border-t-2 border-gray-200 flex justify-between pt-6 mt-8" v-if="previousPage || nextPage">
-      <div>
-        <g-link v-if="previousPage" exact class="rounded transition inline-block border border-gray-300 px-6 py-2 hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="previousPage.link">
-          &larr; {{ previousPage.title }}
+    <nav class="border-t-2 border-gray-200 flex w-full pt-6 mt-8" v-if="previousPage || nextPage">
+      <div class="flex-1 mr-2">
+        <g-link v-if="previousPage" exact class="group rounded transition flex items-center w-full border border-gray-300 px-4 py-3 hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="previousPage.link">
+          <span class="pr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-gray-500 w-8 h-8 stroke-current group-hover:text-white" fill="none" stroke-width="1"><g><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></g></svg>
+          </span>
+          <span class="flex-1 text-right">
+            <span class="block text-gray-500 text-xs font-bold transition group-hover:text-white">{{ previousPage.group }}</span>
+            <span class="block text-md">{{ previousPage.title }}</span>
+          </span>
         </g-link>
       </div>
-      <div class="text-right">
-        <g-link v-if="nextPage" exact class="rounded transition inline-block border border-gray-300 px-6 py-2 hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="nextPage.link">
-          {{ nextPage.title }} &rarr;
+      <div class="flex-1 ml-2">
+        <g-link v-if="nextPage" exact class="group rounded transition flex items-center w-full border border-gray-300 px-4 py-3 hover:bg-brand-blue-light hover:text-white hover:border-brand-blue-light" :to="nextPage.link">
+          <span class="flex-1 text-left">
+            <span class="block text-gray-500 text-xs font-bold transition group-hover:text-white">{{ nextPage.group }}</span>
+            <span class="block text-md">{{ nextPage.title }}</span>
+          </span>
+          <span class="pl-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-gray-500 w-8 h-8 stroke-current group-hover:text-white" fill="none" stroke-width="1"><g><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></g></svg>
+          </span>
         </g-link>
       </div>
     </nav>
@@ -203,7 +215,23 @@ export default {
 
     },
     items () {
-      return this.links.reduce((acc, group) => (acc.push(...group.items), acc), [])
+      return this.links.reduce((acc, group) => {
+        // First item
+        // if (group.items.length > 0) {
+        //   acc.push({ title: group.title + ' - ' + group.items[0].title, link: group.items[0].link})
+        //   if (group.items.length > 2) {
+        //     // Mid items
+        //     acc.push(...group.items.slice(1, group.items.length - 1))
+        //   }
+        //   if (group.items.length > 1) {
+        //     // Last item
+        //     var lastItem = group.items[group.items.length - 1];
+        //     acc.push({ title: group.title + ' - ' + lastItem.title, link: lastItem.link})
+        //   }
+        // }
+        acc.push(...group.items.map((i) => { return { title: i.title, link: i.link, group: group.title} }))
+        return acc
+      }, [])
     },
     currentIndex () {
       return this.items.findIndex(item => {

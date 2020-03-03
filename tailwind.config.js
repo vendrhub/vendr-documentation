@@ -99,7 +99,7 @@ module.exports = {
     borderColor: ['responsive', 'hover', 'focus'],
     fontWeight: ['responsive', 'hover', 'focus'],
     shadow: ['responsive', 'hover', 'focus'],
-    textColor: ['responsive', 'hover', 'focus'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     textStyle: ['responsive', 'hover', 'focus'],
     margin: ['responsive', 'group-hover'],
     borderWidth: ['responsive', 'group-hover']
