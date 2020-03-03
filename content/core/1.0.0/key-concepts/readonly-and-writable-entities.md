@@ -9,7 +9,7 @@ When working with the Vendr entities, it's important to know that all entities c
 
 The reason why we have split entities in this way is for a number of reasons, however the two primary factors are:
 
-* **Making APIs fast by default** - By returning ReadOnly entities by default we can ensure all API methods are as fast as possible by feeding values directly out of our caching layer. Because the entities can't change it means we don't have to laden the entities with extra change tracking logic, we can simply feed out the cached values and only worry about that logic when the entities become Writable.
+* **Making APIs fast by default** - By returning ReadOnly entities by default we can ensure all API methods are as fast as possible by feeding values directly out of our caching layer. Because the entities can't change it means we don't have to laden the entities with extra change tracking logic, we can feed out the cached values directly and only worry about that logic when the entities become Writable.
 
 * **Simplified change tracking** - When we convert a ReadOnly entity to it's writable state, internally we take a deep clone of that state so that changes can occur within a scoped "sandbox". At the same time, we retain a copy of the original state meaning when it comes time to persist those changes we have two copies of the state we can perform a comparison on, simplifying the whole change tracking process.
 
