@@ -143,6 +143,7 @@
 @screen md {
     .markdown table {
         display: table;
+        width: 100%;
     }
     .markdown table tr {
         display: table-row;
@@ -185,6 +186,12 @@
 }
 .markdown table.table--unresponsive thead th {
     @apply border-t-0 border-b-2;
+}
+
+@screen md {
+    .markdown table.table--unresponsive {
+        width: auto;
+    }
 }
 
 .markdown hr {

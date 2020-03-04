@@ -50,8 +50,14 @@ When there are occasions that Vendr needs to capture some simple information abo
 | Alias | Description |
 | ----- | ----------- |
 | firstName | The first name of the person placing the order. Is where `order.CustomerInfo.FirstName` reads it's value from. |
+| lastName | The last name of the person placing the order. Is where `order.CustomerInfo.LastName` reads it's value from. |
+| email | The email address of the person placing the order. Is where `order.CustomerInfo.Email` reads it's value from. |
 
 ### Order Line System Properties
+
+| Alias | Description |
+| ----- | ----------- |
+| sku | The SKU of the product extracted from the product node. |
 
 ## Automatic Properties
 
