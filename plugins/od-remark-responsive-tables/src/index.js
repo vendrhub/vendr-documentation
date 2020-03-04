@@ -24,6 +24,7 @@ function md (options) {
           data = node.data || (node.data = {})
           props = data.hProperties || (data.hProperties = {})
           props['data-heading'] = headings[idx]
+          node.value = "<div>" + node.value + "</div>";
         })
       }
     }

@@ -91,7 +91,8 @@
     @apply mt-0 mb-8 rounded-lg;
 }
 
-.markdown p code[class*="language-"] {
+.markdown p code[class*="language-"],
+.markdown td code[class*="language-"] {
     @apply text-indigo-600 !important;
     @apply rounded px-1 py-0;
     background: rgba(74, 85, 104,.1);
@@ -150,6 +151,7 @@
     .markdown table th,
     .markdown table td[data-heading] {
         display: table-cell;
+        word-break: normal;
     }
     .markdown table tbody {
         display: table-row-group;

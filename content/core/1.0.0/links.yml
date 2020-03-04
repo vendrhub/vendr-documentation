@@ -39,6 +39,8 @@
       link: /key-concepts/readonly-and-writable-entities/
     - title: Fluent API
       link: /key-concepts/fluent-api/
+    - title: Properties
+      link: /key-concepts/properties/
     - title: Events
       link: /key-concepts/events/
     - title: Pipelines
@@ -47,14 +49,16 @@
       link: /key-concepts/calculators/
     - title: Product Adapters
       link: /key-concepts/product-adapters/
-    - title: Order Editor Config
-      link: /key-concepts/order-editor-config/
     - title: Payment Providers
       link: /key-concepts/payment-providers/
     - title: Price Freezing
       link: /key-concepts/price-freezing/
     - title: Tax Sources
       link: /key-concepts/tax-sources/
+    - title: Discount Rules / Rewards
+      link: /key-concepts/discount-rules-and-rewards/
+    - title: Order Editor Config
+      link: /key-concepts/order-editor-config/
 
 - title: Reference
   items:
