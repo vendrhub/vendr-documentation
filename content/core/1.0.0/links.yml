@@ -51,6 +51,10 @@
       link: /key-concepts/order-editor-config/
     - title: Payment Providers
       link: /key-concepts/payment-providers/
+    - title: Price Freezing
+      link: /key-concepts/price-freezing/
+    - title: Tax Sources
+      link: /key-concepts/tax-sources/
 
 - title: Reference
   items:
