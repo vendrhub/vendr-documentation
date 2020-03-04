@@ -61,7 +61,7 @@ Generally there are three methods within a Payment Provider that you may need to
 
 What follows is a generalized diagram in order to help in visualizing when each of these methods are called withing a regular checkout flow.
 
-[![Payment Provider Capture Workflow](~/assets/images/screenshots/payment_provider_capture_flow.png)](/assets/images/screenshots/payment_provider_capture_flow.png)
+![Payment Provider Capture Workflow](~/assets/images/screenshots/payment_provider_capture_flow.png)
 
 ### Payment Management
 
@@ -69,6 +69,38 @@ In addition to the initial payment capture flow, Payment Providers can also be s
 
 These features are optional, so are not required for Payment Provider developers to implement, however they do provide a much nicer user experience as it allows the store owner to manage payments directly in the back-office rather than having to log into the payment gateway's portal should they need to perform these types of actions.
 
+The implementable management methods are:
 
+* **FetchPaymentStatus** - The `FetchPaymentStatus` method communicates with the 3rd party payment gateway in order to fetch the current status of the given transaction.
 
-## Payment Provider Settings
+* **CapturePayment** - The `CapturePayment` method communicates with the 3rd party payment gateway to capture a previously authorized payment associated with the given transaction.
+
+* **CancelPayment** - The `CancelPayment` method communicates with the 3rd party payment gateway to cancel a previously authorized payment associated with the given transaction.
+
+* **RefundPayment** - The `RefundPayment` method communicates with the 3rd party payment gateway to refund a previously captured payment associated with the given transaction.
+
+For each implemented method above, developers should also implement a corresponding boolean property returning a `true` value to let Vendr know that the given feature is supported by the Payment Provider.
+
+* **CanFetchPaymentStatus**
+* **CanCapturePayments**
+* **CanCancelPayments**
+* **CanRefundPayments**
+
+## Payment Provider Meta Data
+
+For all implemented methods of a Payment Provider, all method return types support the returning off additional Meta Data. This is to allow Payment Providers to capture and store relevant information that aid the provider in doing it's job, or for storing useful reference information to display for the retailer.
+
+Any returned Meta Data from a Payment Provider method will be stored against the Order in it's [Properties](../properties/) collection.
+
+Where the Meta Data that is returned could be a useful reference for the retailer, the Payment Provider can also expose a `TransactionMetaDataDefinitions` property consisting of a list of `TransactionMetaDataDefinition` values that each define the alias, name and optional description of a Meta Data entry that Vendr will use to display that information in the back-office.
+
+````csharp
+public override IEnumerable<TransactionMetaDataDefinition> TransactionMetaDataDefinitions => new[]{
+    new TransactionMetaDataDefinition("stripeSessionId", "Stripe Session ID"),
+    new TransactionMetaDataDefinition("stripePaymentIntentId", "Stripe Payment Intent ID"),
+    new TransactionMetaDataDefinition("stripeChargeId", "Stripe Charge ID"),
+    new TransactionMetaDataDefinition("stripeCardCountry", "Stripe Card Country")
+};
+````
+
+![Transaction Meta Data](~/assets/images/screenshots/transaction_meta_data_dialog.png)

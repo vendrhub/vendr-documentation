@@ -24,7 +24,7 @@
 }
 
 .markdown .g-image {
-    @apply border rounded;
+    @apply border rounded mx-auto;
 }
 
 .markdown h2 > a,
