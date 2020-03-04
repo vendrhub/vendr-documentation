@@ -45,12 +45,12 @@
       link: /key-concepts/pipelines/
     - title: Calculators
       link: /key-concepts/calculators/
-    - title: Payment Providers
-      link: /key-concepts/payment-providers/
     - title: Product Adapters
       link: /key-concepts/product-adapters/
     - title: Order Editor Config
       link: /key-concepts/order-editor-config/
+    - title: Payment Providers
+      link: /key-concepts/payment-providers/
 
 - title: Reference
   items:
