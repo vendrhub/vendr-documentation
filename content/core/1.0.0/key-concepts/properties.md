@@ -49,17 +49,32 @@ When there are occasions that Vendr needs to capture some simple information abo
 
 | Alias | Description |
 | ----- | ----------- |
+| email | The email address of the person placing the order. Is where `order.CustomerInfo.Email` reads it's value from. |
 | firstName | The first name of the person placing the order. Is where `order.CustomerInfo.FirstName` reads it's value from. |
 | lastName | The last name of the person placing the order. Is where `order.CustomerInfo.LastName` reads it's value from. |
-| email | The email address of the person placing the order. Is where `order.CustomerInfo.Email` reads it's value from. |
 
 ### Order Line System Properties
 
 | Alias | Description |
 | ----- | ----------- |
-| sku | The SKU of the product extracted from the product node. |
+| sku | The SKU of the product, extracted from the product node via the [Product Adapter](../product-adapters/). |
 
 ## Automatic Properties
 
+For Order Lines, as well as the ability to set Properties manually as outlined above, there is also a build in mechanism within Vendr that can be configured to automatically copy properties from a Product information source to the Order Line automatically, and that is by using the **Product Property Aliases** field on the Store settings screen.
+
+![Product Property Aliases Configuration](~/assets/images/screenshots/product_property_aliases.png)
+
+When set to a comma separated list of property aliases, whenever a Product is added to the Order containing those properties, those property values will automatically be copied to the Order Lines Properties collection.
+
+This is useful for occasions such as rendering out the Order Lines on a Cart page and you have some Product information you also want to display. By copying it to the Order Lines Properties collection, you have instant access to those properties without need to to re-fetch the original Product entity to look them up.
 
 ## Product Uniqueness Properties
+
+Another use of the Properties collection for an Order Line is that of identifying product "Uniqueness". Product uniqueness is how Vendr identifies whether a Product being added to a Cart should be considered as Quantity increase on an existing Order Line, or whether it should be considered as a unique product combination and so should be given an Order Line of it's own. A good example of this when you have configurable products, such as customizable T-Shirt designs, and so each unique configuration should be considered as it's own Order Line so that you can more easily manage the specific configurations.
+
+Product uniqueness is configured via the **Product Uniqueness Property Aliases** field on the Store setting screen.
+
+![Product Uniqueness Property Aliases Configuration](~/assets/images/screenshots/product_uniqueness_property_aliases.png)
+
+When set to a comma separated list of property aliases (either Product properties, or manually defined Order Line properties), whenever a Product is added to an Order, these properties are compared against all pre-existing Order Lines for that Product, and should their values be different, then a unique Order Line will be created for that Product.
