@@ -5,7 +5,7 @@ description: Accepting payments via Payment Providers in Vendr, the eCommerce so
 
 Payment Providers are how Vendr is able to accept multiple different methods of payment on a Site. Their job is to provide a standard interface between 3rd party payment gateways and Vendr itself in order to allow the passing of information between the two platforms.
 
-How these integrations work are usually different per payment gateway, however Vendr Payment Providers provide a flexible interface that should be able to work with most payment gateways.
+How these integrations work is often different per payment gateway, however Vendr Payment Providers provide a flexible interface that should be able to work with most payment gateways.
 
 ## Example Payment Provider
 
@@ -34,7 +34,7 @@ public class MyPaymentProviderSettings
 
 ````
 
-All Payment Providers inherit from a base class `PaymentProviderBase<TSettings>` where `TSettings` is the Type of a POCO model representing the Payment Providers settings. The class must be decorated with `PaymentProviderAttribute` which defines the Payment Providers alias, name and description, and can also specify an icon to be displayed in the Vendr back-office.
+All Payment Providers inherit from a base class `PaymentProviderBase<TSettings>` where `TSettings` is the Type of a POCO model class representing the Payment Providers settings. The class must be decorated with `PaymentProviderAttribute` which defines the Payment Providers alias, name and description, and can also specify an icon to be displayed in the Vendr back-office.
 
 The settings class itself consists of a series of properties, each decorated with a `PaymentProviderSettingAttribute` defining a name, description, and possible angular editor view file which will all be used to dynamically build an editor interface for the given settings in the back-office.
 
