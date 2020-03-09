@@ -23,6 +23,10 @@
     @apply text-lg font-medium mb-4; 
 }
 
+.markdown h4 {
+    @apply font-medium mb-4; 
+}
+
 .markdown .g-image {
     @apply border rounded mx-auto;
 }
@@ -97,6 +101,7 @@
     @apply text-indigo-600 !important;
     @apply rounded px-1 py-0;
     background: rgba(74, 85, 104,.1);
+    overflow-wrap: break-word;
 }
 
 .markdown table,

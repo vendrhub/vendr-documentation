@@ -1,21 +1,29 @@
 ---
-title: Discount Rule / Rewards
+title: Discount Rules / Rewards
 description: Define when a Discount should apply and what should be the Reward in Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-When creating Discounts in the Vendr back-office they are defined using a series of rule and reward builders that let you configure exactly when a Discount should apply and what exactly the Reward should be for the Discount.
+When creating Discounts in the Vendr back-office they are defined using a series of rule and reward builders that let you configure exactly when a Discount should apply and what exactly the Reward should be for that Discount.
 
 Out of the box these builders come with a handful of the most common Rules / Rewards that should suit the majority of web stores needs, however if you should need to create your own Rules / Rewards then these are extendable via a Provider model allowing you to incorporate your own custom logic.
 
-## Example Custom Discount Rule Provider
+## Discount Rules
 
-An example of a Discount Rule Provider would look something like this:
+There are two types of Discount Rules in Vendr and these are:
+
+* **Order Discount Rules** - Determine whether a discount should apply to an Order, returning a simple Fulfilled/Unfulfilled status whether the Rule logic has been met.
+
+* **Order Line Discount Rules** - Determine whether a discount should apply to an Order Line within an Order, returning a simple Fulfilled/Unfulfilled status whether the Rule logic has been met. Where the status is Fulfilled, a list of all Order Lines that are fulfilled by this Rule are also returned.
+
+### Example Custom Order Discount Rule Provider
+
+An example of an Order Discount Rule Provider would look something like this:
 
 ````csharp
-[DiscountRuleProvider("myCustomRule", "My Custom Rule")]
-public class MyCustomRuleProvider : OrderDiscountRuleProviderBase<MyCustomRuleProviderSettings>
+[DiscountRuleProvider("myCustomOrderRule", "My Custom Order Rule")]
+public class MyCustomOrderRuleProvider : OrderDiscountRuleProviderBase<MyCustomOrderRuleProviderSettings>
 {
-    public override DiscountRuleResult ValidateRule(DiscountRuleContext ctx, MyCustomRuleProviderSettings settings)
+    public override DiscountRuleResult ValidateRule(DiscountRuleContext ctx, MyCustomOrderRuleProviderSettings settings)
     {
         if (/* Some custom logic */)
             return Fulfilled();
@@ -24,7 +32,7 @@ public class MyCustomRuleProvider : OrderDiscountRuleProviderBase<MyCustomRulePr
     }
 }
 
-public class MyCustomRuleProviderSettings : IDiscountRuleProviderSettings
+public class MyCustomOrderRuleProviderSettings : IDiscountRuleProviderSettings
 {
     [DiscountRuleProviderSetting(Key = "priceType",
         Name = "Price Type",
@@ -36,4 +44,170 @@ public class MyCustomRuleProviderSettings : IDiscountRuleProviderSettings
 
 ````
 
-## Example Custom Discount Reward Provider
+All Order Discount Rule Providers inherit from a base class `OrderDiscountRuleProviderBase<TSettings>` where `TSettings` is the Type of a POCO model class representing the Discount Rule Providers settings.
+
+<message-box type="info" heading="More on Settings Objects">
+
+See the [Settings Objects](#settings-objects) section below for more information on Settings objects.
+
+</message-box>
+
+The class must be decorated with `DiscountRuleProviderAttribute` which defines the Discount Rule Providers `alias` and `name`, and can also specify a `description` or `icon` to be displayed in the Vendr back-office. The `DiscountRuleProviderAttribute` is also responsible for defining a `labelView` for the Provider.
+
+<message-box type="info" heading="More on Label Views">
+
+See the [Label views](#label-views) section below for more information on Label Views.
+
+</message-box>
+
+Rule Providers then have a `ValidateRule` method which accepts a `DiscountRuleContext` as well as an instance of the Providers `TSettings` settings model, inside which you can perform your custom logic, returning a `DiscountRuleResult` to notify Vendr of the Rule outcome.
+
+If the passed in context (which contains a reference to the Order) meets the Rule's criteria, then a fulfilled `DiscountRuleResult` can be returned by calling `return Fulfilled();` or alternatively if the Order didn't meet the Rules criteria an unfulfilled `DiscountRuleResult` can be returned by calling `return Unfulfilled();`.
+
+### Example Custom Order Line Discount Rule Provider
+
+An example of an Order Line Discount Rule Provider would look something like this:
+
+````csharp
+[DiscountRuleProvider("myCustomOrderLineRule", "My Custom Order Line Rule")]
+public class MyCustomOrderLineRuleProvider : OrderLineDiscountRuleProviderBase<MyCustomOrderLineRuleProviderSettings>
+{
+    public override DiscountRuleResult ValidateRule(DiscountRuleContext ctx, MyCustomOrderLineRuleProviderSettings settings)
+    {
+        if (/* Some custom logic */)
+            return Fulfilled(fulfilledOrderLines);
+        
+        return Unfulfilled();
+    }
+}
+
+public class MyCustomOrderLineRuleProviderSettings : IDiscountRuleProviderSettings
+{
+    [DiscountRuleProviderSetting(Key = "priceType",
+        Name = "Price Type",
+        Description = "The type of price to compare against")]
+    public OrderPriceType PriceType { get; set; }
+
+    ...
+}
+
+````
+
+All Order Line Discount Rule Providers inherit from a base class `OrderLineDiscountRuleProviderBase<TSettings>` and follows much the same requirements as the Order Discount Rule Provider defined above. Where they do differ though is in the `ValidateRule` method implementation and when a fulfilled `DiscountRuleResult` is returned, an Order Line Discount Rule should also return a collection of Order Lines processed by the Rule that have meet the rules criteria by calling `return Fulfilled(fulfilledOrderLines);`.
+
+
+## Discount Rewards
+
+
+### Example Custom Discount Reward Provider
+
+An example of a Discount Reward Provider would look something like this:
+
+````csharp
+[DiscountRewardProvider("myDiscountReward", "My Discount Reward")]
+public class MyDiscountRewardProvider : DiscountRewardProviderBase<MyDiscountRewardProviderSettings>
+{
+    public override DiscountRewardCalculation CalculateReward(DiscountRewardContext ctx, MyDiscountRewardProviderSettings settings)
+    {
+        var result = new DiscountRewardCalculation();
+
+        // Some custom calculation logic goes here 
+
+        return result;
+    }
+}
+
+public class MyDiscountRewardProviderSettings : IDiscountRewardProviderSettings
+{
+    [DiscountRewardProviderSetting(Key = "priceType",
+        Name = "Price Type",
+        Description = "The price that will be affected by this reward")]
+    public OrderPriceType PriceType { get; set; }
+
+    ...
+}
+
+````
+
+All Discount Reward Providers inherit from a base class `DiscountRewardProviderBase<TSettings>` where `TSettings` is the Type of a POCO model class representing the Discount Reward Providers settings.
+
+<message-box type="info" heading="More on Settings Objects">
+
+See the [Settings Objects](#settings-objects) section below for more information on Settings objects.
+
+</message-box>
+
+The class must be decorated with `DiscountRewardProviderAttribute` which defines the Discount Reward Providers `alias` and `name`, and can also specify a `description` or `icon` to be displayed in the Vendr back-office. The `DiscountRewardProviderAttribute` is also responsible for defining a `labelView` for the Provider.
+
+<message-box type="info" heading="More on Label Views">
+
+See the [Label views](#label-views) section below for more information on Label Views.
+
+</message-box>
+
+Reward Providers then have a `CalculateReward` method which accepts a `DiscountRewardContext` as well as an instance of the Providers `TSettings` settings model, inside which you can perform your custom calculation logic, returning a `DiscountRewardCalculation` instance which defines any Reward values to apply to the Order.
+
+````csharp
+// Add a shipping total discount
+result.ShippingTotalPriceDiscounts.Add(new AppliedDiscount(ctx.Discount, price));
+
+// Add a subtotal discount
+result.SubtotalPriceDiscounts.Add(new AppliedDiscount(ctx.Discount, price));
+````
+
+## Common Features
+
+### Settings Objects
+
+Both Discount Rule Providers and Reward Providers require a Settings model to be defined in their implementation. The settings model has a number of responsibilities.
+
+* **Typed Settings Model** - Defines the strongly typed settings model the given Provider accepts. Any stored settings in the database will be deserialized to this type before being passed to the Provider for processing. This provides simple, strongly typed access to the relevant configuration settings.
+
+* **UI Scaffold** - Defines meta data on settings properties via either `DiscountRuleProviderSettingAttribute` or `DiscountRewardProviderSettingAttribute`, depending on the Provider type, which is used to dynamically build the AngularJS based UI for the given Providers configuration. See the [UI Scaffolding](#ui-scaffolding) section below for more information on UI Scaffolding.
+</message-box>
+
+* **Javascript Settings Model** - Defines the Javascript settings model passed to the Provider editor UI, using either the settings Property name as the object property key, or using the `key` property of the Setting Attribute declared on the given Property.
+
+#### UI Scaffolding
+
+An important element of the Settings object is UI Scaffolding. UI Scaffolding is where Vendr reads a series of Settings Attributes defined on your Settings object properties in order to dynamically build a User Interface for that Providers settings.
+
+````csharp
+public class MyDiscountRewardProviderSettings : IDiscountRewardProviderSettings
+{
+    [DiscountRewardProviderSetting(Key = "nodeId",
+        Name = "Product Node",
+        Description = "The product to discount the price of",
+        View = "contentpicker",
+        Config = "{ startNodeId: -1, multiPicker: false, idType: 'udi' }")]
+    public Udi NodeId { get; set; }
+
+    ...
+}
+````
+
+Attributes define a property `key`, `name`, `description` to display in the UI as well as an optional `view` and `config` option to define the Umbraco property editor to use to edit the given property with. If no view is defined, one will attempt to automatically be chosen based on the properties value type.
+
+An example of a generated UI built from these properties would look something like this:
+
+![Discount Rule UI](~/assets/images/screenshots/discount_rule_ui.png)
+
+### Label Views
+
+Both the `DiscountRuleProviderAttribute` and the `DiscountRewardProviderAttribute` required by Rule/Reward Providers allow you to define a `labelView` for the Provider which should be the path to an Angular JS based view file that will be used to render a label in the Rule/Reward Builder UI. Where no `labelView` is supplied, one will be looked for by convention at the following location:
+
+`~/app_plugins/vendr/views/discount/{Type}/labelViews/{ProviderAlias}.html`
+
+`Type` is either `rules` or `rewards`, depending on the Type of Provider it refers to, and `ProviderAlias` is the alias of the Provider.
+
+The Rule/Reward Label View should provide a user friendly summary of it's settings to display in the relevant Builder UI.
+
+![Discount Rule Label Views](~/assets/images/screenshots/discount_rule_builder_label_views.png)
+
+The Label View file will be passed a `model` property which will be a Javascript representation of the given Providers settings object.
+
+````html
+<span ng-if="model.priceType">Order {{ model.priceType | vendrSplitCamelCase }} Discount</span>
+
+````
+
