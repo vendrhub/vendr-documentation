@@ -682,29 +682,36 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 
 ### Validation Events
 
-| Type | Description |
-| ---- | ----------- |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+#### ValidateOrderProductAdd
+
+**Description:** Validation event fired when a Product is being added to an Order  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `ProductReference` | The Product Reference of the Product being added |
+| `decimal` | `Quantity` | The Quantity of the Product being added |
+| `IDictionary<string, string>` | `Properties` | Any Properties being added with the Product |
+| `string` | `BundleId` | The Bundle ID of the Product being added |
+| `string` | `ParentBundleId` | The Parent Bundle ID of the Product being added |
+
+
+#### ValidateOrderLanguageChange
+
+**Description:** Validation event fired when the Language of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<string>` | `LanguageIsoCode` | The changing Language ISO Code of the Order |
 
 ### Notification Events
 
