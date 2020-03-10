@@ -713,6 +713,138 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 | `OrderReadOnly` | `Order` | The Order associated with this event |
 | `ChangingValue<string>` | `LanguageIsoCode` | The changing Language ISO Code of the Order |
 
+#### ValidateOrderCurrencyChange
+
+**Description:** Validation event fired when the Currency of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid>` | `CurrencyId` | The changing ID of the Currency of the Order |
+
+#### ValidateOrderTaxClassChange
+
+**Description:** Validation event fired when the Tax Class of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid>` | `TaxClassId` | The changing ID of the Tax Class of the Order |
+
+#### ValidateOrderPaymentMethodChange
+
+**Description:** Validation event fired when the Payment Method of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `PaymentMethodId` | The changing ID of the Payment Method of the Order |
+
+#### ValidateOrderPaymentCountryRegionChange
+
+**Description:** Validation event fired when the Payment Country / Region of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Payment Country of the Order |
+| `ChangingValue<Guid?>` | `RegionId` | The changing ID of the Payment Region of the Order |
+
+#### ValidateOrderShippingMethodChange
+
+**Description:** Validation event fired when the Shipping Method of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `ShippingMethodId` | The changing ID of the Shipping Method of the Order |
+
+#### ValidateOrderShippingCountryRegionChange
+
+**Description:** Validation event fired when the Shipping Country / Region of an Order is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Shipping Country of the Order |
+| `ChangingValue<Guid?>` | `RegionId` | The changing ID of the Shipping Region of the Order |
+
+#### ValidateOrderDiscountCodeRedeem
+
+**Description:** Validation event fired when a Discount Code is being redeemed against an Order  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being redeemed against the Order |
+
+#### ValidateOrderDiscountCodeUnredeem
+
+**Description:** Validation event fired when a Discount Code is being unredeemed against an Order  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being unredeemed against the Order |
+
+#### ValidateOrderGiftCardRedeem
+
+**Description:** Validation event fired when a Gift Card Code is being redeemed against an Order  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being redeemed against the Order |
+
+#### ValidateOrderGiftCardUnredeem
+
+**Description:** Validation event fired when a Gift Card Code is being unredeemed against an Order  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being unredeemed against the Order |
+
 ### Notification Events
 
 | Type | Description |

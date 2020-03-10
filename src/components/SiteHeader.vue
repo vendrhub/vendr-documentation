@@ -1,7 +1,7 @@
 <template>
     <header id="header">
       <div style="background-image: linear-gradient(45deg, #249bff, #00eb71);" class="flex bg-brand-blue-light fixed top-0 inset-x-0 z-100 h-16 items-center">
-        <div class="w-full max-w-screen-xl relative mx-auto px-6">
+        <div class="w-full max-w-container relative mx-auto px-6">
           <div class="flex items-center -mx-6">
 
             <!-- Logo -->

@@ -73,6 +73,7 @@ module.exports = {
       
       maxWidth: theme => {
         return {
+          'container': '1450px',
           'screen-xl': theme('screens.xl'),
         }
       },

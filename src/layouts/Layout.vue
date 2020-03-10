@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <site-header />
-    <div class="w-full max-w-screen-xl mx-auto px-6">
+    <div class="w-full max-w-container mx-auto px-6">
       <div class="lg:flex -mx-6">
         
         <!-- Sidebar -->
@@ -20,7 +20,7 @@
             <div class="pt-24 pb-16 w-full">
 
               <!-- Intro -->
-              <div class="mb-6 px-6 max-w-3xl mx-auto lg:ml-0 lg:mr-auto xl:mx-0 lg:px-12 xl:w-3/4">
+              <div class="mb-6 px-6 mx-auto lg:ml-0 lg:mr-auto xl:mx-0 lg:px-12 xl:w-3/4">
                 <slot name="page-top" />
                 <h1 class=" text-5xl font-black text-brand-blue-dark font-brand-display leading-tight tracking-tighter">{{title}}</h1>
                 <div class="mt-0 mb-4 font-medium" v-if="description">{{description}}</div>
@@ -29,7 +29,7 @@
 
               <!-- Body -->
               <div class="flex">
-                <div class="px-6 lg:px-12 w-full max-w-3xl mx-auto lg:ml-0 lg:mr-auto xl:mx-0 xl:w-3/4">
+                <div class="px-6 lg:px-12 w-full mx-auto lg:ml-0 lg:mr-auto xl:mx-0 xl:w-3/4">
                   <slot />
                   <p class="text-center mt-10 text-sm text-gray-500">Site + logo design &copy; {{ new Date().getFullYear() }} Outfield Digital Ltd. Content contributions licensed under MIT.<br />Vendr&reg; is a Registered Trademark of Outfield Digital Ltd.</p>
                 </div>
