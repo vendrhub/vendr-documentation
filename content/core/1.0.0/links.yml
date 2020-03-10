@@ -66,6 +66,10 @@
       link: /reference/
     - title: Constants
       link: /reference/constants/
+    - title: Enums
+      link: /reference/enums/
+    - title: Prices
+      link: /reference/prices/
     - title: Orders
       link: /reference/orders/
     - title: Currencies

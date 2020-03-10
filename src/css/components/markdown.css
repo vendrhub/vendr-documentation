@@ -16,16 +16,16 @@
 }
 
 .markdown h2 {
-    @apply text-xl font-bold mb-4;/* border-b-2 border-gray-200 pb-3 mb-4; */
+    @apply text-2xl font-bold mb-4;/* border-b-2 border-gray-200 pb-3 mb-4; */
 }
 
 .markdown h3,
 .markdown h5 {
-    @apply text-lg font-medium mb-4; 
+    @apply text-xl font-medium mb-4; 
 }
 
 .markdown h4 {
-    @apply font-medium mb-4; 
+    @apply text-lg font-medium mb-4; 
 }
 
 .markdown .g-image {
@@ -61,6 +61,10 @@
 .markdown a:hover,
 .markdown a:focus {
     @apply text-brand-blue-dark underline;
+}
+
+.markdown strong {
+    @apply font-bold;
 }
 
 .markdown li {
@@ -147,6 +151,7 @@
     @apply bg-gray-100;
 }
 
+
 @screen md {
     .markdown table {
         display: table;
@@ -202,7 +207,7 @@
 }
 
 .markdown hr {
-    @apply mb-8 border-t-2 border-gray-200;
+    @apply mb-6 border-t-2 border-gray-200;
 }
 
 .markdown blockquote {
