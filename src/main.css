@@ -30,6 +30,7 @@
 
 @import "css/utils/object-fit.css";
 @import "css/utils/transitions.css";
+@import "css/utils/overflow-wrap.css";
 
 @variants responsive, hover, group-hover {
   .translate-r-5px {

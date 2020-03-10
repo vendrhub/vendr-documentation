@@ -66,21 +66,21 @@
       link: /reference/
     - title: Constants
       link: /reference/constants/
-    - title: Order
-      link: /reference/
-    - title: Currency
-      link: /reference/
-    - title: Tax Class
-      link: /reference/
-    - title: Store
-      link: /reference/
-    - title: Session
-      link: /reference/
+    - title: Orders
+      link: /reference/orders/
+    - title: Currencies
+      link: /reference/currencies/
+    - title: Tax Classes
+      link: /reference/tax-classes/
+    - title: Stores
+      link: /reference/stores/
+    - title: Sessions
+      link: /reference/sessions/
     - title: Events
-      link: /reference/
+      link: /reference/events/
     - title: Pipelines
-      link: /reference/
+      link: /reference/pipelines/
     - title: Calculators
-      link: /reference/
+      link: /reference/calculators/
     - title: Payment Providers
-      link: /reference/
+      link: /reference/payment-providers/

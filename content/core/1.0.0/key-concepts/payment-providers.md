@@ -90,9 +90,17 @@ For each implemented method above, developers should also implement a correspond
 
 For all implemented methods of a Payment Provider, all method return types support the returning off additional Meta Data. This is to allow Payment Providers to capture and store relevant information that aid the provider in doing it's job, or for storing useful reference information to display for the retailer.
 
-Any returned Meta Data from a Payment Provider method will be stored against the Order in it's [Properties](../properties/) collection.
+Any returned Meta Data from a Payment Provider method will be stored against the Order in it's [Properties](../properties/) collection. Should you need to retrieve these values from within some other area of the Payment Provider, you can use the passed in Orders Properties collection to do so.
 
-Where the Meta Data that is returned could be a useful reference for the retailer, the Payment Provider can also expose a `TransactionMetaDataDefinitions` property consisting of a list of `TransactionMetaDataDefinition` values that each define the alias, name and optional description of a Meta Data entry that Vendr will use to display that information in the back-office.
+<message-box type="info" heading="Top Tip">
+
+As Meta Data is stored in an Orders Properties collection, it is recommended that you prefix your Meta Data keys with the Payment Providers alias in order to prevent possible conflicts.
+
+</message-box>
+
+### Meta Data Definitions
+
+Where the Meta Data that is returned could be a useful reference for the retailer, the Payment Provider can also expose a `TransactionMetaDataDefinitions` property consisting of a list of `TransactionMetaDataDefinition` values that each define the `alias`, `name` and optional `description` of a Meta Data entry that Vendr will use to display that information in the back-office.
 
 ````csharp
 public override IEnumerable<TransactionMetaDataDefinition> TransactionMetaDataDefinitions => new[]{

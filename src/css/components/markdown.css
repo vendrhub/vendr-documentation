@@ -19,7 +19,8 @@
     @apply text-xl font-bold mb-4;/* border-b-2 border-gray-200 pb-3 mb-4; */
 }
 
-.markdown h3 {
+.markdown h3,
+.markdown h5 {
     @apply text-lg font-medium mb-4; 
 }
 
@@ -142,7 +143,7 @@
     @apply hidden;
 }
 
-.markdown table tr:nth-child(2n) {
+.markdown table tbody tr:nth-child(odd) {
     @apply bg-gray-100;
 }
 
