@@ -582,6 +582,11 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 | `OrderProductAddingNotification` | Notification event for adding a Product to an Order, prior to persistance |
 | `OrderProductAddedNotification` | Notification event for adding a Product to an Order, post persistance |
 
+
+
+
+
+
 ## Order Owned Entities
 
 ##### Vendr.Core.Models.OrderLineReadOnly
@@ -651,3 +656,78 @@ Order Transaction Information owned entity
 | `Amount` | `AmountAuthorized` | The total amount that was authorized via the transaction |
 | `Amount` | `TransactionFee` | Any fee amount associated with the transaction |
 | `PaymentStatus?` | `PaymentStatus` | The current payment status of the transaction |
+
+
+
+
+
+
+
+## Order Events
+
+##### Validation
+
+| Type | Description |
+| ---- | ----------- |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+
+##### Notification
+
+| Type | Description |
+| ---- | ----------- |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
