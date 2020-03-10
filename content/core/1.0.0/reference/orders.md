@@ -5,8 +5,11 @@ description: The system defined constant properties available in Vendr, the eCom
 
 ## Order Service
 
-##### Vendr.Core.Services.IOrderService
-Interface of the Vendr Order Service
+### IOrderService
+
+**Description:** Interface of the Vendr Order Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
 
 #### SearchOrders
 Searches for Orders with the given parameters.
@@ -248,15 +251,21 @@ void DeleteOrder(Order entity, bool revertFinalized);
 | `OrderDeletingNotification` | Notification event for deleting an Order entity, prior to persistance |
 | `OrderDeletedNotification` | Notification event for deleting an Order entity, post persistance |
 
-##### Vendr.Core.Services.OrderService
+### OrderService
 
-Default implementation of the [Vendr Order Service Interface](#vendrcoreservicesiorderservice)
+**Description:** Default implementation of the [Vendr Order Service Interface](#iorderservice)  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
+<div class="mb-48"></div>
 
 ## Order Entities
 
-##### Vendr.Core.Models.OrderReadOnly
+### OrderReadOnly
 
-Read Only Order entity
+**Description:** Read Only Order entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
 
 #### Properties
 
@@ -354,9 +363,11 @@ Order AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `Order` | A writable version of the Order |
 
-##### Vendr.Core.Models.Order
+### Order
 
-Writable Order entity
+**Description:** Writable Order entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
 
 #### Properties
 
@@ -582,16 +593,15 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 | `OrderProductAddingNotification` | Notification event for adding a Product to an Order, prior to persistance |
 | `OrderProductAddedNotification` | Notification event for adding a Product to an Order, post persistance |
 
-
-
-
-
+<div class="mb-48"></div>
 
 ## Order Owned Entities
 
-##### Vendr.Core.Models.OrderLineReadOnly
+### OrderLineReadOnly
 
-Order Line owned entity
+**Description:** Order Line owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
 
 #### Properties
 
@@ -603,9 +613,11 @@ Order Line owned entity
 | `TaxRate` | `TaxRate` | The Tax Rate of the payment fee |
 | `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the payment fee |
 
-##### Vendr.Core.Models.CustomerInfo
+### CustomerInfo
 
-Order Customer Information owned entity
+**Description:** Order Customer Information owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
 
 #### Properties
 
@@ -616,9 +628,12 @@ Order Customer Information owned entity
 | `string` | `LastName` | The last name of the customer |
 | `string` | `Email` | The email address of the customer |
 
-##### Vendr.Core.Models.OrderPaymentInfo
+### OrderPaymentInfo
 
-Order Payment Information owned entity
+**Description:** Order Payment Information owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
 
 #### Properties
 
@@ -630,9 +645,11 @@ Order Payment Information owned entity
 | `TaxRate` | `TaxRate` | The Tax Rate of the payment fee |
 | `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the payment fee |
 
-##### Vendr.Core.Models.OrderShippingInfo
+### OrderShippingInfo
 
-Order Shipping Information owned entity
+**Description:** Order Shipping Information owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
 
 #### Properties
 
@@ -644,9 +661,11 @@ Order Shipping Information owned entity
 | `TaxRate` | `TaxRate` | The Tax Rate of the shipping fee |
 | `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the shipping fee |
 
-##### Vendr.Core.Models.OrderTransactionInfo
+### OrderTransactionInfo
 
-Order Transaction Information owned entity
+**Description:** Order Transaction Information owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
 
 #### Properties
 
@@ -657,15 +676,11 @@ Order Transaction Information owned entity
 | `Amount` | `TransactionFee` | Any fee amount associated with the transaction |
 | `PaymentStatus?` | `PaymentStatus` | The current payment status of the transaction |
 
-
-
-
-
-
+<div class="mb-48"></div>
 
 ## Order Events
 
-##### Validation
+### Validation Events
 
 | Type | Description |
 | ---- | ----------- |
@@ -691,7 +706,7 @@ Order Transaction Information owned entity
 | `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
 | `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
 
-##### Notification
+### Notification Events
 
 | Type | Description |
 | ---- | ----------- |
