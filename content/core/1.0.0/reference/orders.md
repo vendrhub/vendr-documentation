@@ -781,6 +781,825 @@ OrderLineContext WithOrderLine(Guid orderLineId);
 | ---- | ----------- |
 | `OrderLineContext` | [The Order Line fluent context](#orderlinecontext) |
 
+#### RemoveOrderLine
+Removes and Order Line from the Order
+
+***Signature:***
+
+````csharp
+Order RemoveOrderLine(OrderLineReadOnly orderLine);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `OrderLineReadOnly` | `orderLine` | The Order Line to remove |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order RemoveOrderLine(Guid orderLineId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `orderLineId` | The ID of the Order Line to remove |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetProperty
+Sets a given Order Property
+
+***Signature:***
+
+````csharp
+Order SetProperty(string alias, string value);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The alias of the property to set |
+| `string` | `value` | The value of the property to set |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetProperty(string alias, PropertyValue value);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The alias of the property to set |
+| `PropertyValue` | `value` | The value of the property to set |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetProperties
+Sets a series of Order Properties
+
+***Signature:***
+
+````csharp
+Order SetProperties(IDictionary<string, string> properties, SetBehaviour setBehaviour);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IDictionary<string, string>` | `properties` | The properties to set |
+| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetProperties(IDictionary<string, PropertyValue> properties, SetBehaviour setBehaviour);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IDictionary<string, PropertyValue>` | `properties` | The properties to set |
+| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### RemoveProperty
+Removes an Order Property
+
+***Signature:***
+
+````csharp
+Order RemoveProperty(string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The alias of the Property to remove |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### RemoveProperties
+Removes a a series of Order Properties
+
+***Signature:***
+
+````csharp
+Order RemoveProperties(IEnumerable<string> aliases);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IEnumerable<string>` | `alias` | The aliases of the Properties to remove |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetLanguage
+Sets the Language of the Order
+
+***Signature:***
+
+````csharp
+Order SetLanguage(string languageIsoCode);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `languageIsoCode` | The ISO Code of the Language to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetCurrency
+Sets the Currency of the Order
+
+***Signature:***
+
+````csharp
+Order SetCurrency(CurrencyReadOnly currency);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `CurrencyReadOnly` | `currency` | The Currency to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetCurrency(Guid currencyId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `currencyId` | The ID of the Currency to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetTaxClass
+Sets the Tax Class of the Order
+
+***Signature:***
+
+````csharp
+Order SetTaxClass(TaxClassReadOnly taxClass);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `TaxClassReadOnly` | `taxClass` | The Tax Class to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetTaxClass(Guid taxClassId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `taxClassId` | The ID of the Tax Class to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetPaymentMethod
+Sets the Payment Method of the Order
+
+***Signature:***
+
+````csharp
+Order SetPaymentMethod(PaymentMethodReadOnly paymentMethod);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `PaymentMethodReadOnly` | `paymentMethod` | The Payment Method to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetPaymentMethod(Guid? paymentMethodId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `paymentMethodId` | The ID of the Payment Method to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### ClearPaymentMethod
+Clears the Payment Method of the Order
+
+***Signature:***
+
+````csharp
+Order ClearPaymentMethod();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetPaymentCountryRegion
+Sets the Payment Country and Region of the Order
+
+***Signature:***
+
+````csharp
+Order SetPaymentCountryRegion(CountryReadOnly country, RegionReadOnly region = null);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `CountryReadOnly` | `country` | The Country to set the Payment Country of the Order to |
+| `RegionReadOnly` | `region` | The Region to set the Payment Region of the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetPaymentCountryRegion(Guid? countryId, Guid? regionId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `countryId` | The ID of the Country to set the Payment Country of the Order to |
+| `Guid?` | `regionId` | The ID of the Region to set the Payment Region of the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### ClearPaymentCountryRegion
+Clears the Payment Country and Region of the Order
+
+***Signature:***
+
+````csharp
+Order ClearPaymentCountryRegion();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetShippingMethod
+Sets the Shipping Method of the Order
+
+***Signature:***
+
+````csharp
+Order SetShippingMethod(ShippingMethodReadOnly shippingMethod);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `ShippingMethodReadOnly` | `shippingMethod` | The Shipping Method to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetShippingMethod(Guid? shippingMethodId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `shippingMethodId` | The ID of the Shipping Method to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### ClearShippingMethod
+Clears the Shipping Method of the Order
+
+***Signature:***
+
+````csharp
+Order ClearShippingMethod();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetShippingCountryRegion
+Sets the Shipping Country and Region of the Order
+
+***Signature:***
+
+````csharp
+Order SetShippingCountryRegion(CountryReadOnly country, RegionReadOnly region = null);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `CountryReadOnly` | `country` | The Country to set the Shipping Country of the Order to |
+| `RegionReadOnly` | `region` | The Region to set the Shipping Region of the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetShippingCountryRegion(Guid? countryId, Guid? regionId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `countryId` | The ID of the Country to set the Shipping Country of the Order to |
+| `Guid?` | `regionId` | The ID of the Region to set the Shipping Region of the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### ClearShippingCountryRegion
+Clears the Shipping Country and Region of the Order
+
+***Signature:***
+
+````csharp
+Order ClearShippingCountryRegion();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### Redeem
+Redeems a Discount Code or Gift Card against the Order
+
+***Signature:***
+
+````csharp
+Order Redeem(string discountOrGiftCardCode);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `discountOrGiftCardCode` | The Code of the Discount or Gift Card to redeem against the Order |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### Unredeem
+Unredeems a Discount Code or Gift Card from the Order
+
+***Signature:***
+
+````csharp
+Order Unredeem(string discountOrGiftCardCode);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `discountOrGiftCardCode` | The Code of the Discount or Gift Card to unredeem from the Order |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### Finalize
+Finalizes the Order
+
+***Signature:***
+
+````csharp
+Order Finalize(decimal amountAuthorized, string transactionId, PaymentStatus paymentStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `amountAuthorized` | The amount authorized by the Payment Gateway |
+| `string` | `transactionId` | The unique ID of the transaction provided by the Payment Gateway |
+| `PaymentStatus` | `paymentStatus` | The status of the transaction |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order Finalize(decimal amountAuthorized, decimal transactionFee, string transactionId, PaymentStatus paymentStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `amountAuthorized` | The amount authorized by the Payment Gateway |
+| `decimal` | `transactionFee` | A fee amount charged by the Payment Gateway |
+| `string` | `transactionId` | The unique ID of the transaction provided by the Payment Gateway |
+| `PaymentStatus` | `paymentStatus` | The status of the transaction |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### FinalizeOrUpdateTransaction
+Finalizes or Updates the Orders Transaction info
+
+***Signature:***
+
+````csharp
+Order FinalizeOrUpdateTransaction(decimal amountAuthorized, string transactionId, PaymentStatus paymentStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `amountAuthorized` | The amount authorized by the Payment Gateway |
+| `string` | `transactionId` | The unique ID of the transaction provided by the Payment Gateway |
+| `PaymentStatus` | `paymentStatus` | The status of the transaction |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order FinalizeOrUpdateTransaction(decimal amountAuthorized, decimal transactionFee, string transactionId, PaymentStatus paymentStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `amountAuthorized` | The amount authorized by the Payment Gateway |
+| `decimal` | `transactionFee` | A fee amount charged by the Payment Gateway |
+| `string` | `transactionId` | The unique ID of the transaction provided by the Payment Gateway |
+| `PaymentStatus` | `paymentStatus` | The status of the transaction |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### UpdateTransaction
+Updates the Orders Transaction info
+
+***Signature:***
+
+````csharp
+Order UpdateTransaction(decimal amountAuthorized, string transactionId, PaymentStatus paymentStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `amountAuthorized` | The amount authorized by the Payment Gateway |
+| `string` | `transactionId` | The unique ID of the transaction provided by the Payment Gateway |
+| `PaymentStatus` | `paymentStatus` | The status of the transaction |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order UpdateTransaction(decimal amountAuthorized, decimal transactionFee, string transactionId, PaymentStatus paymentStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `amountAuthorized` | The amount authorized by the Payment Gateway |
+| `decimal` | `transactionFee` | A fee amount charged by the Payment Gateway |
+| `string` | `transactionId` | The unique ID of the transaction provided by the Payment Gateway |
+| `PaymentStatus` | `paymentStatus` | The status of the transaction |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### SetOrderStatus
+Updates the Orders Status
+
+***Signature:***
+
+````csharp
+Order SetOrderStatus(OrderStatusReadOnly orderStatus);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `OrderStatusReadOnly` | `orderStatus` | The Order Status to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetOrderStatus(Guid orderStatusId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `orderStatusId` | The ID of the Order Status to set the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetOrderStatus(OrderStatusReadOnly orderStatus, OrderStatusCode orderStatusCode);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `OrderStatusReadOnly` | `orderStatus` | The Order Status to set the Order to |
+| `OrderStatusCode` | `orderStatusCode` | An Order Status Code to assigned to the Order |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order SetOrderStatus(Guid orderStatusId, OrderStatusCode orderStatusCode);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `orderStatusId` | The ID of the Order Status to set the Order to |
+| `OrderStatusCode` | `orderStatusCode` | An Order Status Code to assigned to the Order |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### AssignToCustomer
+Assigns the Order to a Customer
+
+***Signature:***
+
+````csharp
+Order AssignToCustomer(string customerReference);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `customerReference` | The unique Reference of the Customer to assign the Order to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### Recalculate
+Recalculates the Customer
+
+***Signature:***
+
+````csharp
+Order Recalculate();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order Recalculate(bool force);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `bool` | `force` | Force the Order to recalculate even if it's Finalized |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
 <div class="mb-48"></div>
 
 ## Order Line Entities
