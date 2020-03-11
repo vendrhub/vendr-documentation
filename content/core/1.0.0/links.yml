@@ -70,14 +70,14 @@
       link: /reference/enums/
     - title: Prices
       link: /reference/prices/
+    - title: Stores
+      link: /reference/stores/
     - title: Orders
       link: /reference/orders/
     - title: Currencies
       link: /reference/currencies/
     - title: Tax Classes
       link: /reference/tax-classes/
-    - title: Stores
-      link: /reference/stores/
     - title: Sessions
       link: /reference/sessions/
     - title: Events

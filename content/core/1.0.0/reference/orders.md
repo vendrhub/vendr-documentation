@@ -1,6 +1,6 @@
 ---
 title: Orders
-description: The system defined constant properties available in Vendr, the eCommerce solution for Umbraco v8+
+description: Order related APIs in Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 ## Order Service
@@ -12,7 +12,7 @@ description: The system defined constant properties available in Vendr, the eCom
 **Assembly:** Vendr.Core
 
 #### SearchOrders
-Searches for Orders with the given parameters.
+Searches for Orders with the given parameters
 
 ***Signature:***
 
@@ -46,7 +46,7 @@ PagedResult<OrderReadOnly> SearchOrders(Guid storeId, string searchTerm = null, 
 
 
 #### GetOrders
-Gets a list of Orders with the given IDs.
+Gets a list of Orders with the given IDs
 
 ***Signature:***
 
@@ -67,7 +67,7 @@ IEnumerable<OrderReadOnly> GetOrders(Guid[] ids);
 | `IEnumerable<OrderReadOnly>` | A list of read only Order entities matching the provided criteria  |
 
 #### GetFinalizedOrdersForCustomer
-Gets a list of finalized Orders assigned to a given Customer.
+Gets a list of finalized Orders assigned to a given Customer
 
 ***Signature:***
 
@@ -89,7 +89,7 @@ IEnumerable<OrderReadOnly> GetFinalizedOrdersForCustomer(Guid storeId, string cu
 | `IEnumerable<OrderReadOnly>` | A list of read only Order entities matching the provided criteria  |
 
 #### GetOrder
-Gets a specific Order entity.
+Gets a specific Order entity
 
 ***Signature:***
 
@@ -131,7 +131,7 @@ OrderReadOnly GetOrder(Guid storeId, string cartOrOrderNumber);
 | `OrderReadOnly` | A read only Order entity matching the provided criteria  |
 
 #### GetFinalizedOrderCount
-Gets the total number of finalized Orders for the given Store.
+Gets the total number of finalized Orders for the given Store
 
 ***Signature:***
 
@@ -152,7 +152,7 @@ long GetFinalizedOrderCount(Guid storeId);
 | `long` | The total number of finalized Orders |
 
 #### SaveOrder
-Persists the given Order to the database.
+Persists the given Order to the database
 
 ***Signature:***
 
@@ -871,7 +871,7 @@ Sets a series of Order Properties
 ***Signature:***
 
 ````csharp
-Order SetProperties(IDictionary<string, string> properties, SetBehaviour setBehaviour);
+Order SetProperties(IDictionary<string, string> properties, SetBehavior setBehavior);
 ````
 
 ***Parameters:***
@@ -879,7 +879,7 @@ Order SetProperties(IDictionary<string, string> properties, SetBehaviour setBeha
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `IDictionary<string, string>` | `properties` | The properties to set |
-| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+| `SetBehavior` | `setBehavior` | The Behavior of the set operation, whether to `Merge` the properties, or `Replace` them entirely |
 
 ***Returns:***
 
@@ -892,7 +892,7 @@ Order SetProperties(IDictionary<string, string> properties, SetBehaviour setBeha
 ***Signature:***
 
 ````csharp
-Order SetProperties(IDictionary<string, PropertyValue> properties, SetBehaviour setBehaviour);
+Order SetProperties(IDictionary<string, PropertyValue> properties, SetBehavior setBehavior);
 ````
 
 ***Parameters:***
@@ -900,7 +900,7 @@ Order SetProperties(IDictionary<string, PropertyValue> properties, SetBehaviour 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `IDictionary<string, PropertyValue>` | `properties` | The properties to set |
-| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+| `SetBehavior` | `setBehavior` | The Behavior of the set operation, whether to `Merge` the properties, or `Replace` them entirely |
 
 ***Returns:***
 
@@ -1600,6 +1600,21 @@ Order Recalculate(bool force);
 | ---- | ----------- |
 | `Order` | The updated writable Order |
 
+#### AsReadOnly
+Converts a writable Order into a read only Order
+
+***Signature:***
+
+````csharp
+OrderReadOnly AsReadOnly();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderReadOnly` | A read only version of the Order |
+
 <div class="mb-48"></div>
 
 ## Order Line Entities
@@ -1753,7 +1768,7 @@ Sets a series of Order Line Properties
 ***Signature:***
 
 ````csharp
-OrderLineContext SetProperties(IDictionary<string, string> properties, SetBehaviour setBehaviour);
+OrderLineContext SetProperties(IDictionary<string, string> properties, SetBehavior setBehavior);
 ````
 
 ***Parameters:***
@@ -1761,7 +1776,7 @@ OrderLineContext SetProperties(IDictionary<string, string> properties, SetBehavi
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `IDictionary<string, string>` | `properties` | The properties to set |
-| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+| `SetBehavior` | `setBehavior` | The Behavior of the set operation, whether to `Merge` the properties, or `Replace` them entirely |
 
 ***Returns:***
 
@@ -1774,7 +1789,7 @@ OrderLineContext SetProperties(IDictionary<string, string> properties, SetBehavi
 ***Signature:***
 
 ````csharp
-OrderLineContext SetProperties(IDictionary<string, PropertyValue> properties, SetBehaviour setBehaviour);
+OrderLineContext SetProperties(IDictionary<string, PropertyValue> properties, SetBehavior setBehavior);
 ````
 
 ***Parameters:***
@@ -1782,7 +1797,7 @@ OrderLineContext SetProperties(IDictionary<string, PropertyValue> properties, Se
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `IDictionary<string, PropertyValue>` | `properties` | The properties to set |
-| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+| `SetBehavior` | `setBehavior` | The Behavior of the set operation, whether to `Merge` the properties, or `Replace` them entirely |
 
 ***Returns:***
 
