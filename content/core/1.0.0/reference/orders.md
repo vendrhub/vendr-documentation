@@ -1899,6 +1899,48 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Amount` | `TransactionFee` | Any fee amount associated with the transaction |
 | `PaymentStatus?` | `PaymentStatus` | The current payment status of the transaction |
 
+### AppliedDiscountCode
+
+**Description:** Order Applied Discount Code owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `DiscountId` | The ID of the Discount this code is associated with |
+| `string` | `Code` | The Code that was applied |
+| `bool` | `IsFulfilled` | Flag indicating whether the code is fulfilled by the Order |
+
+### AppliedGiftCard
+
+**Description:** Order Applied Gift Card owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `GiftCardId` | The ID of the Gift Card this code is associated with |
+| `string` | `Code` | The Code that was applied |
+| `Amount` | `Amount` | The calculated amount deducted from the Order by this Gift Card |
+
+### FulfilledDiscount
+
+**Description:** Order Fulfilled Discount owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `DiscountId` | The ID of the Discount |
+| `string` | `DiscountName` | The Name of the Discount |
+| `DiscountType` | `DiscountType` | The Type of the Discount, either `Automatic` or `Code` |
+
 <div class="mb-48"></div>
 
 ## Order Events
@@ -2190,44 +2232,561 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 ### Notification Events
 
-| Type | Description |
-| ---- | ----------- |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+#### OrderCreatingNotification
+
+**Description:** Notification event fired before an Order is created   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+
+#### OrderCreatedNotification
+
+**Description:** Notification event fired after an Order is created   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### OrderUpdatingNotification
+
+**Description:** Notification event fired before an Order is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+
+#### OrderUpdatedNotification
+
+**Description:** Notification event fired after an Order is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### OrderSavingNotification
+
+**Description:** Notification event fired before an Order is saved   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+
+#### OrderSavedNotification
+
+**Description:** Notification event fired after an Order is saved   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### OrderDeletingNotification
+
+**Description:** Notification event fired before an Order is deleted   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+
+#### OrderDeletedNotification
+
+**Description:** Notification event fired after an Order is deleted   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### OrderFinalizingNotification
+
+**Description:** Notification event fired before an Order is finalized   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+
+#### OrderFinalizedNotification
+
+**Description:** Notification event fired after an Order is finalized   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### OrderLanguageChangingNotification
+
+**Description:** Notification event fired before an Order Language is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<string>` | `LanguageIsoCode` | The changing ISO Code of the Language of the Order |
+
+#### OrderLanguageChangedNotification
+
+**Description:** Notification event fired after an Order Language is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<string>` | `LanguageIsoCode` | The changing ISO Code of the Language of the Order |
+
+#### OrderCurrencyChangingNotification
+
+**Description:** Notification event fired before an Order Currency is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CurrencyId` | The changing ID of the Currency of the Order |
+
+#### OrderCurrencyChangedNotification
+
+**Description:** Notification event fired after an Order Currency is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CurrencyId` | The changing ID of the Currency of the Order |
+
+#### OrderTaxClassChangingNotification
+
+**Description:** Notification event fired before an Order Tax Class is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `TaxClassId` | The changing ID of the Tax Class of the Order |
+
+#### OrderTaxClassChangedNotification
+
+**Description:** Notification event fired after an Order Tax Class is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `TaxClassId` | The changing ID of the Tax Class of the Order |
+
+#### OrderPaymentMethodChangingNotification
+
+**Description:** Notification event fired before an Order Payment Method is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `PaymentMethodId` | The changing ID of the Payment Method of the Order |
+
+#### OrderPaymentMethodChangedNotification
+
+**Description:** Notification event fired after an Order Payment Method is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `PaymentMethodId` | The changing ID of the Payment Method of the Order |
+
+#### OrderPaymentCountryRegionChangingNotification
+
+**Description:** Notification event fired before an Order Payment CountryRegion is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Payment Country of the Order |
+| `ChangingValue<Guid?>` | `RegionId` | The changing ID of the Payment Region of the Order |
+
+#### OrderPaymentCountryRegionChangedNotification
+
+**Description:** Notification event fired after an Order Payment CountryRegion is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Payment Country of the Order |
+| `ChangingValue<Guid?>` | `RegionId` | The changing ID of the Payment Region of the Order |
+
+#### OrderShippingMethodChangingNotification
+
+**Description:** Notification event fired before an Order Shipping Method is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `ShippingMethodId` | The changing ID of the Shipping Method of the Order |
+
+#### OrderShippingMethodChangedNotification
+
+**Description:** Notification event fired after an Order Shipping Method is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `ShippingMethodId` | The changing ID of the Shipping Method of the Order |
+
+#### OrderShippingCountryRegionChangingNotification
+
+**Description:** Notification event fired before an Order Shipping CountryRegion is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Shipping Country of the Order |
+| `ChangingValue<Guid?>` | `RegionId` | The changing ID of the Shipping Region of the Order |
+
+#### OrderShippingCountryRegionChangedNotification
+
+**Description:** Notification event fired after an Order Shipping CountryRegion is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Shipping Country of the Order |
+| `ChangingValue<Guid?>` | `RegionId` | The changing ID of the Shipping Region of the Order |
+
+#### OrderProductAddingNotification
+
+**Description:** Notification event fired before a Product is added to an Order   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `string` | `ProductReference` | The Product Reference of the Product being added |
+| `decimal` | `Quantity` | The Quantity of the Product being added |
+| `IDictionary<string, string>` | `Properties` | Any Properties being added with the Product |
+| `string` | `BundleId` | The Bundle ID of the Product being added |
+| `string` | `ParentBundleId` | The Parent Bundle ID of the Product being added |
+
+#### OrderProductAddedNotification
+
+**Description:** Notification event fired after a Product is added to an Order   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `ProductReference` | The Product Reference of the Product being added |
+| `decimal` | `Quantity` | The Quantity of the Product being added |
+| `IDictionary<string, string>` | `Properties` | Any Properties being added with the Product |
+| `string` | `BundleId` | The Bundle ID of the Product being added |
+| `string` | `ParentBundleId` | The Parent Bundle ID of the Product being added |
+
+#### OrderStatusChangingNotification
+
+**Description:** Notification event fired before an Order Status is changed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `OrderStatusId` | The changing ID of the Order Status of the Order |
+| `ChangingValue<OrderStatusCode>` | `OrderStatusCode` | The changing Code of the Order Status of the Order |
+
+#### OrderStatusChangedNotification
+
+**Description:** Notification event fired after an Order Status is changed    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid?>` | `OrderStatusId` | The changing ID of the Order Status of the Order |
+| `ChangingValue<OrderStatusCode>` | `OrderStatusCode` | The changing Code of the Order Status of the Order |
+
+#### OrderTransactionUpdatingNotification
+
+**Description:** Notification event fired before an Orders Transaction is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<decimal>` | `AmountAuthorized` | The changing Authorized Amount of the Transaction |
+| `ChangingValue<decimal>` | `TransactionFee` | The changing Fee charged by the Payment Gateway for the Transaction |
+| `ChangingValue<string>` | `TransactionId` | The changing unique ID of the Transaction |
+| `ChangingValue<PaymentStatus?>` | `PaymentStatus` | The changing Payment Status value of the Transaction |
+
+#### OrderTransactionUpdatedNotification
+
+**Description:** Notification event fired after an Orders Transaction is updated    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<decimal>` | `AmountAuthorized` | The changing Authorized Amount of the Transaction |
+| `ChangingValue<decimal>` | `TransactionFee` | The changing Fee charged by the Payment Gateway for the Transaction |
+| `ChangingValue<string>` | `TransactionId` | The changing unique ID of the Transaction |
+| `ChangingValue<PaymentStatus?>` | `PaymentStatus` | The changing Payment Status value of the Transaction |
+
+#### OrderAssigningToCustomerNotification
+
+**Description:** Notification event fired before an Order is assigned to a Customer   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `ChangingValue<string>` | `OrderStatusCode` | The changing unique Reference of the Customer the Order is being assigned to |
+
+#### OrderAssignedToCustomerNotification
+
+**Description:** Notification event fired after an Order is assigned to a Customer    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<string>` | `OrderStatusCode` | The changing unique Reference of the Customer the Order is being assigned to |
+
+#### OrderDiscountCodeRedeemingNotification
+
+**Description:** Notification event fired before a Discount Code is redeemed against an Order   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being redeemed |
+
+#### OrderDiscountCodeRedeemedNotification
+
+**Description:** Notification event fired after a Discount Code is redeemed against an Order    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being redeemed |
+
+#### OrderDiscountCodeUnredeemingNotification
+
+**Description:** Notification event fired before a Discount Code is unredeemed from an Order   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being unredeemed |
+
+#### OrderDiscountCodeUnredeemedNotification
+
+**Description:** Notification event fired after a Discount Code is unredeemed from an Order    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being unredeemed |
+
+#### OrderGiftCardRedeemingNotification
+
+**Description:** Notification event fired before a Gift Card is redeemed against an Order   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being redeemed |
+
+#### OrderGiftCardRedeemedNotification
+
+**Description:** Notification event fired after a Gift Card is redeemed against an Order    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being redeemed |
+
+#### OrderGiftCardUnredeemingNotification
+
+**Description:** Notification event fired before a Gift Card is unredeemed from an Order   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being unredeemed |
+
+#### OrderGiftCardUnredeemedNotification
+
+**Description:** Notification event fired after a Gift Card is unredeemed from an Order    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Code` | The Code being unredeemed |
+
+#### OrderPropertiesChangingNotification
+
+**Description:** Notification event fired before the Properties of an Order change   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `DictionaryDiff<string, PropertyValue>` | `Properties` | A diff of the changing Order Properties |
+
+#### OrderPropertiesChangedNotification
+
+**Description:** Notification event fired after the Properties of an Order change    
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `DictionaryDiff<string, PropertyValue>` | `Properties` | A diff of the changing Order Properties |
 
 <div class="mb-48"></div>
 
@@ -2235,4 +2794,102 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 ### Validation Events
 
+#### ValidateOrderLineQuantityChange
+
+**Description:** Validation event fired when the Quantity of an Order Line is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
+| `ChangingValue<decimal>` | `Quantity` | The changing Quantity of the Order Line |
+
+#### ValidateOrderLinePropertyChange
+
+**Description:** Validation event fired when an Order Line Property is changing   
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
+| `string` | `Alias` | The Alias of the Order Line Property that is changing |
+| `ChangingValue<PropertyValue>` | `Value` | The changing Value of the Order Line Property that is changing |
+
+#### ValidateOrderLineRemove
+
+**Description:** Validation event fired when an Order Line is being removed   
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
+
 ### Notification Events
+
+#### OrderLineChangingNotification
+
+**Description:** Notification event fired before an Order Line change   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
+| `ChangingValue<decimal>` | `Quantity` | The changing Quantity of the Order Line |
+| `DictionaryDiff<string, PropertyValue>` | `Properties` | A diff of changing Properties on the Order Line |
+
+#### OrderLineChangedNotification
+
+**Description:** Notification event fired after an Order Line change   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
+| `ChangingValue<decimal>` | `Quantity` | The changing Quantity of the Order Line |
+| `DictionaryDiff<string, PropertyValue>` | `Properties` | A diff of changing Properties on the Order Line |
+
+#### OrderLineRemovingNotification
+
+**Description:** Notification event fired before an Order Line is removed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Order` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
+
+#### OrderLineRemovedNotification
+
+**Description:** Notification event fired after an Order Line is removed   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `OrderLineReadOnly` | `OrderLine` | The Order Line associated with this event |
