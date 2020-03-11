@@ -1907,7 +1907,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderCreate
 
-**Description:** Validation event fired when an Order is being created 
+**Description:** Validation event fired when an Order is being created  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -1919,7 +1919,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderUpdate
 
-**Description:** Validation event fired when an Order is being updated 
+**Description:** Validation event fired when an Order is being updated  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -1931,7 +1931,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderSave
 
-**Description:** Validation event fired when an Order is being saved 
+**Description:** Validation event fired when an Order is being saved  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -1943,7 +1943,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderDelete
 
-**Description:** Validation event fired when an Order is being deleted 
+**Description:** Validation event fired when an Order is being deleted  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -2149,7 +2149,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderStatusChange
 
-**Description:** Validation event fired when an Orders Status is changing 
+**Description:** Validation event fired when an Orders Status is changing  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -2163,7 +2163,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderAssignToCustomer
 
-**Description:** Validation event fired when an Order is being assigned to a Customer
+**Description:** Validation event fired when an Order is being assigned to a Customer  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -2176,7 +2176,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 #### ValidateOrderPropertyChange
 
-**Description:** Validation event fired when an Order Property is changing
+**Description:** Validation event fired when an Order Property is changing  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
