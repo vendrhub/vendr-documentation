@@ -166,22 +166,6 @@ void SaveOrder(Order entity);
 | ---- | ----- | ----------- |
 | `Order` | `entity` | The Order to save |
 
---- 
-
-***Events:***
-
-| Type | Description |
-| ---- | ----------- |
-| `ValidateOrderCreate` | Validation event for creating an Order entity |
-| `ValidateOrderUpdate` | Validation event for updating an Order entity |
-| `ValidateOrderSave` | Validation event for saving an Order entity |
-| `OrderCreatingNotification` | Notification event for creating an Order entity, prior to persistance |
-| `OrderUpdatingNotification` | Notification event for updating an Order entity, prior to persistance |
-| `OrderSavingNotification` | Notification event for saving an Order entity, prior to persistance |
-| `OrderCreatedNotification` | Notification event for creating an Order entity, post persistance |
-| `OrderUpdatedNotification` | Notification event for updating an Order entity, post persistance |
-| `OrderSavedNotification` | Notification event for saving an Order entity, post persistance |
-
 #### DeleteOrder
 Deletes the given Order.
 
@@ -241,16 +225,6 @@ void DeleteOrder(Order entity, bool revertFinalized);
 | `Order` | `entity` | The Order to delete |
 | `bool` | `revertFinalized` | Flag to set whether to revert finalized changes, such as stock levels, discount code usages, etc |
 
---- 
-
-***Events:***
-
-| Type | Description |
-| ---- | ----------- |
-| `ValidateOrderDelete` | Validation event for deleting an Order entity |
-| `OrderDeletingNotification` | Notification event for deleting an Order entity, prior to persistance |
-| `OrderDeletedNotification` | Notification event for deleting an Order entity, post persistance |
-
 ### OrderService
 
 **Description:** Default implementation of the [Vendr Order Service Interface](#iorderservice)  
@@ -280,15 +254,15 @@ void DeleteOrder(Order entity, bool revertFinalized);
 | `string` | `LanguageIsoCode` | The ISO Code of the Language of this Order |
 | `string` | `CartNumber` | The Orders unique Cart Number |
 | `string` | `OrderNumber` | The Orders unique Order Number, generated at checkout |
-| `CustomerInfo` | `CustomerInfo` | The [Customer Information](#vendrcoremodelscustomerinfo) associated with this Order |
-| `OrderPaymentInfo` | `PaymentInfo` | The [Payment Information](#vendrcoremodelspaymentinfo) associated with this Order |
-| `OrderShippingInfo` | `ShippingInfo` | The [Shipping Information](#vendrcoremodelsshippinginfo) associated with this Order |
-| `OrderTransactionInfo` | `TransactionInfo` | The [Transaction Information](#vendrcoremodelstransactioninfo) associated with this Order |
-| `IReadOnlyCollection <OrderLineReadOnly>` | `OrderLines` | Collection of [Order Lines](#vendrcoremodelsorderlinereadonly) associated with this Order |
-| `IReadOnlyDictionary <string, PropertyValue>` | `Properties` | Collection of [Order Properties](#) associated with this Order |
-| `IReadOnlyCollection <AppliedDiscountCode>` | `DiscountCodes` | Collection of [Applied Discount Codes](#) associated with this Order |
-| `IReadOnlyCollection <AppliedGiftCard>` | `GiftCards` | Collection of [Applied Gift Cards](#) associated with this Order |
-| `IReadOnlyCollection <FulfilledDiscount>` | `Discounts` | Collection of [Fulfilled Discounts](#) associated with this Order |
+| `CustomerInfo` | `CustomerInfo` | The [Customer Information](#customerinfo) associated with this Order |
+| `OrderPaymentInfo` | `PaymentInfo` | The [Payment Information](#paymentinfo) associated with this Order |
+| `OrderShippingInfo` | `ShippingInfo` | The [Shipping Information](#shippinginfo) associated with this Order |
+| `OrderTransactionInfo` | `TransactionInfo` | The [Transaction Information](#transactioninfo) associated with this Order |
+| `IReadOnlyCollection <OrderLineReadOnly>` | `OrderLines` | Collection of [Order Lines](#orderlinereadonly) associated with this Order |
+| `IReadOnlyDictionary <string, PropertyValue>` | `Properties` | Collection of [Order Properties](../../key-concepts/properties/) associated with this Order |
+| `IReadOnlyCollection <AppliedDiscountCode>` | `DiscountCodes` | Collection of [Applied Discount Codes](#applieddiscountcode) associated with this Order |
+| `IReadOnlyCollection <AppliedGiftCard>` | `GiftCards` | Collection of [Applied Gift Cards](#appliedgiftcard) associated with this Order |
+| `IReadOnlyCollection <FulfilledDiscount>` | `Discounts` | Collection of [Fulfilled Discounts](#fulfilleddiscount) associated with this Order |
 | `TaxRate` | `TaxRate` | The Tax Rate of the Order |
 | `double` | `TotalQuantity` | The total quantity of Order Line items in the Order |
 | `ReadOnlyOrderSubtotalPrice` | `SubtotalPrice` | The subtotal price of the Order |
@@ -419,8 +393,8 @@ Order AddProduct(string productReference, decimal qty);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `productReference` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
 
 ***Returns:***
 
@@ -440,9 +414,9 @@ Order AddProduct(string productReference, decimal qty, string bundleId);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `productReference` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-| `string` | `bundleId` | The ID of the Currency of the Order |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a Bundle |
 
 ***Returns:***
 
@@ -462,9 +436,9 @@ Order AddProduct(string productReference, decimal qty, IDictionary<string, strin
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `productReference` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-| `IDictionary<string, string>` | `properties` | The ISO Code of the Language of the Order |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
 
 ***Returns:***
 
@@ -484,10 +458,10 @@ Order AddProduct(string productReference, decimal qty, IDictionary<string, strin
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `productReference` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-| `IDictionary<string, string>` | `properties` | The ISO Code of the Language of the Order |
-| `string` | `bundleId` | The ID of the Currency of the Order |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a Bundle |
 
 ***Returns:***
 
@@ -507,9 +481,8 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `IProductSnapshot` | `productSnapshot` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
 ***Returns:***
 
 | Type | Description |
@@ -528,9 +501,9 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, string bundleId)
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `IProductSnapshot` | `productSnapshot` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-| `string` | `bundleId` | The ID of the Currency of the Order |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a Bundle |
 
 ***Returns:***
 
@@ -550,9 +523,9 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `IProductSnapshot` | `productSnapshot` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-| `IDictionary<string, string>` | `properties` | The ISO Code of the Language of the Order |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
 
 ***Returns:***
 
@@ -572,10 +545,33 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `IProductSnapshot` | `productSnapshot` | An active Unit of Work to associate with this writable entity |
-| `decimal` | `qty` | The ID of the Store this Order belongs to |
-| `IDictionary<string, string>` | `properties` | The ISO Code of the Language of the Order |
-| `string` | `bundleId` | The ID of the Currency of the Order |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a Bundle |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### AddProductToBundle
+Adds a Product to a Bundle
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, string productReference, decimal qty);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
 
 ***Returns:***
 
@@ -585,17 +581,209 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 
 ---
 
-***Events:***
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, string productReference, decimal qty, string bundleId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a sub Bundle |
+
+***Returns:***
 
 | Type | Description |
 | ---- | ----------- |
-| `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
-| `OrderProductAddingNotification` | Notification event for adding a Product to an Order, prior to persistance |
-| `OrderProductAddedNotification` | Notification event for adding a Product to an Order, post persistance |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, string productReference, decimal qty, IDictionary<string, string> properties);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, string productReference, decimal qty, IDictionary<string, string> properties, string bundleId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `string` | `productReference` | The unique reference of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a sub Bundle |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+--- 
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, IProductSnapshot productSnapshot, decimal qty);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, IProductSnapshot productSnapshot, decimal qty, string bundleId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a sub Bundle |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, IProductSnapshot productSnapshot, decimal qty, IDictionary<string, string> properties);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+---
+
+***Signature:***
+
+````csharp
+Order AddProductToBundle(string parentBundleId, IProductSnapshot productSnapshot, decimal qty, IDictionary<string, string> properties, string bundleId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `parentBundleId` | The ID of the Bundle to assign this Product to |
+| `IProductSnapshot` | `productSnapshot` | A Vendr snapshot of the Product to add to the Order |
+| `decimal` | `qty` | The quantity of the Product to add to the Order |
+| `IDictionary<string, string>` | `properties` | A collection of properties to assign to the Product Order Line |
+| `string` | `bundleId` | An ID to assign to the Product Order Line to identify it as a sub Bundle |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Order` | The updated writable Order |
+
+#### WithOrderLine
+Switches the Fluent write context from the Order to the defined Order Line
+
+***Signature:***
+
+````csharp
+OrderLineContext WithOrderLine(OrderLineReadOnly orderLine);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `OrderLineReadOnly` | `orderLine` | The Order Line to set the write context to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | [The Order Line fluent context](#orderlinecontext) |
+
+---
+
+***Signature:***
+
+````csharp
+OrderLineContext WithOrderLine(Guid orderLineId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `orderLineId` | The ID of the Order Line to set the write context to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | [The Order Line fluent context](#orderlinecontext) |
 
 <div class="mb-48"></div>
 
-## Order Owned Entities
+## Order Line Entities
 
 ### OrderLineReadOnly
 
@@ -612,6 +800,213 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 | `Guid?` | `PaymentMethodId` | The ID of the payment Method |
 | `TaxRate` | `TaxRate` | The Tax Rate of the payment fee |
 | `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the payment fee |
+
+### OrderLineContext
+
+**Description:** Order Line fluent write context  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+<message-box type="info" heading="Note">
+
+An Order Line context cannot simply be created, it must be retrieved by calling [WithOrderLine](#withorderline) on the Order Lines parent writable Order.
+
+</message-box>
+
+#### IncrementQuantity
+Increments the quantity of the current contextual Order Line by a given amount
+
+***Signature:***
+
+````csharp
+OrderLineContext IncrementQuantity(decimal qty);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `qty` | The amount to increase the Order Line quantity by |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+#### DecrementQuantity
+Decrements the quantity of the current contextual Order Line by a given amount
+
+***Signature:***
+
+````csharp
+OrderLineContext DecrementQuantity(decimal qty);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `qty` | The amount to decrease the Order Line quantity by |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+#### SetQuantity
+Sets the quantity of the current contextual Order Line to a given amount
+
+***Signature:***
+
+````csharp
+OrderLineContext SetQuantity(decimal qty);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `decimal` | `qty` | The amount to set the Order Line quantity to |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+#### SetProperty
+Sets a given Order Line Property
+
+***Signature:***
+
+````csharp
+OrderLineContext SetProperty(string alias, string value);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The alias of the property to set |
+| `string` | `value` | The value of the property to set |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+---
+
+***Signature:***
+
+````csharp
+OrderLineContext SetProperty(string alias, PropertyValue value);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The alias of the property to set |
+| `PropertyValue` | `value` | The value of the property to set |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+#### SetProperties
+Sets a series of Order Line Properties
+
+***Signature:***
+
+````csharp
+OrderLineContext SetProperties(IDictionary<string, string> properties, SetBehaviour setBehaviour);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IDictionary<string, string>` | `properties` | The properties to set |
+| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+---
+
+***Signature:***
+
+````csharp
+OrderLineContext SetProperties(IDictionary<string, PropertyValue> properties, SetBehaviour setBehaviour);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IDictionary<string, PropertyValue>` | `properties` | The properties to set |
+| `SetBehaviour` | `setBehaviour` | The behaviour of the set operation, whether to `MERGE` the properties, or `REPLACE` them entirely |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+#### RemoveProperty
+Removes an Order Line Property
+
+***Signature:***
+
+````csharp
+OrderLineContext RemoveProperty(string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The alias of the Property to remove |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+#### RemoveProperties
+Removes a a series of Order Line Properties
+
+***Signature:***
+
+````csharp
+OrderLineContext RemoveProperties(IEnumerable<string> aliases);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IEnumerable<string>` | `alias` | The aliases of the Properties to remove |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `OrderLineContext` | The Order Line fluent write context |
+
+<div class="mb-48"></div>
+
+## Order Owned Entities
 
 ### CustomerInfo
 
@@ -885,3 +1280,11 @@ Order AddProduct(IProductSnapshot productSnapshot, decimal qty, IDictionary<stri
 | `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
 | `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
 | `ValidateOrderProductAdd` | Validation event for adding a Product to an Order |
+
+<div class="mb-48"></div>
+
+## Order Line Events
+
+### Validation Events
+
+### Notification Events
