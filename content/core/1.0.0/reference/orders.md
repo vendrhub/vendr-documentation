@@ -1905,9 +1905,9 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 
 ### Validation Events
 
-#### ValidateOrderProductAdd
+#### ValidateOrderCreate
 
-**Description:** Validation event fired when a Product is being added to an Order  
+**Description:** Validation event fired when an Order is being created 
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -1916,12 +1916,42 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | Type | Name | Description |
 | ---- | ---- | ----------- |
 | `OrderReadOnly` | `Order` | The Order associated with this event |
-| `string` | `ProductReference` | The Product Reference of the Product being added |
-| `decimal` | `Quantity` | The Quantity of the Product being added |
-| `IDictionary<string, string>` | `Properties` | Any Properties being added with the Product |
-| `string` | `BundleId` | The Bundle ID of the Product being added |
-| `string` | `ParentBundleId` | The Parent Bundle ID of the Product being added |
 
+#### ValidateOrderUpdate
+
+**Description:** Validation event fired when an Order is being updated 
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### ValidateOrderSave
+
+**Description:** Validation event fired when an Order is being saved 
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+
+#### ValidateOrderDelete
+
+**Description:** Validation event fired when an Order is being deleted 
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
 
 #### ValidateOrderLanguageChange
 
@@ -2067,6 +2097,96 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | ---- | ---- | ----------- |
 | `OrderReadOnly` | `Order` | The Order associated with this event |
 | `string` | `Code` | The Code being unredeemed against the Order |
+
+#### ValidateOrderProductAdd
+
+**Description:** Validation event fired when a Product is being added to an Order  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `ProductReference` | The Product Reference of the Product being added |
+| `decimal` | `Quantity` | The Quantity of the Product being added |
+| `IDictionary<string, string>` | `Properties` | Any Properties being added with the Product |
+| `string` | `BundleId` | The Bundle ID of the Product being added |
+| `string` | `ParentBundleId` | The Parent Bundle ID of the Product being added |
+
+#### ValidateOrderFinalize
+
+**Description:** Validation event fired when an Order is about to Finalize  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `decimal` | `AmountAuthorized` | The Authorized Amount of the Transaction |
+| `decimal` | `TransactionFee` | The Fee charged by the Payment Gateway for the Transaction |
+| `string` | `TransactionId` | The unique ID of the Transaction |
+| `PaymentStatus` | `PaymentStatus` | The Payment Status of the Transaction |
+
+#### ValidateOrderTransactionUpdate
+
+**Description:** Validation event fired when an Orders Transaction Info is being updated  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<decimal>` | `AmountAuthorized` | The changing Authorized Amount of the Transaction |
+| `ChangingValue<decimal>` | `TransactionFee` | The changing Fee charged by the Payment Gateway for the Transaction |
+| `ChangingValue<string>` | `TransactionId` | The changing unique ID of the Transaction |
+| `ChangingValue<PaymentStatus?>` | `PaymentStatus` | The changing Payment Status value of the Transaction |
+
+#### ValidateOrderStatusChange
+
+**Description:** Validation event fired when an Orders Status is changing 
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<Guid>` | `OrderStatusId` | The changing ID of the Order Status of the Order |
+| `ChangingValue<OrderStatusCode>` | `OrderStatusCode` | The changing Code of the Order Status of the Order |
+
+#### ValidateOrderAssignToCustomer
+
+**Description:** Validation event fired when an Order is being assigned to a Customer
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `ChangingValue<string>` | `CustomerReference` | The changing unique Reference of the Customer the Order is being assigned to |
+
+#### ValidateOrderPropertyChange
+
+**Description:** Validation event fired when an Order Property is changing
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `OrderReadOnly` | `Order` | The Order associated with this event |
+| `string` | `Alias` | The Alias of the Order Property that is changing |
+| `ChangingValue<PropertyValue>` | `Value` | The changing Value of the Order Property that is changing |
 
 ### Notification Events
 
