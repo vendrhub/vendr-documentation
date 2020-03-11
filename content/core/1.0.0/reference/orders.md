@@ -259,14 +259,14 @@ void DeleteOrder(Order entity, bool revertFinalized);
 | `OrderShippingInfo` | `ShippingInfo` | The [Shipping Information](#shippinginfo) associated with this Order |
 | `OrderTransactionInfo` | `TransactionInfo` | The [Transaction Information](#transactioninfo) associated with this Order |
 | `IReadOnlyCollection <OrderLineReadOnly>` | `OrderLines` | Collection of [Order Lines](#orderlinereadonly) associated with this Order |
-| `IReadOnlyDictionary <string, PropertyValue>` | `Properties` | Collection of [Order Properties](../../key-concepts/properties/) associated with this Order |
+| `IReadOnlyDictionary <string, PropertyValue>` | `Properties` | Collection of [Properties](../../key-concepts/properties/) associated with this Order |
 | `IReadOnlyCollection <AppliedDiscountCode>` | `DiscountCodes` | Collection of [Applied Discount Codes](#applieddiscountcode) associated with this Order |
 | `IReadOnlyCollection <AppliedGiftCard>` | `GiftCards` | Collection of [Applied Gift Cards](#appliedgiftcard) associated with this Order |
 | `IReadOnlyCollection <FulfilledDiscount>` | `Discounts` | Collection of [Fulfilled Discounts](#fulfilleddiscount) associated with this Order |
-| `TaxRate` | `TaxRate` | The Tax Rate of the Order |
-| `double` | `TotalQuantity` | The total quantity of Order Line items in the Order |
-| `ReadOnlyOrderSubtotalPrice` | `SubtotalPrice` | The subtotal price of the Order |
-| `ReadOnlyOrderTotalPrice` | `TotalPrice` | The total price of the Order |
+| `TaxRate` | `TaxRate` | The calculated Tax Rate of the Order |
+| `double` | `TotalQuantity` | The calculated total quantity of Order Line items in the Order |
+| `ReadOnlyOrderSubtotalPrice` | `SubtotalPrice` | The calculated subtotal price of the Order |
+| `ReadOnlyOrderTotalPrice` | `TotalPrice` | The calculated total price of the Order |
 | `DateTime` | `CreateDate` | The date the Order was created |
 | `DateTime` | `UpdateDate` | The date the Order was last modified |
 | `DateTime?` | `FinalizedDate` | The date the Order was finalized |
@@ -1614,11 +1614,20 @@ Order Recalculate(bool force);
 
 | Type | Name | Description |
 | ---- | ---- | ----------- |
-| `Guid?` | `CountryId` | The ID of the payment Country |
-| `Guid?` | `RegionId` | The ID of the payment Region |
-| `Guid?` | `PaymentMethodId` | The ID of the payment Method |
-| `TaxRate` | `TaxRate` | The Tax Rate of the payment fee |
-| `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the payment fee |
+| `Guid` | `Id` | The ID of the Order Line |
+| `Guid` | `OrderId` | The ID of Order Lines parent Order |
+| `Guid` | `StoreId` | The ID of parent Orders Store |
+| `string` | `ProductReference` | The unique reference of the Product associated with the Order Line |
+| `string` | `Sku` | The unique SKU of the Product associated with the Order Line |
+| `string` | `Name` | The Name the Product associated with the Order Line |
+| `decimal` | `Quantity` | The Quantity of the Product associated with the Order Line |
+| `Guid?` | `TaxClassId` | The ID of the Tax Class associated with the Order Line |
+| `string` | `BundleId` | An ID to identify this Order Line by as a Bundle |
+| `IReadOnlyCollection <OrderLineReadOnly>` | `OrderLines` | Collection of Child / Bundle Order Lines associated with this Order Line |
+| `IReadOnlyDictionary<string, PropertyValue>` | `Properties` | Collection of [Properties](../../key-concepts/properties/) associated with this Order Line |
+| `ReadOnlyOrderLineUnitPrice` | `UnitPrice` | The calculated Unit Price of the Order Line |
+| `TaxRate` | `TaxRate` | The calculated Tax Rate of the Order Line |
+| `ReadOnlyOrderLineTotalPrice` | `TotalPrice` | The calculated Total Price of the Order Line |
 
 ### OrderLineContext
 
@@ -1856,8 +1865,8 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Guid?` | `CountryId` | The ID of the payment Country |
 | `Guid?` | `RegionId` | The ID of the payment Region |
 | `Guid?` | `PaymentMethodId` | The ID of the payment Method |
-| `TaxRate` | `TaxRate` | The Tax Rate of the payment fee |
-| `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the payment fee |
+| `TaxRate` | `TaxRate` | The calculated Tax Rate of the payment fee |
+| `ReadOnlyTotalPrice` | `TotalPrice` | The calculated total price of the payment fee |
 
 ### OrderShippingInfo
 
@@ -1872,8 +1881,8 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Guid?` | `CountryId` | The ID of the shipping Country |
 | `Guid?` | `RegionId` | The ID of the shipping Region |
 | `Guid?` | `ShippingMethodId` | The ID of the shipping Method |
-| `TaxRate` | `TaxRate` | The Tax Rate of the shipping fee |
-| `ReadOnlyTotalPrice` | `TotalPrice` | The total price of the shipping fee |
+| `TaxRate` | `TaxRate` | The calculated Tax Rate of the shipping fee |
+| `ReadOnlyTotalPrice` | `TotalPrice` | The calculated total price of the shipping fee |
 
 ### OrderTransactionInfo
 
