@@ -503,7 +503,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### ValidateCurrencyCreate
 
-**Description:** Validation event fired when an Currency is being created  
+**Description:** Validation event fired when a Currency is being created  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -515,7 +515,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### ValidateCurrencyUpdate
 
-**Description:** Validation event fired when an Currency is being updated  
+**Description:** Validation event fired when a Currency is being updated  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -527,7 +527,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### ValidateCurrencySave
 
-**Description:** Validation event fired when an Currency is being saved  
+**Description:** Validation event fired when a Currency is being saved  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -539,7 +539,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### ValidateCurrencyDelete
 
-**Description:** Validation event fired when an Currency is being deleted  
+**Description:** Validation event fired when a Currency is being deleted  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -549,11 +549,90 @@ CurrencyReadOnly AsReadOnly();
 | ---- | ---- | ----------- |
 | `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
 
+#### ValidateCurrencyCodeChange
+
+**Description:** Validation event fired when a Currency Code is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
+| `ChangingValue<string>` | `Code` | The changing Code of the Currency |
+
+#### ValidateCurrencyNameChange
+
+**Description:** Validation event fired when a Currency Name is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
+| `ChangingValue<string>` | `Name` | The changing Name of the Currency |
+
+#### ValidateCurrencyCultureChange
+
+**Description:** Validation event fired when a Currency Culture is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
+| `ChangingValue<string>` | `CultureName` | The changing Name of the Culture of the Currency |
+
+#### ValidateCurrencyCustomFormatTemplateChange
+
+**Description:** Validation event fired when a Currency Format Template is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
+| `ChangingValue<string>` | `FormatTemplate` | The changing Format Template for the Currency |
+
+#### ValidateCurrencyAllowInCountry
+
+**Description:** Validation event fired when a Currency is being allowed in a Country  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
+| `Guid` | `CountryId` | The ID of the Country the Currency is being allowed in |
+
+#### ValidateCurrencyDisallowInCountry
+
+**Description:** Validation event fired when a Currency is being disallowed in a Country  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CurrencyReadOnly` | `Currency` | The Currency associated with this event |
+| `Guid` | `CountryId` | The ID of the Country the Currency is being disallowed in |
+
+
 ### Notification Events
 
 #### CurrencyCreatingNotification
 
-**Description:** Notification event fired before an Currency is created   
+**Description:** Notification event fired before a Currency is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -565,7 +644,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencyCreatedNotification
 
-**Description:** Notification event fired after an Currency is created   
+**Description:** Notification event fired after a Currency is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -577,7 +656,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencyUpdatingNotification
 
-**Description:** Notification event fired before an Currency is updated   
+**Description:** Notification event fired before a Currency is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -589,7 +668,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencyUpdatedNotification
 
-**Description:** Notification event fired after an Currency is updated   
+**Description:** Notification event fired after a Currency is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -601,7 +680,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencySavingNotification
 
-**Description:** Notification event fired before an Currency is saved   
+**Description:** Notification event fired before a Currency is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -613,7 +692,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencySavedNotification
 
-**Description:** Notification event fired after an Currency is saved   
+**Description:** Notification event fired after a Currency is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -625,7 +704,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencyDeletingNotification
 
-**Description:** Notification event fired before an Currency is deleted   
+**Description:** Notification event fired before a Currency is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -637,7 +716,7 @@ CurrencyReadOnly AsReadOnly();
 
 #### CurrencyDeletedNotification
 
-**Description:** Notification event fired after an Currency is deleted   
+**Description:** Notification event fired after a Currency is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 

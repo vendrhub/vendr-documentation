@@ -251,7 +251,7 @@ StoreReadOnly AsReadOnly();
 
 #### ValidateStoreCreate
 
-**Description:** Validation event fired when an Store is being created  
+**Description:** Validation event fired when a Store is being created  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -263,7 +263,7 @@ StoreReadOnly AsReadOnly();
 
 #### ValidateStoreUpdate
 
-**Description:** Validation event fired when an Store is being updated  
+**Description:** Validation event fired when a Store is being updated  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -275,7 +275,7 @@ StoreReadOnly AsReadOnly();
 
 #### ValidateStoreSave
 
-**Description:** Validation event fired when an Store is being saved  
+**Description:** Validation event fired when a Store is being saved  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -287,7 +287,7 @@ StoreReadOnly AsReadOnly();
 
 #### ValidateStoreDelete
 
-**Description:** Validation event fired when an Store is being deleted  
+**Description:** Validation event fired when a Store is being deleted  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -301,7 +301,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreCreatingNotification
 
-**Description:** Notification event fired before an Store is created   
+**Description:** Notification event fired before a Store is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -313,7 +313,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreCreatedNotification
 
-**Description:** Notification event fired after an Store is created   
+**Description:** Notification event fired after a Store is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -325,7 +325,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreUpdatingNotification
 
-**Description:** Notification event fired before an Store is updated   
+**Description:** Notification event fired before a Store is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -337,7 +337,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreUpdatedNotification
 
-**Description:** Notification event fired after an Store is updated   
+**Description:** Notification event fired after a Store is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -349,7 +349,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreSavingNotification
 
-**Description:** Notification event fired before an Store is saved   
+**Description:** Notification event fired before a Store is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -361,7 +361,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreSavedNotification
 
-**Description:** Notification event fired after an Store is saved   
+**Description:** Notification event fired after a Store is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -373,7 +373,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreDeletingNotification
 
-**Description:** Notification event fired before an Store is deleted   
+**Description:** Notification event fired before a Store is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -385,7 +385,7 @@ StoreReadOnly AsReadOnly();
 
 #### StoreDeletedNotification
 
-**Description:** Notification event fired after an Store is deleted   
+**Description:** Notification event fired after a Store is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
