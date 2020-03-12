@@ -354,11 +354,8 @@ Country AsWritable(IUnitOfWork uow);
 
 **Description:** Writable Country entity  
 **Namespace:** Vendr.Core.Models  
-**Assembly:** Vendr.Core
-
-#### Properties
-
-See [Vendr.Core.Models.CountryReadOnly Properties](#properties)
+**Assembly:** Vendr.Core  
+**Inherits:** [ CountryReadOnly](#countryreadonly)
 
 #### Create
 Creates a Country entity
@@ -684,11 +681,8 @@ Region AsWritable(IUnitOfWork uow);
 
 **Description:** Writable Region entity  
 **Namespace:** Vendr.Core.Models  
-**Assembly:** Vendr.Core
-
-#### Properties
-
-See [Vendr.Core.Models.RegionReadOnly Properties](#properties-2)
+**Assembly:** Vendr.Core  
+**Inherits:** [ RegionReadOnly](#regionreadonly)
 
 #### Create
 Creates a Region entity

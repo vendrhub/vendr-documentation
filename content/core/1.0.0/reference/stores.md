@@ -239,11 +239,8 @@ Store AsWritable(IUnitOfWork uow);
 
 **Description:** Writable Store entity  
 **Namespace:** Vendr.Core.Models  
-**Assembly:** Vendr.Core
-
-#### Properties
-
-See [Vendr.Core.Models.StoreReadOnly Properties](#properties)
+**Assembly:** Vendr.Core  
+**Inherits:** [ StoreReadOnly](#storereadonly)
 
 #### Create
 Creates a Store entity

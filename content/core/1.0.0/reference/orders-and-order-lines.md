@@ -341,11 +341,8 @@ Order AsWritable(IUnitOfWork uow);
 
 **Description:** Writable Order entity  
 **Namespace:** Vendr.Core.Models  
-**Assembly:** Vendr.Core
-
-#### Properties
-
-See [Vendr.Core.Models.OrderReadOnly Properties](#properties)
+**Assembly:** Vendr.Core  
+**Inherits:** [ OrderReadOnly](#orderreadonly)
 
 #### Create
 Creates an Order entity
