@@ -113,7 +113,7 @@ void DeleteStore(Store entity);
 
 #### SortStores
 
-Sorted the Stores with the given IDs, but the given ID sequence
+Sorted the Stores with the given IDs, by the given ID sequence
 
 ***Signature:***
 
@@ -148,6 +148,7 @@ void SortStores(Guid[] sortedIds);
 | Type | Name | Description |
 | ---- | ---- | ----------- |
 | `Guid` | `Id` | The Store unique ID |
+| `Guid` | `StoreId` | The ID of the Store this Store belongs to |
 | `string` | `Alias` | A unique Alias for the Store |
 | `string` | `Name` | The Name of the Store |
 | `int` | `SortOrder` | The Sort Order of the Store |

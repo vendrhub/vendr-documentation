@@ -113,7 +113,7 @@ void DeleteStore(Store entity);
 
 #### SortStores
 
-Sorted the Stores with the given IDs, but the given ID sequence
+Sorted the Stores with the given IDs, by the given ID sequence
 
 ***Signature:***
 

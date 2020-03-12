@@ -9,19 +9,41 @@ description: Country and Region related APIs in Vendr, the eCommerce solution fo
 
 #### GetCountries
 
-Gets a collection of all Country entities
+Gets a collection of all Country entities in a Store
 
 ***Signature:***
 
 ````csharp
-IEnumerable<CountryReadOnly> GetCountries();
+IEnumerable<CountryReadOnly> GetCountries(Guid storeId);
 ````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID the Store to fetch from |
 
 ***Returns:***
 
 | Type | Description |
 | ---- | ----------- |
 | `IEnumerable<CountryReadOnly>` | A list of read only Country entities |
+
+#### GetIso3166CountryRegions
+
+Gets a collection ISO 3166 Countries and Regions
+
+***Signature:***
+
+````csharp
+IEnumerable<Iso3166Country> GetIso3166CountryRegions();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `IEnumerable<Iso3166Country>` | A list of IS0 3166 Country and Regions |
 
 #### GetCountry
 
@@ -50,14 +72,15 @@ CountryReadOnly GetCountry(Guid id);
 ***Signature:***
 
 ````csharp
-CountryReadOnly GetCountry(string alias);
+CountryReadOnly GetCountry(Guid storeId, string code);
 ````
 
 ***Parameters:***
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `alias` | The Alias of the Country to fetch  |
+| `Guid` | `storeId` | The ID of the Store to fetch from |
+| `string` | `code` | The Code of the Country to fetch  |
 
 ***Returns:***
 
@@ -113,7 +136,7 @@ void DeleteCountry(Country entity);
 
 #### SortCountries
 
-Sorted the Countries with the given IDs, but the given ID sequence
+Sorted the Countries with the given IDs, by the given ID sequence
 
 ***Signature:***
 
@@ -127,9 +150,158 @@ void SortCountries(Guid[] sortedIds);
 | ---- | ----- | ----------- |
 | `Guid[]` | `sortedIds` | Sequence of Country IDs to sort in the given order |
 
-### Countrieservice
+#### GetRegions
 
-**Description:** Default implementation of the [Vendr Country Service Interface](#iCountrieservice)  
+Gets a collection of all Regions entities in a Store
+
+***Signature:***
+
+````csharp
+IEnumerable<RegionReadOnly> GetRegions(Guid storeId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID the Store to fetch from |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `IEnumerable<RegionReadOnly>` | A list of read only Region entities |
+
+---
+
+***Signature:***
+
+````csharp
+IEnumerable<RegionReadOnly> GetRegions(Guid storeId, Guid countryId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID the Store to fetch from |
+| `Guid` | `countryId` | The ID of the parent Country of the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `IEnumerable<RegionReadOnly>` | A list of read only Region entities |
+
+#### GetRegion
+
+Gets a specific Region entity
+
+***Signature:***
+
+````csharp
+RegionReadOnly GetRegion(Guid id);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `id` | The ID of the Region to fetch  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only Region entity matching the provided criteria  |
+
+---
+
+***Signature:***
+
+````csharp
+RegionReadOnly GetRegion(Guid storeId, Guid countryId, string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store to fetch from |
+| `Guid` | `countryId` | The ID of the parent Country of the Region |
+| `string` | `code` | The Code of the Region to fetch  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only Region entity matching the provided criteria  |
+
+#### SaveRegion
+
+Persists the given Region to the database
+
+***Signature:***
+
+````csharp
+void SaveRegion(Region Region);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Region` | `Region` | The Region to save  |
+
+#### DeleteRegion
+
+Deletes the given Region
+
+***Signature:***
+
+````csharp
+void DeleteRegion(Guid RegionId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `RegionId` | The ID of the Region to delete |
+
+---
+
+***Signature:***
+
+````csharp
+void DeleteRegion(Region entity);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Region` | `entity` | The Region to delete |
+
+#### SortRegions
+
+Sorted the Regions with the given IDs, by the given ID sequence
+
+***Signature:***
+
+````csharp
+void SortRegions(Guid[] sortedIds);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid[]` | `sortedIds` | Sequence of Region IDs to sort in the given order |
+
+### CountryService
+
+**Description:** Default implementation of the [Vendr Country Service Interface](#icountryservice)  
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
@@ -148,8 +320,12 @@ void SortCountries(Guid[] sortedIds);
 | Type | Name | Description |
 | ---- | ---- | ----------- |
 | `Guid` | `Id` | The Country unique ID |
-| `string` | `Alias` | A unique Alias for the Country |
+| `Guid` | `StoreId` | The ID of the Store this Country belongs to |
+| `string` | `Code` | A unique Alias for the Country |
 | `string` | `Name` | The Name of the Country |
+| `Guid?` | `DefaultCurrencyId` | The ID of the Default Currency of the Country |
+| `Guid?` | `DefaultPaymentMethodId` | The ID of the Default Payment Method of the Country |
+| `Guid?` | `DefaultShippingMethodId` | The ID of the Default Shipping Method of the Country |
 | `int` | `SortOrder` | The Sort Order of the Country |
 | `bool` | `IsDeleted` | Flag indicating whether the Country is deleted |
 
@@ -190,7 +366,7 @@ Creates a Country entity
 ***Signature:***
 
 ````csharp
-static Country Create(IUnitOfWork uow);
+static Country Create(IUnitOfWork uow, Guid storeId, string code, string name, bool autoCreateRegions = false);
 ````
 
 ***Parameters:***
@@ -198,12 +374,251 @@ static Country Create(IUnitOfWork uow);
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `IUnitOfWork` | `uow` | An active Unit of Work to associate with this writable entity |
+| `Guid` | `storeId` | The ID of the Store this Country belongs to |
+| `string` | `code` | A unique ISO Country Code for the Country |
+| `string` | `name` | A Name for the Country |
+| `bool` | `autoCreateRegions` | Auto create Regions based on the ISO 3166 Country Code |
 
 ***Returns:***
 
 | Type | Description |
 | ---- | ----------- |
 | `Country` | A writable Country |
+
+#### SetCode
+Set the ISO Country Code of the Country
+
+***Signature:***
+
+````csharp
+Country SetCode(string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `code` | A unique ISO Country Code for the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### SetName
+Set the Name of the Country
+
+***Signature:***
+
+````csharp
+Country SetName(string name);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `name` | The Name of the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### SetDefaultCurrency
+Set the Default Currency of the Country
+
+***Signature:***
+
+````csharp
+Country SetDefaultCurrency(CurrencyReadOnly currency);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `CurrencyReadOnly` | `currency` | The Currency to set as the default Currency of the Country |
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+---
+
+***Signature:***
+
+````csharp
+Country SetDefaultCurrency(Guid? currencyId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `currencyId` | The ID of the Currency to set as the default Currency of the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### ClearDefaultCurrency
+Clears the Default Currency of the Country
+
+***Signature:***
+
+````csharp
+Country ClearDefaultCurrency();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### SetDefaultPaymentMethod
+Set the Default PaymentMethod of the Country
+
+***Signature:***
+
+````csharp
+Country SetDefaultPaymentMethod(PaymentMethodReadOnly paymentMethod);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `PaymentMethodReadOnly` | `paymentMethod` | The Payment Method to set as the default Payment Method of the Country |
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+---
+
+***Signature:***
+
+````csharp
+Country SetDefaultPaymentMethod(Guid? paymentMethodId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `paymentMethodId` | The ID of the Payment Method to set as the default Payment Method of the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### ClearDefaultPaymentMethod
+Clears the Default PaymentMethod of the Country
+
+***Signature:***
+
+````csharp
+Country ClearDefaultPaymentMethod();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### SetDefaultShippingMethod
+Set the Default ShippingMethod of the Country
+
+***Signature:***
+
+````csharp
+Country SetDefaultShippingMethod(ShippingMethodReadOnly shippingMethod);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `ShippingMethodReadOnly` | `shippingMethod` | The Shipping Method to set as the default Shipping Method of the Country |
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+---
+
+***Signature:***
+
+````csharp
+Country SetDefaultShippingMethod(Guid? shippingMethodId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `shippingMethodId` | The ID of the Shipping Method to set as the default Shipping Method of the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### ClearDefaultShippingMethod
+Clears the Default ShippingMethod of the Country
+
+***Signature:***
+
+````csharp
+Country ClearDefaultShippingMethod();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `CountryReadOnly` | A read only version of the Country |
+
+#### SetSortOrder
+Sets the Sort Order of a Country
+
+***Signature:***
+
+````csharp
+Country SetSortOrder(int order);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `int` | `order` | The Order position of the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Country` | An updated writable Country |
+
+
+
+
+
+
+
 
 #### AsReadOnly
 Converts a writable Country into a read only Country
@@ -224,7 +639,285 @@ CountryReadOnly AsReadOnly();
 
 ## Region Entities
 
+### RegionReadOnly
+
+**Description:** Read Only Region entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `Id` | The Region unique ID |
+| `Guid` | `StoreId` | The ID of the Store this Region belongs to |
+| `Guid` | `CountryId` | The ID of the Country this Region belongs to |
+| `string` | `Code` | A unique Alias for the Region |
+| `string` | `Name` | The Name of the Region |
+| `Guid?` | `DefaultPaymentMethodId` | The ID of the Default Payment Method of the Region |
+| `Guid?` | `DefaultShippingMethodId` | The ID of the Default Shipping Method of the Region |
+| `int` | `SortOrder` | The Sort Order of the Region |
+| `bool` | `IsDeleted` | Flag indicating whether the Region is deleted |
+
+#### AsWritable
+Gets a writable version of the associated Region
+
+***Signature:***
+
+````csharp
+Region AsWritable(IUnitOfWork uow);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IUnitOfWork` | `uow` | An active Unit of Work to associate with this writable entity |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Region` | A writable version of the Region |
+
+### Region
+
+**Description:** Writable Region entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+See [Vendr.Core.Models.RegionReadOnly Properties](#properties-2)
+
+#### Create
+Creates a Region entity
+
+***Signature:***
+
+````csharp
+static Region Create(IUnitOfWork uow, Guid storeId, Guid countryId, string code, string name);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `IUnitOfWork` | `uow` | An active Unit of Work to associate with this writable entity |
+| `Guid` | `storeId` | The ID of the Store this Region belongs to |
+| `Guid` | `countryId` | The ID of the Country this Region belongs to |
+| `string` | `code` | A unique Region Code for the Region |
+| `string` | `name` | A Name for the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Region` | A writable Region |
+
+#### SetCode
+Set the Region Code of the Region
+
+***Signature:***
+
+````csharp
+Region SetCode(string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `code` | A unique Region Code for the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+#### SetName
+Set the Name of the Region
+
+***Signature:***
+
+````csharp
+Region SetName(string name);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `name` | The Name of the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+#### SetDefaultPaymentMethod
+Set the Default PaymentMethod of the Region
+
+***Signature:***
+
+````csharp
+Region SetDefaultPaymentMethod(PaymentMethodReadOnly paymentMethod);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `PaymentMethodReadOnly` | `paymentMethod` | The Payment Method to set as the default Payment Method of the Region |
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+---
+
+***Signature:***
+
+````csharp
+Region SetDefaultPaymentMethod(Guid? paymentMethodId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `paymentMethodId` | The ID of the Payment Method to set as the default Payment Method of the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+#### ClearDefaultPaymentMethod
+Clears the Default PaymentMethod of the Region
+
+***Signature:***
+
+````csharp
+Region ClearDefaultPaymentMethod();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+#### SetDefaultShippingMethod
+Set the Default ShippingMethod of the Region
+
+***Signature:***
+
+````csharp
+Region SetDefaultShippingMethod(ShippingMethodReadOnly shippingMethod);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `ShippingMethodReadOnly` | `shippingMethod` | The Shipping Method to set as the default Shipping Method of the Region |
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+---
+
+***Signature:***
+
+````csharp
+Region SetDefaultShippingMethod(Guid? shippingMethodId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `shippingMethodId` | The ID of the Shipping Method to set as the default Shipping Method of the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+#### ClearDefaultShippingMethod
+Clears the Default ShippingMethod of the Region
+
+***Signature:***
+
+````csharp
+Region ClearDefaultShippingMethod();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `RegionReadOnly` | A read only version of the Region |
+
+#### SetSortOrder
+Sets the Sort Order of a Region
+
+***Signature:***
+
+````csharp
+Region SetSortOrder(int order);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `int` | `order` | The Order position of the Region |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Region` | An updated writable Region |
+
+<div class="mb-48"></div>
+
 ## Country Owned Entities
+
+### Iso3166Country
+
+**Description:** ISO 3166 Country owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `string` | `Name` | The name of the Country |
+| `string` | `Code` | The ISO 3166 Code of the Country |
+| `Iso3166CountryRegion[]` | `Regions` | Array of ISO 3166 Regions of the Country |
+
+### Iso3166CountryRegion
+
+**Description:** ISO 3166 Region of a Country owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `string` | `Name` | The name of the Region |
+| `string` | `Code` | The ISO 3166 Code of the Region |
 
 <div class="mb-48"></div>
 
@@ -234,7 +927,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateCountryCreate
 
-**Description:** Validation event fired when an Country is being created  
+**Description:** Validation event fired when a Country is being created  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -246,7 +939,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateCountryUpdate
 
-**Description:** Validation event fired when an Country is being updated  
+**Description:** Validation event fired when a Country is being updated  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -258,7 +951,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateCountrySave
 
-**Description:** Validation event fired when an Country is being saved  
+**Description:** Validation event fired when a Country is being saved  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -270,7 +963,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateCountryDelete
 
-**Description:** Validation event fired when an Country is being deleted  
+**Description:** Validation event fired when a Country is being deleted  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -280,11 +973,76 @@ CountryReadOnly AsReadOnly();
 | ---- | ---- | ----------- |
 | `CountryReadOnly` | `Country` | The Country associated with this event |
 
+#### ValidateCountryCodeChange
+
+**Description:** Validation event fired when a Country Code is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CountryReadOnly` | `Country` | The Country associated with this event |
+| `ChangingValue<string>` | `Code` | The changing ISO Country Code of the Country |
+
+#### ValidateCountryNameChange
+
+**Description:** Validation event fired when a Country Name is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CountryReadOnly` | `Country` | The Country associated with this event |
+| `ChangingValue<string>` | `Name` | The changing Name of the Country |
+
+#### ValidateCountryDefaultCurrencyChange
+
+**Description:** Validation event fired when a Countries Default Currency is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CountryReadOnly` | `Country` | The Country associated with this event |
+| `ChangingValue<Guid?>` | `CurrencyId` | The ID of the Currency to use as the Default Currency of the Country |
+
+#### ValidateCountryDefaultPaymentMethodChange
+
+**Description:** Validation event fired when a Countries Default Payment Method is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CountryReadOnly` | `Country` | The Country associated with this event |
+| `ChangingValue<Guid?>` | `PaymentMethodId` | The ID of the Payment Method to use as the Default Payment Method of the Country |
+
+#### ValidateCountryDefaultShippingMethodChange
+
+**Description:** Validation event fired when a Countries Default Shipping Method is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `CountryReadOnly` | `Country` | The Country associated with this event |
+| `ChangingValue<Guid?>` | `ShippingMethodId` | The ID of the Shipping Method to use as the Default Shipping Method of the Country |
+
 ### Notification Events
 
 #### CountryCreatingNotification
 
-**Description:** Notification event fired before an Country is created   
+**Description:** Notification event fired before a Country is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -296,7 +1054,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountryCreatedNotification
 
-**Description:** Notification event fired after an Country is created   
+**Description:** Notification event fired after a Country is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -308,7 +1066,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountryUpdatingNotification
 
-**Description:** Notification event fired before an Country is updated   
+**Description:** Notification event fired before a Country is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -320,7 +1078,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountryUpdatedNotification
 
-**Description:** Notification event fired after an Country is updated   
+**Description:** Notification event fired after a Country is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -332,7 +1090,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountrySavingNotification
 
-**Description:** Notification event fired before an Country is saved   
+**Description:** Notification event fired before a Country is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -344,7 +1102,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountrySavedNotification
 
-**Description:** Notification event fired after an Country is saved   
+**Description:** Notification event fired after a Country is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -356,7 +1114,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountryDeletingNotification
 
-**Description:** Notification event fired before an Country is deleted   
+**Description:** Notification event fired before a Country is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -368,7 +1126,7 @@ CountryReadOnly AsReadOnly();
 
 #### CountryDeletedNotification
 
-**Description:** Notification event fired after an Country is deleted   
+**Description:** Notification event fired after a Country is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -378,13 +1136,13 @@ CountryReadOnly AsReadOnly();
 | ---- | ---- | ----------- |
 | `CountryReadOnly` | `Country` | The Country associated with this event |
 
-### Region Events
+## Region Events
 
 ### Validation Events
 
 #### ValidateRegionCreate
 
-**Description:** Validation event fired when an Region is being created  
+**Description:** Validation event fired when a Region is being created  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -396,7 +1154,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateRegionUpdate
 
-**Description:** Validation event fired when an Region is being updated  
+**Description:** Validation event fired when a Region is being updated  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -408,7 +1166,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateRegionSave
 
-**Description:** Validation event fired when an Region is being saved  
+**Description:** Validation event fired when a Region is being saved  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -420,7 +1178,7 @@ CountryReadOnly AsReadOnly();
 
 #### ValidateRegionDelete
 
-**Description:** Validation event fired when an Region is being deleted  
+**Description:** Validation event fired when a Region is being deleted  
 **Namespace:** Vendr.Core.Events.Validation   
 **Assembly:** Vendr.Core
 
@@ -430,11 +1188,63 @@ CountryReadOnly AsReadOnly();
 | ---- | ---- | ----------- |
 | `RegionReadOnly` | `Region` | The Region associated with this event |
 
+#### ValidateRegionCodeChange
+
+**Description:** Validation event fired when a Region Code is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `RegionReadOnly` | `Region` | The Region associated with this event |
+| `ChangingValue<string>` | `Code` | The changing ISO Region Code of the Region |
+
+#### ValidateRegionNameChange
+
+**Description:** Validation event fired when a Region Name is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `RegionReadOnly` | `Region` | The Region associated with this event |
+| `ChangingValue<string>` | `Name` | The changing Name of the Region |
+
+#### ValidateRegionDefaultPaymentMethodChange
+
+**Description:** Validation event fired when a Countries Default Payment Method is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `RegionReadOnly` | `Region` | The Region associated with this event |
+| `ChangingValue<Guid?>` | `PaymentMethodId` | The ID of the Payment Method to use as the Default Payment Method of the Region |
+
+#### ValidateRegionDefaultShippingMethodChange
+
+**Description:** Validation event fired when a Countries Default Shipping Method is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `RegionReadOnly` | `Region` | The Region associated with this event |
+| `ChangingValue<Guid?>` | `ShippingMethodId` | The ID of the Shipping Method to use as the Default Shipping Method of the Region |
+
 ### Notification Events
 
 #### RegionCreatingNotification
 
-**Description:** Notification event fired before an Region is created   
+**Description:** Notification event fired before a Region is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -446,7 +1256,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionCreatedNotification
 
-**Description:** Notification event fired after an Region is created   
+**Description:** Notification event fired after a Region is created   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -458,7 +1268,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionUpdatingNotification
 
-**Description:** Notification event fired before an Region is updated   
+**Description:** Notification event fired before a Region is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -470,7 +1280,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionUpdatedNotification
 
-**Description:** Notification event fired after an Region is updated   
+**Description:** Notification event fired after a Region is updated   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -482,7 +1292,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionSavingNotification
 
-**Description:** Notification event fired before an Region is saved   
+**Description:** Notification event fired before a Region is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -494,7 +1304,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionSavedNotification
 
-**Description:** Notification event fired after an Region is saved   
+**Description:** Notification event fired after a Region is saved   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -506,7 +1316,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionDeletingNotification
 
-**Description:** Notification event fired before an Region is deleted   
+**Description:** Notification event fired before a Region is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
@@ -518,7 +1328,7 @@ CountryReadOnly AsReadOnly();
 
 #### RegionDeletedNotification
 
-**Description:** Notification event fired after an Region is deleted   
+**Description:** Notification event fired after a Region is deleted   
 **Namespace:** Vendr.Core.Events.Notification   
 **Assembly:** Vendr.Core
 
