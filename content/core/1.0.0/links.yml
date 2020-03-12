@@ -45,8 +45,8 @@
       link: /key-concepts/payment-providers/
     - title: Price Freezing
       link: /key-concepts/price-freezing/
-    - title: Tax Sources
-      link: /key-concepts/tax-sources/
+    - title: Taxes
+      link: /key-concepts/taxes/
     - title: Discount Rules / Rewards
       link: /key-concepts/discount-rules-and-rewards/
     - title: Order Editor Config
@@ -84,11 +84,11 @@
       link: /reference/products/
     - title: Sessions
       link: /reference/sessions/
-    - title: Events
-      link: /reference/events/
     - title: Pipelines
       link: /reference/pipelines/
     - title: Calculators
       link: /reference/calculators/
     - title: Payment Providers
       link: /reference/payment-providers/
+    - title: Payment Forms
+      link: /reference/payment-forms/
