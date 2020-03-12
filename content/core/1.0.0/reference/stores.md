@@ -762,6 +762,28 @@ Store SetOrderNumberTemplate(string template);
 | ---- | ----------- |
 | `Store` | An updated writable Store |
 
+#### SetOrderNumberTemplates
+Sets the Order Number Templates of a Store
+
+***Signature:***
+
+````csharp
+Store SetOrderNumberTemplates(string cartNumberTemplate, string orderNumberTemplate);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `cartNumberTemplate` |  A string format template to use when generating Cart Numbers for the Store |
+| `string` | `orderNumberTemplate` |  A string format template to use when generating Order Numbers for the Store |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Store` | An updated writable Store |
+
 #### AddProductPropertyAlias
 Adds an automatically copied Product Property Alias to a Store
 
@@ -1475,4 +1497,415 @@ StoreReadOnly AsReadOnly();
 
 ### Validation Events
 
+#### ValidateStoreCreate
+
+**Description:** Validation event fired when an Store is being created  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreUpdate
+
+**Description:** Validation event fired when an Store is being updated  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreSave
+
+**Description:** Validation event fired when an Store is being saved  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreDelete
+
+**Description:** Validation event fired when an Store is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreAliasChange
+
+**Description:** Validation event fired when the Alias of a Store is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<string>` | `Alias` | The changing Alias of the Store |
+
+#### ValidateStoreNameChange
+
+**Description:** Validation event fired when the Name of a Store is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<string>` | `Name` | The changing Name of the Store |
+
+#### ValidateStoreDefaultCountryChange
+
+**Description:** Validation event fired when the Default Country of a Store is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<Guid?>` | `CountryId` | The changing ID of the Default Country of the Store |
+
+#### ValidateStoreDefaultTaxClassChange
+
+**Description:** Validation event fired when the Default Tax Class of a Store is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<Guid?>` | `TaxClassId` | The changing ID of the Default Tax Class of the Store |
+
+
+#### ValidateStoreOrderStatusesChange
+
+**Description:** Validation event fired when the Order Statuses of a Store are being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<Guid?>` | `DefaultOrderStatusId` | The changing ID of the Default Order Status of the Store |
+| `ChangingValue<Guid?>` | `ErrorOrderStatusId` | The changing ID of the Error Order Status of the Store |
+
+#### ValidateStorePriceTaxInclusivityChange
+
+**Description:** Validation event fired when the Price Tax Inclusivity of a Store is being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<bool>` | `PricesIncludeTax` | The changing flag of whether Prices Include Tax in the Store |
+
+#### ValidateStoreCookiesChange
+
+**Description:** Validation event fired when the Cookie settings of a Store are being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<bool>` | `CookiesEnabled` | The changing flag of whether session Cookies are enabled for the Store |
+| `ChangingValue<TimeSpan?>` | `CookieTimeout` | The changing Timeout of a session Cookie for the Store |
+
+#### ValidateStoreGiftCardSettingsChange
+
+**Description:** Validation event fired when the Gift Card settings of a Store are being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<int>` | `GiftCardCodeLength` | The changing length of the auto generated Gift Card Codes of the Store |
+| `ChangingValue<int>` | `GiftCardDaysValid` | The changing number of days a Gift Card is valid for in the Store |
+| `ChangingValue<string>` | `GiftCardCodeTemplate` | The changing string format template to use when generating Gift Card Codes for the Store |
+
+#### ValidateStoreNotificationEmailTemplatesChange
+
+**Description:** Validation event fired when the Notification Email Templates of a Store are being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<Guid?>` | `ConfirmationEmailTemplateId` | The changing ID of the Confirmation Email Template of the Store |
+| `ChangingValue<Guid?>` | `ErrorEmailTemplateId` | The changing ID of the Error Email Template of the Store |
+
+#### ValidateStoreOrderNumberTemplatesChange
+
+**Description:** Validation event fired when the Order Number Templates of a Store are being changed  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<string>` | `CartNumberTemplate` | The changing string format template to use when generating Cart Numbers for the Store |
+| `ChangingValue<string>` | `OrderNumberTemplate` | The changing string format template to use when generating Order Numbers for the Store |
+
+#### ValidateStoreAllowUser
+
+**Description:** Validation event fired when Allowing a User access to a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `UserId` | The ID of the User being allowed access to the Store |
+
+#### ValidateStoreDisallowUser
+
+**Description:** Validation event fired when Disallowing a User access to a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `UserId` | The ID of the User being disallowed access to the Store |
+
+#### ValidateStoreAllowUserRole
+
+**Description:** Validation event fired when Allowing a User Role access to a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `UserId` | The ID of the User Role being allowed access to the Store |
+
+#### ValidateStoreDisallowUserRole
+
+**Description:** Validation event fired when Disallowing a User Role access to a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `UserId` | The ID of the User Role being disallowed access to the Store |
+
+#### ValidateStoreAddProductPropertyAlias
+
+**Description:** Validation event fired when an automatically copied Product Property Alias is being added to a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `Alias` | The Alias of the Property to add to the Stores Product Property Aliases collection |
+
+#### ValidateStoreRemoveProductPropertyAlias
+
+**Description:** Validation event fired when an automatically copied Product Property Alias is being removed from a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `Alias` | The Alias of the Property to remove from the Stores Product Property Aliases collection |
+
+#### ValidateStoreAddProductPropertyUniquenessAlias
+
+**Description:** Validation event fired when Product Uniqueness Property Alias is being added to a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `Alias` | The Alias of the Property to add to the Stores Product Uniqueness Property Aliases collection |
+
+#### ValidateStoreRemoveProductPropertyUniquenessAlias
+
+**Description:** Validation event fired when Product Uniqueness Property Alias is being removed from a Store  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `string` | `Alias` | The Alias of the Property to remove from the Stores Product Uniqueness Property Aliases collection |
+
+#### ValidateStoreOrderEditorConfigChange
+
+**Description:** Validation event fired when Order Editor Config path of a Store is changing  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<string>` | `ConfigPath` | The changing Order Editor Config path of the Store |
+
+#### ValidateStoreShareStockFromStoreChange
+
+**Description:** Validation event fired when Stock Sharing Store of a Store is changing  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+| `ChangingValue<Guid?>` | `ShareStockFromStoreId` | The changing ID of the Store to share Stock from for the Store |
+
 ### Notification Events
+
+#### StoreCreatingNotification
+
+**Description:** Notification event fired before an Store is created   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreCreatedNotification
+
+**Description:** Notification event fired after an Store is created   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### StoreUpdatingNotification
+
+**Description:** Notification event fired before an Store is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreUpdatedNotification
+
+**Description:** Notification event fired after an Store is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### StoreSavingNotification
+
+**Description:** Notification event fired before an Store is saved   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreSavedNotification
+
+**Description:** Notification event fired after an Store is saved   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### StoreDeletingNotification
+
+**Description:** Notification event fired before an Store is deleted   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreDeletedNotification
+
+**Description:** Notification event fired after an Store is deleted   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
