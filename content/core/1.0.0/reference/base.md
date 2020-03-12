@@ -230,4 +230,148 @@ StoreReadOnly AsReadOnly();
 
 ### Validation Events
 
+#### ValidateStoreCreate
+
+**Description:** Validation event fired when an Store is being created  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreUpdate
+
+**Description:** Validation event fired when an Store is being updated  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreSave
+
+**Description:** Validation event fired when an Store is being saved  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### ValidateStoreDelete
+
+**Description:** Validation event fired when an Store is being deleted  
+**Namespace:** Vendr.Core.Events.Validation   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
 ### Notification Events
+
+#### StoreCreatingNotification
+
+**Description:** Notification event fired before an Store is created   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreCreatedNotification
+
+**Description:** Notification event fired after an Store is created   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### StoreUpdatingNotification
+
+**Description:** Notification event fired before an Store is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreUpdatedNotification
+
+**Description:** Notification event fired after an Store is updated   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### StoreSavingNotification
+
+**Description:** Notification event fired before an Store is saved   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreSavedNotification
+
+**Description:** Notification event fired after an Store is saved   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
+
+#### StoreDeletingNotification
+
+**Description:** Notification event fired before an Store is deleted   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Store` | `Store` | The Store associated with this event |
+
+#### StoreDeletedNotification
+
+**Description:** Notification event fired after an Store is deleted   
+**Namespace:** Vendr.Core.Events.Notification   
+**Assembly:** Vendr.Core
+
+***Properties:***
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `StoreReadOnly` | `Store` | The Store associated with this event |
