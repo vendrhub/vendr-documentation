@@ -13,18 +13,10 @@
   items:
     - title: Overview
       link: /tutorials/
-    - title: Setting up a Store
-      link: /tutorials/setting-up-a-store/
 
 - title: How-To Guides
   items:
     - title: Overview
-      link: /how-to-guides/
-    - title: How to create a discount
-      link: /how-to-guides/
-    - title: How to create a gift card
-      link: /how-to-guides/
-    - title: How to create a payment provider
       link: /how-to-guides/
 
 - title: Key Concepts
@@ -72,12 +64,24 @@
       link: /reference/prices/
     - title: Stores
       link: /reference/stores/
-    - title: Orders
-      link: /reference/orders/
+    - title: Countries & Regions
+      link: /reference/countries-and-regions/
     - title: Currencies
       link: /reference/currencies/
+    - title: Order Statuses
+      link: /reference/order-statuses/
+    - title: Payment Methods
+      link: /reference/payment-methods/
+    - title: Shipping Methods
+      link: /reference/shipping-methods/
     - title: Tax Classes
       link: /reference/tax-classes/
+    - title: Email Templates
+      link: /reference/email-templates/
+    - title: Orders & Order Lines
+      link: /reference/orders-and-order-lines/
+    - title: Products
+      link: /reference/products/
     - title: Sessions
       link: /reference/sessions/
     - title: Events

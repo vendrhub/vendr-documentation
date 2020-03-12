@@ -1,6 +1,6 @@
 ---
-title: Orders
-description: Order related APIs in Vendr, the eCommerce solution for Umbraco v8+
+title: Orders & Order Lines
+description: Order and Order Line related APIs in Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 ## Order Service
