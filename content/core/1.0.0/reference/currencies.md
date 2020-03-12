@@ -276,6 +276,194 @@ static Currency Create(IUnitOfWork uow);
 | ---- | ----------- |
 | `Currency` | A writable Currency |
 
+#### SetCode
+Set the Currency Code of the Currency
+
+***Signature:***
+
+````csharp
+Currency SetCode(string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `code` | A unique Currency Code for the Currency |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+#### SetName
+Set the Name of the Currency
+
+***Signature:***
+
+````csharp
+Currency SetName(string name);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `name` | The Name of the Currency |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+#### SetCulture
+Set the Culture of the Currency
+
+***Signature:***
+
+````csharp
+Currency SetCulture(string cultureName);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `cultureName` | The Name of the Culture of the Currency |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+#### SetCustomFormatTemplate
+Set a Custom Format Template for the Currency
+
+***Signature:***
+
+````csharp
+Currency SetCustomFormatTemplate(string formatTemplate);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `formatTemplate` | A string format template to format the Currency with |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+#### AllowInCountry
+Allows a Currency for a Country
+
+***Signature:***
+
+````csharp
+Currency AllowInCountry(CountryReadOnly country);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `CountryReadOnly` | `country` | The Country to allow the Currency in |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+---
+
+***Signature:***
+
+````csharp
+Currency AllowInCountry(Guid countryId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `countryId` | The ID of the Country to allow the Currency in |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+#### DisallowInCountry
+Disallows a Currency for a Country
+
+***Signature:***
+
+````csharp
+Currency DisallowInCountry(CountryReadOnly country);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `CountryReadOnly` | `country` | The Country to disallow the Currency in |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+---
+
+***Signature:***
+
+````csharp
+Currency DisallowInCountry(Guid countryId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `countryId` | The ID of the Country to disallow the Currency in |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | A read only version of the Currency |
+
+#### SetSortOrder
+Sets the Sort Order of a Currency
+
+***Signature:***
+
+````csharp
+Currency SetSortOrder(int order);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `int` | `order` | The Order position of the Currency |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Currency` | An updated writable Currency |
+
+
 #### AsReadOnly
 Converts a writable Currency into a read only Currency
 
@@ -294,6 +482,18 @@ CurrencyReadOnly AsReadOnly();
 <div class="mb-48"></div>
 
 ## Currency Owned Entities
+
+### AllowedCountry
+
+**Description:** Currency Allowed Country owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `CountryId` | The ID of the Allowed Country |
 
 <div class="mb-48"></div>
 

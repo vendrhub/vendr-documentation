@@ -203,6 +203,27 @@ static Store Create(IUnitOfWork uow);
 | ---- | ----------- |
 | `Store` | A writable Store |
 
+#### SetSortOrder
+Sets the Sort Order of a Country
+
+***Signature:***
+
+````csharp
+Country SetSortOrder(int order);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `int` | `order` | The Order position of the Country |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `Country` | An updated writable Country |
+
 #### AsReadOnly
 Converts a writable Store into a read only Store
 
