@@ -74,8 +74,8 @@
       link: /reference/payment-methods/
     - title: Shipping Methods
       link: /reference/shipping-methods/
-    - title: Tax Classes
-      link: /reference/tax-classes/
+    - title: Taxes
+      link: /reference/taxes/
     - title: Email Templates
       link: /reference/email-templates/
     - title: Orders & Order Lines
