@@ -23,7 +23,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
     <span class="block text-center my-6"><g-image src="~/assets/images/logos/vendr_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
     <hr class="my-6" />
     <span class="tile__heading text-xl font-bold">Vendr</span>
-    <span class="tile__body ">Documentation for the Core Vendr product</span>
+    <span class="tile__body ">Documentation for the core Vendr product</span>
 </g-link>
 
 <h2 class="text-center mb-10">Packages</h2>
@@ -32,13 +32,15 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   <div class="tile-grid__cell w-full md:w-1/2">
         <g-link :to="'/packages/checkout/'" class="tile flex flex-col text-center items-stretch h-full">
             <span class="tile__heading text-xl font-bold">Checkout</span>
-            <span class="tile__body">Documentation for the Vendr.Checkout package</span>
+            <span class="block text-gray-500 font-normal">Vendr.Checkout</span>
+            <span class="tile__body">Documentation for the Vendr Checkout package</span>
         </g-link>
   </div>
   <div class="tile-grid__cell w-full md:w-1/2">
         <g-link :to="'/packages/cart/'" class="tile flex flex-col text-center items-stretch h-full">
             <span class="tile__heading text-xl font-bold">Cart</span>
-            <span class="tile__body">Documentation for the Vendr.Cart package</span>
+            <span class="block text-gray-500 font-normal">Vendr.Cart</span>
+            <span class="tile__body">Documentation for the Vendr Cart package</span>
         </g-link>
   </div>
 </div>
@@ -51,7 +53,8 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
             <span class="block text-center my-6"><g-image src="~/assets/images/logos/stripe_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
             <hr class="my-6" />
             <span class="tile__heading text-xl font-bold">Stripe</span>
-            <span class="tile__body">Documentation for the Vendr.PaymentProviders.Stripe payment provider</span>
+            <span class="block text-gray-500 font-normal">Vendr.PaymentProviders.PayPal</span>
+            <span class="tile__body">Documentation for the Stripe payment provider</span>
         </g-link>
   </div>
   <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
@@ -59,7 +62,8 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
             <span class="block text-center my-6"><g-image src="~/assets/images/logos/paypal_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
             <hr class="my-6" />
             <span class="tile__heading text-xl font-bold">PayPal</span>
-            <span class="tile__body">Documentation for the Vendr.PaymentProviders.PayPal payment provider</span>
+            <span class="block text-gray-500 font-normal">Vendr.PaymentProviders.PayPal</span>
+            <span class="tile__body">Documentation for the PayPal payment provider</span>
         </g-link>
   </div>
   <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
@@ -67,7 +71,8 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
             <span class="block text-center my-6"><g-image src="~/assets/images/logos/dibs_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
             <hr class="my-6" />
             <span class="tile__heading text-xl font-bold">DIBs</span>
-            <span class="tile__body">Documentation for the Vendr.PaymentProviders.Dibs payment provider</span>
+            <span class="block text-gray-500 font-normal">Vendr.PaymentProviders.PayPal</span>
+            <span class="tile__body">Documentation for the DIBs payment provider</span>
         </g-link>
   </div>
 </div>
