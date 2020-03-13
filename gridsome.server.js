@@ -24,7 +24,7 @@ module.exports = function (api) {
         addMetadata('twitterUrl', 'https://twitter.com/heyvendr')
 
         // Setup variables
-        const contentPath = path.join(__dirname, 'content')
+        const contentPath = path.join(__dirname, 'content/docs')
 
         // Create collections
         const docVersionCollection = addCollection('DocVersion')
@@ -44,6 +44,8 @@ module.exports = function (api) {
             let packagePath = `/${path.relative(contentPath, path.dirname(filePath)).replace(/\\/g, '/')}/`
             let packageAllDocsVersions = [package.docVersions.next,package.docVersions.current,...(package.docVersions.previous || [])].filter(v => v);
             
+
+
             // Process package doc versions
             packageAllDocsVersions.forEach((v,i) => {
 
@@ -174,9 +176,9 @@ module.exports = function (api) {
             if (packageNode) {
                 n.package = packageNode.id
 
-                let dcoVersionNode = docVersionNodes.find(v => n.path.startsWith(v.path))
-                if (dcoVersionNode) {
-                    n.docVersion = dcoVersionNode.id
+                let docVersionNode = docVersionNodes.find(v => n.path.startsWith(v.path))
+                if (docVersionNode) {
+                    n.docVersion = docVersionNode.id
 
                     let subPackageNode = subPackageNodes.find(p => n.path.startsWith(p.path))
                     if (subPackageNode) {

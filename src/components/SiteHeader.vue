@@ -1,13 +1,13 @@
 <template>
     <header id="header">
-      <div style="background-image: linear-gradient(45deg, #249bff, #00eb71);" class="flex bg-brand-blue-light fixed top-0 inset-x-0 z-100 h-16 items-center">
+      <div style="background-image: linear-gradient(90deg, #249bff, #00eb71);" class="flex bg-brand-blue-light fixed top-0 inset-x-0 z-100 h-16 items-center">
         <div class="w-full max-w-container relative mx-auto px-6">
           <div class="flex items-center -mx-6">
 
             <!-- Logo -->
             <div class="lg:w-1/4 xl:w-1/5 pl-6 pr-6 lg:pr-8">
               <div class="flex items-center">
-                <g-link :to="$static.corePackage.docVersions.current.path" class="block lg:mr-4 text-white">
+                <g-link :to="'/'" class="block lg:mr-4 text-white">
                   <vendr-logo class="h-7 w-auto hidden md:block fill-current" />
                   <vendr-v class="h-7 w-auto block md:hidden fill-current" />
                 </g-link>

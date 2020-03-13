@@ -43,7 +43,16 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         index: ['README'],
-        baseDir: './content/',
+        baseDir: './content/home/',
+        typeName: 'HomePage',
+        template: './src/templates/HomePage.vue',
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        index: ['README'],
+        baseDir: './content/docs/',
         typeName: 'DocPage',
         template: './src/templates/DocPage.vue',
         refs: {

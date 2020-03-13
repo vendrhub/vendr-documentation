@@ -1,6 +1,6 @@
 ---
-title: Documentation
-description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
+title: Core Documentation
+description: Core Documentation for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 ## Using These Docs
