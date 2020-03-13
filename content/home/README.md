@@ -82,12 +82,12 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
 <div class="md:max-w-4xl md:mx-auto py-10">
-<h2 class="mb-10  md:text-center">Getting Help</h2>
+<h2 class="mb-10">Getting Help</h2>
 
 
 If you require further assistance, or if you are having a particular issue you can't find an answer to, you can get community support via our support forum over on the [Umbraco developer portal](https://our.umbraco.com/packages/website-utilities/vendr/vendr-support/).
 
-<h2 class="mb-10 md:text-center ">About Vendr</h2>
+<h2 class="mb-10 ">About Vendr</h2>
 
 Vendr is the eCommerce solution for Umbraco v8+ created by Outfield Digital, the team behind Tea Commerce for Umbraco v7. Vendr is the successor to Tea Commerce and follows much of the same principals but has been vastly improved for use on Umbraco v8+.
 
