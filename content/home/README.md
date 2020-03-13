@@ -4,7 +4,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
 
-<div class="absolute top-0 left-0 w-full pt-16 flex flex-col justify-center" style="background-image: linear-gradient(90deg, rgb(36, 155, 255), rgb(0, 235, 113)); height: 420px;">
+<div class="absolute top-0 left-0 w-full pt-16 pb-20 flex flex-col justify-center" style="background-image: linear-gradient(90deg, rgb(36, 155, 255), rgb(0, 235, 113)); height: 500px;">
 
 <div>
 <h1 class="text-center text-white text-4xl font-bold font-brand-display leading-tight tracking-tighter md:text-6xl md:max-w-4xl md:mx-auto">What would you like to learn about today?</h1>
@@ -13,13 +13,11 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 </div>
 
-<div style="height: 420px"></div>
+<div style="height: 500px"></div>
 
-<div class="pt-12 pb-8">
+<div class="relative z-10 pb-8">
 
-<h2 class="text-center mb-10">Core</h2>
-
-<g-link :to="'/core/'" class="tile flex flex-col text-center max-w-2xl mx-auto mb-10">
+<g-link :to="'/core/'" class="tile bg-white flex flex-col text-center max-w-2xl mx-auto mb-10 -mt-20">
     <span class="block text-center my-6"><g-image src="~/assets/images/logos/vendr_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
     <hr class="my-6" />
     <span class="tile__heading text-xl font-bold">Vendr</span>
