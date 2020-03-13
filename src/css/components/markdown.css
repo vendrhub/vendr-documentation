@@ -28,7 +28,7 @@
     @apply text-lg font-medium mb-4; 
 }
 
-.markdown .g-image {
+.markdown .g-image:not(.g-image--plain) {
     @apply border rounded mx-auto;
 }
 

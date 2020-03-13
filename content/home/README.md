@@ -20,8 +20,10 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 <h2 class="text-center mb-10">Core</h2>
 
 <g-link :to="'/core/'" class="tile flex flex-col text-center max-w-2xl mx-auto mb-10">
-<span class="tile__heading text-3xl font-bold">Vendr</span>
-<span class="tile__body">Documentation for the Core Vendr product</span>
+    <span class="block text-center my-6"><g-image src="~/assets/images/logos/vendr_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
+    <hr class="my-6" />
+    <span class="tile__heading text-xl font-bold">Vendr</span>
+    <span class="tile__body ">Documentation for the Core Vendr product</span>
 </g-link>
 
 <h2 class="text-center mb-10">Packages</h2>
@@ -29,13 +31,13 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 <div class="tile-grid mb-10">
   <div class="tile-grid__cell w-full md:w-1/2">
         <g-link :to="'/packages/checkout/'" class="tile flex flex-col text-center items-stretch h-full">
-            <span class="tile__heading text-xl font-bold">Vendr.Checkout</span>
+            <span class="tile__heading text-xl font-bold">Checkout</span>
             <span class="tile__body">Documentation for the Vendr.Checkout package</span>
         </g-link>
   </div>
   <div class="tile-grid__cell w-full md:w-1/2">
         <g-link :to="'/packages/cart/'" class="tile flex flex-col text-center items-stretch h-full">
-            <span class="tile__heading text-xl font-bold">Vendr.Cart</span>
+            <span class="tile__heading text-xl font-bold">Cart</span>
             <span class="tile__body">Documentation for the Vendr.Cart package</span>
         </g-link>
   </div>
@@ -46,19 +48,25 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 <div class="tile-grid mb-10">
   <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
         <g-link :to="'/payment-providers/stripe/'" class="tile flex flex-col text-center items-stretch h-full">
-            <span class="tile__heading font-bold">Vendr.PaymentProviders.Stripe</span>
+            <span class="block text-center my-6"><g-image src="~/assets/images/logos/stripe_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
+            <hr class="my-6" />
+            <span class="tile__heading text-xl font-bold">Stripe</span>
             <span class="tile__body">Documentation for the Vendr.PaymentProviders.Stripe payment provider</span>
         </g-link>
   </div>
   <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
-        <g-link :to="'/payment-providers/paypal/'" class="tile flex flex-col text-center items-stretch  h-full">
-            <span class="tile__heading font-bold">Vendr.PaymentProviders.PayPal</span>
+        <g-link :to="'/payment-providers/paypal/'" class="tile p-6 flex flex-col text-center items-stretch  h-full">
+            <span class="block text-center my-6"><g-image src="~/assets/images/logos/paypal_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
+            <hr class="my-6" />
+            <span class="tile__heading text-xl font-bold">PayPal</span>
             <span class="tile__body">Documentation for the Vendr.PaymentProviders.PayPal payment provider</span>
         </g-link>
   </div>
   <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
         <g-link :to="'/payment-providers/dibs/'" class="tile flex flex-col text-center items-stretch  h-full">
-            <span class="tile__heading font-bold">Vendr.PaymentProviders.Dibs</span>
+            <span class="block text-center my-6"><g-image src="~/assets/images/logos/dibs_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
+            <hr class="my-6" />
+            <span class="tile__heading text-xl font-bold">DIBs</span>
             <span class="tile__body">Documentation for the Vendr.PaymentProviders.Dibs payment provider</span>
         </g-link>
   </div>
