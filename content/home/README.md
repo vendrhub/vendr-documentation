@@ -28,15 +28,15 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 <h2 class="text-center mb-10">Packages</h2>
 
-<div class="tile-grid mb-10">
-  <div class="tile-grid__cell w-full md:w-1/2">
+<div class="flex flex-wrap justify-center mb-10 -mt-3 -mx-3">
+  <div class="tile-grid__cell p-3 w-full md:w-1/2">
         <g-link :to="'/packages/checkout/'" class="tile flex flex-col text-center items-stretch h-full">
             <span class="tile__heading text-xl font-bold">Checkout</span>
             <span class="block text-gray-500 font-normal">Vendr.Checkout</span>
             <span class="tile__body">Documentation for the Vendr Checkout package</span>
         </g-link>
   </div>
-  <div class="tile-grid__cell w-full md:w-1/2">
+  <div class="tile-grid__cell p-3 w-full md:w-1/2">
         <g-link :to="'/packages/cart/'" class="tile flex flex-col text-center items-stretch h-full">
             <span class="tile__heading text-xl font-bold">Cart</span>
             <span class="block text-gray-500 font-normal">Vendr.Cart</span>
@@ -47,8 +47,8 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 <h2 class="text-center mb-10">Payment Providers</h2>
 
-<div class="tile-grid mb-10">
-  <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
+<div class="flex flex-wrap justify-center mb-10 -mt-3 -mx-3">
+  <div class="tile-grid__cell p-3 w-full md:w-1/2 lg:w-1/3">
         <g-link :to="'/payment-providers/stripe/'" class="tile flex flex-col text-center items-stretch h-full">
             <span class="block text-center my-6"><g-image src="~/assets/images/logos/stripe_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
             <hr class="my-6" />
@@ -57,7 +57,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
             <span class="tile__body">Documentation for the Stripe payment provider</span>
         </g-link>
   </div>
-  <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
+  <div class="tile-grid__cell p-3 w-full md:w-1/2 lg:w-1/3">
         <g-link :to="'/payment-providers/paypal/'" class="tile p-6 flex flex-col text-center items-stretch  h-full">
             <span class="block text-center my-6"><g-image src="~/assets/images/logos/paypal_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
             <hr class="my-6" />
@@ -66,7 +66,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
             <span class="tile__body">Documentation for the PayPal payment provider</span>
         </g-link>
   </div>
-  <div class="tile-grid__cell w-full md:w-1/2 lg:w-1/3">
+  <div class="tile-grid__cell p-3 w-full md:w-1/2 lg:w-1/3">
         <g-link :to="'/payment-providers/dibs/'" class="tile flex flex-col text-center items-stretch  h-full">
             <span class="block text-center my-6"><g-image src="~/assets/images/logos/dibs_200.png" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
             <hr class="my-6" />
