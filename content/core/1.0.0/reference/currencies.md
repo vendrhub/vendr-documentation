@@ -85,7 +85,7 @@ CurrencyReadOnly GetCurrency(Guid storeId, string code);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `Guid` | `storeId` | The ID of the Store the Currencies belong to |
+| `Guid` | `storeId` | The ID of the Store the Currency belong to |
 | `string` | `code` | The Code of the Currency to fetch  |
 
 ***Returns:***
@@ -101,14 +101,14 @@ Persists the given Currency to the database
 ***Signature:***
 
 ````csharp
-void SaveCurrency(Currency Currency);
+void SaveCurrency(Currency currency);
 ````
 
 ***Parameters:***
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `Currency` | `Currency` | The Currency to save  |
+| `Currency` | `currency` | The Currency to save  |
 
 #### DeleteCurrency
 
@@ -131,14 +131,14 @@ void DeleteCurrency(Guid CurrencyId);
 ***Signature:***
 
 ````csharp
-void DeleteCurrency(Currency entity);
+void DeleteCurrency(Currency currency);
 ````
 
 ***Parameters:***
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `Currency` | `entity` | The Currency to delete |
+| `Currency` | `currency` | The Currency to delete |
 
 #### SortCurrencies
 

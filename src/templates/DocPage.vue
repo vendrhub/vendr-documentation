@@ -146,7 +146,7 @@ query {
 </static-query>
 
 <script>
-import Layout from '../layouts/Layout'
+import Layout from '../layouts/PageLayout'
 import CoreBackLink from '../components/CoreBackLink'
 import PackageInfo from '../components/PackageInfo'
 import SubPackageSwitcher from '../components/SubPackageSwitcher'

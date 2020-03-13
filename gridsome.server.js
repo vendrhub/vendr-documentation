@@ -13,7 +13,7 @@ module.exports = function (api) {
     // Define redirects
     // Will get generated into netlify + vue redirects
     const redirects = [
-        { from: '/', to : '/core/' }
+        //{ from: '/', to : '/core/' }
     ];
 
     api.loadSource(({ addCollection, getCollection, addMetadata, store, slugify }) => {

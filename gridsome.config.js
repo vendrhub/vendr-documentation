@@ -5,7 +5,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 const siteUrl = !isProduction
   ? "http://localhost:8080"
-  : "https://getvendr.net";
+  : "https://vendr.net";
 
 const pathPrefix = !isProduction
   ? ""

@@ -60,8 +60,8 @@
       link: /reference/constants/
     - title: Enums
       link: /reference/enums/
-    - title: Prices
-      link: /reference/prices/
+    - title: Amounts & Prices
+      link: /reference/amounts-and-prices/ 
     - title: Stores
       link: /reference/stores/
     - title: Countries & Regions
