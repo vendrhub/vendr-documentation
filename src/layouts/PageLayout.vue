@@ -20,8 +20,8 @@
                     <!-- Intro -->
                     <div class="mb-6 px-6 mx-auto lg:ml-0 lg:mr-auto xl:mx-0 lg:px-12 xl:w-3/4">
                     <slot name="page-top" />
-                    <h1 class=" text-5xl font-black text-brand-blue-dark font-brand-display leading-tight tracking-tighter">{{title}}</h1>
-                    <div class="mt-0 mb-4 font-medium" v-if="description">{{description}}</div>
+                    <h1 class=" text-5xl font-black text-brand-blue-dark font-brand-display leading-tight tracking-tighter">{{pageTitle}}</h1>
+                    <div class="mt-0 mb-4 font-medium" v-if="pageDescription">{{pageDescription}}</div>
                     <hr class="my-8 border-b-2 border-gray-200">
                     </div>
 
@@ -53,8 +53,8 @@ import Layout from './Layout'
 export default {
   components: { Layout },
   props: {
-    title: { type: String },
-    description: { type: String }
+    pageTitle: { type: String },
+    pageDescription: { type: String }
   }
 }
 

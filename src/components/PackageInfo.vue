@@ -5,7 +5,7 @@
                 <g-link :to="packageLink" class="font-bold mr-2">{{ packageInfo.name }}</g-link>
                 <g-link :to="packageInfo.path + '/versions/'" class="text-gray-400 text-base" v-if="docVersionInfo">v{{docVersionInfo.name}}</g-link>
             </span>
-            <span class="block font-normal text-gray-400 text-xs -mt-6 pb-6" v-if="packageInfo.type == 'PaymentProvider'">{{ packageInfo.id }}</span>
+            <span class="block font-normal text-gray-400 text-xs -mt-6 pb-6" v-if="packageInfo.type != 'Core'">{{ packageInfo.id }}</span>
         </span>
     </div>
 </template>

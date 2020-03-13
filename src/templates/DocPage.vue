@@ -1,5 +1,5 @@
 <template>
-  <layout :title="$page.doc.title" :description="$page.doc.description">
+  <layout :page-title="$page.doc.title" :page-description="$page.doc.description">
 
     <VueRemarkContent class="markdown" />
 
@@ -37,7 +37,6 @@
     </template>
 
     <template slot="sidebar">
-      <core-back-link v-if="$page.doc.package && $page.doc.package.type == 'PaymentProvider'" />
       <package-info :package-info="$page.doc.package" 
         :doc-version-info="$page.doc.docVersion"
         :sub-package-info="$page.doc.subPackage" />

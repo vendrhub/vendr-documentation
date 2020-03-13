@@ -1,6 +1,6 @@
 <template>
-    <layout :title="$page.doc.title" :description="$page.doc.description">
-        <VueRemarkContent class="markdown" />
+    <layout>
+      <VueRemarkContent class="markdown" />
     </layout>
 </template>
 
