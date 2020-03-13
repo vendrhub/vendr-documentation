@@ -8,7 +8,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 <div>
 <h1 class="text-center text-white text-4xl font-bold font-brand-display leading-tight tracking-tighter md:text-6xl md:max-w-4xl md:mx-auto">What would you like to learn about today?</h1>
-<div class="mt-0 mb-10 font-medium  text-center text-white " >Please choose an area of documentation from the list below</div>
+<div class="mt-0 font-medium  text-center text-white " >Please choose an area of documentation from the list below</div>
 </div>
 
 </div>
