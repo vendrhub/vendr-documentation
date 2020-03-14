@@ -1,6 +1,6 @@
-id: Vendr.PaymentProviders.PayPal
-name: PayPal
-logo: paypal.png
+id: Vendr.PaymentProviders.Dibs
+name: DIBS
+logo: dibs.png
 type: PaymentProvider
 supportedBy: core
 

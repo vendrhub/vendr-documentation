@@ -37,6 +37,9 @@ module.exports = {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule.use('vue-svg-loader').loader('vue-svg-loader')
+    
+    config.resolve.alias.set('@images', '@/assets/images')
+    config.resolve.alias.set('@logos', '@/assets/images/logos')
   },
   plugins: [
     {

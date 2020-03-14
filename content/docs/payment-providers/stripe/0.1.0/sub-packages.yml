@@ -1,5 +1,0 @@
-- name: Stripe Checkout (One Time)
-  alias: stripe-checkout-onetime
-  
-- name: Stripe Checkout (Subscription)
-  alias: stripe-checkout-subscription

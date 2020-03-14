@@ -16,7 +16,25 @@ module.exports = function (api) {
         //{ from: '/', to : '/core/' }
     ];
 
-    api.loadSource(({ addCollection, getCollection, addMetadata, store, slugify }) => {
+    api.createSchema(({ addSchemaTypes }) => {
+
+        // Define DocVersions to ensure there are always
+        // fields of the right type for the various versions
+        addSchemaTypes(`
+            type Package_DocVersions {
+                next: DocVersion,
+                current: DocVersion,
+                previous: [DocVersion]!,
+                all: [DocVersion]!
+            }
+            type Package implements Node @infer {
+                docVersions: Package_DocVersions
+            }
+        `)
+
+      });
+
+    api.loadSource(({ addCollection, getCollection, addMetadata, store, schema, slugify }) => {
         
         // Add global metadata
         addMetadata('githubUrl', 'https://github.com/vendrhub/vendr-documentation')
@@ -153,16 +171,6 @@ module.exports = function (api) {
 
         // Sort redirects by 'from' URL
         redirects.sort((a, b) => (a.from > b.from) ? 1 : -1)
-
-        // Prefix paths
-        // if (pathPrefix) {
-        //     redirects.forEach((r) => {
-        //         if (r.from.startsWith('/'))
-        //             r.from = pathPrefix + r.from
-        //         if (r.to.startsWith('/'))
-        //             r.to = pathPrefix + r.to
-        //     })
-        // }
 
         // Pass redirects to front end for registering with VueRouter
         api.setClientOptions({

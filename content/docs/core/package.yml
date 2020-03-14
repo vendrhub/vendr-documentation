@@ -6,6 +6,7 @@ supportedBy: core
 
 packageVersion: 1.0.0
 docVersions:
+  next: 
   current: 1.0.0
   previous: 
 

@@ -1,14 +1,14 @@
-id: Vendr.PaymentProviders.PayPal
-name: PayPal
-logo: paypal.png
-type: PaymentProvider
+id: Vendr.Cart
+name: Cart
+type: Package
+description: 
 supportedBy: core
 
 packageVersion: 1.0.0
 docVersions:
   next: 
   current: 1.0.0
-  previous: 
+  pervious: 
 
 links:
   - title: Versions

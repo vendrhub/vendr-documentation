@@ -1,13 +1,19 @@
 - title: Getting Started
   items:
     - title: Overview
-      link: /overview/
+      link: /getting-started/
     - title: Installation
-      link: /test/
+      link: /getting-started/installation/
+    - title: Configuring Stripe
+      link: /getting-started/configuring-stripe/
+    - title: Configuring Umbraco
+      link: /getting-started/configuring-umbraco/
+    - title: Useful Links
+      link: /getting-started/useful-links/
 
-- title: Providers
+- title: How-To Guides
   items:
-    - title: Stripe Inline
-      link: /test/
-    - title: Stripe Subscription
-      link: /test/
+    - title: Overview
+      link: /how-to-guides/
+    - title: How to block payments from non billing country regions
+      link: /how-to-guides/radar-billing-country-rule/

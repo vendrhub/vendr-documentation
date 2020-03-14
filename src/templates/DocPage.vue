@@ -41,7 +41,7 @@
         :doc-version-info="$page.doc.docVersion"
         :sub-package-info="$page.doc.subPackage" />
       <sub-package-switcher 
-          v-if="$page.doc.docVersion && $page.doc.docVersion.subPackages"
+          v-if="$page.doc.docVersion && $page.doc.docVersion.subPackages && $page.doc.docVersion.subPackages.length > 1"
           :sub-packages="$page.doc.docVersion.subPackages"
           :current-sub-package="$page.doc.subPackage" />
       <grouped-links-list :groups="links" v-if="links && links.length > 0" />
