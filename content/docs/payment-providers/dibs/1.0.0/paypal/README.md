@@ -1,4 +1,0 @@
----
-title: PayPal
-description: Test
----

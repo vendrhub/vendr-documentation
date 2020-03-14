@@ -11,7 +11,7 @@ Initial release of the DIBS Payment Provider
 <changelog-group category="Added">  
 
     
-* Added DIBS N2 Payment Provider
+* Added DIBS D2 Payment Provider
 
 
 </changelog-group>

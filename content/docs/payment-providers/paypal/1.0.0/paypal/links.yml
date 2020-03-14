@@ -1,11 +1,12 @@
 - title: Getting Started
   items:
     - title: Overview
-      link: /
+      link: /getting-started/
     - title: Installation
-      link: /
-
-- title: Providers
-  items:
-    - title: PayPal
-      link: /
+      link: /getting-started/installation/
+    - title: Configuring PayPal
+      link: /getting-started/configuring-paypal/
+    - title: Configuring Umbraco
+      link: /getting-started/configuring-umbraco/
+    - title: Useful Links
+      link: /getting-started/useful-links/
