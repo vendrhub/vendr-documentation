@@ -7,6 +7,10 @@ description: Payment Method related APIs in Vendr, the eCommerce solution for Um
 
 ### IPaymentMethodService
 
+**Description:** Interface of the Vendr Payment Method Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetPaymentMethods
 
 Gets a collection of all Payment Method entities in a Store

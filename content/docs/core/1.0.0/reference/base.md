@@ -7,6 +7,10 @@ description: Store related APIs in Vendr, the eCommerce solution for Umbraco v8+
 
 ### IStoreService
 
+**Description:** Interface of the Vendr Store Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetStores
 
 Gets a collection of all Store entities

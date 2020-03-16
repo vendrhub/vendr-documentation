@@ -7,6 +7,10 @@ description: Tax related APIs in Vendr, the eCommerce solution for Umbraco v8+
 
 ### ITaxService
 
+**Description:** Interface of the Vendr Tax Class Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetTaxClasses
 
 Gets a collection of all Tax Class entities in a Store

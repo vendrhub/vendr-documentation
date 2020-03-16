@@ -7,6 +7,10 @@ description: Session related APIs in Vendr, the eCommerce solution for Umbraco v
 
 ### ISessionManager
 
+**Description:** Interface of the Vendr Session Manager  
+**Namespace:** Vendr.Core.Session  
+**Assembly:** Vendr.Core
+
 #### GetCurrentOrder
 
 Gets the Current Order of the current Session
@@ -699,5 +703,5 @@ void ClearDefaultTaxClass(Guid storeId);
 ### SessionManager
 
 **Description:** Default implementation of the [Vendr Session Manager Interface](#isessionmanager)  
-**Namespace:** Vendr.Core.Services  
+**Namespace:** Vendr.Core.Session  
 **Assembly:** Vendr.Core

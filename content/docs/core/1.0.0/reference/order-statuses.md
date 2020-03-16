@@ -7,6 +7,10 @@ description: Order Status related APIs in Vendr, the eCommerce solution for Umbr
 
 ### IOrderStatusService
 
+**Description:** Interface of the Vendr Order Status Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetOrderStatuses
 
 Gets a collection of all Order Status entities in a Store

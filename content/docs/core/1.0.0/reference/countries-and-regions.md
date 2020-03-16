@@ -7,6 +7,10 @@ description: Country and Region related APIs in Vendr, the eCommerce solution fo
 
 ### ICountryService
 
+**Description:** Interface of the Vendr Country Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetCountries
 
 Gets a collection of all Country entities in a Store

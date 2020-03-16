@@ -7,6 +7,10 @@ description: Currency related APIs in Vendr, the eCommerce solution for Umbraco 
 
 ### ICurrencyService
 
+**Description:** Interface of the Vendr Currency Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetCurrencies
 
 Gets a collection of all Currency entities in a Store

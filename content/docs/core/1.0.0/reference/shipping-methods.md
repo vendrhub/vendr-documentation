@@ -7,6 +7,10 @@ description: Shipping Method related APIs in Vendr, the eCommerce solution for U
 
 ### IShippingMethodService
 
+**Description:** Interface of the Vendr Shipping Method Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetShippingMethods
 
 Gets a collection of all Shipping Method entities in a Store

@@ -7,6 +7,10 @@ description: Email Template related APIs in Vendr, the eCommerce solution for Um
 
 ### IEmailTemplateService
 
+**Description:** Interface of the Vendr Email Template Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
 #### GetEmailTemplates
 
 Gets a collection of all Email Template entities in a Store
