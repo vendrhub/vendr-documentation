@@ -261,7 +261,7 @@ Creates a Currency entity
 ***Signature:***
 
 ````csharp
-static Currency Create(IUnitOfWork uow);
+static Currency Create(IUnitOfWork uow, Guid storeId, string code, string name, string cultureName);
 ````
 
 ***Parameters:***
@@ -269,6 +269,10 @@ static Currency Create(IUnitOfWork uow);
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `IUnitOfWork` | `uow` | An active Unit of Work to associate with this writable entity |
+| `Guid` | `storeId` | The ID of the Store this Currency belongs to |
+| `string` | `code` | A unique Currency Code for the Currency |
+| `string` | `name` | The Name of the Currency |
+| `string` | `cultureName` | The Name of the Culture of the Currency |
 
 ***Returns:***
 
