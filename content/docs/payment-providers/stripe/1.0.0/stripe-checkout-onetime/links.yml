@@ -17,3 +17,5 @@
       link: /how-to-guides/
     - title: How to block payments from non billing country regions
       link: /how-to-guides/radar-billing-country-rule/
+    - title: How to test Stripe webhooks locally
+      link: /how-to-guides/testing-stripe-webhooks-locally/
