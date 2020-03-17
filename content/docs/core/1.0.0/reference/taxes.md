@@ -7,7 +7,7 @@ description: Tax related APIs in Vendr, the eCommerce solution for Umbraco v8+
 
 ### ITaxService
 
-**Description:** Interface of the Vendr Tax Class Service  
+**Description:** Interface of the Vendr Tax Service  
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
@@ -146,7 +146,7 @@ void SortTaxClasses(Guid[] sortedIds);
 
 <div class="mb-48"></div>
 
-## TaxClass Entities
+## Tax Entities
 
 ### TaxClassReadOnly
 
@@ -591,7 +591,7 @@ TaxClassReadOnly AsReadOnly();
 <div class="mb-48"></div>
 
 
-## Tax Class Owned Entities
+## Tax Owned Entities
 
 ### CountryRegionTaxRate
 
@@ -609,7 +609,7 @@ TaxClassReadOnly AsReadOnly();
 
 <div class="mb-48"></div>
 
-## TaxClass Events
+## Tax Events
 
 ### Validation Events
 
