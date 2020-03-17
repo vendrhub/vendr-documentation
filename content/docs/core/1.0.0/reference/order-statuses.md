@@ -3,7 +3,7 @@ title: Order Statuses
 description: Order Status related APIs in Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## OrderStatus Service
+## Order Status Service
 
 ### IOrderStatusService
 
@@ -146,7 +146,7 @@ void SortOrderStatuses(Guid[] sortedIds);
 
 <div class="mb-48"></div>
 
-## OrderStatus Entities
+## Order Status Entities
 
 ### OrderStatusReadOnly
 
@@ -356,7 +356,7 @@ OrderStatusReadOnly AsReadOnly();
 
 <div class="mb-48"></div>
 
-## OrderStatus Events
+## Order Status Events
 
 ### Validation Events
 
