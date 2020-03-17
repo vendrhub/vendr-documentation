@@ -252,6 +252,21 @@ Currency AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `Currency` | A writable version of the Currency |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### Currency
 
 **Description:** Writable Currency entity  
@@ -502,6 +517,21 @@ CurrencyReadOnly AsReadOnly();
 | Type | Name | Description |
 | ---- | ---- | ----------- |
 | `Guid` | `CountryId` | The ID of the Allowed Country |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>
 

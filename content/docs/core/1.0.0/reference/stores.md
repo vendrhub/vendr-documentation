@@ -235,6 +235,21 @@ Store AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `Store` | A writable version of the Store |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### Store
 
 **Description:** Writable Store entity  
@@ -1476,6 +1491,21 @@ StoreReadOnly AsReadOnly();
 | ---- | ---- | ----------- |
 | `string` | `UserId` | ID of the Allowed User |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### AllowedUserRole
 
 **Description:** Store Allowed User Role owned entity  
@@ -1487,6 +1517,21 @@ StoreReadOnly AsReadOnly();
 | Type | Name | Description |
 | ---- | ---- | ----------- |
 | `string` | `Role` | Name of the Allowed User Rule |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>
 

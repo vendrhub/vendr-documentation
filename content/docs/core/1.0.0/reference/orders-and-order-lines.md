@@ -337,6 +337,21 @@ Order AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `Order` | A writable version of the Order |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### Order
 
 **Description:** Writable Order entity  
@@ -1641,6 +1656,21 @@ OrderReadOnly AsReadOnly();
 | `TaxRate` | `TaxRate` | The calculated Tax Rate of the Order Line |
 | `ReadOnlyOrderLineTotalPrice` | `TotalPrice` | The calculated [Total Price of the Order Line](#readonlyorderlinetotalprice) |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### OrderLineContext
 
 **Description:** Order Line fluent write context  
@@ -1958,6 +1988,21 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `string` | `Code` | The Code that was applied |
 | `bool` | `IsFulfilled` | Flag indicating whether the code is fulfilled by the Order |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### AppliedGiftCard
 
 **Description:** Order Applied Gift Card owned entity  
@@ -1971,6 +2016,21 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Guid` | `GiftCardId` | The ID of the Gift Card this code is associated with |
 | `string` | `Code` | The Code that was applied |
 | `Amount` | `Amount` | The calculated amount deducted from the Order by this Gift Card |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 ### FulfilledDiscount
 
@@ -1986,6 +2046,21 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `string` | `DiscountName` | The Name of the Discount |
 | `DiscountType` | `DiscountType` | The Type of the Discount, either `Automatic` or `Code` |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### ReadOnlyTotalPrice
 
 **Description:** Read Only Total Price owned entity  
@@ -2000,6 +2075,21 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Price` | `Discount` | The Subtotal Discount Price |
 | `Price` | `Value` | The Total Price with Discounts applied |
 | `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of  [applied discounts](#applieddiscount) |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 ### ReadOnlyOrderSubtotalPrice
 
@@ -2018,6 +2108,21 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Price` | `TotalDiscount` | The Total Discount Price |
 | `Price` | `Value` | The Total Price with Discounts applied |
 | `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of Subtotal [applied discounts](#applieddiscount) |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 ### ReadOnlyOrderTotalPrice
 
@@ -2039,6 +2144,20 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Price` | `Value` | The Total Price with Discounts and Gift Card applied |
 | `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of Total [applied discounts](#applieddiscount) |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 ## Shared Owned Entities
 
@@ -2056,6 +2175,21 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `string` | `DiscountName` | The Name of the Discount |
 | `Price` | `OriginalPrice` | The original Price of the Discount |
 | `Price` | `Price` | The Price of the Discount after discount prices have been capped |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>
 

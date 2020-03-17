@@ -309,7 +309,7 @@ FormattedPrice Formatted();
 | `FormattedPrice` | The [Formatted Price](#formattedprice) of the original Price |
 
 #### DeepClone
-Deep Clone an Price
+Deep Clone the Entity
 
 ***Signature:***
 
@@ -321,7 +321,7 @@ object DeepClone();
 
 | Type | Description |
 | ---- | ----------- |
-| `object` | A deep clone of the Price as an object |
+| `object` | A deep clone of the Entity as an object |
 
 ### FormattedPrice
 
@@ -342,7 +342,7 @@ object DeepClone();
 | `string` | `WithTaxNoSymbol` | The Value of the Price with Tax formatted for the given Currency, without a Symbol |
 
 #### DeepClone
-Deep Clone an Formatted Price
+Deep Clone the Entity
 
 ***Signature:***
 
@@ -354,6 +354,6 @@ object DeepClone();
 
 | Type | Description |
 | ---- | ----------- |
-| `object` | A deep clone of the Formatted Price as an object |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>

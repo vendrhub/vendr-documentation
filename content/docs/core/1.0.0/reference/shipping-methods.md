@@ -444,6 +444,21 @@ ShippingMethod AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `ShippingMethod` | A writable version of the Shipping Method |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### ShippingMethod
 
 **Description:** Writable Shipping Method entity  
@@ -1236,6 +1251,21 @@ ShippingMethodReadOnly AsReadOnly();
 | ---- | ---- | ----------- |
 | `Guid` | `CountryId` | The ID of the Allowed Country |
 | `Guid?` | `RegionId` | The ID of the Allowed Region |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>
 

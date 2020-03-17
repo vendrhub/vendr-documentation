@@ -187,6 +187,21 @@ OrderStatus AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `OrderStatus` | A writable version of the Order Status |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### OrderStatus
 
 **Description:** Writable Order Status entity  

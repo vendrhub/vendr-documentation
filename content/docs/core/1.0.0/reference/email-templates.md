@@ -239,6 +239,21 @@ EmailTemplate AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `EmailTemplate` | A writable version of the Email Template |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### EmailTemplate
 
 **Description:** Writable Email Template entity  

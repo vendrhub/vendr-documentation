@@ -354,6 +354,21 @@ Country AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `Country` | A writable version of the Country |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### Country
 
 **Description:** Writable Country entity  
@@ -681,6 +696,21 @@ Region AsWritable(IUnitOfWork uow);
 | ---- | ----------- |
 | `Region` | A writable version of the Region |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### Region
 
 **Description:** Writable Region entity  
@@ -904,6 +934,21 @@ Region SetSortOrder(int order);
 | `string` | `Code` | The ISO 3166 Code of the Country |
 | `Iso3166CountryRegion[]` | `Regions` | Array of ISO 3166 Regions of the Country |
 
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
+
 ### Iso3166CountryRegion
 
 **Description:** ISO 3166 Region of a Country owned entity  
@@ -916,6 +961,21 @@ Region SetSortOrder(int order);
 | ---- | ---- | ----------- |
 | `string` | `Name` | The name of the Region |
 | `string` | `Code` | The ISO 3166 Code of the Region |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>
 

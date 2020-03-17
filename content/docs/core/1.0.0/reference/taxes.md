@@ -144,6 +144,77 @@ void SortTaxClasses(Guid[] sortedIds);
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+## Tax Source Factory
+
+### ITaxSourceFactory
+
+**Description:** Interface of the Vendr Tax Source Factory  
+**Namespace:** Vendr.Core.Tax  
+**Assembly:** Vendr.Core
+
+#### Create
+
+Create a Tax Source
+
+***Signature:***
+
+````csharp
+TaxSource Create(OrderReadOnly order);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `OrderReadOnly` | `order` | The Order to create the Tax Source for |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `TaxSource` | The Tax Source |
+
+---
+
+***Signature:***
+
+````csharp
+TaxSource CreateCreate(Guid? paymentCountryId, Guid? paymentRegionId = null, Guid? shippingCountryId = null, Guid? shippingRegionId = null);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid?` | `paymentCountryId` | The ID of the Payment Country for the Tax Source |
+| `Guid?` | `paymentRegionId` | The ID of the Payment Region for the Tax Source |
+| `Guid?` | `shippingCountryId` | The ID of the Shipping Country for the Tax Source |
+| `Guid?` | `shippingRegionId` | The ID of the Shipping Region for the Tax Source |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `TaxSource` | The Tax Source |
+
+### TaxSourceFactoryBase
+
+**Description:** Base implementation of the [Vendr Tax Source Factory](#itaxsourcefactory)  
+**Namespace:** Vendr.Core.Tax  
+**Assembly:** Vendr.Core
+
+### OriginTaxSourceFactory
+
+**Description:** Default implementation of the [Vendr Tax Source Factory](#itaxsourcefactory) for Origin based Tax Sources  
+**Namespace:** Vendr.Core.Tax  
+**Assembly:** Vendr.Core
+
+### DestinationTaxSourceFactory
+
+**Description:** Default implementation of the [Vendr Tax Source Factory](#itaxsourcefactory) for Destination based Tax Sources  
+**Namespace:** Vendr.Core.Tax  
+**Assembly:** Vendr.Core
+
 <div class="mb-48"></div>
 
 ## Tax Entities
@@ -180,7 +251,7 @@ TaxRate GetTaxRate(TaxSource taxSource);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `TaxSource` | `taxSource` | The Tax Source to get the Tax Rate of the Tax Class for |
+| `TaxSource` | `taxSource` | The [Tax Source](#taxsource) to get the Tax Rate of the Tax Class for |
 
 ***Returns:***
 
@@ -208,6 +279,21 @@ TaxClass AsWritable(IUnitOfWork uow);
 | Type | Description |
 | ---- | ----------- |
 | `TaxClass` | A writable version of the Tax Class |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 ### TaxClass
 
@@ -587,6 +673,36 @@ TaxClassReadOnly AsReadOnly();
 | Type | Description |
 | ---- | ----------- |
 | `TaxClassReadOnly` | A read only version of the Tax Class |
+
+
+
+### TaxSource
+
+**Description:** Tax Source entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `CountryId` | The ID of the Country of the Tax Source |
+| `Guid?` | `RegionId` | The ID of the Region of the Tax Source |
+
+#### DeepClone
+Deep Clone the Entity
+
+***Signature:***
+
+````csharp
+object DeepClone();
+````
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `object` | A deep clone of the Entity as an object |
 
 <div class="mb-48"></div>
 
