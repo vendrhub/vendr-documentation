@@ -42,7 +42,7 @@ module.exports = function (api) {
         addMetadata('twitterUrl', 'https://twitter.com/heyvendr')
 
         // Setup variables
-        const contentPath = path.join(__dirname, 'content/docs')
+        const docsContentPath = path.join(__dirname, 'content/docs')
 
         // Create collections
         const docVersionCollection = addCollection('DocVersion')
@@ -50,7 +50,7 @@ module.exports = function (api) {
         const subPackageCollection = addCollection('SubPackage')
 
         // Process packages
-        const packagePathPattern = path.join(contentPath, '**/package.yml')
+        const packagePathPattern = path.join(docsContentPath, '**/package.yml')
         const packageFiles = glob.sync(packagePathPattern)
 
         packageFiles.forEach((filePath, idx) => {
@@ -59,7 +59,7 @@ module.exports = function (api) {
             let package = yaml.safeLoad(packageRaw)
 
             // Extract useful package info
-            let packagePath = `/${path.relative(contentPath, path.dirname(filePath)).replace(/\\/g, '/')}/`
+            let packagePath = `/${path.relative(docsContentPath, path.dirname(filePath)).replace(/\\/g, '/')}/`
             let packageAllDocsVersions = [package.docVersions.next,package.docVersions.current,...(package.docVersions.previous || [])].filter(v => v);
             
 
@@ -205,11 +205,18 @@ module.exports = function (api) {
             fs.unlinkSync(redirectsPath)
 
         let pathPrefix = options.config.pathPrefix || ''
-        if (pathPrefix !== '') 
+        if (pathPrefix !== '') {
             fs.appendFileSync(redirectsPath, `/ ${pathPrefix}/ 302\n`)
+        }
 
         redirects.forEach((r,i) => {
             fs.appendFileSync(redirectsPath, `${pathPrefix}${r.from} ${pathPrefix}${r.to} 302\n`)
         })
+
+        // if (pathPrefix !== '') {
+        //     fs.appendFileSync(redirectsPath, `/core/* ${pathPrefix}/core/:splat 301\n`)
+        //     fs.appendFileSync(redirectsPath, `/packages/* ${pathPrefix}/packages/:splat 301\n`)
+        //     fs.appendFileSync(redirectsPath, `/payment-providers/* ${pathPrefix}/payment-providers/:splat 301\n`)
+        // }
     })
 }
