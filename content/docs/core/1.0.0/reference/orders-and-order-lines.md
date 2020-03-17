@@ -265,8 +265,8 @@ void DeleteOrder(Order entity, bool revertFinalized);
 | `IReadOnlyCollection <FulfilledDiscount>` | `Discounts` | Collection of [Fulfilled Discounts](#fulfilleddiscount) associated with this Order |
 | `TaxRate` | `TaxRate` | The calculated Tax Rate of the Order |
 | `double` | `TotalQuantity` | The calculated total quantity of Order Line items in the Order |
-| `ReadOnlyOrderSubtotalPrice` | `SubtotalPrice` | The calculated subtotal price of the Order |
-| `ReadOnlyOrderTotalPrice` | `TotalPrice` | The calculated total price of the Order |
+| `ReadOnlyOrderSubtotalPrice` | `SubtotalPrice` | The calculated [subtotal price](#readonlyordersubtotalprice) of the Order |
+| `ReadOnlyOrderTotalPrice` | `TotalPrice` | The calculated [total price](#readonlyordertotalprice) of the Order |
 | `DateTime` | `CreateDate` | The date the Order was created |
 | `DateTime` | `UpdateDate` | The date the Order was last modified |
 | `DateTime?` | `FinalizedDate` | The date the Order was finalized |
@@ -1637,9 +1637,9 @@ OrderReadOnly AsReadOnly();
 | `string` | `BundleId` | An ID to identify this Order Line by as a Bundle |
 | `IReadOnlyCollection <OrderLineReadOnly>` | `OrderLines` | Collection of Child / Bundle Order Lines associated with this Order Line |
 | `IReadOnlyDictionary<string, PropertyValue>` | `Properties` | Collection of [Properties](../../key-concepts/properties/) associated with this Order Line |
-| `ReadOnlyOrderLineUnitPrice` | `UnitPrice` | The calculated Unit Price of the Order Line |
+| `ReadOnlyOrderLineUnitPrice` | `UnitPrice` | The calculated [Unit Price of the Order Line](#readonlyorderlineunitprice) |
 | `TaxRate` | `TaxRate` | The calculated Tax Rate of the Order Line |
-| `ReadOnlyOrderLineTotalPrice` | `TotalPrice` | The calculated Total Price of the Order Line |
+| `ReadOnlyOrderLineTotalPrice` | `TotalPrice` | The calculated [Total Price of the Order Line](#readonlyorderlinetotalprice) |
 
 ### OrderLineContext
 
@@ -1844,6 +1844,39 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | ---- | ----------- |
 | `OrderLineContext` | The Order Line fluent write context |
 
+### ReadOnlyOrderLineUnitPrice
+
+**Description:** Read Only Order Line Unit Price owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Price` | `WithoutDiscounts` | Price without any Discounts |
+| `Price` | `Discount` | The Subtotal Discount Price |
+| `Price` | `Value` | The Total Price with Discounts applied |
+| `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of  [applied discounts](#applieddiscount) |
+
+### ReadOnlyOrderLineTotalPrice
+
+**Description:** Read Only Order Line Total Price owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Price` | `WithoutDiscounts` | Price without any Discounts |
+| `Price` | `PreviousDiscounts` | Price of any Previous Discounts |
+| `Price` | `WithPreviousDiscounts` | Price including any Previous Discounts |
+| `Price` | `Discount` | The Order Line Total Discount Price |
+| `Price` | `TotalDiscount` | The Total Discount Price |
+| `Price` | `Value` | The Total Price with Discounts applied |
+| `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of Order Line Total [applied discounts](#applieddiscount) |
+
 <div class="mb-48"></div>
 
 ## Order Owned Entities
@@ -1878,7 +1911,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Guid?` | `RegionId` | The ID of the payment Region |
 | `Guid?` | `PaymentMethodId` | The ID of the payment Method |
 | `TaxRate` | `TaxRate` | The calculated Tax Rate of the payment fee |
-| `ReadOnlyTotalPrice` | `TotalPrice` | The calculated total price of the payment fee |
+| `ReadOnlyTotalPrice` | `TotalPrice` | The calculated [total price](#readonlytotalprice) of the payment fee |
 
 ### OrderShippingInfo
 
@@ -1894,7 +1927,7 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Guid?` | `RegionId` | The ID of the shipping Region |
 | `Guid?` | `ShippingMethodId` | The ID of the shipping Method |
 | `TaxRate` | `TaxRate` | The calculated Tax Rate of the shipping fee |
-| `ReadOnlyTotalPrice` | `TotalPrice` | The calculated total price of the shipping fee |
+| `ReadOnlyTotalPrice` | `TotalPrice` | The calculated [total price](#readonlytotalprice) of the shipping fee |
 
 ### OrderTransactionInfo
 
@@ -1952,6 +1985,77 @@ OrderLineContext RemoveProperties(IEnumerable<string> aliases);
 | `Guid` | `DiscountId` | The ID of the Discount |
 | `string` | `DiscountName` | The Name of the Discount |
 | `DiscountType` | `DiscountType` | The Type of the Discount, either `Automatic` or `Code` |
+
+### ReadOnlyTotalPrice
+
+**Description:** Read Only Total Price owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Price` | `WithoutDiscounts` | Price without any Discounts |
+| `Price` | `Discount` | The Subtotal Discount Price |
+| `Price` | `Value` | The Total Price with Discounts applied |
+| `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of  [applied discounts](#applieddiscount) |
+
+### ReadOnlyOrderSubtotalPrice
+
+**Description:** Read Only Order Subtotal Price owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Price` | `WithoutDiscounts` | Price without any Discounts |
+| `Price` | `PreviousDiscounts` | Price of any Previous Discounts |
+| `Price` | `WithPreviousDiscounts` | Price including any Previous Discounts |
+| `Price` | `Discount` | The Subtotal Discount Price |
+| `Price` | `TotalDiscount` | The Total Discount Price |
+| `Price` | `Value` | The Total Price with Discounts applied |
+| `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of Subtotal [applied discounts](#applieddiscount) |
+
+### ReadOnlyOrderTotalPrice
+
+**Description:** Read Only Order Total Price owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Price` | `WithoutDiscounts` | Price without any Discounts |
+| `Price` | `PreviousDiscounts` | Price of any Previous Discounts |
+| `Price` | `WithPreviousDiscounts` | Price including any Previous Discounts |
+| `Price` | `Discount` | The Subtotal Discount Price |
+| `Price` | `TotalDiscount` | The Total Discount Price |
+| `Price` | `WithDiscounts` | The Total Price with Discounts applied |
+| `Price` | `GiftCardsAmount` | The Total applied Gift Cards amount |
+| `Price` | `Value` | The Total Price with Discounts and Gift Card applied |
+| `IReadOnlyCollection <AppliedDiscount>` | `Discounts` | A collection of Total [applied discounts](#applieddiscount) |
+
+
+## Shared Owned Entities
+
+### AppliedDiscount
+
+**Description:** Order Applied Discount owned entity  
+**Namespace:** Vendr.Core.Models  
+**Assembly:** Vendr.Core
+
+#### Properties
+
+| Type | Name | Description |
+| ---- | ---- | ----------- |
+| `Guid` | `DiscountId` | The ID of the Discount |
+| `string` | `DiscountName` | The Name of the Discount |
+| `Price` | `OriginalPrice` | The original Price of the Discount |
+| `Price` | `Price` | The Price of the Discount after discount prices have been capped |
 
 <div class="mb-48"></div>
 
