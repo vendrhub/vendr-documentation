@@ -231,6 +231,62 @@ void DeleteOrder(Order entity, bool revertFinalized);
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+## Order Number Generator
+
+### IOrderNumberGenerator
+
+**Description:** Interface of the Vendr Order Number Generator    
+**Namespace:** Vendr.Core.Generators  
+**Assembly:** Vendr.Core
+
+#### GenerateCartNumber
+Generate a Cart Number
+
+***Signature:***
+
+````csharp
+string GenerateCartNumber(Guid storeId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store associated with the Order  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `string` | A unique Cart Number  |
+
+#### GenerateOrderNumber
+Generate a Order Number
+
+***Signature:***
+
+````csharp
+string GenerateOrderNumber(Guid storeId);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store associated with the Order  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `string` | A unique Order Number  |
+
+### DateHashOrderNumberGenerator
+
+**Description:** Default implementation of the [Vendr Order Number Generator](#iordernumbergenerator) using a date hash for the numbers  
+**Namespace:** Vendr.Core.Generators  
+**Assembly:** Vendr.Core
+
 <div class="mb-48"></div>
 
 ## Order Entities
