@@ -144,6 +144,8 @@ void SortTaxClasses(Guid[] sortedIds);
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+<div class="mb-48"></div>
+
 ## Tax Source Factory
 
 ### ITaxSourceFactory
