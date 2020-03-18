@@ -263,7 +263,7 @@ string GenerateCartNumber(Guid storeId);
 | `string` | A unique Cart Number  |
 
 #### GenerateOrderNumber
-Generate a Order Number
+Generate an Order Number
 
 ***Signature:***
 
