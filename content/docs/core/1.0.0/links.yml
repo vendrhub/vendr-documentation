@@ -86,6 +86,8 @@
       link: /reference/orders-and-order-lines/
     - title: Products
       link: /reference/products/
+    - title: Discounts
+      link: /reference/discounts/
     - title: Sessions
       link: /reference/sessions/
     - title: Pipelines

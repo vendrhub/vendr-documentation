@@ -7,7 +7,7 @@ description: Strongly typed Settings objects in Vendr, the eCommerce solution fo
 
 There are a number of places in Vendr where you can uses Settings Objects to pass configuration to a Provider, such as Discount Rule Providers, Reward Providers and Payment Providers.
 
-The settings model have a number of responsibilities.
+The settings objects have a number of responsibilities.
 
 * **Typed Settings Model** - The type represents a strongly typed settings model the given Provider accepts. Any stored settings in the database will be deserialized to this type before being passed to the Provider for processing. This provides simple, strongly typed access to the relevant configuration settings.
 
