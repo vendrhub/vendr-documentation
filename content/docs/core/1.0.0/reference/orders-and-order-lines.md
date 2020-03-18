@@ -231,6 +231,8 @@ void DeleteOrder(Order entity, bool revertFinalized);
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+<div class="mb-48"></div>
+
 ## Order Number Generator
 
 ### IOrderNumberGenerator
