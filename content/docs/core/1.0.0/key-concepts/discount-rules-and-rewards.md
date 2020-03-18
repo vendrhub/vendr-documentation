@@ -32,7 +32,7 @@ public class MyCustomOrderRuleProvider : OrderDiscountRuleProviderBase<MyCustomO
     }
 }
 
-public class MyCustomOrderRuleProviderSettings : IDiscountRuleProviderSettings
+public class MyCustomOrderRuleProviderSettings
 {
     [DiscountRuleProviderSetting(Key = "priceType",
         Name = "Price Type",
@@ -81,7 +81,7 @@ public class MyCustomOrderLineRuleProvider : OrderLineDiscountRuleProviderBase<M
     }
 }
 
-public class MyCustomOrderLineRuleProviderSettings : IDiscountRuleProviderSettings
+public class MyCustomOrderLineRuleProviderSettings
 {
     [DiscountRuleProviderSetting(Key = "priceType",
         Name = "Price Type",
@@ -117,7 +117,7 @@ public class MyDiscountRewardProvider : DiscountRewardProviderBase<MyDiscountRew
     }
 }
 
-public class MyDiscountRewardProviderSettings : IDiscountRewardProviderSettings
+public class MyDiscountRewardProviderSettings
 {
     [DiscountRewardProviderSetting(Key = "priceType",
         Name = "Price Type",
@@ -133,7 +133,7 @@ All Discount Reward Providers inherit from a base class `DiscountRewardProviderB
 
 <message-box type="info" heading="More on Settings Objects">
 
-See the [Settings Objects](#settings-objects) section below for more information on Settings objects.
+See the [Settings Objects](../settings-objects/) documentation for more information on Settings objects.
 
 </message-box>
 
@@ -159,38 +159,11 @@ result.SubtotalPriceDiscounts.Add(new AppliedDiscount(ctx.Discount, price));
 
 ### Settings Objects
 
-Both Discount Rule Providers and Reward Providers require a Settings model to be defined in their implementation. The settings model has a number of responsibilities.
+<message-box type="info" heading="More on Settings Objects">
 
-* **Typed Settings Model** - Defines the strongly typed settings model the given Provider accepts. Any stored settings in the database will be deserialized to this type before being passed to the Provider for processing. This provides simple, strongly typed access to the relevant configuration settings.
+See the [Settings Objects](../settings-objects/) documentation for more information on Settings objects.
 
-* **UI Scaffold** - Defines meta data on settings properties via either `DiscountRuleProviderSettingAttribute` or `DiscountRewardProviderSettingAttribute`, depending on the Provider type, which is used to dynamically build the AngularJS based UI for the given Providers configuration. See the [UI Scaffolding](#ui-scaffolding) section below for more information on UI Scaffolding.
 </message-box>
-
-* **Javascript Settings Model** - Defines the Javascript settings model passed to the Provider editor UI, using either the settings Property name as the object property key, or using the `key` property of the Setting Attribute declared on the given Property.
-
-#### UI Scaffolding
-
-An important element of the Settings object is UI Scaffolding. UI Scaffolding is where Vendr reads a series of Settings Attributes defined on your Settings object properties in order to dynamically build a User Interface for that Providers settings.
-
-````csharp
-public class MyDiscountRewardProviderSettings : IDiscountRewardProviderSettings
-{
-    [DiscountRewardProviderSetting(Key = "nodeId",
-        Name = "Product Node",
-        Description = "The product to discount the price of",
-        View = "contentpicker",
-        Config = "{ startNodeId: -1, multiPicker: false, idType: 'udi' }")]
-    public Udi NodeId { get; set; }
-
-    ...
-}
-````
-
-Attributes define a property `key`, `name`, `description` to display in the UI as well as an optional `view` and `config` option to define the Umbraco property editor to use to edit the given property with. If no view is defined, one will attempt to automatically be chosen based on the properties value type.
-
-An example of a generated UI built from these properties would look something like this:
-
-![Discount Rule UI](~/assets/images/screenshots/discount_rule_ui.png)
 
 ### Label Views
 

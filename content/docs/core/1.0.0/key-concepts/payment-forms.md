@@ -11,7 +11,7 @@ The role of the Payment Form is to perform two tasks:
 
 * **Redirect to the Payment Gateway** - The configured Payment Provider will return a Form that contains all the relevant information the Payment Gateway needs, along with the Forms `action` attribute being set to post to a page on the Payment Gateways server, starting the payment capture process.
 
-<message-box type="info" heading="Important">
+<message-box type="warn" heading="Important">
 
 An Orders Order Number is assigned at the point of the Payment Form being rendered. This is to ensure that an Order has an Order Number prior to redirecting to the Payment Gateway, so that when the customer is redirected to the Confirmation page, there is always an Order number to display
 
@@ -34,7 +34,7 @@ An example of displaying a Payment Form would look something like this:
 
 Similar in concept to Umbraco's own `Html.BeginUmbracoForm()` method, the Payment Form is rendered using a `using` statement to wrap any additional form elements you wish to add to add, such as a submit button. 
 
-<message-box type="info" heading="Important">
+<message-box type="warn" heading="Important">
 
 It's important to know that the Form by default doesn't contain any inputs to actually submit the Form. These must be supplied by the implementor. It is designed this way to ensure that the form will work with the design of the Site in question, so developers can provide any kind of button they wish.
 
