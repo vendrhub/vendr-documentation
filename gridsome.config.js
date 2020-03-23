@@ -23,6 +23,7 @@ const postcssPlugins = [
 // Export
 module.exports = {
   siteName: 'Vendr Documentation',
+  siteDescription: 'eCommerce for Umbraco v8+ with Simplicity at Heart',
   siteUrl: siteUrl,
   pathPrefix: pathPrefix,
   outputDir: outputDir,
