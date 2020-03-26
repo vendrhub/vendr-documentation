@@ -3,3 +3,13 @@
     @apply w-full max-w-full;
     max-width: 100% !important;
 }
+
+.algolia-autocomplete .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion.suggestion-layout-simple, 
+.algolia-autocomplete .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion:not(.suggestion-layout-simple) 
+.algolia-docsearch-suggestion--content {
+    background-color: rgba(69,142,225,.15) !important;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+    background: rgba(143,187,237,.15) !important;
+}
