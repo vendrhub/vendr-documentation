@@ -114,6 +114,7 @@ export default {
           const routepath = pathname.replace('/docs', '')
           this.$router.push({ path: routepath, hash: hash })
           input.setVal('')
+          event.target.blur();
         },
         debug: false // Set debug to true if you want to inspect the dropdown
       });
