@@ -2,6 +2,7 @@
 .ds-dropdown-menu {
     @apply w-full max-w-full;
     max-width: 100% !important;
+    min-width: 0% !important;
 }
 
 .algolia-autocomplete .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion.suggestion-layout-simple, 
