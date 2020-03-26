@@ -112,7 +112,7 @@ export default {
         handleSelected: (input, event, suggestion) => {
           const { pathname, hash } = new URL(suggestion.url)
           const routepath = pathname.replace('/docs', '')
-          this.$router.push({ path: `${routepath}${hash}` })
+          this.$router.push({ path: routepath, hash: hash })
           input.setVal('')
         },
         debug: false // Set debug to true if you want to inspect the dropdown
