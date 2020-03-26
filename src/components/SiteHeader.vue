@@ -70,6 +70,7 @@ query {
         }
     },
     metadata {
+      pathPrefix,
       githubUrl,
       umbracoUrl,
       twitterUrl
@@ -78,12 +79,17 @@ query {
 </static-query>
 
 <script>
+import 'docsearch.js/dist/cdn/docsearch.min.css'
+import 'docsearch.js/dist/cdn/docsearch.min.js'
+
 import Mousetrap from 'mousetrap'
 import VendrLogo from '../assets/images/vendr-logo.svg'
 import VendrV from '../assets/images/vendr-v.svg'
 import GithubLogo from '../assets/images/github-logo.svg'
 import OurUmbracoLogo from '../assets/images/our-umbraco-logo.svg'
 import TwitterLogo from '../assets/images/twitter-logo.svg'
+
+import docsearch from 'docsearch.js'
 
 export default {
     components: { VendrLogo, VendrV, GithubLogo, OurUmbracoLogo, TwitterLogo },
@@ -97,6 +103,22 @@ export default {
         e.preventDefault()
         self.$('#docsearch').trigger("focus")
       })
+
+      docsearch({
+        apiKey: 'fb7197cd2b826ca6f0dc2b63f897a2c3',
+        indexName: 'vendr',
+        inputSelector: '#docsearch',
+        autocompleteOptions: {
+
+        },
+        handleSelected: (input, event, suggestion) => {
+          const { pathname, hash } = new URL(suggestion.url)
+          const routepath = pathname.replace('/docs', '')
+          this.$router.push({ path: `${routepath}${hash}` })
+          input.setVal('')
+        },
+        debug: false // Set debug to true if you want to inspect the dropdown
+      });
 
     },
     methods : {

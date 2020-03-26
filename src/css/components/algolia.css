@@ -1,0 +1,5 @@
+.algolia-autocomplete,
+.ds-dropdown-menu {
+    @apply w-full max-w-full;
+    max-width: 100% !important;
+}

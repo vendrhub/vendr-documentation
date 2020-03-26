@@ -25,6 +25,7 @@
 @import "css/components/onthispage.css";
 @import "css/components/messagebox.css";
 @import "css/components/tiles.css";
+@import "css/components/algolia.css";
 
 @tailwind utilities;
 
