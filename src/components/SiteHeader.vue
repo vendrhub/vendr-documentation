@@ -80,7 +80,6 @@ query {
 
 <script>
 import 'docsearch.js/dist/cdn/docsearch.min.css'
-import 'docsearch.js/dist/cdn/docsearch.min.js'
 
 import Mousetrap from 'mousetrap'
 import VendrLogo from '../assets/images/vendr-logo.svg'
