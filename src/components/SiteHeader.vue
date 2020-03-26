@@ -89,8 +89,6 @@ import GithubLogo from '../assets/images/github-logo.svg'
 import OurUmbracoLogo from '../assets/images/our-umbraco-logo.svg'
 import TwitterLogo from '../assets/images/twitter-logo.svg'
 
-import docsearch from 'docsearch.js'
-
 export default {
     components: { VendrLogo, VendrV, GithubLogo, OurUmbracoLogo, TwitterLogo },
     mounted () {
@@ -98,13 +96,14 @@ export default {
       var self = this;
 
       this.$ = require('cash-dom')
+      this.docsearch = require('docsearch.js')
 
       Mousetrap.bind('/', function (e) {
         e.preventDefault()
         self.$('#docsearch').trigger("focus")
       })
 
-      docsearch({
+      this.docsearch({
         apiKey: 'fb7197cd2b826ca6f0dc2b63f897a2c3',
         indexName: 'vendr',
         inputSelector: '#docsearch',
