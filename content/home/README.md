@@ -55,7 +55,7 @@ If you require further assistance, or if you are having a particular issue you c
 
 <h2 class="mb-10 ">About Vendr</h2>
 
-Vendr is the eCommerce solution for Umbraco v8+ created by Outfield Digital, the team behind Tea Commerce for Umbraco v7. Vendr is the successor to Tea Commerce and follows much of the same principals but has been vastly improved for use on Umbraco v8+.
+Vendr is the eCommerce solution for Umbraco v8+ created by Outfield Digital, the team behind Tea Commerce for Umbraco v7. Vendr is the successor to Tea Commerce and follows much of the same principles but has been vastly improved for use on Umbraco v8+.
 
 </div>
 
