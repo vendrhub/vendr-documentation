@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://vendr.net" target="_blank"><img src="static/assets/images/logo.png" alt="Vendr" width="250"/></a>
+<a href="https://vendr.net" target="_blank"><img src="static/assets/images/vendr.png" alt="Vendr" width="250"/></a>
 
 # Vendr Documentation
 
