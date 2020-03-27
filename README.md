@@ -10,7 +10,7 @@ The live version of these docs can be found at [https://vendr.net/docs/](https:/
 </div>
 
 <a href="https://vendr.net/docs/" target="_blank">
-    <img src="static/assets/images/vendr-docs-home.png" alt="Screenshot" />
+    <img src="static/assets/images/vendr-docs-home.png?v=1" alt="Screenshot" style />
 </a>
 
 ## Contributing
