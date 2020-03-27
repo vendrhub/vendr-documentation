@@ -85,4 +85,4 @@ If your changes affect multiple versions, you should update the files in each ve
 
 ## License
 
-This project is licensed under the terms of the [MIT license](LICENSE).
+This project is licensed under the terms of the [MIT license](LICENSE.md).
