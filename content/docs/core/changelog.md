@@ -3,8 +3,23 @@ title: Changelog
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-## v1.0.0 (2020-03-31) 
-Initial release Vendr
+## Unreleased 
+Patch fix release with minor fixes found post launch
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed stock input field not allowing a stock level greater than 100
+* Fixed stock input field rounding decimal stock levels on save
+
+
+</changelog-group>
+</changelog>
+
+## v1.0.0 (2020-03-30) 
+Initial Vendr release
 --- 
 
 <changelog>
