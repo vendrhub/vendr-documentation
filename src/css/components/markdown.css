@@ -151,9 +151,7 @@
     @apply bg-gray-100;
 }
 
-.markdown table td:last-child {
-    width: 100%;
-}
+
 
 
 @screen md {
