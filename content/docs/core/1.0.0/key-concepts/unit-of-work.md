@@ -7,7 +7,7 @@ When working with Vendr's API it is important that data integrity is maintained 
 
 ## Creating a Unit of Work
 
-To create a unit of work will require access to Vendr's `IUnitOfWorkProvider` which can be [injected into your Controller directly](../dependency-injection/), or can also be accessed via the `UoW` property on the `IVenderApi` helper.
+To create a unit of work will require access to Vendr's `IUnitOfWorkProvider` which can be [injected into your Controller directly](../dependency-injection/), or can also be accessed via the `UoW` property on the `IVendrApi` helper.
 
 Once you have access to either of these entry points, you can define a Unit of Work as follows
 

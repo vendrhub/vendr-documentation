@@ -82,9 +82,9 @@ namespace MyProject.Web.Controllers
 {
     public class HomeController : RenderMvcController
     {
-        private readonly IVenderApi _vendrApi;
+        private readonly IVendrApi _vendrApi;
 
-        public HomeController(IVenderApi vendrApi)
+        public HomeController(IVendrApi vendrApi)
         {
             _vendrApi = vendrApi;
         }
