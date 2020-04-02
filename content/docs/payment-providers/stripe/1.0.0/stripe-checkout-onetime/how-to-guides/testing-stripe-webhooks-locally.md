@@ -21,7 +21,7 @@ To create the batch file, open notepad and enter the following:
 C:\PROGRA~1\ngrok\ngrok.exe http -host-header=rewrite localhost:61191
 ````
 
-You'll want ot swap the local domain / port number at the end according to your sites configuration, but with the contents above, save the file as `ngrok.bat` in the root of your web project. Now, you can run the batch file at any time to launch ngrok and create a publicly accessible tunnel to your website.
+You'll want to swap the local domain / port number at the end according to your sites configuration, but with the contents above, save the file as `ngrok.bat` in the root of your web project. Now, you can run the batch file at any time to launch ngrok and create a publicly accessible tunnel to your website.
 
 ![ngrok](~/assets/images/screenshots/ngrok.png)
 
