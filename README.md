@@ -25,19 +25,27 @@ All contributions / contributors are expected to abide by our [Code of Conduct](
 
 * **Yarn** - [Yarn](https://yarnpkg.com/en/docs/install) is our prefered package installer so contributors should make sure Yarn has been installed globally on your machine
 
+* **Gridsome** - [Gridsome](https://gridsome.org/docs/#how-to-install) the Vendr documentation site is powered by Gridsome, a vuejs based static site generator.
+
 ### Getting Setup
 
 1. Fork this repository on GitHub.
 2. Clone your forked repository (not our original one) to your hard drive with git clone https://github.com/YOURUSERNAME/vendr-documentation.git
 3. Open the `vendr-documentation` directory
-4. Open a command window and start a local instance of the site via:
+4. If **Gridsome** is not installed, it can be installed via:
+
+````bash
+yarn global add @gridsome/cli
+````
+
+5. Open a command window and start a local instance of the site via:
 
 ````bash
 yarn install
 gridsome develop
 ````
 
-5. Launch http://localhost:8080 in a browser to view the site
+6. Launch http://localhost:8080 in a browser to view the site
 
 ### Preparing a Pull Request
 
