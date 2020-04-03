@@ -16,6 +16,13 @@ Patch fix release with minor fixes found post launch
 
 
 </changelog-group>
+<changelog-group category="Changed">  
+
+    
+* Updated all caches to use a `GetOrAddIfNotNull` method to ensure null entities don't end up in the internal cache
+
+
+</changelog-group>
 </changelog>
 
 ## v1.0.0 (2020-03-30) 
