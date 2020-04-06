@@ -50,6 +50,7 @@
     }
     .changelog tr td:first-child {
         @apply text-right pr-4 mb-0;
+        width: 1px;
     }
 }
 
