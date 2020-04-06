@@ -11,6 +11,7 @@ Patch fix release with minor fixes found post launch
 <changelog-group category="Fixed">  
 
     
+* Fixed wrong license URL displayed in installer
 * Fixed stock input field not allowing a stock level greater than 100
 * Fixed stock input field rounding decimal stock levels on save
 
