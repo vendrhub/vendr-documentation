@@ -27,14 +27,3 @@ Patch fix release with minor fixes found post launch
 
 ## v1.0.0 (2020-03-30) 
 Initial Vendr release
---- 
-
-<changelog>
-<changelog-group category="Added">  
-
-    
-* Added Vendr
-
-
-</changelog-group>
-</changelog>
