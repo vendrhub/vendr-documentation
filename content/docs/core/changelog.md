@@ -3,7 +3,7 @@ title: Changelog
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-## Unreleased 
+## v1.0.1 (2020-04-06) 
 Patch fix release with minor fixes found post launch
 --- 
 
