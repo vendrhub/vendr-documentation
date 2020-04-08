@@ -10,14 +10,15 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Added">  
 
     
-* Added ability to delete an order from the action menu
-* Added permission checks to all entity controller actions
+* Added ability to delete an order from the action menu.
+* Added permission checks to all entity controller actions.
 
 </changelog-group>
 <changelog-group category="Fixed">  
 
     
-* Fixed ability to delete orders
+* Fixed ability to delete orders.
+* Fixed issue with orders not finalizing if an error occurs sending emails. Email sending is now wrapped in a try catch that logs errors to the error log instead.
 
 
 </changelog-group>
@@ -31,9 +32,9 @@ Patch fix release with minor fixes found post launch
 <changelog-group category="Fixed">  
 
     
-* Fixed wrong license URL displayed in installer
-* Fixed stock input field not allowing a stock level greater than 100
-* Fixed stock input field rounding decimal stock levels on save
+* Fixed wrong license URL displayed in installer.
+* Fixed stock input field not allowing a stock level greater than 100.
+* Fixed stock input field rounding decimal stock levels on save.
 
 
 </changelog-group>
@@ -47,4 +48,4 @@ Patch fix release with minor fixes found post launch
 </changelog>
 
 ## v1.0.0 (2020-03-30) 
-Initial Vendr release
+Initial Vendr release.
