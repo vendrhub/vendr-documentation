@@ -1,7 +1,27 @@
 ---
 title: Changelog
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+description: Changelog for the Core Vendr product
 ---
+
+## Unreleased  
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added ability to delete an order from the action menu
+* Added permission checks to all entity controller actions
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+    
+* Fixed ability to delete orders
+
+
+</changelog-group>
+</changelog>
 
 ## v1.0.1 (2020-04-06) 
 Patch fix release with minor fixes found post launch
