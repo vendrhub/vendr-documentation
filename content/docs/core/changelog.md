@@ -35,6 +35,7 @@ Patch fix release with minor fixes found post launch
 * Fixed wrong license URL displayed in installer.
 * Fixed stock input field not allowing a stock level greater than 100.
 * Fixed stock input field rounding decimal stock levels on save.
+* Fixed bug in EmailTemplateService.SendEmail where it wasn't sending to the supplied To email address unless "Send to Customer" on the email template was checked. This setting now only applies if you call the SendEmail method version that accepts an Order. The signature with the explicit toEmailAddress parameter will always send to the provided email address.
 
 
 </changelog-group>
