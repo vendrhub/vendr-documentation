@@ -12,7 +12,6 @@ description: Changelog for the Core Vendr product
     
 * Added ability to delete an order from the action menu.
 * Added permission checks to all entity controller actions.
-* Fixed bug in EmailTemplateService.SendEmail where it wasn't sending to the supplied To email address unless "Send to Customer" on the email template was checked. This setting now only applies if you call the SendEmail method version that accepts an Order. The signature with the explicit toEmailAddress parameter will always send to the provided email address.
 
 
 </changelog-group>
@@ -21,6 +20,7 @@ description: Changelog for the Core Vendr product
     
 * Fixed ability to delete orders.
 * Fixed issue with orders not finalizing if an error occurs sending emails. Email sending is now wrapped in a try catch that logs errors to the error log instead.
+* Fixed bug in EmailTemplateService.SendEmail where it wasn't sending to the supplied To email address unless "Send to Customer" on the email template was checked. This setting now only applies if you call the SendEmail method version that accepts an Order. The signature with the explicit toEmailAddress parameter will always send to the provided email address.
 
 
 </changelog-group>
