@@ -3,7 +3,8 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## Unreleased  
+## v1.0.2 (2020-04-15)   
+Patch fix release with minor bug fixes / enhancements.
 --- 
 
 <changelog>
