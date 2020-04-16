@@ -3,8 +3,9 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.0.2 (2020-04-15)   
-Patch fix release with minor bug fixes / enhancements.
+## v1.0.2 
+**Date:** 2020-04-15  
+**Description:** Patch fix release with minor bug fixes / enhancements.
 --- 
 
 <changelog>
@@ -36,8 +37,9 @@ Patch fix release with minor bug fixes / enhancements.
 </changelog-group>
 </changelog>
 
-## v1.0.1 (2020-04-06) 
-Patch fix release with minor fixes found post launch.
+## v1.0.1 
+**Date:** 2020-04-06  
+**Description:** Patch fix release with minor fixes found post launch.
 --- 
 
 <changelog>
@@ -58,5 +60,6 @@ Patch fix release with minor fixes found post launch.
 </changelog-group>
 </changelog>
 
-## v1.0.0 (2020-03-30) 
-Initial Vendr release.
+## v1.0.0  
+**Date:** 2020-03-30  
+**Description:** Initial Vendr release.
