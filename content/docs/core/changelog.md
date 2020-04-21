@@ -3,6 +3,23 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.1.0 (Unreleased)
+**Date:** TBC  
+**Description:** Patch fix release with minor bug fixes / enhancements.
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added "Unlimited" checkbox to discount codes to make them unlimited ([#50](https://github.com/vendrhub/vendr/issues/50)).
+* Added basic filters to Order list ([#63](https://github.com/vendrhub/vendr/issues/63)).
+* Added "esc" key shortcut to Discount rule/rewards settings editor dialog ([#60](https://github.com/vendrhub/vendr/issues/60)).
+
+
+</changelog-group>
+</changelog>
+
 ## v1.0.2 
 **Date:** 2020-04-15  
 **Description:** Patch fix release with minor bug fixes / enhancements.
