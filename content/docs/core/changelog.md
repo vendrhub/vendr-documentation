@@ -12,9 +12,9 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Added">  
 
     
-* Added "Unlimited" checkbox to discount codes to make them unlimited ([#50](https://github.com/vendrhub/vendr/issues/50)).
-* Added basic filters to Order list ([#63](https://github.com/vendrhub/vendr/issues/63)).
-* Added "esc" key shortcut to Discount rule/rewards settings editor dialog ([#60](https://github.com/vendrhub/vendr/issues/60)).
+* Added "Unlimited" checkbox to discount codes to allow them to have unlimited usage ([#50](https://github.com/vendrhub/vendr/issues/50)).
+* Added basic Order/Payment Status filters to Order list ([#63](https://github.com/vendrhub/vendr/issues/63)).
+* Added "esc" key shortcut to close Discount rule/rewards settings editor dialog ([#60](https://github.com/vendrhub/vendr/issues/60)).
 
 
 </changelog-group>
