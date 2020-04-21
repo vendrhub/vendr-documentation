@@ -5,7 +5,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.0 (Unreleased)
 **Date:** TBC  
-**Description:** Patch fix release with minor bug fixes / enhancements.
+**Description:** Minor release with new features and some minor bug fixes / enhancements.
 --- 
 
 <changelog>
