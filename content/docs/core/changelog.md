@@ -20,8 +20,8 @@ description: Changelog for the Core Vendr product
 </changelog-group>
 </changelog>
 
-## v1.0.3 (Unreleased)
-**Date:** TBC  
+## v1.0.3 
+**Date:** 2020-04-24 
 **Description:** Patch fix release with minor bug fixes / enhancements.
 --- 
 
@@ -30,6 +30,7 @@ description: Changelog for the Core Vendr product
 
     
 * Added missing Product discount rule to discounts rule builder ([#76](https://github.com/vendrhub/vendr/issues/76)).
+* Added basic Order Line Amount Reward that applies to all Order Lines.
 
 
 </changelog-group>
@@ -37,6 +38,14 @@ description: Changelog for the Core Vendr product
 
     
 * Product prices now thaw when the last product of a type is removed from the cart ([#71](https://github.com/vendrhub/vendr/issues/71)).
+* Fixed YSOD when saving a property with a null value. Property is now removed if the value is null  ([#78](https://github.com/vendrhub/vendr/issues/78)).
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+    
+* Changed the name of the Products Order Line Amount Reward to Order Line (with Product) Amount Reward as it's more descriptive of it's purpose.
 
 
 </changelog-group>
