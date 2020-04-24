@@ -20,6 +20,28 @@ description: Changelog for the Core Vendr product
 </changelog-group>
 </changelog>
 
+## v1.0.3 (Unreleased)
+**Date:** TBC  
+**Description:** Patch fix release with minor bug fixes / enhancements.
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added missing Product discount rule to discounts rule builder ([#76](https://github.com/vendrhub/vendr/issues/76)).
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+    
+* Product prices now thaw when the last product of a type is removed from the cart ([#71](https://github.com/vendrhub/vendr/issues/71)).
+
+
+</changelog-group>
+</changelog>
+
 ## v1.0.2 
 **Date:** 2020-04-15  
 **Description:** Patch fix release with minor bug fixes / enhancements.
