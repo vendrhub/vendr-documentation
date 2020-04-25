@@ -21,7 +21,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.0.3 
-**Date:** 2020-04-24 
+**Date:** 2020-04-24  
 **Description:** Patch fix release with minor bug fixes / enhancements.
 --- 
 
