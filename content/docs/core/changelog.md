@@ -15,6 +15,30 @@ description: Changelog for the Core Vendr product
 * Added "Unlimited" checkbox to discount codes to allow them to have unlimited usage ([#50](https://github.com/vendrhub/vendr/issues/50)).
 * Added basic Order/Payment Status filters to Order list ([#63](https://github.com/vendrhub/vendr/issues/63)).
 * Added "esc" key shortcut to close Discount rule/rewards settings editor dialog ([#60](https://github.com/vendrhub/vendr/issues/60)).
+* Added feedback when copying order details to clipboard ([#22](https://github.com/vendrhub/vendr/issues/22)).
+* Added new store entity picker property editor to merge together all store entity pickers. Tax Class picker is now obsolete in favour of this new picker.
+* Added email templates for the default Confirmation / Error emails.
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+    
+* Fixed YSOD when accessing transaction info for an order where the Payment Provider no longer existed. Now perform null checks on data. ([#58](https://github.com/vendrhub/vendr/issues/58)).
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+    
+* Rule / Reward builders now support infinite editing when creating a rule so closing the editor via the 'close' link now goes back to the rule / reward picker. ([#81](https://github.com/vendrhub/vendr/issues/81)).
+
+
+</changelog-group>
+<changelog-group category="Removed">  
+
+    
+* Removed code for shipping method / payment method picker property editors in favour of the new store entity picker. These were never made public as actual property editors, as they were only used by the rule / reward builder so this won't be classed as a breaking change.
 
 
 </changelog-group>
