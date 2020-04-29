@@ -6,7 +6,7 @@
                 <g-link :to="packageInfo.path + '/versions/'" class="text-gray-400 text-base" v-if="docVersionInfo">v{{docVersionInfo.name}}</g-link>
             </span>
             <span class="block font-normal text-gray-400 text-xs -mt-6 pb-6" v-if="packageInfo.type != 'Product'">{{ packageInfo.id }}</span>
-            <span class="block -mt-2 pb-6"v-if="packageInfo.supportedBy == 'community'">
+            <span class="block -mt-2 pb-6" v-if="packageInfo.supportedBy == 'community'">
                 <contrib-badge class="relative tooltip--tl" />
             </span>
         </span>
