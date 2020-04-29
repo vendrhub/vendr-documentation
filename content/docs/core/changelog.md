@@ -12,7 +12,7 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Fixed">  
 
     
-* Fixed issue with v1.1.0 NuGet package not copying email templates to the view folder 🤦‍♂️.
+* Fixed issue with v1.1.0 NuGet package not copying email templates to the Views folder 🤦‍♂️.
 
 
 </changelog-group>
