@@ -24,9 +24,9 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Fixed">  
 
     
-* Fixed YSOD when accessing transaction info for an order where the Payment Provider no longer existed. Now perform null checks on data. ([#58](https://github.com/vendrhub/vendr/issues/58)).
+* Fixed YSOD when accessing transaction info for an order where the Payment Provider no longer existed. Now perform null checks on data ([#58](https://github.com/vendrhub/vendr/issues/58)).
 * Fixed issue with NuGet packages not copying content files on upgrade. Added a powershell script to perform the copy.
-* Fixed bug where customer details weren't being persisted into the dedicated fields in the database table (they are still present in the properties collection where they are referenced from 99% of the time).
+* Fixed bug where customer details weren't being persisted into the dedicated fields in the database table (they are still present in the properties collection where they are referenced from 99% of the time) ([#85](https://github.com/vendrhub/vendr/issues/85)).
 
 
 </changelog-group>
