@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.1.1  
+**Date:** 2020-04-29  
+**Description:** Patch fix release with minor bug fixes / enhancements.  
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed issue with v1.1.0 NuGet package not copying email templates to the view folder 🤦‍♂️.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.1.0 
 **Date:** 2020-04-29  
 **Description:** Minor release with new features and some minor bug fixes / enhancements.
