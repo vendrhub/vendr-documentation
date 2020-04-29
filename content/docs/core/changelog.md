@@ -3,6 +3,30 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.1.2 (Unreleased)  
+**Date:** TBC  
+**Description:** Patch fix release with minor bug fixes / enhancements.  
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed bug in product uniqueness logic throwing a YSOD if you add a product with no uniqueness properties after one that has is already in the cart ([#88](https://github.com/vendrhub/vendr/issues/88)).
+* Fixed build script formatting the patch release timestamp incorrectly.
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+    
+* Changed picker property editor 'add' buttons to use a button elements, rather than a link tags ([#86](https://github.com/vendrhub/vendr/issues/86)).
+* Changed table view 'create' buttons to use a button elements, rather than a link tags ([#87](https://github.com/vendrhub/vendr/issues/87)).
+
+
+</changelog-group>
+</changelog>
+
 ## v1.1.1  
 **Date:** 2020-04-29  
 **Description:** Patch fix release with minor bug fixes / enhancements.  
