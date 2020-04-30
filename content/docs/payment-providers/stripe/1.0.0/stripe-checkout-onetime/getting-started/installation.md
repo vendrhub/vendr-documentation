@@ -31,7 +31,7 @@ Alternatively, you can also find and install the NuGet package via the NuGet Pac
 
 <message-box type="warn" heading="Before you upgrade">
 
-Before upgrading, it is always advisable to take a complete backup of your site/database, just in case. Every effort has been made to ensure that Vendr will upgrade gracefully, but there is always a risk that something may not install as expected.
+Before upgrading, it is always advisable to take a complete backup of your site/database. Every effort has been made to ensure that Vendr will upgrade gracefully, but there is always a risk that something may not install as expected.
 
 </message-box>
 

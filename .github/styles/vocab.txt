@@ -3,6 +3,7 @@ Vendr
 Gridsome
 Vue
 PowerShell
+Namespace
 sublicense
 webhook
 https
