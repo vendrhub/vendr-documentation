@@ -11,7 +11,7 @@ In Vendr, there are two main types of events you can create handlers for, and th
 
 ## Validation events
 
-Validation events are events that fire just before a change is about to be made to an entity and allow you to inject your own logic to decide whether an action should be possible or not. We already have a number of validation handlers built in to maintain the consistency of your data, however Validation events allow you to extend this behavior with your own rules.
+Validation events are events that fire immediately before a change is about to be made to an entity and allow you to inject your own logic to decide whether an action should be possible or not. We already have a number of validation handlers built in to maintain the consistency of your data, however Validation events allow you to extend this behavior with your own rules.
 
 ### Example Validation event handler
 

@@ -12,6 +12,7 @@ HTML
 Unredeem
 sublicense
 webhook
+http
 https
 ngrok
 signup

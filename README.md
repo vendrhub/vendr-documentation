@@ -63,7 +63,7 @@ When writing documentation there are a number of principles that should be follo
 
 #### Gridsome
 
-The Vendr documentation site is powered by Gridsome, a Vue.js based static site generator. You should read up on the basics of [Gridscome](https://gridsome.org/docs/) to get an understanding of the available features.
+The Vendr documentation site is powered by Gridsome, a Vue.js based static site generator. You should read up on the basics of [Gridsome](https://gridsome.org/docs/) to get an understanding of the available features.
 
 #### Markdown
 
@@ -79,7 +79,7 @@ If you need to create any custom CSS styles not supported by Tailwind, these sho
 
 As we are using Gridsome, you can also create custom Vue components should you need to add some new functionality. Components should be placed in the `src/components` directory. To make this component globally accessible, you should register it in the `src/main.js` file using the `Vue.component('MyComponent', MyComponent)` syntax.
 
-You should check beforhand before creating any custom components to ensure the new behaviour is desired.
+You should check beforehand before creating any custom components to ensure the new behaviour is desired.
 
 #### Content Files
 
