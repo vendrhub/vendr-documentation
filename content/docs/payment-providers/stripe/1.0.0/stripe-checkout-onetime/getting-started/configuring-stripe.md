@@ -38,7 +38,7 @@ Once you have both sets of API keys, be sure to note them down as we will need t
 
 ## Webhook 
 
-In order for Stripe to notify Vendr of a successful transaction, Stripe makes use of webhook technology to directly send notifications of the changing statuses of a transaction. By using webhooks it ensures that the system will always be notified of these statuse changes, even if the customer decides not to return to the store once a transaction is complete.
+In order for Stripe to notify Vendr of a successful transaction, Stripe makes use of webhook technology to directly send notifications of the changing statuses of a transaction. By using webhooks it ensures that the system will always be notified of these status changes, even if the customer decides not to return to the store once a transaction is complete.
 
 To register a webhook, in the sidebar, click the **Developers** heading and then the **Webhooks** sub heading. On the right hand side, click the **Add Endpoint** button and enter the Vendr callback URL as follows (replacing the parameters in curly brackets with the corresponding values taken from your store):
 

@@ -29,7 +29,7 @@ In the payment method editor, configure the standard payment method settings as 
 | Live Secret Key | The live Stripe secret API key |
 | Live Public Key | The live Stripe public API key |
 | Live Webhook Signing Secret | The live Stripe webhook signing secret |
-| Capture | Toggle indicating whether to immediately capture the payment, or whether to just authorize the payment for later (manual) capturing |
+| Capture | Toggle indicating whether to immediately capture the payment, or whether to authorize the payment for later (manual) capturing |
 | Send Stripe Receipt | Toggle indicating whether to send a Stripe based receipt |
 | Test Mode | Toggle indicating whether this provider should run in test mode |
 

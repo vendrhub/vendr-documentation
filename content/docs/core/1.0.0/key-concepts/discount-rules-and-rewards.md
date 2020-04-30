@@ -11,9 +11,9 @@ Out of the box these builders come with a handful of the most common Rules / Rew
 
 There are two types of Discount Rules in Vendr and these are:
 
-* **Order Discount Rules** - Determine whether a discount should apply to an Order, returning a simple Fulfilled/Unfulfilled status whether the Rule logic has been met.
+* **Order Discount Rules** - Determine whether a discount should apply to an Order, returning a Fulfilled/Unfulfilled status whether the Rule logic has been met.
 
-* **Order Line Discount Rules** - Determine whether a discount should apply to an Order Line within an Order, returning a simple Fulfilled/Unfulfilled status whether the Rule logic has been met. Where the status is Fulfilled, a list of all Order Lines that are fulfilled by this Rule are also returned.
+* **Order Line Discount Rules** - Determine whether a discount should apply to an Order Line within an Order, returning a Fulfilled/Unfulfilled status whether the Rule logic has been met. Where the status is Fulfilled, a list of all Order Lines that are fulfilled by this Rule are also returned.
 
 ### Example Custom Order Discount Rule Provider
 
@@ -177,7 +177,7 @@ The Rule/Reward Label View should provide a user friendly summary of it's settin
 
 ![Discount Rule Label Views](~/assets/images/screenshots/discount_rule_builder_label_views.png)
 
-The Label View file will be passed a `model` property which will be a Javascript representation of the given Providers settings object.
+The Label View file will be passed a `model` property which will be a JavaScript representation of the given Providers settings object.
 
 ````html
 <span ng-if="model.priceType">Order {{ model.priceType | vendrSplitCamelCase }} Discount</span>

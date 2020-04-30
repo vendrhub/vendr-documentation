@@ -4,15 +4,5 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 ---
 
 ## Unreleased 
-Initial release of the Vendr Checkout Package
---- 
-
-<changelog>
-<changelog-group category="Added">  
-
-    
-* Added Vendr Checkout Package
-
-
-</changelog-group>
-</changelog>
+**Date:** TBC  
+**Description:** Initial release of the Vendr Checkout Package  

@@ -5,7 +5,7 @@ description: Performing sequential tasks with Pipelines in Vendr, the eCommerce 
 
 Pipelines are a Vendr feature that allow a series of tasks to be performed in a set sequence with the input of a given task being the output of the preceding task. In this way it allows an overall result to be built up as an input is passed through these individual tasks, rather than being calculated in one go via one larger task.
 
-The advantage of using a Pipeline is that it makes it much easier to insert additional steps into the process as pipeline tasks can easily be added or removed from the pipeline sequence.
+The advantage of using a Pipeline is that it makes it much easier to insert additional steps into the process as pipeline tasks can be added or removed from the pipeline sequence.
 
 How this benefits Vendr developers is that where we make use of Pipelines for certain tasks, it allows an additional point at which developers can interject some custom logic, tweaking how Vendr works. For example, an additional task could be injected into the `CalculateOrderPipeline` to alter how an Order is calculated, or a task could be injected into the `EmailSendPipeline` to add a dynamic attachment to an email.
 

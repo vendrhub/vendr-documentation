@@ -422,13 +422,13 @@ void ClearDefaultPaymentMethod(Guid storeId);
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
 
-#### GetDefaultShipppingCountry
-Get the default Shippping Country of the current Session
+#### GetDefaultShippingCountry
+Get the default Shipping Country of the current Session
 
 ***Signature:***
 
 ````csharp
-CountryReadOnly GetDefaultShipppingCountry(Guid storeId);
+CountryReadOnly GetDefaultShippingCountry(Guid storeId);
 ````
 
 ***Parameters:***
@@ -441,15 +441,15 @@ CountryReadOnly GetDefaultShipppingCountry(Guid storeId);
 
 | Type | Description |
 | ---- | ----------- |
-| `CountryReadOnly` | The default Shippping Country of the current Session |
+| `CountryReadOnly` | The default Shipping Country of the current Session |
 
-#### SetDefaultShipppingCountry
-Set the default Shippping Country of the current Session
+#### SetDefaultShippingCountry
+Set the default Shipping Country of the current Session
 
 ***Signature:***
 
 ````csharp
-void SetDefaultShipppingCountry(Guid storeId, CountryReadOnly country, bool applyToCurrentOrder = false);
+void SetDefaultShippingCountry(Guid storeId, CountryReadOnly country, bool applyToCurrentOrder = false);
 ````
 
 ***Parameters:***
@@ -457,7 +457,7 @@ void SetDefaultShipppingCountry(Guid storeId, CountryReadOnly country, bool appl
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
-| `CountryReadOnly` | `country` | The default Shippping Country to set the current Session to |
+| `CountryReadOnly` | `country` | The default Shipping Country to set the current Session to |
 | `bool` | `applyToCurrentOrder` | Flag indicating whether to apply to change to the current Order of the Session |
 
 ---
@@ -465,7 +465,7 @@ void SetDefaultShipppingCountry(Guid storeId, CountryReadOnly country, bool appl
 ***Signature:***
 
 ````csharp
-void SetDefaultShipppingCountry(Guid storeId, Guid countryId, bool applyToCurrentOrder = false);
+void SetDefaultShippingCountry(Guid storeId, Guid countryId, bool applyToCurrentOrder = false);
 ````
 
 ***Parameters:***
@@ -473,16 +473,16 @@ void SetDefaultShipppingCountry(Guid storeId, Guid countryId, bool applyToCurren
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
-| `Guid` | `countryId` | The ID of the default Shippping Country to set the current Session to |
+| `Guid` | `countryId` | The ID of the default Shipping Country to set the current Session to |
 | `bool` | `applyToCurrentOrder` | Flag indicating whether to apply to change to the current Order of the Session |
 
-#### ClearDefaultShipppingCountry
-Clear the default ShipppingCountry of the current Session
+#### ClearDefaultShippingCountry
+Clear the default ShippingCountry of the current Session
 
 ***Signature:***
 
 ````csharp
-void ClearDefaultShipppingCountry(Guid storeId);
+void ClearDefaultShippingCountry(Guid storeId);
 ````
 
 ***Parameters:***
@@ -491,13 +491,13 @@ void ClearDefaultShipppingCountry(Guid storeId);
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
 
-#### GetDefaultShipppingRegion
-Get the default Shippping Region of the current Session
+#### GetDefaultShippingRegion
+Get the default Shipping Region of the current Session
 
 ***Signature:***
 
 ````csharp
-RegionReadOnly GetDefaultShipppingRegion(Guid storeId);
+RegionReadOnly GetDefaultShippingRegion(Guid storeId);
 ````
 
 ***Parameters:***
@@ -510,15 +510,15 @@ RegionReadOnly GetDefaultShipppingRegion(Guid storeId);
 
 | Type | Description |
 | ---- | ----------- |
-| `RegionReadOnly` | The default Shippping Region of the current Session |
+| `RegionReadOnly` | The default Shipping Region of the current Session |
 
-#### SetDefaultShipppingRegion
-Set the default Shippping Region of the current Session
+#### SetDefaultShippingRegion
+Set the default Shipping Region of the current Session
 
 ***Signature:***
 
 ````csharp
-void SetDefaultShipppingRegion(Guid storeId, RegionReadOnly region, bool applyToCurrentOrder = false);
+void SetDefaultShippingRegion(Guid storeId, RegionReadOnly region, bool applyToCurrentOrder = false);
 ````
 
 ***Parameters:***
@@ -526,7 +526,7 @@ void SetDefaultShipppingRegion(Guid storeId, RegionReadOnly region, bool applyTo
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
-| `RegionReadOnly` | `region` | The default Shippping Region to set the current Session to |
+| `RegionReadOnly` | `region` | The default Shipping Region to set the current Session to |
 | `bool` | `applyToCurrentOrder` | Flag indicating whether to apply to change to the current Order of the Session |
 
 ---
@@ -534,7 +534,7 @@ void SetDefaultShipppingRegion(Guid storeId, RegionReadOnly region, bool applyTo
 ***Signature:***
 
 ````csharp
-void SetDefaultShipppingRegion(Guid storeId, Guid regionId, bool applyToCurrentOrder = false);
+void SetDefaultShippingRegion(Guid storeId, Guid regionId, bool applyToCurrentOrder = false);
 ````
 
 ***Parameters:***
@@ -542,16 +542,16 @@ void SetDefaultShipppingRegion(Guid storeId, Guid regionId, bool applyToCurrentO
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
-| `Guid` | `regionId` | The ID of the default Shippping Region to set the current Session to |
+| `Guid` | `regionId` | The ID of the default Shipping Region to set the current Session to |
 | `bool` | `applyToCurrentOrder` | Flag indicating whether to apply to change to the current Order of the Session |
 
-#### ClearDefaultShipppingRegion
-Clear the default ShipppingRegion of the current Session
+#### ClearDefaultShippingRegion
+Clear the default ShippingRegion of the current Session
 
 ***Signature:***
 
 ````csharp
-void ClearDefaultShipppingRegion(Guid storeId);
+void ClearDefaultShippingRegion(Guid storeId);
 ````
 
 ***Parameters:***
@@ -560,13 +560,13 @@ void ClearDefaultShipppingRegion(Guid storeId);
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
 
-#### GetDefaultShipppingMethod
-Get the default Shippping Method of the current Session
+#### GetDefaultShippingMethod
+Get the default Shipping Method of the current Session
 
 ***Signature:***
 
 ````csharp
-ShipppingMethodReadOnly GetDefaultShipppingMethod(Guid storeId);
+ShippingMethodReadOnly GetDefaultShippingMethod(Guid storeId);
 ````
 
 ***Parameters:***
@@ -579,15 +579,15 @@ ShipppingMethodReadOnly GetDefaultShipppingMethod(Guid storeId);
 
 | Type | Description |
 | ---- | ----------- |
-| `ShipppingMethodReadOnly` | The default Shippping Method of the current Session |
+| `ShippingMethodReadOnly` | The default Shipping Method of the current Session |
 
-#### SetDefaultShipppingMethod
-Set the default Shippping Method of the current Session
+#### SetDefaultShippingMethod
+Set the default Shipping Method of the current Session
 
 ***Signature:***
 
 ````csharp
-void SetDefaultShipppingMethod(Guid storeId, ShipppingMethodReadOnly shippingMethod, bool applyToCurrentOrder = false);
+void SetDefaultShippingMethod(Guid storeId, ShippingMethodReadOnly shippingMethod, bool applyToCurrentOrder = false);
 ````
 
 ***Parameters:***
@@ -595,7 +595,7 @@ void SetDefaultShipppingMethod(Guid storeId, ShipppingMethodReadOnly shippingMet
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
-| `ShipppingMethodReadOnly` | `shippingMethod` | The default Shippping Method to set the current Session to |
+| `ShippingMethodReadOnly` | `shippingMethod` | The default Shipping Method to set the current Session to |
 | `bool` | `applyToCurrentOrder` | Flag indicating whether to apply to change to the current Order of the Session |
 
 ---
@@ -603,7 +603,7 @@ void SetDefaultShipppingMethod(Guid storeId, ShipppingMethodReadOnly shippingMet
 ***Signature:***
 
 ````csharp
-void SetDefaultShipppingMethod(Guid storeId, Guid shippingMethodId, bool applyToCurrentOrder = false);
+void SetDefaultShippingMethod(Guid storeId, Guid shippingMethodId, bool applyToCurrentOrder = false);
 ````
 
 ***Parameters:***
@@ -611,16 +611,16 @@ void SetDefaultShipppingMethod(Guid storeId, Guid shippingMethodId, bool applyTo
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid` | `storeId` | The ID of the Store the Session belongs to |
-| `Guid` | `shippingMethodId` | The ID of the default Shippping Method to set the current Session to |
+| `Guid` | `shippingMethodId` | The ID of the default Shipping Method to set the current Session to |
 | `bool` | `applyToCurrentOrder` | Flag indicating whether to apply to change to the current Order of the Session |
 
-#### ClearDefaultShipppingMethod
-Clear the default ShipppingMethod of the current Session
+#### ClearDefaultShippingMethod
+Clear the default ShippingMethod of the current Session
 
 ***Signature:***
 
 ````csharp
-void ClearDefaultShipppingMethod(Guid storeId);
+void ClearDefaultShippingMethod(Guid storeId);
 ````
 
 ***Parameters:***
