@@ -29,11 +29,11 @@ order.RemoveProperty("propertyAlias");
 
 ````
 
- Property values can either be a simple `string`, or a Vendr `PropertyValue` which allows you define a value as being Server Side Only meaning it won't returned via non-server APIs or Read Only meaning it can't be updated once set.
+ Property values can either be a `string`, or a Vendr `PropertyValue` which allows you define a value as being Server Side Only meaning it won't returned via non-server APIs or Read Only meaning it can't be updated once set.
 
  
 ````csharp
-// Set a simple string property
+// Set a string property
 order.SetProperty("propertyAlias", "Property Value");
 
 // Set a PropertyValue property as Read Only
@@ -43,7 +43,7 @@ order.SetProperty("propertyAlias", new PropertyValue("Property Value", isReadOnl
 
 ## System Properties
 
-When there are occasions that Vendr needs to capture some simple information about an Order / Order Line, it too uses the Properties collection to store this information. It's useful to know what these properties are as you should avoid using these system related property keys.
+When there are occasions that Vendr needs to capture some information about an Order / Order Line, it too uses the Properties collection to store this information. It's useful to know what these properties are as you should avoid using these system related property keys.
 
 ### Order System Properties
 
@@ -67,11 +67,11 @@ For Order Lines, as well as the ability to set Properties manually as outlined a
 
 When set to a comma separated list of property aliases, whenever a Product is added to the Order containing those properties, those property values will automatically be copied to the Order Lines Properties collection.
 
-This is useful for occasions such as rendering out the Order Lines on a Cart page and you have some Product information you also want to display. By copying it to the Order Lines Properties collection, you have instant access to those properties without need to to re-fetch the original Product entity to look them up.
+This is useful for occasions such as rendering out the Order Lines on a Cart page and you have some Product information you also want to display. By copying it to the Order Lines Properties collection, you have instant access to those properties without need to re-fetch the original Product entity to look them up.
 
 ## Product Uniqueness Properties
 
-Another use of the Properties collection for an Order Line is that of identifying product "Uniqueness". Product uniqueness is how Vendr identifies whether a Product being added to a Cart should be considered as Quantity increase on an existing Order Line, or whether it should be considered as a unique product combination and so should be given an Order Line of it's own. A good example of this when you have configurable products, such as customizable T-Shirt designs, and so each unique configuration should be considered as it's own Order Line so that you can more easily manage the specific configurations.
+Another use of the Properties collection for an Order Line is that of identifying product "Uniqueness". Product uniqueness is how Vendr identifies whether a Product being added to a Cart should be considered as Quantity increase on an existing Order Line, or whether it should be considered as a unique product combination and so should be given an Order Line of it's own. A good example of this when you have configurable products, such as customizable T-Shirt designs, and so each unique configuration should be considered as it's own Order Line so that you can manage the specific configurations.
 
 Product uniqueness is configured via the **Product Uniqueness Property Aliases** field on the Store setting screen.
 
