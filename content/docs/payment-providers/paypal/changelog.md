@@ -3,7 +3,9 @@ title: Changelog
 description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## v1.0.1 (2020-04-09) 
+## v1.0.1  
+**Date:** 2020-04-09  
+**Description:** Change of PayPal settings.
 --- 
 
 <changelog>
@@ -16,5 +18,6 @@ description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce 
 </changelog-group>
 </changelog>
 
-## v1.0.0 (2020-03-30) 
-Initial Vendr PayPal Payment Provider release.
+## v1.0.0  
+**Date:** 2020-03-30  
+**Description:** Initial Vendr PayPal Payment Provider release.
