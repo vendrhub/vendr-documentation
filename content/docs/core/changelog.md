@@ -14,6 +14,7 @@ description: Changelog for the Core Vendr product
     
 * Fixed bug in product uniqueness logic throwing a YSOD if you add a product with no uniqueness properties after one that has is already in the cart ([#88](https://github.com/vendrhub/vendr/issues/88)).
 * Fixed build script formatting the patch release timestamp incorrectly.
+* Fixed YSOD when removing items from a cart and using SQL CE. This was due to a SQL statement that doesn't work on SQL CE. Now updated to work across the board ([#89](https://github.com/vendrhub/vendr/issues/89)).
 
 
 </changelog-group>
