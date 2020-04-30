@@ -1,4 +1,4 @@
-id: Vendr.PaymentProviders.Reepay
+id: Vendr.Contrib.PaymentProviders.Reepay
 name: Reepay
 logo: reepay.svg
 type: PaymentProvider
