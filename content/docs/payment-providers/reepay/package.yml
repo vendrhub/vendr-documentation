@@ -1,6 +1,6 @@
 id: Vendr.PaymentProviders.Reepay
 name: Reepay
-logo: reepay.png
+logo: reepay.svg
 type: PaymentProvider
 supportedBy: core
 
