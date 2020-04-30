@@ -2,6 +2,9 @@ Umbraco
 Vendr
 Gridsome
 Vue
+PowerShell
 sublicense
 webhook
 https
+ngrok
+signup

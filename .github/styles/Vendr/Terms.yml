@@ -7,3 +7,4 @@ swap:
   backoffice: back-office
   app_plugins: App_Plugins
   vue: Vue
+  powershell: PowerShell

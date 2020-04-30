@@ -5,7 +5,7 @@ description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce 
 
 ## v1.0.1  
 **Date:** 2020-04-09  
-**Description:** Change of PayPal settings.
+**Description:** Change of PayPal settings  
 --- 
 
 <changelog>
@@ -20,4 +20,4 @@ description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce 
 
 ## v1.0.0  
 **Date:** 2020-03-30  
-**Description:** Initial Vendr PayPal Payment Provider release.
+**Description:** Initial Vendr PayPal Payment Provider release  

@@ -5,7 +5,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.2 (Unreleased)  
 **Date:** TBC  
-**Description:** Patch fix release with minor bug fixes / enhancements.  
+**Description:** Patch fix release with minor bug fixes / enhancements  
 --- 
 
 <changelog>
@@ -29,7 +29,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.1  
 **Date:** 2020-04-29  
-**Description:** Patch fix release with minor bug fixes / enhancements.  
+**Description:** Patch fix release with minor bug fixes / enhancements  
 --- 
 
 <changelog>
@@ -44,7 +44,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.0 
 **Date:** 2020-04-29  
-**Description:** Minor release with new features and some minor bug fixes / enhancements.
+**Description:** Minor release with new features and some minor bug fixes / enhancements
 --- 
 
 <changelog>
@@ -53,7 +53,7 @@ description: Changelog for the Core Vendr product
     
 * Added "Unlimited" checkbox to discount codes to allow them to have unlimited usage ([#50](https://github.com/vendrhub/vendr/issues/50)).
 * Added basic Order/Payment Status filters to Order list ([#63](https://github.com/vendrhub/vendr/issues/63)).
-* Added "esc" key shortcut to close Discount rule/rewards settings editor dialog ([#60](https://github.com/vendrhub/vendr/issues/60)).
+* Added escape key shortcut to close Discount rule/rewards settings editor dialog ([#60](https://github.com/vendrhub/vendr/issues/60)).
 * Added feedback when copying order details to clipboard ([#22](https://github.com/vendrhub/vendr/issues/22)).
 * Added new store entity picker property editor to merge together all store entity pickers. Tax Class picker is now obsolete in favour of this new picker.
 * Added email templates for the default Confirmation / Error emails.
@@ -64,7 +64,7 @@ description: Changelog for the Core Vendr product
 
     
 * Fixed YSOD when accessing transaction info for an order where the Payment Provider no longer existed. Now perform null checks on data ([#58](https://github.com/vendrhub/vendr/issues/58)).
-* Fixed issue with NuGet packages not copying content files on upgrade. Added a powershell script to perform the copy.
+* Fixed issue with NuGet packages not copying content files on upgrade. Added a PowerShell script to perform the copy.
 * Fixed bug where customer details weren't being persisted into the dedicated fields in the database table (they are still present in the properties collection where they are referenced from 99% of the time) ([#85](https://github.com/vendrhub/vendr/issues/85)).
 
 
@@ -87,7 +87,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.3 
 **Date:** 2020-04-24  
-**Description:** Patch fix release with minor bug fixes / enhancements.
+**Description:** Patch fix release with minor bug fixes / enhancements
 --- 
 
 <changelog>
@@ -118,7 +118,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.2 
 **Date:** 2020-04-15  
-**Description:** Patch fix release with minor bug fixes / enhancements.
+**Description:** Patch fix release with minor bug fixes / enhancements
 --- 
 
 <changelog>
@@ -152,7 +152,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.1 
 **Date:** 2020-04-06  
-**Description:** Patch fix release with minor fixes found post launch.
+**Description:** Patch fix release with minor fixes found post launch
 --- 
 
 <changelog>
@@ -175,4 +175,4 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.0  
 **Date:** 2020-03-30  
-**Description:** Initial Vendr release.
+**Description:** Initial Vendr release 
