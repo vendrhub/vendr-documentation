@@ -15,7 +15,7 @@ The live version of these docs can be found at [https://vendr.net/docs/](https:/
 
 ## Contributing
 
-If you would like to help improve our documentation, contributions via pull request are our prefered method. I guide for which follows:
+If you would like to help improve our documentation, contributions via pull request are our preferred method. I guide for which follows:
 
 ### Code of Conduct
 
@@ -23,9 +23,9 @@ All contributions / contributors are expected to abide by our [Code of Conduct](
 
 ### Prerequisites
 
-* **Yarn** - [Yarn](https://yarnpkg.com/en/docs/install) is our prefered package installer so contributors should make sure Yarn has been installed globally on your machine
+* **Yarn** - [Yarn](https://yarnpkg.com/en/docs/install) is our preferred package installer so contributors should make sure Yarn has been installed globally on your machine
 
-* **Gridsome** - [Gridsome](https://gridsome.org/docs/#how-to-install) the Vendr documentation site is powered by Gridsome, a vuejs based static site generator.
+* **Gridsome** - [Gridsome](https://gridsome.org/docs/#how-to-install) the Vendr documentation site is powered by Gridsome, a Vue.js based static site generator.
 
 ### Getting Setup
 
@@ -63,7 +63,7 @@ When writing documentation there are a number of principles that should be follo
 
 #### Gridsome
 
-The Vendr documentation site is powered by Gridsome, a vuejs based static site generator. You should read up on the basics of [Gridscome](https://gridsome.org/docs/) to get an understanding of the available features.
+The Vendr documentation site is powered by Gridsome, a Vue.js based static site generator. You should read up on the basics of [Gridscome](https://gridsome.org/docs/) to get an understanding of the available features.
 
 #### Markdown
 

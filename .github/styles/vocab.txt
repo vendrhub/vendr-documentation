@@ -1,4 +1,7 @@
 Umbraco
 Vendr
+Gridsome
+Vue
 sublicense
 webhook
+https
