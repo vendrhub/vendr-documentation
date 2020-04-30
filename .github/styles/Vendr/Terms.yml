@@ -8,3 +8,8 @@ swap:
   app_plugins: App_Plugins
   vue: Vue
   powershell: PowerShell
+  Powershell: PowerShell
+  javascript: JavaScript
+  Javascript: JavaScript
+  html: HTML
+  Html: HTML

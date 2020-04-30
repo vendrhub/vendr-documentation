@@ -7,8 +7,13 @@ Namespace
 Inclusivity
 Config
 Sku
+JavaScript
+HTML
+Unredeem
 sublicense
 webhook
 https
 ngrok
 signup
+config
+unredeem

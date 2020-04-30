@@ -71,7 +71,7 @@ This is useful for occasions such as rendering out the Order Lines on a Cart pag
 
 ## Product Uniqueness Properties
 
-Another use of the Properties collection for an Order Line is that of identifying product "Uniqueness". Product uniqueness is how Vendr identifies whether a Product being added to a Cart should be considered as Quantity increase on an existing Order Line, or whether it should be considered as a unique product combination and so should be given an Order Line of it's own. A good example of this when you have configurable products, such as customizable T-Shirt designs, and so each unique configuration should be considered as it's own Order Line so that you can more easily manage the specific configurations.
+Another use of the Properties collection for an Order Line is that of identifying product "Uniqueness". Product uniqueness is how Vendr identifies whether a Product being added to a Cart should be considered as Quantity increase on an existing Order Line, or whether it should be considered as a unique product combination and so should be given an Order Line of it's own. A good example of this when you have configurable products, such as customizable T-Shirt designs, and so each unique configuration should be considered as it's own Order Line so that you can manage the specific configurations.
 
 Product uniqueness is configured via the **Product Uniqueness Property Aliases** field on the Store setting screen.
 

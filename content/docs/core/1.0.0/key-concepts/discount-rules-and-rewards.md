@@ -177,7 +177,7 @@ The Rule/Reward Label View should provide a user friendly summary of it's settin
 
 ![Discount Rule Label Views](~/assets/images/screenshots/discount_rule_builder_label_views.png)
 
-The Label View file will be passed a `model` property which will be a Javascript representation of the given Providers settings object.
+The Label View file will be passed a `model` property which will be a JavaScript representation of the given Providers settings object.
 
 ````html
 <span ng-if="model.priceType">Order {{ model.priceType | vendrSplitCamelCase }} Discount</span>
