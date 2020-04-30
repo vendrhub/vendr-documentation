@@ -1,6 +1,6 @@
 id: Vendr.PaymentProviders.Dibs
 name: DIBS
-logo: dibs.png
+logo: dibs.svg
 type: PaymentProvider
 supportedBy: core
 
