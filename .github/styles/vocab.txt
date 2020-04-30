@@ -4,6 +4,9 @@ Gridsome
 Vue
 PowerShell
 Namespace
+Inclusivity
+Config
+Sku
 sublicense
 webhook
 https
