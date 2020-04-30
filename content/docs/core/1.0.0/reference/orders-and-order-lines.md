@@ -1000,7 +1000,7 @@ Order RemoveProperty(string alias);
 | `Order` | The updated writable Order |
 
 #### RemoveProperties
-Removes a a series of Order Properties
+Removes a series of Order Properties
 
 ***Signature:***
 
@@ -1373,7 +1373,9 @@ Order Redeem(string discountOrGiftCardCode);
 | `Order` | The updated writable Order |
 
 #### Unredeem
+<!-- vale off -->
 Unredeems a Discount Code or Gift Card from the Order
+<!-- vale on -->
 
 ***Signature:***
 

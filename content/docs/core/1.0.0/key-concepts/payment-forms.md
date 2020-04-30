@@ -36,6 +36,6 @@ Similar in concept to Umbraco's own `Html.BeginUmbracoForm()` method, the Paymen
 
 <message-box type="warn" heading="Important">
 
-It's important to know that the Form by default doesn't contain any inputs to actually submit the Form. These must be supplied by the implementor. It is designed this way to ensure that the form will work with the design of the Site in question, so developers can provide any kind of button they wish.
+It's important to know that the Form by default doesn't contain any button inputs to submit the Form. These must be supplied by the implementer. It is designed this way to ensure that the form will work with the design of the Site in question, so developers can provide any kind of button they wish.
 
 </message-box>

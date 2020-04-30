@@ -61,7 +61,8 @@ public void Compose(Composition composition)
 
 ## Notification events
 
-Notification events are events that fire, often just before and just after an action is about to be or just has been executed, providing  you a means to run custom logic to react to that action occurring. This is useful for scenarios such as sending emails when an Order is finalized, or allowing you synchronize stock updates with an external system.
+
+Notification events are events that fire, often immediately before and immediately after an action is about to be or has been executed, providing  you a means to run custom logic to react to that action occurring. This is useful for scenarios such as sending emails when an Order is finalized, or allowing you synchronize stock updates with an external system.
 
 Notification events won't allow you to change the behavior of how Vendr runs, but they do provide you with an effective means of reacting to when changes occur.
 

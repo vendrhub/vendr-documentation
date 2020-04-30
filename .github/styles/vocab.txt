@@ -17,3 +17,5 @@ ngrok
 signup
 config
 unredeem
+deserialized
+boolean
