@@ -3,7 +3,9 @@ title: Versions
 description: Index of the past, present and future versions of the documentation
 ---
 
+<!-- vale off -->
 import VersionsList from '~/components/VersionsList.vue'
+<!-- vale on -->
 
 ## Next Version
 <template v-if="$page.doc.package && $page.doc.package.docVersions.next">
