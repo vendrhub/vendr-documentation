@@ -1,6 +1,6 @@
 id: Vendr.PaymentProviders.Stripe
 name: Stripe
-logo: stripe.png
+logo: stripe.svg
 type: PaymentProvider
 supportedBy: core
 
