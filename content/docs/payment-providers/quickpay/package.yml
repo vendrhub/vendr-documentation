@@ -1,6 +1,6 @@
 id: Vendr.PaymentProviders.QuickPay
 name: QuickPay
-logo: quickpay.png
+logo: quickpay.svg
 type: PaymentProvider
 supportedBy: core
 
