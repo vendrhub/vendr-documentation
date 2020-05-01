@@ -11,7 +11,7 @@ In Vendr, there are two main types of events you can create handlers for, and th
 
 ## Validation events
 
-Validation events are events that fire just before a change is about to be made to an entity and allow you to inject your own logic to decide whether an action should be possible or not. We already have a number of validation handlers built in to maintain the consistency of your data, however Validation events allow you to extend this behavior with your own rules.
+Validation events are events that fire immediately before a change is about to be made to an entity and allow you to inject your own logic to decide whether an action should be possible or not. We already have a number of validation handlers built in to maintain the consistency of your data, however Validation events allow you to extend this behavior with your own rules.
 
 ### Example Validation event handler
 
@@ -61,7 +61,8 @@ public void Compose(Composition composition)
 
 ## Notification events
 
-Notification events are events that fire, often just before and just after an action is about to be or just has been executed, providing  you a means to run custom logic to react to that action occurring. This is useful for scenarios such as sending emails when an Order is finalized, or allowing you synchronize stock updates with an external system.
+
+Notification events are events that fire, often immediately before and immediately after an action is about to be or has been executed, providing  you a means to run custom logic to react to that action occurring. This is useful for scenarios such as sending emails when an Order is finalized, or allowing you synchronize stock updates with an external system.
 
 Notification events won't allow you to change the behavior of how Vendr runs, but they do provide you with an effective means of reacting to when changes occur.
 

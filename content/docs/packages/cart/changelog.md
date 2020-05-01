@@ -4,15 +4,5 @@ description: Changelog for the Cart package for Vendr, the eCommerce solution fo
 ---
 
 ## Unreleased 
-Initial release of the Vendr Cart Package
---- 
-
-<changelog>
-<changelog-group category="Added">  
-
-    
-* Added Vendr Cart Package
-
-
-</changelog-group>
-</changelog>
+**Date:** TBC  
+**Description:** Initial release of the Vendr Cart Package  

@@ -192,7 +192,7 @@ OrderReference GetOrderReference(HttpRequestBase request, TSettingsModel setting
 | `OrderReference` | An Order Reference |
 
 #### FetchPaymentStatus
-Fetch teh Payment Status of a Payment
+Fetch the Payment Status of a Payment
 
 ***Signature:***
 
@@ -440,9 +440,9 @@ public PaymentForm(string action, FormMethod method)
 | `IDictionary<string, string>` | `Attributes` | Additional attributes to render on the Form tag |
 | `IDictionary<string, string>` | `Inputs` | The hidden Input name / value pairs to render in the Form |
 | `IList<string>` | `CssFiles` | A list of CSS file URLs to render for the Form |
-| `IList<string>` | `JsFiles` | A list of Javascript file URLs to render for the Form |
+| `IList<string>` | `JsFiles` | A list of JavaScript file URLs to render for the Form |
 | `string` | `Css` | Any inline CSS to render for the Form |
-| `string` | `Js` | Any inline Javascript to render for the Form |
+| `string` | `Js` | Any inline JavaScript to render for the Form |
 
 #### WithAttribute
 Fluently define an Attribute on a Form
@@ -583,7 +583,7 @@ PaymentForm WithInputIf(string key, bool predicate, string valueIfTrue, string v
 | `PaymentForm` | The updated Payment Form |
 
 #### WithJsFile
-Fluently define a Javascript file to render for the Form
+Fluently define a JavaScript file to render for the Form
 
 ***Signature:***
 
@@ -595,7 +595,7 @@ PaymentForm WithJsFile(string url);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `url` | The URL for the Javascript file to render for the Form |
+| `string` | `url` | The URL for the JavaScript file to render for the Form |
 
 ***Returns:***
 
@@ -604,7 +604,7 @@ PaymentForm WithJsFile(string url);
 | `PaymentForm` | The updated Payment Form |
 
 #### WithJs
-Fluently define an inline Javascript block to render for the Form
+Fluently define an inline JavaScript block to render for the Form
 
 ***Signature:***
 
@@ -616,7 +616,7 @@ PaymentForm WithJs(string script);
 
 | Type | Name | Description |
 | ---- | ----- | ----------- |
-| `string` | `script` | The Javascript to render for the Form |
+| `string` | `script` | The JavaScript to render for the Form |
 
 ***Returns:***
 

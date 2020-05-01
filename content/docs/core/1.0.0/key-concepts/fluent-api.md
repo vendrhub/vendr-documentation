@@ -48,6 +48,6 @@ using(var uow = _uowProvider.Create())
 
 <message-box type="info" heading="Fluent API Optional">
 
-We know not everyone likes to write their code fluently and so the Vendr Fluent API is a completely optional feature. Both code examples above are valid coding styles which will both work just as well as each other. The Fluent API is simply an additional layer of syntax sugar that developers can use depending on their preferred style of coding.
+We know not everyone likes to write their code fluently and so the Vendr Fluent API is a completely optional feature. Both code examples above are valid coding styles which will both work as well as each other. The Fluent API is an opt-in layer of syntax sugar that developers can use depending on their preferred style of coding.
 
 </message-box>

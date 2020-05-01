@@ -29,7 +29,7 @@ PagedResult<OrderReadOnly> SearchOrders(Guid storeId, string searchTerm = null, 
 | `string` | `cartOrOrderNumber` | A Cart or Order Number to search for |
 | `string` | `firstName` | A customer first name to search for |
 | `string` | `lastName` | A customer last name to search for |
-| `bool?` | `isFinalized` | Flag to search against all Orders, or just finalized ones |
+| `bool?` | `isFinalized` | Flag to search against all Orders, or only finalized ones |
 | `Guid?` | `orderStatusId` | Only find Orders with the given Order Status ID |
 | `PaymentStatus?` | `paymentStatus` | Only find Orders with the given Payment Status |
 | `DateTime?` | `fromDate` | Only find after the given date |
@@ -1000,7 +1000,7 @@ Order RemoveProperty(string alias);
 | `Order` | The updated writable Order |
 
 #### RemoveProperties
-Removes a a series of Order Properties
+Removes a series of Order Properties
 
 ***Signature:***
 
@@ -1373,7 +1373,9 @@ Order Redeem(string discountOrGiftCardCode);
 | `Order` | The updated writable Order |
 
 #### Unredeem
+<!-- vale off -->
 Unredeems a Discount Code or Gift Card from the Order
+<!-- vale on -->
 
 ***Signature:***
 
@@ -1737,7 +1739,7 @@ object DeepClone();
 
 <message-box type="info" heading="Note">
 
-An Order Line context cannot simply be created, it must be retrieved by calling [WithOrderLine](#withorderline) on the Order Lines parent writable Order.
+An Order Line context cannot be created, it must be retrieved by calling [WithOrderLine](#withorderline) on the Order Lines parent writable Order.
 
 </message-box>
 
@@ -1912,7 +1914,7 @@ OrderLineContext RemoveProperty(string alias);
 | `OrderLineContext` | The Order Line fluent write context |
 
 #### RemoveProperties
-Removes a a series of Order Line Properties
+Removes a series of Order Line Properties
 
 ***Signature:***
 

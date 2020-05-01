@@ -15,7 +15,7 @@ To gain access to the **Commerce** section however, will require some additional
 
 ## Creating a Commerce User Group
 
-To gain access to the **Commerce** section, it is advised that you create a new User Group called **Commerce**, assigning our User account to that User Group and allowing that User Group access to the **Commerce** section as a whole. By creating a custom User Group in this way it provides an easier method of managing Users who have access to the **Commerce** section, rather than just allowing individual Users access.
+To gain access to the **Commerce** section, it is advised that you create a new User Group called **Commerce**, assigning our User account to that User Group and allowing that User Group access to the **Commerce** section as a whole. By creating a custom User Group in this way it provides an easier method of managing Users who have access to the **Commerce** section, rather than allowing individual Users access.
 
 To create the **Commerce** User Group you should follow the [instructions on how to create a User Group available on the Umbraco Documentation site](https://our.umbraco.com/documentation/getting-started/Data/Users/#creating-a-user-group), ensuring you select the **Commerce** section in the **Sections** list, as well as selecting your User account in the **Users** list, as per the screenshot below.
 
