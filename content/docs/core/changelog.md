@@ -13,7 +13,7 @@ description: Changelog for the Core Vendr product
 
     
 * Added `*.xip.io`, `*.nip.io` and `*.sslip.io` as valid test domains.
-* Added strongly types value converter for the store entity picker property editor.
+* Added strongly typed value converter for the store entity picker property editor.
 * Added missing validation events for Discount code add/update/remove.
 * Added validation events to all entities to validate the uniqueness of aliases / codes.
 * Added `Exists` methods to all entity services to make it easier to check for the existence of an entity.
@@ -34,8 +34,8 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Changed">  
 
     
-* Changed picker property editor 'add' buttons to use a button elements, rather than a link tags ([#86](https://github.com/vendrhub/vendr/issues/86)).
-* Changed table view 'create' buttons to use a button elements, rather than a link tags ([#87](https://github.com/vendrhub/vendr/issues/87)).
+* Changed picker property editor 'add' buttons to use a button element, rather than a link tag ([#86](https://github.com/vendrhub/vendr/issues/86)).
+* Changed table view 'create' buttons to use a button element, rather than a link tag ([#87](https://github.com/vendrhub/vendr/issues/87)).
 * Implemented friendlier display of validation errors ([#91](https://github.com/vendrhub/vendr/issues/91)).
 
 
