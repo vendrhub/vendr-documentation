@@ -11,6 +11,29 @@ description: Shipping Method related APIs in Vendr, the eCommerce solution for U
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### ShippingMethodExists
+
+Checks to see if a Shipping Method exists in a Store with the given Alias
+
+***Signature:***
+
+````csharp
+bool ShippingMethodExists(Guid storeId, string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Shipping Method belong to |
+| `string` | `alias` | The Alias of the Shipping Method to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Shipping Method exists, otherwise false |
+
 #### GetShippingMethods
 
 Gets a collection of all Shipping Method entities in a Store

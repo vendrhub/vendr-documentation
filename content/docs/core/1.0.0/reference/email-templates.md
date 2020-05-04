@@ -11,6 +11,29 @@ description: Email Template related APIs in Vendr, the eCommerce solution for Um
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### EmailTemplateExists
+
+Checks to see if a Email Template exists in a Store with the given Alias
+
+***Signature:***
+
+````csharp
+bool EmailTemplateExists(Guid storeId, string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the  Email Template belong to |
+| `string` | `alias` | The Alias of the Email Template to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Email Template exists, otherwise false |
+
 #### GetEmailTemplates
 
 Gets a collection of all Email Template entities in a Store

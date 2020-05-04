@@ -11,6 +11,29 @@ description: Country and Region related APIs in Vendr, the eCommerce solution fo
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### CountryExists
+
+Checks to see if a Country exists in a Store with the given ISO Code
+
+***Signature:***
+
+````csharp
+bool CountryExists(Guid storeId, string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Country belong to |
+| `string` | `code` | The Code of the Country to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Country exists, otherwise false |
+
 #### GetCountries
 
 Gets a collection of all Country entities in a Store
@@ -153,6 +176,30 @@ void SortCountries(Guid[] sortedIds);
 | Type | Name | Description |
 | ---- | ----- | ----------- |
 | `Guid[]` | `sortedIds` | Sequence of Country IDs to sort in the given order |
+
+#### RegionExists
+
+Checks to see if a Region exists in a Store with the given ISO Code
+
+***Signature:***
+
+````csharp
+bool RegionExists(Guid storeId, Guid countryId, string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Region belong to |
+| `Guid` | `countryId` | The ID of the Country the Region belong to |
+| `string` | `code` | The Code of the Region to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Region exists, otherwise false |
 
 #### GetRegions
 

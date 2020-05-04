@@ -1,6 +1,6 @@
 id: Vendr.PaymentProviders.PayPal
 name: PayPal
-logo: paypal.png
+logo: paypal.svg
 type: PaymentProvider
 supportedBy: core
 
