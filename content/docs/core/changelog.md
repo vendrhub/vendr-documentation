@@ -15,6 +15,7 @@ description: Changelog for the Core Vendr product
 * Added `*.xip.io`, `*.nip.io` and `*.sslip.io` as valid test domains.
 * Added strongly types value converter for the store entity picker property editor.
 * Added missing validation events for Discount code add/update/remove.
+* Added validation events to all entities to validate the uniqueness of aliases / codes.
 * Added `Exists` methods to all entity services to make it easier to check for the existence of an entity.
 
 
