@@ -11,6 +11,29 @@ description: Payment Method related APIs in Vendr, the eCommerce solution for Um
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### PaymentMethodExists
+
+Checks to see if a Payment Method exists in a Store with the given Alias
+
+***Signature:***
+
+````csharp
+bool PaymentMethodExists(Guid storeId, string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Payment Method belong to |
+| `string` | `alias` | The Alias of the Payment Method to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Payment Method exists, otherwise false |
+
 #### GetPaymentMethods
 
 Gets a collection of all Payment Method entities in a Store

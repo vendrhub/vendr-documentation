@@ -9,12 +9,24 @@ description: Changelog for the Core Vendr product
 --- 
 
 <changelog>
+<changelog-group category="Added">  
+
+    
+* Added `*.xip.io`, `*.nip.io` and `*.sslip.io` as valid test domains.
+* Added strongly types value converter for the store entity picker property editor.
+* Added missing validation events for Discount code add/update/remove.
+* Added `Exists` methods to all entity services to make it easier to check for the existence of an entity.
+
+
+</changelog-group>
 <changelog-group category="Fixed">  
 
     
 * Fixed bug in product uniqueness logic throwing a YSOD if you add a product with no uniqueness properties after one that has is already in the cart ([#88](https://github.com/vendrhub/vendr/issues/88)).
 * Fixed build script formatting the patch release timestamp incorrectly.
 * Fixed YSOD when removing items from a cart and using SQL CE. This was due to a SQL statement that doesn't work on SQL CE. Now updated to work across the board ([#89](https://github.com/vendrhub/vendr/issues/89)).
+* Fixed bug where discount codes declared on deleted discounts couldn't be reused ([#91](https://github.com/vendrhub/vendr/issues/91)).
+* Discount aliases are now validated before save and display a friendly error message ([#91](https://github.com/vendrhub/vendr/issues/91)).
 
 
 </changelog-group>
@@ -23,6 +35,7 @@ description: Changelog for the Core Vendr product
     
 * Changed picker property editor 'add' buttons to use a button elements, rather than a link tags ([#86](https://github.com/vendrhub/vendr/issues/86)).
 * Changed table view 'create' buttons to use a button elements, rather than a link tags ([#87](https://github.com/vendrhub/vendr/issues/87)).
+* Implemented friendlier display of validation errors ([#91](https://github.com/vendrhub/vendr/issues/91)).
 
 
 </changelog-group>

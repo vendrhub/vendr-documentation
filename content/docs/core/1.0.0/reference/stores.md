@@ -7,6 +7,32 @@ description: Store related APIs in Vendr, the eCommerce solution for Umbraco v8+
 
 ### IStoreService
 
+**Description:** Interface of the Vendr Store Service  
+**Namespace:** Vendr.Core.Services  
+**Assembly:** Vendr.Core
+
+#### StoreExists
+
+Checks to see if a Store exists with the given Alias
+
+***Signature:***
+
+````csharp
+bool StoreExists(string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `string` | `alias` | The Alias of the Store to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Store exists, otherwise false |
+
 #### GetStores
 
 Gets a collection of all Store entities
