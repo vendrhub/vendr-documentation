@@ -11,6 +11,29 @@ description: Tax related APIs in Vendr, the eCommerce solution for Umbraco v8+
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### TaxClassExists
+
+Checks to see if a Tax Class exists in a Store with the given Alias
+
+***Signature:***
+
+````csharp
+bool TaxClassExists(Guid storeId, string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Tax Class belong to |
+| `string` | `alias` | The Alias of the Tax Class to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Tax Class exists, otherwise false |
+
 #### GetTaxClasses
 
 Gets a collection of all Tax Class entities in a Store

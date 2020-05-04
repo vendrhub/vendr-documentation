@@ -1,6 +1,6 @@
-id: Vendr.PaymentProviders.Dibs
-name: DIBS
-logo: dibs.svg
+id: Vendr.PaymentProviders.Bambora
+name: Bambora
+logo: bambora.svg
 type: PaymentProvider
 supportedBy: core
 

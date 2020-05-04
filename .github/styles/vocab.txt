@@ -20,4 +20,5 @@ config
 unredeem
 deserialized
 boolean
+Bambora
 Reepay

@@ -11,6 +11,29 @@ description: Order Status related APIs in Vendr, the eCommerce solution for Umbr
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### OrderStatusExists
+
+Checks to see if a Order Status exists in a Store with the given Alias
+
+***Signature:***
+
+````csharp
+bool OrderStatusExists(Guid storeId, string alias);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Order Status belong to |
+| `string` | `alias` | The Alias of the Order Status to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Order Status exists, otherwise false |
+
 #### GetOrderStatuses
 
 Gets a collection of all Order Status entities in a Store

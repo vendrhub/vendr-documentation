@@ -13,6 +13,7 @@
 .markdown h4,
 .markdown h5 {
     @apply mb-1 text-brand-blue-dark pt-24 -mt-24;
+    word-break: break-word;
 }
 
 .markdown h2 {

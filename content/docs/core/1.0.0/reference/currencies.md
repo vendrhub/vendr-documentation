@@ -11,6 +11,29 @@ description: Currency related APIs in Vendr, the eCommerce solution for Umbraco 
 **Namespace:** Vendr.Core.Services  
 **Assembly:** Vendr.Core
 
+#### CurrencyExists
+
+Checks to see if a Currency exists in a Store with the given ISO Code
+
+***Signature:***
+
+````csharp
+bool CurrencyExists(Guid storeId, string code);
+````
+
+***Parameters:***
+
+| Type | Name | Description |
+| ---- | ----- | ----------- |
+| `Guid` | `storeId` | The ID of the Store the Currencies belong to |
+| `string` | `code` | The Code of the Currency to check  |
+
+***Returns:***
+
+| Type | Description |
+| ---- | ----------- |
+| `bool` | True if the Currency exists, otherwise false |
+
 #### GetCurrencies
 
 Gets a collection of all Currency entities in a Store
