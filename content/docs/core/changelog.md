@@ -3,8 +3,23 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.1.2 (Unreleased)  
+## v1.1.3 (Unreleased)  
 **Date:** TBC  
+**Description:** Patch fix release with minor bug fixes / enhancements  
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Patch release dll timestamp not formatted in the correct way.
+
+
+</changelog-group>
+</changelog>
+
+## v1.1.2  
+**Date:** 2020-05-05   
 **Description:** Patch fix release with minor bug fixes / enhancements  
 --- 
 
