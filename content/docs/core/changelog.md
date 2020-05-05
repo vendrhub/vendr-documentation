@@ -16,6 +16,13 @@ description: Changelog for the Core Vendr product
 
 
 </changelog-group>
+<changelog-group category="Changed">  
+
+    
+* When saving a product node with a stock property, only sync the value back to the stock database table if the property is dirty.
+
+
+</changelog-group>
 </changelog>
 
 ## v1.1.2  
