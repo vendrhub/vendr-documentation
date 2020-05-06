@@ -13,6 +13,8 @@ description: Changelog for the Core Vendr product
 
     
 * Patch release dll timestamp not formatted in the correct way.
+* Fixed bug in TaxClassRepository.GetIdByAlias method which had a malformed SQL statement.
+* Fixed NuGet install script not working correctly in directories containing spaces.
 
 
 </changelog-group>
