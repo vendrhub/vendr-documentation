@@ -15,4 +15,4 @@ In the payment method editor, configure the standard payment method settings as 
 
 | Name | Description |
 | ---- | ----------- |
-| Continue URL | The URL of the page to navigate to after payment is successful - e.g. `/confirmation/` |
+| Continue URL | The URL of the page to navigate to after payment - e.g. `/confirmation/` |
