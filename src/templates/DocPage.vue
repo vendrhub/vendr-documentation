@@ -251,13 +251,15 @@ export default {
     {
       metaTitle += " - " + this.$page.doc.subPackage.name
     }
-    if (this.$page.doc.package && this.$page.doc.package.type !== 'Product') {
+    if (this.$page.doc.package) {
       metaTitle += " - " + this.$page.doc.package.name
     }
     return {
       title: metaTitle,
       meta: [
-        { name: 'twitter:title', content: metaTitle }
+        { name: 'twitter:title', content: metaTitle },
+        { name: 'twitter:description', content: this.$page.doc.description },
+        { key: 'description', name: 'description', content: this.$page.doc.description }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }
