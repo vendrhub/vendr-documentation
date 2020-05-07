@@ -1,6 +1,6 @@
 ---
 title: Useful Links
-description: Documentation for the Reepay payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Reepay Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 As well as the content found in these docs, here are a few useful links that might come in handy should you wish to learn more about the provider itself, and the Reepay API.
