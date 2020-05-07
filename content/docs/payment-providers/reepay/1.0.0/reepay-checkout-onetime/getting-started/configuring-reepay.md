@@ -44,4 +44,4 @@ From the **Configuration** overlay in the **Event types** list select the follow
 * `invoice_settled`
 * `invoice_authorized`
 
-Click **Save** button to register the details for the webhook.
+Click **Save** button at bottom in overlay to register the details for the webhook.
