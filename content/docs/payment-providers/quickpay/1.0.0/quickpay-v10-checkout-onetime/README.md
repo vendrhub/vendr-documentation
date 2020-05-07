@@ -1,5 +1,5 @@
 ---
-title: QuickPay V10
+title: QuickPay V10 (One Time)
 description: Documentation for the QuickPay V10 (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
