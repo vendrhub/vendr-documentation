@@ -3,8 +3,48 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.1.2 (Unreleased)  
-**Date:** TBC  
+## v1.1.4 (Unreleased)
+**Date:** TBD   
+**Description:** Patch fix release with minor bug fixes / enhancements  
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed javaScript error when refreshing order list view after an order is deleted ([#96](https://github.com/vendrhub/vendr/issues/96)).
+* Fixed formatting issue in table view selection message where `X of Y` message was being displayed without spaces.
+
+
+</changelog-group>
+</changelog>
+
+## v1.1.3
+**Date:** 2020-05-06   
+**Description:** Patch fix release with minor bug fixes / enhancements  
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Patch release dll timestamp not formatted in the correct way.
+* Fixed bug in TaxClassRepository.GetIdByAlias method which had a malformed SQL statement.
+* Fixed NuGet install script not working correctly in directories containing spaces.
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+    
+* When saving a product node with a stock property, only sync the value back to the stock database table if the property is dirty ([#93](https://github.com/vendrhub/vendr/issues/93)).
+
+
+</changelog-group>
+</changelog>
+
+## v1.1.2  
+**Date:** 2020-05-05   
 **Description:** Patch fix release with minor bug fixes / enhancements  
 --- 
 
@@ -13,8 +53,9 @@ description: Changelog for the Core Vendr product
 
     
 * Added `*.xip.io`, `*.nip.io` and `*.sslip.io` as valid test domains.
-* Added strongly types value converter for the store entity picker property editor.
+* Added strongly typed value converter for the store entity picker property editor.
 * Added missing validation events for Discount code add/update/remove.
+* Added validation events to all entities to validate the uniqueness of aliases / codes.
 * Added `Exists` methods to all entity services to make it easier to check for the existence of an entity.
 
 
@@ -33,8 +74,8 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Changed">  
 
     
-* Changed picker property editor 'add' buttons to use a button elements, rather than a link tags ([#86](https://github.com/vendrhub/vendr/issues/86)).
-* Changed table view 'create' buttons to use a button elements, rather than a link tags ([#87](https://github.com/vendrhub/vendr/issues/87)).
+* Changed picker property editor 'add' buttons to use a button element, rather than a link tag ([#86](https://github.com/vendrhub/vendr/issues/86)).
+* Changed table view 'create' buttons to use a button element, rather than a link tag ([#87](https://github.com/vendrhub/vendr/issues/87)).
 * Implemented friendlier display of validation errors ([#91](https://github.com/vendrhub/vendr/issues/91)).
 
 

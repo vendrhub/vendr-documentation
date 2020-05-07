@@ -1,13 +1,15 @@
 ---
 title: Installation
-description: Documentation for the PayPal payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Invoicing payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-There are currently two ways to install the PayPal payment provider for Vendr into your solution. Using the Umbraco package distribution, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
+The Invoicing payment provider is the only payment provider that actually comes pre-installed with Vendr so you shouldn't need to install it yourself. That said, if for whatever reason the package does not appear to be installed, you can install it as follows.
+
+There are currently two ways to install the Invoicing payment provider for Vendr into your solution. Using the Umbraco package distribution, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
 
 ## Umbraco Package Installation
 
-To install the PayPal payment provider Umbraco package, you will need to download the package file manually from the Vendr package page on the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/). On this page, scroll down to the **Package Files** section and locate the PayPal payment provider package, clicking it to initiate a download.
+To install the Invoicing payment provider Umbraco package, you will need to download the package file manually from the Vendr package page on the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/). On this page, scroll down to the **Package Files** section and locate the Invoicing payment provider package, clicking it to initiate a download.
 
 ![Umbraco package files list](~/assets/images/screenshots/package-files-list.png)
 
@@ -17,10 +19,10 @@ Once downloaded you should manually install the package by uploading it to the *
 
 ## NuGet Package Installation
 
-To install the PayPal payment provider via NuGet you can run the following command directly in the NuGet Manager Console window:
+To install the Invoicing payment provider via NuGet you can run the following command directly in the NuGet Manager Console window:
 
 ```bash
-PM> Install-Package Vendr.PaymentProviders.PayPal
+PM> Install-Package Vendr.PaymentProviders.Invoicing
 ```
 
 Alternatively, you can also find and install the NuGet package via the NuGet Package Manager GUI.
