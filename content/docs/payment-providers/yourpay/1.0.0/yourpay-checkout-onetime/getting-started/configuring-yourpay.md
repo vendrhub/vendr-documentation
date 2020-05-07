@@ -13,3 +13,12 @@ Or, if you already have an account, you can head over to [admin.yourpay.io/login
 
 
 ![Yourpay Signin](~/assets/images/screenshots/yourpay/yourpay_signin.png)
+
+
+## API Keys
+
+In order for Vendr to communicate with Yourpay securely we will need to use a series of keys that Vendr can use to authenticate with.
+
+In the sidebar, click the **Account Information** heading. Here you will find your **Merchant ID** (use for test payments) and **Production Merchant ID** (used for payments in production). Furthermore you will find a **Merchant Token** and a **Integration Key**. The **Integration Key** is user defined (empty by default) and is used in verification of the payment in the callback.
+
+![Yourpay API Keys](~/assets/images/screenshots/yourpay/yourpay_api_keys.png)
