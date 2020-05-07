@@ -1,6 +1,6 @@
-id: Vendr.PaymentProviders.Stripe
-name: Stripe
-logo: stripe.svg
+id: Vendr.PaymentProviders.Invoicing
+name: Invoicing
+logo: invoicing.svg
 type: PaymentProvider
 supportedBy: core
 

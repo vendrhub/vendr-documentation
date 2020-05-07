@@ -7,11 +7,11 @@ There are currently two ways to install the Stripe payment provider for Vendr in
 
 ## Umbraco Package Installation
 
-To install the Stripe payment provider Umbraco package, you will need to download the package file manually from the Vendr package page on the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/). On this page, scroll down to the **Package Files** section and locate the Stripe package provider package, clicking it to initiate a download.
+To install the Stripe payment provider Umbraco package, you will need to download the package file manually from the Vendr package page on the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/). On this page, scroll down to the **Package Files** section and locate the Stripe payment provider package, clicking it to initiate a download.
 
 ![Umbraco package files list](~/assets/images/screenshots/package-files-list.png)
 
-One downloaded you should manually install the package by uploading it to the **local package installer** located in your back-office **Packages > Install Local** section. Once uploaded, follow the on-screen instructions provided to complete the install.
+Once downloaded you should manually install the package by uploading it to the **local package installer** located in your back-office **Packages > Install Local** section. Once uploaded, follow the on-screen instructions provided to complete the install.
 
 ![Installing an Umbraco Package via Local Umbraco Package](~/assets/images/screenshots/umbraco_local_package_install.png)
 
