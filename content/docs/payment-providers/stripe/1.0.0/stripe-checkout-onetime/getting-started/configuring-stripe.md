@@ -12,7 +12,7 @@ If you haven't done so yet, head on over to [dashboard.stripe.com/register](http
 Or, if you already have an account, you can head over to [dashboard.stripe.com/login](https://dashboard.stripe.com/login) to sign in to your account.
 
 
-![Stripe Signup](~/assets/images/screenshots/stripe/stripe_signin.png)
+![Stripe Signin](~/assets/images/screenshots/stripe/stripe_signin.png)
 
 ## Test & Live mode
 
