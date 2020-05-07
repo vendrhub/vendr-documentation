@@ -44,4 +44,6 @@ From the **Configuration** overlay in the **Event types** list select the follow
 * `invoice_settled`
 * `invoice_authorized`
 
+Note the webhook secret can also be found here, which is used in the payment provider to being able to communicate with the webhook in Reepay.
+
 Click **Save** button at bottom in overlay to register the details for the webhook.
