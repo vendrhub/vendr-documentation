@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Getting Started with the QuickPay V10 payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Getting Started with the QuickPay V10 (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 ## About this Payment Provider
