@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.1.4 (Unreleased)
+**Date:** TBD   
+**Description:** Patch fix release with minor bug fixes / enhancements  
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed javaScript error when refreshing order list view after an order is deleted ([#96](https://github.com/vendrhub/vendr/issues/96)).
+* Fixed formatting issue in table view selection message where `X of Y` message was being displayed without spaces.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.1.3
 **Date:** 2020-05-06   
 **Description:** Patch fix release with minor bug fixes / enhancements  
