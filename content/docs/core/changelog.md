@@ -5,7 +5,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.2.0 (Unreleased)
 **Date:** TBD   
-**Description:** Patch fix release with minor bug fixes / enhancements  
+**Description:** Minor release mostly predominantly for the Gift Cards feature  
 --- 
 
 <changelog>
@@ -33,14 +33,14 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Breaking">  
 
     
-* `IProductAdapater` interface now has new `IsGiftCard` property.
+* `IProductAdapater` interface now has a new `IsGiftCard` property.
 
 
 </changelog-group>
 </changelog>
 
-## v1.1.4 (Unreleased)
-**Date:** TBD   
+## v1.1.4
+**Date:** 2020-05-19   
 **Description:** Patch fix release with minor bug fixes / enhancements  
 --- 
 
