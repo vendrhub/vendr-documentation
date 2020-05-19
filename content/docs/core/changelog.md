@@ -50,9 +50,10 @@ description: Changelog for the Core Vendr product
     
 * Fixed javaScript error when refreshing order list view after an order is deleted ([#96](https://github.com/vendrhub/vendr/issues/96)).
 * Fixed formatting issue in table view selection message where `X of Y` message was being displayed without spaces.
-* Fixed YSOD when deleting an order line that has discounts applied to it  ([#98](https://github.com/vendrhub/vendr/issues/96)).
-* Fixed order lines being limited to a max of 100 quantity ([#101](https://github.com/vendrhub/vendr/issues/96)).
-* Fixed YSOD in back office when displaying the transaction info dialog when some keys have an empty value.
+* Fixed YSOD when deleting an order line that has discounts applied to it  ([#98](https://github.com/vendrhub/vendr/issues/98)).
+* Fixed order lines being limited to a max of 100 quantity ([#101](https://github.com/vendrhub/vendr/issues/101)).
+* Fixed YSOD in back office when displaying the transaction info dialog when some keys have an empty value ([#104](https://github.com/vendrhub/vendr/issues/104)).
+* Fixed YSOD when adding a sub order line to a bundle ([#106](https://github.com/vendrhub/vendr/issues/106)).
 
 
 </changelog-group>
