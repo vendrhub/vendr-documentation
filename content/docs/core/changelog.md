@@ -3,6 +3,42 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.0 (Unreleased)
+**Date:** TBD   
+**Description:** Patch fix release with minor bug fixes / enhancements  
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added gift cards feature which includes a new sub-section in the commerce section along with the ability to create gift cards manually and additional automations for automatically creating gift cards and sending gift card emails when a gift card is purchased.
+* Added `IGiftCardCodeGenerator` to allow for custom gift card code generation strategy.
+* Added Zero Value payment provider in core to allow the passing through of orders who's final value is 0 and thus no payment actually needs to be taken. This will be up to the implementor however to setup and select this payment method accordingly.
+* Added gift card service methods to the global `IVendrApi` helper.
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+    
+* Store configuration now has additional gift card configuration fields.
+* Email Templates now have a category used to filter the email templates to display in "send email" dialogs.
+* Updated store create pipeline to auto create the default gift card email.
+* Updated store create pipeline to assign generated emails to the relevant categories.
+* Send email dialogs now have an ability to override the `To` address before sending.
+
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+    
+* `IProductAdapater` interface now has new `IsGiftCard` property.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.1.4 (Unreleased)
 **Date:** TBD   
 **Description:** Patch fix release with minor bug fixes / enhancements  
