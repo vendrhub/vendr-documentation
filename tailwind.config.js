@@ -7,7 +7,7 @@ module.exports = {
         './src/**/*.jsx',
         './src/**/*.html',
         './src/**/*.pug',
-        './../content/**/*.md',
+        './content/**/*.md',
     ],
     options: {
       whitelist: [
