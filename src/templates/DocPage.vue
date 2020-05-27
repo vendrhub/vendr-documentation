@@ -61,6 +61,7 @@ query DocPage($id: ID!) {
     path,
     title,
     description,
+    content,
     fileInfo {
       path
     },

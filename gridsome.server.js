@@ -28,7 +28,8 @@ module.exports = function (api) {
                 all: [DocVersion]!
             }
             type Package implements Node @infer {
-                docVersions: Package_DocVersions
+                docVersions: Package_DocVersions,
+                type: String
             }
         `)
 
