@@ -27,6 +27,11 @@ const baseSrcOpts = {
     'od-remark-responsive-tables'
   ],
   remark: {
+    plugins: [
+      'od-remark-youtube-embed',
+      '@gridsome/remark-prismjs',
+      'od-remark-responsive-tables'
+    ],
     autolinkHeadings: {
       content: {
         type: 'text',
@@ -94,8 +99,8 @@ module.exports = {
         index: ['README'],
         baseDir: './content/docs/',
         path: '**/core/*/reference/**/*.md',
-        typeName: 'DocPage',
-        template: './src/templates/DocPage.vue',
+        typeName: 'DocRefPage',
+        template: './src/templates/DocRefPage.vue',
         refs: {
           package: 'Package',
           docVersion: 'DocVersion',
