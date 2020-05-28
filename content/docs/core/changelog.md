@@ -3,7 +3,7 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.2.1  
+## v1.2.1/2  
 **Date:** 2020-05-28  
 **Description:** Patch release with minor bug fixes / enhancements   
 --- 
@@ -13,6 +13,7 @@ description: Changelog for the Core Vendr product
 
     
 * Fixed bug in discount service preventing discount / gift cards from being redeemed 🤦‍♂️
+* Reverted fix for ([#116](https://github.com/vendrhub/vendr/issues/116)) as it was preventing clean installs so needs investigating further 🤦‍♂️
 
 </changelog-group>
 </changelog> 
