@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.1  
+**Date:** 2020-05-28  
+**Description:** Patch release with minor bug fixes / enhancements   
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed bug in discount service preventing discount / gift cards from being redeemed 🤦‍♂️
+
+</changelog-group>
+</changelog> 
+
+
 ## v1.2.0  
 **Date:** 2020-05-28  
 **Description:** Minor version release predominantly for the Gift Cards feature with a few bug fixes too  
@@ -56,7 +71,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.4
 **Date:** 2020-05-19   
-**Description:** Patch fix release with minor bug fixes / enhancements  
+**Description:** Patch release with minor bug fixes / enhancements  
 --- 
 
 <changelog>
@@ -76,7 +91,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.3
 **Date:** 2020-05-06   
-**Description:** Patch fix release with minor bug fixes / enhancements  
+**Description:** Patch release with minor bug fixes / enhancements  
 --- 
 
 <changelog>
@@ -100,7 +115,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.2  
 **Date:** 2020-05-05   
-**Description:** Patch fix release with minor bug fixes / enhancements  
+**Description:** Patch release with minor bug fixes / enhancements  
 --- 
 
 <changelog>
@@ -139,7 +154,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.1.1  
 **Date:** 2020-04-29  
-**Description:** Patch fix release with minor bug fixes / enhancements  
+**Description:** Patch release with minor bug fixes / enhancements  
 --- 
 
 <changelog>
@@ -197,7 +212,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.3 
 **Date:** 2020-04-24  
-**Description:** Patch fix release with minor bug fixes / enhancements
+**Description:** Patch release with minor bug fixes / enhancements
 --- 
 
 <changelog>
@@ -228,7 +243,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.2 
 **Date:** 2020-04-15  
-**Description:** Patch fix release with minor bug fixes / enhancements
+**Description:** Patch release with minor bug fixes / enhancements
 --- 
 
 <changelog>
@@ -262,7 +277,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.0.1 
 **Date:** 2020-04-06  
-**Description:** Patch fix release with minor fixes found post launch
+**Description:** Patch release with minor fixes found post launch
 --- 
 
 <changelog>
