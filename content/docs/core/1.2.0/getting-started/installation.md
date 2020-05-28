@@ -17,6 +17,8 @@ Alternatively, you can download the Umbraco package file from the [Umbraco Devel
 
 ## NuGet Package Installation
 
+Vendr is also available via [NuGet.Org](https://www.nuget.org/packages/Vendr/).
+
 To install Vendr via NuGet you can run the following command directly in the NuGet Manager Console window:
 
 ```bash
