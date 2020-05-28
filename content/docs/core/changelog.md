@@ -3,8 +3,8 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.2.0 (Unreleased)
-**Date:** TBD   
+## v1.2.0  
+**Date:** 2020-05-28  
 **Description:** Minor version release predominantly for the Gift Cards feature with a few bug fixes too  
 --- 
 
