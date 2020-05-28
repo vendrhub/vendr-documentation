@@ -5,7 +5,7 @@ description: Getting Started with the Invoicing payment provider for Vendr, the 
 
 ## About this Payment Provider
 
-The Invoicing payment provider is a simple "pass through" payment provider that doesn't capture any payment information itself, rather it allows orders to go through in an `Authorized` state where it assumed that payments will be captured manually in an external system. Once captured, orders can then by updated to the `Captured` payment status via the back office.
+The Invoicing payment provider is a "pass through" payment provider that doesn't capture any payment information itself, rather it allows orders to go through in an `Authorized` state where it assumed that payments will be captured manually in an external system. Once captured, orders can then by updated to the `Captured` payment status via the back-office.
 
 ## In this Section
 

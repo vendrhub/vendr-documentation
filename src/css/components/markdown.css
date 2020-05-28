@@ -101,9 +101,7 @@
     @apply mt-0 mb-8 rounded-lg;
 }
 
-.markdown p code[class*="language-"],
-.markdown td code[class*="language-"],
-.markdown ul code[class*="language-"] {
+.markdown :not(pre) > code {
     @apply text-indigo-600 !important;
     @apply rounded px-1 py-0;
     background: rgba(74, 85, 104,.1);

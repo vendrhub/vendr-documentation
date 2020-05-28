@@ -3,9 +3,9 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.2.0 (Unreleased)
-**Date:** TBD   
-**Description:** Minor release mostly predominantly for the Gift Cards feature  
+## v1.2.0  
+**Date:** 2020-05-28  
+**Description:** Minor version release predominantly for the Gift Cards feature with a few bug fixes too  
 --- 
 
 <changelog>
@@ -14,8 +14,21 @@ description: Changelog for the Core Vendr product
     
 * Added gift cards feature which includes a new sub-section in the commerce section along with the ability to create gift cards manually and additional automations for automatically creating gift cards and sending gift card emails when a gift card is purchased.
 * Added `IGiftCardCodeGenerator` to allow for custom gift card code generation strategy.
-* Added Zero Value payment provider in core to allow the passing through of orders who's final value is 0 and thus no payment actually needs to be taken. This will be up to the implementor however to setup and select this payment method accordingly.
+* Added Zero Value payment provider in core to allow the passing through of orders who's final value is 0 and thus no payment needs to be taken. This will be up to the implementer however to setup and select this payment method accordingly.
 * Added gift card service methods to the global `IVendrApi` helper.
+* Added support of dynamic lambda statements in the syntax of `{Model.Value}` in email template subject lines ([#107](https://github.com/vendrhub/vendr/issues/107)).
+* Added validation to the `AddProduct` method to ensure a price for the order currency exists.
+* Added `_ViewStart.cshtml` file to the Vendr views folder to reset any global layout that might have been defined ([#117](https://github.com/vendrhub/vendr/issues/117)).
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+    
+* Fixed NullReference exception when adding a product to an order when missing a price ([#112](https://github.com/vendrhub/vendr/issues/112)).
+* Fixed a number of migration SQL errors when upgrading using SQL Server ([#116](https://github.com/vendrhub/vendr/issues/116)).
+* Fixed error with discount property rule not working correctly when a property doesn't exist ([#115](https://github.com/vendrhub/vendr/issues/115)).
+* Fixed bug with discount code validation incorrectly reporting the discount code is already in use.
 
 
 </changelog-group>
@@ -27,6 +40,8 @@ description: Changelog for the Core Vendr product
 * Updated store create pipeline to auto create the default gift card email.
 * Updated store create pipeline to assign generated emails to the relevant categories.
 * Send email dialogs now have an ability to override the `To` address before sending.
+* Improved the `PricePropertyValue` models `HasValue` method to also check for null values.
+* Updated the `UmbracoProductSnapshot.Prices` property to check for values for the given currency before assuming it has a value.
 
 
 </changelog-group>
@@ -52,7 +67,7 @@ description: Changelog for the Core Vendr product
 * Fixed formatting issue in table view selection message where `X of Y` message was being displayed without spaces.
 * Fixed YSOD when deleting an order line that has discounts applied to it  ([#98](https://github.com/vendrhub/vendr/issues/98)).
 * Fixed order lines being limited to a max of 100 quantity ([#101](https://github.com/vendrhub/vendr/issues/101)).
-* Fixed YSOD in back office when displaying the transaction info dialog when some keys have an empty value ([#104](https://github.com/vendrhub/vendr/issues/104)).
+* Fixed YSOD in back-office when displaying the transaction info dialog when some keys have an empty value ([#104](https://github.com/vendrhub/vendr/issues/104)).
 * Fixed YSOD when adding a sub order line to a bundle ([#106](https://github.com/vendrhub/vendr/issues/106)).
 
 
