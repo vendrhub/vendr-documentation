@@ -54,7 +54,7 @@ public static void MustNotBeNull<T>(this T param, string paramName)
 
 | Parameter | Description |
 | --- | --- |
-| T | The Type of the paramter |
+| T | The Type of the parameter |
 | param | The parameter to check |
 | paramName | A friendly parameter name to display in the assertion exception if the assertion fails |
 
