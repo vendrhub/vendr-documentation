@@ -50,6 +50,7 @@ module.exports = {
       precomposed: true
     }
   },
+  prefetch: { mask: '^$', },
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
