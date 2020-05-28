@@ -28,6 +28,7 @@ description: Changelog for the Core Vendr product
 * Fixed NullReference exception when adding a product to an order when missing a price ([#112](https://github.com/vendrhub/vendr/issues/112)).
 * Fixed a number of migration SQL errors when upgrading using SQL Server ([#116](https://github.com/vendrhub/vendr/issues/116)).
 * Fixed error with discount property rule not working correctly when a property doesn't exist ([#115](https://github.com/vendrhub/vendr/issues/115)).
+* Fixed bug with discount code validation incorrectly reporting the discount code is already in use.
 
 
 </changelog-group>
