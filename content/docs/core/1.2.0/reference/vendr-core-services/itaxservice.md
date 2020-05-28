@@ -135,7 +135,7 @@ public void SaveTaxClass(TaxClass entity)
 
 #### SortTaxClasses
 
-Sorts a list of [`TaxClass`](../../vendr-core-models/taxclass/) enties by ID according to the order of those IDs
+Sorts a list of [`TaxClass`](../../vendr-core-models/taxclass/) entities by ID according to the order of those IDs
 
 ```csharp
 public void SortTaxClasses(Guid[] sortedIds)
@@ -145,7 +145,7 @@ public void SortTaxClasses(Guid[] sortedIds)
 
 | Parameter | Description |
 | --- | --- |
-| sortedIds | The IDs of the [`TaxClass`](../../vendr-core-models/taxclass/) enties to sort, in the order by which to sort them |
+| sortedIds | The IDs of the [`TaxClass`](../../vendr-core-models/taxclass/) entities to sort, in the order by which to sort them |
 
 
 ---

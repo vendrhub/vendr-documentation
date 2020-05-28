@@ -768,7 +768,7 @@ public const string ProductName;
 
 #### TrialMaxOrders
 
-The total number of Orders a trial license is allowed to process before a full license is requried
+The total number of Orders a trial license is allowed to process before a full license is required
 
 ```csharp
 public const int TrialMaxOrders;

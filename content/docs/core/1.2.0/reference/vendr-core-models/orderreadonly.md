@@ -244,7 +244,7 @@ public OrderShippingInfo ShippingInfo { get; }
 
 #### SubtotalPrice
 
-Gets the subtotal price of the Oredr
+Gets the subtotal price of the order
 
 ```csharp
 public ReadOnlyOrderSubtotalPrice SubtotalPrice { get; }

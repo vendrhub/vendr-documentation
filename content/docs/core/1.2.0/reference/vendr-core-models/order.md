@@ -53,7 +53,7 @@ public static Order Create(IUnitOfWork uow, Guid storeId, string languageIsoCode
 
 | Parameter | Description |
 | --- | --- |
-| uow | An active [`IUnitOfWork`](../../vendr-core/iunitofwork/) to use for write opperations |
+| uow | An active [`IUnitOfWork`](../../vendr-core/iunitofwork/) to use for write operations |
 | storeId | The ID of the [`Store`](../store/) the order belongs to |
 | languageIsoCode | The ISO Code of the language of the order |
 | currencyId | The ID of the [`Currency`](../currency/) of the order |

@@ -99,7 +99,7 @@ Returns `true` if the [`DiscountReadOnly`](../../vendr-core-models/discountreado
 
 #### GetActiveDiscounts
 
-Get a list of currenctly active [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
+Get a list of currently active [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
 ```csharp
 public IEnumerable<DiscountReadOnly> GetActiveDiscounts(Guid storeId)
@@ -298,7 +298,7 @@ public void SaveDiscount(Discount entity)
 
 #### SortDiscounts
 
-Sorts a list of [`Discount`](../../vendr-core-models/discount/) enties by ID according to the order of those IDs
+Sorts a list of [`Discount`](../../vendr-core-models/discount/) entities by ID according to the order of those IDs
 
 ```csharp
 public void SortDiscounts(Guid[] sortedIds)
@@ -308,7 +308,7 @@ public void SortDiscounts(Guid[] sortedIds)
 
 | Parameter | Description |
 | --- | --- |
-| sortedIds | The IDs of the [`Discount`](../../vendr-core-models/discount/) enties to sort, in the order by which to sort them |
+| sortedIds | The IDs of the [`Discount`](../../vendr-core-models/discount/) entities to sort, in the order by which to sort them |
 
 
 ---

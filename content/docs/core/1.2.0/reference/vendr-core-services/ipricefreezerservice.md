@@ -71,7 +71,7 @@ public void ThawPrices(Guid? orderId = default(Guid?), string partialKey = null,
 | Parameter | Description |
 | --- | --- |
 | orderId | The ID of the [`Order`](../../vendr-core-models/order/) the prices are associated with |
-| partialKey | A prtial key of the frozen prices |
+| partialKey | A partial key of the frozen prices |
 | currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the frozen prices |
 | countryId | The ID of the [`Country`](../../vendr-core-models/country/) of the frozen prices |
 | regiondId | The ID of the [`Region`](../../vendr-core-models/region/) of the frozen price |

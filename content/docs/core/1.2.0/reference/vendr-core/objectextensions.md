@@ -17,7 +17,7 @@ public static class ObjectExtensions
 
 #### ComparesTo&lt;T&gt;
 
-Compares a source object against a given value using the supplied comparion operator
+Compares a source object against a given value using the supplied comparison operator
 
 ```csharp
 public static bool ComparesTo<T>(this T source, T value, ComparisonOperator comparisonOperator)
@@ -31,7 +31,7 @@ public static bool ComparesTo<T>(this T source, T value, ComparisonOperator comp
 | T | The Type of the source / value objects |
 | source | The Source object to compare |
 | value | The Value to compare against |
-| comparisonOperator | The comparion operator to use for the comparison |
+| comparisonOperator | The comparison operator to use for the comparison |
 
 **Returns**
 

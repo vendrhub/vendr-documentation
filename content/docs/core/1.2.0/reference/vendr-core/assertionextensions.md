@@ -30,7 +30,7 @@ public static void MustContainKey(this IDictionary<string, string> dictionary, s
 | --- | --- |
 | dictionary | The dictionary to check |
 | key | The key to look for |
-| paramName | A friendly parameter name to dislay in the assertion exception if the assertion fails |
+| paramName | A friendly parameter name to display in the assertion exception if the assertion fails |
 
 **Exceptions**
 
@@ -56,7 +56,7 @@ public static void MustNotBeNull<T>(this T param, string paramName)
 | --- | --- |
 | T | The Type of the paramter |
 | param | The parameter to check |
-| paramName | A friendly parameter name to dislay in the assertion exception if the assertion fails |
+| paramName | A friendly parameter name to display in the assertion exception if the assertion fails |
 
 **Exceptions**
 
@@ -80,7 +80,7 @@ public static void MustNotBeNullOrEmpty(this string param, string paramName)
 | Parameter | Description |
 | --- | --- |
 | param | The parameter to check |
-| paramName | A friendly parameter name to dislay in the assertion exception if the assertion fails |
+| paramName | A friendly parameter name to display in the assertion exception if the assertion fails |
 
 **Exceptions**
 
@@ -104,7 +104,7 @@ public static void MustNotBeNullOrWhiteSpace(this string param, string paramName
 | Parameter | Description |
 | --- | --- |
 | param | The parameter to check |
-| paramName | A friendly parameter name to dislay in the assertion exception if the assertion fails |
+| paramName | A friendly parameter name to display in the assertion exception if the assertion fails |
 
 **Exceptions**
 

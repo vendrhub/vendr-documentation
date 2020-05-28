@@ -74,14 +74,14 @@ public void ScheduleAction(Action action)
 Schedules a Notification Event to be raised once the Unit of Work is complete
 
 ```csharp
-public void ScheduleNotification(INotificationEvent evt)
+public void ScheduleNotification(INotificationEvent notificationEvent)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| evt | The Notification Event to raise |
+| notificationEvent | The Notification Event to raise |
 
 
 ---
@@ -91,14 +91,14 @@ public void ScheduleNotification(INotificationEvent evt)
 Schedules a series of Notification Events to be raised once the Unit of Work is complete
 
 ```csharp
-public void ScheduleNotifications(params INotificationEvent[] evts)
+public void ScheduleNotifications(params INotificationEvent[] notificationEvents)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| evts | The list of Notification Events to raise |
+| notificationEvents | The list of Notification Events to raise |
 
 ---
 
@@ -107,14 +107,14 @@ public void ScheduleNotifications(params INotificationEvent[] evts)
 Schedules a series of Notification Events to be raised once the Unit of Work is complete
 
 ```csharp
-public void ScheduleNotifications(IEnumerable<INotificationEvent> evts)
+public void ScheduleNotifications(IEnumerable<INotificationEvent> notificationEvents)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| evts | The list of Notification Events to raise |
+| notificationEvents | The list of Notification Events to raise |
 
 
 ### Events

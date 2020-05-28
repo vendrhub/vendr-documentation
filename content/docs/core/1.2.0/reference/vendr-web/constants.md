@@ -346,7 +346,7 @@ public static readonly IReadOnlyDictionary<NodeType, int> Ids;
 
 #### Constants.Trees.Settings.NodeType
 
-Defines the alises for vendr's core settings tree node types.
+Defines the aliases for vendr's core settings tree node types.
 
 ```csharp
 public enum NodeType
@@ -446,7 +446,7 @@ public static readonly IReadOnlyDictionary<NodeType, int> Ids;
 
 #### Constants.Trees.Stores.NodeType
 
-Defines the alises for vendr's core tree node types.
+Defines the aliases for vendr's core tree node types.
 
 ```csharp
 public enum NodeType

@@ -422,6 +422,7 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidateOrderStatusCode](validateorderstatuscode/) |  |
 | class [ValidatePaymentMethodAllowedInPaymentCountryRegion](validatepaymentmethodallowedinpaymentcountryregion/) |  |
 | class [ValidatePaymentMethodBelongsToOrderStore](validatepaymentmethodbelongstoorderstore/) |  |
+| class [ValidateProductAddHasPrice](validateproductaddhasprice/) |  |
 | class [ValidateProductAddQuantityPositive](validateproductaddquantitypositive/) |  |
 | class [ValidateShippingMethodAllowedInShippingCountryRegion](validateshippingmethodallowedinshippingcountryregion/) |  |
 | class [ValidateShippingMethodBelongsToOrderStore](validateshippingmethodbelongstoorderstore/) |  |

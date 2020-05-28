@@ -7,7 +7,7 @@ description: API reference for PagedResult<T> in Vendr, the eCommerce solution f
 Represents a paged result for a model collection
 
 ```csharp
-public class PagedResult<T> : PagedResultBase, IEnumerable<T>
+public class PagedResult<T> : PagedResultBase
 ```
 
 **Inheritance**
@@ -38,15 +38,6 @@ public PagedResult(long totalItems, long pageNumber, long pageSize)
 
 ```csharp
 public IEnumerable<T> Items { get; set; }
-```
-
-
-### Methods
-
-#### GetEnumerator
-
-```csharp
-public IEnumerator<T> GetEnumerator()
 ```
 
 

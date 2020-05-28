@@ -15,7 +15,7 @@ public static class PublishedContentExtensions
 
 #### GetMasterProductNode
 
-Gets a product nodes master product if one exists. Only to be used if using umbraco nodes as product information data source.
+Gets a product nodes master product if one exists. Only to be used if using Umbraco nodes as product information data source.
 
 ```csharp
 public static IPublishedContent GetMasterProductNode(this IPublishedContent productNode, 

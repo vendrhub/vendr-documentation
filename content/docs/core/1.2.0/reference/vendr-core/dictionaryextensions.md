@@ -17,7 +17,7 @@ public static class DictionaryExtensions
 
 #### GetTypedValueAs&lt;T&gt;
 
-Get the value of ditionary cast to a given Type
+Get the value of dictionary cast to a given Type
 
 ```csharp
 public static T GetTypedValueAs<T>(this IDictionary<string, object> dict, string key)
@@ -33,7 +33,7 @@ public static T GetTypedValueAs<T>(this IDictionary<string, object> dict, string
 
 **Returns**
 
-The cast dictionary Value, or default(T) if the Value is not present or uncastable
+The cast dictionary Value, or default(T) if the Value is not present or cannot be cast to the given type
 
 
 ---
@@ -171,7 +171,7 @@ public static PropertyCollection<TValue> ToPropertyCollection<TSource, TValue>(
 
 #### TryGetTypedValue&lt;T&gt;
 
-Try to get the value of ditionary cast to a given Type
+Try to get the value of dictionary cast to a given Type
 
 ```csharp
 public static bool TryGetTypedValue<T>(this IDictionary<string, object> dict, string key, 
@@ -185,7 +185,7 @@ public static bool TryGetTypedValue<T>(this IDictionary<string, object> dict, st
 | T | The Type to cast the Value to |
 | dict | The dictionary to retrieve the Value from |
 | key | The Key of the Value to retrieve |
-| result | The cast dictionary Value, or default(T) if the Value is not present or uncastable |
+| result | The cast dictionary Value, or default(T) if the Value is not present or cannot be cast to the given type |
 
 **Returns**
 

@@ -32,7 +32,7 @@ public override PipelineResult Execute(PipelineArgs input)
 
 | Parameter | Description |
 | --- | --- |
-| input | The pieline args. |
+| input | The pipeline args. |
 
 **Returns**
 

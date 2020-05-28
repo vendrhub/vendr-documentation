@@ -128,7 +128,7 @@ public void SaveStore(Store entity)
 
 #### SortStores
 
-Sorts a list of [`Store`](../../vendr-core-models/store/) enties by ID according to the order of those IDs
+Sorts a list of [`Store`](../../vendr-core-models/store/) entities by ID according to the order of those IDs
 
 ```csharp
 public void SortStores(Guid[] sortedIds)
@@ -138,7 +138,7 @@ public void SortStores(Guid[] sortedIds)
 
 | Parameter | Description |
 | --- | --- |
-| sortedIds | The IDs of the [`Store`](../../vendr-core-models/store/) enties to sort, in the order by which to sort them |
+| sortedIds | The IDs of the [`Store`](../../vendr-core-models/store/) entities to sort, in the order by which to sort them |
 
 
 ---

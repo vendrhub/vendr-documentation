@@ -32,7 +32,7 @@ public abstract class AggregateBase<TReadOnlySelf, TWritableSelf, TState> : Enti
 
 #### IsNew
 
-Gets a boolean flag to indicate whether the entity is new and therfore has not yet been persisted to the database
+Gets a boolean flag to indicate whether the entity is new and therefore has not yet been persisted to the database
 
 ```csharp
 public bool IsNew { get; }
@@ -68,7 +68,7 @@ public virtual TWritableSelf AsWritable(IUnitOfWork uow)
 
 | Parameter | Description |
 | --- | --- |
-| uow | An active [`IUnitOfWork`](../../vendr-core/iunitofwork/) to use for write opperations |
+| uow | An active [`IUnitOfWork`](../../vendr-core/iunitofwork/) to use for write operations |
 
 **Returns**
 

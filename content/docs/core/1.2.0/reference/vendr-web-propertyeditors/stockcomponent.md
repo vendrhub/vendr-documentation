@@ -4,7 +4,7 @@ description: API reference for StockComponent in Vendr, the eCommerce solution f
 ---
 ## StockComponent
 
-Component to hook into the content saved event handler in order to update stock values. We have to do it this way because we need to ensure a content item has been saved and has a key before we can persist the stock as we need the key as reference. Without this, you'd have to disallow entry during create which isn't an ideal UX. With this approach, we can allow a stock level to be entered straight away and just persist it when the content item has actually been persisted.
+Component to hook into the content saved event handler in order to update stock values. We have to do it this way because we need to ensure a content item has been saved and has a key before we can persist the stock as we need the key as reference. Without this, you'd have to disallow entry during create which isn't an ideal UX. With this approach, we can allow a stock level to be entered straight away and only persist it when the content item itself has been persisted.
 
 ```csharp
 public class StockComponent : IComponent
