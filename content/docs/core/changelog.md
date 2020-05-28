@@ -5,7 +5,7 @@ description: Changelog for the Core Vendr product
 
 ## v1.2.0 (Unreleased)
 **Date:** TBD   
-**Description:** Minor release mostly predominantly for the Gift Cards feature  
+**Description:** Minor version release predominantly for the Gift Cards feature with a few bug fixes too  
 --- 
 
 <changelog>
