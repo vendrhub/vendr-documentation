@@ -53,6 +53,15 @@ You only need to install a license when you are ready to go live.
 
 Vendr is fully functional during development, and whilst it is hosted on a local server (`localhost` or `.local` domains).
 
-You can also host a staging site on a `*.azurewebsite.net` or `*.umbraco.io` domain without the need of a license. However, if you wish to host the site on your own staging URL, then an appropriate license file will be required.
+You can also host a staging site on a `*.azurewebsite.net` or `*.umbraco.io` domain without the need of a license. 
+
+Hosting on any other public domains without a license will be limited to a maximum of 20 orders.
+
+If you require an unrestricted staging environment, all licenses support two methods of allowing this:  
+
+* `staging.client.com` - Licenses allow unlimited subdomains so you can host the staging site on a subdomain of the licensed domain  
+* `clientcom.agency.com` - Licenses allow a concatenation of the licensed domain as a subdomain of any other domain  
+
+If you wish to host the site on any other URL, then an additional license file will be required for that domain.  
 
 </message-box>

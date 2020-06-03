@@ -44,7 +44,7 @@
           v-if="$page.doc.docVersion && $page.doc.docVersion.subPackages && $page.doc.docVersion.subPackages.length > 1"
           :sub-packages="$page.doc.docVersion.subPackages"
           :current-sub-package="$page.doc.subPackage" />
-      <grouped-links-list :groups="links" v-if="links && links.length > 0" />
+      <grouped-links-list :groups="links" :active-link="items[currentIndex]" v-if="links && links.length > 0" />
     </template>
 
     <template slot="aside">
@@ -61,6 +61,7 @@ query DocPage($id: ID!) {
     path,
     title,
     description,
+    content,
     fileInfo {
       path
     },
@@ -233,9 +234,17 @@ export default {
       }, [])
     },
     currentIndex () {
-      return this.items.findIndex(item => {
+      var idx =  this.items.findIndex(item => {
         return item.link.replace(/\/$/, '') === this.$route.path.replace(/\/$/, '')
       })
+      if (idx == -1) {
+        idx = this.items.slice().reverse().findIndex(item => {
+          return this.$route.path.replace(/\/$/, '').startsWith(item.link.replace(/\/$/, ''))
+        })
+        var count = this.items.length - 1
+        idx = idx >= 0 ? count - idx : idx;
+      }
+      return idx;
     },
     nextPage () {
       return this.items[this.currentIndex + 1]
@@ -251,13 +260,15 @@ export default {
     {
       metaTitle += " - " + this.$page.doc.subPackage.name
     }
-    if (this.$page.doc.package && this.$page.doc.package.type !== 'Product') {
+    if (this.$page.doc.package) {
       metaTitle += " - " + this.$page.doc.package.name
     }
     return {
       title: metaTitle,
       meta: [
-        { name: 'twitter:title', content: metaTitle }
+        { name: 'twitter:title', content: metaTitle },
+        { name: 'twitter:description', content: this.$page.doc.description },
+        { key: 'description', name: 'description', content: this.$page.doc.description }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }

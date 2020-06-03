@@ -1,6 +1,6 @@
 ---
 title: Home Page
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+description: eCommerce for Umbraco v8+ with simplicity at heart
 ---
 
 import PackageList from '~/components/PackageList'

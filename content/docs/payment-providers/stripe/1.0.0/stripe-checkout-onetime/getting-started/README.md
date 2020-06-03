@@ -5,7 +5,7 @@ description: Getting Started with the Stripe Checkout (One Time) payment provide
 
 ## About this Payment Provider
 
-The Stripe payment provider provides functionality to capture payments via the [Stripe](https://stripe.com) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back office.
+The Stripe payment provider provides functionality to capture payments via the [Stripe](https://stripe.com) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back-office.
 
 ## In this Section
 
