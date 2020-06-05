@@ -3,6 +3,34 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.3 (Unreleased)  
+**Date:** TBC  
+**Description:** Patch release with minor bug fixes / enhancements   
+---
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed issue with recent gift card config settings not being copied when a store is deep cloned.
+* Fixed issue with store "allowed users" not persisting due to incorrect variable name in views.
+* Fixed issue where domain events that affect the saving entity model were not being persisted due to a variable reference issue and deep comparisons not working.
+* Fixed issue with the sort dialog close button not working ([#123](https://github.com/vendrhub/vendr/issues/123)).
+* Fixed issue where deleted gift cards were still showing in list view ([#124](https://github.com/vendrhub/vendr/issues/124)).
+* Fixed issue where stock values were being cached at the page level where they should be at the request level ([#125](https://github.com/vendrhub/vendr/issues/125)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Only show payment / shipping "via" in the back-office if a payment / shipping method is known.
+* Added script to NuGet packages to auto increment client dependency version.
+* Order calculation now rounds prices to the currencies defined decimal places level after each calculation step in order to prevent rounding issues ([#126](https://github.com/vendrhub/vendr/issues/126)).
+* Payment Provider cancel, continue and callback URL hashes now include the actual URL, and not just the reference as part of the hash. This is to prevent tampering of the the URLs.
+* Session cookies are now flagged as `HttpOnly` (this can be disabled by setting an app setting `Vendr:Cookies:HttpOnly` to `false`), and when the site is accessed over https, also flagged as `Secure`. This is to protect the session cookies from being hijacked from malicious entities. 
+* The current finalized order is now stored in it's own session cookie with a limited lifetime of 5 minutes providing enough time to display a confirmation page, but no longer persisting until a new order took it's place.
+
+</changelog-group>
+</changelog> 
+
 ## v1.2.1/2  
 **Date:** 2020-05-28  
 **Description:** Patch release with minor bug fixes / enhancements   
