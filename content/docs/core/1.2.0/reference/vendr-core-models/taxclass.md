@@ -17,10 +17,19 @@ public class TaxClass : TaxClassReadOnly
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static TaxClass Create(IUnitOfWork uow, Guid storeId, string alias, string name, 
+    TaxRate defaultTaxRate)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static TaxClass Create(IUnitOfWork uow, Guid id, Guid storeId, string alias, string name, 
     TaxRate defaultTaxRate)
 ```
 

@@ -28,30 +28,58 @@ public UmbracoApiControllerPaymentProviderUriResolver()
 
 ### Methods
 
-#### GetCallbackUrl
+#### GetCallbackUrl (1 of 2)
 
 ```csharp
 public string GetCallbackUrl(string paymentProviderAlias, OrderReference orderReference, 
-    string hash)
+    IHashProvider hashProvider)
 ```
-
 
 ---
 
-#### GetCancelUrl
+#### GetCallbackUrl (2 of 2)
 
 ```csharp
-public string GetCancelUrl(string paymentProviderAlias, OrderReference orderReference, string hash)
+public string GetCallbackUrl(string paymentProviderAlias, OrderReference orderReference, 
+    IHashProvider hashProvider, out string hash)
 ```
 
 
 ---
 
-#### GetContinueUrl
+#### GetCancelUrl (1 of 2)
+
+```csharp
+public string GetCancelUrl(string paymentProviderAlias, OrderReference orderReference, 
+    IHashProvider hashProvider)
+```
+
+---
+
+#### GetCancelUrl (2 of 2)
+
+```csharp
+public string GetCancelUrl(string paymentProviderAlias, OrderReference orderReference, 
+    IHashProvider hashProvider, out string hash)
+```
+
+
+---
+
+#### GetContinueUrl (1 of 2)
 
 ```csharp
 public string GetContinueUrl(string paymentProviderAlias, OrderReference orderReference, 
-    string hash)
+    IHashProvider hashProvider)
+```
+
+---
+
+#### GetContinueUrl (2 of 2)
+
+```csharp
+public string GetContinueUrl(string paymentProviderAlias, OrderReference orderReference, 
+    IHashProvider hashProvider, out string hash)
 ```
 
 

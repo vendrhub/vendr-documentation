@@ -30,7 +30,7 @@ public CalculateSubOrderLineDiscountedPricesTask(ILogger logger)
 #### AdditionalProcessing
 
 ```csharp
-public override void AdditionalProcessing(OrderLineCalculationPipelineArgs parentPipelineArgs, 
+public override void AdditionalProcessing(OrderLineCalculationPipelineArgs args, 
     OrderLineCalculation orderLineCalculation)
 ```
 

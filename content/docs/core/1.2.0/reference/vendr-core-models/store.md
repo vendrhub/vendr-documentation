@@ -17,10 +17,18 @@ public class Store : StoreReadOnly
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static Store Create(IUnitOfWork uow, string alias, string name)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static Store Create(IUnitOfWork uow, Guid id, string alias, string name)
 ```
 
 

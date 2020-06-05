@@ -1,27 +1,29 @@
 ---
-title: WebSessionStore
-description: API reference for WebSessionStore in Vendr, the eCommerce solution for Umbraco v8+
+title: WebTempStore
+description: API reference for WebTempStore in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## WebSessionStore
+## WebTempStore
 
 ```csharp
-public class WebSessionStore : WebStoreBase, ISessionStore
+public class WebTempStore : WebStoreBase, ITempStore
 ```
 
 **Inheritance**
 
 * class [WebStoreBase](../webstorebase/)
-* interface [ISessionStore](../../vendr-core-session/isessionstore/)
+* interface [ITempStore](../../vendr-core-session/itempstore/)
 
 **Namespace**
 * [Vendr.Core.Web.Session](../)
 
 ### Constructors
 
-#### WebSessionStore
+#### WebTempStore
+
+The default constructor.
 
 ```csharp
-public WebSessionStore(Lazy<IStoreService> storeService)
+public WebTempStore()
 ```
 
 

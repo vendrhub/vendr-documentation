@@ -17,10 +17,19 @@ public class Region : RegionReadOnly
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static Region Create(IUnitOfWork uow, Guid storeId, Guid countryId, string code, string name)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static Region Create(IUnitOfWork uow, Guid id, Guid storeId, Guid countryId, string code, 
+    string name)
 ```
 
 

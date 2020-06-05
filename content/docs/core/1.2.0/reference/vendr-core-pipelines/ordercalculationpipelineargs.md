@@ -44,6 +44,15 @@ public CurrencyReadOnly Currency { get; }
 
 ---
 
+#### CurrencyFormatter
+
+```csharp
+public CurrencyFormatter CurrencyFormatter { get; }
+```
+
+
+---
+
 #### Order
 
 ```csharp

@@ -22,7 +22,8 @@ public class OrderLineCalculationPipelineArgs : PipelineArgs<OrderLineCalculatio
 ```csharp
 public OrderLineCalculationPipelineArgs(IUnitOfWork uow, OrderLineCalculation model, 
     StoreReadOnly store, OrderReadOnly order, OrderLineReadOnly orderLine, 
-    CurrencyReadOnly currency, TaxSource taxSource, TaxRate fallbackTaxRate)
+    CurrencyReadOnly currency, CurrencyFormatter currencyFormatter, TaxSource taxSource, 
+    TaxRate fallbackTaxRate)
 ```
 
 
@@ -41,6 +42,15 @@ public OrderLineCalculation Calculation { get; }
 
 ```csharp
 public CurrencyReadOnly Currency { get; set; }
+```
+
+
+---
+
+#### CurrencyFormatter
+
+```csharp
+public CurrencyFormatter CurrencyFormatter { get; set; }
 ```
 
 

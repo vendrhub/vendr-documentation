@@ -17,10 +17,19 @@ public class GiftCard : GiftCardReadOnly
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static GiftCard Create(IUnitOfWork uow, Guid storeId, string code, Guid currencyId, 
+    decimal originalAmount, Guid? orderId = default(Guid?))
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static GiftCard Create(IUnitOfWork uow, Guid id, Guid storeId, string code, Guid currencyId, 
     decimal originalAmount, Guid? orderId = default(Guid?))
 ```
 

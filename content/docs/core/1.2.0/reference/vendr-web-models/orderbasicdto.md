@@ -121,7 +121,7 @@ public PaymentMethodBasicDto PaymentMethod { get; set; }
 #### PaymentMethodId
 
 ```csharp
-public Guid PaymentMethodId { get; set; }
+public Guid? PaymentMethodId { get; set; }
 ```
 
 
@@ -148,7 +148,7 @@ public ShippingMethodBasicDto ShippingMethod { get; set; }
 #### ShippingMethodId
 
 ```csharp
-public Guid ShippingMethodId { get; set; }
+public Guid? ShippingMethodId { get; set; }
 ```
 
 

@@ -37,7 +37,7 @@ public override bool IsFinalizing { get; }
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 Creates a new instance of an [`Order`](../order/)
 
@@ -54,6 +54,43 @@ public static Order Create(IUnitOfWork uow, Guid storeId, string languageIsoCode
 | Parameter | Description |
 | --- | --- |
 | uow | An active [`IUnitOfWork`](../../vendr-core/iunitofwork/) to use for write operations |
+| storeId | The ID of the [`Store`](../store/) the order belongs to |
+| languageIsoCode | The ISO Code of the language of the order |
+| currencyId | The ID of the [`Currency`](../currency/) of the order |
+| taxClassId | The ID of the [`TaxClass`](../taxclass/) of the order |
+| orderStatusId | The ID of the [`OrderStatus`](../orderstatus/) of the order |
+| paymentMethodId | The ID of the [`PaymentMethod`](../paymentmethod/) of the order |
+| paymentCountryId | The ID of the payment [`Country`](../country/) of the order |
+| paymentRegionId | The ID of the payment [`Region`](../region/) of the order |
+| shippingMethodId | The ID of the [`ShippingMethod`](../shippingmethod/) of the order |
+| shippingCountryId | The ID of the shipping [`Country`](../country/) of the order |
+| shippingRegionId | The ID of the shipping [`Region`](../region/) of the order |
+| customerReference | The unique reference of the customer the order belongs to |
+
+**Returns**
+
+A new [`Order`](../order/) instance
+
+---
+
+#### Create (2 of 2)
+
+Creates a new instance of an [`Order`](../order/)
+
+```csharp
+public static Order Create(IUnitOfWork uow, Guid id, Guid storeId, string languageIsoCode, 
+    Guid currencyId, Guid taxClassId, Guid orderStatusId, Guid? paymentMethodId = default(Guid?), 
+    Guid? paymentCountryId = default(Guid?), Guid? paymentRegionId = default(Guid?), 
+    Guid? shippingMethodId = default(Guid?), Guid? shippingCountryId = default(Guid?), 
+    Guid? shippingRegionId = default(Guid?), string customerReference = null)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| uow | An active [`IUnitOfWork`](../../vendr-core/iunitofwork/) to use for write operations |
+| id | And explicit ID to assign to the [`Order`](../order/) |
 | storeId | The ID of the [`Store`](../store/) the order belongs to |
 | languageIsoCode | The ISO Code of the language of the order |
 | currencyId | The ID of the [`Currency`](../currency/) of the order |
