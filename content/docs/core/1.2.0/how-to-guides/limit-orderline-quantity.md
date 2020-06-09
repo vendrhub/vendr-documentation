@@ -64,3 +64,23 @@ public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<Val
 }
 
 ````
+
+## Register event handlers
+
+Finally we need to register the Vendr event handlers in our `StoreComposer`.
+
+````csharp
+[ComposeAfter(typeof(VendrWebComposer))]
+public class StoreComposer : IUserComposer
+{
+    public void Compose(Composition composition)
+    {
+        // Register event handlers
+        composition.WithValidationEvent<ValidateOrderProductAdd>()
+            .RegisterHandler<ProductAddValidationHandler>();
+
+        composition.WithValidationEvent<ValidateOrderLineQuantityChange>()
+            .RegisterHandler<OrderLineQuantityValidationHandler>();
+    }
+}
+````
