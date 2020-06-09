@@ -3,7 +3,7 @@ title: Limit Orderline Quantity in Vendr
 description: How-To Guide to limit orderline quantity in Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-In this guide we wil be looking at Validation events in Vendr to be able to limit orderline quantity based on the existing stock value on the product and the existing quantities of the product in the cart.
+In this guide we will be looking at Validation events in Vendr to be able to limit orderline quantity based on the existing stock value on the product and the existing quantities of the product in the cart.
 
 ## ProductAddValidationHandler
 
