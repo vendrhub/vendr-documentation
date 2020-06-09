@@ -1,5 +1,5 @@
 ---
-title: Limit Order Line Quantity in Vendr
+title: Limit Order Line Quantity
 description: How-To Guide to limit order line quantity in Vendr, the eCommerce solution for Umbraco v8+
 ---
 
