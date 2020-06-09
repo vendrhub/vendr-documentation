@@ -59,7 +59,7 @@ public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<Val
         var stock = product.Value<decimal?>("stock");
 
         if (stock.HasValue && evt.Quantity.To > stock.Value)
-            evt.Fail($"Only {stock} quantities can be purchased for {productReference}.");
+            evt.Fail($"Only {stock} quantities can be purchased for {productReference}");
     }
 }
 
