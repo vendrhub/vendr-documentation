@@ -53,7 +53,7 @@ If you need to store your licenses in an alternative directory, you can change w
 
 <message-box type="info" heading="A note about Umbraco Cloud">
 
-If you are using an Umbraco Cloud website, please note that the `UmbracoLicensesDirectory` is automatically set to `~\App_Plugins\UmbracoLicenses\` so when using Vendr on an Umbraco Cloud licenses your should place your licenses in this directory and not the default `App_Data` folder.
+If you are using an Umbraco Cloud website, please note that the `UmbracoLicensesDirectory` is automatically set to `~\App_Plugins\UmbracoLicenses\` so when using Vendr on an Umbraco Cloud site you should place your licenses in this directory and not the default `App_Data` folder.
 
 </message-box>
 
