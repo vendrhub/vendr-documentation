@@ -640,6 +640,17 @@ public const string IsGiftCardPropertyAlias;
 
 ---
 
+#### IsRecurringPropertyAlias
+
+The property alias of the product Is Recurring property
+
+```csharp
+public const string IsRecurringPropertyAlias;
+```
+
+
+---
+
 #### MasterRelationPropertyAlias
 
 The property alias of the product Master Relation property

@@ -55,6 +55,26 @@ public virtual ApiResult CancelPayment(OrderReadOnly order, TSettingsModel setti
 
 ---
 
+#### CanProcessOrder
+
+```csharp
+public override bool CanProcessOrder(OrderReadOnly order, 
+    IReadOnlyDictionary<string, string> settings, ref string errorMessage)
+```
+
+
+---
+
+#### CanProcessOrder
+
+```csharp
+public virtual bool CanProcessOrder(OrderReadOnly order, TSettingsModel settings, 
+    ref string errorMessage)
+```
+
+
+---
+
 #### CapturePayment
 
 ```csharp

@@ -9,7 +9,7 @@ public class ValidationError
 ```
 
 **Namespace**
-* [Vendr.Core.Events.Validation](../)
+* [Vendr.Core.Models](../)
 
 ### Constructors
 
