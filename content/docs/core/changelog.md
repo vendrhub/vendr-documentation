@@ -3,8 +3,8 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.2.4 (Unreleased)  
-**Date:** TBC  
+## v1.2.4   
+**Date:** 2020-06-12  
 **Description:** Patch release with minor bug fixes / enhancements and some minor breaking changes 
 ---  
 
@@ -13,7 +13,7 @@ description: Changelog for the Core Vendr product
 
     
 * Added support for `UmbracoLicensesDirectory` app setting to define where licenses are located ([#119](https://github.com/vendrhub/vendr/issues/119)).
-* Add `CanProcessOrder` method to payment providers so that payment providers can pre-check whether they would be capable of processing a given order.
+* Added `CanProcessOrder` method to payment providers so that payment providers can pre-check whether they would be capable of processing a given order.
 
 
 </changelog-group>
