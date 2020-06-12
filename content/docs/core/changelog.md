@@ -3,6 +3,44 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.4 (Unreleased)  
+**Date:** TBC  
+**Description:** Patch release with minor bug fixes / enhancements and some minor breaking changes 
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added support for `UmbracoLicensesDirectory` app setting to define where licenses are located ([#119](https://github.com/vendrhub/vendr/issues/119)).
+* Add `CanProcessOrder` method to payment providers so that payment providers can pre-check whether they would be capable of processing a given order.
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed issue where it wasn't possible to update a products stock back to the previously entered stock level ([#127](https://github.com/vendrhub/vendr/issues/127)).
+* Fixed issue where multiple operations within a single UoW were not being persisted due to stale state not getting updated correctly ([#128](https://github.com/vendrhub/vendr/issues/128)).
+* Fixed issue with the `Extract` helper method throwing an exception if the give item to extract couldn't be found.
+* Fixed issue where null order / order line properties would cause persistence error.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated the percentage amount discounts rewards to only allow positive percentage values ([#113](https://github.com/vendrhub/vendr/issues/113)).
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+    
+* Renamed the `Persistance` namespace to the correct `Persistence` spelling. This is a breaking change, but people shouldn't be using the persistence resources directly.
+* Moved `ValidationError` to `Models` namespace. This is a breaking change, but people shouldn't be using the `ValidationError` model directly.
+
+
+</changelog-group>
+</changelog> 
+
+
 ## v1.2.3  
 **Date:** 2020-06-05  
 **Description:** Patch release with minor bug fixes / enhancements  
