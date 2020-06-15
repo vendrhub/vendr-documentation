@@ -3,6 +3,34 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.5 (Unreleased)   
+**Date:** TBC  
+**Description:** Patch release with minor bug fixes / enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added license warning message to gift cards, discounts and store settings sections.
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed issue where sort dialog displays the wrong error message if there is an error whilst sorting ([#131](https://github.com/vendrhub/vendr/issues/131)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Deprecated "Master" terminology in the code base so now `MasterRelation` is not `ProductSource` (This is currently just deprecated so the existing `MasterRelation` will still work, but moving forward `ProductSource` will be the recommended terminology).
+* Updated the payment methods create dialog to exclude any payment providers with `[obsolete]` in their name. Obsolete payment providers can still be used, but they won't be selectable for new payment methods.
+* Removed the sort option from the Gift Cards section as gift cards aren't sortable ([#131](https://github.com/vendrhub/vendr/issues/131)).
+
+</changelog-group>
+</changelog>
+
+
 ## v1.2.4   
 **Date:** 2020-06-12  
 **Description:** Patch release with minor bug fixes / enhancements and some minor breaking changes 
