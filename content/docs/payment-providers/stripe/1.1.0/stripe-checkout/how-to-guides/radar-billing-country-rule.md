@@ -13,7 +13,7 @@ The first step will be to ensure you are capturing the customers billing address
 
 ## Step 2 - Pass the billing country to Stripe
 
-Thankfully there is nothing for you to do in this step. As long as you have populated your orders billing country, then the Stripe payment provider will automatically send the country to Stripe using custom meta data on the transaction. The only important thing to know here is that this will be passed via a meta data entry with the key `orderBillingCountry`, with the value of the two letter ISO code of the given country.
+Thankfully there is nothing for you to do in this step. As long as you have populated your orders billing country, then the Stripe payment provider will automatically send the country to Stripe using custom meta data on the transactions customer entity. The only important thing to know here is that this will be passed via a meta data entry with the key `billingCountry`, with the value of the two letter ISO code of the given country.
 
 ## Step 3 - Sign up for Radar for Fraud Teams
 
@@ -34,15 +34,15 @@ With the **Radar for Fraud Teams** feature enabled, navigate to the **Radar > Ru
 In the dialog that is displayed, enter the following rule:
 
 ````
-Block if ::orderBillingCountry:: != :card_country:
+Block if ::customer:billingCountry:: != :card_country:
 ````
 
-![Stripe Radar for Fraud Teams Setting](~/assets/images/screenshots/stripe/stripe_block_country_rule.png)
+![Stripe Radar for Fraud Teams Setting](~/assets/images/screenshots/stripe/stripe_block_country_rule2.png)
 
 Finally, click the **Test rule** button to test the rule and then the **Add and enable** button add the rule to the list of block rules.
 
 
-![Stripe Radar blocking rules](~/assets/images/screenshots/stripe/stripe_block_rules.png)
+![Stripe Radar blocking rules](~/assets/images/screenshots/stripe/stripe_block_rules2.png)
 
 <message-box type="info" heading="Note">
 
