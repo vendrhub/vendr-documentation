@@ -1,5 +1,5 @@
 ---
-title: Processing Subscription Payments
+title: How to Process Subscription Payments
 description: Documentation for the Stripe Checkout payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
