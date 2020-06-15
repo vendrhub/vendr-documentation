@@ -1,6 +1,6 @@
 ---
 title: How to block payments from non billing country sources
-description: Documentation for the Stripe Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Stripe Checkout payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 Out of the box, Stripe already implements a lot of security features for you, making payments safe and secure by default, however you may have a need to provide additional security steps of your own. 

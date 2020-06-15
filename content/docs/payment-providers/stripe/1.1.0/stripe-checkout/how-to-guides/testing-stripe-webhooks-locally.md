@@ -1,6 +1,6 @@
 ---
 title: How to test Stripe webhooks locally
-description: Documentation for the Stripe Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Stripe Checkout payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 Because the Stripe payment provider uses webhooks to finalize payments, it can make it tricky to be able to test payments locally as for Stripe to be able to notify you, the site must have a public facing URL.

@@ -1,6 +1,6 @@
 ---
 title: Stripe Checkout
-description: Documentation for the Stripe Checkoutpayment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Stripe Checkout payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 ## Using These Docs

@@ -15,6 +15,8 @@
   items:
     - title: Overview
       link: /how-to-guides/
+    - title: How to process Subscription payments
+      link: /how-to-guides/processing-subscription-payments/
     - title: How to block payments from non billing country sources
       link: /how-to-guides/radar-billing-country-rule/
     - title: How to test Stripe webhooks locally
