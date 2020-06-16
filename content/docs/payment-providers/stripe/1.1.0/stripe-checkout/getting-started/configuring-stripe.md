@@ -54,7 +54,7 @@ From the **Version** dropdown you can leave this set as **Your current version**
 
 Click **Add endpoint** to create the webhook endpoint registration and you should now be sent to the webhook details screen.
 
-![Stripe Webhook Details](~/assets/images/screenshots/stripe/stripe_webhook_details.png)
+![Stripe Webhook Details](~/assets/images/screenshots/stripe/stripe_webhook_details2.png)
 
 Finally, from this screen, locate the **Signing secret** section and click the **Click to reveal** button to display the webhook signing secret. Be sure to take note of this as we will need this later so that we can validate webhook requests.
 
