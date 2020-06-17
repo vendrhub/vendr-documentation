@@ -40,6 +40,27 @@ Boolean indicating whether the comparison was successful or not
 
 ---
 
+#### IsObsolete
+
+Determines if the given object is decorated as being obsolete
+
+```csharp
+public static bool IsObsolete(this object obj)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| obj | The object to check |
+
+**Returns**
+
+True if the type is obsolete, otherwise False
+
+
+---
+
 #### ToDictionary
 
 Converts a generic object into a dictionary, converting the object properties into key value pairs

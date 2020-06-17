@@ -20,7 +20,7 @@ public sealed class Price : ValueObjectBase, IPrice
 
 ### Constructors
 
-#### Price (1 of 2)
+#### Price (1 of 4)
 
 Instantiates a new [`Price`](../price/) instance
 
@@ -38,7 +38,25 @@ public Price(decimal valueWithoutTax, decimal tax, Guid currencyId)
 
 ---
 
-#### Price (2 of 2)
+#### Price (2 of 4)
+
+Instantiates a new [`Price`](../price/) instance
+
+```csharp
+public Price(decimal valueWithoutTax, decimal tax, CurrencyReadOnly currency)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| valueWithoutTax | The value of the price without tax |
+| tax | The tax value of the price |
+| currency | The [`Currency`](../currency/) of the price |
+
+---
+
+#### Price (3 of 4)
 
 Instantiates a new [`Price`](../price/) instance
 
@@ -55,8 +73,38 @@ public Price(decimal valueWithoutTax, decimal tax, decimal valueWithTax, Guid cu
 | valueWithTax | The value of the price with tax |
 | currencyId | The ID of the [`Currency`](../currency/) of the price |
 
+---
+
+#### Price (4 of 4)
+
+Instantiates a new [`Price`](../price/) instance
+
+```csharp
+public Price(decimal valueWithoutTax, decimal tax, decimal valueWithTax, CurrencyReadOnly currency)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| valueWithoutTax | The value of the price without tax |
+| tax | The tax value of the price |
+| valueWithTax | The value of the price with tax |
+| currency | The [`Currency`](../currency/) of the price |
+
 
 ### Properties
+
+#### CultureName
+
+Gets the Culture Name of the [`Currency`](../currency/) of the price
+
+```csharp
+public string CultureName { get; }
+```
+
+
+---
 
 #### CurrencyId
 
@@ -102,7 +150,7 @@ public decimal WithTax { get; }
 
 ### Methods
 
-#### Calculate
+#### Calculate (1 of 2)
 
 Calculates a price from the given [`TaxRate`](../taxrate/)
 
@@ -118,6 +166,30 @@ public static Price Calculate(decimal value, TaxRate taxRate, Guid currencyId,
 | value | The value of the price |
 | taxRate | The [`TaxRate`](../taxrate/) of the price |
 | currencyId | The ID of the [`Currency`](../currency/) of the price |
+| valueIncludesTax | A boolean flag indicating whether the supplied price already includes tax |
+
+**Returns**
+
+A new [`Price`](../price/) instance
+
+---
+
+#### Calculate (2 of 2)
+
+Calculates a price from the given [`TaxRate`](../taxrate/)
+
+```csharp
+public static Price Calculate(decimal value, TaxRate taxRate, CurrencyReadOnly currency, 
+    bool valueIncludesTax = false)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| value | The value of the price |
+| taxRate | The [`TaxRate`](../taxrate/) of the price |
+| currency | The [`Currency`](../currency/) of the price |
 | valueIncludesTax | A boolean flag indicating whether the supplied price already includes tax |
 
 **Returns**

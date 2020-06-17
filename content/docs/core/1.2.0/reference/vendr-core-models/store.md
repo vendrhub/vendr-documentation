@@ -20,7 +20,8 @@ public class Store : StoreReadOnly
 #### Create (1 of 2)
 
 ```csharp
-public static Store Create(IUnitOfWork uow, string alias, string name)
+public static Store Create(IUnitOfWork uow, string alias, string name, 
+    bool autoPopulateStore = true)
 ```
 
 ---
@@ -28,7 +29,8 @@ public static Store Create(IUnitOfWork uow, string alias, string name)
 #### Create (2 of 2)
 
 ```csharp
-public static Store Create(IUnitOfWork uow, Guid id, string alias, string name)
+public static Store Create(IUnitOfWork uow, Guid id, string alias, string name, 
+    bool autoPopulateStore = true)
 ```
 
 

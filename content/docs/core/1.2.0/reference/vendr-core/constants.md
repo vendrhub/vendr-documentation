@@ -651,17 +651,6 @@ public const string IsRecurringPropertyAlias;
 
 ---
 
-#### MasterRelationPropertyAlias
-
-The property alias of the product Master Relation property
-
-```csharp
-public const string MasterRelationPropertyAlias;
-```
-
-
----
-
 #### NamePropertyAlias
 
 The property alias of the product Product Name property
@@ -683,6 +672,17 @@ The property alias of the product Price property
 
 ```csharp
 public const string PricePropertyAlias;
+```
+
+
+---
+
+#### ProductSourcePropertyAlias
+
+The property alias of the linked product source node property
+
+```csharp
+public const string ProductSourcePropertyAlias;
 ```
 
 

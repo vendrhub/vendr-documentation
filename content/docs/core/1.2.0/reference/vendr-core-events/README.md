@@ -426,6 +426,7 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidateShippingMethodAllowedInShippingCountryRegion](validateshippingmethodallowedinshippingcountryregion/) |  |
 | class [ValidateShippingMethodBelongsToOrderStore](validateshippingmethodbelongstoorderstore/) |  |
 | class [ValidateTaxClassBelongsToOrderStore](validatetaxclassbelongstoorderstore/) |  |
+| class [ValidateTransactionInitialized](validatetransactioninitialized/) |  |
 | class [ValidateUniqueBundleId](validateuniquebundleid/) |  |
 
 ## Vendr.Core.Events.Validation.Handlers.PaymentMethod namespace
