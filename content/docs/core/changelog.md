@@ -23,6 +23,7 @@ description: Changelog for the Core Vendr product
 * Fixed rounding issue in order calculation  ([#126](https://github.com/vendrhub/vendr/issues/126)).
 * Fixed issue with the entity cache storing null values which shouldn't be allowed.
 * Fixed issue where setting an explicit sort order on a new entity would be ignored on save.
+* Fixed regression issue from 1.2.3 where loading orders from the database was switching the order id and country id of the order causing calculation problems.
 
 </changelog-group>
 <changelog-group category="Changed">  
