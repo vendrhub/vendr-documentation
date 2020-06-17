@@ -4,7 +4,7 @@ description: Changelog for the Core Vendr product
 ---
 
 ## v1.2.5    
-**Date:** 2020-06017   
+**Date:** 2020-06-17   
 **Description:** Patch release with minor bug fixes / enhancements  
 ---  
 
