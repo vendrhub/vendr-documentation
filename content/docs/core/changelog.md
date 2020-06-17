@@ -30,7 +30,7 @@ description: Changelog for the Core Vendr product
 </changelog-group>
 <changelog-group category="Changed">  
 
-* Deprecated "Master" terminology in the code base so now `MasterRelation` is not `ProductSource` (This is currently just deprecated so the existing `MasterRelation` will still work, but moving forward `ProductSource` will be the recommended terminology).
+* Deprecated "Master" terminology in the code base so `MasterRelation` is now `ProductSource` (This is currently just deprecated so the existing `MasterRelation` will still work, but moving forward `ProductSource` will be the recommended terminology).
 * Updated the payment methods create dialog to exclude any payment providers marked with an `[Obsolete]` attribute. Obsolete payment providers can still be used, but they won't be selectable for new payment methods.
 * Removed the sort option from the Gift Cards section as gift cards aren't sortable ([#131](https://github.com/vendrhub/vendr/issues/131)).
 * Made the `Order.InitializeTransaction` method public to allow people to create and finalize a transaction in code without having to go via a payment gateway.
