@@ -72,6 +72,7 @@ description: Changelog for the Core Vendr product
     
 * Renamed the `Persistance` namespace to the correct `Persistence` spelling. This is a breaking change, but people shouldn't be using the persistence resources directly.
 * Moved `ValidationError` to `Models` namespace. This is a breaking change, but people shouldn't be using the `ValidationError` model directly.
+* With the introduction of the `UmbracoLicensesDirectory` app setting, if you are running on Umbraco Cloud and have a license installed, because Umbraco Cloud auto sets this setting to `~\App_Plugins\UmbracoLicenses\` you will need to move your license files from the `App_Data` folder to this new location.
 
 
 </changelog-group>
