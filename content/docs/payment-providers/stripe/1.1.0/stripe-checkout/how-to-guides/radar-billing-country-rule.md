@@ -13,7 +13,7 @@ The first step will be to ensure you are capturing the customers billing address
 
 ## Step 2 - Pass the billing country to Stripe
 
-Thankfully there is nothing for you to do in this step. As long as you have populated your orders billing country, then the Stripe payment provider will automatically send the country to Stripe using custom meta data on the transactions customer entity. The only important thing to know here is that this will be passed via a meta data entry with the key `billingCountry`, with the value of the two letter ISO code of the given country.
+Thankfully there is nothing for you to do in this step. As long as you have populated your orders billing country, then the Stripe payment provider will automatically send the country to Stripe using custom meta data on the transactions customer entity. The only important thing to know here is that this will be passed via a meta data entry on the Stripe customer with the key `billingCountry`, with the value of the two letter ISO code of the given country.
 
 ## Step 3 - Sign up for Radar for Fraud Teams
 
