@@ -34,7 +34,6 @@ export default function (Vue, { head }) {
   head.meta.push({ name: 'twitter:card', content: 'summary_large_image' })
   head.meta.push({ name: 'twitter:site', content: '@heyvendr' })
   head.meta.push({ name: 'twitter:image', content: 'https://repository-images.githubusercontent.com/219485415/0a5af600-ff0a-11e9-9709-1e962201165e' })
-  head.meta.push({ name: 'twitter:description', content: 'Vendr Documentation' })
 
   head.htmlAttrs = { class: 'doc' }
   head.bodyAttrs = { class: 'doc font-brand-body text-gray-700 leading-normal subpixel-antialiased' }

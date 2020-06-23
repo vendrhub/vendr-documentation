@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    props: ['groups'],
+    props: ['groups','activeLink'],
     computed: {
         currentPath () {
             return this.$route.matched[0].path + '/'
@@ -35,7 +35,7 @@ export default {
     },
     methods: {
         isActive (path) {
-            return this.currentPath == path;
+            return this.activeLink && this.activeLink.link == path;
         }
     }
 }
