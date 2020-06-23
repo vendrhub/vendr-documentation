@@ -16,7 +16,7 @@ public class VendrPaymentController : UmbracoApiController
 #### VendrPaymentController
 
 ```csharp
-public VendrPaymentController(VendrContext vendr)
+public VendrPaymentController(VendrContext vendr, IPaymentProviderUriResolver uriResolver)
 ```
 
 

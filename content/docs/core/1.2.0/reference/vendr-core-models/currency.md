@@ -18,10 +18,19 @@ public class Currency : CurrencyReadOnly, IHasWrtiableAllowedCountries<Currency>
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static Currency Create(IUnitOfWork uow, Guid storeId, string code, string name, 
+    string cultureName)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static Currency Create(IUnitOfWork uow, Guid id, Guid storeId, string code, string name, 
     string cultureName)
 ```
 

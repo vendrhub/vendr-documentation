@@ -20,11 +20,20 @@ public class PaymentMethod : PaymentMethodReadOnly, IHasWritableServicePrices<Pa
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static PaymentMethod Create(IUnitOfWork uow, Guid storeId, string alias, string name, 
     string paymentProviderAlias)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static PaymentMethod Create(IUnitOfWork uow, Guid id, Guid storeId, string alias, 
+    string name, string paymentProviderAlias)
 ```
 
 

@@ -25,6 +25,10 @@ For this tutorial Paul Seal, of [CodeShare.co.uk](https://codeshare.co.uk) has k
 
 `youtube:https://www.youtube.com/watch?v=wesosSLSdm8`
 
+## Part 6 - Setting up the PayPal Payment Provider
+
+`youtube:https://www.youtube.com/watch?v=Rtv_gX55Kpg`
+
 <message-box type="info" heading="Work in Progress">
 
 This video series is currently a work in progress. Additional links will be added as new videos are released.

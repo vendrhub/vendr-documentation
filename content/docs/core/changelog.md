@@ -3,10 +3,114 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.5    
+**Date:** 2020-06-17   
+**Description:** Patch release with minor bug fixes / enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added license warning message to gift cards, discounts and store settings sections.
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed issue where sort dialog displays the wrong error message if there is an error whilst sorting ([#131](https://github.com/vendrhub/vendr/issues/131)).
+* Fixed issue where Dates were incorrect due to use of DateTime.Now rather than DateTime.UtcNow  ([#134](https://github.com/vendrhub/vendr/issues/134)).
+* Fixed rounding issue in order calculation  ([#126](https://github.com/vendrhub/vendr/issues/126)).
+* Fixed issue with the entity cache storing null values which shouldn't be allowed.
+* Fixed issue where setting an explicit sort order on a new entity would be ignored on save.
+* Fixed regression issue from 1.2.3 where loading orders from the database was switching the order id and currency id of the order causing calculation problems.
+* Fixed issue with spelling mistake in discount rules / reward configs for `Amounts Include Tax` properties ([#135](https://github.com/vendrhub/vendr/issues/135)).
+* Fixed issue with discounts not maintaining their sort order when loading from the database ([#132](https://github.com/vendrhub/vendr/issues/132)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Deprecated "Master" terminology in the code base so `MasterRelation` is now `ProductSource` (This is currently just deprecated so the existing `MasterRelation` will still work, but moving forward `ProductSource` will be the recommended terminology).
+* Updated the payment methods create dialog to exclude any payment providers marked with an `[Obsolete]` attribute. Obsolete payment providers can still be used, but they won't be selectable for new payment methods.
+* Removed the sort option from the Gift Cards section as gift cards aren't sortable ([#131](https://github.com/vendrhub/vendr/issues/131)).
+* Made the `Order.InitializeTransaction` method public to allow people to create and finalize a transaction in code without having to go via a payment gateway.
+* Store `Create` method extended to make store auto population configurable. This is needed for Vendr.Deploy.
+
+</changelog-group>
+</changelog>
+
+
+## v1.2.4   
+**Date:** 2020-06-12  
+**Description:** Patch release with minor bug fixes / enhancements and some minor breaking changes 
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added support for `UmbracoLicensesDirectory` app setting to define where licenses are located ([#119](https://github.com/vendrhub/vendr/issues/119)).
+* Added `CanProcessOrder` method to payment providers so that payment providers can pre-check whether they would be capable of processing a given order.
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed issue where it wasn't possible to update a products stock back to the previously entered stock level ([#127](https://github.com/vendrhub/vendr/issues/127)).
+* Fixed issue where multiple operations within a single UoW were not being persisted due to stale state not getting updated correctly ([#128](https://github.com/vendrhub/vendr/issues/128)).
+* Fixed issue with the `Extract` helper method throwing an exception if the give item to extract couldn't be found.
+* Fixed issue where null order / order line properties would cause persistence error.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated the percentage amount discounts rewards to only allow positive percentage values ([#113](https://github.com/vendrhub/vendr/issues/113)).
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+    
+* Renamed the `Persistance` namespace to the correct `Persistence` spelling. This is a breaking change, but people shouldn't be using the persistence resources directly.
+* Moved `ValidationError` to `Models` namespace. This is a breaking change, but people shouldn't be using the `ValidationError` model directly.
+* With the introduction of the `UmbracoLicensesDirectory` app setting, if you are running on Umbraco Cloud and have a license installed, because Umbraco Cloud auto sets this setting to `~\App_Plugins\UmbracoLicenses\` you will need to move your license files from the `App_Data` folder to this new location.
+
+
+</changelog-group>
+</changelog> 
+
+
+## v1.2.3  
+**Date:** 2020-06-05  
+**Description:** Patch release with minor bug fixes / enhancements  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed issue with recent gift card config settings not being copied when a store is deep cloned.
+* Fixed issue with store "allowed users" not persisting due to incorrect variable name in views.
+* Fixed issue where domain events that affect the saving entity model were not being persisted due to a variable reference issue and deep comparisons not working.
+* Fixed issue with the sort dialog close button not working ([#123](https://github.com/vendrhub/vendr/issues/123)).
+* Fixed issue where deleted gift cards were still showing in list view ([#124](https://github.com/vendrhub/vendr/issues/124)).
+* Fixed issue where stock values were being cached at the page level where they should be at the request level ([#125](https://github.com/vendrhub/vendr/issues/125)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Only show payment / shipping "via" in the back-office if a payment / shipping method is known.
+* Added script to NuGet packages to auto increment client dependency version.
+* Order calculation now rounds prices to the currencies defined decimal places level after each calculation step in order to prevent rounding issues ([#126](https://github.com/vendrhub/vendr/issues/126)).
+* Payment Provider cancel, continue and callback URL hashes now include the actual URL, and not just the reference as part of the hash. This is to prevent tampering of the the URLs.
+* Session cookies are now flagged as `HttpOnly` (this can be disabled by setting an app setting `Vendr:Cookies:HttpOnly` to `false`), and when the site is accessed over https, also flagged as `Secure`. This is to protect the session cookies from being hijacked from malicious entities. 
+* The current finalized order is now stored in it's own session cookie with a limited lifetime of 5 minutes providing enough time to display a confirmation page, but no longer persisting until a new order took it's place.
+
+</changelog-group>
+</changelog> 
+
 ## v1.2.1/2  
 **Date:** 2020-05-28  
 **Description:** Patch release with minor bug fixes / enhancements   
---- 
+---  
 
 <changelog>
 <changelog-group category="Fixed">  

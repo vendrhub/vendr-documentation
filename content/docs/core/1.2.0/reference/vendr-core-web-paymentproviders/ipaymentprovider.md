@@ -130,6 +130,16 @@ public ApiResult CancelPayment(OrderReadOnly order, IReadOnlyDictionary<string, 
 
 ---
 
+#### CanProcessOrder
+
+```csharp
+public bool CanProcessOrder(OrderReadOnly order, IReadOnlyDictionary<string, string> settings, 
+    ref string errorMessage)
+```
+
+
+---
+
 #### CapturePayment
 
 ```csharp

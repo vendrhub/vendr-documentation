@@ -17,10 +17,19 @@ public class Country : CountryReadOnly
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static Country Create(IUnitOfWork uow, Guid storeId, string code, string name, 
+    bool autoCreateRegions = false)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static Country Create(IUnitOfWork uow, Guid id, Guid storeId, string code, string name, 
     bool autoCreateRegions = false)
 ```
 
