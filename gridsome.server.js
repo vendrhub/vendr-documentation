@@ -28,7 +28,8 @@ module.exports = function (api) {
                 all: [DocVersion]!
             }
             type Package implements Node @infer {
-                docVersions: Package_DocVersions
+                docVersions: Package_DocVersions,
+                type: String
             }
         `)
 
@@ -179,7 +180,8 @@ module.exports = function (api) {
 
         // Inject package / version information into docs pages
         const docNodes = getCollection('DocPage').data();
-        docNodes.forEach((n, i) => {
+        const docRefNodes = getCollection('DocRefPage').data();
+        [...docNodes, ...docRefNodes].forEach((n, i) => {
             let packageNode = packageNodes.find(p => n.path.startsWith(p.path))
             if (packageNode) {
                 n.package = packageNode.id

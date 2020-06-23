@@ -5,7 +5,7 @@ description: Documentation for the Invoicing payment provider for Vendr, the eCo
 
 ## Using These Docs
 
-**These docs are aimed at developers** looking to implement simple invoice payments in a Vendr eCommerce store. It is expected that you have at least a basic understanding of [Umbraco](https://umbraco.com), as well the [Vendr core product](../../../../core/).
+**These docs are aimed at developers** looking to implement basic invoice payments in a Vendr eCommerce store. It is expected that you have at least a basic understanding of [Umbraco](https://umbraco.com), as well the [Vendr core product](../../../../core/).
 
 ## Getting Help
 

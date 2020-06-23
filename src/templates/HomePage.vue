@@ -35,7 +35,9 @@ export default {
     return {
       title: metaTitle,
       meta: [
-        { name: 'twitter:title', content: metaTitle }
+        { name: 'twitter:title', content: metaTitle },
+        { name: 'twitter:description', content: this.$page.doc.description },
+        { key: 'description', name: 'description', content: this.$page.doc.description }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }

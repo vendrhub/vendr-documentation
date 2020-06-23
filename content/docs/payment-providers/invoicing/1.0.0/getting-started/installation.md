@@ -3,7 +3,7 @@ title: Installation
 description: Documentation for the Invoicing payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-The Invoicing payment provider is the only payment provider that actually comes pre-installed with Vendr so you shouldn't need to install it yourself. That said, if for whatever reason the package does not appear to be installed, you can install it as follows.
+The Invoicing payment provider is the only payment provider that comes pre-installed with Vendr so you shouldn't need to install it yourself. That said, if for whatever reason the package does not appear to be installed, you can install it as follows.
 
 There are currently two ways to install the Invoicing payment provider for Vendr into your solution. Using the Umbraco package distribution, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
 
