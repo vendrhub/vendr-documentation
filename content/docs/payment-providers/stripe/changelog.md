@@ -3,9 +3,9 @@ title: Changelog
 description: Changelog for the Stripe Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## v1.1.0 (Unreleased)   
-**Date:** TBC  
-**Description:** Patch release with minor bug fixes / enhancements  
+## v1.1.0   
+**Date:** 2020-06-23  
+**Description:** Minor release with Subscription payments support  
 ---  
 
 <changelog>
