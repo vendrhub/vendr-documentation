@@ -51,6 +51,15 @@ public string Icon { get; set; }
 
 ---
 
+#### IsObsolete
+
+```csharp
+public bool IsObsolete { get; set; }
+```
+
+
+---
+
 #### Name
 
 ```csharp

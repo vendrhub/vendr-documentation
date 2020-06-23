@@ -458,6 +458,27 @@ The updated [`Order`](../../vendr-core-models/order/) entity
 
 ---
 
+#### InitializeTransaction
+
+Initializes a transaction ready to send to the payment gateway
+
+```csharp
+public static Order InitializeTransaction(this Order order)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| order | The [`Order`](../../vendr-core-models/order/) instance |
+
+**Returns**
+
+The updated [`Order`](../../vendr-core-models/order/) entity
+
+
+---
+
 #### Recalculate (1 of 2)
 
 Recalculates the order

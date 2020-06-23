@@ -6,9 +6,10 @@ description: API reference for Vendr.Core.Collections in Vendr, the eCommerce so
 
 | Public Type | Description |
 | --- | --- |
-| class [ChangeTrackingConcurrentDictionary&lt;TKey,TValue&gt;](changetrackingconcurrentdictionary-2/) |  |
+| class [ChangeTrackingLazyConcurrentDictionary&lt;TKey,TValue&gt;](changetrackinglazyconcurrentdictionary-2/) |  |
 | class [ConcurrentDictionary&lt;TKey,TValue&gt;](concurrentdictionary-2/) |  |
 | interface [IConcurrentDictionary&lt;TKey,TValue&gt;](iconcurrentdictionary-2/) |  |
+| class [LazyConcurrentDictionary&lt;TKey,TValue&gt;](lazyconcurrentdictionary-2/) |  |
 | class [NullSafeDictionary&lt;TKey,TValue&gt;](nullsafedictionary-2/) |  |
 | class [NullSafeReadOnlyDictionary&lt;TKey,TValue&gt;](nullsafereadonlydictionary-2/) |  |
 | class [PropertyCollection&lt;TValue&gt;](propertycollection-1/) |  |

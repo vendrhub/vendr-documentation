@@ -123,6 +123,7 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | class [TaxSource](taxsource/) |  |
 | class [TotalPrice](totalprice/) |  |
 | class [TotalPriceWithPreviousDiscount](totalpricewithpreviousdiscount/) |  |
+| class [ValidationError](validationerror/) |  |
 | abstract class [ValueObjectBase](valueobjectbase/) | Base class for an immutable Vendr value object |
 | abstract class [VendrSettingDefinition](vendrsettingdefinition/) |  |
 

@@ -30,6 +30,7 @@ description: API reference for Vendr.Core in Vendr, the eCommerce solution for U
 | static class [PaymentMethodExtensions](paymentmethodextensions/) |  |
 | static class [ShippingMethodExtensions](shippingmethodextensions/) |  |
 | static class [StringExtensions](stringextensions/) | String extension methods |
+| static class [TypeExtensions](typeextensions/) | Type extension methods |
 | class [UmbracoUnitOfWork](umbracounitofwork/) | A [`IDatabaseUnitOfWork`](vendr-core/idatabaseunitofwork/) implementation using Umbraco Scopes |
 | class [UmbracoUnitOfWorkProvider](umbracounitofworkprovider/) | A [`IUnitOfWorkProvider`](vendr-core/iunitofworkprovider/) implementation based on Umbraco Scopes |
 

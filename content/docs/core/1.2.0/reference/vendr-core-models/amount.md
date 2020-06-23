@@ -20,7 +20,7 @@ public class Amount : ValueObjectBase, IAmount
 
 ### Constructors
 
-#### Amount
+#### Amount (1 of 2)
 
 Instantiates a new [`Amount`](../amount/) instance
 
@@ -35,8 +35,36 @@ public Amount(decimal value, Guid currencyId)
 | value | The value of the amount |
 | currencyId | The ID of the [`Currency`](../currency/) of the price |
 
+---
+
+#### Amount (2 of 2)
+
+Instantiates a new [`Amount`](../amount/) instance
+
+```csharp
+public Amount(decimal value, CurrencyReadOnly currency)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| value | The value of the amount |
+| currency | The [`Currency`](../currency/) of the price |
+
 
 ### Properties
+
+#### CultureName
+
+Gets the Culture Name of the [`Currency`](../currency/) of the amount
+
+```csharp
+public string CultureName { get; }
+```
+
+
+---
 
 #### CurrencyId
 

@@ -5,8 +5,12 @@ description: API reference for SessionManager in Vendr, the eCommerce solution f
 ## SessionManager
 
 ```csharp
-public class SessionManager : IAdminSessionManager
+public class SessionManager : ISessionManager
 ```
+
+**Inheritance**
+
+* interface [ISessionManager](../isessionmanager/)
 
 **Namespace**
 * [Vendr.Core.Session](../)
@@ -19,7 +23,8 @@ public class SessionManager : IAdminSessionManager
 public SessionManager(IStoreService storeService, IOrderService orderService, 
     ICurrencyService currencyService, ICountryService countryService, 
     IPaymentMethodService paymentMethodService, IShippingMethodService shippingMethodService, 
-    ITaxService taxService, ISessionStore sessionStore, IUnitOfWorkProvider uowProvider)
+    ITaxService taxService, ISessionStore sessionStore, ITempStore tempStore, 
+    IUnitOfWorkProvider uowProvider)
 ```
 
 

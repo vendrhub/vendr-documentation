@@ -17,10 +17,19 @@ public class EmailTemplate : EmailTemplateReadOnly
 
 ### Methods
 
-#### Create
+#### Create (1 of 2)
 
 ```csharp
 public static EmailTemplate Create(IUnitOfWork uow, Guid storeId, string alias, string name)
+```
+
+---
+
+#### Create (2 of 2)
+
+```csharp
+public static EmailTemplate Create(IUnitOfWork uow, Guid id, Guid storeId, string alias, 
+    string name)
 ```
 
 

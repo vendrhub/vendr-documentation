@@ -22,6 +22,15 @@ public DiscountRewardConfig Config { get; }
 
 ---
 
+#### Currency
+
+```csharp
+public CurrencyReadOnly Currency { get; }
+```
+
+
+---
+
 #### Discount
 
 ```csharp

@@ -5,11 +5,12 @@ description: API reference for WebSessionStore in Vendr, the eCommerce solution 
 ## WebSessionStore
 
 ```csharp
-public class WebSessionStore : ISessionStore
+public class WebSessionStore : WebStoreBase, ISessionStore
 ```
 
 **Inheritance**
 
+* class [WebStoreBase](../webstorebase/)
 * interface [ISessionStore](../../vendr-core-session/isessionstore/)
 
 **Namespace**

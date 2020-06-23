@@ -640,12 +640,12 @@ public const string IsGiftCardPropertyAlias;
 
 ---
 
-#### MasterRelationPropertyAlias
+#### IsRecurringPropertyAlias
 
-The property alias of the product Master Relation property
+The property alias of the product Is Recurring property
 
 ```csharp
-public const string MasterRelationPropertyAlias;
+public const string IsRecurringPropertyAlias;
 ```
 
 
@@ -672,6 +672,17 @@ The property alias of the product Price property
 
 ```csharp
 public const string PricePropertyAlias;
+```
+
+
+---
+
+#### ProductSourcePropertyAlias
+
+The property alias of the linked product source node property
+
+```csharp
+public const string ProductSourcePropertyAlias;
 ```
 
 
