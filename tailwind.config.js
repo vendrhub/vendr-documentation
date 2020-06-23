@@ -1,4 +1,33 @@
 module.exports = {
+
+  purge: {
+    content: [
+        './src/**/*.vue',
+        './src/**/*.js',
+        './src/**/*.jsx',
+        './src/**/*.html',
+        './src/**/*.pug',
+        './content/**/*.md',
+    ],
+    options: {
+      whitelist: [
+          'body',
+          'html',
+          'img',
+          'a',
+          'g-image',
+          'g-image--lazy',
+          'g-image--loaded',
+          'ml-0', 'ml-4' // 'On this page' dynamic inset
+      ],
+      whitelistPatternsChildren: [
+          /code/, /pre/, /language/, /token/, 
+          /ul/, /ol/, /p/, /a/, /blockquote/,
+          /sticky/, /not/
+      ]
+    }
+  },
+
   theme: {
 
     fontWeight: {

@@ -5,7 +5,7 @@ description: Getting Started with the PayPal payment provider for Vendr, the eCo
 
 ## About this Payment Provider
 
-The PayPal payment provider provides functionality to capture payments via the [PayPal](https://paypal.com) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back office.
+The PayPal payment provider provides functionality to capture payments via the [PayPal](https://paypal.com) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back-office.
 
 ## In this Section
 

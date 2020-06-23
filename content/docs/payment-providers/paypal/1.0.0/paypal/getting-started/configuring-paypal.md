@@ -29,7 +29,7 @@ We create an App via the PayPal Developer Portal at [https://developer.paypal.co
 
 ![PayPal Apps](~/assets/images/screenshots/paypal/applications.png)
 
-From here, we create our two apps by toggling the **Sanbox\Live** toggle buttons, and clicking the **Create App** button to create an App for each environment. 
+From here, we create our two apps by toggling the **Sandbox\Live** toggle buttons, and clicking the **Create App** button to create an App for each environment. 
 
 In the **Create New App** screen, give your app a name, and for the Sandbox App, choose the **Sandbox Business Account** to associated the App with and click the **Create App** button to create the App and be sent to the App details screen.
 

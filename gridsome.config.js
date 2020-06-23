@@ -20,6 +20,27 @@ const postcssPlugins = [
 	tailwind(),
 ]
 
+const baseSrcOpts = {
+  plugins: [
+    'od-remark-youtube-embed',
+    '@gridsome/remark-prismjs',
+    'od-remark-responsive-tables'
+  ],
+  remark: {
+    plugins: [
+      'od-remark-youtube-embed',
+      '@gridsome/remark-prismjs',
+      'od-remark-responsive-tables'
+    ],
+    autolinkHeadings: {
+      content: {
+        type: 'text',
+        value: '#'
+      }
+    }
+  }
+}
+
 // Export
 module.exports = {
   siteName: 'Vendr Documentation',
@@ -34,6 +55,7 @@ module.exports = {
       precomposed: true
     }
   },
+  prefetch: { mask: '^$', },
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
@@ -50,6 +72,7 @@ module.exports = {
         baseDir: './content/home/',
         typeName: 'HomePage',
         template: './src/templates/HomePage.vue',
+        ...baseSrcOpts
       }
     },
     {
@@ -64,19 +87,26 @@ module.exports = {
           docVersion: 'DocVersion',
           subPackage: 'SubPackage',
         },
-        plugins: [
-          'od-remark-youtube-embed',
-          '@gridsome/remark-prismjs',
-          'od-remark-responsive-tables'
+        ignore: [
+          "**/core/*/reference/**/*.md"
         ],
-        remark: {
-          autolinkHeadings: {
-            content: {
-              type: 'text',
-              value: '#'
-            }
-          }
-        }
+        ...baseSrcOpts
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        index: ['README'],
+        baseDir: './content/docs/',
+        path: '**/core/*/reference/**/*.md',
+        typeName: 'DocRefPage',
+        template: './src/templates/DocRefPage.vue',
+        refs: {
+          package: 'Package',
+          docVersion: 'DocVersion',
+          subPackage: 'SubPackage',
+        },
+        ...baseSrcOpts
       }
     }
   ],
