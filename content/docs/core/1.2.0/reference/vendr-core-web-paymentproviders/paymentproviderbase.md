@@ -135,6 +135,16 @@ public virtual ApiResult CancelPayment(OrderReadOnly order,
 
 ---
 
+#### CanProcessOrder
+
+```csharp
+public virtual bool CanProcessOrder(OrderReadOnly order, 
+    IReadOnlyDictionary<string, string> settings, ref string errorMessage)
+```
+
+
+---
+
 #### CapturePayment
 
 ```csharp

@@ -295,6 +295,27 @@ The updated [`Order`](../order/) entity
 
 ---
 
+#### InitializeTransaction
+
+Initializes a transaction ready to send to the payment gateway
+
+```csharp
+public Order InitializeTransaction(IOrderNumberGenerator orderNumberGenerator)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| orderNumberGenerator | The [`IOrderNumberGenerator`](../../vendr-core-generators/iordernumbergenerator/) to use to generate and order number with |
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
 #### Recalculate (1 of 2)
 
 Recalculates the order

@@ -369,7 +369,6 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidateTaxClassSave](validatetaxclasssave/) |  |
 | class [ValidateTaxClassTaxRateChange](validatetaxclasstaxratechange/) |  |
 | class [ValidateTaxClassUpdate](validatetaxclassupdate/) |  |
-| class [ValidationError](validationerror/) |  |
 | abstract class [ValidationEventBase](validationeventbase/) |  |
 | abstract class [ValidationEventHandlerBase&lt;TValidationEvent&gt;](validationeventhandlerbase-1/) |  |
 
@@ -427,6 +426,7 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidateShippingMethodAllowedInShippingCountryRegion](validateshippingmethodallowedinshippingcountryregion/) |  |
 | class [ValidateShippingMethodBelongsToOrderStore](validateshippingmethodbelongstoorderstore/) |  |
 | class [ValidateTaxClassBelongsToOrderStore](validatetaxclassbelongstoorderstore/) |  |
+| class [ValidateTransactionInitialized](validatetransactioninitialized/) |  |
 | class [ValidateUniqueBundleId](validateuniquebundleid/) |  |
 
 ## Vendr.Core.Events.Validation.Handlers.PaymentMethod namespace
