@@ -34,7 +34,7 @@ In order for Reepay to notify Vendr of a successful transaction, Reepay makes us
 To register a webhook, in the sidebar, click the **Developers** heading and then the **Webhooks** sub heading. At the top of the page click the **Configuration** button and next click **Add url** button and enter the Vendr callback URL as follows (replacing the parameters in curly brackets with the corresponding values taken from your store):
 
 ````
-https://{store_domain}/umbraco/vendr/payment/callback/reepay-checkout-onetime/{payment_method_id}/
+https://{store_domain}/umbraco/vendr/payment/callback/reepay-checkout/{payment_method_id}/
 ````
 
 ![Reepay Webhook](~/assets/images/screenshots/reepay/reepay_webhook.png)
