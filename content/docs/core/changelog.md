@@ -3,6 +3,30 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.6 (Unreleased)    
+**Date:** TBC   
+**Description:** Patch release with minor bug fixes / enhancements  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Thawing prices now causes existing, unfinalized orders to recalculate and re-freeze prices at the current rate ([#145](https://github.com/vendrhub/vendr/issues/145)).
+* Fixed YSOD when applying a discount with multiple rewards for the same price target. Applied discounts now accumulate all rewards per price type ([#136](https://github.com/vendrhub/vendr/issues/136)).
+* Fixed bug in discounts where the "Block discount if previous discounts already apply" setting was not being honored ([#142](https://github.com/vendrhub/vendr/issues/142)).
+* Fixed bug in discounts where Order Total based percentage discounts were not being applied ([#143](https://github.com/vendrhub/vendr/issues/143)).
+* Fixed error when creating an order and adding order lines in the same UoW. This ultimately came down to the price freezing logic freezing prices too early. For new orders, prices are now frozen after the initial save ([#140](https://github.com/vendrhub/vendr/issues/140)).
+* Fixed issue in migrations where some installs seem to convert unique indexes into unique constraints and so a YSOD is thrown when attempting to drop the index. We now check to see if a constraint exists first and then perform the appropriate task ([#116](https://github.com/vendrhub/vendr/issues/116)).
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+* `IShippingCalculator` methods now take in a `ShippingCalculatorContext` with a reference to the current order / order calculation should one be available ([#146](https://github.com/vendrhub/vendr/issues/146)).
+* `IPaymentCalculator` methods now take in a `PaymentCalculatorContext` with a reference to the current order / order calculation should one be available ([#146](https://github.com/vendrhub/vendr/issues/146)).
+
+</changelog-group>
+</changelog>
+
 ## v1.2.5    
 **Date:** 2020-06-17   
 **Description:** Patch release with minor bug fixes / enhancements  
