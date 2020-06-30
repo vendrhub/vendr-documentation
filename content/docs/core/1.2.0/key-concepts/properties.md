@@ -18,7 +18,7 @@ In order to set a Property on an Order / Order Line, it first needs to be [in it
 order.SetProperty("propertyAlias", "Property Value");
 
 // Set multiple properties at once
-order.SetProperties(mew Dictionary<string, string>{
+order.SetProperties(new Dictionary<string, string>{
     { "propertyAlias1", "Property Value 1" },
     { "propertyAlias2", "Property Value 2" },
     { "propertyAlias3", "Property Value 3" }
