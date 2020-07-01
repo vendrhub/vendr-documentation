@@ -67,7 +67,7 @@ public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<Val
 
 ## Register event handlers
 
-Finally we need to register the Vendr event handlers in our `StoreComposer`.
+Finally we need to register the Vendr event handlers in a `IComposer`.
 
 ````csharp
 [ComposeAfter(typeof(VendrWebComposer))]
