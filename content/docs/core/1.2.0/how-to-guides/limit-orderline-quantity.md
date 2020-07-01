@@ -7,7 +7,7 @@ In this guide we will be looking at Validation events in Vendr to be able to lim
 
 ## ProductAddValidationHandler
 
-When adding a product to cart we need to verify the product is in stock and the customer not already has the remaining quantities in cart.
+When adding a product to cart we need to verify the product is in stock and the customer does not already have the remaining quantities in cart.
 
 ````csharp
 public class ProductAddValidationHandler : ValidationEventHandlerBase<ValidateOrderProductAdd>
