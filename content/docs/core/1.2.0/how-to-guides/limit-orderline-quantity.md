@@ -29,7 +29,7 @@ public class ProductAddValidationHandler : ValidationEventHandlerBase<ValidateOr
         var totalQuantities = order?.OrderLines.Where(x => x.ProductReference == productReference).Sum(x => x.Quantity) ?? 0;
 
         if (stock.HasValue && totalQuantities >= stock.Value)
-            evt.Fail($"Only {stock} quantities can be purchased for {productReference}");
+            evt.Fail($"Only {stock} quantities can be purchased for {productReference}.");
     }
 }
 
@@ -42,11 +42,11 @@ Furthermore when changing the order line quantity on cart page, we need to ensur
 ````csharp
 public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<ValidateOrderLineQuantityChange>
 {
-    private readonly IUmbracoContextAccessor _context;
+    private readonly IProductService _productService;
 
-    public OrderLineQuantityValidationHandler(IUmbracoContextAccessor context)
+    public OrderLineQuantityValidationHandler(IProductService productService)
     {
-        _context = context;
+        _productService = productService;
     }
 
     public override void Validate(ValidateOrderLineQuantityChange evt)
@@ -54,11 +54,10 @@ public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<Val
         var orderLine = evt.OrderLine;
         var productReference = orderLine.ProductReference;
 
-        var product = _context.UmbracoContext.Content.GetById(new Guid(productReference));
-        var stock = product.Value<decimal?>("stock");
+        var stock = _productService.GetProductStock(productReference);
 
         if (stock.HasValue && evt.Quantity.To > stock.Value)
-            evt.Fail($"Only {stock} quantities can be purchased for {productReference}");
+            evt.Fail($"Only {stock} quantities can be purchased for {productReference}.");
     }
 }
 
