@@ -38,7 +38,7 @@ public class ProductAddValidationHandler : ValidationEventHandlerBase<ValidateOr
 
 ## OrderLineQuantityValidationHandler
 
-Furthermore when changing order line quantity on cart page, we need to ensure to quantities being changed to are in stock.
+Furthermore when changing the order line quantity on cart page, we need to ensure the quantities being changed are in stock.
 
 ````csharp
 public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<ValidateOrderLineQuantityChange>
