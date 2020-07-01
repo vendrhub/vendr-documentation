@@ -12,12 +12,10 @@ When adding a product to cart we need to verify the product is in stock and the 
 ````csharp
 public class ProductAddValidationHandler : ValidationEventHandlerBase<ValidateOrderProductAdd>
 {
-    private readonly IUmbracoContextAccessor _context;
     private readonly IProductService _productService;
 
-    public ProductAddValidationHandler(IUmbracoContextAccessor context, IProductService productService)
+    public ProductAddValidationHandler(IProductService productService)
     {
-        _context = context;
         _productService = productService;
     }
 
@@ -26,7 +24,6 @@ public class ProductAddValidationHandler : ValidationEventHandlerBase<ValidateOr
         var order = evt.Order;
         var productReference = evt.ProductReference;
 
-        var product = _context.UmbracoContext.Content.GetById(new Guid(productReference));
         var stock = _productService.GetProductStock(productReference);
 
         var totalQuantities = order?.OrderLines.Where(x => x.ProductReference == productReference).Sum(x => x.Quantity) ?? 0;
