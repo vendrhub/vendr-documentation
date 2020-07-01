@@ -20,6 +20,8 @@
   items:
     - title: Overview
       link: /how-to-guides/
+    - title: Limit Order Line Quantity
+      link: /how-to-guides/limit-orderline-quantity/
 
 - title: Key Concepts
   items:
