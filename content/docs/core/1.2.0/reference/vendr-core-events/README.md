@@ -63,6 +63,8 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [EmailTemplateSavingNotification](emailtemplatesavingnotification/) |  |
 | class [EmailTemplateUpdatedNotification](emailtemplateupdatednotification/) |  |
 | class [EmailTemplateUpdatingNotification](emailtemplateupdatingnotification/) |  |
+| class [FrozenPricesThawedNotification](frozenpricesthawednotification/) |  |
+| class [FrozenPricesThawingNotification](frozenpricesthawingnotification/) |  |
 | class [GiftCardCreatedNotification](giftcardcreatednotification/) |  |
 | class [GiftCardCreatingNotification](giftcardcreatingnotification/) |  |
 | class [GiftCardDeletedNotification](giftcarddeletednotification/) |  |

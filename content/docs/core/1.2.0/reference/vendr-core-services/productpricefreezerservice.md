@@ -27,11 +27,50 @@ public ProductPriceFreezerService(IProductService productService,
 
 ### Methods
 
+#### FreezeProductPrice
+
+```csharp
+public void FreezeProductPrice(Guid storeId, Guid orderId, string productReference, 
+    ProductPrice price)
+```
+
+
+---
+
 #### GetOrCreateFrozenProductPrice
 
 ```csharp
-public ProductPrice GetOrCreateFrozenProductPrice(Guid orderId, string productReference, 
-    string key, Guid currencyId)
+public ProductPrice GetOrCreateFrozenProductPrice(Guid storeId, Guid orderId, 
+    string productReference, Guid currencyId)
+```
+
+
+---
+
+#### GetProductPrice (1 of 2)
+
+```csharp
+public ProductPrice GetProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId)
+```
+
+---
+
+#### GetProductPrice (2 of 2)
+
+```csharp
+public ProductPrice GetProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId, out bool isFrozen)
+```
+
+
+---
+
+#### HasFrozenProductPrice
+
+```csharp
+public bool HasFrozenProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId)
 ```
 
 
@@ -40,7 +79,8 @@ public ProductPrice GetOrCreateFrozenProductPrice(Guid orderId, string productRe
 #### ThawFrozenProductPrice
 
 ```csharp
-public void ThawFrozenProductPrice(Guid orderId, string key, Guid currencyId)
+public void ThawFrozenProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId)
 ```
 
 

@@ -13,21 +13,39 @@ public interface IPaymentCalculator
 
 ### Methods
 
-#### CalculatePaymentMethodPrice
+#### CalculatePaymentMethodPrice (1 of 2)
 
 ```csharp
 public Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentMethod, Guid currencyId, 
     Guid countryId, Guid? regionId, TaxRate taxRate)
 ```
 
+---
+
+#### CalculatePaymentMethodPrice (2 of 2)
+
+```csharp
+public Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentMethod, Guid currencyId, 
+    Guid countryId, Guid? regionId, TaxRate taxRate, PaymentCalculatorContext context)
+```
+
 
 ---
 
-#### CalculatePaymentMethodTaxRate
+#### CalculatePaymentMethodTaxRate (1 of 2)
 
 ```csharp
 public TaxRate CalculatePaymentMethodTaxRate(PaymentMethodReadOnly paymentMethod, 
     TaxSource taxSource, TaxRate fallbackTaxRate)
+```
+
+---
+
+#### CalculatePaymentMethodTaxRate (2 of 2)
+
+```csharp
+public TaxRate CalculatePaymentMethodTaxRate(PaymentMethodReadOnly paymentMethod, 
+    TaxSource taxSource, TaxRate fallbackTaxRate, PaymentCalculatorContext context)
 ```
 
 

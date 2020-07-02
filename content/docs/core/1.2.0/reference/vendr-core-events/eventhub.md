@@ -358,6 +358,24 @@ public static void OnEmailTemplateUpdating(Action<EmailTemplateUpdatingNotificat
 
 ---
 
+#### OnFrozenPricesThawed
+
+```csharp
+public static void OnFrozenPricesThawed(Action<FrozenPricesThawedNotification> callback)
+```
+
+
+---
+
+#### OnFrozenPricesThawing
+
+```csharp
+public static void OnFrozenPricesThawing(Action<FrozenPricesThawingNotification> callback)
+```
+
+
+---
+
 #### OnGiftCardCreated
 
 ```csharp

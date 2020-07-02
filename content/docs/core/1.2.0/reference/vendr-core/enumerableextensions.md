@@ -52,7 +52,7 @@ public static T Extract<T>(this List<T> list, Predicate<T> match)
 
 ---
 
-#### Sum (1 of 3)
+#### Sum (1 of 4)
 
 ```csharp
 public static Price Sum(this IEnumerable<AppliedDiscount> discounts, Guid currencyId)
@@ -60,7 +60,7 @@ public static Price Sum(this IEnumerable<AppliedDiscount> discounts, Guid curren
 
 ---
 
-#### Sum (2 of 3)
+#### Sum (2 of 4)
 
 ```csharp
 public static Amount Sum(this IEnumerable<AppliedGiftCard> giftCards, Guid currencyId)
@@ -68,10 +68,18 @@ public static Amount Sum(this IEnumerable<AppliedGiftCard> giftCards, Guid curre
 
 ---
 
-#### Sum (3 of 3)
+#### Sum (3 of 4)
 
 ```csharp
 public static Amount Sum(this IEnumerable<Amount> amounts, Guid currencyId)
+```
+
+---
+
+#### Sum (4 of 4)
+
+```csharp
+public static Price Sum(this IEnumerable<Price> prices, Guid currencyId)
 ```
 
 

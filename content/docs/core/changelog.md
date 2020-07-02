@@ -3,9 +3,9 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.2.6 (Unreleased)    
-**Date:** TBC   
-**Description:** Patch release with minor bug fixes / enhancements  
+## v1.2.6     
+**Date:** 2020-07-02   
+**Description:** Patch release with minor bug fixes / enhancements and some breaking changes 
 ---  
 
 <changelog>

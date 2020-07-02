@@ -13,21 +13,39 @@ public interface IShippingCalculator
 
 ### Methods
 
-#### CalculateShippingMethodPrice
+#### CalculateShippingMethodPrice (1 of 2)
 
 ```csharp
 public Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippingMethod, Guid currencyId, 
     Guid countryId, Guid? regionId, TaxRate taxRate)
 ```
 
+---
+
+#### CalculateShippingMethodPrice (2 of 2)
+
+```csharp
+public Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippingMethod, Guid currencyId, 
+    Guid countryId, Guid? regionId, TaxRate taxRate, ShippingCalculatorContext context)
+```
+
 
 ---
 
-#### CalculateShippingMethodTaxRate
+#### CalculateShippingMethodTaxRate (1 of 2)
 
 ```csharp
 public TaxRate CalculateShippingMethodTaxRate(ShippingMethodReadOnly shippingMethod, 
     TaxSource taxSource, TaxRate fallbackTaxRate)
+```
+
+---
+
+#### CalculateShippingMethodTaxRate (2 of 2)
+
+```csharp
+public TaxRate CalculateShippingMethodTaxRate(ShippingMethodReadOnly shippingMethod, 
+    TaxSource taxSource, TaxRate fallbackTaxRate, ShippingCalculatorContext context)
 ```
 
 
