@@ -6,6 +6,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 ## 1.1.4 
 **Date:** 2020-06-12  
 **Description:** Path release with minor bug fixes / enhancements 
+---  
 
 <changelog>
 <changelog-group category="Changed">  
@@ -18,6 +19,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 ## 1.1.3 
 **Date:** 2020-06-10  
 **Description:** Path release with minor bug fixes / enhancements 
+---  
 
 <changelog>
 <changelog-group category="Changed">  
@@ -30,6 +32,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 ## 1.1.2 
 **Date:** 2020-06-05  
 **Description:** Path release with minor bug fixes / enhancements 
+---  
 
 <changelog>
 <changelog-group category="Added">  
@@ -49,6 +52,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 ## 1.1.1 
 **Date:** 2020-06-02  
 **Description:** Path release with minor bug fixes / enhancements 
+---  
 
 <changelog>
 <changelog-group category="Fixed">  
@@ -61,6 +65,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 ## 1.1.0 
 **Date:** 2020-06-02  
 **Description:** Minor release with new features and some minor bug fixes / enhancements 
+---  
 
 <changelog>
 <changelog-group category="Added">  
