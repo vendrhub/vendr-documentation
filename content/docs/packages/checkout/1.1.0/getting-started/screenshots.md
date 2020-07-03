@@ -3,7 +3,7 @@ title: Screenshots
 description: Screenshots of Vendr Checkout, an add-on package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-With Vendr Checkout you get a fully responsive and ready to go checkout flow.
+Checkout the screenshots below to see what you get with Vendr Checkout straight out of the box.
 
 ## Settings
 
