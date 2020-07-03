@@ -27,6 +27,20 @@ Alternatively, you can also find and install the NuGet package via the NuGet Pac
 
 ![Installing Vendr Checkout via the NuGet Package Manager GUI](~/assets/images/screenshots/checkout/nuget_package.png)
 
+## Content Installation
+
+When Vendr Checkout is installed, all relevant database configurations automatically occur via Umbraco Migrations, however there are a series of content creation steps that need to be triggered manually as these types of migrations are not supported by the Umbraco migrations system. 
+
+To install the relevant Vendr Checkout content (mainly the checkout content doc types + pages and updates to the Vendr store configuration) navigate to the **Settings** section and locate the Vendr Checkout dashboard in the root of the section.
+
+![Vendr Checkout Dashboard](~/assets/images/screenshots/checkout/install_dashboard.png)
+
+On this dashboard, click the **Install** button then in the dialog select your site root node which is configured with a Vendr store picker linked to a Vendr store and then click **Install**
+
+![Vendr Checkout Dashboard](~/assets/images/screenshots/checkout/install_dashboard_dialog.png)
+
+This will install all the relevant Vendr Checkout content and be ready for you to continue to the [Umbraco configuration step](../configuring-umbraco/).
+
 ## Upgrading
 
 <message-box type="warn" heading="Before you upgrade">
@@ -34,3 +48,5 @@ Alternatively, you can also find and install the NuGet package via the NuGet Pac
 Before upgrading, it is always advisable to take a complete backup of your site/database. Every effort has been made to ensure that Vendr Checkout will upgrade gracefully, but there is always a risk that something may not install as expected.
 
 </message-box>
+
+Vendr Checkout used a combination of database migrations and a manual install dashboard for both installs and upgrades. Upgrading is generally a case of installing the latest version of the top of the existing package and running through the installation steps again.
