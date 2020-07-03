@@ -3,7 +3,8 @@ title: Useful Links
 description: Useful links for Vendr Checkout, an add-on package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-<message-box type="info" heading="Work in Progress">
-    <p>More detailed documentation is coming soon.</p>
-    <p>This package is currently in development and so there isn't currently any documentation for it. We will update this page once the package is released and documentation is available</p>
-</message-box>
+As well as the content found in these docs, here are a few useful links that might come in handy should you wish to learn more about the Vendr Checkout package itself.
+
+* [Vendr Checkout source code](https://github.com/vendrhub/vendr-checkout)
+* [Vendr Checkout issue tracker](https://github.com/vendrhub/vendr-checkout/issues)
+* [Vendr Checkout Our Umbraco page](https://our.umbraco.com/packages/backoffice-extensions/vendr-checkout/)
