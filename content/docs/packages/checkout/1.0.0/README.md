@@ -11,9 +11,9 @@ description: Documentation for Vendr Checkout, an add-on package for Vendr, the 
 
 ## Using These Docs
 
-**These docs are aimed at developers and users** who have at least a basic understanding of  [Umbraco](https://umbraco.com), as well as Umbraco back office principles.
+**These docs are aimed at developers and users** who have at least a basic understanding of  [Umbraco](https://umbraco.com), as well as Umbraco back-office principles.
 
-As there is no code involved with using Vendr checkout, the docs are simply a series of [Getting Started](getting-started/) steps to get Vendr Checkout installed anc configured.
+As there is no code involved with using Vendr checkout, the docs are simply a series of [Getting Started](getting-started/) steps to get Vendr Checkout installed and configured.
 
 ## Getting Help
 
