@@ -39,7 +39,12 @@ On this dashboard, click the **Install** button then in the dialog select your s
 
 ![Vendr Checkout Dashboard](~/assets/images/screenshots/checkout/install_dashboard_dialog.png)
 
-This will install all the relevant Vendr Checkout content and be ready for you to continue to the [Umbraco configuration step](../configuring-umbraco/).
+During this install, Vendr checkout will perform the following tasks:
+
+1. Create the Vendr Checkout Data Types (Colour picker and checkout step picker)
+2. Create the Vendr Checkout Document Types (Checkout page and checkout step page)
+3. Create the Vendr Checkout content nodes beneath the select site root node (unpublished)
+4. Configure the Vendr store with custom Vendr Checkout email templates and required payment providers
 
 ## Upgrading
 
