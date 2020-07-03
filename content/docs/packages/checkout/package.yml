@@ -8,7 +8,7 @@ packageVersion: 1.1.4
 docVersions:
   next: 
   current: 1.1.0
-  pervious: 
+  previous: 
     - 1.0.0
 
 links:
