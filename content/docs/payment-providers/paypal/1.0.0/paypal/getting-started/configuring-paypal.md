@@ -51,7 +51,16 @@ For the webhook, you'll want to provide the URL where the webhook notifications 
 https://{store_domain}/umbraco/vendr/payment/callback/paypal-checkout-onetime/{payment_method_id}/
 ````
 
-You'll also want to select the **Event Types** to be notified of, for which the only option we require is the **Checkout order approved** event, by checking the appropriate checkbox next to that option and then clicking the **Save** button at the bottom.
+You'll also want to select the **Event Types** to be notified of, for which you'll want to check the following options by checking the appropriate checkboxes next to those options and then clicking the **Save** button at the bottom.
+
+* Checkout order approved
+* Checkout order completed
+* Payment authorization voided
+* Payment capture completed
+* Payment capture denied
+* Payment capture pending
+* Payment capture refunded
+* Payment capture reversed
 
 ![Create PayPal App Webhook](~/assets/images/screenshots/paypal/sandbox_webhook.png)
 
