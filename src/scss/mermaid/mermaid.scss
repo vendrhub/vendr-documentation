@@ -1,0 +1,23 @@
+.mermaid {
+  @import 'flowchart';
+  @import 'sequence';
+  @import 'gantt';
+  @import 'class';
+  @import 'git';
+  @import 'pie';
+  @import 'state';
+}
+
+// .composit {
+//   fill: white;
+//   border-bottom: 1px
+// }
+
+:root {
+  --mermaid-font-family: 'Red Hat Display', sans-serif;
+  // --mermaid-alt-font-family: '"Lucida Console", Monaco, monospace';
+  div.mermaid svg {
+    font-size: 0.75rem;
+  }
+}
+

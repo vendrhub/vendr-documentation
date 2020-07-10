@@ -1,0 +1,7 @@
+.mermaid {
+    @apply mb-6 w-full;
+}
+
+.mermaid > svg {
+    @apply w-full;
+}

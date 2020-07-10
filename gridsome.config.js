@@ -22,12 +22,14 @@ const postcssPlugins = [
 
 const baseSrcOpts = {
   plugins: [
+    ['gridsome-plugin-remark-mermaid', { removeStyleTags: true }],
     'od-remark-youtube-embed',
     '@gridsome/remark-prismjs',
     'od-remark-responsive-tables'
   ],
   remark: {
     plugins: [
+      ['gridsome-plugin-remark-mermaid', { removeStyleTags: true }],
       'od-remark-youtube-embed',
       '@gridsome/remark-prismjs',
       'od-remark-responsive-tables'
