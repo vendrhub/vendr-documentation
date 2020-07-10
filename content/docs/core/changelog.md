@@ -3,6 +3,26 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.7 (Unreleased)     
+**Date:** TBC   
+**Description:** Patch release with minor bug fixes / enhancements  
+---  
+
+<changelog>
+<changelog-group category="Add">  
+
+* Added payment provider feature to fetch an orders payment status from the payment gateway when an order is opened in the same way Tea Commerce does.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated how the stock property editor loads and persists it' value so that it doesn't cause a stock update every time it's saved.
+* Orders now finalize if the payment status is anything but Initialized (previously didn't finalize if the status was PendingExternalSystem).
+* Pending payment status is now displayed as purple in the back office so that it's not the same colour as the canceled status.
+
+</changelog-group>
+</changelog>
+
 ## v1.2.6     
 **Date:** 2020-07-02   
 **Description:** Patch release with minor bug fixes / enhancements and some breaking changes 
