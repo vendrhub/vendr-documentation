@@ -3,6 +3,24 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## 1.1.5 
+**Date:** 2020-10-07  
+**Description:** Path release with minor bug fixes / enhancements 
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added redirect to back page if there is no current order.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed broken image link on install dashboard.
+
+</changelog-group>
+</changelog>
+
 ## 1.1.4 
 **Date:** 2020-06-12  
 **Description:** Path release with minor bug fixes / enhancements 
