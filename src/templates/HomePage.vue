@@ -1,5 +1,5 @@
 <template>
-    <layout>
+    <layout current-package="Vendr" :current-version="$static.corePackage.docVersions.current.name">
       <VueRemarkContent class="markdown" />
     </layout>
 </template>

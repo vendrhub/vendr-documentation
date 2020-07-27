@@ -90,6 +90,10 @@ import TwitterLogo from '../assets/images/twitter-logo.svg'
 
 export default {
     components: { VendrLogo, VendrV, GithubLogo, OurUmbracoLogo, TwitterLogo },
+    props: {
+      currentPackage: { type: String },
+      currentVersion: { type: String }
+    },
     mounted () {
 
       var self = this;
@@ -108,6 +112,9 @@ export default {
         inputSelector: '#docsearch',
         autocompleteOptions: {
 
+        },
+        algoliaOptions: {
+          //filters: `package:${self.currentPackage} AND version:${self.currentVersion}`
         },
         handleSelected: (input, event, suggestion) => {
           const { pathname, hash } = new URL(suggestion.url)

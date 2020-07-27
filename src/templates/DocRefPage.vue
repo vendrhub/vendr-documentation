@@ -1,5 +1,5 @@
 <template>
-  <layout :page-title="$page.doc.title" :page-description="$page.doc.description">
+  <layout :page-title="$page.doc.title" :page-description="$page.doc.description" :current-package="$page.doc.package.id" :current-version="$page.doc.docVersion.name">
 
     <div class="markdown" v-html="$page.doc.content" />
 
