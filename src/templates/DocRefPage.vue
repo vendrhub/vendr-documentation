@@ -268,7 +268,9 @@ export default {
       meta: [
         { name: 'twitter:title', content: metaTitle },
         { name: 'twitter:description', content: this.$page.doc.description },
-        { key: 'description', name: 'description', content: this.$page.doc.description }
+        { key: 'description', name: 'description', content: this.$page.doc.description },
+        { name: 'docsearch:version', content: this.$page.doc.docVersion.name },
+        { name: 'docsearch:package', content: this.$page.doc.package.id }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }

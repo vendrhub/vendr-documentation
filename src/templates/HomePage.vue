@@ -21,6 +21,13 @@ query {
     siteName
     siteDescription,
     siteUrl
+  },
+  corePackage: package(id: "Vendr") {
+    docVersions {
+      current {
+        name
+      }
+    }
   }
 }
 </static-query>
@@ -37,7 +44,9 @@ export default {
       meta: [
         { name: 'twitter:title', content: metaTitle },
         { name: 'twitter:description', content: this.$page.doc.description },
-        { key: 'description', name: 'description', content: this.$page.doc.description }
+        { key: 'description', name: 'description', content: this.$page.doc.description },
+        { name: 'docsearch:version', content: this.$static.corePackage.docVersions.current.name },
+        { name: 'docsearch:package', content: 'Vendr' }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }
