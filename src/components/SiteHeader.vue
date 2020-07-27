@@ -62,6 +62,19 @@
 
 <static-query>
 query {
+    allPackage {
+      edges {
+        node {
+          id,
+          name,
+          docVersions {
+            current {
+              name
+            }
+          }
+        }
+      }
+    },
     corePackage: package(id: "Vendr") {
         docVersions {
           current {
@@ -94,6 +107,16 @@ export default {
       currentPackage: { type: String },
       currentVersion: { type: String }
     },
+    computed: {
+      docsearchFilter() {
+        if (this.currentVersion && this.currentPackage)
+          return `uvid:${this.currentPackage}__${this.currentVersion}`
+
+        return this.$static.allPackage.edges.map(itm => {
+          return `uvid:${itm.node.id}__${itm.node.docVersions.current.name}`
+        }).join(" OR ");
+      }
+    },
     mounted () {
 
       var self = this;
@@ -114,7 +137,7 @@ export default {
 
         },
         algoliaOptions: {
-          //filters: `package:${self.currentPackage} AND version:${self.currentVersion}`
+          //filters: self.docsearchFilter
         },
         handleSelected: (input, event, suggestion) => {
           const { pathname, hash } = new URL(suggestion.url)

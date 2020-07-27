@@ -1,5 +1,5 @@
 <template>
-  <layout :page-title="$page.doc.title" :page-description="$page.doc.description" :current-package="$page.doc.package.id" :current-version="$page.doc.docVersion.name">
+  <layout :page-title="$page.doc.title" :page-description="$page.doc.description" :current-package="currentPackage" :current-version="currentVersion">
 
     <VueRemarkContent class="markdown" />
 
@@ -251,6 +251,12 @@ export default {
     },
     previousPage () {
       return this.items[this.currentIndex - 1]
+    },
+    currentPackage() {
+      return this.$page.doc.package.id;
+    },
+    currentVersion() {
+      return this.$page.doc.docVersion ? this.$page.doc.docVersion.name : this.$page.doc.package.docVersions.current.name;
     }
   },
   metaInfo () {
@@ -269,8 +275,9 @@ export default {
         { name: 'twitter:title', content: metaTitle },
         { name: 'twitter:description', content: this.$page.doc.description },
         { key: 'description', name: 'description', content: this.$page.doc.description },
-        { name: 'docsearch:version', content: this.$page.doc.docVersion.name },
-        { name: 'docsearch:package', content: this.$page.doc.package.id }
+        { name: 'docsearch:version', content: this.currentVersion },
+        { name: 'docsearch:package', content: this.currentPackage },
+        { name: 'docsearch:uvid', content: `${this.currentPackage}__${this.currentVersion}` }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }
