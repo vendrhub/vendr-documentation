@@ -24,7 +24,7 @@ public OrderController(UmbracoControllerContext vendrContext, IStoreService stor
     IOrderService orderService, IOrderStatusService orderStatusService, 
     IPaymentMethodService paymentMethodService, IPaymentProviderService paymentProviderService, 
     IShippingMethodService shippingMethodService, ICountryService countryService, 
-    IUnitOfWorkProvider uowProvider)
+    ITranslationService translationService, IUnitOfWorkProvider uowProvider)
 ```
 
 
@@ -33,7 +33,7 @@ public OrderController(UmbracoControllerContext vendrContext, IStoreService stor
 #### CancelPayment
 
 ```csharp
-public OrderEditDto CancelPayment(Guid orderId)
+public OrderBasicDto CancelPayment(Guid orderId)
 ```
 
 
@@ -42,7 +42,7 @@ public OrderEditDto CancelPayment(Guid orderId)
 #### CapturePayment
 
 ```csharp
-public OrderEditDto CapturePayment(Guid orderId)
+public OrderBasicDto CapturePayment(Guid orderId)
 ```
 
 
@@ -51,7 +51,7 @@ public OrderEditDto CapturePayment(Guid orderId)
 #### ChangeOrderStatus
 
 ```csharp
-public OrderEditDto ChangeOrderStatus(Guid orderId, Guid orderStatusId)
+public OrderBasicDto ChangeOrderStatus(Guid orderId, Guid orderStatusId)
 ```
 
 
@@ -96,7 +96,7 @@ public IEnumerable<PropertyDto> GetOrderTransactionInfo(Guid orderId)
 #### RefundPayment
 
 ```csharp
-public OrderEditDto RefundPayment(Guid orderId)
+public OrderBasicDto RefundPayment(Guid orderId)
 ```
 
 
@@ -115,6 +115,15 @@ public OrderEditDto SaveOrder(OrderSaveDto order)
 
 ```csharp
 public PagedResult<OrderBasicDto> SearchOrders(OrderSearchDto model)
+```
+
+
+---
+
+#### SyncPaymentStatus
+
+```csharp
+public OrderBasicDto SyncPaymentStatus(Guid orderId)
 ```
 
 
