@@ -137,7 +137,7 @@ export default {
 
         },
         algoliaOptions: {
-          //filters: self.docsearchFilter
+          filters: self.docsearchFilter
         },
         handleSelected: (input, event, suggestion) => {
           const { pathname, hash } = new URL(suggestion.url)
