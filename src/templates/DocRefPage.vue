@@ -253,10 +253,14 @@ export default {
       return this.items[this.currentIndex - 1]
     },
     currentPackage() {
-      return this.$page.doc.package.id;
+      return this.$page.doc.package
+        ? this.$page.doc.package.id
+        : "Unknown";
     },
     currentVersion() {
-      return this.$page.doc.docVersion ? this.$page.doc.docVersion.name : this.$page.doc.package.docVersions.current.name;
+      return this.$page.doc.docVersion 
+        ? this.$page.doc.docVersion.name 
+        : this.$page.doc.package ? this.$page.doc.package.docVersions.current.name : '0.0.0';
     }
   },
   metaInfo () {
