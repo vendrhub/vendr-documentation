@@ -3,22 +3,30 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.2.7 (Unreleased)     
-**Date:** TBC   
+## v1.2.7      
+**Date:** 2020-07-29   
 **Description:** Patch release with minor bug fixes / enhancements  
 ---  
 
 <changelog>
-<changelog-group category="Add">  
+<changelog-group category="Added">  
 
 * Added payment provider feature to fetch an orders payment status from the payment gateway when an order is opened in the same way Tea Commerce does.
 
 </changelog-group>
 <changelog-group category="Changed">  
 
-* Updated how the stock property editor loads and persists it' value so that it doesn't cause a stock update every time it's saved.
+* Updated how the stock property editor loads and persists it's value so that it doesn't cause a stock update every time it's saved.
 * Orders now finalize if the payment status is anything but Initialized (previously didn't finalize if the status was PendingExternalSystem).
 * Pending payment status is now displayed as purple in the back office so that it's not the same colour as the canceled status.
+* Updated the store entity picker to support multiple store resolution modes so that the picker can be used outside of the content section ([#141](https://github.com/vendrhub/vendr/issues/141)).
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed bug when creating US country regions from preset ([#159](https://github.com/vendrhub/vendr/issues/159)).
+* Fixed issue with payment provider continue/cancel/error URLs escaping querystrings ([#157](https://github.com/vendrhub/vendr/issues/157)).
+* Fixed &lt;= price discount rule not displaying correct symbol ([#155](https://github.com/vendrhub/vendr/issues/155)).
 
 </changelog-group>
 </changelog>
