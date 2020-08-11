@@ -1,5 +1,6 @@
 import '~/main.css'
 import '~/css/vendor/prism-vscodedark.css'
+import './scss/mermaid/default/index.scss'
 
 import DefaultLayout from '~/layouts/Layout.vue'
 import MessageBox from '~/components/MessageBox.vue'

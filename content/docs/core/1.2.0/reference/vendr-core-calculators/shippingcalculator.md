@@ -30,7 +30,8 @@ public ShippingCalculator(ITaxService taxService, IStoreService storeService)
 
 ```csharp
 public override Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippingMethod, 
-    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate)
+    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate, 
+    ShippingCalculatorContext context)
 ```
 
 
@@ -40,7 +41,7 @@ public override Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippi
 
 ```csharp
 public override TaxRate CalculateShippingMethodTaxRate(ShippingMethodReadOnly shippingMethod, 
-    TaxSource taxSource, TaxRate fallbackTaxRate)
+    TaxSource taxSource, TaxRate fallbackTaxRate, ShippingCalculatorContext context)
 ```
 
 

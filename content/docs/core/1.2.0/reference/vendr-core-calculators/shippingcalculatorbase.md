@@ -20,8 +20,29 @@ public abstract class ShippingCalculatorBase : IShippingCalculator
 #### CalculateShippingMethodPrice
 
 ```csharp
+public Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippingMethod, Guid currencyId, 
+    Guid countryId, Guid? regionId, TaxRate taxRate)
+```
+
+
+---
+
+#### CalculateShippingMethodPrice
+
+```csharp
 public abstract Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippingMethod, 
-    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate)
+    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate, 
+    ShippingCalculatorContext context)
+```
+
+
+---
+
+#### CalculateShippingMethodTaxRate
+
+```csharp
+public TaxRate CalculateShippingMethodTaxRate(ShippingMethodReadOnly shippingMethod, 
+    TaxSource taxSource, TaxRate fallbackTaxRate)
 ```
 
 
@@ -31,7 +52,7 @@ public abstract Price CalculateShippingMethodPrice(ShippingMethodReadOnly shippi
 
 ```csharp
 public abstract TaxRate CalculateShippingMethodTaxRate(ShippingMethodReadOnly shippingMethod, 
-    TaxSource taxSource, TaxRate fallbackTaxRate)
+    TaxSource taxSource, TaxRate fallbackTaxRate, ShippingCalculatorContext context)
 ```
 
 

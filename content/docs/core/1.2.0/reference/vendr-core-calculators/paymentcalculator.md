@@ -30,7 +30,8 @@ public PaymentCalculator(ITaxService taxService, IStoreService storeService)
 
 ```csharp
 public override Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentMethod, 
-    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate)
+    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate, 
+    PaymentCalculatorContext context)
 ```
 
 
@@ -40,7 +41,7 @@ public override Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentM
 
 ```csharp
 public override TaxRate CalculatePaymentMethodTaxRate(PaymentMethodReadOnly paymentMethod, 
-    TaxSource taxSource, TaxRate fallbackTaxRate)
+    TaxSource taxSource, TaxRate fallbackTaxRate, PaymentCalculatorContext context)
 ```
 
 

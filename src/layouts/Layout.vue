@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <site-header />
+    <site-header :current-package="currentPackage" :current-version="currentVersion" />
     <div class="w-full max-w-container mx-auto px-6">
       <slot />  
     </div>
@@ -11,6 +11,10 @@
 import SiteHeader from '../components/SiteHeader'
 
 export default {
-  components: { SiteHeader }
+  components: { SiteHeader },
+  props: {
+    currentPackage: { type: String },
+    currentVersion: { type: String }
+  }
 }
 </script>

@@ -30,7 +30,7 @@ Current version of the DIBS payment provider documentation
 
 
 ## Previous Versions
-<template v-if="$page.doc.package && $page.doc.package.docVersions.previous">
+<template v-if="$page.doc.package && $page.doc.package.docVersions.previous && $page.doc.package.docVersions.previous.length > 0">
 
 Previous versions of the DIBS payment provider documentation
 

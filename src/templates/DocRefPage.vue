@@ -1,5 +1,5 @@
 <template>
-  <layout :page-title="$page.doc.title" :page-description="$page.doc.description">
+  <layout :page-title="$page.doc.title" :page-description="$page.doc.description" :current-package="currentPackage" :current-version="currentVersion">
 
     <div class="markdown" v-html="$page.doc.content" />
 
@@ -251,6 +251,16 @@ export default {
     },
     previousPage () {
       return this.items[this.currentIndex - 1]
+    },
+    currentPackage() {
+      return this.$page.doc.package
+        ? this.$page.doc.package.id
+        : "Unknown";
+    },
+    currentVersion() {
+      return this.$page.doc.docVersion 
+        ? this.$page.doc.docVersion.name 
+        : this.$page.doc.package ? this.$page.doc.package.docVersions.current.name : '0.0.0';
     }
   },
   metaInfo () {
@@ -268,7 +278,10 @@ export default {
       meta: [
         { name: 'twitter:title', content: metaTitle },
         { name: 'twitter:description', content: this.$page.doc.description },
-        { key: 'description', name: 'description', content: this.$page.doc.description }
+        { key: 'description', name: 'description', content: this.$page.doc.description },
+        { name: 'docsearch:version', content: this.currentVersion },
+        { name: 'docsearch:package', content: this.currentPackage },
+        { name: 'docsearch:uvid', content: `${this.currentPackage}__${this.currentVersion}` }
       ],
       link: [
         { rel: 'canonical', href: `${this.$static.metadata.siteUrl}${this.$url(this.$page.doc.path)}` }

@@ -27,6 +27,7 @@
 @import "css/components/tiles.css";
 @import "css/components/algolia.css";
 @import "css/components/tooltip.css";
+@import "css/components/mermaid.css";
 
 @tailwind utilities;
 

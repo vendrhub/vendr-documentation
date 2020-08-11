@@ -20,8 +20,29 @@ public abstract class PaymentCalculatorBase : IPaymentCalculator
 #### CalculatePaymentMethodPrice
 
 ```csharp
+public Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentMethod, Guid currencyId, 
+    Guid countryId, Guid? regionId, TaxRate taxRate)
+```
+
+
+---
+
+#### CalculatePaymentMethodPrice
+
+```csharp
 public abstract Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentMethod, 
-    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate)
+    Guid currencyId, Guid countryId, Guid? regionId, TaxRate taxRate, 
+    PaymentCalculatorContext context)
+```
+
+
+---
+
+#### CalculatePaymentMethodTaxRate
+
+```csharp
+public TaxRate CalculatePaymentMethodTaxRate(PaymentMethodReadOnly paymentMethod, 
+    TaxSource taxSource, TaxRate fallbackTaxRate)
 ```
 
 
@@ -31,7 +52,7 @@ public abstract Price CalculatePaymentMethodPrice(PaymentMethodReadOnly paymentM
 
 ```csharp
 public abstract TaxRate CalculatePaymentMethodTaxRate(PaymentMethodReadOnly paymentMethod, 
-    TaxSource taxSource, TaxRate fallbackTaxRate)
+    TaxSource taxSource, TaxRate fallbackTaxRate, PaymentCalculatorContext context)
 ```
 
 

@@ -136,6 +136,15 @@ public string PaymentStatus { get; set; }
 
 ---
 
+#### PaymentStatusName
+
+```csharp
+public string PaymentStatusName { get; set; }
+```
+
+
+---
+
 #### ShippingMethod
 
 ```csharp

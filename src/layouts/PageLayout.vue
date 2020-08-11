@@ -1,5 +1,5 @@
 <template>
-  <layout>
+  <layout :current-package="currentPackage" :current-version="currentVersion">
     <div class="lg:flex -mx-6">
     
         <!-- Sidebar -->
@@ -54,7 +54,9 @@ export default {
   components: { Layout },
   props: {
     pageTitle: { type: String },
-    pageDescription: { type: String }
+    pageDescription: { type: String },
+    currentPackage: { type: String },
+    currentVersion: { type: String }
   }
 }
 

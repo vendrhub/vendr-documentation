@@ -15,27 +15,123 @@ public interface IProductPriceFreezerService
 
 ### Methods
 
-#### GetOrCreateFrozenProductPrice
+#### FreezeProductPrice
 
-Get or creates a frozen price for a given product
+Freezes a products price
 
 ```csharp
-public ProductPrice GetOrCreateFrozenProductPrice(Guid orderId, string productReference, 
-    string key, Guid currencyId)
+public void FreezeProductPrice(Guid storeId, Guid orderId, string productReference, 
+    ProductPrice price)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| orderId | The ID of the [`Store`](../../vendr-core-models/store/) the product belongs to |
-| productReference | The unique reference of the Product who's price to freeze |
-| key | A unique key to assign the frozen price to |
-| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the price to freeze |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the price is associated with |
+| orderId | The ID of the [`Order`](../../vendr-core-models/order/) the price is associated with |
+| productReference | The unique reference of the Product the price is associated with |
+| price | The [`ProductPrice`](../../vendr-core-models/productprice/) to freeze |
+
+
+---
+
+#### GetOrCreateFrozenProductPrice
+
+Get or creates a frozen price for a given product
+
+```csharp
+public ProductPrice GetOrCreateFrozenProductPrice(Guid storeId, Guid orderId, 
+    string productReference, Guid currencyId)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the price is associated with |
+| orderId | The ID of the [`Order`](../../vendr-core-models/order/) the price is associated with |
+| productReference | The unique reference of the Product the price is associated with |
+| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the price |
 
 **Returns**
 
 A frozen [`ProductPrice`](../../vendr-core-models/productprice/)
+
+
+---
+
+#### GetProductPrice (1 of 2)
+
+Get the price of a product, either frozen if one exists, otherwise direct from the product source
+
+```csharp
+public ProductPrice GetProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the price is associated with |
+| orderId | The ID of the [`Order`](../../vendr-core-models/order/) the price is associated with |
+| productReference | The unique reference of the Product the price is associated with |
+| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the price to freeze |
+
+**Returns**
+
+A [`ProductPrice`](../../vendr-core-models/productprice/)
+
+---
+
+#### GetProductPrice (2 of 2)
+
+Get the price of a product, either frozen if one exists, otherwise direct from the product source
+
+```csharp
+public ProductPrice GetProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId, out bool isFrozen)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the price is associated with |
+| orderId | The ID of the [`Order`](../../vendr-core-models/order/) the price is associated with |
+| productReference | The unique reference of the Product the price is associated with |
+| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the price to freeze |
+| isFrozen | Boolean indicating if the price returned is a frozen price or not |
+
+**Returns**
+
+A [`ProductPrice`](../../vendr-core-models/productprice/)
+
+
+---
+
+#### HasFrozenProductPrice
+
+Checks to see if there is a frozen product price for the given reference
+
+```csharp
+public bool HasFrozenProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the price is associated with |
+| orderId | The ID of the [`Order`](../../vendr-core-models/order/) the price is associated with |
+| productReference | The unique reference of the Product the price is associated with |
+| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the price to freeze |
+
+**Returns**
+
+True if a frozen price exists, otherwise false
 
 
 ---
@@ -45,16 +141,18 @@ A frozen [`ProductPrice`](../../vendr-core-models/productprice/)
 Thaws a frozen price for a given product
 
 ```csharp
-public void ThawFrozenProductPrice(Guid orderId, string key, Guid currencyId)
+public void ThawFrozenProductPrice(Guid storeId, Guid orderId, string productReference, 
+    Guid currencyId)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| orderId | The ID of the [`Store`](../../vendr-core-models/store/) the product belongs to |
-| key | The unique key of the frozen price |
-| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the frozen price to thaw |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the price is associated with |
+| orderId | The ID of the [`Order`](../../vendr-core-models/order/) the price is associated with |
+| productReference | The unique reference of the Product the price is associated with |
+| currencyId | The ID of the [`Currency`](../../vendr-core-models/currency/) of the price |
 
 
 <!-- DO NOT EDIT: generated by xmldocmd for Vendr.Core.dll -->

@@ -23,7 +23,7 @@ module.exports = {
       whitelistPatternsChildren: [
           /code/, /pre/, /language/, /token/, 
           /ul/, /ol/, /p/, /a/, /blockquote/,
-          /sticky/, /not/
+          /sticky/, /not/, /mermaid/
       ]
     }
   },

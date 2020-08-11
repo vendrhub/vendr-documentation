@@ -60,6 +60,15 @@ public object GetEntity(string entityType, Guid entityId)
 
 ---
 
+#### GetStoreByEntityId
+
+```csharp
+public StoreBasicDto GetStoreByEntityId(string entityType, Guid entityId)
+```
+
+
+---
+
 #### SortEntities
 
 ```csharp

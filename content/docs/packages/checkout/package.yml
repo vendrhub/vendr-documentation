@@ -4,11 +4,12 @@ type: Package
 description: 
 supportedBy: core
 
-packageVersion: 1.0.0
+packageVersion: 1.1.5
 docVersions:
   next: 
-  current: 1.0.0
-  pervious: 
+  current: 1.1.0
+  previous: 
+    - 1.0.0
 
 links:
   - title: Versions

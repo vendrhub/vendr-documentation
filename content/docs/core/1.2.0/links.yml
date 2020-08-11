@@ -20,6 +20,8 @@
   items:
     - title: Overview
       link: /how-to-guides/
+    - title: Limit Order Line Quantity
+      link: /how-to-guides/limit-orderline-quantity/
 
 - title: Key Concepts
   items:
@@ -41,6 +43,8 @@
       link: /key-concepts/pipelines/
     - title: Calculators
       link: /key-concepts/calculators/
+    - title: Order Calculation State
+      link: /key-concepts/order-calculation-state/
     - title: Product Adapters
       link: /key-concepts/product-adapters/
     - title: Payment Providers
@@ -49,6 +53,8 @@
       link: /key-concepts/payment-forms/
     - title: Price Freezing
       link: /key-concepts/price-freezing/
+    - title: Product Bundles
+      link: /key-concepts/product-bundles/
     - title: Tax Sources
       link: /key-concepts/tax-sources/
     - title: Discount Rules / Rewards
