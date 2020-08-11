@@ -1,6 +1,6 @@
-id: Vendr.PaymentProviders.SagePay
-name: SagePay
-logo: sagepay.svg
+id: Vendr.PaymentProviders.Opayo
+name: Opayo
+logo: opayo.svg
 type: PaymentProvider
 supportedBy: core
 
