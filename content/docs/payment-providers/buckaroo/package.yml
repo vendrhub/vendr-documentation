@@ -1,4 +1,4 @@
-id: Vendr.PaymentProviders.Buckaroo
+id: Vendr.Contrib.PaymentProviders.Buckaroo
 name: Buckaroo
 logo: buckaroo.svg
 type: PaymentProvider
