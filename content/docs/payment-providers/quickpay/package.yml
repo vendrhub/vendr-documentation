@@ -1,8 +1,8 @@
-id: Vendr.PaymentProviders.QuickPay
+id: Vendr.Contrib.PaymentProviders.QuickPay
 name: QuickPay
 logo: quickpay.svg
 type: PaymentProvider
-supportedBy: contrib
+supportedBy: community
 
 packageVersion: 1.0.0
 docVersions:
