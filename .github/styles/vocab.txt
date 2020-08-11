@@ -25,6 +25,7 @@ unredeems
 deserialized
 boolean
 Bambora
+Reepay
 Yourpay
 namespace
 www
