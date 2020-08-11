@@ -5,7 +5,9 @@
                 <g-link :to="packageLink" class="font-bold mr-2">{{ packageInfo.name }}</g-link>
                 <g-link :to="packageInfo.path + '/versions/'" class="text-gray-400 text-base" v-if="docVersionInfo">v{{docVersionInfo.name}}</g-link>
             </span>
-            <span class="block font-normal text-gray-400 text-xs -mt-6 pb-6" v-if="packageInfo.type != 'Product'">{{ packageInfo.id }}</span>
+            <span class="block font-normal text-gray-400 text-xs -mt-6 pb-6" v-if="packageInfo.type != 'Product'">
+                <span v-for="(idPart, idx) in getIdParts(packageInfo.id)" :key="idPart" ><span v-if="idx > 0">.</span><span class="inline-block">{{idPart}}</span></span>
+            </span>
             <span class="block -mt-2 pb-6" v-if="packageInfo.supportedBy == 'community'">
                 <contrib-badge class="relative tooltip--tl" />
             </span>
@@ -32,6 +34,11 @@ export default {
                 return this.docVersionInfo.path;
 
             return this.packageInfo.docVersions.current.path
+        }
+    },
+    methods: {
+        getIdParts(id) {
+            return id.split('.');
         }
     }
 }
