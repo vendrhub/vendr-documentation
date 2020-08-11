@@ -25,6 +25,7 @@ unredeems
 deserialized
 boolean
 Bambora
+Yourpay
 namespace
 www
 dll
