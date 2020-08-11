@@ -1,5 +1,5 @@
 ---
-title: Reepay Checkout (One Time)
+title: Reepay Checkout
 description: Documentation for the Reepay Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
