@@ -21,7 +21,7 @@ export default {
     props: ['path'],
     computed: {
         editLink() {
-            return `${this.$static.metadata.githubUrl}/edit/master/content/docs/${this.path}`
+            return `${this.$static.metadata.githubUrl}/edit/main/content/docs/${this.path}`
         }
     }
 }
