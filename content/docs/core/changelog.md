@@ -3,6 +3,39 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.8      
+**Date:** 2020-08-21   
+**Description:** Patch release with minor bug fixes / enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added new customer info panel accessible via a user icon next to the customer name to be able to display registered customer info + order history ([#129](https://github.com/vendrhub/vendr/issues/129)).
+* Added helpful exception messages if you attempt to create an order but the required store default config isn't yet in place. It now tells you what needs fixing, and how to fix it ([#158](https://github.com/vendrhub/vendr/issues/158)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Use `umb-loader` component in Vendr list view rather than raw markup + css classes ([#161](https://github.com/vendrhub/vendr/issues/161)).
+* Improved accessibility in a number of areas ([#162](https://github.com/vendrhub/vendr/issues/162)).
+* Long order line names are now truncated rather than flowing off screen ([#147](https://github.com/vendrhub/vendr/issues/147)).
+* Removed `umb-overlay` directive usage in favour of the `overlayService` ([#163](https://github.com/vendrhub/vendr/issues/163)).
+* Expanded any self closing directive DOM tags as this is considered bad practice for directives ([#164](https://github.com/vendrhub/vendr/issues/164)).
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed bug where creating a new order via the session manager wasn't populating a default shipping country / shipping method ([#156](https://github.com/vendrhub/vendr/issues/156)).
+* Fixed bug in session manager SetDefaultCurrency and SetDefaultTaxClass where exception was thrown if `applyToCurrentOrder` is `true` ([#160](https://github.com/vendrhub/vendr/issues/160)).
+* Add null checks and error logs if there is a problem calculating order gift card amount if a gift card is deleted ([#167](https://github.com/vendrhub/vendr/issues/167)).
+* Fixed long order line names flowing off screen. They are now truncated with ... ([#147](https://github.com/vendrhub/vendr/issues/147)).
+* Fixed bug in Member Group Discount Rule throwing YSOD due to DI resource not being found. Now use `IMemberService` for everything.
+* Fixed rounding issue when applying a discount amount but the order line totals calculation doesn't match the price + tax of the discount exactly.
+
+</changelog-group>
+</changelog>
+
 ## v1.2.7      
 **Date:** 2020-07-29   
 **Description:** Patch release with minor bug fixes / enhancements  
