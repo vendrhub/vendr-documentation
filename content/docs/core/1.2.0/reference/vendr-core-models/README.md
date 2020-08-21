@@ -97,6 +97,7 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | enum [PriceAmountType](priceamounttype/) |  |
 | class [ProductPrice](productprice/) |  |
 | abstract class [ProductSnapshotBase](productsnapshotbase/) |  |
+| class [Property](property/) |  |
 | enum [PropertySource](propertysource/) |  |
 | class [PropertyValue](propertyvalue/) |  |
 | class [ReadOnlyDiscountedPrice](readonlydiscountedprice/) |  |
@@ -108,6 +109,8 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | class [ReadOnlyTotalPriceWithPreviousDiscount](readonlytotalpricewithpreviousdiscount/) |  |
 | class [Region](region/) |  |
 | class [RegionReadOnly](regionreadonly/) |  |
+| class [RegisteredCustomerInfo](registeredcustomerinfo/) |  |
+| class [RegisteredCustomerInfoBuilder](registeredcustomerinfobuilder/) |  |
 | class [ServicePrice](serviceprice/) |  |
 | enum [SetBehavior](setbehavior/) |  |
 | class [ShippingMethod](shippingmethod/) |  |

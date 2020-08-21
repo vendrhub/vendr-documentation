@@ -55,6 +55,15 @@ public string CustomerEmail { get; set; }
 
 ---
 
+#### CustomerReference
+
+```csharp
+public string CustomerReference { get; set; }
+```
+
+
+---
+
 #### OrderLines
 
 ```csharp

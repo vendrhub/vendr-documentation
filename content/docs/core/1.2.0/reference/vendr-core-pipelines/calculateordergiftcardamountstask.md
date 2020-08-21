@@ -21,7 +21,7 @@ public class CalculateOrderGiftCardAmountsTask :
 #### CalculateOrderGiftCardAmountsTask
 
 ```csharp
-public CalculateOrderGiftCardAmountsTask(IGiftCardService giftCardService)
+public CalculateOrderGiftCardAmountsTask(IGiftCardService giftCardService, ILogger logger)
 ```
 
 

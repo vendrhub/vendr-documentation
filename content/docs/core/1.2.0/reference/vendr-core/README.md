@@ -6,6 +6,7 @@ description: API reference for Vendr.Core in Vendr, the eCommerce solution for U
 
 | Public Type | Description |
 | --- | --- |
+| class [ActionEventArgs](actioneventargs/) |  |
 | static class [AssertionExtensions](assertionextensions/) | Extension methods for performing assertions |
 | static class [Constants](constants/) | Vendr constant variables |
 | class [DictionaryDiff&lt;TKey,TValue&gt;](dictionarydiff-2/) |  |
@@ -25,6 +26,7 @@ description: API reference for Vendr.Core in Vendr, the eCommerce solution for U
 | interface [IUnitOfWork](iunitofwork/) | Defines a Unit of Work |
 | interface [IUnitOfWorkProvider](iunitofworkprovider/) | Defines a Provider that can create a [`IUnitOfWork`](vendr-core/iunitofwork/) |
 | static class [LoggerExtensions](loggerextensions/) | Provides extension methods for the [`ILogger`](vendr-core-logging/ilogger/) interface. |
+| class [NotificationEventArgs](notificationeventargs/) |  |
 | static class [ObjectExtensions](objectextensions/) | Object extension methods |
 | static class [OrderExtensions](orderextensions/) | Extension methods for a Vendr Order |
 | static class [PaymentMethodExtensions](paymentmethodextensions/) |  |

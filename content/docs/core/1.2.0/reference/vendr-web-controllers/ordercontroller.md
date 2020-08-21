@@ -24,7 +24,8 @@ public OrderController(UmbracoControllerContext vendrContext, IStoreService stor
     IOrderService orderService, IOrderStatusService orderStatusService, 
     IPaymentMethodService paymentMethodService, IPaymentProviderService paymentProviderService, 
     IShippingMethodService shippingMethodService, ICountryService countryService, 
-    ITranslationService translationService, IUnitOfWorkProvider uowProvider)
+    ITranslationService translationService, 
+    IRegisteredCustomerInfoService registeredCustomerInfoService, IUnitOfWorkProvider uowProvider)
 ```
 
 
@@ -79,6 +80,24 @@ public OrderEditDto GetOrder(Guid orderId)
 
 ```csharp
 public object GetOrderEmailConfig(Guid orderId)
+```
+
+
+---
+
+#### GetOrderHistoryByOrder
+
+```csharp
+public IEnumerable<OrderBasicDto> GetOrderHistoryByOrder(Guid orderId)
+```
+
+
+---
+
+#### GetOrderRegisteredCustomerInfo
+
+```csharp
+public RegisteredCustomerInfoDto GetOrderRegisteredCustomerInfo(Guid orderId)
 ```
 
 

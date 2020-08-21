@@ -21,8 +21,7 @@ public class MemberGroupDiscountRuleProvider :
 #### MemberGroupDiscountRuleProvider
 
 ```csharp
-public MemberGroupDiscountRuleProvider(Lazy<IMemberService> memberService, 
-    Lazy<IMembershipRoleService<IMember>> rolesService)
+public MemberGroupDiscountRuleProvider(Lazy<IMemberService> memberService)
 ```
 
 

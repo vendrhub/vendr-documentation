@@ -114,7 +114,7 @@ Gets a list of finalized [`OrderReadOnly`](../../vendr-core-models/orderreadonly
 
 ```csharp
 public IEnumerable<OrderReadOnly> GetFinalizedOrdersForCustomer(Guid storeId, 
-    string customerReference)
+    string customerReferenceOrEmail)
 ```
 
 **Parameters**
@@ -122,7 +122,7 @@ public IEnumerable<OrderReadOnly> GetFinalizedOrdersForCustomer(Guid storeId,
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities belong to |
-| customerReference | The unique reference of the customer associated with the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities |
+| customerReferenceOrEmail | The unique reference or email address of the customer associated with the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities |
 
 **Returns**
 

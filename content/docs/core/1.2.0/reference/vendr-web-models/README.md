@@ -58,6 +58,7 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 | class [RegionDto](regiondto/) |  |
 | class [RegionEditDto](regioneditdto/) |  |
 | class [RegionSaveDto](regionsavedto/) |  |
+| class [RegisteredCustomerInfoDto](registeredcustomerinfodto/) |  |
 | abstract class [SearchDtoBase](searchdtobase/) |  |
 | class [ServicePriceDto](servicepricedto/) |  |
 | class [ShippingMethodBasicDto](shippingmethodbasicdto/) |  |

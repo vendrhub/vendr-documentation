@@ -31,7 +31,7 @@ public void Complete()
 Schedules an Action to be performed once the Unit of Work is complete
 
 ```csharp
-public void ScheduleAction(Action action)
+public void ScheduleAction(Action action, string name)
 ```
 
 **Parameters**
@@ -39,6 +39,7 @@ public void ScheduleAction(Action action)
 | Parameter | Description |
 | --- | --- |
 | action | The Action to perform |
+| name | A unique name for this action |
 
 
 ---

@@ -20,7 +20,8 @@ public class EntityStateCache : IEntityStateCache
 #### EntityStateCache
 
 ```csharp
-public EntityStateCache(ICache systemCache, IRequestCacheFactory requestCacheFactory)
+public EntityStateCache(ICache systemCache, IRequestCacheFactory requestCacheFactory, 
+    ILogger logger)
 ```
 
 

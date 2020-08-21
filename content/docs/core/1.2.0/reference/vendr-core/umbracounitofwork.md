@@ -57,7 +57,7 @@ public void Dispose()
 Schedules an Action to be performed once the Unit of Work is complete
 
 ```csharp
-public void ScheduleAction(Action action)
+public void ScheduleAction(Action action, string name)
 ```
 
 **Parameters**
@@ -65,6 +65,7 @@ public void ScheduleAction(Action action)
 | Parameter | Description |
 | --- | --- |
 | action | The Action to perform |
+| name | A unique name for the action |
 
 
 ---
@@ -124,7 +125,7 @@ public void ScheduleNotifications(IEnumerable<INotificationEvent> notificationEv
 A utility Action invocation handler for registering Actions on the Umbraco Scope
 
 ```csharp
-public static event EventHandler<Action> ActionHandler;
+public static event EventHandler<ActionEventArgs> ActionHandler;
 ```
 
 
@@ -135,7 +136,7 @@ public static event EventHandler<Action> ActionHandler;
 A utility Notification Event dispatch handler for registering Notification Events on the Umbraco Scope
 
 ```csharp
-public static event EventHandler<INotificationEvent> NotificationEventHandler;
+public static event EventHandler<NotificationEventArgs> NotificationEventHandler;
 ```
 
 

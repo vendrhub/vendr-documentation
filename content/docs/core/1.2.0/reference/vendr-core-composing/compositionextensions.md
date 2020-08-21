@@ -155,6 +155,16 @@ public static PipelineBuilder<TCollection, TItem> WithPipeline<TCollection, TIte
 
 ---
 
+#### WithRegisteredCustomerInfoProviders
+
+```csharp
+public static RegisteredCustomerInfoProviderCollectionBuilder WithRegisteredCustomerInfoProviders(
+    this Composition composition)
+```
+
+
+---
+
 #### WithSendEmailPipeline
 
 ```csharp

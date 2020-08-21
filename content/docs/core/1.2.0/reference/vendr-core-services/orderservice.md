@@ -76,7 +76,7 @@ public long GetFinalizedOrderCount(Guid storeId)
 
 ```csharp
 public IEnumerable<OrderReadOnly> GetFinalizedOrdersForCustomer(Guid storeId, 
-    string customerReference)
+    string customerReferenceOrEmail)
 ```
 
 

@@ -25,6 +25,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | interface [IPriceFreezerService](ipricefreezerservice/) | Defines the Vendr Price Freezer service |
 | interface [IProductPriceFreezerService](iproductpricefreezerservice/) | Defines the Vendr Product Price Freezer service |
 | interface [IProductService](iproductservice/) | Defines the Vendr Product service |
+| interface [IRegisteredCustomerInfoService](iregisteredcustomerinfoservice/) |  |
 | interface [IService](iservice/) | Marker interface for services |
 | interface [IShippingMethodService](ishippingmethodservice/) | Defines the Vendr Shipping Method service |
 | interface [IStoreService](istoreservice/) | Define the Vendr Store service |
@@ -36,6 +37,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | class [PriceFreezerService](pricefreezerservice/) |  |
 | class [ProductPriceFreezerService](productpricefreezerservice/) |  |
 | class [ProductService](productservice/) |  |
+| class [RegisteredCustomerInfoService](registeredcustomerinfoservice/) |  |
 | abstract class [ServiceBase](servicebase/) |  |
 | class [ShippingMethodService](shippingmethodservice/) |  |
 | class [StoreService](storeservice/) |  |
