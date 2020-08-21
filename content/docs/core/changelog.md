@@ -19,7 +19,6 @@ description: Changelog for the Core Vendr product
 
 * Use `umb-loader` component in Vendr list view rather than raw markup + css classes ([#161](https://github.com/vendrhub/vendr/issues/161)).
 * Improved accessibility in a number of areas ([#162](https://github.com/vendrhub/vendr/issues/162)).
-* Long order line names are now truncated rather than flowing off screen ([#147](https://github.com/vendrhub/vendr/issues/147)).
 * Removed `umb-overlay` directive usage in favour of the `overlayService` ([#163](https://github.com/vendrhub/vendr/issues/163)).
 * Expanded any self closing directive DOM tags as this is considered bad practice for directives ([#164](https://github.com/vendrhub/vendr/issues/164)).
 
