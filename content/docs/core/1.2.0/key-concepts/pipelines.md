@@ -41,7 +41,9 @@ Pipeline tasks are [registered via a Composer](../dependency-injection/#register
 public void Compose(Composition composition)
 {
     composition.WithSendEmailPipeline()
-        .Append<AddCustomAttachmentTask>();
+        .Append<AddCustomAttachmentTask>(); 
+    //note: Adding an e-mail related task at the end of the pipeline won't influence the sending of the email. 
+    //Instead it will need to be added before the SendSmtpEmailTask as shown below.
 }
 ````
 
@@ -52,10 +54,10 @@ public void Compose(Composition composition)
 {
     // Register AddCustomAttachmentTask to execute before the SomeOtherTask handler
     composition.WithSendEmailPipeline()
-        .InsertBefore<SomeOtherTask, AddCustomAttachmentTask>();
+        .InsertBefore<SendSmtpEmailTask, AddCustomAttachmentTask>(); //Insert before the actual send of the e-mail else the attachment won't have been added.
 
     // Register AddCustomAttachmentTask to execute after the SomeOtherTask handler
     composition.WithSendEmailPipeline()
-        .InsertAfter<SomeOtherTask, AddCustomAttachmentTask>();
+        .InsertAfter<RenderEmailTemplateTask, AddCustomAttachmentTask>(); //Insert after the e-mail template has been rendered.
 }
 ````
