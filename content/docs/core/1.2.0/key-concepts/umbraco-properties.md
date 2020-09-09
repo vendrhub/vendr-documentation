@@ -16,4 +16,4 @@ Unlike other Umbraco eCommerce platforms where store and product information is 
 | `stock` | Vendr.Stock | Product node property defining the stock level of the product |
 | `taxClass` | Vendr.StoreEntityPicker | Optional product node property that allows you to define an explicit `Tax Class` for the product, should it differ from the stores default |
 | `isGiftCard` | True/False | Optional product node property that defined whether the product node should be considered a Gift Card product, in which case it triggers the automatic generation of a Gift Card in the back-office and emails it directly to the customer on checkout |
-| `masterRelation` | ContentPicker | Optional product node property allowing you to link a product to another product outside of it's hierarchy to be used as it's source of product information |
+| `productSource` | ContentPicker | Optional product node property allowing you to link a product to another product outside of it's hierarchy to be used as it's source of product information |
