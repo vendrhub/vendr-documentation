@@ -3,6 +3,19 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.10      
+**Date:** 2020-09-11  
+**Description:** Patch release with minor bug fixes mostly around the Umbraco 8.7 release  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed a styling bug in order details header that got missed in the previous release.
+
+</changelog-group>
+</changelog>
+
 ## v1.2.9      
 **Date:** 2020-09-11  
 **Description:** Patch release with minor bug fixes mostly around the Umbraco 8.7 release  
