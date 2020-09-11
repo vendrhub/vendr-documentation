@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.2.9      
+**Date:** 2020-09-11  
+**Description:** Patch release with minor bug fixes mostly around the Umbraco 8.7 release  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed a bug in the session manager remembering an order after it had been moved to finalized.
+* Fixed bug in UI mot matching the same colours used by Umbraco ([#174](https://github.com/vendrhub/vendr/issues/174)).
+* Fixed bug with price + store entity pickers not working correctly in Umbraco 8.7 ([#176](https://github.com/vendrhub/vendr/issues/176)).
+* Fixed a series of style changes in the recently Umbraco 8.7 release.
+
+</changelog-group>
+</changelog>
+
 ## v1.2.8      
 **Date:** 2020-08-21   
 **Description:** Patch release with minor bug fixes / enhancements  
