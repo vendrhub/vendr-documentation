@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.3.0 (Unreleased)       
+**Date:** TBC  
+**Description:** Minor release including new features  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added new store summary dashboard featuring a sales summary, links to pertinent actions as well as an activity log.
+* Added commerce route dashboard giving summary of stores the current user has access to.
+* Added analytics section to stores to provide basic analytics reporting on the stores performance.
+* Added ability to handle Vendr subscription based licenses.
+
+</changelog-group>
+</changelog>
+
 ## v1.2.10      
 **Date:** 2020-09-11  
 **Description:** Patch release with minor bug fixes mostly around the Umbraco 8.7 release  
