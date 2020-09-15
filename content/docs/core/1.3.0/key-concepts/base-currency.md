@@ -22,7 +22,6 @@ If you wish to change the currency exchange rate service used at any time you ca
 ````csharp
 public void Compose(Composition composition)
 {
-    // Replacing the product calculator implementation
     composition.RegisterUnique<ICurrencyExchangeRateService>(new FixerCurrencyExchangeRateService("YOUR_FIXER_API_KEY"));
 }
 ````
