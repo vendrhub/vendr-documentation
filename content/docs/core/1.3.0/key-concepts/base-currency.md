@@ -13,11 +13,11 @@ When a store has a base currency configured, from that point on, any order place
 
 In order for Vendr to track the current exchange rate of the orders currency, an `ICurrencyExchangeRateService` is used to connect to a 3rd party exchange rates API to retrieve the most up to date rate. Out of the box, Vendr comes with a number of available services you can choose to use. Some are free services, whilst others require a paid subscription.
 
-* **ExchangeRatesApiCurrencyExchangeRateService** uses the free (exchangeratesapi.io)[https://exchangeratesapi.io/] API and is the default option OTB.
-* **FixerCurrencyExchangeRateService** uses the (fixer.io)[https://fixer.io/] API which is a very popular and reliable paid for option (with a reasonable free plan).
-* **CurrencyLayerCurrencyExchangeRateService** uses the (currencylayer.com)[https://currencylayer.com/] API which is another very popular and reliable paid for option (with a reasonable free plan).
+* **ExchangeRatesApiCurrencyExchangeRateService** uses the free [exchangeratesapi.io](https://exchangeratesapi.io/) API and is the default option OTB.
+* **FixerCurrencyExchangeRateService** uses the [fixer.io](https://fixer.io/) API which is a very popular and reliable paid for option (with a reasonable free plan).
+* **CurrencyLayerCurrencyExchangeRateService** uses the [currencylayer.com](https://currencylayer.com/) API which is another very popular and reliable paid for option (with a reasonable free plan).
 
-If you wish to change the currency exchange rate service used at any time you can do so via the (dependency injection)(../dependency-injection/) approach of overriding the default service configuration. For services that require configuration to be passed in, such as service API keys, you'll need to use the factory based override as follows.
+If you wish to change the currency exchange rate service used at any time you can do so via the [dependency injection](../dependency-injection/) approach of overriding the default service configuration. For services that require configuration to be passed in, such as service API keys, you'll need to use the factory based override as follows.
 
 ````csharp
 public void Compose(Composition composition)
