@@ -1,13 +1,13 @@
 ---
-title: UmbracoUnitOfWork
-description: API reference for UmbracoUnitOfWork in Vendr, the eCommerce solution for Umbraco v8+
+title: DefaultUnitOfWork
+description: API reference for DefaultUnitOfWork in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## UmbracoUnitOfWork
+## DefaultUnitOfWork
 
 A [`IDatabaseUnitOfWork`](../idatabaseunitofwork/) implementation using Umbraco Scopes
 
 ```csharp
-public class UmbracoUnitOfWork : IDatabaseUnitOfWork
+public class DefaultUnitOfWork : IDatabaseUnitOfWork
 ```
 
 **Inheritance**
@@ -25,6 +25,15 @@ A IDatabase reference for use in the Unit of Work
 
 ```csharp
 public IDatabase Database { get; }
+```
+
+
+---
+
+#### EntityStateCache
+
+```csharp
+public IEntityStateCache EntityStateCache { get; }
 ```
 
 
@@ -48,24 +57,6 @@ Disposes of the Unit of Work
 ```csharp
 public void Dispose()
 ```
-
-
----
-
-#### ScheduleAction
-
-Schedules an Action to be performed once the Unit of Work is complete
-
-```csharp
-public void ScheduleAction(Action action, string name)
-```
-
-**Parameters**
-
-| Parameter | Description |
-| --- | --- |
-| action | The Action to perform |
-| name | A unique name for the action |
 
 
 ---
@@ -119,17 +110,6 @@ public void ScheduleNotifications(IEnumerable<INotificationEvent> notificationEv
 
 
 ### Events
-
-#### ActionHandler
-
-A utility Action invocation handler for registering Actions on the Umbraco Scope
-
-```csharp
-public static event EventHandler<ActionEventArgs> ActionHandler;
-```
-
-
----
 
 #### NotificationEventHandler
 

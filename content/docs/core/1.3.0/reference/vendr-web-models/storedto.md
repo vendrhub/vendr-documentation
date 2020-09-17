@@ -46,6 +46,15 @@ public List<string> AllowedUsers { get; set; }
 
 ---
 
+#### BaseCurrencyId
+
+```csharp
+public Guid? BaseCurrencyId { get; set; }
+```
+
+
+---
+
 #### CartNumberTemplate
 
 ```csharp

@@ -27,6 +27,15 @@ public CountryController(UmbracoControllerContext vendrContext, IStoreService st
 
 ### Methods
 
+#### CreateAllCountryRegions
+
+```csharp
+public void CreateAllCountryRegions(Guid storeId, Guid defaultCurrencyId)
+```
+
+
+---
+
 #### CreateCountry
 
 ```csharp

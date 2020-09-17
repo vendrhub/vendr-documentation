@@ -21,8 +21,7 @@ public class PaymentMethodCacheRefresher :
 #### PaymentMethodCacheRefresher
 
 ```csharp
-public PaymentMethodCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    IPaymentMethodService entityService)
+public PaymentMethodCacheRefresher(AppCaches appCaches, IPaymentMethodService entityService)
 ```
 
 

@@ -26,11 +26,21 @@ public CurrencyLayerCurrencyExchangeRateService(string apiKey)
 
 ### Methods
 
-#### GetLatestExchangeRates
+#### FetchExchangeRate
 
 ```csharp
-public override IDictionary<string, decimal> GetLatestExchangeRates(string baseCurrencyIsoCode, 
-    string[] targetCurrencyIsoCodes)
+public override decimal FetchExchangeRate(string fromCurrencyIsoCode, string toCurrencyIsoCode, 
+    DateTime date)
+```
+
+
+---
+
+#### FetchExchangeRates
+
+```csharp
+public override Dictionary<string, Dictionary<string, decimal>> FetchExchangeRates(
+    string fromCurrencyIsoCode, string[] toCurrencyIsoCodes, DateTime dateFrom, DateTime dateTo)
 ```
 
 

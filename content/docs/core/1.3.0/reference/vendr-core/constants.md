@@ -211,6 +211,17 @@ public static class Tables
 
 ##### Fields
 
+#### ActivityLog
+
+The Activity Log database table name
+
+```csharp
+public const string ActivityLog;
+```
+
+
+---
+
 #### Country
 
 The Country database table name
@@ -547,6 +558,160 @@ The Tax Class Country Region Tax Rate database table name
 
 ```csharp
 public const string TaxClassCountryRegionTaxRate;
+```
+
+
+
+
+---
+
+#### Constants.Entities
+
+Entity related constants
+
+```csharp
+public static class Entities
+```
+
+##### Classes
+
+#### Constants.Entities.EntityTypes
+
+Entity type constants
+
+```csharp
+public static class EntityTypes
+```
+
+##### Fields
+
+#### Country
+
+Country entity type
+
+```csharp
+public const string Country;
+```
+
+
+---
+
+#### Currency
+
+Currency entity type
+
+```csharp
+public const string Currency;
+```
+
+
+---
+
+#### Discount
+
+Discount entity type
+
+```csharp
+public const string Discount;
+```
+
+
+---
+
+#### EmailTemplate
+
+Email Template entity type
+
+```csharp
+public const string EmailTemplate;
+```
+
+
+---
+
+#### GiftCard
+
+Gift Card entity type
+
+```csharp
+public const string GiftCard;
+```
+
+
+---
+
+#### Order
+
+Order entity type
+
+```csharp
+public const string Order;
+```
+
+
+---
+
+#### OrderStatus
+
+Order Status entity type
+
+```csharp
+public const string OrderStatus;
+```
+
+
+---
+
+#### PaymentMethod
+
+Payment Method entity type
+
+```csharp
+public const string PaymentMethod;
+```
+
+
+---
+
+#### Region
+
+Region entity type
+
+```csharp
+public const string Region;
+```
+
+
+---
+
+#### ShippingMethod
+
+Shipping Method entity type
+
+```csharp
+public const string ShippingMethod;
+```
+
+
+---
+
+#### Store
+
+Store entity type
+
+```csharp
+public const string Store;
+```
+
+
+---
+
+#### TaxClass
+
+Tax Class entity type
+
+```csharp
+public const string TaxClass;
 ```
 
 

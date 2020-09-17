@@ -13,6 +13,17 @@ public interface IUnitOfWork : IDisposable
 **Namespace**
 * [Vendr.Core](../)
 
+### Properties
+
+#### EntityStateCache
+
+The entity state cache
+
+```csharp
+public IEntityStateCache EntityStateCache { get; }
+```
+
+
 ### Methods
 
 #### Complete
@@ -22,24 +33,6 @@ Marks the completion of a successful Unit of Work
 ```csharp
 public void Complete()
 ```
-
-
----
-
-#### ScheduleAction
-
-Schedules an Action to be performed once the Unit of Work is complete
-
-```csharp
-public void ScheduleAction(Action action, string name)
-```
-
-**Parameters**
-
-| Parameter | Description |
-| --- | --- |
-| action | The Action to perform |
-| name | A unique name for this action |
 
 
 ---

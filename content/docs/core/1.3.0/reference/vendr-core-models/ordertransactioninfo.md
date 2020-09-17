@@ -26,6 +26,17 @@ public Amount AmountAuthorized { get; }
 
 ---
 
+#### BaseCurrencyExchangeRate
+
+Gets the base currency exchange rate the order transaction amount
+
+```csharp
+public decimal? BaseCurrencyExchangeRate { get; }
+```
+
+
+---
+
 #### PaymentStatus
 
 Gets the `PaymentStatus` of the transaction for the order

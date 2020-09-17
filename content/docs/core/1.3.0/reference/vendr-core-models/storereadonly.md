@@ -45,6 +45,15 @@ public IReadOnlyList<AllowedUser> AllowedUsers { get; }
 
 ---
 
+#### BaseCurrencyId
+
+```csharp
+public Guid? BaseCurrencyId { get; }
+```
+
+
+---
+
 #### CartNumberTemplate
 
 ```csharp

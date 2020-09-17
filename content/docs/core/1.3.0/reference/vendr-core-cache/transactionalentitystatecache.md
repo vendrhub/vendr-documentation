@@ -1,11 +1,11 @@
 ---
-title: EntityStateCache
-description: API reference for EntityStateCache in Vendr, the eCommerce solution for Umbraco v8+
+title: TransactionalEntityStateCache
+description: API reference for TransactionalEntityStateCache in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## EntityStateCache
+## TransactionalEntityStateCache
 
 ```csharp
-public class EntityStateCache : IEntityStateCache
+public class TransactionalEntityStateCache : IDisposable, IEntityStateCache
 ```
 
 **Inheritance**
@@ -17,42 +17,15 @@ public class EntityStateCache : IEntityStateCache
 
 ### Constructors
 
-#### EntityStateCache
+#### TransactionalEntityStateCache
 
 ```csharp
-public EntityStateCache(ICache systemCache, IRequestCacheFactory requestCacheFactory, 
+public TransactionalEntityStateCache(ICache systemCache, ICacheFactory inMemoryCacheFactory, 
     ILogger logger)
 ```
 
 
-### Properties
-
-#### HasOpenTransaction
-
-```csharp
-public bool HasOpenTransaction { get; }
-```
-
-
----
-
-#### _localCache
-
-```csharp
-public ICache _localCache { get; }
-```
-
-
 ### Methods
-
-#### BeginTransaction
-
-```csharp
-public void BeginTransaction()
-```
-
-
----
 
 #### CommitTransaction
 
@@ -63,10 +36,10 @@ public void CommitTransaction()
 
 ---
 
-#### DisposeTransaction
+#### Dispose
 
 ```csharp
-public void DisposeTransaction()
+public void Dispose()
 ```
 
 
@@ -87,6 +60,15 @@ public IConcurrentDictionary<Guid, Lazy<T>> GetStateCache<T>(string cacheKey)
 public IConcurrentDictionary<Guid, Lazy<T>> GetStateCache<T>(string cacheKey, 
     Func<IConcurrentDictionary<Guid, Lazy<T>>> factory)
     where T : EntityStateBase
+```
+
+
+---
+
+#### RollbackTransaction
+
+```csharp
+public void RollbackTransaction()
 ```
 
 

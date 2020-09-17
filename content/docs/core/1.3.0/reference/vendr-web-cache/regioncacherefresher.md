@@ -21,8 +21,7 @@ public class RegionCacheRefresher :
 #### RegionCacheRefresher
 
 ```csharp
-public RegionCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    ICountryService entityService)
+public RegionCacheRefresher(AppCaches appCaches, ICountryService entityService)
 ```
 
 

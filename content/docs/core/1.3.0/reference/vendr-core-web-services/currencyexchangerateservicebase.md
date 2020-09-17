@@ -17,11 +17,40 @@ public abstract class CurrencyExchangeRateServiceBase : ICurrencyExchangeRateSer
 
 ### Methods
 
-#### GetLatestExchangeRates
+#### FetchExchangeRate
 
 ```csharp
-public abstract IDictionary<string, decimal> GetLatestExchangeRates(string baseCurrencyIsoCode, 
-    string[] targetCurrencyIsoCodes)
+public abstract decimal FetchExchangeRate(string fromCurrencyIsoCode, string toCurrencyIsoCode, 
+    DateTime date)
+```
+
+
+---
+
+#### FetchExchangeRates
+
+```csharp
+public abstract Dictionary<string, Dictionary<string, decimal>> FetchExchangeRates(
+    string fromCurrencyIsoCode, string[] toCurrencyIsoCodes, DateTime dateFrom, DateTime dateTo)
+```
+
+
+---
+
+#### GetExchangeRate
+
+```csharp
+public decimal GetExchangeRate(string fromCurrencyIsoCode, string toCurrencyIsoCode, DateTime date)
+```
+
+
+---
+
+#### GetExchangeRates
+
+```csharp
+public Dictionary<string, Dictionary<string, decimal>> GetExchangeRates(string fromCurrencyIsoCode, 
+    string[] toCurrencyIsoCodes, DateTime dateFrom, DateTime dateTo)
 ```
 
 

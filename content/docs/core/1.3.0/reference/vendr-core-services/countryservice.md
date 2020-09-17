@@ -22,7 +22,7 @@ public class CountryService : EntityServiceBase, ICountryService
 
 ```csharp
 public CountryService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache)
+    ILogger logger, ICache cache)
 ```
 
 
@@ -32,6 +32,15 @@ public CountryService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider 
 
 ```csharp
 public bool CountryExists(Guid storeId, string code)
+```
+
+
+---
+
+#### CreateAllCountryRegions
+
+```csharp
+public void CreateAllCountryRegions(Guid storeId, Guid defaultCurrencyId)
 ```
 
 

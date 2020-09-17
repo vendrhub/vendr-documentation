@@ -21,6 +21,7 @@ public class StoreController : VendrAuthorizedJsonControllerBase
 
 ```csharp
 public StoreController(UmbracoControllerContext vendrContext, IStoreService storeService, 
+    ICountryService countryService, ICurrencyService currencyService, 
     IUnitOfWorkProvider uowProvider, IIOHelper ioHelper)
 ```
 
@@ -94,6 +95,24 @@ public object GetStoreOrderEditorConfig(Guid storeId)
 
 ```csharp
 public IEnumerable<StoreBasicDto> GetStores()
+```
+
+
+---
+
+#### GetStoreStatsForToday
+
+```csharp
+public StoreStatsDto GetStoreStatsForToday(Guid storeId)
+```
+
+
+---
+
+#### GetStoreSummariesForCurrentUser
+
+```csharp
+public IEnumerable<StoreSummaryDto> GetStoreSummariesForCurrentUser()
 ```
 
 

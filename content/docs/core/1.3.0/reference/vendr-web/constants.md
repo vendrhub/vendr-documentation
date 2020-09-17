@@ -464,6 +464,7 @@ public enum NodeType
 | Discount | `5` | Alias for a single discount node. |
 | GiftCards | `6` | Alias for the gift cards node. |
 | GiftCard | `7` | Alias for a single gift card node. |
+| Analytics | `8` | Alias for a analytics node. |
 
 
 

@@ -21,8 +21,7 @@ public class EmailTemplateCacheRefresher :
 #### EmailTemplateCacheRefresher
 
 ```csharp
-public EmailTemplateCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    IEmailTemplateService entityService)
+public EmailTemplateCacheRefresher(AppCaches appCaches, IEmailTemplateService entityService)
 ```
 
 

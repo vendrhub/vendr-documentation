@@ -6,12 +6,14 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 
 | Public Type | Description |
 | --- | --- |
+| class [AnalyticsService](analyticsservice/) |  |
 | class [CountryService](countryservice/) |  |
 | class [CurrencyService](currencyservice/) |  |
 | class [DiscountService](discountservice/) |  |
 | class [EmailTemplateService](emailtemplateservice/) |  |
 | abstract class [EntityServiceBase](entityservicebase/) |  |
 | class [GiftCardService](giftcardservice/) |  |
+| interface [IAnalyticsService](ianalyticsservice/) |  |
 | interface [ICachedEntityService&lt;TEntityType&gt;](icachedentityservice-1/) | Defines a service that supports cached entities |
 | interface [ICountryService](icountryservice/) | Defines the Vendr Country service |
 | interface [ICurrencyExchangeRateService](icurrencyexchangerateservice/) |  |

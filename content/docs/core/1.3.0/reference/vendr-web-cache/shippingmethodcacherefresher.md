@@ -21,8 +21,7 @@ public class ShippingMethodCacheRefresher :
 #### ShippingMethodCacheRefresher
 
 ```csharp
-public ShippingMethodCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    IShippingMethodService entityService)
+public ShippingMethodCacheRefresher(AppCaches appCaches, IShippingMethodService entityService)
 ```
 
 

@@ -3,9 +3,9 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v1.3.0 (Unreleased)       
-**Date:** TBC  
-**Description:** Minor release including new features  
+## v1.3.0       
+**Date:** 2020-09-17    
+**Description:** Minor release including new features and some bug fixes / breaking changes  
 ---  
 
 <changelog>
@@ -15,6 +15,25 @@ description: Changelog for the Core Vendr product
 * Added commerce route dashboard giving summary of stores the current user has access to.
 * Added analytics section to stores to provide basic analytics reporting on the stores performance.
 * Added ability to handle Vendr subscription based licenses.
+* Added Vendr logo to Umbraco package.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed Umbraco 8.8 RC styling issues mostly around icons.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* `IEntityStateCache` is now no longer an injectable dependency, instead it accessed via the Unit of Work.
+* List view buttons now use the outline style as per the latest Umbraco.
+* `IProductCalculator` now accepts a `ProductCalculatorContext`.
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+* `IUnitOfWork` interface now provides access to entity state cache.
+* `UnitOfWork` now accepts a `VendrUnitOfWorkTransaction`.
 
 </changelog-group>
 </changelog>

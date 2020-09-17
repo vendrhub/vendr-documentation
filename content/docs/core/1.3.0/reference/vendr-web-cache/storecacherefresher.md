@@ -21,8 +21,7 @@ public class StoreCacheRefresher :
 #### StoreCacheRefresher
 
 ```csharp
-public StoreCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    IStoreService entityService)
+public StoreCacheRefresher(AppCaches appCaches, IStoreService entityService)
 ```
 
 

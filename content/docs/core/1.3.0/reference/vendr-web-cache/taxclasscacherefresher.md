@@ -21,8 +21,7 @@ public class TaxClassCacheRefresher :
 #### TaxClassCacheRefresher
 
 ```csharp
-public TaxClassCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    ITaxService entityService)
+public TaxClassCacheRefresher(AppCaches appCaches, ITaxService entityService)
 ```
 
 

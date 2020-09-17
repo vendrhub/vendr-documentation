@@ -21,8 +21,7 @@ public class CurrencyCacheRefresher :
 #### CurrencyCacheRefresher
 
 ```csharp
-public CurrencyCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    ICurrencyService entityService)
+public CurrencyCacheRefresher(AppCaches appCaches, ICurrencyService entityService)
 ```
 
 

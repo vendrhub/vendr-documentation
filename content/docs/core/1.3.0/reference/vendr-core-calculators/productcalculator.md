@@ -30,7 +30,7 @@ public ProductCalculator(ITaxService taxService, IStoreService storeService)
 
 ```csharp
 public override Price CalculateProductPrice(IProductSnapshot productSnapshot, Guid currencyId, 
-    TaxRate taxRate)
+    TaxRate taxRate, ProductCalculatorContext context)
 ```
 
 
@@ -40,7 +40,7 @@ public override Price CalculateProductPrice(IProductSnapshot productSnapshot, Gu
 
 ```csharp
 public override TaxRate CalculateProductTaxRate(IProductSnapshot productSnapshot, 
-    TaxSource taxSource, TaxRate fallbackTaxRate)
+    TaxSource taxSource, TaxRate fallbackTaxRate, ProductCalculatorContext context)
 ```
 
 

@@ -22,7 +22,7 @@ public class PaymentMethodService : EntityServiceBase, IPaymentMethodService
 
 ```csharp
 public PaymentMethodService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache)
+    ILogger logger, ICache cache)
 ```
 
 

@@ -20,8 +20,28 @@ public abstract class ProductCalculatorBase : IProductCalculator
 #### CalculateProductPrice
 
 ```csharp
-public abstract Price CalculateProductPrice(IProductSnapshot productSnapshot, Guid currencyId, 
+public virtual Price CalculateProductPrice(IProductSnapshot productSnapshot, Guid currencyId, 
     TaxRate taxRate)
+```
+
+
+---
+
+#### CalculateProductPrice
+
+```csharp
+public abstract Price CalculateProductPrice(IProductSnapshot productSnapshot, Guid currencyId, 
+    TaxRate taxRate, ProductCalculatorContext context)
+```
+
+
+---
+
+#### CalculateProductTaxRate
+
+```csharp
+public virtual TaxRate CalculateProductTaxRate(IProductSnapshot productSnapshot, 
+    TaxSource taxSource, TaxRate fallbackTaxRate)
 ```
 
 
@@ -31,7 +51,7 @@ public abstract Price CalculateProductPrice(IProductSnapshot productSnapshot, Gu
 
 ```csharp
 public abstract TaxRate CalculateProductTaxRate(IProductSnapshot productSnapshot, 
-    TaxSource taxSource, TaxRate fallbackTaxRate)
+    TaxSource taxSource, TaxRate fallbackTaxRate, ProductCalculatorContext context)
 ```
 
 

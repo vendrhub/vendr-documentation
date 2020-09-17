@@ -276,6 +276,23 @@ public Store SetAllowedUsers(IEnumerable<string> userIds,
 
 ---
 
+#### SetBaseCurrency (1 of 2)
+
+```csharp
+public Store SetBaseCurrency(CurrencyReadOnly currency)
+```
+
+---
+
+#### SetBaseCurrency (2 of 2)
+
+```csharp
+public Store SetBaseCurrency(Guid? currencyId)
+```
+
+
+---
+
 #### SetCartNumberTemplate
 
 ```csharp

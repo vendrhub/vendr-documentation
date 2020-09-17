@@ -343,6 +343,7 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidateStoreAliasChange](validatestorealiaschange/) |  |
 | class [ValidateStoreAllowUser](validatestoreallowuser/) |  |
 | class [ValidateStoreAllowUserRole](validatestoreallowuserrole/) |  |
+| class [ValidateStoreBaseCurrencyChange](validatestorebasecurrencychange/) |  |
 | class [ValidateStoreCookiesChange](validatestorecookieschange/) |  |
 | class [ValidateStoreCreate](validatestorecreate/) |  |
 | class [ValidateStoreDefaultCountryChange](validatestoredefaultcountrychange/) |  |

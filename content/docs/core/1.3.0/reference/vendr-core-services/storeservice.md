@@ -22,7 +22,7 @@ public class StoreService : EntityServiceBase, IStoreService
 
 ```csharp
 public StoreService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache)
+    ILogger logger, ICache cache)
 ```
 
 

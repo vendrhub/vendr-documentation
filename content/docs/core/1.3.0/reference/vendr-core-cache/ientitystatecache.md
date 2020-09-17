@@ -11,43 +11,7 @@ public interface IEntityStateCache
 **Namespace**
 * [Vendr.Core.Cache](../)
 
-### Properties
-
-#### HasOpenTransaction
-
-```csharp
-public bool HasOpenTransaction { get; }
-```
-
-
 ### Methods
-
-#### BeginTransaction
-
-```csharp
-public void BeginTransaction()
-```
-
-
----
-
-#### CommitTransaction
-
-```csharp
-public void CommitTransaction()
-```
-
-
----
-
-#### DisposeTransaction
-
-```csharp
-public void DisposeTransaction()
-```
-
-
----
 
 #### GetStateCache&lt;T&gt; (1 of 2)
 

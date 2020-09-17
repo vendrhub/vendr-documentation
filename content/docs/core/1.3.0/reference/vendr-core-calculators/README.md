@@ -19,6 +19,7 @@ description: API reference for Vendr.Core.Calculators in Vendr, the eCommerce so
 | class [PaymentCalculatorContext](paymentcalculatorcontext/) |  |
 | class [ProductCalculator](productcalculator/) |  |
 | abstract class [ProductCalculatorBase](productcalculatorbase/) |  |
+| class [ProductCalculatorContext](productcalculatorcontext/) |  |
 | class [ShippingCalculator](shippingcalculator/) |  |
 | abstract class [ShippingCalculatorBase](shippingcalculatorbase/) |  |
 | class [ShippingCalculatorContext](shippingcalculatorcontext/) |  |

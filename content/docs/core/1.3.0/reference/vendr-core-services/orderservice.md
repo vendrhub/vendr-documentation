@@ -22,9 +22,8 @@ public class OrderService : EntityServiceBase, IOrderService
 
 ```csharp
 public OrderService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache, IStoreService storeService, 
-    ICountryService countryService, ICurrencyService currencyService, 
-    IOrderNumberGenerator orderNumberGenerator)
+    ILogger logger, ICache cache, IOrderNumberGenerator orderNumberGenerator, 
+    ICurrencyExchangeRateService exchangeRateService)
 ```
 
 

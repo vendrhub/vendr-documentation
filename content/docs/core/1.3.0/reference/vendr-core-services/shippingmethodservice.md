@@ -22,7 +22,7 @@ public class ShippingMethodService : EntityServiceBase, IShippingMethodService
 
 ```csharp
 public ShippingMethodService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache)
+    ILogger logger, ICache cache)
 ```
 
 

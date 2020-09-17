@@ -6,6 +6,8 @@ description: API reference for Vendr.Web.Controllers in Vendr, the eCommerce sol
 
 | Public Type | Description |
 | --- | --- |
+| class [ActivityLogController](activitylogcontroller/) |  |
+| class [AnalyticsController](analyticscontroller/) |  |
 | class [CountryController](countrycontroller/) |  |
 | class [CultureController](culturecontroller/) |  |
 | class [CurrencyController](currencycontroller/) |  |

@@ -13,21 +13,39 @@ public interface IProductCalculator
 
 ### Methods
 
-#### CalculateProductPrice
+#### CalculateProductPrice (1 of 2)
 
 ```csharp
 public Price CalculateProductPrice(IProductSnapshot productSnapshot, Guid currencyId, 
     TaxRate taxRate)
 ```
 
+---
+
+#### CalculateProductPrice (2 of 2)
+
+```csharp
+public Price CalculateProductPrice(IProductSnapshot productSnapshot, Guid currencyId, 
+    TaxRate taxRate, ProductCalculatorContext context)
+```
+
 
 ---
 
-#### CalculateProductTaxRate
+#### CalculateProductTaxRate (1 of 2)
 
 ```csharp
 public TaxRate CalculateProductTaxRate(IProductSnapshot productSnapshot, TaxSource taxSource, 
     TaxRate fallbackTaxRate)
+```
+
+---
+
+#### CalculateProductTaxRate (2 of 2)
+
+```csharp
+public TaxRate CalculateProductTaxRate(IProductSnapshot productSnapshot, TaxSource taxSource, 
+    TaxRate fallbackTaxRate, ProductCalculatorContext context)
 ```
 
 

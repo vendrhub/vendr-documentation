@@ -22,7 +22,7 @@ public class EmailTemplateService : EntityServiceBase, IEmailTemplateService
 
 ```csharp
 public EmailTemplateService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache)
+    ILogger logger, ICache cache)
 ```
 
 

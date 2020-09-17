@@ -43,6 +43,24 @@ Returns `true` if the [`CountryReadOnly`](../../vendr-core-models/countryreadonl
 
 ---
 
+#### CreateAllCountryRegions
+
+Creates all [`CountryReadOnly`](../../vendr-core-models/countryreadonly/) and [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities for a store based on IS03166 country list
+
+```csharp
+public void CreateAllCountryRegions(Guid storeId, Guid defaultCurrencyId)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entity belongs to |
+| defaultCurrencyId | The ID of the [`CurrencyReadOnly`](../../vendr-core-models/currencyreadonly/) to use as the default currency |
+
+
+---
+
 #### DeleteCountry (1 of 2)
 
 Deletes a [`Country`](../../vendr-core-models/country/)

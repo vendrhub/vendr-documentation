@@ -6,6 +6,8 @@ description: API reference for Vendr.Core.Logging in Vendr, the eCommerce soluti
 
 | Public Type | Description |
 | --- | --- |
+| class [ActivityLogger](activitylogger/) |  |
+| interface [IActivityLogger](iactivitylogger/) |  |
 | interface [ILogger](ilogger/) | Defines the logging service. |
 | enum [LogLevel](loglevel/) | Specifies the level of a log event. |
 | class [UmbracoLogger](umbracologger/) |  |

@@ -57,6 +57,29 @@ A true if string is serialized JSON, otherwise false
 
 ---
 
+#### ReplaceEnd
+
+Replaces an original string from the end of an input string with the given replacement
+
+```csharp
+public static string ReplaceEnd(this string input, string original, string replacement)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| input | The input string |
+| original | The original string to look for |
+| replacement | The string to replace the original string with |
+
+**Returns**
+
+The updated string
+
+
+---
+
 #### TryParse&lt;T&gt;
 
 Tries to parse a string into a strongly typed value

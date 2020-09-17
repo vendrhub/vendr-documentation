@@ -22,8 +22,7 @@ public class DiscountService : EntityServiceBase, IDiscountService
 
 ```csharp
 public DiscountService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache, 
-    DiscountRuleProviderCollection discountRuleProviders, 
+    ILogger logger, ICache cache, DiscountRuleProviderCollection discountRuleProviders, 
     DiscountRewardProviderCollection discountRewardProviders)
 ```
 

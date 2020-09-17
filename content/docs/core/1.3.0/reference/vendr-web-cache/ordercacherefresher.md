@@ -21,8 +21,7 @@ public class OrderCacheRefresher :
 #### OrderCacheRefresher
 
 ```csharp
-public OrderCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    IOrderService entityService)
+public OrderCacheRefresher(AppCaches appCaches, IOrderService entityService)
 ```
 
 

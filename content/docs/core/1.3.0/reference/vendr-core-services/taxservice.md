@@ -22,7 +22,7 @@ public class TaxService : EntityServiceBase, ITaxService
 
 ```csharp
 public TaxService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache)
+    ILogger logger, ICache cache)
 ```
 
 

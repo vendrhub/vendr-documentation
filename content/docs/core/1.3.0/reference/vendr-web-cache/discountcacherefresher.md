@@ -21,8 +21,7 @@ public class DiscountCacheRefresher :
 #### DiscountCacheRefresher
 
 ```csharp
-public DiscountCacheRefresher(AppCaches appCaches, IEntityStateCache stateCache, 
-    IDiscountService entityService)
+public DiscountCacheRefresher(AppCaches appCaches, IDiscountService entityService)
 ```
 
 

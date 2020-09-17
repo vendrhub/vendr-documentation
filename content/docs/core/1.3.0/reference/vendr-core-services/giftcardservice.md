@@ -22,8 +22,7 @@ public class GiftCardService : EntityServiceBase, IGiftCardService
 
 ```csharp
 public GiftCardService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IEntityStateCache stateCache, 
-    IGiftCardCodeGenerator giftCardCodeGenerator)
+    ILogger logger, ICache cache, IGiftCardCodeGenerator giftCardCodeGenerator)
 ```
 
 
