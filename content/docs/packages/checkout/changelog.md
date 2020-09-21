@@ -3,22 +3,32 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## 1.1.6 (Unreleased)  
-**Date:** TBC  
+## 1.1.6  
+**Date:** 2020-09-21  
 **Description:** Patch release with minor bug fixes / enhancements 
 ---
 
 <changelog>
+<changelog-group category="Added">  
+
+* Added ability to display regions if there are available for a country (#8)[https://github.com/vendrhub/vendr-checkout/issues/8].
+
+</changelog-group>
 <changelog-group category="Changed">  
 
 * Updated payment method / shipping method selection screens to only show options allowed in the payment / shipping country (#7)[https://github.com/vendrhub/vendr-checkout/issues/7].
 * Updated payment method / shipping method selection screens to auto select the default method of the payment / shipping country.
 
 </changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed error when installing Vendr.Checkout into a second store in the same instance (#9)[https://github.com/vendrhub/vendr-checkout/issues/9].
+
+</changelog-group>
 </changelog>
 
 ## 1.1.5 
-**Date:** 2020-10-07  
+**Date:** 2020-07-10  
 **Description:** Patch release with minor bug fixes / enhancements 
 ---  
 
