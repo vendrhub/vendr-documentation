@@ -52,7 +52,7 @@ And example of an Order Editor config file would look something like this:
         internalNotes: { alias: "notes", label: "Internal Notes" }
     },
     additionalInfo: [
-        { alias: "ipAddress", label: "IP Address", isReadOnly: true }
+        ipAddress: { alias: "ipAddress", label: "IP Address", isReadOnly: true }
     ]
 }
 ````
