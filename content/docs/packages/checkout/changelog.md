@@ -5,7 +5,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 
 ## 1.1.6  
 **Date:** 2020-09-21  
-**Description:** Patch release with minor bug fixes / enhancements 
+**Description:** Patch release with minor bug fixes / enhancements  
 ---
 
 <changelog>
