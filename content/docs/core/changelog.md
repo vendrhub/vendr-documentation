@@ -3,6 +3,37 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.3.1       
+**Date:** 2020-10-05    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added `Formatted()` extension method to `DiscountedPrice`.
+* Added extra methods to order service to get Finalized, Open and All orders for a customer.
+* Added Region info to billing / shipping address details ([#180](https://github.com/vendrhub/vendr/issues/180)).
+* Added Discount entity to DiscountRuleContext inline with DiscountRewardContext ([#189](https://github.com/vendrhub/vendr/issues/189))
+* Added `StoreActionsRenderingNotification` and `ActivityLogEntriesRenderingNotification` events to allow extending the store dashboard.
+* Added support for a `VendrLicensesDirectory` app setting to override where licenses are loaded from.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed error when deleting an order connected to a Gift Card ([#186](https://github.com/vendrhub/vendr/issues/186)).
+* Fixed a spelling error in the search term model for the item picker directive.
+* Fixed performance issue introduced in 1.3.0 where constantly loading an entity become significantly slower. Introduced a new `EntityStateCacheAccessor` to only use the new transactional entity state cache when necessary ([#191](https://github.com/vendrhub/vendr/issues/191)).
+* Fixed migration error if installing on a site where the Vendr tables already exist, Vendr hasn't been installed yet ([#190](https://github.com/vendrhub/vendr/issues/190)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Removed redundant code fetching member in order editor ([#185](https://github.com/vendrhub/vendr/issues/185)).
+
+</changelog-group>
+</changelog>
+
 ## v1.3.0       
 **Date:** 2020-09-17    
 **Description:** Minor release including new features and some bug fixes / breaking changes  
