@@ -22,7 +22,7 @@ public class CountryService : EntityServiceBase, ICountryService
 
 ```csharp
 public CountryService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache)
+    ILogger logger, ICache cache, IEntityStateCacheAccessor entityStateCacheAccessor)
 ```
 
 

@@ -30,10 +30,12 @@ public IDatabase Database { get; }
 
 ---
 
-#### EntityStateCache
+#### DatabaseType
+
+Get the type of the IDatabase connection
 
 ```csharp
-public IEntityStateCache EntityStateCache { get; }
+public DatabaseType DatabaseType { get; }
 ```
 
 

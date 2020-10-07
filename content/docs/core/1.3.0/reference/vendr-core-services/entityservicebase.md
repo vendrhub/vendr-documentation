@@ -21,7 +21,7 @@ public abstract class EntityServiceBase : ServiceBase
 
 ```csharp
 public EntityServiceBase(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache)
+    ILogger logger, ICache cache, IEntityStateCacheAccessor entityStateCacheAccessor)
 ```
 
 

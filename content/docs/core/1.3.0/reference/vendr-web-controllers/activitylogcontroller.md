@@ -30,7 +30,7 @@ public ActivityLogController(UmbracoControllerContext vendrContext, IStoreServic
 #### GetActivityLogs
 
 ```csharp
-public PagedResult<ActivityLogEntry> GetActivityLogs(Guid storeId, long currentPage = 1, 
+public PagedResult<ActivityLogEntryDto> GetActivityLogs(Guid storeId, long currentPage = 1, 
     long itemsPerPage = 10)
 ```
 

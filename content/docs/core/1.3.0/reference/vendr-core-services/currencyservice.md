@@ -22,7 +22,7 @@ public class CurrencyService : EntityServiceBase, ICurrencyService
 
 ```csharp
 public CurrencyService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache)
+    ILogger logger, ICache cache, IEntityStateCacheAccessor entityStateCacheAccessor)
 ```
 
 

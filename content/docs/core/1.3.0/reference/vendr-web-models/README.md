@@ -6,6 +6,7 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 
 | Public Type | Description |
 | --- | --- |
+| class [ActivityLogEntryDto](activitylogentrydto/) |  |
 | class [AllowedCountryDto](allowedcountrydto/) |  |
 | class [AllowedCountryRegionDto](allowedcountryregiondto/) |  |
 | class [CountryBasicDto](countrybasicdto/) |  |
@@ -67,6 +68,8 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 | class [ShippingMethodEditDto](shippingmethodeditdto/) |  |
 | class [ShippingMethodSaveDto](shippingmethodsavedto/) |  |
 | class [StockDto](stockdto/) |  |
+| class [StoreActionDto](storeactiondto/) |  |
+| class [StoreActionsDto](storeactionsdto/) |  |
 | class [StoreBasicDto](storebasicdto/) |  |
 | class [StoreDto](storedto/) |  |
 | class [StoreEditDto](storeeditdto/) |  |
@@ -82,6 +85,7 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 
 | Public Type | Description |
 | --- | --- |
+| static class [ActivityLogEntryMapper](activitylogentrymapper/) |  |
 | static class [AllowedCountryRegionMapper](allowedcountryregionmapper/) |  |
 | static class [CountryMapper](countrymapper/) |  |
 | static class [CurrencyMapper](currencymapper/) |  |

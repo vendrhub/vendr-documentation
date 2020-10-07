@@ -12,6 +12,7 @@ description: API reference for Vendr.Core in Vendr, the eCommerce solution for U
 | class [DefaultUnitOfWorkProvider](defaultunitofworkprovider/) | A [`IUnitOfWorkProvider`](vendr-core/iunitofworkprovider/) implementation based on Umbraco Scopes |
 | class [DictionaryDiff&lt;TKey,TValue&gt;](dictionarydiff-2/) |  |
 | static class [DictionaryExtensions](dictionaryextensions/) | Dictionary extension methods |
+| static class [DiscountedPriceExtensions](discountedpriceextensions/) | Extensions methods for [`DiscountedPrice`](vendr-core-models/discountedprice/) entities |
 | abstract class [DynamicFactoryBase](dynamicfactorybase/) |  |
 | class [EnumerableDiff&lt;T&gt;](enumerablediff-1/) |  |
 | static class [EnumerableExtensions](enumerableextensions/) | Extensions for enumerable sources |

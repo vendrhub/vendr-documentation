@@ -22,7 +22,7 @@ public class OrderStatusService : EntityServiceBase, IOrderStatusService
 
 ```csharp
 public OrderStatusService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache)
+    ILogger logger, ICache cache, IEntityStateCacheAccessor entityStateCacheAccessor)
 ```
 
 

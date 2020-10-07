@@ -13,17 +13,6 @@ public interface IUnitOfWork : IDisposable
 **Namespace**
 * [Vendr.Core](../)
 
-### Properties
-
-#### EntityStateCache
-
-The entity state cache
-
-```csharp
-public IEntityStateCache EntityStateCache { get; }
-```
-
-
 ### Methods
 
 #### Complete

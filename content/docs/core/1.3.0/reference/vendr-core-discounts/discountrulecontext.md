@@ -31,6 +31,15 @@ public DiscountRuleConfig Config { get; }
 
 ---
 
+#### Discount
+
+```csharp
+public DiscountReadOnly Discount { get; }
+```
+
+
+---
+
 #### Order
 
 ```csharp

@@ -22,8 +22,8 @@ public class OrderService : EntityServiceBase, IOrderService
 
 ```csharp
 public OrderService(IRepositoryFactory repositoryFactory, IUnitOfWorkProvider uowProvider, 
-    ILogger logger, ICache cache, IOrderNumberGenerator orderNumberGenerator, 
-    ICurrencyExchangeRateService exchangeRateService)
+    ILogger logger, ICache cache, IEntityStateCacheAccessor entityStateCacheAccessor, 
+    IOrderNumberGenerator orderNumberGenerator, ICurrencyExchangeRateService exchangeRateService)
 ```
 
 
@@ -62,6 +62,16 @@ public void DeleteOrder(Order entity, bool revertFinalized)
 
 ---
 
+#### GetAllOrdersForCustomer
+
+```csharp
+public IEnumerable<OrderReadOnly> GetAllOrdersForCustomer(Guid storeId, 
+    string customerReferenceOrEmail)
+```
+
+
+---
+
 #### GetFinalizedOrderCount
 
 ```csharp
@@ -75,6 +85,16 @@ public long GetFinalizedOrderCount(Guid storeId)
 
 ```csharp
 public IEnumerable<OrderReadOnly> GetFinalizedOrdersForCustomer(Guid storeId, 
+    string customerReferenceOrEmail)
+```
+
+
+---
+
+#### GetOpenOrdersForCustomer
+
+```csharp
+public IEnumerable<OrderReadOnly> GetOpenOrdersForCustomer(Guid storeId, 
     string customerReferenceOrEmail)
 ```
 

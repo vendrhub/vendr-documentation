@@ -73,6 +73,15 @@ public StoreEditDto GetStore(Guid storeId)
 
 ---
 
+#### GetStoreActionsForToday
+
+```csharp
+public StoreActionsDto GetStoreActionsForToday(Guid storeId)
+```
+
+
+---
+
 #### GetStoreAlias
 
 ```csharp

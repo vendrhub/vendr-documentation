@@ -87,6 +87,29 @@ public void DeleteOrder(Order entity, bool revertFinalized)
 
 ---
 
+#### GetAllOrdersForCustomer
+
+Gets a list of all open or finalized [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities for a given customer
+
+```csharp
+public IEnumerable<OrderReadOnly> GetAllOrdersForCustomer(Guid storeId, 
+    string customerReferenceOrEmail)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities belong to |
+| customerReferenceOrEmail | The unique reference or email address of the customer associated with the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities |
+
+**Returns**
+
+A list of [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities
+
+
+---
+
 #### GetFinalizedOrderCount
 
 Get the total number of finalized [`Order`](../../vendr-core-models/order/) entities in a given [`Store`](../../vendr-core-models/store/)
@@ -114,6 +137,29 @@ Gets a list of finalized [`OrderReadOnly`](../../vendr-core-models/orderreadonly
 
 ```csharp
 public IEnumerable<OrderReadOnly> GetFinalizedOrdersForCustomer(Guid storeId, 
+    string customerReferenceOrEmail)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities belong to |
+| customerReferenceOrEmail | The unique reference or email address of the customer associated with the [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities |
+
+**Returns**
+
+A list of [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities
+
+
+---
+
+#### GetOpenOrdersForCustomer
+
+Gets a list of open [`OrderReadOnly`](../../vendr-core-models/orderreadonly/) entities for a given customer
+
+```csharp
+public IEnumerable<OrderReadOnly> GetOpenOrdersForCustomer(Guid storeId, 
     string customerReferenceOrEmail)
 ```
 
