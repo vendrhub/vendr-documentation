@@ -3,6 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.3.2       
+**Date:** 2020-10-05    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added unique code validation rule for Gift Cards.
+* Expose the NPoco database type in the DatabaseUnitOfWork.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed bug where users would get logged out when editing discounts / gift cards due to the tree Controller checking the wrong permission ([#197](https://github.com/vendrhub/vendr/issues/197)).
+* Fixed SQL date error in Analytics section when using **British English - English** DB culture ([#198](https://github.com/vendrhub/vendr/issues/198)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Removed redundant code fetching member in order editor ([#185](https://github.com/vendrhub/vendr/issues/185)).
+
+</changelog-group>
+</changelog>
+
 ## v1.3.1       
 **Date:** 2020-10-05    
 **Description:** Patch release with minor bug fixes and enhancements  
