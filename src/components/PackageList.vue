@@ -1,6 +1,6 @@
 <template>  
   <div class="flex flex-wrap justify-center mb-10 -mt-3 -mx-3">
-    <div class="tile-grid__cell p-3 w-full md:w-1/2" v-for="edge in $static.paymentProviders.edges" :key="edge.node.id">
+    <div class="tile-grid__cell p-3 w-full md:w-1/2" v-for="edge in $static.packages.edges" :key="edge.node.id">
           <g-link :to="edge.node.docVersions.current.path" class="tile flex flex-col text-center items-stretch h-full relative">
             <template v-if="edge.node.logo">
                 <span class="block text-center my-6"><g-image :src="require(`!!assets-loader!@logos/${edge.node.logo}`)" :alt="edge.node.name" class="mx-auto h-12 w-auto g-image--plain" immediate="true" /></span>
@@ -17,7 +17,7 @@
 
 <static-query>
 query PackageInfo {
-  paymentProviders: allPackage(filter: { type: { eq: "Package" } }, sortBy: "name", order: ASC) {
+  packages: allPackage(filter: { type: { eq: "Package" } }, sortBy: "name", order: ASC) {
     edges {
       node {
         id,
@@ -28,7 +28,8 @@ query PackageInfo {
           current {
             path
           }
-        }
+        },
+        supportedBy
       }
     }
   }
