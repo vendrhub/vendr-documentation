@@ -1,0 +1,17 @@
+- title: Getting Started
+  items:
+    - title: Overview
+      link: /getting-started/
+    - title: Installation
+      link: /getting-started/installation/
+    - title: Moderating Reviews
+      link: /getting-started/moderating-reviews/
+    - title: Screenshots
+      link: /getting-started/screenshots/
+    - title: Useful Links
+      link: /getting-started/useful-links/
+
+- title: How to Guides
+  items:
+    - title: Configure hCaptcha
+      link: /how-to-guides/configure-hcaptcha/
