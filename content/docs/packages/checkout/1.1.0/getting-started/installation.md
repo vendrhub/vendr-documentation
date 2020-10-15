@@ -54,4 +54,4 @@ Before upgrading, it is always advisable to take a complete backup of your site/
 
 </message-box>
 
-Vendr Checkout used a combination of database migrations and a manual install dashboard for both installs and upgrades. Upgrading is generally a case of installing the latest version of the top of the existing package and running through the installation steps again.
+Vendr Checkout uses a combination of database migrations and a manual install dashboard for both installs and upgrades. Upgrading is generally a case of installing the latest version over the top of the existing package and running through the installation steps again.
