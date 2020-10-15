@@ -1,6 +1,6 @@
 ---
-title: Installation
-description: Installing Vendr Reviews, an add-on package for Vendr, the eCommerce solution for Umbraco v8+
+title: Moderating Reviews
+description: Managing and moderating reviews in Vendr Reviews, an add-on package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
 With the Vendr Reviews package installed, any new reviews will require moderation before they are allowed to be displayed on the actual site.
