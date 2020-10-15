@@ -44,3 +44,8 @@ With the app settings defined, your review form will automatically display the h
 
 ![Vendr Review Form](~/assets/images/screenshots/reviews/write_review.png)
 
+<message-box type="warn" heading="Testing Locally">
+
+Please note that when testing Vendr Reviews locally with hCaptcha enabled you must access the website via a non-localhost URL. If you access the site on localhost you will likely see a hCaptcha error of **Rates limited or network error. Please retry**. Please see the [hCaptcha Docs](https://docs.hcaptcha.com/#localdev) for workaround solutions.
+
+</message-box>
