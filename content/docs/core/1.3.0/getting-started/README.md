@@ -21,6 +21,6 @@ It's important to understanding Vendr's versioning strategy so that you can perf
 
 <message-box type="warning" heading="A note about SemVer">
 
-It is common within the development community that version numbers should follow the [SemVer](https://semver.org/) specification, however we don't feel that SemVer fits with how we wish to portray our versioning information. It is important then than developers understand the differences, especially when upgrading to a Feature/Minor release where the SemVer expectation would be for it to be non-breaking which may not be the case.
+It is common within the development community that version numbers should follow the [SemVer](https://semver.org/) specification, however we don't feel that SemVer fits with how we wish to portray our versioning information. It is important then that developers understand the differences, especially when upgrading to a Feature/Minor release where the SemVer expectation would be for it to be non-breaking which may not be the case.
 
 </message-box>
