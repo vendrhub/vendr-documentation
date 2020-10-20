@@ -13,7 +13,7 @@ At this time, the minimum requirements for using Vendr are as follows:
 * **SQL Server Database** (CE is fine for testing, but not recommend for live deployments)
 
 ## Versioning
-It's important to understanding Vendr's versioning strategy so that you can perform informed upgrades during your development. For Vendr, our version numbers can be interpreted as follows **Product.Feature.Patch**.
+It's important to understanding Vendr's versioning strategy so that you can perform informed upgrades during the life of a project. For Vendr, our version numbers can be interpreted as follows **Product.Feature.Patch**.
 
 * **Product** - A distinct version of the Vendr product which has significant breaking changes from the product version before it.
 * **Feature** - A version with one or more new features that have been added. The release could be breaking or non-breaking so it is important to review the changelog before upgrading to a new feature release.
