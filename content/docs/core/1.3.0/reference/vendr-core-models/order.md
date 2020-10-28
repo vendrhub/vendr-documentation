@@ -907,6 +907,21 @@ The updated [`Order`](../order/) entity
 
 ---
 
+#### UnassignFromCustomer
+
+Unassigns the order from a customer
+
+```csharp
+public Order UnassignFromCustomer()
+```
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
 #### Unredeem
 
 Unredeems a [`Discount`](../discount/) or [`GiftCard`](../giftcard/) from the order

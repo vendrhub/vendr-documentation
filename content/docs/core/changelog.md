@@ -3,6 +3,40 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.3.3       
+**Date:** 2020-10-28    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added extra hashing method to the Payment Provider base class ([#209](https://github.com/vendrhub/vendr/issues/209)).
+* Added `UnassignFromCustomer` convenience method to order.
+* Stock is now replenished if an order payment status is `Cancelled` ([#196](https://github.com/vendrhub/vendr/issues/196)).
+* Added distributed cache refresher for gift cards ([#212](https://github.com/vendrhub/vendr/issues/212)).
+* Added validation rules to ensure entities set as "defaults" can't be deleted until a new default is set ([#201](https://github.com/vendrhub/vendr/issues/201)).
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed minor alignment issues on the store actions list ([#192](https://github.com/vendrhub/vendr/issues/192)).
+* Fixed `TotalPrice.TotalDiscount` not taking into account payment / shipping discounts ([#207](https://github.com/vendrhub/vendr/issues/207)).
+* Fixed discount distributed cache refresher not actually being hooked up ([#211](https://github.com/vendrhub/vendr/issues/211)).
+* Fixed typo in validation error for invalid combination fo currency / country ([#205](https://github.com/vendrhub/vendr/issues/205)).
+* Fixed issue where member discounts aren't recalculated when the order customer changes ([#204](https://github.com/vendrhub/vendr/issues/204)).
+* Fixed conditional input break after 7.7 UI breaking change ([#203](https://github.com/vendrhub/vendr/issues/203)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Changed the breakpoint at which the Vendr layout reduces to mobile ([#202](https://github.com/vendrhub/vendr/issues/202)).
+* Changed how percentage discounts work so that they calculate percentage of pre-tax + tax prices rather than just the pre-tax and use the orders tax rate.
+
+</changelog-group>
+</changelog>
+
+
 ## v1.3.2       
 **Date:** 2020-10-05    
 **Description:** Patch release with minor bug fixes and enhancements  

@@ -11,6 +11,7 @@ description: API reference for Vendr.Web.Cache in Vendr, the eCommerce solution 
 | class [CurrencyCacheRefresher](currencycacherefresher/) |  |
 | class [DiscountCacheRefresher](discountcacherefresher/) |  |
 | class [EmailTemplateCacheRefresher](emailtemplatecacherefresher/) |  |
+| class [GiftCardCacheRefresher](giftcardcacherefresher/) |  |
 | class [OrderCacheRefresher](ordercacherefresher/) |  |
 | class [OrderStatusCacheRefresher](orderstatuscacherefresher/) |  |
 | class [PaymentMethodCacheRefresher](paymentmethodcacherefresher/) |  |

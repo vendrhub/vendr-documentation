@@ -1,11 +1,11 @@
 ---
-title: ValidateNotDefaultCountry
-description: API reference for ValidateNotDefaultCountry in Vendr, the eCommerce solution for Umbraco v8+
+title: ValidateNotStoreDefaultCountry
+description: API reference for ValidateNotStoreDefaultCountry in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## ValidateNotDefaultCountry
+## ValidateNotStoreDefaultCountry
 
 ```csharp
-public class ValidateNotDefaultCountry : ValidationEventHandlerBase<ValidateCountryDelete>
+public class ValidateNotStoreDefaultCountry : ValidationEventHandlerBase<ValidateCountryDelete>
 ```
 
 **Inheritance**
@@ -17,10 +17,10 @@ public class ValidateNotDefaultCountry : ValidationEventHandlerBase<ValidateCoun
 
 ### Constructors
 
-#### ValidateNotDefaultCountry
+#### ValidateNotStoreDefaultCountry
 
 ```csharp
-public ValidateNotDefaultCountry(IStoreService storeService)
+public ValidateNotStoreDefaultCountry(IStoreService storeService)
 ```
 
 

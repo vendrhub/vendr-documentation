@@ -5,11 +5,12 @@ description: API reference for IGiftCardService in Vendr, the eCommerce solution
 ## IGiftCardService
 
 ```csharp
-public interface IGiftCardService : IService
+public interface IGiftCardService : ICachedEntityService<GiftCardReadOnly>, IService
 ```
 
 **Inheritance**
 
+* interface [ICachedEntityService&lt;TEntityType&gt;](../icachedentityservice-1/)
 * interface [IService](../iservice/)
 
 **Namespace**
