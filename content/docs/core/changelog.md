@@ -3,6 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.3.4       
+**Date:** 2020-11-20    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Bulk actions are now extendable ([#218](https://github.com/vendrhub/vendr/issues/218)).
+* Added validation error when redeeming a discount/gift card where the code doesn't exist.
+* Added order line `bundleId` to uniqueness properties list by default to enforce all bundles being unique order line.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed issue where logged in customers weren't assigned to newly created orders ([#213](https://github.com/vendrhub/vendr/issues/213)).
+* Fixed bug in `PropertyValue` constructor not settings `IsServerSideOnly` and `IsReadOnly` to passed in values.
+* Put Vendr stores tree into "Commerce" group so if anyone adds a new tree to the commerce section, the stores node does not appear under a generic "Third Party" group.
+* Fixed spelling mistake in `RegisteredCustomerInfo` method name.
+* Fixed bug in default Tax Class validation rule being passed the wrong ID to validate.
+* Fixed bug with discount rules provider not filtering "All" rules fulfilled order lines correctly.
+
+</changelog-group>
+</changelog>
+
 ## v1.3.3       
 **Date:** 2020-10-28    
 **Description:** Patch release with minor bug fixes and enhancements  
