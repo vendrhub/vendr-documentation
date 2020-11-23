@@ -4,7 +4,7 @@ description: Changelog for the Core Vendr product
 ---
 
 ## v1.3.4       
-**Date:** 2020-11-20    
+**Date:** 2020-11-23    
 **Description:** Patch release with minor bug fixes and enhancements  
 ---  
 
@@ -14,6 +14,7 @@ description: Changelog for the Core Vendr product
 * Bulk actions are now extendable ([#218](https://github.com/vendrhub/vendr/issues/218)).
 * Added validation error when redeeming a discount/gift card where the code doesn't exist.
 * Added order line `bundleId` to uniqueness properties list by default to enforce all bundles being unique order line.
+* Added `HMACSHA1Hash` helper to payment provider base class.
 
 </changelog-group>
 <changelog-group category="Fixed">  
