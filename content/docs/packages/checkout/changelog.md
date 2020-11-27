@@ -3,7 +3,7 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## 1.1.7 
+## 1.1.8 
 **Date:** 2020-11-27  
 **Description:** Patch release with minor bug fixes 
 ---
@@ -11,6 +11,20 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 <changelog-group category="Fixed">  
 
 * Discount code errors now display next to the discount code field (#11)[https://github.com/vendrhub/vendr-checkout/issues/11].
+
+</changelog-group>
+</changelog>
+
+## 1.1.7 
+**Date:** 2020-10-13  
+**Description:** Patch release with minor bug fixes / enhancements
+---
+<changelog>
+<changelog-group category="Added">  
+
+* Added support for JSON based requests on the API controllers.
+* Added support for bypassing Vendr Checkout logic if a template is provided on the checkout doctype.
+* Added support for optional `VendrCheckout:ResetPaymentMethodOnShippingMethodChange` app setting to display resetting payment method on shipping method change.
 
 </changelog-group>
 </changelog>
