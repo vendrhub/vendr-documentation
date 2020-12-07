@@ -3,6 +3,26 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.3.5       
+**Date:** 2020-12-07    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed bug in back office rendering of bundled items where total columns were not lining up.
+* Fixed bug where deleting a discount fired the `DiscountedCodeAdded` validation event and prevented a discount code from being removed ([#222](https://github.com/vendrhub/vendr/issues/222)).
+* Fixed bug in `UmbracoBooleanJsonConverter` not handling null values ([#224](https://github.com/vendrhub/vendr/issues/224)).
+
+</changelog-group>
+<changelog-group category="Added">  
+
+* Added extra logging to cache refreshers so these can more easily be debugged.
+
+</changelog-group>
+</changelog>
+
 ## v1.3.4       
 **Date:** 2020-11-23    
 **Description:** Patch release with minor bug fixes and enhancements  
