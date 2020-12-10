@@ -4,7 +4,7 @@ logo: buckaroo.svg
 type: PaymentProvider
 supportedBy: community
 
-packageVersion: 0.1.0
+packageVersion: 0.2.0
 docVersions:
   next: 
   current: 0.1.0

@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v1.1.0   
+**Date:** 2020-12-10    
+**Description:** Breaking change update targeting Vendr 1.4.0 
+---  
+
+<changelog>
+<changelog-group category="Breaking">  
+
+    
+* Payment provider now uses new `TransactionAmount` from Vendr 1.4.0.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.0.3  
 **Date:** 2020-07-10  
 **Description:** Patch release with minor bug fixes / enhancements 

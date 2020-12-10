@@ -3,6 +3,37 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.4.0       
+**Date:** 2020-12-10    
+**Description:** Major breaking changes release  
+---  
+For more details on this release, including a recommended upgrade strategy, please see the [Vendr 1.4.0 RC blog post](https://vendr.net/blog/vendr-1-4-0-release-candidate/).
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added price adjustments / adjusters.
+* Added amount adjustments / adjusters.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Changed licensing factory to support subscription licenses in the future.
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+* Discounts are now Price Adjustments and so all price "Discount" related properties have been renamed to "Adjustment" related properties.  
+* Because Discounts are now Price Adjustments, Discounts are now no longer calculated as their own calculation pipeline task (`CalculateOrderDiscountsTask`). Instead, there is now an adjustments calculation pipeline task that calculates all adjustments (`ApplyOrderPriceAdjustmentsTask`), of which Discounts are now a type of adjuster (`DiscountsPriceAdjuster`).  
+* Because price adjustments can be positive or negative, all discount adjustments are now negative in value (important if you using discounts to calculate a value).  
+* All order calculation pipeline tasks related to "Discounts"/"Discounted" have all been renamed to "Adjustments"/"Adjusted" task names. All previous tasks have been marked obsolete with intelisense to guide you to the new implementation.  
+* Gift Cards are now Amount Adjustments and so all "Gift Card" related properties are now found in the "Adjustment" related properties.  
+* Because Gift Cards are now Amount Adjustments, Gift Cards are now no longer calculated as their own calculation pipeline task (`CalculateOrderGiftCardAmountsTask`). Instead, there is now an adjustments calculation pipeline task that calculates all adjustments (`ApplyOrderAmountAdjustmentsTask`), of which Gift Cards are now a type of adjuster (`GiftCardsAmountAdjuster`).  
+* Gift Card / Amount Adjustment values are now found on the `TransactionAmount` property rather than the `TotalPrice` property of an order.  
+
+</changelog-group>
+</changelog>
+
 ## v1.3.5       
 **Date:** 2020-12-07    
 **Description:** Patch release with minor bug fixes and enhancements  
