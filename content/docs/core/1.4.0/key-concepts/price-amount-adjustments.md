@@ -24,9 +24,8 @@ public class MyPriceAdjuster : PriceAdjusterBase
     }
 }
 ````
-````
 
-Adjusters apply adjustments to their given price they wish to affect. Adjustments are strongly typed and so each adjuster should defined their own adjustment type, providing properties to collect any relevant information for the adjustment (this "meta data" gets serialized with the adjustment as is constantly available when accessing the given adjustment).
+Adjusters apply adjustments to their given price they wish to affect. Adjustments are strongly typed and so each adjuster should defined their own adjustment type, providing properties to collect any relevant information for the adjustment (this "meta data" gets serialized with the adjustment as is constantly available when accessing the given adjustment).  
 
 ````csharp
 public class MyAdjustment : PriceAdjustment<DiscountAdjustment>
