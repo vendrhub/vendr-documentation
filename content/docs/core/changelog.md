@@ -3,6 +3,29 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.4.1       
+**Date:** 2020-12-21    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed bug with license checking erroring during Umbraco Deploy deployments ([#233](https://github.com/vendrhub/vendr/issues/233)).
+* Fixed issue with order confirmation email using payment country name in place of shipping country name.
+* Fixed spelling error in auto generated error email template alias.
+* Fixed regression where custom product adapter was not being allowed on trial license.
+* Updated discounts to apply percentage values differently depending on whether tax is included in prices or not (rounding issue).
+* Fixed YSOD when assigning an orders order status prior to finalization due to the activity logger. The activity logger now only logs activity for finalized orders.
+
+</changelog-group>
+<changelog-group category="Updated">  
+
+* Updated the `Price` entity to prioritize tax rounding over base price rounding.
+
+</changelog-group>
+</changelog>
+
 ## v1.4.0       
 **Date:** 2020-12-10    
 **Description:** Major breaking changes release  
