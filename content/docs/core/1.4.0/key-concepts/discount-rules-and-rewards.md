@@ -149,10 +149,10 @@ Reward Providers then have a `CalculateReward` method which accepts a `DiscountR
 
 ````csharp
 // Add a shipping total discount
-result.ShippingTotalPriceDiscounts.Add(new AppliedDiscount(ctx.Discount, price));
+result.ShippingTotalPriceAdjustments.Add(new DiscountAdjustment(ctx.Discount, price));
 
 // Add a subtotal discount
-result.SubtotalPriceDiscounts.Add(new AppliedDiscount(ctx.Discount, price));
+result.SubtotalPriceAdjustments.Add(new DiscountAdjustment(ctx.Discount, price));
 ````
 
 ## Common Features
