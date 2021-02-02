@@ -31,7 +31,7 @@ The second setting is a **Site Key** which you'll need to navigate to the **Site
 
 ## App Settings
 
-With both settings located, enabling hCaptcha support in Vendr Reviews is as simple as defining two app settings in your `Web.config`
+With both settings located, enabling hCaptcha support in Vendr Reviews is as purely a matter of defining two app settings in your `Web.config`
 
 ````xml
 <appSettings>

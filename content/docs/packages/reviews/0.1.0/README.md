@@ -5,7 +5,7 @@ description: Documentation for Vendr Reviews, an add-on package for Vendr, the e
 
 ## About Vendr Reviews
 
-[Vendr Reviews](https://vendr.net/add-ons/vendr-reviews/) is a free and open source add-on package for Vendr, providing simple product reviews support for your product pages.
+[Vendr Reviews](https://vendr.net/add-ons/vendr-reviews/) is a free and open source add-on package for Vendr, providing drop-in product reviews support for your product pages.
 
 ![Vendr Reviews List](~/assets/images/screenshots/reviews/reviews_list.png)
 
