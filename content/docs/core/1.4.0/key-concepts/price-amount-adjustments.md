@@ -7,8 +7,8 @@ Quite often in a solution you may want to tweak the figures of an order, be that
 
 Vendr has two types of adjustments:
 
-* **Price Adjustment** - Adjusts one of the orders price properties (ie. discounts, fees).
-* **Amount Adjustment** - Adjusts the final transaction amount of an order (ie. gift cards, loyalty points).
+* **Price Adjustment** - Adjusts one of the orders price properties (e.g. discounts, fees).
+* **Amount Adjustment** - Adjusts the final transaction amount of an order (e.g. gift cards, loyalty points).
 
 ## Creating Custom Adjustments
 

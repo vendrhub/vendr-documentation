@@ -12,7 +12,7 @@ Unlike other Umbraco eCommerce platforms where store and product information is 
 | `store` | Vendr.StorePicker | Often placed on the site root node, but can be placed on any node higher than the product nodes themselves, this property links the website to a specific Vendr store configuration |
 | `productName` | Textstring | Optional product node property that allows you to define an explicit product name other than the product nodes `.Name` property, which will be used as fallback |
 | `sku` | Textstring | Product node property defining the unique SKU of the product |
-| `price` | Vendr.Price | Product node property defining the prices for the the product |
+| `price` | Vendr.Price | Product node property defining the prices for the product |
 | `stock` | Vendr.Stock | Product node property defining the stock level of the product |
 | `taxClass` | Vendr.StoreEntityPicker | Optional product node property that allows you to define an explicit `Tax Class` for the product, should it differ from the stores default |
 | `isGiftCard` | True/False | Optional product node property that defined whether the product node should be considered a Gift Card product, in which case it triggers the automatic generation of a Gift Card in the back-office and emails it directly to the customer on checkout |

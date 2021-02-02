@@ -3,7 +3,9 @@ title: Building a Store in Umbraco using Vendr
 description: Step-by-Step Tutorial to get you started with Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+<!-- vale off -->
 For this tutorial Paul Seal, of [CodeShare.co.uk](https://codeshare.co.uk) has kindly produced a video series for us. Follow along with the videos below to learn how to setup a basic store in Umbraco using Vendr.
+<!-- vale on -->
 
 ## Part 1 - Install Umbraco
 

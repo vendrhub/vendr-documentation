@@ -38,7 +38,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 <changelog-group category="Added">  
 
 * Added support for JSON based requests on the API controllers.
-* Added support for bypassing Vendr Checkout logic if a template is provided on the checkout doctype.
+* Added support for bypassing Vendr Checkout logic if a template is provided on the checkout document type.
 * Added support for optional `VendrCheckout:ResetPaymentMethodOnShippingMethodChange` app setting to display resetting payment method on shipping method change.
 
 </changelog-group>
