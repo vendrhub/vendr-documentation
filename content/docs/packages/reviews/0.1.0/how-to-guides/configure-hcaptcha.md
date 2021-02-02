@@ -5,7 +5,7 @@ description: Installing Vendr Reviews, an add-on package for Vendr, the eCommerc
 
 When hosting open forms on a website, it's often desirable to add a level of protection to prevent abuse from spambots. To help with this Vendr Reviews comes with out of the box support for [hCaptcha](https://hcaptcha.com), a free to use captcha service, to ensure that your reviewers are indeed human.
 
-## Signup For hCaptcha
+## Sign up For hCaptcha
 
 To enable the hCaptcha feature, you will first of all need to head to the [hCaptcha](https://hcaptcha.com) site to sign up for a hCaptcha account.
 

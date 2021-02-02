@@ -5,7 +5,7 @@ description: Documentation for the PayPal payment provider for Vendr, the eComme
 
 ## Sign up & Sign In  
 
-To use the PayPal provider you will need to sign up for a Business PayPal account. If you haven't created one yet, head on over to [https://www.paypal.com](https://www.paypal.com/) and click the **Sign up** button in the top corner to create an account, making sure to choose **Business Account** as the account type.
+To use the PayPal provider you will need to sign up for a Business PayPal account. If you haven't created one yet, head on over to [https://www.paypal.com](https://www.paypal.com/) and click the **Sign Up** button in the top corner to create an account, making sure to choose **Business Account** as the account type.
 
 ![PayPal Business Account Signup](~/assets/images/screenshots/paypal/signup_business_account.png)
 

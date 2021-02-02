@@ -5,7 +5,7 @@ description: Getting Started with the QuickPay V10 (One Time) payment provider f
 
 ## About this Payment Provider
 
-The QuickPay payment provider provides functionality to capture payments via the [QuickPay](https://quickpay.net) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back office.
+The QuickPay payment provider provides functionality to capture payments via the [QuickPay](https://quickpay.net) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back-office.
 
 ## In this Section
 

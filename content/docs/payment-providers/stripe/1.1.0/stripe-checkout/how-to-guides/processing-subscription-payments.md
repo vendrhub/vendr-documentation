@@ -36,6 +36,6 @@ Due to the way that Stripe works, there are a number of limitations when using t
 
 <message-box type="info" heading="Top Tip">
 
-If you need a quick and simple management portal to allow management of your Subscriptions why not use the [Stripe Customer Portal](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal). The Stripe payment provider already captures the required fields as order properties for you to access.
+If you need a quick and ready to use management portal to allow management of your Subscriptions why not use the [Stripe Customer Portal](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal). The Stripe payment provider already captures the required fields as order properties for you to access.
 
 </message-box>

@@ -7,12 +7,12 @@ description: Documentation for the Reepay Checkout (One Time) payment provider f
 
 If you haven't done so yet, head on over to [signup.reepay.com](https://signup.reepay.com) to register for a Reepay account.
 
-![Reepay Signup](~/assets/images/screenshots/reepay/reepay_signup.png)
+![Reepay sign up](~/assets/images/screenshots/reepay/reepay_signup.png)
 
 Or, if you already have an account, you can head over to [admin.reepay.com](https://admin.reepay.com/) to sign in to your account.
 
 
-![Reepay Signin](~/assets/images/screenshots/reepay/reepay_signin.png)
+![Reepay sign in](~/assets/images/screenshots/reepay/reepay_signin.png)
 
 
 ## API Keys
@@ -31,7 +31,7 @@ Once you have both sets of API keys, be sure to note them down as we will need t
 
 In order for Reepay to notify Vendr of a successful transaction, Reepay makes use of webhook technology to directly send notifications of the changing statuses of a transaction. By using webhooks it ensures that the system will always be notified of these status changes, even if the customer decides not to return to the store once a transaction is complete.
 
-To register a webhook, in the sidebar, click the **Developers** heading and then the **Webhooks** sub heading. At the top of the page click the **Configuration** button and next click **Add url** button and enter the Vendr callback URL as follows (replacing the parameters in curly brackets with the corresponding values taken from your store):
+To register a webhook, in the sidebar, click the **Developers** heading and then the **Webhooks** sub heading. At the top of the page click the **Configuration** button and next click **Add URL** button and enter the Vendr callback URL as follows (replacing the parameters in curly brackets with the corresponding values taken from your store):
 
 ````
 https://{store_domain}/umbraco/vendr/payment/callback/reepay-checkout/{payment_method_id}/

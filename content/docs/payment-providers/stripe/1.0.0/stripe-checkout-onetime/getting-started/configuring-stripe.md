@@ -7,12 +7,12 @@ description: Documentation for the Stripe Checkout (One Time) payment provider f
 
 If you haven't done so yet, head on over to [dashboard.stripe.com/register](https://dashboard.stripe.com/register) to register for a Stripe account.
 
-![Stripe Signup](~/assets/images/screenshots/stripe/stripe_signup.png)
+![Stripe sign up](~/assets/images/screenshots/stripe/stripe_signup.png)
 
 Or, if you already have an account, you can head over to [dashboard.stripe.com/login](https://dashboard.stripe.com/login) to sign in to your account.
 
 
-![Stripe Signin](~/assets/images/screenshots/stripe/stripe_signin.png)
+![Stripe sign in](~/assets/images/screenshots/stripe/stripe_signin.png)
 
 ## Test & Live mode
 

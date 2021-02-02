@@ -19,6 +19,7 @@ http
 https
 ngrok
 signup
+Signup
 config
 unredeem
 unredeems
@@ -27,6 +28,8 @@ boolean
 Bambora
 Reepay
 Yourpay
+Opayo
+Klarna
 namespace
 www
 dll
@@ -37,5 +40,5 @@ nullable
 param
 args
 uow
-json
-api
+JSON
+API

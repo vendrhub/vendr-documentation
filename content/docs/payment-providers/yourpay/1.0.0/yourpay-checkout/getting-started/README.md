@@ -5,7 +5,7 @@ description: Getting Started with the Yourpay Checkout (One Time) payment provid
 
 ## About this Payment Provider
 
-The Yourpay payment provider provides functionality to capture payments via the [Yourpay](https://www.yourpay.io) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back office.
+The Yourpay payment provider provides functionality to capture payments via the [Yourpay](https://www.yourpay.io) payment gateway. It is a fully featured payment provider allowing full control of the payment flow directly from the Vendr back-office.
 
 ## In this Section
 

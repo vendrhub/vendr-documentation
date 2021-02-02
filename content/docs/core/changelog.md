@@ -65,7 +65,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 <changelog>
 <changelog-group category="Fixed">  
 
-* Fixed bug in back office rendering of bundled items where total columns were not lining up.
+* Fixed bug in back-office rendering of bundled items where total columns were not lining up.
 * Fixed bug where deleting a discount fired the `DiscountedCodeAdded` validation event and prevented a discount code from being removed ([#222](https://github.com/vendrhub/vendr/issues/222)).
 * Fixed bug in `UmbracoBooleanJsonConverter` not handling null values ([#224](https://github.com/vendrhub/vendr/issues/224)).
 
@@ -122,7 +122,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 
 * Fixed minor alignment issues on the store actions list ([#192](https://github.com/vendrhub/vendr/issues/192)).
 * Fixed `TotalPrice.TotalDiscount` not taking into account payment / shipping discounts ([#207](https://github.com/vendrhub/vendr/issues/207)).
-* Fixed discount distributed cache refresher not actually being hooked up ([#211](https://github.com/vendrhub/vendr/issues/211)).
+* Fixed discount distributed cache refresher not being hooked up ([#211](https://github.com/vendrhub/vendr/issues/211)).
 * Fixed typo in validation error for invalid combination fo currency / country ([#205](https://github.com/vendrhub/vendr/issues/205)).
 * Fixed issue where member discounts aren't recalculated when the order customer changes ([#204](https://github.com/vendrhub/vendr/issues/204)).
 * Fixed conditional input break after 7.7 UI breaking change ([#203](https://github.com/vendrhub/vendr/issues/203)).
@@ -304,7 +304,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 
 * Updated how the stock property editor loads and persists it's value so that it doesn't cause a stock update every time it's saved.
 * Orders now finalize if the payment status is anything but Initialized (previously didn't finalize if the status was PendingExternalSystem).
-* Pending payment status is now displayed as purple in the back office so that it's not the same colour as the canceled status.
+* Pending payment status is now displayed as purple in the back-office so that it's not the same colour as the canceled status.
 * Updated the store entity picker to support multiple store resolution modes so that the picker can be used outside of the content section ([#141](https://github.com/vendrhub/vendr/issues/141)).
 
 </changelog-group>

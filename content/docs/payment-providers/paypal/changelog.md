@@ -34,7 +34,7 @@ description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce 
 <changelog-group category="Fixed">  
 
     
-* Fixed bug where cancel action was actually capturing payment.
+* Fixed bug where cancel action was capturing payment.
 
 
 </changelog-group>

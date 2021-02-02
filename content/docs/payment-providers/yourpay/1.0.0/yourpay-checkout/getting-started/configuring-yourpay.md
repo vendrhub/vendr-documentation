@@ -12,7 +12,7 @@ If you haven't done so yet, head on over to [yourpay.eu/create-account](https://
 Or, if you already have an account, you can head over to [admin.yourpay.io/login](https://admin.yourpay.io/login) to sign in to your account.
 
 
-![Yourpay Signin](~/assets/images/screenshots/yourpay/yourpay_signin.png)
+![Yourpay Sign in](~/assets/images/screenshots/yourpay/yourpay_signin.png)
 
 
 ## API Keys

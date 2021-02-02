@@ -13,7 +13,7 @@ When an order asks to be re-calculated, this triggers a calculation pipeline whi
 
 Why is this important? Well, in these various calculation extension points Vendr will often pass you **both** an `Order` object and the `OrderCalculation` object. We pass the order so that you can get access to any information held on it that you may need for your calculation, such as any custom properties or customer information, however this shouldn't be used for accessing any price related values of the order.
 
-Why? As mentioned above, in order to maintain data integrity during the calculation process, the order itself is not actually updated until the very end and so any calculations based on the order entities price values would actually be based on the orders **previously calculated price values**.
+Why? As mentioned above, in order to maintain data integrity during the calculation process, the order itself is not updated until the very end and so any calculations based on the order entities price values would be based on the orders **previously calculated price values**.
  
 In order to base your calculation on the current calculated price values you should instead access the `OrderCalculation` object.
 

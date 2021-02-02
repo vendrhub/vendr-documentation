@@ -10,7 +10,7 @@ If you haven't done so yet, head on over to [tech.dibspayment.com/D2](tech.dibsp
 Or, if you already have an account, you can head over to [payment.architrade.com/login/login.action](https://payment.architrade.com/login/login.action) to sign in to your account.
 
 
-![DIBS D2 Signin](~/assets/images/screenshots/dibs/d2/dibs-d2_signin.png)
+![DIBS D2 Sign in](~/assets/images/screenshots/dibs/d2/dibs-d2_signin.png)
 
 
 ## MD5 keys
