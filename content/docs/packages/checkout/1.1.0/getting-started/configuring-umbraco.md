@@ -11,7 +11,7 @@ After installing Vendr Checkout, a series of content nodes will be created for y
 
 | Name | Description |
 | ---- | ----------- |
-| Store Logo | A link to a media item to use as the store logo. If one is not selected, then then store name will be displayed instead. |
+| Store Logo | A link to a media item to use as the store logo. If one is not selected, then the store name will be displayed instead. |
 | Store Address | The official address of the store to be displayed in the footer of all email communications. |
 | Theme Color | The color theme to use for the checkout design. |
 | Collect Shipping Info | A checkbox to set whether to collect shipping info or not. If deselected, all shipping info related fields / steps will be removed from the checkout flow |
@@ -30,4 +30,4 @@ In addition to these root node settings, each checkout step page also has a numb
 
 ## Linking to the Checkout
 
-With the checkout setup and configured the final step is to configure your cart page to link through to the checkout flow. How you do this is completely up to you so you could just link to the url `/checkout` or use a content picker to select the checkout node to link to.
+With the checkout setup and configured the final step is to configure your cart page to link through to the checkout flow. How you do this is completely up to you so you could just link to the URL `/checkout` or use a content picker to select the checkout node to link to.

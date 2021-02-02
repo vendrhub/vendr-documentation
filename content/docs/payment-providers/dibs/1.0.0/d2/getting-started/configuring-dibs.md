@@ -18,8 +18,10 @@ Click **Integration -> MD5 Keys** in the menu to the left. Check the Perform MD5
 
 ![DIBS D2 MD5 keys](~/assets/images/screenshots/dibs/d2/dibs-d2_md5-keys.png)
 
+<!-- vale off -->
 ## Return values
 Next click on the **Integration -> Return values** menu item. Check the following items – Order ID, Paytype, Card number with last four digits unmasked and All fields exclusive of card information response.
+<!-- vale on -->
 
 ![DIBS D2 Return values](~/assets/images/screenshots/dibs/d2/dibs-d2_return-values.png)
 

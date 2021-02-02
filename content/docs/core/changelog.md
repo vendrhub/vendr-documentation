@@ -311,7 +311,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 <changelog-group category="Fixed">  
 
 * Fixed bug when creating US country regions from preset ([#159](https://github.com/vendrhub/vendr/issues/159)).
-* Fixed issue with payment provider continue/cancel/error URLs escaping querystrings ([#157](https://github.com/vendrhub/vendr/issues/157)).
+* Fixed issue with payment provider continue/cancel/error URLs escaping query strings ([#157](https://github.com/vendrhub/vendr/issues/157)).
 * Fixed &lt;= price discount rule not displaying correct symbol ([#155](https://github.com/vendrhub/vendr/issues/155)).
 
 </changelog-group>
@@ -362,7 +362,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 * Fixed issue with the entity cache storing null values which shouldn't be allowed.
 * Fixed issue where setting an explicit sort order on a new entity would be ignored on save.
 * Fixed regression issue from 1.2.3 where loading orders from the database was switching the order id and currency id of the order causing calculation problems.
-* Fixed issue with spelling mistake in discount rules / reward configs for `Amounts Include Tax` properties ([#135](https://github.com/vendrhub/vendr/issues/135)).
+* Fixed issue with spelling mistake in discount rules / reward configurations for `Amounts Include Tax` properties ([#135](https://github.com/vendrhub/vendr/issues/135)).
 * Fixed issue with discounts not maintaining their sort order when loading from the database ([#132](https://github.com/vendrhub/vendr/issues/132)).
 
 </changelog-group>
@@ -438,7 +438,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 * Only show payment / shipping "via" in the back-office if a payment / shipping method is known.
 * Added script to NuGet packages to auto increment client dependency version.
 * Order calculation now rounds prices to the currencies defined decimal places level after each calculation step in order to prevent rounding issues ([#126](https://github.com/vendrhub/vendr/issues/126)).
-* Payment Provider cancel, continue and callback URL hashes now include the actual URL, and not just the reference as part of the hash. This is to prevent tampering of the the URLs.
+* Payment Provider cancel, continue and callback URL hashes now include the actual URL, and not just the reference as part of the hash. This is to prevent tampering of the URLs.
 * Session cookies are now flagged as `HttpOnly` (this can be disabled by setting an app setting `Vendr:Cookies:HttpOnly` to `false`), and when the site is accessed over https, also flagged as `Secure`. This is to protect the session cookies from being hijacked from malicious entities. 
 * The current finalized order is now stored in it's own session cookie with a limited lifetime of 5 minutes providing enough time to display a confirmation page, but no longer persisting until a new order took it's place.
 

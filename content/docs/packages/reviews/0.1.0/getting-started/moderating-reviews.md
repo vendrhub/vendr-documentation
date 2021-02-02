@@ -7,7 +7,7 @@ With the Vendr Reviews package installed, any new reviews will require moderatio
 
 ## Store Dashboard
 
-To see todays reviews that require your attention, you can find these listed directly on the Vendr store dashboard.
+To see today's reviews that require your attention, you can find these listed directly on the Vendr store dashboard.
 
 ![Vendr Reviews Dashboard](~/assets/images/screenshots/reviews/dashboard.png)
 
