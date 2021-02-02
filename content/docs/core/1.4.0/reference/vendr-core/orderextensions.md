@@ -483,7 +483,7 @@ The amount of the amount adjustments
 
 #### GetTotalAmountAdjustmentWhere
 
-Gets the total amount adjustment where amount adjustments match the supplied preciate
+Gets the total amount adjustment where amount adjustments match the supplied predicate
 
 ```csharp
 public static Amount GetTotalAmountAdjustmentWhere(this OrderReadOnly order, 
@@ -529,7 +529,7 @@ The price of the price adjustments
 
 #### GetTotalPriceAdjustmentWhere
 
-Gets the total price adjustment where price adjustments match the supplied preciate
+Gets the total price adjustment where price adjustments match the supplied predicate
 
 ```csharp
 public static Price GetTotalPriceAdjustmentWhere(this OrderReadOnly order, 

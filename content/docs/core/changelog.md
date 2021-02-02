@@ -72,7 +72,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 </changelog-group>
 <changelog-group category="Added">  
 
-* Added extra logging to cache refreshers so these can more easily be debugged.
+* Added extra logging to cache refreshers so these can be debugged.
 
 </changelog-group>
 </changelog>
@@ -131,7 +131,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 <changelog-group category="Changed">  
 
 * Changed the breakpoint at which the Vendr layout reduces to mobile ([#202](https://github.com/vendrhub/vendr/issues/202)).
-* Changed how percentage discounts work so that they calculate percentage of pre-tax + tax prices rather than just the pre-tax and use the orders tax rate.
+* Changed how percentage discounts work so that they calculate percentage of pre-tax + tax prices rather than the pre-tax + the orders tax rate.
 
 </changelog-group>
 </changelog>
@@ -368,7 +368,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 </changelog-group>
 <changelog-group category="Changed">  
 
-* Deprecated "Master" terminology in the code base so `MasterRelation` is now `ProductSource` (This is currently just deprecated so the existing `MasterRelation` will still work, but moving forward `ProductSource` will be the recommended terminology).
+* Deprecated "Master" terminology in the code base so `MasterRelation` is now `ProductSource` (This is currently deprecated so the existing `MasterRelation` will still work, but moving forward `ProductSource` will be the recommended terminology).
 * Updated the payment methods create dialog to exclude any payment providers marked with an `[Obsolete]` attribute. Obsolete payment providers can still be used, but they won't be selectable for new payment methods.
 * Removed the sort option from the Gift Cards section as gift cards aren't sortable ([#131](https://github.com/vendrhub/vendr/issues/131)).
 * Made the `Order.InitializeTransaction` method public to allow people to create and finalize a transaction in code without having to go via a payment gateway.
@@ -438,7 +438,7 @@ For more details on this release, including a recommended upgrade strategy, plea
 * Only show payment / shipping "via" in the back-office if a payment / shipping method is known.
 * Added script to NuGet packages to auto increment client dependency version.
 * Order calculation now rounds prices to the currencies defined decimal places level after each calculation step in order to prevent rounding issues ([#126](https://github.com/vendrhub/vendr/issues/126)).
-* Payment Provider cancel, continue and callback URL hashes now include the actual URL, and not just the reference as part of the hash. This is to prevent tampering of the URLs.
+* Payment Provider cancel, continue and callback URL hashes now include the actual URL, and not only the reference as part of the hash. This is to prevent tampering of the URLs.
 * Session cookies are now flagged as `HttpOnly` (this can be disabled by setting an app setting `Vendr:Cookies:HttpOnly` to `false`), and when the site is accessed over https, also flagged as `Secure`. This is to protect the session cookies from being hijacked from malicious entities. 
 * The current finalized order is now stored in it's own session cookie with a limited lifetime of 5 minutes providing enough time to display a confirmation page, but no longer persisting until a new order took it's place.
 

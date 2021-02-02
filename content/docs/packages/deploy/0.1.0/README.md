@@ -11,7 +11,7 @@ description: Documentation for Vendr Deploy, an add-on package for Vendr, the eC
 
 **These docs are aimed at developers and users** who have at least a basic understanding of  [Umbraco](https://umbraco.com), as well as Umbraco back-office principles.
 
-As there is no code involved with using Vendr Deploy, the docs are simply a series of [Getting Started](getting-started/) steps to get Vendr Deploy installed and configured.
+As there is no code involved with using Vendr Deploy, the docs are purely a series of [Getting Started](getting-started/) steps to get Vendr Deploy installed and configured.
 
 ## Getting Help
 

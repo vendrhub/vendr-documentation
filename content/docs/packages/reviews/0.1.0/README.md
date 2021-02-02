@@ -13,7 +13,7 @@ description: Documentation for Vendr Reviews, an add-on package for Vendr, the e
 
 **These docs are aimed at developers and users** who have at least a basic understanding of  [Umbraco](https://umbraco.com), as well as Umbraco back-office principles.
 
-As there is no code involved with using Vendr Reviews, the docs are simply a series of [Getting Started](getting-started/) steps to get Vendr Reviews installed and configured.
+As there is no code involved with using Vendr Reviews, the docs are purely a series of [Getting Started](getting-started/) steps to get Vendr Reviews installed and configured.
 
 ## Getting Help
 

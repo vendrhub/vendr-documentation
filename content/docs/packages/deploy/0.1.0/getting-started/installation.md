@@ -29,4 +29,4 @@ Alternatively, you can also find and install the NuGet package via the NuGet Pac
 
 ## Upgrading
 
-Vendr Deploy doesn't consist of any UI files, or database changes so it is generally ok to simply install the upgrade over the top of a previous install.
+Vendr Deploy doesn't consist of any UI files, or database changes so it is generally ok to install the upgrade over the top of a previous install.

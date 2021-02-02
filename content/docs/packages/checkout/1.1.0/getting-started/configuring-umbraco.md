@@ -30,4 +30,4 @@ In addition to these root node settings, each checkout step page also has a numb
 
 ## Linking to the Checkout
 
-With the checkout setup and configured the final step is to configure your cart page to link through to the checkout flow. How you do this is completely up to you so you could just link to the URL `/checkout` or use a content picker to select the checkout node to link to.
+With the checkout setup and configured the final step is to configure your cart page to link through to the checkout flow. How you do this is completely up to you so you could link to the URL `/checkout` or use a content picker to select the checkout node to link to.
