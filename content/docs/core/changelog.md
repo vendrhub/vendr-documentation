@@ -3,6 +3,34 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.4.2       
+**Date:** TBC    
+**Description:** Patch release with minor bug fixes and enhancements  
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed bug where Member ID wasn't being auto-assigned to orders ([#263](https://github.com/vendrhub/vendr/issues/263)).
+* Fixed Vendr cache refreshers not refreshing distributed caches correctly ([#250](https://github.com/vendrhub/vendr/issues/250)).
+* Fixed issue where log files are getting filled with unnecessary log messages ([#249](https://github.com/vendrhub/vendr/issues/249)).
+* Fixed issue where using a Gift Card resulted in the order erroring ([#247](https://github.com/vendrhub/vendr/issues/247)).
+* Fixed issue with analytics fixed timeframes not updating ([#234](https://github.com/vendrhub/vendr/issues/234)).
+* Fixed styling issue where long order status labels were getting cropped ([#230](https://github.com/vendrhub/vendr/issues/230)).
+* Fixed issue where `GetOrCreateCurrentOrder` could return an order for previous logged in member ([#216](https://github.com/vendrhub/vendr/issues/216)).
+* Fixed formatting bug in menu actions interceptor.
+* Fixed bug in Store Dashboard where error order statuses was linking to the order list view with the wrong query string parameter.
+
+</changelog-group>
+<changelog-group category="Added">  
+
+* Added confirmation dialogs to Cancel, Refund and Capture payment actions ([#251](https://github.com/vendrhub/vendr/issues/251)).
+* Added extra events to fire when adding or updating order lines via the `AddProduct` methods ([#248](https://github.com/vendrhub/vendr/issues/248)).
+* Added `IOrderFinder` interface so custom order locating can be added if no order is found for a customer reference.
+
+</changelog-group>
+</changelog>
+
 ## v1.4.1       
 **Date:** 2020-12-21    
 **Description:** Patch release with minor bug fixes and enhancements  
