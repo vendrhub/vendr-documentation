@@ -10,3 +10,8 @@
       link: /getting-started/configuring-umbraco/
     - title: Useful Links
       link: /getting-started/useful-links/
+
+- title: How-To Guides
+  items:
+    - title: Overview
+      link: /how-to-guides/
