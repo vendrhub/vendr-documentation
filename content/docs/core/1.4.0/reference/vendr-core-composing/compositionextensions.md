@@ -163,6 +163,15 @@ public static VendrEventHandlerComposer<TEvent, INotificationEvent> WithNotifica
 
 ---
 
+#### WithOrderFinders
+
+```csharp
+public static OrderFinderCollectionBuilder WithOrderFinders(this Composition composition)
+```
+
+
+---
+
 #### WithPipeline&lt;TCollection,TItem&gt;
 
 ```csharp

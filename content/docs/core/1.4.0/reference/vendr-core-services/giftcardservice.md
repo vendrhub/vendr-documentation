@@ -109,15 +109,6 @@ public bool GiftCardExists(Guid storeId, string code)
 
 ---
 
-#### InvalidateEntityCache
-
-```csharp
-public void InvalidateEntityCache(Guid entityId)
-```
-
-
----
-
 #### SaveGiftCard
 
 ```csharp

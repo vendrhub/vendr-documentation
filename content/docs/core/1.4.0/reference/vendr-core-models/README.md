@@ -28,6 +28,7 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | class [CountryReadOnly](countryreadonly/) |  |
 | class [CountryRegionTaxRate](countryregiontaxrate/) |  |
 | class [Currency](currency/) |  |
+| static class [CurrencyExtensions](currencyextensions/) |  |
 | class [CurrencyFormatter](currencyformatter/) |  |
 | class [CurrencyReadOnly](currencyreadonly/) |  |
 | class [Discount](discount/) |  |

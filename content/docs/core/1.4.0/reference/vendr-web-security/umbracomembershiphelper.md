@@ -19,8 +19,10 @@ public class UmbracoMembershipHelper : IMembershipHelper
 
 #### UmbracoMembershipHelper
 
+The default constructor.
+
 ```csharp
-public UmbracoMembershipHelper(MembershipHelper membershipHelper)
+public UmbracoMembershipHelper()
 ```
 
 

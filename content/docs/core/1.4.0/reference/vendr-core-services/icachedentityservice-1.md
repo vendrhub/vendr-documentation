@@ -24,6 +24,17 @@ public interface ICachedEntityService<TEntityType>
 
 #### InvalidateEntityCache
 
+Invalidates the entire services entity cache
+
+```csharp
+public void InvalidateEntityCache()
+```
+
+
+---
+
+#### InvalidateEntityCache
+
 Invalidates the services entity cache for a given entity
 
 ```csharp

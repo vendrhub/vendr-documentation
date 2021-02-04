@@ -27,6 +27,16 @@ public TransactionalEntityStateCache(ICache systemCache, ICacheFactory inMemoryC
 
 ### Methods
 
+#### ClearStateCache&lt;T&gt;
+
+```csharp
+public void ClearStateCache<T>(string cacheKey)
+    where T : EntityStateBase
+```
+
+
+---
+
 #### CommitTransaction
 
 ```csharp

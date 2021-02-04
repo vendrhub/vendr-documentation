@@ -8,6 +8,7 @@ description: API reference for Vendr.Web.Events in Vendr, the eCommerce solution
 | --- | --- |
 | class [ActivityLogEntriesRenderingNotification](activitylogentriesrenderingnotification/) |  |
 | class [AnalyticsDashboardConfigParsingNotification](analyticsdashboardconfigparsingnotification/) |  |
+| class [CacheRefreshNotification](cacherefreshnotification/) |  |
 | class [OrderEditorConfigParsingNotification](ordereditorconfigparsingnotification/) |  |
 | class [StoreActionsRenderingNotification](storeactionsrenderingnotification/) |  |
 

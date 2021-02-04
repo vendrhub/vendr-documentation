@@ -101,6 +101,9 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [OrderLanguageChangedNotification](orderlanguagechangednotification/) |  |
 | abstract class [OrderLanguageChangeNotificationBase&lt;TEntity&gt;](orderlanguagechangenotificationbase-1/) |  |
 | class [OrderLanguageChangingNotification](orderlanguagechangingnotification/) |  |
+| class [OrderLineAddedNotification](orderlineaddednotification/) |  |
+| class [OrderLineAddingNotification](orderlineaddingnotification/) |  |
+| class [OrderLineAddNotification&lt;TEntity&gt;](orderlineaddnotification-1/) |  |
 | class [OrderLineChangedNotification](orderlinechangednotification/) |  |
 | class [OrderLineChangeNotification&lt;TEntity&gt;](orderlinechangenotification-1/) |  |
 | class [OrderLineChangingNotification](orderlinechangingnotification/) |  |

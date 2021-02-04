@@ -21,10 +21,10 @@ public class SessionManager : ISessionManager
 
 ```csharp
 public SessionManager(IStoreService storeService, IOrderService orderService, 
-    ICurrencyService currencyService, ICountryService countryService, 
-    IPaymentMethodService paymentMethodService, IShippingMethodService shippingMethodService, 
-    ITaxService taxService, ISessionStore sessionStore, ITempStore tempStore, 
-    IUnitOfWorkProvider uowProvider)
+    IOrderFinderService orderFinderService, ICurrencyService currencyService, 
+    ICountryService countryService, IPaymentMethodService paymentMethodService, 
+    IShippingMethodService shippingMethodService, ITaxService taxService, 
+    ISessionStore sessionStore, ITempStore tempStore, IUnitOfWorkProvider uowProvider)
 ```
 
 

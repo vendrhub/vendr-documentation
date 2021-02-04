@@ -26,6 +26,16 @@ public EntityStateCache(ICache cache, ILogger logger)
 
 ### Methods
 
+#### ClearStateCache&lt;T&gt;
+
+```csharp
+public void ClearStateCache<T>(string cacheKey)
+    where T : EntityStateBase
+```
+
+
+---
+
 #### GetStateCache&lt;T&gt; (1 of 2)
 
 ```csharp

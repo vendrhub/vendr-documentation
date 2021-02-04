@@ -1,12 +1,11 @@
 ---
-title: OrderLineRemoveNotification<TEntity>
-description: API reference for OrderLineRemoveNotification<TEntity> in Vendr, the eCommerce solution for Umbraco v8+
+title: OrderLineAddNotification<TEntity>
+description: API reference for OrderLineAddNotification<TEntity> in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## OrderLineRemoveNotification&lt;TEntity&gt;
+## OrderLineAddNotification&lt;TEntity&gt;
 
 ```csharp
-public class OrderLineRemoveNotification<TEntity> : OrderNotificationEventBase<TEntity>, 
-    IHasEventKey
+public class OrderLineAddNotification<TEntity> : OrderNotificationEventBase<TEntity>, IHasEventKey
     where TEntity : OrderReadOnly
 ```
 
@@ -20,10 +19,10 @@ public class OrderLineRemoveNotification<TEntity> : OrderNotificationEventBase<T
 
 ### Constructors
 
-#### OrderLineRemoveNotification&lt;TEntity&gt;
+#### OrderLineAddNotification&lt;TEntity&gt;
 
 ```csharp
-public OrderLineRemoveNotification(TEntity order, OrderLineReadOnly orderLine)
+public OrderLineAddNotification(TEntity order, OrderLineReadOnly orderLine)
 ```
 
 

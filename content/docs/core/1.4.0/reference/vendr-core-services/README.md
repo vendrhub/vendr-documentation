@@ -21,6 +21,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | interface [IDiscountService](idiscountservice/) | Defines the Vendr Discount service |
 | interface [IEmailTemplateService](iemailtemplateservice/) | Defines the Vendr Email Template service |
 | interface [IGiftCardService](igiftcardservice/) |  |
+| interface [IOrderFinderService](iorderfinderservice/) |  |
 | interface [IOrderService](iorderservice/) | Defines the Vendr Order service |
 | interface [IOrderStatusService](iorderstatusservice/) | Defines the Vendr Order Status service |
 | interface [IPaymentMethodService](ipaymentmethodservice/) | Defines the Vendr Payment Method service |
@@ -33,6 +34,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | interface [IStoreService](istoreservice/) | Define the Vendr Store service |
 | interface [ITaxService](itaxservice/) | Defines the Vendr Tax service |
 | interface [ITranslationService](itranslationservice/) | Defines the Vendr Translation service |
+| class [OrderFinderService](orderfinderservice/) |  |
 | class [OrderService](orderservice/) |  |
 | class [OrderStatusService](orderstatusservice/) |  |
 | class [PaymentMethodService](paymentmethodservice/) |  |

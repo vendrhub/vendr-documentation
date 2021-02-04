@@ -20,7 +20,7 @@ public sealed class Price : ValueObjectBase, IPrice
 
 ### Constructors
 
-#### Price (1 of 4)
+#### Price (1 of 2)
 
 Instantiates a new [`Price`](../price/) instance
 
@@ -38,7 +38,7 @@ public Price(decimal valueWithoutTax, decimal tax, Guid currencyId)
 
 ---
 
-#### Price (2 of 4)
+#### Price (2 of 2)
 
 Instantiates a new [`Price`](../price/) instance
 
@@ -52,44 +52,6 @@ public Price(decimal valueWithoutTax, decimal tax, CurrencyReadOnly currency)
 | --- | --- |
 | valueWithoutTax | The value of the price without tax |
 | tax | The tax value of the price |
-| currency | The [`Currency`](../currency/) of the price |
-
----
-
-#### Price (3 of 4)
-
-Instantiates a new [`Price`](../price/) instance
-
-```csharp
-public Price(decimal valueWithoutTax, decimal tax, decimal valueWithTax, Guid currencyId)
-```
-
-**Parameters**
-
-| Parameter | Description |
-| --- | --- |
-| valueWithoutTax | The value of the price without tax |
-| tax | The tax value of the price |
-| valueWithTax | The value of the price with tax |
-| currencyId | The ID of the [`Currency`](../currency/) of the price |
-
----
-
-#### Price (4 of 4)
-
-Instantiates a new [`Price`](../price/) instance
-
-```csharp
-public Price(decimal valueWithoutTax, decimal tax, decimal valueWithTax, CurrencyReadOnly currency)
-```
-
-**Parameters**
-
-| Parameter | Description |
-| --- | --- |
-| valueWithoutTax | The value of the price without tax |
-| tax | The tax value of the price |
-| valueWithTax | The value of the price with tax |
 | currency | The [`Currency`](../currency/) of the price |
 
 

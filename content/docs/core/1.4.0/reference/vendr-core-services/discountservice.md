@@ -146,15 +146,6 @@ public IEnumerable<DiscountReadOnly> GetDiscounts(Guid storeId)
 
 ---
 
-#### InvalidateEntityCache
-
-```csharp
-public void InvalidateEntityCache(Guid entityId)
-```
-
-
----
-
 #### SaveDiscount
 
 ```csharp
