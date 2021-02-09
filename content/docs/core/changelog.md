@@ -3,12 +3,48 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.5.0       
+**Date:** TBC    
+**Description:** Minor release with new multi-variants feature  
+--- 
+<changelog>
+<changelog-group category="Added">  
+
+* Multi-variants property editor.
+* Added new Options node to stores in the Commerce section with subsections for new Product Attributes and Product Attribute Presets features.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* `AddProduct` API's now accept a new productVariantReference.
+* Order Lines now expose a `ProductVariantReference` property.
+* Order Lines now expose an `Attributes` property.
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+* Additional `IProductAdapter.GetProductSnapshot` method accepting a productVariantReference has been added.
+* `IProductAdapter.GetProductReference` changed to `IProductAdapter.TryGetProductReference`.
+* `IProductSnapshot` now exposes a `ProductVariantReference` property.
+* `IProductSnapshot` now exposes an `Attributes` property.
+
+</changelog-group>
+</changelog>
+
+
 ## v1.4.2       
 **Date:** 2020-02-04    
 **Description:** Patch release with minor bug fixes and enhancements  
 ---  
 
 <changelog>
+<changelog-group category="Added">  
+
+* Added confirmation dialogs to Cancel, Refund and Capture payment actions ([#251](https://github.com/vendrhub/vendr/issues/251)).
+* Added extra events to fire when adding or updating order lines via the `AddProduct` methods ([#248](https://github.com/vendrhub/vendr/issues/248)).
+* Added `IOrderFinder` interface so custom order locating can be added if no order is found for a customer reference.
+
+</changelog-group>
 <changelog-group category="Fixed">  
 
 * Fixed bug where Member ID wasn't being auto-assigned to orders ([#263](https://github.com/vendrhub/vendr/issues/263)).
@@ -20,13 +56,6 @@ description: Changelog for the Core Vendr product
 * Fixed issue where `GetOrCreateCurrentOrder` could return an order for previous logged in member ([#216](https://github.com/vendrhub/vendr/issues/216)).
 * Fixed formatting bug in menu actions interceptor.
 * Fixed bug in Store Dashboard where error order statuses was linking to the order list view with the wrong query string parameter.
-
-</changelog-group>
-<changelog-group category="Added">  
-
-* Added confirmation dialogs to Cancel, Refund and Capture payment actions ([#251](https://github.com/vendrhub/vendr/issues/251)).
-* Added extra events to fire when adding or updating order lines via the `AddProduct` methods ([#248](https://github.com/vendrhub/vendr/issues/248)).
-* Added `IOrderFinder` interface so custom order locating can be added if no order is found for a customer reference.
 
 </changelog-group>
 </changelog>
