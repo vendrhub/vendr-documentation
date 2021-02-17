@@ -25,6 +25,7 @@ unredeem
 unredeems
 deserialized
 boolean
+Adyen
 Bambora
 Reepay
 Yourpay
