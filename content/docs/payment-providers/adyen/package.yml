@@ -9,7 +9,6 @@ docVersions:
   next: 
   current: 1.0.0
   previous: 
-    - 1.0.0
 
 links:
   - title: Versions
