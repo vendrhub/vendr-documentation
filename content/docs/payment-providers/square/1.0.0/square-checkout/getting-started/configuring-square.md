@@ -36,7 +36,7 @@ From the app dashboard, click the **Credentials** heading in the sidebar and not
 
 In order for Square to notify Vendr of a successful transactions, Square makes use of webhook technology to directly send notifications of the changing statuses of a transaction. By using webhooks it ensures that the system will always be notified of these status changes, even if the customer decides not to return to the store once a transaction is complete.
 
-To register a webhook, in the sidebar of the app dashboard, click the **Webhooks** heading and then the **Add Webhoook** button. In the dialog that is displayed, give your webhook a name and enter the Vendr callback URL as follows (replacing the parameters in curly brackets with the corresponding values taken from your store):
+To register a webhook, in the sidebar of the app dashboard, click the **Webhooks** heading and then the **Add Webhook** button. In the dialog that is displayed, give your webhook a name and enter the Vendr callback URL as follows (replacing the parameters in curly brackets with the corresponding values taken from your store):
 
 ````
 https://{store_domain}/umbraco/vendr/payment/callback/square-checkout-onetime/{payment_method_id}/
