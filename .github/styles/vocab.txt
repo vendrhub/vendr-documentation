@@ -12,6 +12,7 @@ JavaScript
 js
 css
 HTML
+shtml
 Unredeem
 sublicense
 webhook
