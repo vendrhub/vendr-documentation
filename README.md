@@ -15,37 +15,19 @@ The live version of these docs can be found at [https://vendr.net/docs/](https:/
 
 ## Contributing
 
-If you would like to help improve our documentation, contributions via pull request are our preferred method. I guide for which follows:
+If you would like to help improve our documentation, contributions via pull request are our preferred method. A guide for which follows:
 
 ### Code of Conduct
 
 All contributions / contributors are expected to abide by our [Code of Conduct](https://www.contributor-covenant.org/version/1/1/0/code-of-conduct.html)
-
-### Prerequisites
-
-* **Yarn** - [Yarn](https://yarnpkg.com/en/docs/install) is our preferred package installer so contributors should make sure Yarn has been installed globally on your machine
-
-* **Gridsome** - [Gridsome](https://gridsome.org/docs/#how-to-install) the Vendr documentation site is powered by Gridsome, a Vue.js based static site generator.
 
 ### Getting Setup
 
 1. Fork this repository on GitHub.
 2. Clone your forked repository (not our original one) to your hard drive with git clone https://github.com/YOURUSERNAME/vendr-documentation.git
 3. Open the `vendr-documentation` directory
-4. If **Gridsome** is not installed, it can be installed via:
-
-````bash
-yarn global add @gridsome/cli
-````
-
-5. Open a command window and start a local instance of the site via:
-
-````bash
-yarn install
-gridsome develop
-````
-
-6. Launch http://localhost:8080 in a browser to view the site
+4. Make content changes as required
+5. Submit changes back as a Pull Request
 
 ### Preparing a Pull Request
 
@@ -61,33 +43,19 @@ gridsome develop
 
 When writing documentation there are a number of principles that should be followed. These principles are documented below.
 
-#### Gridsome
-
-The Vendr documentation site is powered by Gridsome, a Vue.js based static site generator. You should read up on the basics of [Gridsome](https://gridsome.org/docs/) to get an understanding of the available features.
-
 #### Markdown
 
 Documentation files are written using markdown. If you need something more complex than is possible with markdown, you can write bespoke HTML instead, however, you should aim to write as much as you can in the markdown format.
 
-#### Tailwind CSS
-
-The Vendr documentation site makes use of Tailwind CSS for all of it's styling needs. You should read up on the basics of [Tailwind CSS](https://tailwindcss.com/) to get an understanding of this utility first approach to styling.
-
-If you need to create any custom CSS styles not supported by Tailwind, these should be added to the `src/css` folder, in the relevant sub folder and then included in the `src/main.css` file to make the available.
-
-#### Custom Vue Components
-
-As we are using Gridsome, you can also create custom Vue components should you need to add some new functionality. Components should be placed in the `src/components` directory. To make this component globally accessible, you should register it in the `src/main.js` file using the `Vue.component('MyComponent', MyComponent)` syntax.
-
-You should check beforehand before creating any custom components to ensure the new behaviour is desired.
-
 #### Content Files
 
-All the source content files for the documentation site are located in the `content/docs` folder. The core Vendr documentation is located in the `content/docs/core` folder with supplementary package docs being located in `content/docs/packages/{package-name}` and payment provider docs being located in `content/docs/payment-providers/{payment-provider-name}`.
+All the source content files for the documentation site are located in the `content` folder. The core Vendr documentation is located in the `content/core` folder with supplementary package docs being located in `content/packages/{package-name}` and payment provider docs being located in `content/payment-providers/{payment-provider-name}`.
+
+Media assets linked to in the documentation should be stored in the `media` folder in the root of the repository.
 
 #### Versioning
 
-This repository contains documentation for multiple versions of Vendr and it's sub packages. Versioned docs are located in numbered directories inside the `docs` folder. When making changes, you should ensure you are updating the correct version before you commit your changes. 
+This repository contains documentation for multiple versions of Vendr and it's sub packages. Versioned docs are located in numbered directories inside each packages folder. When making changes, you should ensure you are updating the correct version before you commit your changes. 
 
 If your changes affect multiple versions, you should update the files in each version the change is required in.
 
