@@ -9,7 +9,7 @@ REM otherwise, prompt the user
 IF NOT "%ARG1%" == "" SET DEST_VERSION=%ARG1%
 IF "%ARG1%" == "" SET /P DEST_VERSION=Please select the destination version:
 
-SET DOCS_DIR=%~dp0content\docs\core\%DEST_VERSION%\reference
+SET DOCS_DIR=%~dp0content\core\%DEST_VERSION%\reference
 
 REM Clear previous docs
 for /d %%i in (%DOCS_DIR%\*) do ( rmdir "%%i" /s /q ) 

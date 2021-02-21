@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://vendr.net" target="_blank"><img src="static/assets/images/vendr.png" alt="Vendr" width="250"/></a>
+<a href="https://vendr.net" target="_blank"><img src="assets/vendr.png" alt="Vendr" width="250"/></a>
 
 # Vendr Documentation
 
@@ -10,7 +10,7 @@ The live version of these docs can be found at [https://vendr.net/docs/](https:/
 </div>
 
 <a href="https://vendr.net/docs/" target="_blank">
-    <img src="static/assets/images/vendr-docs-home.png?v=1" alt="Screenshot" style />
+    <img src="assets/vendr-docs-home.png?v=1" alt="Screenshot" style />
 </a>
 
 ## Contributing
