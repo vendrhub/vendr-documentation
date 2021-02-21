@@ -51,6 +51,8 @@ Documentation files are written using markdown. If you need something more compl
 
 All the source content files for the documentation site are located in the `content` folder. The core Vendr documentation is located in the `content/core` folder with supplementary package docs being located in `content/packages/{package-name}` and payment provider docs being located in `content/payment-providers/{payment-provider-name}`.
 
+#### Media Files
+
 Media assets linked to in the documentation should be stored in the `media` folder in the root of the repository.
 
 #### Versioning
