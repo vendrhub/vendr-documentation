@@ -37,10 +37,11 @@ public class MyAdjustment : PriceAdjustment<MyAdjustment>
         : base()
     { }
 
-    public MyAdjustment (string name, string ref)
+    // Additional helper constructors
+    public MyAdjustment (string name, string reference)
         : base(name)
     {
-        MyAdjustmentRef = ref;
+        MyAdjustmentRef = reference;
     }
 }
 ````
