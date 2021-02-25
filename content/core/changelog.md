@@ -25,6 +25,7 @@ description: Changelog for the Core Vendr product
 </changelog-group>
 <changelog-group category="Breaking">  
 
+* Minimum Umbraco version updated to 8.10.+ due block list editor API requirement.
 * Additional `IProductAdapter.GetProductSnapshot` method accepting a productVariantReference has been added.
 * `IProductAdapter.GetProductReference` changed to `IProductAdapter.TryGetProductReference`.
 * `IProductSnapshot` now exposes a `ProductVariantReference` property.
