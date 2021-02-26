@@ -3,8 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.5.1  
+**Date:** 2020-02-26    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed stock property editor erroring on newly created variants in pre-existing product nodes.
+* Fixed error due to variants prop editor being moved to first group. Now moved to it's own group and that group is then hidden.
+* Fixed errors when using variants prop editor with content variants.
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* As block list editors don't support content variants yet, the variants editor has been updated to grey out and prevent editing on non-default language variant editors.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.5.0  
-**Date:** TBC    
+**Date:** 2020-02-11    
 **Description:** Minor release with new multi-variants feature  
 
 --- 

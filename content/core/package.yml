@@ -4,7 +4,7 @@ type: Product
 description: 
 supportedBy: core
 
-packageVersion: 1.5.0
+packageVersion: 1.5.1
 docVersions:
   next: 
   current: 1.5.0
