@@ -7,7 +7,7 @@ description: Documentation for the Adyen Checkout (One Time) payment provider fo
 
 In the Umbraco back-office, in the **Settings > Vendr > Stores > {Store Name} > Payment Methods** section, click the **Create Payment Method** button to create a new payment method, choosing **Adyen Checkout (One Time)** from the list of available payment providers.
 
-![Create Payment Method](~/assets/images/screenshots/adyen/umbraco_create_payment_method.png)
+![Create Payment Method](/media/screenshots/adyen/umbraco_create_payment_method.png)
 
 ## Configure Payment Provider Settings
 
@@ -26,4 +26,4 @@ In the payment method editor, configure the standard payment method settings as 
 | Accepted Payment Methods | The allowed payment methods in the payment window |
 | Test Mode | Toggle indicating whether this provider should run in test mode |
 
-![Create Payment Provider Settings](~/assets/images/screenshots/adyen/umbraco_configure_adyen_settings.png)
+![Create Payment Provider Settings](/media/screenshots/adyen/umbraco_configure_adyen_settings.png)

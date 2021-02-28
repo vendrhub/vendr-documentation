@@ -7,12 +7,12 @@ description: Documentation for the Adyen Checkout (One Time) payment provider fo
 
 If you haven't done so yet, head on over to [adyen.com/signup](https://www.adyen.com/signup) to register for a Adyen account.
 
-![Adyen sign up](~/assets/images/screenshots/adyen/adyen_signup.png)
+![Adyen sign up](/media/screenshots/adyen/adyen_signup.png)
 
 Or, if you already have an account, you can head over to [ca-live.adyen.com/ca/ca/login.shtml](https://ca-live.adyen.com/ca/ca/login.shtml) to sign in to your account.
 
 
-![Adyen sign in](~/assets/images/screenshots/adyen/adyen_signin.png)
+![Adyen sign in](/media/screenshots/adyen/adyen_signin.png)
 
 ## API Keys
 
@@ -28,4 +28,4 @@ To register a webhook switch to the account ending with **ECOM** and then select
 https://{store_domain}/umbraco/vendr/payment/callback/adyen-checkout/{payment_method_id}/
 ````
 
-![Adyen Webhook](~/assets/images/screenshots/adyen/adyen_webhook.png)
+![Adyen Webhook](/media/screenshots/adyen/adyen_webhook.png)
