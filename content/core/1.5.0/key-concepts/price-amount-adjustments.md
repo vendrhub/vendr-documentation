@@ -19,8 +19,16 @@ public class MyPriceAdjuster : PriceAdjusterBase
 {
     public override void ApplyPriceAdjustments(PriceAdjusterArgs args)
     {
-        // TODO: Calculate adjustment
-        args.SubtotalPriceAdjustments.Add(new MyAdjustment());
+        // Calculate Adjustment
+        // Discount adjustments should be negative in 
+        // where as Fee adjustments should be positive
+
+        // Create a £10 discount
+        var price = new Price(-8.33, -1.67, args.Order.CurrencyId);
+        var adjustment = new MyAdjustment("My Discount", "MD-001", price);
+
+        // Add the adjustment to the sub total price
+        args.SubtotalPriceAdjustments.Add(adjustment);
     }
 }
 ````
@@ -32,14 +40,14 @@ public class MyAdjustment : PriceAdjustment<MyAdjustment>
 {
     public string MyAdjustmentRef { get; set; }
 
-    // A parrameterless constructor is required for cloning
+    // A parameterless constructor is required for cloning
     public MyAdjustment()
         : base()
     { }
 
     // Additional helper constructors
-    public MyAdjustment (string name, string reference)
-        : base(name)
+    public MyAdjustment (string name, string reference, Price adjustment)
+        : base(name, adjustment)
     {
         MyAdjustmentRef = reference;
     }
