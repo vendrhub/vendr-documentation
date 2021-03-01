@@ -79,7 +79,7 @@ Once created, the bulk action will then be displayed in the bulk actions bar for
 | `getSuccessMessage(total)` | A function to return a success message after all bulk actions have been performed. Returns an Promise that returns a string. |
 | `condition(context)` | As all bulk actions are registered globally for all entity types, the `condition` function can be used to filer when, and for which entities a bulk action will actually display. |
 
-*† Only a `itemAction` OR a `bulkAction` method should be defined. If both are present, the `bulkAction` will be used and the `itemAction` will be ignored. If processing of items can be done individually, it is better to use the `itemAction` in order to provider user feedback. `bulkAction` should only be used where items need to be processed in a single action.*
+† Only a `itemAction` OR a `bulkAction` method should be defined for a bulk action configuration. If both are present, the `bulkAction` will be used and the `itemAction` will be ignored. If processing of items can be done individually, it is better to use the `itemAction` in order to provider user feedback. `bulkAction` should only be used where items need to be processed in a single action.
 
 ## Examples
 
