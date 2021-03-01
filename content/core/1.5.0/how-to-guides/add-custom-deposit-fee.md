@@ -44,27 +44,20 @@ public class DepositPriceAdjuster : PriceAdjusterBase
 {
     public override void ApplyPriceAdjustments(PriceAdjusterArgs args)
     {
-        if (args.Calculation.TotalPrice.Value.WithTax >= 2000)
+        if (args.Calculation.TotalPrice.Value.WithTax >= 1000)
         {
-            var fee = 500M;
-            var feeTax = fee * args.Calculation.TaxRate.Value;
+            var taxRate = args.Calculation.TaxRate.Value;
 
-            Price price = Price.OfSameCurrency(args.Calculation.SubtotalPrice.WithoutAdjustments,
-                args.Calculation.SubtotalPrice.WithoutAdjustments.WithoutTax + fee,
-                args.Calculation.SubtotalPrice.WithoutAdjustments.Tax + feeTax);
+            var fee = 100M;
+            var feeTax = fee * taxRate;
 
-            //Price price = args.Calculation.SubtotalPrice.WithoutAdjustments = Price.OfSameCurrency(args.Calculation.SubtotalPrice.WithoutAdjustments,
-            //    args.Calculation.SubtotalPrice.WithoutAdjustments.WithoutTax + fee,
-            //    args.Calculation.SubtotalPrice.WithoutAdjustments.Tax + feeTax);
+            var priceWithoutTax = feeTax / (1 + taxRate);
 
-            args.Calculation.SubtotalPrice.WithoutAdjustments = Price.OfSameCurrency(args.Calculation.SubtotalPrice.WithoutAdjustments,
-                args.Calculation.SubtotalPrice.WithoutAdjustments.WithoutTax + fee,
-                args.Calculation.SubtotalPrice.WithoutAdjustments.Tax + feeTax);
+            // Create a £100 fee
+            var price = new Price(priceWithoutTax, feeTax, args.Order.CurrencyId);
+            var adjustment = new DepositPriceAdjustment("Deposit", "deposit", price);
 
-            var deposit = new DepositPriceAdjustment("Deposit", "deposit", price);
-            //deposit.CreateLimitedAdjustment(price);
-
-            args.SubtotalPriceAdjustments.Add(deposit);
+            args.SubtotalPriceAdjustments.Add(adjustment);
         }
     }
 }
