@@ -37,7 +37,7 @@ public class DepositPriceAdjustment : PriceAdjustment<DepositPriceAdjustment>
 
 ## DepositPriceAdjuster
 
-Furthermore we need a `PriceAdjuster` to implement thie calculation of the price, which in this case will be adding a fee (but in other cases it may add a discount instead).
+Furthermore we need a `PriceAdjuster` to implement thie calculation of the price, which in this case will be adding a fee. In other cases you may want add a discount instead by adding a negative price value.
 
 ````csharp
 public class DepositPriceAdjuster : PriceAdjusterBase
