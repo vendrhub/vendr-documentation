@@ -69,8 +69,9 @@ Once created, the bulk action will then be displayed in the bulk actions bar for
 | `icon` | An icon for your bulk action which will be displayed in the bulk action button next to the name |
 | `sortOrder` | The order in which to display this action in the bulk actions bar. System bulk actions sort orders are in multiples of `100` in order to allow positioning of items between system bulk actions. |
   
-  
+
 | Method | Description |
+| ------ | ----------- |
 | `configure(items)` | A function to run before the bulk operation in order to provide configuration for the bulk action. Returns a Promise that returns an object which is then passed to the item/bulk action methods. |
 | `itemAction(item, config)` | An individual action to perform per selected item. A status will be displayed after each processed item showing progress. Returns an Promise. |
 | `bulkAction(items, config)` | A single action to be performed for all selected items in one go. Returns an Promise. |
