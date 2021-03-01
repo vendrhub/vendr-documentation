@@ -20,8 +20,8 @@ public class DepositPriceAdjustment : PriceAdjustment<DepositPriceAdjustment>
     { }
 
     // Additional helper constructors
-    public DepositPriceAdjustment(string name, string reference, Price price)
-        : base(name, price)
+    public DepositPriceAdjustment(string name, string reference, Price adjustment)
+        : base(name, adjustment)
     {
         DepositAdjustmentRef = reference;
     }
