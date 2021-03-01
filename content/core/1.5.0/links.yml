@@ -20,7 +20,7 @@
   items:
     - title: Overview
       link: /how-to-guides/
-    - title: Add custom deposit fee
+    - title: Add Custom Deposit Fee
       link: /how-to-guides/add-custom-deposit-fee/
     - title: Limit Order Line Quantity
       link: /how-to-guides/limit-orderline-quantity/
