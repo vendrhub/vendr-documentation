@@ -19,8 +19,16 @@ public class MyPriceAdjuster : PriceAdjusterBase
 {
     public override void ApplyPriceAdjustments(PriceAdjusterArgs args)
     {
-        // TODO: Calculate adjustment
-        args.SubtotalPriceAdjustments.Add(new MyAdjustment());
+        // Calculate Adjustment
+        // Discount adjustments should be negative in 
+        // where as Fee adjustments should be positive
+
+        // Create a £10 discount
+        var price = new Price(-8.33, -1.67, args.Order.CurrencyId);
+        var adjustment = new MyAdjustment("My Discount", "MD-001", price);
+
+        // Add the adjustment to the sub total price
+        args.SubtotalPriceAdjustments.Add(adjustment);
     }
 }
 ````
@@ -28,14 +36,21 @@ public class MyPriceAdjuster : PriceAdjusterBase
 Adjusters apply adjustments to their given price they wish to affect. Adjustments are strongly typed and so each adjuster should defined their own adjustment type, providing properties to collect any relevant information for the adjustment (this "meta data" gets serialized with the adjustment as is constantly available when accessing the given adjustment).  
 
 ````csharp
-public class MyAdjustment : PriceAdjustment<DiscountAdjustment>
+[Serializable]
+public class MyAdjustment : PriceAdjustment<MyAdjustment>
 {
     public string MyAdjustmentRef { get; set; }
 
-    public MyAdjustment (string name, string ref)
-        : base(name)
+    // A parameterless constructor is required for cloning
+    public MyAdjustment()
+        : base()
+    { }
+
+    // Additional helper constructors
+    public MyAdjustment (string name, string reference, Price adjustment)
+        : base(name, adjustment)
     {
-        MyAdjustmentRef = ref;
+        MyAdjustmentRef = reference;
     }
 }
 ````
