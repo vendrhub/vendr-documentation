@@ -38,14 +38,14 @@ public class DepositPriceAdjuster : PriceAdjusterBase
 {
     public override void ApplyPriceAdjustments(PriceAdjusterArgs args)
     {
+        // Add fee if total price is more than £1000
         if (args.Calculation.TotalPrice.Value.WithTax >= 1000)
         {
             var taxRate = args.Calculation.TaxRate.Value;
-
+            
             var fee = 100M;
-            var feeTax = fee * taxRate;
-
-            var priceWithoutTax = feeTax / (1 + taxRate);
+            var tax = fee * taxRate / (1 + taxRate);
+            var priceWithoutTax = fee / (1 + taxRate);
 
             // Create a £100 fee
             var price = new Price(priceWithoutTax, feeTax, args.Order.CurrencyId);
