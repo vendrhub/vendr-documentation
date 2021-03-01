@@ -68,15 +68,18 @@ Once created, the bulk action will then be displayed in the bulk actions bar for
 | `name` | The name for your bulk action which will be displayed in the bulk action button |
 | `icon` | An icon for your bulk action which will be displayed in the bulk action button next to the name |
 | `sortOrder` | The order in which to display this action in the bulk actions bar. System bulk actions sort orders are in multiples of `100` in order to allow positioning of items between system bulk actions. |
-  
 
 | Method | Description |
 | ------ | ----------- |
 | `configure(items)` | A function to run before the bulk operation in order to provide configuration for the bulk action. Returns a Promise that returns an object which is then passed to the item/bulk action methods. |
-| `itemAction(item, config)` | An individual action to perform per selected item. A status will be displayed after each processed item showing progress. Returns an Promise. |
-| `bulkAction(items, config)` | A single action to be performed for all selected items in one go. Returns an Promise. |
+| `itemAction(item, config)` | An individual action to perform per selected item. A status will be displayed after each processed item showing progress. Returns an Promise. * |
+| `bulkAction(items, config)` | A single action to be performed for all selected items in one go. Returns an Promise. * |
 | `getConfirmMessage(total)` | A function that can provider a message to display before a bulk action is triggered should confirmation be required for the action to run. Returns an Promise that returns a string. |
 | `getStatusMessage(count, total)` | A function used to provider a status message after each item has been processed. Displayed in the bulk actions bar after each `itemAction` has been called. Returns an Promise that returns a string. |
 | `getSuccessMessage(total)` | A function to return a success message after all bulk actions have been performed. Returns an Promise that returns a string. |
 | `condition(context)` | As all bulk actions are registered globally for all entity types, the `condition` function can be used to filer when, and for which entities a bulk action will actually display. |
+
+\* Only a `itemAction` OR a `bulkAction` method should be defined. If both are present, the `bulkAction` will be used and the `itemAction` will be ignored. If processing of items can be done individually, it is better to use the `itemAction` in order to provider user feedback. `bulkAction` should only be used where items need to be processed in a single action.
+
+## Examples
 
