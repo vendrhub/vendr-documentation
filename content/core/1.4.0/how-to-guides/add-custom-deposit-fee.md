@@ -10,6 +10,7 @@ In this guide we will be looking at price adjustments in Vendr to be able to add
 We define a custom `PriceAdjustment` making it possible to enhance with custom properties we need and when accessing adjustments we can cast to this specific type.
 
 ````csharp
+[Serializable]
 public class DepositPriceAdjustment : PriceAdjustment<DepositPriceAdjustment>
 {
     public string DepositAdjustmentRef { get; set; }
