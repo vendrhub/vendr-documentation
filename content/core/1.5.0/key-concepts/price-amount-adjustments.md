@@ -24,7 +24,7 @@ public class MyPriceAdjuster : PriceAdjusterBase
         // where as Fee adjustments should be positive
 
         // Create a £10 discount
-        var price = new Price(-8.33, -1.67, args.Order.CurrencyId);
+        var price = new Price(-8.33M, -1.67M, args.Order.CurrencyId);
         var adjustment = new MyAdjustment("My Discount", "MD-001", price);
 
         // Add the adjustment to the sub total price
