@@ -12,7 +12,7 @@ We define a custom `PriceAdjustment` making it possible to enhance with custom p
 ````csharp
 public class DepositPriceAdjustment : PriceAdjustment<DepositPriceAdjustment>
 {
-    public string DepositPriceAdjustmentRef { get; set; }
+    public string DepositAdjustmentRef { get; set; }
 
     // A parameterless constructor is required for cloning
     public DepositPriceAdjustment()
@@ -23,7 +23,7 @@ public class DepositPriceAdjustment : PriceAdjustment<DepositPriceAdjustment>
     public DepositPriceAdjustment(string name, string reference, Price price)
         : base(name, price)
     {
-        DepositPriceAdjustmentRef = reference;
+        DepositAdjustmentRef = reference;
     }
 }
 
