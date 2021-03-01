@@ -32,7 +32,7 @@ public class MyAdjustment : PriceAdjustment<MyAdjustment>
 {
     public string MyAdjustmentRef { get; set; }
 
-    // A parameterless constructor is required for cloning
+    // A parrameterless constructor is required for cloning
     public MyAdjustment()
         : base()
     { }
