@@ -4,7 +4,7 @@ description: Changelog for the Core Vendr product
 ---
 
 ## v1.5.2  
-**Date:** TBC    
+**Date:** 2020-03-17    
 **Description:** Patch release with minor bug fixes 
 
 --- 
