@@ -3,18 +3,74 @@ title: Vendr Documentation
 description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## Heading 1
+## Using These Docs
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+**These docs are aimed at developers** who have at least a basic understanding of  [Umbraco](https://umbraco.com), as well as C# / MVC principals.
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+ To help with the different stages of learning, they have been broken up into 5 key areas, each with a specific focus.
 
-## Heading 2
+<div class="tile-grid mb-6">
+  <div class="tile-grid__cell w-full">
+    <a href="getting-started/" class="tile flex">
+      <span class="pr-2">
+        <badge value="1" />
+      </span>
+      <span>
+        <span class="tile__heading">Getting Started</span>
+        <span class="tile__body">Key information on how to get started with Vendr</span>
+      </span>
+    </a>
+  </div>
+  <div class="tile-grid__cell w-full md:w-1/2">
+    <a href="tutorials/" class="tile h-full flex">
+      <span class="pr-2">
+        <badge value="2" /> 
+      </span>
+      <span>
+        <span class="tile__heading">Tutorials</span>
+        <span class="tile__body">Hands-on tutorials to get you familiar with Vendr.</span>
+      </span>
+    </a>
+  </div>
+  <div class="tile-grid__cell w-full md:w-1/2">
+    <a href="how-to-guides/" class="tile h-full flex">
+      <span class="pr-2">
+        <badge value="3" />
+      </span>
+      <span>
+        <span class="tile__heading">How-to Guides</span>
+        <span class="tile__body">Step-by-step guides explaining how to solve real-world problems.</span>
+      </span>
+    </a>
+  </div>
+  <div class="tile-grid__cell w-full md:w-1/2">
+    <a href="key-concepts/" class="tile h-full flex">
+      <span class="pr-2">
+        <badge value="4" /> 
+      </span>
+      <span>
+        <span class="tile__heading">Key Concepts</span>
+        <span class="tile__body">Explanation and discussion of key concepts.</span>
+      </span>
+    </a>
+  </div>
+  <div class="tile-grid__cell w-full md:w-1/2">
+    <a href="reference/" class="tile h-full flex">
+      <span class="pr-2">
+        <badge value="5" />
+      </span>
+      <span>
+        <span class="tile__heading">Reference</span>
+        <span class="tile__body">Technical reference of the Vendr API.</span>
+      </span>
+    </a>
+  </div>
+</div>
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+## Getting Help
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+If you require further assistance, or if you are having a particular issue you can't find an answer to, you can get community support via our support forum over on the [Umbraco developer portal](https://our.umbraco.com/packages/website-utilities/vendr/vendr-support/).
 
-### Heading 3
+## About Vendr
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+Vendr is the eCommerce solution for Umbraco v8+ created by Outfield Digital, the team behind Tea Commerce for Umbraco v7. Vendr is the successor to Tea Commerce and follows much of the same principles but has been vastly improved for use on Umbraco v8+.

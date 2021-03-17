@@ -1,20 +1,12 @@
 ---
-title: Vendr Documentation
-description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
+title: Tutorials
+description: Step-by-Step Tutorials on getting started with Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-## Heading 1
+<message-box type="info" heading="Work in Progress">
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+More detailed documentation is coming soon.
 
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+We are currently working hard to improve the documentation, which includes creating step-by-step tutorials to get you started, however we aren't quite there yet so in the mean time, please take a look at the [demo store](https://github.com/vendrhub/vendr-demo-store) to see how to go about implementing a Vendr store.
 
-## Heading 2
-
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
-
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
-
-### Heading 3
-
-It is assumed that before we begin that you already have an Umbraco v8+ website configured, ready to install Vendr into. If you are unsure how to setup a basic Umbraco install, you should review the Getting Started documentation on the main Umbraco developer portal and return once you have this in place.
+</message-box>
