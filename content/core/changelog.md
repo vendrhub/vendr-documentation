@@ -16,16 +16,16 @@ description: Changelog for the Core Vendr product
 * Fixed regression in `ZeroValuePaymentProvider` since 1.4.0 release due to it not being updated to use the `TransactionAmount` property ([#281](https://github.com/vendrhub/vendr/issues/281)).
 
 </changelog-group>
-<changelog-group category="Changed">  
-
-* Updated the `UmbracoProductAdapter.GetProductSnapshot` introduced in 1.5.0 which accepts a `productVariantReference` to be virtual inline with the existing `GetProductSnapshot` method ([#282](https://github.com/vendrhub/vendr/issues/282)).
-* Updated the product variants editor value converter to automatically lookup the related store so that a `storeId` isn't needed when using the `GetInUseProductAttributes` method.
-
-</changelog-group>
 <changelog-group category="Added">  
 
 * Added new event handlers when a content node with a variants editor is saved/copied/moved to automatically inject the related `storeId` for the variants editor into it's data structure. This is mainly to provide context to the `Vendr.Deploy` package.
 * Added `Create` methods to `ProductAttribute` and `ProductAttributePreset` to allow the passing in of an ID. This is to enable them to be deployed in `Vendr.Deploy`. 
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated the `UmbracoProductAdapter.GetProductSnapshot` introduced in 1.5.0 which accepts a `productVariantReference` to be virtual inline with the existing `GetProductSnapshot` method ([#282](https://github.com/vendrhub/vendr/issues/282)).
+* Updated the product variants editor value converter to automatically lookup the related store so that a `storeId` isn't needed when using the `GetInUseProductAttributes` method.
 
 </changelog-group>
 </changelog>
