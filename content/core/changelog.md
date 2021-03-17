@@ -3,6 +3,33 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.5.2  
+**Date:** TBC    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed YSOD when fetching too many sub-entities in one SQL query. All sub-entity queries are now batched into groups of 2000 entities at a time ([#280](https://github.com/vendrhub/vendr/issues/280)).
+* Fixed regression in `ZeroValuePaymentProvider` since 1.4.0 release due to it not being updated to use the `TransactionAmount` property ([#281](https://github.com/vendrhub/vendr/issues/281)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated the `UmbracoProductAdapter.GetProductSnapshot` introduced in 1.5.0 which accepts a `productVariantReference` to be virtual inline with the existing `GetProductSnapshot` method ([#282](https://github.com/vendrhub/vendr/issues/282)).
+* Updated the product variants editor value converter to automatically lookup the related store so that a `storeId` isn't needed when using the `GetInUseProductAttributes` method.
+
+</changelog-group>
+<changelog-group category="Added">  
+
+* Added new event handlers when a content node with a variants editor is saved/copied/moved to automatically inject the related `storeId` for the variants editor into it's data structure. This is mainly to provide context to the `Vendr.Deploy` package.
+* Added `Create` methods to `ProductAttribute` and `ProductAttributePreset` to allow the passing in of an ID. This is to enable them to be deployed in `Vendr.Deploy`. 
+
+</changelog-group>
+</changelog>
+
 ## v1.5.1  
 **Date:** 2020-02-26    
 **Description:** Patch release with minor bug fixes 
