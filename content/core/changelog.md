@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.5.3  
+**Date:** 2020-03-24    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed issue where the variants property editor was not recursively transforming property values when converting from editor to DB ([#285](https://github.com/vendrhub/vendr/issues/285)).
+* Fixed minor styling issues in the default email templates ([#286](https://github.com/vendrhub/vendr/issues/286)).
+
+</changelog-group>
+</changelog>
+
 ## v1.5.2  
 **Date:** 2020-03-17    
 **Description:** Patch release with minor bug fixes 
