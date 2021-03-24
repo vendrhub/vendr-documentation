@@ -3,6 +3,29 @@ title: Changelog
 description: Changelog for the Stripe Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v1.2.1   
+**Date:** 2021-03-24    
+**Description:** Bug fixes and minor enhancements 
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added ability to configure the Stripe payment method types to use ([#6](https://github.com/vendrhub/vendr-payment-provider-stripe/issues/6)).
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+    
+* Fixed issue when using subscriptions not taking tax into account. A Stripe Tax Rate is now created based on the subscription items order line tax rate.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.2.0   
 **Date:** 2020-12-10    
 **Description:** Breaking change update targeting Vendr 1.4.0 
