@@ -17,7 +17,7 @@ public class ProductAttributePreset : ProductAttributePresetReadOnly
 
 ### Methods
 
-#### Create (1 of 2)
+#### Create (1 of 4)
 
 ```csharp
 public static ProductAttributePreset Create(IUnitOfWork uow, Guid storeId, string alias, 
@@ -26,10 +26,28 @@ public static ProductAttributePreset Create(IUnitOfWork uow, Guid storeId, strin
 
 ---
 
-#### Create (2 of 2)
+#### Create (2 of 4)
 
 ```csharp
 public static ProductAttributePreset Create(IUnitOfWork uow, Guid storeId, string alias, 
+    string name, string description)
+```
+
+---
+
+#### Create (3 of 4)
+
+```csharp
+public static ProductAttributePreset Create(IUnitOfWork uow, Guid id, Guid storeId, string alias, 
+    string name)
+```
+
+---
+
+#### Create (4 of 4)
+
+```csharp
+public static ProductAttributePreset Create(IUnitOfWork uow, Guid id, Guid storeId, string alias, 
     string name, string description)
 ```
 

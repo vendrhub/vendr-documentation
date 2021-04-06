@@ -9,7 +9,7 @@ public class VariantsEditorConfiguration
 ```
 
 **Namespace**
-* [Vendr.Web.Models](../)
+* [Vendr.Web.PropertyEditors.VariantsEditor](../)
 
 ### Constructors
 
@@ -24,10 +24,10 @@ public VariantsEditorConfiguration()
 
 ### Properties
 
-#### VariantElementType
+#### VariantElementTypeKey
 
 ```csharp
-public Guid VariantElementType { get; set; }
+public Guid? VariantElementTypeKey { get; set; }
 ```
 
 

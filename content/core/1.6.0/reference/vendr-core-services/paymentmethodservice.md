@@ -63,10 +63,18 @@ public PaymentMethodReadOnly GetPaymentMethod(Guid storeId, string alias)
 
 ---
 
-#### GetPaymentMethods
+#### GetPaymentMethods (1 of 2)
 
 ```csharp
 public IEnumerable<PaymentMethodReadOnly> GetPaymentMethods(Guid storeId)
+```
+
+---
+
+#### GetPaymentMethods (2 of 2)
+
+```csharp
+public IEnumerable<PaymentMethodReadOnly> GetPaymentMethods(Guid[] ids)
 ```
 
 

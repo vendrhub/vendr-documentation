@@ -196,6 +196,24 @@ public const string PaymentMethodCacheRefresherId;
 
 ---
 
+#### PrintTemplateCacheRefresherGuid
+
+```csharp
+public static readonly Guid PrintTemplateCacheRefresherGuid;
+```
+
+
+---
+
+#### PrintTemplateCacheRefresherId
+
+```csharp
+public const string PrintTemplateCacheRefresherId;
+```
+
+
+---
+
 #### ProductAttributeCacheRefresherGuid
 
 ```csharp
@@ -408,8 +426,11 @@ public enum NodeType
 | Currency | `13` | Alias for a single currency node. |
 | TaxClasses | `14` | Alias for the tax classes node. |
 | TaxClass | `15` | Alias for a single tax class node. |
-| EmailTemplates | `16` | Alias for the email templates node. |
-| EmailTemplate | `17` | Alias for a single email template node. |
+| Templating | `16` | Alias for the templating node. |
+| EmailTemplates | `17` | Alias for the email templates node. |
+| EmailTemplate | `18` | Alias for a single email template node. |
+| PrintTemplates | `19` | Alias for the print templates node. |
+| PrintTemplate | `20` | Alias for a single print template node. |
 
 
 ##### Classes

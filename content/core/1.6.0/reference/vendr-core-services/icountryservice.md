@@ -127,7 +127,7 @@ public void DeleteRegion(Region entity)
 
 ---
 
-#### GetCountries
+#### GetCountries (1 of 2)
 
 Get a list of all [`CountryReadOnly`](../../vendr-core-models/countryreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -140,6 +140,26 @@ public IEnumerable<CountryReadOnly> GetCountries(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`CountryReadOnly`](../../vendr-core-models/countryreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`CountryReadOnly`](../../vendr-core-models/countryreadonly/) entities
+
+---
+
+#### GetCountries (2 of 2)
+
+Get a list of [`CountryReadOnly`](../../vendr-core-models/countryreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<CountryReadOnly> GetCountries(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`CountryReadOnly`](../../vendr-core-models/countryreadonly/) entities to fetch |
 
 **Returns**
 
@@ -248,7 +268,7 @@ A [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entity
 
 ---
 
-#### GetRegions (1 of 2)
+#### GetRegions (1 of 3)
 
 Get a list of all [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -268,7 +288,27 @@ A list of [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities
 
 ---
 
-#### GetRegions (2 of 2)
+#### GetRegions (2 of 3)
+
+Get a list of [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<RegionReadOnly> GetRegions(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities to fetch |
+
+**Returns**
+
+A list of [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities
+
+---
+
+#### GetRegions (3 of 3)
 
 Get a list of all [`RegionReadOnly`](../../vendr-core-models/regionreadonly/) entities from the given [`Store`](../../vendr-core-models/store/) and [`Country`](../../vendr-core-models/country/)
 

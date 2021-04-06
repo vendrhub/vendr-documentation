@@ -22,13 +22,13 @@ Instantiates a new VendrServiceContext instance
 ```csharp
 public VendrServiceContext(Lazy<ICountryService> countryService, 
     Lazy<ICurrencyService> currencyService, Lazy<IEmailTemplateService> emailTemplateService, 
-    Lazy<IOrderService> orderService, Lazy<IOrderStatusService> orderStatusService, 
-    Lazy<IPaymentMethodService> paymentMethodService, 
+    Lazy<IPrintTemplateService> printTemplateService, Lazy<IOrderService> orderService, 
+    Lazy<IOrderStatusService> orderStatusService, Lazy<IPaymentMethodService> paymentMethodService, 
     Lazy<IShippingMethodService> shippingMethodService, Lazy<IStoreService> storeService, 
     Lazy<ITaxService> taxService, Lazy<IProductService> productService, 
     Lazy<IDiscountService> discountService, Lazy<IGiftCardService> giftCardService, 
     Lazy<ITranslationService> translationService, 
-    Lazy<IProductAttributeService> productAttributeService)
+    Lazy<IProductAttributeService> productAttributeService, Lazy<IEntityService> entityService)
 ```
 
 **Parameters**
@@ -38,6 +38,7 @@ public VendrServiceContext(Lazy<ICountryService> countryService,
 | countryService |  |
 | currencyService |  |
 | emailTemplateService |  |
+| printTemplateService |  |
 | orderService |  |
 | orderStatusService |  |
 | paymentMethodService |  |
@@ -49,6 +50,7 @@ public VendrServiceContext(Lazy<ICountryService> countryService,
 | giftCardService |  |
 | translationService |  |
 | productAttributeService |  |
+| entityService |  |
 
 
 ### Properties
@@ -97,6 +99,17 @@ public IEmailTemplateService EmailTemplateService { get; }
 
 ---
 
+#### EntityService
+
+Gets the [`IEntityService`](../ientityservice/)
+
+```csharp
+public IEntityService EntityService { get; }
+```
+
+
+---
+
 #### GiftCardService
 
 Gets the [`IGiftCardService`](../igiftcardservice/)
@@ -136,6 +149,17 @@ Gets the [`IPaymentMethodService`](../ipaymentmethodservice/)
 
 ```csharp
 public IPaymentMethodService PaymentMethodService { get; }
+```
+
+
+---
+
+#### PrintTemplateService
+
+Gets the [`IPrintTemplateService`](../iprinttemplateservice/)
+
+```csharp
+public IPrintTemplateService PrintTemplateService { get; }
 ```
 
 

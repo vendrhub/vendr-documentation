@@ -736,6 +736,78 @@ public static void OnPipelineSuccess(Action<PipelineSuccessNotification> callbac
 
 ---
 
+#### OnPrintTemplateCreated
+
+```csharp
+public static void OnPrintTemplateCreated(Action<PrintTemplateCreatedNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateCreating
+
+```csharp
+public static void OnPrintTemplateCreating(Action<PrintTemplateCreatingNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateDeleted
+
+```csharp
+public static void OnPrintTemplateDeleted(Action<PrintTemplateDeletedNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateDeleting
+
+```csharp
+public static void OnPrintTemplateDeleting(Action<PrintTemplateDeletingNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateSaved
+
+```csharp
+public static void OnPrintTemplateSaved(Action<PrintTemplateSavedNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateSaving
+
+```csharp
+public static void OnPrintTemplateSaving(Action<PrintTemplateSavingNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateUpdated
+
+```csharp
+public static void OnPrintTemplateUpdated(Action<PrintTemplateUpdatedNotification> callback)
+```
+
+
+---
+
+#### OnPrintTemplateUpdating
+
+```csharp
+public static void OnPrintTemplateUpdating(Action<PrintTemplateUpdatingNotification> callback)
+```
+
+
+---
+
 #### OnProductAttributeCreated
 
 ```csharp

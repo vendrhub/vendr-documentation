@@ -55,11 +55,21 @@ public EmailTemplateEditDto GetEmailTemplate(Guid emailTemplateId)
 
 ---
 
+#### GetEmailTemplateCount
+
+```csharp
+public int GetEmailTemplateCount(Guid storeId, 
+    TemplateCategory? category = default(TemplateCategory?))
+```
+
+
+---
+
 #### GetEmailTemplates
 
 ```csharp
 public IEnumerable<EmailTemplateBasicDto> GetEmailTemplates(Guid storeId, 
-    EmailTemplateCategory? category = default(EmailTemplateCategory?))
+    TemplateCategory? category = default(TemplateCategory?))
 ```
 
 

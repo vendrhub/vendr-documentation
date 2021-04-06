@@ -81,10 +81,18 @@ public void DeleteRegion(Region entity)
 
 ---
 
-#### GetCountries
+#### GetCountries (1 of 2)
 
 ```csharp
 public IEnumerable<CountryReadOnly> GetCountries(Guid storeId)
+```
+
+---
+
+#### GetCountries (2 of 2)
+
+```csharp
+public IEnumerable<CountryReadOnly> GetCountries(Guid[] ids)
 ```
 
 
@@ -133,7 +141,7 @@ public RegionReadOnly GetRegion(Guid storeId, Guid countryId, string code)
 
 ---
 
-#### GetRegions (1 of 2)
+#### GetRegions (1 of 3)
 
 ```csharp
 public IEnumerable<RegionReadOnly> GetRegions(Guid storeId)
@@ -141,7 +149,15 @@ public IEnumerable<RegionReadOnly> GetRegions(Guid storeId)
 
 ---
 
-#### GetRegions (2 of 2)
+#### GetRegions (2 of 3)
+
+```csharp
+public IEnumerable<RegionReadOnly> GetRegions(Guid[] ids)
+```
+
+---
+
+#### GetRegions (3 of 3)
 
 ```csharp
 public IEnumerable<RegionReadOnly> GetRegions(Guid storeId, Guid countryId)

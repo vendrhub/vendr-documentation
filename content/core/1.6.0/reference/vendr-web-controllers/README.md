@@ -22,6 +22,7 @@ description: API reference for Vendr.Web.Controllers in Vendr, the eCommerce sol
 | class [OrderController](ordercontroller/) |  |
 | class [OrderStatusController](orderstatuscontroller/) |  |
 | class [PaymentMethodController](paymentmethodcontroller/) |  |
+| class [PrintTemplateController](printtemplatecontroller/) |  |
 | class [ProductAttributeController](productattributecontroller/) |  |
 | class [ProductController](productcontroller/) |  |
 | class [SendEmailDto](sendemaildto/) |  |

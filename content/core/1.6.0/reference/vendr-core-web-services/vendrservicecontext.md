@@ -22,13 +22,13 @@ public class VendrServiceContext : VendrServiceContext
 ```csharp
 public VendrServiceContext(Lazy<ICountryService> countryService, 
     Lazy<ICurrencyService> currencyService, Lazy<IEmailTemplateService> emailTemplateService, 
-    Lazy<IOrderService> orderService, Lazy<IOrderStatusService> orderStatusService, 
-    Lazy<IPaymentMethodService> paymentMethodService, 
+    Lazy<IPrintTemplateService> printTemplateService, Lazy<IOrderService> orderService, 
+    Lazy<IOrderStatusService> orderStatusService, Lazy<IPaymentMethodService> paymentMethodService, 
     Lazy<IShippingMethodService> shippingMethodService, Lazy<IStoreService> storeService, 
     Lazy<ITaxService> taxService, Lazy<IProductService> productService, 
     Lazy<IDiscountService> discountService, Lazy<IGiftCardService> giftCardService, 
     Lazy<ITranslationService> translationService, 
-    Lazy<IProductAttributeService> productAttributeService, 
+    Lazy<IProductAttributeService> productAttributeService, Lazy<IEntityService> entityService, 
     Lazy<IPaymentProviderService> paymentProviderService)
 ```
 

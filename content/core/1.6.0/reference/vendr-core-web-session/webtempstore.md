@@ -20,10 +20,8 @@ public class WebTempStore : WebStoreBase, ITempStore
 
 #### WebTempStore
 
-The default constructor.
-
 ```csharp
-public WebTempStore()
+public WebTempStore(IVendrSettings vendrSettings)
 ```
 
 

@@ -23,7 +23,8 @@ public class SettingsTreeController : VendrTreeControllerBase<NodeType>
 public SettingsTreeController(IStoreService storeService, IOrderStatusService orderStatusService, 
     IShippingMethodService shippingMethodService, IPaymentMethodService paymentMethodService, 
     ICountryService countryService, ICurrencyService currencyService, ITaxService taxService, 
-    IEmailTemplateService emailTemplateService, ILicensingService licensingService)
+    IEmailTemplateService emailTemplateService, IPrintTemplateService printTemplateService, 
+    ILicensingService licensingService)
 ```
 
 

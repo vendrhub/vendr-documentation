@@ -63,10 +63,18 @@ public ShippingMethodReadOnly GetShippingMethod(Guid storeId, string alias)
 
 ---
 
-#### GetShippingMethods
+#### GetShippingMethods (1 of 2)
 
 ```csharp
 public IEnumerable<ShippingMethodReadOnly> GetShippingMethods(Guid storeId)
+```
+
+---
+
+#### GetShippingMethods (2 of 2)
+
+```csharp
+public IEnumerable<ShippingMethodReadOnly> GetShippingMethods(Guid[] ids)
 ```
 
 

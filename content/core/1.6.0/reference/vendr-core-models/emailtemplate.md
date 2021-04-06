@@ -73,7 +73,7 @@ public EmailTemplate SetBccAddresses(string emailAddresses)
 #### SetCategory
 
 ```csharp
-public EmailTemplate SetCategory(EmailTemplateCategory category)
+public EmailTemplate SetCategory(TemplateCategory category)
 ```
 
 

@@ -21,7 +21,7 @@ public class ValidateEmailTemplateCategoryChange : ValidationEventBase
 
 ```csharp
 public ValidateEmailTemplateCategoryChange(EmailTemplateReadOnly emailTemplate, 
-    ChangingValue<EmailTemplateCategory> category)
+    ChangingValue<TemplateCategory> category)
 ```
 
 
@@ -30,7 +30,7 @@ public ValidateEmailTemplateCategoryChange(EmailTemplateReadOnly emailTemplate,
 #### Category
 
 ```csharp
-public ChangingValue<EmailTemplateCategory> Category { get; }
+public ChangingValue<TemplateCategory> Category { get; }
 ```
 
 

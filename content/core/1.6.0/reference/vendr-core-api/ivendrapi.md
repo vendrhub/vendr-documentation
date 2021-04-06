@@ -7,8 +7,8 @@ description: API reference for IVendrApi in Vendr, the eCommerce solution for Um
 ```csharp
 public interface IVendrApi : ICountryService, ICurrencyService, IDiscountService, 
     IEmailTemplateService, IGiftCardService, IOrderService, IOrderStatusService, 
-    IPaymentMethodService, IProductAttributeService, IProductService, ISessionManager, 
-    IShippingMethodService, IStoreService, ITaxService
+    IPaymentMethodService, IPrintTemplateService, IProductAttributeService, IProductService, 
+    ISessionManager, IShippingMethodService, IStoreService, ITaxService
 ```
 
 **Inheritance**
@@ -21,6 +21,7 @@ public interface IVendrApi : ICountryService, ICurrencyService, IDiscountService
 * interface [IOrderService](../../vendr-core-services/iorderservice/)
 * interface [IOrderStatusService](../../vendr-core-services/iorderstatusservice/)
 * interface [IPaymentMethodService](../../vendr-core-services/ipaymentmethodservice/)
+* interface [IPrintTemplateService](../../vendr-core-services/iprinttemplateservice/)
 * interface [IProductAttributeService](../../vendr-core-services/iproductattributeservice/)
 * interface [IProductService](../../vendr-core-services/iproductservice/)
 * interface [ISessionManager](../../vendr-core-session/isessionmanager/)

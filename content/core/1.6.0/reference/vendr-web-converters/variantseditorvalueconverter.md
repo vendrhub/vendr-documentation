@@ -16,7 +16,8 @@ public class VariantsEditorValueConverter : PropertyValueConverterBase
 #### VariantsEditorValueConverter
 
 ```csharp
-public VariantsEditorValueConverter(IProfilingLogger proflog, BlockEditorConverter blockConverter)
+public VariantsEditorValueConverter(IVariationContextAccessor variationContextAccessor, 
+    IProfilingLogger proflog, BlockEditorConverter blockConverter)
 ```
 
 

@@ -35,16 +35,6 @@ public override bool FinalizeAtContinueUrl { get; }
 
 ### Methods
 
-#### CanProcessOrder
-
-```csharp
-public override bool CanProcessOrder(OrderReadOnly order, 
-    ZeroValuePaymentProviderSettings settings, ref string errorMessage)
-```
-
-
----
-
 #### GenerateForm
 
 ```csharp

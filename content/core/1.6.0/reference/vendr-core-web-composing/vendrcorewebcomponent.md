@@ -16,8 +16,8 @@ public class VendrCoreWebComponent : IComponent
 #### VendrCoreWebComponent
 
 ```csharp
-public VendrCoreWebComponent(IOrderService orderService, ILicensingService licensingService, 
-    IProfilingLogger umbLogger, ILogger vendrLogger)
+public VendrCoreWebComponent(IVendrSettings vendrSettings, IOrderService orderService, 
+    ILicensingService licensingService, IProfilingLogger umbLogger, ILogger vendrLogger)
 ```
 
 

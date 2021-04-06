@@ -46,7 +46,6 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | enum [DiscountType](discounttype/) |  |
 | class [EmailContext](emailcontext/) |  |
 | class [EmailTemplate](emailtemplate/) |  |
-| enum [EmailTemplateCategory](emailtemplatecategory/) |  |
 | class [EmailTemplateReadOnly](emailtemplatereadonly/) |  |
 | abstract class [EntityBase&lt;TState&gt;](entitybase-1/) | Base class for a Vendr entity |
 | abstract class [EntityBase](entitybase/) | Base class for a Vendr entity |
@@ -113,6 +112,8 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | abstract class [PriceAdjustment&lt;TSelf&gt;](priceadjustment-1/) |  |
 | abstract class [PriceAdjustment](priceadjustment/) |  |
 | enum [PriceAmountType](priceamounttype/) |  |
+| class [PrintTemplate](printtemplate/) |  |
+| class [PrintTemplateReadOnly](printtemplatereadonly/) |  |
 | class [ProductAttribute](productattribute/) | A Vendr Product Attribute entity |
 | class [ProductAttributePreset](productattributepreset/) |  |
 | class [ProductAttributePresetReadOnly](productattributepresetreadonly/) | A Vendr read only Product Attribute Preset entity |
@@ -154,6 +155,7 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | class [TaxClassReadOnly](taxclassreadonly/) |  |
 | class [TaxRate](taxrate/) |  |
 | class [TaxSource](taxsource/) |  |
+| enum [TemplateCategory](templatecategory/) |  |
 | class [TotalPrice](totalprice/) |  |
 | class [TotalPriceWithPreviousAdjustment](totalpricewithpreviousadjustment/) |  |
 | class [TranslatedValue&lt;T&gt;](translatedvalue-1/) |  |

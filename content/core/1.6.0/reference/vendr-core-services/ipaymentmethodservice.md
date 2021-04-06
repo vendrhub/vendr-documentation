@@ -95,7 +95,7 @@ A [`PaymentMethodReadOnly`](../../vendr-core-models/paymentmethodreadonly/) enti
 
 ---
 
-#### GetPaymentMethods
+#### GetPaymentMethods (1 of 2)
 
 Get a list of all [`PaymentMethodReadOnly`](../../vendr-core-models/paymentmethodreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -108,6 +108,26 @@ public IEnumerable<PaymentMethodReadOnly> GetPaymentMethods(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`PaymentMethodReadOnly`](../../vendr-core-models/paymentmethodreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`PaymentMethodReadOnly`](../../vendr-core-models/paymentmethodreadonly/) entities
+
+---
+
+#### GetPaymentMethods (2 of 2)
+
+Get a list of [`PaymentMethodReadOnly`](../../vendr-core-models/paymentmethodreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<PaymentMethodReadOnly> GetPaymentMethods(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`PaymentMethodReadOnly`](../../vendr-core-models/paymentmethodreadonly/) entities to fetch |
 
 **Returns**
 

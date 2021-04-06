@@ -109,6 +109,27 @@ A list of [`StoreReadOnly`](../../vendr-core-models/storereadonly/) entities
 
 ---
 
+#### GetStores
+
+Get a list of [`StoreReadOnly`](../../vendr-core-models/storereadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<StoreReadOnly> GetStores(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`StoreReadOnly`](../../vendr-core-models/storereadonly/) entities to fetch |
+
+**Returns**
+
+A list of [`StoreReadOnly`](../../vendr-core-models/storereadonly/) entities
+
+
+---
+
 #### SaveStore
 
 Saves an [`Store`](../../vendr-core-models/store/)

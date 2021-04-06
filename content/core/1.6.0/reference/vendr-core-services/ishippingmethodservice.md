@@ -95,7 +95,7 @@ A [`ShippingMethodReadOnly`](../../vendr-core-models/shippingmethodreadonly/) en
 
 ---
 
-#### GetShippingMethods
+#### GetShippingMethods (1 of 2)
 
 Get a list of all [`ShippingMethodReadOnly`](../../vendr-core-models/shippingmethodreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -108,6 +108,26 @@ public IEnumerable<ShippingMethodReadOnly> GetShippingMethods(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`ShippingMethodReadOnly`](../../vendr-core-models/shippingmethodreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`ShippingMethodReadOnly`](../../vendr-core-models/shippingmethodreadonly/) entities
+
+---
+
+#### GetShippingMethods (2 of 2)
+
+Get a list of [`ShippingMethodReadOnly`](../../vendr-core-models/shippingmethodreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<ShippingMethodReadOnly> GetShippingMethods(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`ShippingMethodReadOnly`](../../vendr-core-models/shippingmethodreadonly/) entities to fetch |
 
 **Returns**
 

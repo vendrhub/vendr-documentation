@@ -40,7 +40,7 @@ public IEnumerable<string> BccAddresses { get; }
 #### Category
 
 ```csharp
-public EmailTemplateCategory Category { get; }
+public TemplateCategory Category { get; }
 ```
 
 

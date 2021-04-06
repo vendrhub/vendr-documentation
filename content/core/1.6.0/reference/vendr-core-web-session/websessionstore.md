@@ -21,7 +21,7 @@ public class WebSessionStore : WebStoreBase, ISessionStore
 #### WebSessionStore
 
 ```csharp
-public WebSessionStore(Lazy<IStoreService> storeService)
+public WebSessionStore(Lazy<IStoreService> storeService, IVendrSettings vendrSettings)
 ```
 
 

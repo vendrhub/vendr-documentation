@@ -72,6 +72,15 @@ public IEnumerable<StoreReadOnly> GetStores()
 
 ---
 
+#### GetStores
+
+```csharp
+public IEnumerable<StoreReadOnly> GetStores(Guid[] ids)
+```
+
+
+---
+
 #### SaveStore
 
 ```csharp

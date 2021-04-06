@@ -1,11 +1,11 @@
 ---
-title: IEmailTemplateEngine
-description: API reference for IEmailTemplateEngine in Vendr, the eCommerce solution for Umbraco v8+
+title: ITemplateEngine
+description: API reference for ITemplateEngine in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## IEmailTemplateEngine
+## ITemplateEngine
 
 ```csharp
-public interface IEmailTemplateEngine
+public interface ITemplateEngine
 ```
 
 **Namespace**

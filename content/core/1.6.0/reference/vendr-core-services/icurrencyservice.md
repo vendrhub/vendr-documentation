@@ -75,7 +75,7 @@ public void DeleteCurrency(Currency entity)
 
 ---
 
-#### GetCurrencies
+#### GetCurrencies (1 of 2)
 
 Get a list of all [`CurrencyReadOnly`](../../vendr-core-models/currencyreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -88,6 +88,26 @@ public IEnumerable<CurrencyReadOnly> GetCurrencies(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`CurrencyReadOnly`](../../vendr-core-models/currencyreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`CurrencyReadOnly`](../../vendr-core-models/currencyreadonly/) entities
+
+---
+
+#### GetCurrencies (2 of 2)
+
+Get a list of [`CurrencyReadOnly`](../../vendr-core-models/currencyreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<CurrencyReadOnly> GetCurrencies(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`CurrencyReadOnly`](../../vendr-core-models/currencyreadonly/) entities to fetch |
 
 **Returns**
 

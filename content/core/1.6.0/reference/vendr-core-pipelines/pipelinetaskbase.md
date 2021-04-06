@@ -79,14 +79,13 @@ A fail pipeline result.
 Creates a fail pipeline result.
 
 ```csharp
-public virtual PipelineResult Fail(object result, Exception exception)
+public virtual PipelineResult Fail(Exception exception)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| result | The result data. |
 | exception | An exception message. |
 
 **Returns**
@@ -100,13 +99,14 @@ A fail pipeline result.
 Creates a fail pipeline result.
 
 ```csharp
-public virtual PipelineResult Fail(Exception exception)
+public virtual PipelineResult Fail(object result, Exception exception)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
+| result | The result data. |
 | exception | An exception message. |
 
 **Returns**

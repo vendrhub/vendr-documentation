@@ -95,7 +95,7 @@ A [`TaxClassReadOnly`](../../vendr-core-models/taxclassreadonly/) entity
 
 ---
 
-#### GetTaxClasses
+#### GetTaxClasses (1 of 2)
 
 Get a list of all [`TaxClassReadOnly`](../../vendr-core-models/taxclassreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -108,6 +108,26 @@ public IEnumerable<TaxClassReadOnly> GetTaxClasses(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`TaxClassReadOnly`](../../vendr-core-models/taxclassreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`TaxClassReadOnly`](../../vendr-core-models/taxclassreadonly/) entities
+
+---
+
+#### GetTaxClasses (2 of 2)
+
+Get a list of [`TaxClassReadOnly`](../../vendr-core-models/taxclassreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<TaxClassReadOnly> GetTaxClasses(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`TaxClassReadOnly`](../../vendr-core-models/taxclassreadonly/) entities to fetch |
 
 **Returns**
 

@@ -63,10 +63,18 @@ public TaxClassReadOnly GetTaxClass(Guid storeId, string alias)
 
 ---
 
-#### GetTaxClasses
+#### GetTaxClasses (1 of 2)
 
 ```csharp
 public IEnumerable<TaxClassReadOnly> GetTaxClasses(Guid storeId)
+```
+
+---
+
+#### GetTaxClasses (2 of 2)
+
+```csharp
+public IEnumerable<TaxClassReadOnly> GetTaxClasses(Guid[] ids)
 ```
 
 

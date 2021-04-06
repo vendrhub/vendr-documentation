@@ -36,7 +36,7 @@ public static ProductVariantItem GetDefaultProductVariant(this ProductVariantCol
 
 ```csharp
 public static IReadOnlyCollection<InUseProductAttribute> GetInUseProductAttributes(
-    this ProductVariantCollection collection, Guid storeId)
+    this ProductVariantCollection collection)
 ```
 
 ---
@@ -45,8 +45,7 @@ public static IReadOnlyCollection<InUseProductAttribute> GetInUseProductAttribut
 
 ```csharp
 public static IReadOnlyCollection<InUseProductAttribute> GetInUseProductAttributes(
-    this ProductVariantCollection collection, Guid storeId, 
-    IProductAttributeService productAttributeService)
+    this ProductVariantCollection collection, IProductAttributeService productAttributeService)
 ```
 
 

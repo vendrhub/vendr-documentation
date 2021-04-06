@@ -137,10 +137,18 @@ public DiscountRuleProviderScaffold GetDiscountRuleProviderScaffold(string alias
 
 ---
 
-#### GetDiscounts
+#### GetDiscounts (1 of 2)
 
 ```csharp
 public IEnumerable<DiscountReadOnly> GetDiscounts(Guid storeId)
+```
+
+---
+
+#### GetDiscounts (2 of 2)
+
+```csharp
+public IEnumerable<DiscountReadOnly> GetDiscounts(Guid[] ids)
 ```
 
 

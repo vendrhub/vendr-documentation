@@ -11,6 +11,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | class [CurrencyService](currencyservice/) |  |
 | class [DiscountService](discountservice/) |  |
 | class [EmailTemplateService](emailtemplateservice/) |  |
+| class [EntityService](entityservice/) |  |
 | abstract class [EntityServiceBase](entityservicebase/) |  |
 | class [GiftCardService](giftcardservice/) |  |
 | interface [IAnalyticsService](ianalyticsservice/) |  |
@@ -20,12 +21,14 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | interface [ICurrencyService](icurrencyservice/) | Defines the Vendr Currency service |
 | interface [IDiscountService](idiscountservice/) | Defines the Vendr Discount service |
 | interface [IEmailTemplateService](iemailtemplateservice/) | Defines the Vendr Email Template service |
+| interface [IEntityService](ientityservice/) |  |
 | interface [IGiftCardService](igiftcardservice/) |  |
 | interface [IOrderFinderService](iorderfinderservice/) |  |
 | interface [IOrderService](iorderservice/) | Defines the Vendr Order service |
 | interface [IOrderStatusService](iorderstatusservice/) | Defines the Vendr Order Status service |
 | interface [IPaymentMethodService](ipaymentmethodservice/) | Defines the Vendr Payment Method service |
 | interface [IPriceFreezerService](ipricefreezerservice/) | Defines the Vendr Price Freezer service |
+| interface [IPrintTemplateService](iprinttemplateservice/) | Defines the Vendr Print Template service |
 | interface [IProductAttributeService](iproductattributeservice/) | Defines the Vendr Order Status service |
 | interface [IProductPriceFreezerService](iproductpricefreezerservice/) | Defines the Vendr Product Price Freezer service |
 | interface [IProductService](iproductservice/) | Defines the Vendr Product service |
@@ -41,6 +44,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | class [OrderStatusService](orderstatusservice/) |  |
 | class [PaymentMethodService](paymentmethodservice/) |  |
 | class [PriceFreezerService](pricefreezerservice/) |  |
+| class [PrintTemplateService](printtemplateservice/) |  |
 | class [ProductAttributeService](productattributeservice/) |  |
 | class [ProductPriceFreezerService](productpricefreezerservice/) |  |
 | class [ProductService](productservice/) |  |

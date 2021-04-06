@@ -171,7 +171,7 @@ A [`ProductAttributePresetReadOnly`](../../vendr-core-models/productattributepre
 
 ---
 
-#### GetProductAttributePresets
+#### GetProductAttributePresets (1 of 2)
 
 Get a list of all [`ProductAttributePresetReadOnly`](../../vendr-core-models/productattributepresetreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -189,10 +189,30 @@ public IEnumerable<ProductAttributePresetReadOnly> GetProductAttributePresets(Gu
 
 A list of [`ProductAttributePresetReadOnly`](../../vendr-core-models/productattributepresetreadonly/) entities
 
+---
+
+#### GetProductAttributePresets (2 of 2)
+
+Get a list of [`ProductAttributePresetReadOnly`](../../vendr-core-models/productattributepresetreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<ProductAttributePresetReadOnly> GetProductAttributePresets(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`ProductAttributePresetReadOnly`](../../vendr-core-models/productattributepresetreadonly/) entities to fetch |
+
+**Returns**
+
+A list of [`ProductAttributePresetReadOnly`](../../vendr-core-models/productattributepresetreadonly/) entities
+
 
 ---
 
-#### GetProductAttributes
+#### GetProductAttributes (1 of 2)
 
 Get a list of all [`ProductAttributeReadOnly`](../../vendr-core-models/productattributereadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -205,6 +225,26 @@ public IEnumerable<ProductAttributeReadOnly> GetProductAttributes(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`ProductAttributeReadOnly`](../../vendr-core-models/productattributereadonly/) entities belong to |
+
+**Returns**
+
+A list of [`ProductAttributeReadOnly`](../../vendr-core-models/productattributereadonly/) entities
+
+---
+
+#### GetProductAttributes (2 of 2)
+
+Get a list of [`ProductAttributeReadOnly`](../../vendr-core-models/productattributereadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<ProductAttributeReadOnly> GetProductAttributes(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`ProductAttributeReadOnly`](../../vendr-core-models/productattributereadonly/) entities to fetch |
 
 **Returns**
 

@@ -136,6 +136,17 @@ public const string PaymentMethods;
 
 ---
 
+#### PrintTemplates
+
+Cache key for the Print Templates cache
+
+```csharp
+public const string PrintTemplates;
+```
+
+
+---
+
 #### ProductAttributePresets
 
 Cache key for the Product Attribute Presets cache
@@ -499,6 +510,17 @@ public const string PaymentMethodPaymentProviderSetting;
 
 ---
 
+#### PrintTemplate
+
+The Print Template database table name
+
+```csharp
+public const string PrintTemplate;
+```
+
+
+---
+
 #### ProductAttribute
 
 The Product Attribute database table name
@@ -769,6 +791,17 @@ Payment Method entity type
 
 ```csharp
 public const string PaymentMethod;
+```
+
+
+---
+
+#### PrintTemplate
+
+Print Template entity type
+
+```csharp
+public const string PrintTemplate;
 ```
 
 

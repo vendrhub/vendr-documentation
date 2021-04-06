@@ -97,19 +97,35 @@ public ProductAttributePresetReadOnly GetProductAttributePreset(Guid storeId, st
 
 ---
 
-#### GetProductAttributePresets
+#### GetProductAttributePresets (1 of 2)
 
 ```csharp
 public IEnumerable<ProductAttributePresetReadOnly> GetProductAttributePresets(Guid storeId)
 ```
 
+---
+
+#### GetProductAttributePresets (2 of 2)
+
+```csharp
+public IEnumerable<ProductAttributePresetReadOnly> GetProductAttributePresets(Guid[] ids)
+```
+
 
 ---
 
-#### GetProductAttributes
+#### GetProductAttributes (1 of 2)
 
 ```csharp
 public IEnumerable<ProductAttributeReadOnly> GetProductAttributes(Guid storeId)
+```
+
+---
+
+#### GetProductAttributes (2 of 2)
+
+```csharp
+public IEnumerable<ProductAttributeReadOnly> GetProductAttributes(Guid[] ids)
 ```
 
 

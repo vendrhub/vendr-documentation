@@ -9,7 +9,7 @@ public class VariantsEditorDataConverter : BlockEditorDataConverter
 ```
 
 **Namespace**
-* [Vendr.Web.Converters](../)
+* [Vendr.Web.PropertyEditors.VariantsEditor](../)
 
 ### Constructors
 

@@ -258,7 +258,7 @@ A [`DiscountRuleProviderScaffold`](../../vendr-core-discounts/discountruleprovid
 
 ---
 
-#### GetDiscounts
+#### GetDiscounts (1 of 2)
 
 Get a list of all [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -271,6 +271,26 @@ public IEnumerable<DiscountReadOnly> GetDiscounts(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities
+
+---
+
+#### GetDiscounts (2 of 2)
+
+Get a list of [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<DiscountReadOnly> GetDiscounts(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`DiscountReadOnly`](../../vendr-core-models/discountreadonly/) entities to fetch |
 
 **Returns**
 

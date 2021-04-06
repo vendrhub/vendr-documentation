@@ -26,6 +26,15 @@ public UmbracoApiControllerPaymentProviderUriResolver()
 ```
 
 
+---
+
+#### UmbracoApiControllerPaymentProviderUriResolver
+
+```csharp
+public UmbracoApiControllerPaymentProviderUriResolver(IVendrSettings vendrSettings)
+```
+
+
 ### Methods
 
 #### GetCallbackUrl (1 of 2)

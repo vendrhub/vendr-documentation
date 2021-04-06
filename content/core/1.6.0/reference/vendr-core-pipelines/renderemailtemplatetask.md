@@ -22,7 +22,7 @@ public class RenderEmailTemplateTask :
 
 ```csharp
 public RenderEmailTemplateTask(ITranslationService translationService, 
-    IEmailTemplateEngine emailTemplateEngine)
+    ITemplateEngine templateEngine)
 ```
 
 

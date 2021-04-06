@@ -117,7 +117,7 @@ A [`EmailTemplateReadOnly`](../../vendr-core-models/emailtemplatereadonly/) enti
 
 ---
 
-#### GetEmailTemplates
+#### GetEmailTemplates (1 of 2)
 
 Get a list of all [`EmailTemplateReadOnly`](../../vendr-core-models/emailtemplatereadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -130,6 +130,26 @@ public IEnumerable<EmailTemplateReadOnly> GetEmailTemplates(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`EmailTemplateReadOnly`](../../vendr-core-models/emailtemplatereadonly/) entities belong to |
+
+**Returns**
+
+A list of [`EmailTemplateReadOnly`](../../vendr-core-models/emailtemplatereadonly/) entities
+
+---
+
+#### GetEmailTemplates (2 of 2)
+
+Get a list of [`EmailTemplateReadOnly`](../../vendr-core-models/emailtemplatereadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<EmailTemplateReadOnly> GetEmailTemplates(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`EmailTemplateReadOnly`](../../vendr-core-models/emailtemplatereadonly/) entities to fetch |
 
 **Returns**
 

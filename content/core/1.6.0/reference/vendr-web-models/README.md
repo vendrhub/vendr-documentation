@@ -57,6 +57,10 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 | class [PaymentMethodEditDto](paymentmethodeditdto/) |  |
 | class [PaymentMethodSaveDto](paymentmethodsavedto/) |  |
 | class [PricePropertyValue](pricepropertyvalue/) |  |
+| class [PrintTemplateBasicDto](printtemplatebasicdto/) |  |
+| class [PrintTemplateDto](printtemplatedto/) |  |
+| class [PrintTemplateEditDto](printtemplateeditdto/) |  |
+| class [PrintTemplateSaveDto](printtemplatesavedto/) |  |
 | class [ProductAttributeBasicDto](productattributebasicdto/) |  |
 | class [ProductAttributeDto](productattributedto/) |  |
 | class [ProductAttributeEditDto](productattributeeditdto/) |  |
@@ -96,7 +100,6 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 | class [TaxClassEditDto](taxclasseditdto/) |  |
 | class [TaxClassSaveDto](taxclasssavedto/) |  |
 | class [VariantEditorLayoutItem](varianteditorlayoutitem/) |  |
-| class [VariantsEditorConfiguration](variantseditorconfiguration/) |  |
 
 ## Vendr.Web.Models.Mappers namespace
 
@@ -108,10 +111,13 @@ description: API reference for Vendr.Web.Models in Vendr, the eCommerce solution
 | static class [CurrencyMapper](currencymapper/) |  |
 | static class [DiscountMapper](discountmapper/) |  |
 | static class [EmailTemplateMapper](emailtemplatemapper/) |  |
+| class [EntityMapperAdapter](entitymapperadapter/) |  |
+| static class [EntityMapperFactory](entitymapperfactory/) |  |
 | static class [GiftCardMapper](giftcardmapper/) |  |
 | static class [OrderMapper](ordermapper/) |  |
 | static class [OrderStatusMapper](orderstatusmapper/) |  |
 | static class [PaymentMethodMapper](paymentmethodmapper/) |  |
+| static class [PrintTemplateMapper](printtemplatemapper/) |  |
 | static class [ProductAttributeMapper](productattributemapper/) |  |
 | static class [ProductAttributePresetMapper](productattributepresetmapper/) |  |
 | static class [RegionMapper](regionmapper/) |  |

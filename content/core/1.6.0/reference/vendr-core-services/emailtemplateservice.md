@@ -72,10 +72,18 @@ public EmailTemplateReadOnly GetEmailTemplate(Guid storeId, string alias)
 
 ---
 
-#### GetEmailTemplates
+#### GetEmailTemplates (1 of 2)
 
 ```csharp
 public IEnumerable<EmailTemplateReadOnly> GetEmailTemplates(Guid storeId)
+```
+
+---
+
+#### GetEmailTemplates (2 of 2)
+
+```csharp
+public IEnumerable<EmailTemplateReadOnly> GetEmailTemplates(Guid[] ids)
 ```
 
 

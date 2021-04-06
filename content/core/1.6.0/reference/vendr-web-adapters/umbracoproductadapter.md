@@ -27,20 +27,19 @@ public UmbracoProductAdapter(IUmbracoContextAccessor umbracoContextAccessor,
 
 ### Methods
 
-#### GetProductSnapshot
+#### GetProductSnapshot (1 of 2)
 
 ```csharp
 public virtual IProductSnapshot GetProductSnapshot(string productReference, string languageIsoCode)
 ```
 
-
 ---
 
-#### GetProductSnapshot
+#### GetProductSnapshot (2 of 2)
 
 ```csharp
-public IProductSnapshot GetProductSnapshot(string productReference, string productVariantReference, 
-    string languageIsoCode)
+public virtual IProductSnapshot GetProductSnapshot(string productReference, 
+    string productVariantReference, string languageIsoCode)
 ```
 
 

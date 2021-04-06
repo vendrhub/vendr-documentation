@@ -21,12 +21,7 @@ public class EntityController : VendrAuthorizedJsonControllerBase
 
 ```csharp
 public EntityController(UmbracoControllerContext vendrContext, IStoreService storeService, 
-    IOrderStatusService orderStatusService, IShippingMethodService shippingMethodService, 
-    IPaymentMethodService paymentMethodService, ICountryService countryService, 
-    ICurrencyService currencyService, ITaxService taxService, 
-    IEmailTemplateService emailTemplateService, IDiscountService discountService, 
-    IGiftCardService giftCardService, IProductAttributeService productAtrtibuteService, 
-    IOrderService orderService)
+    IEntityService entityService)
 ```
 
 
@@ -35,8 +30,7 @@ public EntityController(UmbracoControllerContext vendrContext, IStoreService sto
 #### DeleteEntity
 
 ```csharp
-public HttpResponseMessage DeleteEntity(string entityType, Guid entityId, 
-    Guid? storeId = default(Guid?), Guid? parentId = default(Guid?))
+public HttpResponseMessage DeleteEntity(string entityType, Guid entityId)
 ```
 
 

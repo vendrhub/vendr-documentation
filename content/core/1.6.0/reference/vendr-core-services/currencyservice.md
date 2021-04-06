@@ -55,10 +55,18 @@ public void DeleteCurrency(Currency entity)
 
 ---
 
-#### GetCurrencies
+#### GetCurrencies (1 of 2)
 
 ```csharp
 public IEnumerable<CurrencyReadOnly> GetCurrencies(Guid storeId)
+```
+
+---
+
+#### GetCurrencies (2 of 2)
+
+```csharp
+public IEnumerable<CurrencyReadOnly> GetCurrencies(Guid[] ids)
 ```
 
 

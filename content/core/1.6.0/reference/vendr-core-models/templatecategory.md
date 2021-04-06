@@ -1,11 +1,11 @@
 ---
-title: EmailTemplateCategory
-description: API reference for EmailTemplateCategory in Vendr, the eCommerce solution for Umbraco v8+
+title: TemplateCategory
+description: API reference for TemplateCategory in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## EmailTemplateCategory
+## TemplateCategory
 
 ```csharp
-public enum EmailTemplateCategory
+public enum TemplateCategory
 ```
 
 **Namespace**

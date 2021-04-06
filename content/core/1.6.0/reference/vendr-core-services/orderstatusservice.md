@@ -63,10 +63,18 @@ public OrderStatusReadOnly GetOrderStatus(Guid storeId, string alias)
 
 ---
 
-#### GetOrderStatuses
+#### GetOrderStatuses (1 of 2)
 
 ```csharp
 public IEnumerable<OrderStatusReadOnly> GetOrderStatuses(Guid storeId)
+```
+
+---
+
+#### GetOrderStatuses (2 of 2)
+
+```csharp
+public IEnumerable<OrderStatusReadOnly> GetOrderStatuses(Guid[] ids)
 ```
 
 

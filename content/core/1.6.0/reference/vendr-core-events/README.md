@@ -162,6 +162,15 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [PaymentMethodUpdatingNotification](paymentmethodupdatingnotification/) |  |
 | class [PipelineFailNotification](pipelinefailnotification/) |  |
 | class [PipelineSuccessNotification](pipelinesuccessnotification/) |  |
+| class [PrintTemplateCreatedNotification](printtemplatecreatednotification/) |  |
+| class [PrintTemplateCreatingNotification](printtemplatecreatingnotification/) |  |
+| class [PrintTemplateDeletedNotification](printtemplatedeletednotification/) |  |
+| class [PrintTemplateDeletingNotification](printtemplatedeletingnotification/) |  |
+| abstract class [PrintTemplateNotificationEventBase&lt;TEntity&gt;](printtemplatenotificationeventbase-1/) |  |
+| class [PrintTemplateSavedNotification](printtemplatesavednotification/) |  |
+| class [PrintTemplateSavingNotification](printtemplatesavingnotification/) |  |
+| class [PrintTemplateUpdatedNotification](printtemplateupdatednotification/) |  |
+| class [PrintTemplateUpdatingNotification](printtemplateupdatingnotification/) |  |
 | class [ProductAttributeCreatedNotification](productattributecreatednotification/) |  |
 | class [ProductAttributeCreatingNotification](productattributecreatingnotification/) |  |
 | class [ProductAttributeDeletedNotification](productattributedeletednotification/) |  |
@@ -336,6 +345,14 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidatePaymentMethodTaxClassChange](validatepaymentmethodtaxclasschange/) |  |
 | class [ValidatePaymentMethodToggleFeatures](validatepaymentmethodtogglefeatures/) |  |
 | class [ValidatePaymentMethodUpdate](validatepaymentmethodupdate/) |  |
+| class [ValidatePrintTemplateAliasChange](validateprinttemplatealiaschange/) |  |
+| class [ValidatePrintTemplateCategoryChange](validateprinttemplatecategorychange/) |  |
+| class [ValidatePrintTemplateCreate](validateprinttemplatecreate/) |  |
+| class [ValidatePrintTemplateDelete](validateprinttemplatedelete/) |  |
+| class [ValidatePrintTemplateNameChange](validateprinttemplatenamechange/) |  |
+| class [ValidatePrintTemplateSave](validateprinttemplatesave/) |  |
+| class [ValidatePrintTemplateUpdate](validateprinttemplateupdate/) |  |
+| class [ValidatePrintTemplateViewChange](validateprinttemplateviewchange/) |  |
 | class [ValidateProductAttributeAliasChange](validateproductattributealiaschange/) |  |
 | class [ValidateProductAttributeCreate](validateproductattributecreate/) |  |
 | class [ValidateProductAttributeDelete](validateproductattributedelete/) |  |
@@ -501,6 +518,12 @@ description: API reference for Vendr.Core.Events in Vendr, the eCommerce solutio
 | class [ValidateNotCountryDefaultPaymentMethod](validatenotcountrydefaultpaymentmethod/) |  |
 | class [ValidateNotRegionDefaultPaymentMethod](validatenotregiondefaultpaymentmethod/) |  |
 | class [ValidateUniquePaymentMethodAlias](validateuniquepaymentmethodalias/) |  |
+
+## Vendr.Core.Events.Validation.Handlers.PrintTemplate namespace
+
+| Public Type | Description |
+| --- | --- |
+| class [ValidateUniquePrintTemplateAlias](validateuniqueprinttemplatealias/) |  |
 
 ## Vendr.Core.Events.Validation.Handlers.Region namespace
 

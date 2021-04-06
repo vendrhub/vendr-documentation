@@ -95,7 +95,7 @@ A [`OrderStatusReadOnly`](../../vendr-core-models/orderstatusreadonly/) entity
 
 ---
 
-#### GetOrderStatuses
+#### GetOrderStatuses (1 of 2)
 
 Get a list of all [`OrderStatusReadOnly`](../../vendr-core-models/orderstatusreadonly/) entities from the given [`Store`](../../vendr-core-models/store/)
 
@@ -108,6 +108,26 @@ public IEnumerable<OrderStatusReadOnly> GetOrderStatuses(Guid storeId)
 | Parameter | Description |
 | --- | --- |
 | storeId | The ID of the [`Store`](../../vendr-core-models/store/) the [`OrderStatusReadOnly`](../../vendr-core-models/orderstatusreadonly/) entities belong to |
+
+**Returns**
+
+A list of [`OrderStatusReadOnly`](../../vendr-core-models/orderstatusreadonly/) entities
+
+---
+
+#### GetOrderStatuses (2 of 2)
+
+Get a list of [`OrderStatusReadOnly`](../../vendr-core-models/orderstatusreadonly/) entities with the given IDs
+
+```csharp
+public IEnumerable<OrderStatusReadOnly> GetOrderStatuses(Guid[] ids)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| ids | The IDs of the [`OrderStatusReadOnly`](../../vendr-core-models/orderstatusreadonly/) entities to fetch |
 
 **Returns**
 

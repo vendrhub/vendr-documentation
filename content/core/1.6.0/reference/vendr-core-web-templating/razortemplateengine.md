@@ -1,28 +1,28 @@
 ---
-title: RazorEmailTemplateEngine
-description: API reference for RazorEmailTemplateEngine in Vendr, the eCommerce solution for Umbraco v8+
+title: RazorTemplateEngine
+description: API reference for RazorTemplateEngine in Vendr, the eCommerce solution for Umbraco v8+
 ---
-## RazorEmailTemplateEngine
+## RazorTemplateEngine
 
 ```csharp
-public class RazorEmailTemplateEngine : IEmailTemplateEngine
+public class RazorTemplateEngine : ITemplateEngine
 ```
 
 **Inheritance**
 
-* interface [IEmailTemplateEngine](../../vendr-core-templating/iemailtemplateengine/)
+* interface [ITemplateEngine](../../vendr-core-templating/itemplateengine/)
 
 **Namespace**
 * [Vendr.Core.Web.Templating](../)
 
 ### Constructors
 
-#### RazorEmailTemplateEngine
+#### RazorTemplateEngine
 
 The default constructor.
 
 ```csharp
-public RazorEmailTemplateEngine()
+public RazorTemplateEngine()
 ```
 
 

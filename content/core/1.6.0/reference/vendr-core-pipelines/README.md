@@ -175,6 +175,7 @@ description: API reference for Vendr.Core.Pipelines in Vendr, the eCommerce solu
 | class [CreateDefaultEmailTemplatesTask](createdefaultemailtemplatestask/) |  |
 | class [CreateDefaultOrderStatusesTask](createdefaultorderstatusestask/) |  |
 | class [CreateDefaultPaymentMethodTask](createdefaultpaymentmethodtask/) |  |
+| class [CreateDefaultPrintTemplatesTask](createdefaultprinttemplatestask/) |  |
 | class [CreateDefaultShippingMethodTask](createdefaultshippingmethodtask/) |  |
 | class [CreateDefaultTaxClassTask](createdefaulttaxclasstask/) |  |
 | class [SetDefaultCountryDefaultsTask](setdefaultcountrydefaultstask/) |  |

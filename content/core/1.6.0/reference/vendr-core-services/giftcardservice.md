@@ -82,10 +82,18 @@ public GiftCardReadOnly GetGiftCard(Guid storeId, string code)
 
 ---
 
-#### GetGiftCards
+#### GetGiftCards (1 of 2)
 
 ```csharp
 public IEnumerable<GiftCardReadOnly> GetGiftCards(Guid storeId)
+```
+
+---
+
+#### GetGiftCards (2 of 2)
+
+```csharp
+public IEnumerable<GiftCardReadOnly> GetGiftCards(Guid[] ids)
 ```
 
 
