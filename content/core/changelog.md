@@ -3,6 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.6.0  
+**Date:** 2020-04-06    
+**Description:** Minor release with new features and minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added order printing action button ([#79](https://github.com/vendrhub/vendr/issues/79)).
+* Added bulk order printing feature to orders list.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Email Templates are now located in a Templating parent folder to encompass both Email and Print templates
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed hard coded `/umbraco` URL prefixes preventing sites running with non-standard admin path ([#290](https://github.com/vendrhub/vendr/issues/290)).
+
+</changelog-group>
+</changelog>
+
 ## v1.5.3  
 **Date:** 2020-03-24    
 **Description:** Patch release with minor bug fixes 
