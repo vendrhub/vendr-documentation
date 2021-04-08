@@ -4,7 +4,7 @@ description: Changelog for the Reviews package for Vendr, the eCommerce solution
 ---
 
 ## v0.3.0 
-**Date:** 2021-04-08 
+**Date:** 2021-04-08  
 **Description:** Patch release with minor bug fixes
 
 <changelog>
