@@ -7,21 +7,25 @@ description: Changelog for the Reviews package for Vendr, the eCommerce solution
 **Date:** 2021-04-08 
 **Description:** Patch release with minor bug fixes
 
+<changelog>
 <changelog-group category="Changed">  
 
 * Changed injecting of Reviews node before Vendr core Options node.
 
 </changelog-group>
+</changelog>
 
 ## v0.2.0 
 **Date:** 2021-02-18  
 **Description:** Patch release with minor bug fixes
 
+<changelog>
 <changelog-group category="Fixed">  
 
 * Fixed issue with booting due incorrect constraint.
 
 </changelog-group>
+</changelog>
 
 ## v0.1.0 
 **Date:** 2020-10-15  
