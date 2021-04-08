@@ -4,20 +4,26 @@ description: Changelog for the uSync package for Vendr, the eCommerce solution f
 ---
 
 ## v0.2.0   
-**Date:** TBC   
-**Description:** Minor patch release containing bug fixes 
+**Date:** 2021-04-08   
+**Description:** Minor release containing feature updated and bug fixes 
 
 ---  
 
 <changelog>
+<changelog-group category="Added">  
+
+* Added print templates support.
+
+</changelog-group>
 <changelog-group category="Fixed">  
 
 * Fixed issue when restoring `TaxClass` tax rates due to the serializer looking in the wrong place.
 
 </changelog-group>
-<changelog-group category="Changed">  
+<changelog-group category="Breaking">  
 
-* Upgraded to the latest uSync API ([#5](https://github.com/vendrhub/vendr-usync/pull/5)).
+* Updated to the latest uSync API ([#5](https://github.com/vendrhub/vendr-usync/pull/5)).
+* Updated Vendr dependency of 1.6.0.
 
 </changelog-group>
 </changelog>

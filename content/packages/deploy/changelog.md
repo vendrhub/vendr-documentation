@@ -4,20 +4,21 @@ description: Changelog for the Deploy package for Vendr, the eCommerce solution 
 ---
 
 ## v0.2.0   
-**Date:** TBC   
-**Description:** Minor patch release containing bug fixes 
+**Date:** 2021-04-08   
+**Description:** Minor release containing feature updated and bug fixes 
 
 ---  
 
 <changelog>
 <changelog-group category="Added">  
 
+* Added print templates support.
 * Added variants editor value connector to support deploying connected Product Attributes.
 
 </changelog-group>
 <changelog-group category="Breaking">  
 
-* Updated Vendr dependency of 1.5.2.
+* Updated Vendr dependency of 1.6.0.
 
 </changelog-group>
 </changelog>
