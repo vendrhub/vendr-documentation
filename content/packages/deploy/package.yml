@@ -4,7 +4,7 @@ type: Package
 description: 
 supportedBy: core
 
-packageVersion: 0.2.0
+packageVersion: 0.2.1
 docVersions:
   next: 
   current: 0.1.0
