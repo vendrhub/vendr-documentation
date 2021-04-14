@@ -45,6 +45,6 @@ Calculators are [registered via a Composer](../dependency-injection/#registering
 public void Compose(Composition composition)
 {
     // Replacing the product calculator implementation
-    composition.RegisterUnique<IProductCalculator, MyProductCalculator>();
+    composition.RegisterUniqueFor<IProductCalculator, MyProductCalculator>();
 }
 ````
