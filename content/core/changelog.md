@@ -3,6 +3,30 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.7.0  
+**Date:** 2020-04-15    
+**Description:** Minor release with new features and minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added new `EntityCaches` for independent cache repositories of entities.
+* Order and Price Freezer caches now auto expire items if they are not used.
+* Added new stock caching layer to help improve performance.
+* Added new Order and GiftCard search API for more flexible searching ([#110](https://github.com/vendrhub/vendr/issues/110)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* `EntityStateCache` has now been obsoleted in favour of new `EntityCaches` with improved caching mechanism.
+* Transactional cache has now been updated to work with the new `EntityCaches` rather than the `EntityStateCache`.
+* Old Order and GiftCard search methods have been obsoleted in favour of the new search API.
+
+</changelog-group>
+</changelog>
+
 ## v1.6.0  
 **Date:** 2020-04-06    
 **Description:** Minor release with new features and minor bug fixes 

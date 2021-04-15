@@ -1,0 +1,213 @@
+---
+title: IProductService
+description: API reference for IProductService in Vendr, the eCommerce solution for Umbraco v8+
+---
+## IProductService
+
+Defines the Vendr Product service
+
+```csharp
+public interface IProductService
+```
+
+**Namespace**
+* [Vendr.Core.Services](../)
+
+### Methods
+
+#### GetProduct (1 of 2)
+
+Get a [`IProductSnapshot`](../../vendr-core-models/iproductsnapshot/) of a given product
+
+```csharp
+public IProductSnapshot GetProduct(string productReference, string languageIsoCode)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product to snapshot |
+| languageIsoCode | The ISO Code of the language of the snapshot to create |
+
+**Returns**
+
+An [`IProductSnapshot`](../../vendr-core-models/iproductsnapshot/) of the given product
+
+---
+
+#### GetProduct (2 of 2)
+
+Get a [`IProductSnapshot`](../../vendr-core-models/iproductsnapshot/) of a given product
+
+```csharp
+public IProductSnapshot GetProduct(string productReference, string productVariantReference, 
+    string languageIsoCode)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product to snapshot |
+| productVariantReference | The unique reference of the variant of the product to snapshot |
+| languageIsoCode | The ISO Code of the language of the snapshot to create |
+
+**Returns**
+
+An [`IProductSnapshot`](../../vendr-core-models/iproductsnapshot/) of the given product
+
+
+---
+
+#### GetProductStock (1 of 2)
+
+Gets the stock level of a given product
+
+```csharp
+public decimal? GetProductStock(string productReference)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to retrieve |
+
+**Returns**
+
+The stock level of the product
+
+---
+
+#### GetProductStock (2 of 2)
+
+Gets the stock level of a given product
+
+```csharp
+public decimal? GetProductStock(string productReference, string productVariantReference)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to retrieve |
+| productVariantReference | The unique reference of the variant of the product who's stock level to retrieve |
+
+**Returns**
+
+The stock level of the product
+
+
+---
+
+#### IncreaseProductStock (1 of 2)
+
+Increases the stock level of a given product
+
+```csharp
+public void IncreaseProductStock(string productReference, decimal increaseBy)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to increase |
+| increaseBy | The amount to increase the stock level by |
+
+---
+
+#### IncreaseProductStock (2 of 2)
+
+Increases the stock level of a given product
+
+```csharp
+public void IncreaseProductStock(string productReference, string productVariantReference, 
+    decimal increaseBy)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to increase |
+| productVariantReference | The unique reference of variant of the product who's stock level to increase |
+| increaseBy | The amount to increase the stock level by |
+
+
+---
+
+#### ReduceProductStock (1 of 2)
+
+Reduces the stock level of a given product
+
+```csharp
+public void ReduceProductStock(string productReference, decimal reduceBy)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to reduce |
+| reduceBy | The amount to reduce the stock level by |
+
+---
+
+#### ReduceProductStock (2 of 2)
+
+Reduces the stock level of a given product
+
+```csharp
+public void ReduceProductStock(string productReference, string productVariantReference, 
+    decimal reduceBy)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to reduce |
+| productVariantReference | The unique reference of the variant of the product who's stock level to reduce |
+| reduceBy | The amount to reduce the stock level by |
+
+
+---
+
+#### SetProductStock (1 of 2)
+
+Sets the stock level of a given product
+
+```csharp
+public void SetProductStock(string productReference, decimal value)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to set |
+| value | The value to set the stock level to |
+
+---
+
+#### SetProductStock (2 of 2)
+
+Sets the stock level of a given product
+
+```csharp
+public void SetProductStock(string productReference, string productVariantReference, decimal value)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| productReference | The unique reference of the product who's stock level to set |
+| productVariantReference | The unique reference of the variant of the product who's stock level to set |
+| value | The value to set the stock level to |
+
+
+<!-- DO NOT EDIT: generated by xmldocmd for Vendr.Core.dll -->
