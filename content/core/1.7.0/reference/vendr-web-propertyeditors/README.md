@@ -13,7 +13,7 @@ description: API reference for Vendr.Web.PropertyEditors in Vendr, the eCommerce
 
 | Public Type | Description |
 | --- | --- |
-| class [VariantsEditorComponent](variantseditorcomponent/) | Component to watch for content changes to nodes with a variants editor on them and stash a storeId property in the data structure. This is predominantly for Vendr Deploy which needs to lookup Product Attribute dependencies but needs as storeId to do it however the Umbraco Deploy value connectors don't have any other context other than the property value and it's property type. This may also be true for uSycn too. We could also look to potetially use this in the value converter for the variants editor as we now have this also being store aware. |
+| class [VariantsEditorComponent](variantseditorcomponent/) | Component to watch for content changes to nodes with a variants editor on them and stash a storeId property in the data structure. This is predominantly for Vendr Deploy which needs to lookup Product Attribute dependencies but needs as storeId to do it however the Umbraco Deploy value connectors don't have any other context other than the property value and it's property type. This may also be true for uSycn too. We could also look to potentially use this in the value converter for the variants editor as we now have this also being store aware. |
 | class [VariantsEditorComposer](variantseditorcomposer/) |  |
 | class [VariantsEditorConfiguration](variantseditorconfiguration/) |  |
 | class [VariantsEditorDataConverter](variantseditordataconverter/) |  |

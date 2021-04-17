@@ -4,7 +4,7 @@ description: API reference for VariantsEditorComponent in Vendr, the eCommerce s
 ---
 ## VariantsEditorComponent
 
-Component to watch for content changes to nodes with a variants editor on them and stash a storeId property in the data structure. This is predominantly for Vendr Deploy which needs to lookup Product Attribute dependencies but needs as storeId to do it however the Umbraco Deploy value connectors don't have any other context other than the property value and it's property type. This may also be true for uSycn too. We could also look to potetially use this in the value converter for the variants editor as we now have this also being store aware.
+Component to watch for content changes to nodes with a variants editor on them and stash a storeId property in the data structure. This is predominantly for Vendr Deploy which needs to lookup Product Attribute dependencies but needs as storeId to do it however the Umbraco Deploy value connectors don't have any other context other than the property value and it's property type. This may also be true for uSycn too. We could also look to potentially use this in the value converter for the variants editor as we now have this also being store aware.
 
 ```csharp
 public class VariantsEditorComponent : IComponent
