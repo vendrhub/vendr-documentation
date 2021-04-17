@@ -5,9 +5,9 @@ description: Documentation for the Checkout.com (One Time) payment provider for 
 
 ## Using These Docs
 
-**These docs are aimed at developers** looking to implement the [Stripe](https://stripe.com) payment gateway into a Vendr eCommerce store. It is expected that you have at least a basic understanding of [Umbraco](https://umbraco.com), as well the [Vendr core product](../../../../core/).
+**These docs are aimed at developers** looking to implement the [Checkout.com](https://checkout.com) payment gateway into a Vendr eCommerce store. It is expected that you have at least a basic understanding of [Umbraco](https://umbraco.com), as well the [Vendr core product](../../../../core/).
 
-These docs are broken up into two keys sections, a [Getting Started](getting-started/) section for documentation on how to get up and running with the Stripe payment provider for Vendr, and a [How-to Guides](how-to-guides/) section for short guides on how to perform additional, non essential, Stripe related tasks.
+These docs are broken up into two keys sections, a [Getting Started](getting-started/) section for documentation on how to get up and running with the Checkout.com payment provider for Vendr, and a [How-to Guides](how-to-guides/) section for short guides on how to perform additional, non essential, Checkout.com related tasks.
 
 ## Getting Help
 

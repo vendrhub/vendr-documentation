@@ -4,8 +4,8 @@
       link: /getting-started/
     - title: Installation
       link: /getting-started/installation/
-    - title: Configuring Stripe
-      link: /getting-started/configuring-stripe/
+    - title: Configuring Checkout.com
+      link: /getting-started/configuring-checkout-dot-com/
     - title: Configuring Umbraco
       link: /getting-started/configuring-umbraco/
     - title: Useful Links
