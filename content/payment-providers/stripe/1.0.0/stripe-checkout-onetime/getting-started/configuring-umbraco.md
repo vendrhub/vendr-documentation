@@ -19,10 +19,10 @@ In the payment method editor, configure the standard payment method settings as 
 | Cancel URL | The URL of the page to navigate to if the customer cancels the payment - e.g. `/cart/` |
 | Error URL | The URL of the page to navigate to if there is an error with the payment - e.g. `/error/` |
 | Billing Address (Line 1) Property Alias | The alias of the property containing line 1 of the billing address - e.g. addressLine1. Passed to Stripe for Radar verification. |
-| Billing Address (Line 2) Property Alias | The alias of the property containing line 2 of the billing address - e.g. addressLine1. Passed to Stripe for Radar verification. |
-| Billing Address City Property Alias | The alias of the property containing the city of the billing address - e.g. addressLine1. Passed to Stripe for Radar verification. |
-| Billing Address State Property Alias | The alias of the property containing the state of the billing address - e.g. addressLine1. Passed to Stripe for Radar verification. |
-| Billing Address Zip Code Property Alias | The alias of the property containing the zip code of the billing address - e.g. addressLine1. Passed to Stripe for Radar verification. |
+| Billing Address (Line 2) Property Alias | The alias of the property containing line 2 of the billing address - e.g. addressLine2. Passed to Stripe for Radar verification. |
+| Billing Address City Property Alias | The alias of the property containing the city of the billing address - e.g. city. Passed to Stripe for Radar verification. |
+| Billing Address State Property Alias | The alias of the property containing the state of the billing address - e.g. state. Passed to Stripe for Radar verification. |
+| Billing Address Zip Code Property Alias | The alias of the property containing the zip code of the billing address - e.g. zip. Passed to Stripe for Radar verification. |
 | Test Secret Key | The test Stripe secret API key |
 | Test Public Key | The test Stripe public API key |
 | Test Webhook Signing Secret | The test Stripe webhook signing secret |
