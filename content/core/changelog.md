@@ -3,6 +3,20 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.7.1  
+**Date:** 2020-04-20    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed bug in new cache mechanism where changes weren't being pushed back into the global cache if an entity was accessed outside of a UoW within the same request prior to changes being made to that entity.
+
+</changelog-group>
+</changelog>
+
 ## v1.7.0  
 **Date:** 2020-04-15    
 **Description:** Minor release with new features and minor bug fixes 
