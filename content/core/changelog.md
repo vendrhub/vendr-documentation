@@ -4,7 +4,7 @@ description: Changelog for the Core Vendr product
 ---
 
 ## v1.7.1  
-**Date:** 2020-04-20    
+**Date:** 2021-04-20    
 **Description:** Patch release with minor bug fixes 
 
 --- 
@@ -18,7 +18,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.7.0  
-**Date:** 2020-04-15    
+**Date:** 2021-04-15    
 **Description:** Minor release with new features and minor bug fixes 
 
 --- 
@@ -42,7 +42,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.6.0  
-**Date:** 2020-04-06    
+**Date:** 2021-04-06    
 **Description:** Minor release with new features and minor bug fixes 
 
 --- 
@@ -67,7 +67,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.5.3  
-**Date:** 2020-03-24    
+**Date:** 2021-03-24    
 **Description:** Patch release with minor bug fixes 
 
 --- 
@@ -82,7 +82,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.5.2  
-**Date:** 2020-03-17    
+**Date:** 2021-03-17    
 **Description:** Patch release with minor bug fixes 
 
 --- 
@@ -109,7 +109,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.5.1  
-**Date:** 2020-02-26    
+**Date:** 2021-02-26    
 **Description:** Patch release with minor bug fixes 
 
 --- 
@@ -132,7 +132,7 @@ description: Changelog for the Core Vendr product
 </changelog>
 
 ## v1.5.0  
-**Date:** 2020-02-11    
+**Date:** 2021-02-11    
 **Description:** Minor release with new multi-variants feature  
 
 --- 
@@ -164,7 +164,7 @@ description: Changelog for the Core Vendr product
 
 
 ## v1.4.2       
-**Date:** 2020-02-04    
+**Date:** 2021-02-04    
 **Description:** Patch release with minor bug fixes and enhancements  
 
 ---  
