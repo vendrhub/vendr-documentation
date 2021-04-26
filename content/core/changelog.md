@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.7.2  
+**Date:** 2021-04-26    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Changed">  
+
+* Changed it so that when setting stock levels, if the stock source can't be found it no longer throws an error. Instead it fails silently and logs a debug message.
+* Changed the entity cache wrappers to use cache accessor functions so that the cache wrappers can be reused locally.
+
+</changelog-group>
+</changelog>
+
 ## v1.7.1  
 **Date:** 2021-04-20    
 **Description:** Patch release with minor bug fixes 
