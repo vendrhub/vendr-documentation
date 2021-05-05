@@ -3,6 +3,40 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.0  
+**Date:** 2021-05-05    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added export templates section to Store settings area.
+* Added export bulk action to Orders, Gift Cards and Discounts list views to allow exporting.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated print dialog to disable the print button whilst there are no templates selected ([#292](https://github.com/vendrhub/vendr/issues/292)).
+
+</changelog-group>
+</changelog>
+
+## v1.7.3  
+**Date:** 2021-05-04    
+**Description:** Patch release with minor bug fixes 
+
+--- 
+
+<changelog>
+<changelog-group category="Changed">  
+
+* Updated the `ProductOrderLineAmountDiscountRewardProvider` with an `OrderLineSource` settings to allow choosing whether the matching product should be located anywhere on the order, or within the matching rule results.
+
+</changelog-group>
+</changelog>
+
 ## v1.7.2  
 **Date:** 2021-04-26    
 **Description:** Patch release with minor bug fixes 
