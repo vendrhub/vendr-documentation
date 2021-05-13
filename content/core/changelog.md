@@ -3,6 +3,32 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.1  
+**Date:** 2021-05-05    
+**Description:** Patch release with minor bug fixes
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added `Try` methods to `IStockService` and `IProductService` for all get/set stock methods.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Made `PricePropertyValue` implement `IEnumerable<ProductPrice>` returning any price with a value.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed a bug in the shipping cost calculation not using the shipping tax rate ([#298](https://github.com/vendrhub/vendr/issues/298)).
+* Removed obsolete `ProductVariantCollectionExtensions` causing naming conflicts.
+* Fixed bug in variants editor save event handler not persisting initial stock levels.
+
+</changelog-group>
+</changelog>
+
 ## v1.8.0  
 **Date:** 2021-05-05    
 **Description:** Minor release with new features and minor bug fixes 
