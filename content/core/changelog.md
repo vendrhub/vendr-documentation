@@ -3,6 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.2  
+**Date:** 2021-05-26    
+**Description:** Patch release with minor bug fixes
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added `esc` keyboard shortcut to close exports dialog ([#301](https://github.com/vendrhub/vendr/issues/301)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* No longer errors if the same discount / gift card code is applied for a second time.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed error when creating Gift Cards in back office due to no currency defined yet.
+* Fixed bug in gift cards search API not initializing the gift card state correctly.
+
+</changelog-group>
+</changelog>
+
 ## v1.8.1  
 **Date:** 2021-05-13    
 **Description:** Patch release with minor bug fixes

@@ -4,7 +4,7 @@ type: Product
 description: 
 supportedBy: core
 
-packageVersion: 1.8.1
+packageVersion: 1.8.2
 docVersions:
   next: 
   current: 1.7.0
