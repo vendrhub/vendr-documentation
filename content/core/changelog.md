@@ -3,6 +3,44 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.3  
+**Date:** 2021-06-21    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added ability to define reply to email address on email templates ([#287](https://github.com/vendrhub/vendr/issues/287)).
+* Added ability to replace and remove event handlers via the Vendr API ([#256](https://github.com/vendrhub/vendr/issues/256))
+* Added support for convention based resolution of the order editor config, inline with how analytics and gift cards configs work.
+* Implemented a `IPaymentService` to encapsulate the Capture, Cancel and Refund actions of a payment gateway to allow re-use outside of the Vendr UI.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Umbraco Product Adapter now uses `IUmbracoContextFactory` instead of `IUmbracoContextAccessor` so that it can create a context if one isn't present, allowing it to run in background tasks.
+* Updated cache refreshers to load their dependencies Lazily as was causing errors in some random instances.
+* Updated Store editor to allow default email templates to be un-set in order to allow disabling of default emails ([#223](https://github.com/vendrhub/vendr/issues/223)).
+* Updated County and Regions editor to allow Default Country, Payment Methods and Shipping Methods to be not set ([#305](https://github.com/vendrhub/vendr/issues/305)).
+* Updated product attribute editor to allow camel case attribute aliases inline with all other aliases ([#269](https://github.com/vendrhub/vendr/issues/269)).
+* Updated the stock input field to display the same "No store found" message if the product node has no store setting defined ([#193](https://github.com/vendrhub/vendr/issues/193)).
+* Updated the stock property editor save event handlers to use `MemoryCache` to remember state, rather than the `RequestCache` as there is no request cache when a content node is published via a schedule.
+* Updated the payment controller actions to not continue with processing if the order reference on file does not match that in the URL.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed errors in exchange rate services returning null. Now handles null values.
+* Fixed issue with analytics reports showing data in UTC and not in the local time zone ([#303](https://github.com/vendrhub/vendr/issues/303)).
+* Fixed bug in top selling product analytics chart erroring if a product's name changes at some point in the date range ([#297](https://github.com/vendrhub/vendr/issues/297)).
+* Fixed bug where the injected `vendr_variants` tab is displayed when using Matroyhska. Custom CSS has been added to ensure this remains hidden ([#304](https://github.com/vendrhub/vendr/issues/304)).
+* Fixed bug where payment provider settings weren't being translated before being passed to the payment provider within the Capture, Cancel, Refund actions.
+
+</changelog-group>
+</changelog>
+
 ## v1.8.2  
 **Date:** 2021-05-26    
 **Description:** Patch release with minor bug fixes
