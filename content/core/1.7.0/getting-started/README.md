@@ -9,7 +9,7 @@ It is assumed that before we begin that you already have an Umbraco v8+ website 
 
 ## System Requirements
 At this time, the minimum requirements for using Vendr are as follows:
-* **Umbraco 8.4+**
+* **Umbraco 8.10+**
 * **SQL Server Database** (CE is fine for testing, but not recommend for live deployments)
 
 ## Versioning
