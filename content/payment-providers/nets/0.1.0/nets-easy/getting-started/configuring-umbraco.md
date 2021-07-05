@@ -29,4 +29,7 @@ In the payment method editor, configure the standard payment method settings as 
 | Test Mode | Toggle indicating whether this provider should run in test mode. |
 | Auto Capture | Toggle indicating whether to immediately capture the payment, or whether to authorize the payment for later (manual) capturing. |
 
+The following languages can be used in Nets Easy:
+[developers.nets.eu/nets-easy/en-EU/api/#localization](https://developers.nets.eu/nets-easy/en-EU/api/#localization)
+
 ![Create Payment Provider Settings](/media/screenshots/nets/umbraco_configure_nets-easy_settings.png)
