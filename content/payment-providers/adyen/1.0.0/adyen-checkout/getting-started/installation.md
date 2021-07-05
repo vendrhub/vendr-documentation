@@ -20,7 +20,7 @@ Once downloaded you should manually install the package by uploading it to the *
 To install the Stripe payment provider via NuGet you can run the following command directly in the NuGet Manager Console window:
 
 ```bash
-PM> Install-Package Vendr.PaymentProviders.Stripe
+PM> Install-Package Vendr.Contrib.PaymentProviders.Adyen
 ```
 
 Alternatively, you can also find and install the NuGet package via the NuGet Package Manager GUI.
