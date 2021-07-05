@@ -16,7 +16,7 @@ Or, if you already have an account, you can head over to [portal.dibspayment.eu/
 
 ## API Keys
 
-In order for Vendr to communicate with Nets Easy securely we will need to find the API keys from Nets Easy portal, which will be configurated in Umbraco and that Vendr can use to authenticate with. These can be found under **Company > Integration** in Nets Easy portal. 
+In order for Vendr to communicate with Nets Easy securely we will need to find the API keys from Nets Easy portal, which will be configured in Umbraco and that Vendr can use to authenticate with. These can be found under **Company > Integration** in Nets Easy portal. 
 
 ![Nets Easy Integration Keys](/media/screenshots/nets/nets-easy_integration_keys.png)
 
