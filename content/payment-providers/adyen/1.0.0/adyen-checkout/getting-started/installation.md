@@ -1,13 +1,13 @@
 ---
 title: Installation
-description: Documentation for the Stripe Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Adyen Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-There are currently two ways to install the Stripe payment provider for Vendr into your solution. Using the Umbraco package distribution, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
+There are currently two ways to install the Adyen payment provider for Vendr into your solution. Using the Umbraco package distribution, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
 
 ## Umbraco Package Installation
 
-To install the Stripe payment provider Umbraco package, you will need to download the package file manually from the Vendr package page on the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/). On this page, scroll down to the **Package Files** section and locate the Stripe payment provider package, clicking it to initiate a download.
+To install the Adyen payment provider Umbraco package, you will need to download the package file manually from the Vendr package page on the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/). On this page, scroll down to the **Package Files** section and locate the Adyen payment provider package, clicking it to initiate a download.
 
 ![Umbraco package files list](/media/screenshots/package-files-list.png)
 
@@ -17,7 +17,7 @@ Once downloaded you should manually install the package by uploading it to the *
 
 ## NuGet Package Installation
 
-To install the Stripe payment provider via NuGet you can run the following command directly in the NuGet Manager Console window:
+To install the Adyen payment provider via NuGet you can run the following command directly in the NuGet Manager Console window:
 
 ```bash
 PM> Install-Package Vendr.Contrib.PaymentProviders.Adyen
