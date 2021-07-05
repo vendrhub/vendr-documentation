@@ -3,7 +3,6 @@ title: Installation
 description: Documentation for the Nets Easy payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-
 There are currently two ways to install the Nets Easy payment provider for Vendr into your solution. Using the Umbraco package distribution, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
 
 ## Umbraco Package Installation
