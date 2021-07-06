@@ -4,10 +4,10 @@ logo: nets.svg
 type: PaymentProvider
 supportedBy: community
 
-packageVersion: 0.1.0
+packageVersion: 1.0.0
 docVersions:
   next: 
-  current: 0.1.0
+  current: 1.0.0
   previous: 
 
 links:
