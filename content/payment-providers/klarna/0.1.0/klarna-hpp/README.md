@@ -7,7 +7,7 @@ description: Documentation for the Klarna payment provider for Vendr, the eComme
 
 **These docs are aimed at developers** looking to implement the [Klarna](https://www.klarna.com/) payment gateway into a Vendr eCommerce store. It is expected that you have at least a basic understanding of [Umbraco](https://umbraco.com), as well the [Vendr core product](../../../../core/).
 
-These docs are broken up into two keys sections, a [Getting Started](getting-started/) section for documentation on how to get up and running with the PayPal payment provider for Vendr, and a [How-to Guides](how-to-guides/) section for short guides on how to perform additional, non essential, Klarna related tasks.
+These docs are broken up into two keys sections, a [Getting Started](getting-started/) section for documentation on how to get up and running with the Klarna payment provider for Vendr, and a [How-to Guides](how-to-guides/) section for short guides on how to perform additional, non essential, Klarna related tasks.
 
 ## Getting Help
 
