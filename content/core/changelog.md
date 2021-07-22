@@ -3,6 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.4  
+**Date:** 2021-07-22    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added refresh license button to licenses dashboard for subscription licenses.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Removed `ILicensingService` and have a core `LicensingService` (which is now `sealed`) dependency instead.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed error where payment interactions from order editor weren't having any effect ([#316](https://github.com/vendrhub/vendr/issues/316)).
+* Fixed regression where order editor configs weren't getting resolved correctly.
+
+</changelog-group>
+</changelog>
+
 ## v1.8.3  
 **Date:** 2021-06-21    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
