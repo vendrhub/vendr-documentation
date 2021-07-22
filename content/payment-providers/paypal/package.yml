@@ -4,7 +4,7 @@ logo: paypal.svg
 type: PaymentProvider
 supportedBy: core
 
-packageVersion: 1.1.0
+packageVersion: 1.1.1
 docVersions:
   next: 
   current: 1.0.0

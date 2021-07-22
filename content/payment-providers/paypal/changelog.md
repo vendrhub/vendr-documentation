@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v1.1.1  
+**Date:** 2021-07-22    
+**Description:** Patch release with minor bug fixes / enhancements 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed decimal parsing issue by adding invariant culture to parser  ([#3](https://github.com/vendrhub/vendr-payment-provider-paypal/issues/3)).
+
+
+</changelog-group>
+</changelog>
+
 ## v1.1.0   
 **Date:** 2020-12-10    
 **Description:** Breaking change update targeting Vendr 1.4.0 
