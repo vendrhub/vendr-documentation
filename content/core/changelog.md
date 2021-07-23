@@ -3,6 +3,20 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.5  
+**Date:** 2021-07-23    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+--- 
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed regression where order editor configs weren't getting resolved correctly (1.8.4 didn't actually fix this).
+
+</changelog-group>
+</changelog>
+
 ## v1.8.4  
 **Date:** 2021-07-22    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
