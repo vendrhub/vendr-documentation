@@ -1,0 +1,4 @@
+- name: Umbraco v9
+  alias: umbraco-v9
+- name: Umbraco v8
+  alias: umbraco-v8
