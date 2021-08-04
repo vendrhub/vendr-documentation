@@ -1,41 +1,63 @@
 ---
 title: Vendr.Core
-description: API reference for Vendr.Core in Vendr, the eCommerce solution for Umbraco v8+
+description: API reference for Vendr.Core in Vendr, the eCommerce solution for Umbraco
 ---
-## Vendr.Core namespace
+# Vendr.Core assembly
 
-| Public Type | Description |
-| --- | --- |
-| static class [AssertionExtensions](assertionextensions/) | Extension methods for performing assertions |
-| static class [Constants](constants/) | Vendr constant variables |
-| class [DefaultUnitOfWork](defaultunitofwork/) | A [`IDatabaseUnitOfWork`](vendr-core/idatabaseunitofwork/) implementation using Umbraco Scopes |
-| class [DefaultUnitOfWorkProvider](defaultunitofworkprovider/) | A [`IUnitOfWorkProvider`](vendr-core/iunitofworkprovider/) implementation based on Umbraco Scopes |
-| class [DictionaryDiff&lt;TKey,TValue&gt;](dictionarydiff-2/) |  |
-| static class [DictionaryExtensions](dictionaryextensions/) | Dictionary extension methods |
-| static class [DiscountedPriceExtensions](discountedpriceextensions/) | Extensions methods for DiscountedPrice entities |
-| abstract class [DynamicFactoryBase](dynamicfactorybase/) |  |
-| class [EnumerableDiff&lt;T&gt;](enumerablediff-1/) |  |
-| static class [EnumerableExtensions](enumerableextensions/) | Extensions for enumerable sources |
-| static class [EnumExtensions](enumextensions/) |  |
-| static class [IAmountExtensions](iamountextensions/) | Extensions methods for [`IAmount`](vendr-core-models/iamount/) entities |
-| interface [IDatabaseUnitOfWork](idatabaseunitofwork/) | Defines a Unit of Work that holds an IDatabase reference |
-| interface [IDatabaseUnitOfWorkProvider](idatabaseunitofworkprovider/) |  |
-| interface [IDeepCloneable](ideepcloneable/) | Defines an entity that supports deep cloning |
-| static class [IPriceExtensions](ipriceextensions/) | Extensions methods for [`IPrice`](vendr-core-models/iprice/) entities |
-| static class [IProductServiceExtensions](iproductserviceextensions/) | Extension methods for the Vendr Product service |
-| static class [IProductSnapshotExtensions](iproductsnapshotextensions/) |  |
-| static class [ITranslationServiceExtensions](itranslationserviceextensions/) | Extension methods for the Vendr Translation service |
-| interface [IUnitOfWork](iunitofwork/) | Defines a Unit of Work |
-| interface [IUnitOfWorkProvider](iunitofworkprovider/) | Defines a Provider that can create a [`IUnitOfWork`](vendr-core/iunitofwork/) |
-| static class [LoggerExtensions](loggerextensions/) | Provides extension methods for the [`ILogger`](vendr-core-logging/ilogger/) interface. |
-| class [NotificationEventArgs](notificationeventargs/) |  |
-| static class [ObjectExtensions](objectextensions/) | Object extension methods |
-| static class [OrderExtensions](orderextensions/) | Extension methods for a Vendr Order |
-| static class [PaymentMethodExtensions](paymentmethodextensions/) |  |
-| static class [ProductVariantCollectionExtensions](productvariantcollectionextensions/) |  |
-| static class [ShippingMethodExtensions](shippingmethodextensions/) |  |
-| static class [SpecificationExtensions](specificationextensions/) |  |
-| static class [StringExtensions](stringextensions/) | String extension methods |
-| static class [TypeExtensions](typeextensions/) | Type extension methods |
+| Namespace |
+| --- |
+| [Vendr.Core](vendr-core/) |
+| [Vendr.Core.Adapters](vendr-core-adapters/) |
+| [Vendr.Core.Adjusters](vendr-core-adjusters/) |
+| [Vendr.Core.Api](vendr-core-api/) |
+| [Vendr.Core.Attributes](vendr-core-attributes/) |
+| [Vendr.Core.Cache](vendr-core-cache/) |
+| [Vendr.Core.Calculators](vendr-core-calculators/) |
+| [Vendr.Core.Configuration](vendr-core-configuration/) |
+| [Vendr.Core.Configuration.Models](vendr-core-configuration-models/) |
+| [Vendr.Core.Discounts](vendr-core-discounts/) |
+| [Vendr.Core.Discounts.Rewards](vendr-core-discounts-rewards/) |
+| [Vendr.Core.Discounts.Rules](vendr-core-discounts-rules/) |
+| [Vendr.Core.Events](vendr-core-events/) |
+| [Vendr.Core.Events.Notification](vendr-core-events-notification/) |
+| [Vendr.Core.Events.Notification.Handlers.Order](vendr-core-events-notification-handlers-order/) |
+| [Vendr.Core.Events.Validation](vendr-core-events-validation/) |
+| [Vendr.Core.Events.Validation.Handlers.Country](vendr-core-events-validation-handlers-country/) |
+| [Vendr.Core.Events.Validation.Handlers.Currency](vendr-core-events-validation-handlers-currency/) |
+| [Vendr.Core.Events.Validation.Handlers.Discount](vendr-core-events-validation-handlers-discount/) |
+| [Vendr.Core.Events.Validation.Handlers.EmailTemplate](vendr-core-events-validation-handlers-emailtemplate/) |
+| [Vendr.Core.Events.Validation.Handlers.GiftCard](vendr-core-events-validation-handlers-giftcard/) |
+| [Vendr.Core.Events.Validation.Handlers.Order](vendr-core-events-validation-handlers-order/) |
+| [Vendr.Core.Events.Validation.Handlers.OrderStatus](vendr-core-events-validation-handlers-orderstatus/) |
+| [Vendr.Core.Events.Validation.Handlers.PaymentMethod](vendr-core-events-validation-handlers-paymentmethod/) |
+| [Vendr.Core.Events.Validation.Handlers.PrintTemplate](vendr-core-events-validation-handlers-printtemplate/) |
+| [Vendr.Core.Events.Validation.Handlers.Region](vendr-core-events-validation-handlers-region/) |
+| [Vendr.Core.Events.Validation.Handlers.ShippingMethod](vendr-core-events-validation-handlers-shippingmethod/) |
+| [Vendr.Core.Events.Validation.Handlers.Store](vendr-core-events-validation-handlers-store/) |
+| [Vendr.Core.Events.Validation.Handlers.TaxClass](vendr-core-events-validation-handlers-taxclass/) |
+| [Vendr.Core.Finders](vendr-core-finders/) |
+| [Vendr.Core.Generators](vendr-core-generators/) |
+| [Vendr.Core.Json](vendr-core-json/) |
+| [Vendr.Core.Models](vendr-core-models/) |
+| [Vendr.Core.Models.Reporting](vendr-core-models-reporting/) |
+| [Vendr.Core.PaymentProviders](vendr-core-paymentproviders/) |
+| [Vendr.Core.Pipelines.Email](vendr-core-pipelines-email/) |
+| [Vendr.Core.Pipelines.Email.Tasks](vendr-core-pipelines-email-tasks/) |
+| [Vendr.Core.Pipelines.Order](vendr-core-pipelines-order/) |
+| [Vendr.Core.Pipelines.Order.Tasks](vendr-core-pipelines-order-tasks/) |
+| [Vendr.Core.Pipelines.OrderLine](vendr-core-pipelines-orderline/) |
+| [Vendr.Core.Pipelines.OrderLine.Tasks](vendr-core-pipelines-orderline-tasks/) |
+| [Vendr.Core.Pipelines.Store](vendr-core-pipelines-store/) |
+| [Vendr.Core.Pipelines.Store.Tasks](vendr-core-pipelines-store-tasks/) |
+| [Vendr.Core.Providers](vendr-core-providers/) |
+| [Vendr.Core.Security](vendr-core-security/) |
+| [Vendr.Core.Services](vendr-core-services/) |
+| [Vendr.Core.Session](vendr-core-session/) |
+| [Vendr.Core.Specifications.GiftCard](vendr-core-specifications-giftcard/) |
+| [Vendr.Core.Specifications.Order](vendr-core-specifications-order/) |
+| [Vendr.Core.Tax](vendr-core-tax/) |
+| [Vendr.Core.Templating](vendr-core-templating/) |
+| [Vendr.Core.ViewEngines](vendr-core-viewengines/) |
+| [Vendr.Extensions](vendr-extensions/) |
 
 <!-- DO NOT EDIT: generated by xmldocmd for Vendr.Core.dll -->
