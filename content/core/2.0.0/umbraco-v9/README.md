@@ -13,7 +13,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco
   <div class="tile-grid__cell w-full">
     <a href="getting-started/" class="tile flex">
       <span class="pr-2">
-        <badge value="1" />
+        <badge value="1"></badge>
       </span>
       <span>
         <span class="tile__heading">Getting Started</span>
@@ -24,7 +24,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco
   <div class="tile-grid__cell w-full md:w-1/2">
     <a href="tutorials/" class="tile h-full flex">
       <span class="pr-2">
-        <badge value="2" /> 
+        <badge value="2"></badge> 
       </span>
       <span>
         <span class="tile__heading">Tutorials</span>
@@ -35,7 +35,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco
   <div class="tile-grid__cell w-full md:w-1/2">
     <a href="how-to-guides/" class="tile h-full flex">
       <span class="pr-2">
-        <badge value="3" />
+        <badge value="3"></badge>
       </span>
       <span>
         <span class="tile__heading">How-to Guides</span>
@@ -46,7 +46,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco
   <div class="tile-grid__cell w-full md:w-1/2">
     <a href="key-concepts/" class="tile h-full flex">
       <span class="pr-2">
-        <badge value="4" /> 
+        <badge value="4"></badge> 
       </span>
       <span>
         <span class="tile__heading">Key Concepts</span>
@@ -57,7 +57,7 @@ description: Documentation for Vendr, the eCommerce solution for Umbraco
   <div class="tile-grid__cell w-full md:w-1/2">
     <a href="reference/" class="tile h-full flex">
       <span class="pr-2">
-        <badge value="5" />
+        <badge value="5"></badge>
       </span>
       <span>
         <span class="tile__heading">Reference</span>

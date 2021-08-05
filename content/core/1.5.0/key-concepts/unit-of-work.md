@@ -27,7 +27,7 @@ The anatomy of a Unit of Work then is a `using` statement, in the constructor fo
 
 When using a Unit of Work it is best practice that you should perform **ALL** write operations inside a single Unit of Work and **NOT** create individual Units of Work per write operation.
 
-<tip type="good" heading="Perform all write operations in a single Unit of Work" />
+<tip type="good" heading="Perform all write operations in a single Unit of Work"></tip>
 
 ```csharp
 using(var uow = _uowProvider.Create()) 
@@ -46,7 +46,7 @@ using(var uow = _uowProvider.Create())
 }
 ```
 
-<tip type="bad" heading="Don't create a Unit of Work per write operation" />
+<tip type="bad" heading="Don't create a Unit of Work per write operation"></tip>
 
 ```csharp
 using(var uow = _uowProvider.Create()) 
