@@ -20,9 +20,16 @@ In order for Vendr to track the current exchange rate of the orders currency, an
 If you wish to change the currency exchange rate service used at any time you can do so via the [dependency injection](../dependency-injection/) approach of overriding the default service configuration. For services that require configuration to be passed in, such as service API keys, you'll need to use the factory based override as follows.
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    composition.RegisterUnique<ICurrencyExchangeRateService>(new FixerCurrencyExchangeRateService("YOUR_FIXER_API_KEY"));
+    public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
+    {
+        // Register the fixer tax service with your API key
+        composition.RegisterUnique<ICurrencyExchangeRateService>(new FixerCurrencyExchangeRateService("YOUR_FIXER_API_KEY"));
+        
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
 
