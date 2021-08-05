@@ -78,6 +78,8 @@ public static class UmbracoBuilderExtensions
 
         builder.WithValidationEvent<ValidateOrderLineQuantityChange>()
             .RegisterHandler<OrderLineQuantityValidationHandler>();
+
+        return builder;
     }
 }
 ````
