@@ -261,9 +261,7 @@ Clicking the Additional Info `Edit` button will display an edit interface like s
 
 ## Assigning an Order Editor Config File to a Store
 
-To assign an Order Editor Config file to a Store, you should set the **Order Editor Config** property on the Store's edit screen to the path of the config file.
-
-![Additional Info Editor](/media/screenshots/order_editor_config_store_setting.png)
+To assign an Order Editor Config file to a Store, this is done by file name convention where configs are looked for in `App_Plugins/Vendr/config` with the following file name format `{storeAlias}.order.editor.config.js`. If no store specific file is found, it will fallback to the default `order.editor.config.js`.
 
 ## Custom Order Editor View
 
