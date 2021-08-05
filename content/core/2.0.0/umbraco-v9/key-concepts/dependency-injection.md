@@ -100,10 +100,10 @@ public static class UmbracoBuilderExtensions
     public static IUmbracoBuilder AddMyDependencies(IUmbracoBuilder builder)
     {
         // Replacing the product calculator implementation
-        builder.Services.RegisterUnique<IProductCalculator, MyProductCalculator>();
+        builder.Services.AddUnique<IProductCalculator, MyProductCalculator>();
 
         // Replacing the default product adapter
-        builder.Services.RegisterUnique<IProductAdapter, MyProductAdapter>();
+        builder.Services.AddUnique<IProductAdapter, MyProductAdapter>();
 
         // Return the builder to continue the chain
         return builder;

@@ -39,7 +39,7 @@ public class MyProductCalculator : ProductCalculator
 
 ## Registering a custom Calculator implementation
 
-Calculators are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `RegisterUnique<TServiceInterface, TReplacementService>()` method on the `Services` property where the `TServiceInterface` parameter is the Calculator interface Type you wish to replace and `TReplacementService` is the Type of your custom Calculator implementation.
+Calculators are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `AddUnique<TServiceInterface, TReplacementService>()` method on the `Services` property where the `TServiceInterface` parameter is the Calculator interface Type you wish to replace and `TReplacementService` is the Type of your custom Calculator implementation.
 
 ````csharp
 public static class UmbracoBuilderExtensions
@@ -47,7 +47,7 @@ public static class UmbracoBuilderExtensions
     public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
     {
         // Replacing the product calculator implementation
-        builder.Services.RegisterUnique<IProductCalculator, MyProductCalculator>();
+        builder.Services.AddUnique<IProductCalculator, MyProductCalculator>();
 
         // Return the builder to continue the chain
         return builder;

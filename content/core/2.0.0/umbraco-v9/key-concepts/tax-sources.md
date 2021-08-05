@@ -15,13 +15,19 @@ Out of the box, Vendr comes with two Tax Source Factory implementations:
 
 ## Changing the Tax Source Factory
 
-Tax Source Factories are [registered via a Composer](../dependency-injection/#registering-dependencies) using the `RegisterUnique<ITaxSourceFactory, TReplacementTaxSourceFactory>()` method where the `TReplacementTaxSourceFactory` parameter is the Type of our replacement Tax Source Factory implementation.
+Tax Source Factories are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `AddUnique<ITaxSourceFactory, TReplacementTaxSourceFactory>()` method on the `Services` property where the `TReplacementTaxSourceFactory` parameter is the Type of our replacement Tax Source Factory implementation.
 
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    // Replacing the default Tax Source Factory implementation
-    composition.RegisterUnique<ITaxSourceFactory, OriginTaxSourceFactory>();
+    public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
+    {
+        // Replacing the default Tax Source Factory implementation
+        builder.Services.AddUnique<ITaxSourceFactory, OriginTaxSourceFactory>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
