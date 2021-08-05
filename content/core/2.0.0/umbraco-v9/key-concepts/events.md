@@ -3,7 +3,7 @@ title: Events
 description: Listening for changes within Vendr, the eCommerce solution for Umbraco
 ---
 
-Much like the standard events system in .NET, Vendr also has an events system to notify you when certain things happen within the application, however Vendr differs slightly in the types of events that are fired and how you register your event handlers.
+Much like the standard events in .NET, Vendr also has an events system to notify you when certain things happen within the application, however Vendr differs slightly in the types of events that are fired and how you register your event handlers.
 
 Events in Vendr are registered using Umbraco's [dependency injection](../dependency-injection/) interface, rather than via static event delegates. This has a number of advantages, such as being able to control the order of when event handlers are fired and it also allows us to inject dependencies into the event handlers making it a much more decoupled approach to eventing. 
 
@@ -33,29 +33,42 @@ All Validation event handlers inherit from a base class `ValidationEventHandlerB
 
 ### Registering a Validation event handler
 
-Validation event handlers are [registered via a Composer](../dependency-injection/#registering-dependencies) using the `WithValidationEvent<TEvent>()` composition extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
+Validation event handlers are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `WithValidationEvent<TEvent>()` builder extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
 
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    composition.WithValidationEvent<ValidateOrderProductAdd>()
-        .RegisterHandler<MyOrderProductAddValidationHandler>();
+    public static IUmbracoBuilder AddMyEventHandlers(IUmbracoBuilder builder)
+    {
+        // Register my event handlers
+        builder.WithValidationEvent<ValidateOrderProductAdd>()
+            .RegisterHandler<MyOrderProductAddValidationHandler>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
 
 You can also control the order of when Validation event handlers run, before or after another Validation event handler, by registering them via the `RegisterHandlerBefore<THandler>()` or `RegisterHandlerAfter<THandler>()` methods respectively.
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    // Register MyOrderProductAddValidationHandler to execute before the SomeOtherValidationHandler handler
-    composition.WithValidationEvent<ValidateOrderProductAdd>()
-        .RegisterHandlerBefore<SomeOtherValidationHandler, MyOrderProductAddValidationHandler>();
+    public static IUmbracoBuilder AddMyEventHandlers(IUmbracoBuilder builder)
+    {
+        // Register MyOrderProductAddValidationHandler to execute before the SomeOtherValidationHandler handler
+        builder.WithValidationEvent<ValidateOrderProductAdd>()
+            .RegisterHandlerBefore<SomeOtherValidationHandler, MyOrderProductAddValidationHandler>();
 
-    // Register MyOrderProductAddValidationHandler to execute after the SomeOtherValidationHandler handler
-    composition.WithValidationEvent<ValidateOrderProductAdd>()
-        .RegisterHandlerAfter<SomeOtherValidationHandler, MyOrderProductAddValidationHandler>();
+        // Register MyOrderProductAddValidationHandler to execute after the SomeOtherValidationHandler handler
+        builder.WithValidationEvent<ValidateOrderProductAdd>()
+            .RegisterHandlerAfter<SomeOtherValidationHandler, MyOrderProductAddValidationHandler>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
 
@@ -85,28 +98,41 @@ All Notification event handlers inherit from a base class `NotificationEventHand
 
 ### Registering a Notification event handler
 
-Notification event handlers are [registered via a Composer](../dependency-injection/#registering-dependencies) using the `WithNotificationEvent<TEvent>()` composition extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
+Notification event handlers are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `WithNotificationEvent<TEvent>()` builder extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
 
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    composition.WithNotificationEvent<OrderFinalizedNotification>()
-        .RegisterHandler<MyOrderFinalizedHandler>();
+    public static IUmbracoBuilder AddMyEventHandlers(IUmbracoBuilder builder)
+    {
+        // Register my event handlers
+        builder.WithNotificationEvent<OrderFinalizedNotification>()
+            .RegisterHandler<MyOrderFinalizedHandler>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
 
 You can also control the order of when Notification event handlers run, before or after another Notification event handler, by registering them via the `RegisterHandlerBefore<THandler>()` or `RegisterHandlerAfter<THandler>()` methods respectively.
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    // Register MyOrderFinalizedHandler to execute before the SomeOtherNotificationHandler handler
-    composition.WithNotificationEvent<OrderFinalizedNotification>()
-        .RegisterHandlerBefore<SomeOtherNotificationHandler, MyOrderFinalizedHandler>();
+    public static IUmbracoBuilder AddMyEventHandlers(IUmbracoBuilder builder)
+    {
+        // Register MyOrderFinalizedHandler to execute before the SomeOtherNotificationHandler handler
+        builder.WithNotificationEvent<OrderFinalizedNotification>()
+            .RegisterHandlerBefore<SomeOtherNotificationHandler, MyOrderFinalizedHandler>();
 
-    // Register MyOrderFinalizedHandler to execute after the SomeOtherNotificationHandler handler
-    composition.WithNotificationEvent<OrderFinalizedNotification>()
-        .RegisterHandlerAfter<SomeOtherNotificationHandler, MyOrderFinalizedHandler>();
+        // Register MyOrderFinalizedHandler to execute after the SomeOtherNotificationHandler handler
+        builder.WithNotificationEvent<OrderFinalizedNotification>()
+            .RegisterHandlerAfter<SomeOtherNotificationHandler, MyOrderFinalizedHandler>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
