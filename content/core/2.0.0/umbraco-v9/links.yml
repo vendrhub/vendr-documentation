@@ -13,8 +13,6 @@
   items:
     - title: Overview
       link: /tutorials/
-    - title: Build a Store in Umbraco using Vendr
-      link: /tutorials/build-a-store-in-umbraco-using-vendr/
 
 - title: How-To Guides
   items:
