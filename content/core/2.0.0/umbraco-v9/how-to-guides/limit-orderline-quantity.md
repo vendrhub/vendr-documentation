@@ -70,7 +70,7 @@ Finally we need to register the Vendr event handlers via an `IUmbracoBuilder` ex
 ````csharp
 public static class UmbracoBuilderExtensions
 {
-    public static IUmbracoBuilder RegisterHandlers(IUmbracoBuilder builder)
+    public static IUmbracoBuilder AddEventHandlers(IUmbracoBuilder builder)
     {
         // Register event handlers
         builder.WithValidationEvent<ValidateOrderProductAdd>()
