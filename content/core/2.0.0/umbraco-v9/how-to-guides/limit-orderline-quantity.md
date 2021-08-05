@@ -65,19 +65,18 @@ public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<Val
 
 ## Register event handlers
 
-Finally we need to register the Vendr event handlers in a `IComposer`.
+Finally we need to register the Vendr event handlers via an `IUmbracoBuilder` extension.
 
 ````csharp
-[ComposeAfter(typeof(VendrWebComposer))]
-public class StoreComposer : IUserComposer
+public static class UmbracoBuilderExtensions
 {
-    public void Compose(Composition composition)
+    public static IUmbracoBuilder RegisterHandlers(IUmbracoBuilder builder)
     {
         // Register event handlers
-        composition.WithValidationEvent<ValidateOrderProductAdd>()
+        builder.WithValidationEvent<ValidateOrderProductAdd>()
             .RegisterHandler<ProductAddValidationHandler>();
 
-        composition.WithValidationEvent<ValidateOrderLineQuantityChange>()
+        builder.WithValidationEvent<ValidateOrderLineQuantityChange>()
             .RegisterHandler<OrderLineQuantityValidationHandler>();
     }
 }
