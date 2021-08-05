@@ -71,12 +71,15 @@ Once defined, the adjuster should be registered with the DI container to enable 
 
 
 ````csharp
-[ComposeAfter(typeof(VendrWebComposer))]
-public class MyComposer : IUserComposer
+public static class UmbracoBuilderExtensions
 {
-    public void Compose(Composition composition)
+    public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
     {
-        composition.WithPriceAdjusters()
+        // Register the price adjuster
+        builder.WithPriceAdjusters()
             .Append<MyPriceAdjuster>();
+
+        // Return the builder to continue the chain
+        return builder;
     }
 }
