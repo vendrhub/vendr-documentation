@@ -1,6 +1,6 @@
 ---
 title: Events
-description: Listening for changes within Vendr, the eCommerce solution for Umbraco v8+
+description: Listening for changes within Vendr, the eCommerce solution for Umbraco
 ---
 
 Much like the standard events system in .NET, Vendr also has an events system to notify you when certain things happen within the application, however Vendr differs slightly in the types of events that are fired and how you register your event handlers.

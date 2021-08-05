@@ -1,6 +1,6 @@
 ---
 title: Umbraco Configuration
-description: Configuring Umbraco for Vendr, the eCommerce solution for Umbraco v8+
+description: Configuring Umbraco for Vendr, the eCommerce solution for Umbraco
 ---
 
 Before we can start to use Vendr, we need to configure Umbraco to allow ourselves access to the relevant sections. The Vendr UI is split over three sections within the Umbraco back-office:

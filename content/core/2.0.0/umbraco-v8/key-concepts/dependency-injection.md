@@ -1,6 +1,6 @@
 ---
 title: Dependency Injection
-description: Minimising dependencies via dependency injection with Vendr, the eCommerce solution for Umbraco v8+
+description: Minimising dependencies via dependency injection with Vendr, the eCommerce solution for Umbraco
 ---
 
 Dependency Injection can be quite an intimidating subject, however at it's heart, the main idea is to reduce the number of hard coded dependencies within a codebase by instead providing a means to define those dependencies independently (an IoC container) and have them be "injected" into your codebase dynamically. These dependencies are often exposed as interfaces, rather that concrete types, thus enabling them to be swapped out or replaced with minimal effort.

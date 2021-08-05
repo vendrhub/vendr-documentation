@@ -1,6 +1,6 @@
 ---
 title: Fluent API
-description: Faster development thanks to the Fluent API of Vendr, the eCommerce solution for Umbraco v8+
+description: Faster development thanks to the Fluent API of Vendr, the eCommerce solution for Umbraco
 ---
 
 An added side effect of having [ReadOnly and Writable entities](../readonly-and-wrtiable-entities/) is that all of an entities write operations are now performed via methods, rather than property setters, enabling to us convert Vendr's write API in a fluent API.

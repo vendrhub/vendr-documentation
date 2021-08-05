@@ -1,19 +1,9 @@
 ---
 title: Installation
-description: Installing Vendr, the eCommerce solution for Umbraco v8+
+description: Installing Vendr, the eCommerce solution for Umbraco
 ---
 
-There are currently two ways to install Vendr into your solution. Using the Umbraco package distribution of Vendr, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
-
-## Umbraco Package Installation
-
-To install the Vendr Umbraco package, you can navigate to the **Packages** section in your back-office and then search to find the Vendr package in the central Umbraco package repository. Once located, you can click the package entry and follow the on-screen instructions provided to complete the install.
-
-![Installing Vendr via Local Umbraco Package](/media/screenshots/umbraco_packages_install.png)
-
-Alternatively, you can download the Umbraco package file from the [Umbraco Developer Portal](https://our.umbraco.com/packages/website-utilities/vendr/) and install it manually by uploading it to the local package installer located in your back-office **Packages > Install Local** section. Once uploaded, follow the on-screen instructions provided to complete the install.
-
-![Installing Vendr via Local Umbraco Package](/media/screenshots/umbraco_local_package_install.png)
+A change in Umbraco v9 from earlier versions is that it now [only supports NuGet packages](https://umbraco.com/blog/packages-in-umbraco-9-via-nuget/) and so this is the only way Vendr for v9 can be installed.
 
 ## NuGet Package Installation
 
@@ -31,9 +21,15 @@ Alternatively, you can also find and install the NuGet package via the NuGet Pac
 
 For most basic sites using a single solution/project, this should be all you need to install Vendr into your project. If you have a more complex solution structure however, consisting of multiple projects, Vendr is available in multiple sub-packages with varying dependencies.
 
-* **Vendr.Core** The core Vendr functionality that doesn't require a web context.
+* **Vendr.Common** A shared project of common, non Vendr specific patterns and helpers.
+* **Vendr.Core** The core Vendr functionality that doesn't require any infrastructure specific dependencies.
+* **Vendr.Infrastructure** Infrastructure specific project containing implementations of core Vendr functionality.
 * **Vendr.Web** The core Vendr functionality that requires a web context.
-* **Vendr** The main Vendr package containing all DLL's and web project files.
+* **Vendr.Umbraco** The Vendr functionality that requires an Umbraco dependency.
+* **Vendr.Umbraco.Web** The Vendr functionality for the Umbraco presentation layer.
+* **Vendr.Umbraco.Web.UI** The static Vendr assets for the Umbraco presentation layer.
+* **Vendr.Umbraco.Startup** The Vendr functionality for registering Vendr with Umbraco.
+* **Vendr** The main Vendr package entry point package.
 
 ## Upgrading
 
@@ -47,15 +43,9 @@ Vendr uses Umbraco Migrations to install all of it's features meaning upgrades f
 
 ## Installing a License 
 
-Once you have purchased a license you can install it by dropping the license file directly into your sites `App_Data` folder. Vendr will automatically scan this directory for any valid licenses.
+Once you have purchased a license you can install it by dropping the license file directly into your sites `umbraco\Data` folder. Vendr will automatically scan this directory for any valid licenses.
 
-If you need to store your licenses in an alternative directory, you can change where Vendr looks for licenses by setting a `UmbracoLicensesDirectory` app setting with a path to the alternative location. 
-
-<message-box type="info" heading="A note about Umbraco Cloud">
-
-If you are using an Umbraco Cloud website, please note that the `UmbracoLicensesDirectory` is automatically set to `~\App_Plugins\UmbracoLicenses\` so when using Vendr on an Umbraco Cloud site you should place your licenses in this directory and not the default `App_Data` folder.
-
-</message-box>
+If you need to store your licenses in an alternative directory, you can change where Vendr looks for licenses by setting a `Vendr.Licensing.LicensesDirectory` app setting with a path to the alternative location. 
 
 <message-box type="info" heading="When do i need a license?">
 

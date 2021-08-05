@@ -1,6 +1,6 @@
 ---
 title: Base Currency
-description: Base Currency for standardized reporting in Vendr, the eCommerce solution for Umbraco v8+
+description: Base Currency for standardized reporting in Vendr, the eCommerce solution for Umbraco
 ---
 
 Within Vendr we have support for showing analytics reports, including summaries of sales figures. At the same time, Vendr also supports orders being placed in multiple currencies. Together these pose a problem of how to display a succinct sales figure, when the orders that make up those figures are placed in multiple currencies. The answer to this in Vendr is the stores **Base Currency**.

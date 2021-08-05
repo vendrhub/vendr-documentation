@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Getting Started with Vendr, the eCommerce solution for Umbraco v8+
+description: Getting Started with Vendr, the eCommerce solution for Umbraco
 ---
 
 In this section we will guide you through the key steps necessary to get you started with Vendr.

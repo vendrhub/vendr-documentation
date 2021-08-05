@@ -1,6 +1,6 @@
 ---
 title: Payment Providers
-description: Accepting payments via Payment Providers in Vendr, the eCommerce solution for Umbraco v8+
+description: Accepting payments via Payment Providers in Vendr, the eCommerce solution for Umbraco
 ---
 
 Payment Providers are how Vendr is able to accept multiple different methods of payment on a Site. Their job is to provide a standard interface between 3rd party payment gateways and Vendr itself in order to allow the passing of information between the two platforms.

@@ -1,6 +1,6 @@
 ---
 title: Product Variants
-description: Creating variant products with Vendr, the eCommerce solution for Umbraco v8+
+description: Creating variant products with Vendr, the eCommerce solution for Umbraco
 ---
 
 Product variants are the ability to define variants of a given product, for example if a product was available in multiple colour options, you would create a primary product with product variants for each of the colour options.

@@ -1,6 +1,6 @@
 ---
 title: Order Calculation State
-description: Calculation context in Vendr, the eCommerce solution for Umbraco v8+
+description: Calculation context in Vendr, the eCommerce solution for Umbraco
 ---
 
 When extending the calculation process of Vendr, either by custom [calculators](../calculators/) or custom [pipeline tasks](../pipelines/) there is an important state object that you should be aware of and that is the `OrderCalculation` object.

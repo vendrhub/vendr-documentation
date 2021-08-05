@@ -1,6 +1,6 @@
 ---
 title: Building a Store in Umbraco using Vendr
-description: Step-by-Step Tutorial to get you started with Vendr, the eCommerce solution for Umbraco v8+
+description: Step-by-Step Tutorial to get you started with Vendr, the eCommerce solution for Umbraco
 ---
 
 <!-- vale off -->

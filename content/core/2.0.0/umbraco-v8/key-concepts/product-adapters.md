@@ -1,6 +1,6 @@
 ---
 title: Product Adapters
-description: Converting product sources into understandable products for Vendr, the eCommerce solution for Umbraco v8+
+description: Converting product sources into understandable products for Vendr, the eCommerce solution for Umbraco
 ---
 
 The role of a Product Adapter in Vendr is to provide an interface between a product information source (which by default will be an Umbraco node) and convert it into a standardized format such that Vendr doesn't need to be tied to that source.

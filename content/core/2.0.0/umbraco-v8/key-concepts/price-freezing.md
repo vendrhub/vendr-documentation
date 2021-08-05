@@ -1,6 +1,6 @@
 ---
 title: Price Freezing
-description: Freezing prices for shopping carts in Vendr, the eCommerce solution for Umbraco v8+
+description: Freezing prices for shopping carts in Vendr, the eCommerce solution for Umbraco
 ---
 
 Price Freezing in Vendr is the ability to freeze prices for products that are added to the shopping cart. Once an item is added to a cart, Vendr will take a snapshot of the products price and ensure that this price is honored for the life of the shopping cart. By freezing prices in this way it prevents a customers shopping cart suddenly changing in value should a price change occur whilst their cart session is in progress.

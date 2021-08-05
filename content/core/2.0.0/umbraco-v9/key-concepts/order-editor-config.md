@@ -1,6 +1,6 @@
 ---
 title: Order Editor Config
-description: Customizing the Order Editor interface in Vendr, the eCommerce solution for Umbraco v8+
+description: Customizing the Order Editor interface in Vendr, the eCommerce solution for Umbraco
 ---
 
 With Vendr, there are minimal rules about what information you are required to record about an Order, however, this does pose a problem for how we provide a User Interface for managing Orders when we don't know exactly what properties you are going to be recording.

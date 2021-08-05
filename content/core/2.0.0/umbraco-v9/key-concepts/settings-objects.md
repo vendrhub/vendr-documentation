@@ -1,6 +1,6 @@
 ---
 title: Settings Objects
-description: Strongly typed Settings objects in Vendr, the eCommerce solution for Umbraco v8+
+description: Strongly typed Settings objects in Vendr, the eCommerce solution for Umbraco
 ---
 
 ## Settings Objects

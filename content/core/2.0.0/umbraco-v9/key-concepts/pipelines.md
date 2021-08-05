@@ -1,6 +1,6 @@
 ---
 title: Pipelines
-description: Performing sequential tasks with Pipelines in Vendr, the eCommerce solution for Umbraco v8+
+description: Performing sequential tasks with Pipelines in Vendr, the eCommerce solution for Umbraco
 ---
 
 Pipelines are a Vendr feature that allow a series of tasks to be performed in a set sequence with the input of a given task being the output of the preceding task. In this way it allows an overall result to be built up as an input is passed through these individual tasks, rather than being calculated in one go via one larger task.

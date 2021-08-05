@@ -1,6 +1,6 @@
 ---
 title: Vendr Documentation
-description: Documentation for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for Vendr, the eCommerce solution for Umbraco
 ---
 
 ## Using These Docs
@@ -73,4 +73,4 @@ If you require further assistance, or if you are having a particular issue you c
 
 ## About Vendr
 
-Vendr is the eCommerce solution for Umbraco v8+ created by Outfield Digital, the team behind Tea Commerce for Umbraco v7. Vendr is the successor to Tea Commerce and follows much of the same principles but has been vastly improved for use on Umbraco v8+.
+Vendr is the eCommerce solution for Umbraco created by Outfield Digital, the team behind Tea Commerce for Umbraco v7. Vendr is the successor to Tea Commerce and follows much of the same principles but has been vastly improved for use on Umbraco v8+.

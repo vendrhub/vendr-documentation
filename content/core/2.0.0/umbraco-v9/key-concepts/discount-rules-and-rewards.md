@@ -1,6 +1,6 @@
 ---
 title: Discount Rules / Rewards
-description: Define when a Discount should apply and what should be the Reward in Vendr, the eCommerce solution for Umbraco v8+
+description: Define when a Discount should apply and what should be the Reward in Vendr, the eCommerce solution for Umbraco
 ---
 
 When creating Discounts in the Vendr back-office they are defined using a series of rule and reward builders that let you configure exactly when a Discount should apply and what exactly the Reward should be for that Discount.

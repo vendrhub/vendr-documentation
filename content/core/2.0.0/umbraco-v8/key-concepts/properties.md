@@ -1,6 +1,6 @@
 ---
 title: Properties
-description: Order / Order Line meta data in Vendr, the eCommerce solution for Umbraco v8+
+description: Order / Order Line meta data in Vendr, the eCommerce solution for Umbraco
 ---
 
 Out of the box, there is Very little information that Vendr really needs to know about a product in order for it to do it's job, however there are times when developers require an ability to store additional information against an Order / Order Line, such as the billing / shipping address of an Order, or any specific configuration details of a given Product on an Order Line.

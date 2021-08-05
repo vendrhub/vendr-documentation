@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Installing Vendr, the eCommerce solution for Umbraco v8+
+description: Installing Vendr, the eCommerce solution for Umbraco
 ---
 
 There are currently two ways to install Vendr into your solution. Using the Umbraco package distribution of Vendr, installed via the Umbraco back-office, or using our NuGet packages, installed directly into your projects code base via the NuGet Package Manager. Where possible, it is our recommendation to use the NuGet packages as these allow a great level of ease/control when upgrading later on.
@@ -31,9 +31,15 @@ Alternatively, you can also find and install the NuGet package via the NuGet Pac
 
 For most basic sites using a single solution/project, this should be all you need to install Vendr into your project. If you have a more complex solution structure however, consisting of multiple projects, Vendr is available in multiple sub-packages with varying dependencies.
 
-* **Vendr.Core** The core Vendr functionality that doesn't require a web context.
+* **Vendr.Common** A shared project of common, non Vendr specific patterns and helpers.
+* **Vendr.Core** The core Vendr functionality that doesn't require any infrastructure specific dependencies.
+* **Vendr.Infrastructure** Infrastructure specific project containing implementations of core Vendr functionality.
 * **Vendr.Web** The core Vendr functionality that requires a web context.
-* **Vendr** The main Vendr package containing all DLL's and web project files.
+* **Vendr.Umbraco** The Vendr functionality that requires an Umbraco dependency.
+* **Vendr.Umbraco.Web** The Vendr functionality for the Umbraco presentation layer.
+* **Vendr.Umbraco.Web.UI** The static Vendr assets for the Umbraco presentation layer.
+* **Vendr.Umbraco.Startup** The Vendr functionality for registering Vendr with Umbraco.
+* **Vendr** The main Vendr package entry point package.
 
 ## Upgrading
 

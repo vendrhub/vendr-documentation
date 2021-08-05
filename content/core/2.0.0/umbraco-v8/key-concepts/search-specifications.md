@@ -1,6 +1,6 @@
 ---
 title: Search Specifications
-description: Flexible searching in Vendr, the eCommerce solution for Umbraco v8+
+description: Flexible searching in Vendr, the eCommerce solution for Umbraco
 ---
 
 Providing a search API for developers to be able to search for entities that match a given criteria is a bit of a balancing act. You want to provide a flexible API to allow for meaningful results to be returned but at the same time you don't want to allow every possible search combination as this can lead to performance problems.

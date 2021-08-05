@@ -1,6 +1,6 @@
 ---
 title: User Interface
-description: The User Interface for Vendr, the eCommerce solution for Umbraco v8+
+description: The User Interface for Vendr, the eCommerce solution for Umbraco
 ---
 
 The Vendr user interface reuses a lot of design elements from the existing Umbraco UI in order to bring a level of consistency across the two products. At a basic level though, the Vendr UI consists of a number of key areas, split over  three sections within the Umbraco back-office: 
