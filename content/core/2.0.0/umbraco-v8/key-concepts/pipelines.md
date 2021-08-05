@@ -41,7 +41,7 @@ Pipeline tasks are [registered via a Composer](../dependency-injection/#register
 public void Compose(Composition composition)
 {
     composition.WithSendEmailPipeline()
-        .Append<AddCustomAttachmentTask>();
+        .Append<LogEmailSentTask>();
 }
 ````
 
@@ -50,12 +50,12 @@ You can also control the order of when Pipeline tasks run, before or after anoth
 ````csharp
 public void Compose(Composition composition)
 {
-    // Register AddCustomAttachmentTask to execute before the SomeOtherTask handler
+    // Register AddCustomAttachmentTask to execute before the SendSmtpEmail handler
     composition.WithSendEmailPipeline()
-        .InsertBefore<SomeOtherTask, AddCustomAttachmentTask>();
+        .InsertBefore<SendSmtpEmail, AddCustomAttachmentTask>();
 
-    // Register AddCustomAttachmentTask to execute after the SomeOtherTask handler
+    // Register LogEmailSentTask to execute after the SendSmtpEmail handler
     composition.WithSendEmailPipeline()
-        .InsertAfter<SomeOtherTask, AddCustomAttachmentTask>();
+        .InsertAfter<SendSmtpEmail, LogEmailSentTask>();
 }
 ````

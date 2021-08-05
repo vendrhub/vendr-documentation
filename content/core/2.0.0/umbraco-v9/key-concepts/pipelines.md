@@ -59,11 +59,11 @@ public static class UmbracoBuilderExtensions
 {
     public static IUmbracoBuilder AddMyPipelineTasks(IUmbracoBuilder builder)
     {
-        // Register AddCustomAttachmentTask to execute before the SomeOtherTask handler
+        // Register AddCustomAttachmentTask to execute before the SendSmtpEmail handler
         builder.WithSendEmailPipeline()
             .InsertBefore<SendSmtpEmail, AddCustomAttachmentTask>();
 
-        // Register AddCustomAttachmentTask to execute after the SomeOtherTask handler
+        // Register LogEmailSentTask to execute after the SendSmtpEmail handler
         builder.WithSendEmailPipeline()
             .InsertAfter<SendSmtpEmail, LogEmailSentTask>();
 
