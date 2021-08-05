@@ -2,7 +2,7 @@
 title: Vendr.Infrastructure
 description: API reference for Vendr.Infrastructure in Vendr, the eCommerce solution for Umbraco
 ---
-# Vendr.Infrastructure assembly
+## Vendr.Infrastructure assembly
 
 | Namespace |
 | --- |

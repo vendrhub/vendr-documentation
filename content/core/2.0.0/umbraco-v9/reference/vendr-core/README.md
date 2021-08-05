@@ -2,7 +2,7 @@
 title: Vendr.Core
 description: API reference for Vendr.Core in Vendr, the eCommerce solution for Umbraco
 ---
-# Vendr.Core assembly
+## Vendr.Core assembly
 
 | Namespace |
 | --- |

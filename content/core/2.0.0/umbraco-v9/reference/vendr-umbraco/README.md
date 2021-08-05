@@ -2,7 +2,7 @@
 title: Vendr.Umbraco
 description: API reference for Vendr.Umbraco in Vendr, the eCommerce solution for Umbraco
 ---
-# Vendr.Umbraco assembly
+## Vendr.Umbraco assembly
 
 | Namespace |
 | --- |

@@ -2,7 +2,7 @@
 title: Vendr.Umbraco.Startup
 description: API reference for Vendr.Umbraco.Startup in Vendr, the eCommerce solution for Umbraco
 ---
-# Vendr.Umbraco.Startup assembly
+## Vendr.Umbraco.Startup assembly
 
 | Namespace |
 | --- |

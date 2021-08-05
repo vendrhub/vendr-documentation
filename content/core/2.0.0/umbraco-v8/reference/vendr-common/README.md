@@ -2,7 +2,7 @@
 title: Vendr.Common
 description: API reference for Vendr.Common in Vendr, the eCommerce solution for Umbraco
 ---
-# Vendr.Common assembly
+## Vendr.Common assembly
 
 | Namespace |
 | --- |

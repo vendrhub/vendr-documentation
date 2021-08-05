@@ -2,7 +2,7 @@
 title: Vendr.Web
 description: API reference for Vendr.Web in Vendr, the eCommerce solution for Umbraco
 ---
-# Vendr.Web assembly
+## Vendr.Web assembly
 
 | Namespace |
 | --- |
