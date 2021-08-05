@@ -37,7 +37,6 @@ public class Startup
 Whilst it's possible to register some dependencies directly within this chain, the better practice is to add your registration logic inside an `IUmbracoBuilder` extension method and then call that within the `ConfigureServices` method.
 
 ````csharp
-// UmbracoBuilderExtensions.cs
 public static class UmbracoBuilderExtensions
 {
     public static IUmbracoBuilder AddMyDependencies(IUmbracoBuilder builder)
@@ -49,8 +48,9 @@ public static class UmbracoBuilderExtensions
         return builder;
     }
 }
+````
 
-// Startup.cs
+````csharp
 public class Startup
 {
     ...
