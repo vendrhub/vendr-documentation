@@ -48,12 +48,18 @@ public interface IProductSnapshot
 
 ## Registering a Product Adapter
 
-Product Adapters are [registered via a Composer](../dependency-injection/#registering-dependencies) using the `RegisterUnique<IProductAdapter, TReplacementAdapter>()` method where the `TReplacementAdapter` parameter is the Type of our custom Product Adapter implementation.
+Product Adapters are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `RegisterUnique<IProductAdapter, TReplacementAdapter>()` method on the `Services` property where the `TReplacementAdapter` parameter is the Type of our custom Product Adapter implementation.
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    // Replacing the default Product Adapter implementation
-    composition.RegisterUnique<IProductAdapter, MyCustomProductAdapter>();
+    public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
+    {
+        // Replacing the default Product Adapter implementation
+        builder.Services.RegisterUnique<IProductAdapter, MyCustomProductAdapter>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````

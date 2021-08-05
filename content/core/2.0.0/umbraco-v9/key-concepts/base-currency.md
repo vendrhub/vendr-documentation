@@ -25,7 +25,7 @@ public static class UmbracoBuilderExtensions
     public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
     {
         // Register the fixer tax service with your API key
-        builder.RegisterUnique<ICurrencyExchangeRateService>(new FixerCurrencyExchangeRateService("YOUR_FIXER_API_KEY"));
+        builder.Services.RegisterUnique<ICurrencyExchangeRateService>(new FixerCurrencyExchangeRateService("YOUR_FIXER_API_KEY"));
         
         // Return the builder to continue the chain
         return builder;

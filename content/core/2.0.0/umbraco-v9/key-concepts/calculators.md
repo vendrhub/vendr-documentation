@@ -47,7 +47,7 @@ public static class UmbracoBuilderExtensions
     public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
     {
         // Replacing the product calculator implementation
-        builder.RegisterUnique<IProductCalculator, MyProductCalculator>();
+        builder.Services.RegisterUnique<IProductCalculator, MyProductCalculator>();
 
         // Return the builder to continue the chain
         return builder;
