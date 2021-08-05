@@ -34,28 +34,41 @@ All pipelines occur within a [Unit of Work](../unit-of-work/) and so should any 
 
 ## Registering a Pipeline task
 
-Pipeline tasks are [registered via a Composer](../dependency-injection/#registering-dependencies) using the appropriate `With{PipelineName}Pipeline()` composition extension method to identify the pipeline you want to extend and then calling the `Append<TTask>()` method to append your task onto the end of that pipeline.
+Pipeline tasks are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the appropriate `With{PipelineName}Pipeline()` builder extension method to identify the pipeline you want to extend and then calling the `Append<TTask>()` method to append your task onto the end of that pipeline.
 
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    composition.WithSendEmailPipeline()
-        .Append<AddCustomAttachmentTask>();
+    public static IUmbracoBuilder AddMyPipelineTasks(IUmbracoBuilder builder)
+    {
+        // Add our custom pipeline tasks
+        builder.WithSendEmailPipeline()
+            .Append<LogEmailSentTask>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
 
 You can also control the order of when Pipeline tasks run, before or after another task, by appending them via the `InsertBefore<TTask>()` or `InsertAfter<TTask>()` methods respectively.
 
 ````csharp
-public void Compose(Composition composition)
+public static class UmbracoBuilderExtensions
 {
-    // Register AddCustomAttachmentTask to execute before the SomeOtherTask handler
-    composition.WithSendEmailPipeline()
-        .InsertBefore<SomeOtherTask, AddCustomAttachmentTask>();
+    public static IUmbracoBuilder AddMyPipelineTasks(IUmbracoBuilder builder)
+    {
+        // Register AddCustomAttachmentTask to execute before the SomeOtherTask handler
+        builder.WithSendEmailPipeline()
+            .InsertBefore<SendSmtpEmail, AddCustomAttachmentTask>();
 
-    // Register AddCustomAttachmentTask to execute after the SomeOtherTask handler
-    composition.WithSendEmailPipeline()
-        .InsertAfter<SomeOtherTask, AddCustomAttachmentTask>();
+        // Register AddCustomAttachmentTask to execute after the SomeOtherTask handler
+        builder.WithSendEmailPipeline()
+            .InsertAfter<SendSmtpEmail, LogEmailSentTask>();
+
+        // Return the builder to continue the chain
+        return builder;
+    }
 }
 ````
