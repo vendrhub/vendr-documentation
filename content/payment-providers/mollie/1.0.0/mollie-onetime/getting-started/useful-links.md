@@ -1,11 +1,11 @@
 ---
 title: Useful Links
-description: Documentation for the Stripe Checkout (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
+description: Documentation for the Mollie (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
-As well as the content found in these docs, here are a few useful links that might come in handy should you wish to learn more about the provider itself, and the Stripe API.
+As well as the content found in these docs, here are a few useful links that might come in handy should you wish to learn more about the provider itself, and the Mollie API.
 
-* [Payment provider source code](https://github.com/vendrhub/vendr-payment-provider-stripe)
-* [Payment provider issue tracker](https://github.com/vendrhub/vendr-payment-provider-stripe/issues)
-* [Stripe checkout information](https://stripe.com/gb/payments/checkout)
-* [Stripe checkout documentation](https://stripe.com/docs/payments/checkout)
+* [Payment provider source code](https://github.com/vendrhub/vendr-payment-provider-mollie)
+* [Payment provider issue tracker](https://github.com/vendrhub/vendr-payment-provider-mollie/issues)
+* [Mollie information](https://www.mollie.com)
+* [Mollie API documentation](https://docs.mollie.com/reference/v2/orders-api/create-order)

@@ -33,6 +33,6 @@ When you launch ngrok for the first time, it will ask you to sign in. Enter the 
 
 ## Step 3 - Test the site
 
-With ngrok running you can now test the site using the URLs displayed in the console window. Use these URLs (preferably the secure https one) for your Mollie [webhook configuration](../../getting-started/configuring-mollie/#webhook) and you should now be able to test your Mollie webhooks locally.
+With ngrok running you can now test the site using the URLs displayed in the console window and the Mollie gateway will automatically be able to communicate back to your site instance.
 
 You should see webhook requests displayed in the console window, and you can even debug into them in Visual Studio.

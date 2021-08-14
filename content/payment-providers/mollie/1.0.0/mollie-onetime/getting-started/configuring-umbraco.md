@@ -33,7 +33,6 @@ An addition to these core settings, there are also a number of optional advanced
 | Locale | The locale to display the payment provider portal in. |
 | Payment Methods | A comma separated list of payment methods to limit the payment method selection screen by. Can be 'applepay', 'bancontact', 'banktransfer', 'belfius', 'creditcard', 'directdebit', 'eps', 'giftcard', 'giropay', 'ideal', 'kbc', 'klarnapaylater', 'klarnasliceit', 'mybank', 'paypal', 'paysafecard', 'przelewy24', 'sofort' or 'voucher'. |
 | Order Line Product Type Property Alias | The order line property alias containing a Mollie product type for the order line. Can be either 'physical' or 'digital'. |
-| Order Line Product Category Property Alias | The order line property alias containing a Mollie product category for the order line. Can be 'meal', 'eco' or 'gift'.
- |
+| Order Line Product Category Property Alias | The order line property alias containing a Mollie product category for the order line. Can be 'meal', 'eco' or 'gift'. |
 
 ![Create Payment Provider Settings](/media/screenshots/mollie/umbraco_configure_mollie_settings.png)
