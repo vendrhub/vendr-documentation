@@ -11,7 +11,7 @@ In the Umbraco back-office, in the **Settings > Vendr > Stores > {Store Name} > 
 
 ## Configure Payment Provider Settings
 
-In the payment method editor, configure the standard payment method settings as required, then configure the Stripe payment provider settings as follows:
+In the payment method editor, configure the standard payment method settings as required, then configure the Mollie payment provider settings as follows:
 
 | Name | Description |
 | ---- | ----------- |
