@@ -3,6 +3,33 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v1.8.6  
+**Date:** 2021-08-27    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added more null handling in exchange rate service providers.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated the default order number generator to improve randomness and thus prevent collisions, especially in load balanced environments.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed intermittent concurrency error with `EntityCacheKeys`. Switched to a concurrent dictionary for cache key storage.
+* Fixed issue with payment provider URLs forcing port 443 for non localhost URLs.
+* Updated the price property editor to allow and explicit zero value to be set ([#314](https://github.com/vendrhub/vendr/issues/314)).
+* Fixed issue with analytics dashboard not allowing the viewing of todays figures ([#319](https://github.com/vendrhub/vendr/issues/319)).
+
+</changelog-group>
+</changelog>
+
 ## v1.8.5  
 **Date:** 2021-07-23    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
