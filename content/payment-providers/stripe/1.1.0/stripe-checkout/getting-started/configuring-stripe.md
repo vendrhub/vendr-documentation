@@ -48,9 +48,10 @@ https://{store_domain}/umbraco/vendr/payment/callback/stripe-checkout/{payment_m
 
 ![Stripe Webhook](/media/screenshots/stripe/stripe_webhook.png)
 
-From the **Version** dropdown you can leave this set as **Your current version** and then in the **Events to send** dropdown select the following event type:
+From the **Version** dropdown you can leave this set as **Your current version** and then in the **Events to send** dropdown select the following event types:
 
 * `checkout.session.completed`
+* `review.closed`
 
 Click **Add endpoint** to create the webhook endpoint registration and you should now be sent to the webhook details screen.
 
