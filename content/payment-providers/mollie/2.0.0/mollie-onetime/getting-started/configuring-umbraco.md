@@ -3,6 +3,10 @@ title: Configuring Umbraco
 description: Documentation for the Mollie (One Time) payment provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## Configure Order Rounding Settings
+
+Before you create a payment method for Mollie, it's important to know that this payment provider will only work when order rounding settings are set to round at the **order lin level** level. You can configure this is your store settings by setting the **Order Rounding Method** to **Line**.
+
 ## Create Payment Method
 
 In the Umbraco back-office, in the **Settings > Vendr > Stores > {Store Name} > Payment Methods** section, click the **Create Payment Method** button to create a new payment method, choosing **Mollie (One Time)** from the list of available payment providers.

@@ -4,10 +4,10 @@ logo: mollie.svg
 type: PaymentProvider
 supportedBy: core
 
-packageVersion: 1.0.1
+packageVersion: 2.0.0
 docVersions:
   next: 
-  current: 1.0.0
+  current: 2.0.0
   previous: 
 
 links:
