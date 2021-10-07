@@ -12,7 +12,7 @@ Vendr is also available via [NuGet.Org](https://www.nuget.org/packages/Vendr/).
 To install Vendr via NuGet you can run the following command directly in the NuGet Manager Console window:
 
 ```bash
-PM> Install-Package Vendr
+PM> dotnet add package Vendr
 ```
 
 Alternatively, you can also find and install the NuGet package via the NuGet Package Manager GUI. You will see a number of packages available, however you will want to install the main **Vendr** package.
