@@ -20,6 +20,7 @@ description: Changelog for the Core Vendr product
 * Payment provider methods are now async.
 * Payment providers now take in a `PaymentProviderContext` for most methods.
 * Big project restructuring.
+* More details on what's changed in the [v2.0.0 release blog post](https://vendr.net/blog/vendr-2-0-0-release/).
 
 </changelog-group>
 </changelog>
