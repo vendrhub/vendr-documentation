@@ -3,6 +3,27 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.0.0  
+**Date:** 2021-10-07   
+**Description:** Major new release with breaking changes
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added v9 / .NET Core support.
+* Added custom rounding support ([#168](ttps://github.com/vendrhub/vendr/issues/168)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Payment providers are now .netstandard2.0.
+* Payment provider methods are now async.
+* Payment providers now take in a `PaymentProviderContext` for most methods.
+* Big project restructuring.
+
+</changelog-group>
+</changelog>
+
 ## v1.8.6  
 **Date:** 2021-08-27    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
