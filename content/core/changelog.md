@@ -3,6 +3,34 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.0.1  
+**Date:** 2021-10-18    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+--- 
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added more null handling when accessing `ProductSnapshot` properties ([#327](https://github.com/vendrhub/vendr/issues/327)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated the nuget build tasks to only replace the `App_Plugins\Vendr\backoffice` folder on `Clean`.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed bug in payment provider callback handler erroring for URL's where the order number isn't known.
+* Fixed bug in payment provider context not populating `Request` property when converting to a strongly typed context.
+* Fixed regression where deleted gift cards were showing in gift cards list ([#326](https://github.com/vendrhub/vendr/issues/326)).
+* Fixed a number of async deadlock issues.
+* Fixed incorrect minimum Umbraco version in Umbraco `package.xml`.
+
+</changelog-group>
+</changelog>
+
 ## v2.0.0  
 **Date:** 2021-10-07   
 **Description:** Major new release with breaking changes
