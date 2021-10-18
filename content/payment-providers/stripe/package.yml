@@ -4,7 +4,7 @@ logo: stripe.svg
 type: PaymentProvider
 supportedBy: core
 
-packageVersion: 1.2.1
+packageVersion: 2.0.1
 docVersions:
   next: 
   current: 1.1.0

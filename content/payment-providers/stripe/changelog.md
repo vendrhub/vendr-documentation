@@ -3,6 +3,43 @@ title: Changelog
 description: Changelog for the Stripe Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.1   
+**Date:** 2021-10-18   
+**Description:** Bug fixes and minor enhancements 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed regression due to search and replace in meta data fields sent to Stripe.
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+*  Changed the webhook processing to parse the request as stream so it can be reset before attempting to read.
+
+</changelog-group>
+</changelog>
+
+## v2.0.0   
+**Date:** 2021-10-07   
+**Description:** Major new release with breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Breaking">  
+
+    
+* Rebuilt for Vendr 2.0.0.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.2.1   
 **Date:** 2021-03-24    
 **Description:** Bug fixes and minor enhancements 
