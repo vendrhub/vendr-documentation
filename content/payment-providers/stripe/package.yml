@@ -7,8 +7,9 @@ supportedBy: core
 packageVersion: 2.0.1
 docVersions:
   next: 
-  current: 1.1.0
+  current: 2.0.0
   previous: 
+    - 1.1.0
     - 1.0.0
 
 links:
