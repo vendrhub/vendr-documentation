@@ -3,6 +3,18 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.0.2  
+**Date:** 2021-10-20    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed issue with Variants property editor creating an empty `General` tab when using tabs on the product document type.
+
+</changelog-group>
+</changelog>
+
 ## v2.0.1  
 **Date:** 2021-10-18    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
