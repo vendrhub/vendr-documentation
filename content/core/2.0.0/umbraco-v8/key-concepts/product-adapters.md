@@ -19,15 +19,20 @@ public class MyCustomProductAdapter : IProductAdapter
         // Lookup a product by productReference and convert to IProductSnapshot
     }
 
-    public string GetProductReference(Guid storeId, string sku)
+    public IProductSnapshot GetProductSnapshot(string productReference, string productVariantReference, string languageIsoCode)
     {
-        // Lookup a product reference by store + sku
+        // Lookup a product by productVariantReference and convert to IProductSnapshot
+    }
+
+    public bool TryGetProductReference(Guid storeId, string sku, out string productReference, out string productVariantReference)
+    {
+        // Try lookup a product / variant reference by store + sku
     }
 }
 
 ````
 
-All Product Adapters implement the `IProductAdapter` which requires two method implementations. `GetProductSnapshot` which retrieves a Product Snapshot of the product reference by the `productReference` parameter and `GetProductReference` which retrieves a product reference for a product that belongs to a given `storeId` and has the given `sku`.
+All Product Adapters implement the `IProductAdapter` interface which requires three method implementations. Two `GetProductSnapshot` methods which retrieves a Product Snapshot for either a product or product variant by reference parameters and a `TryGetProductReference` method which retrieves a product / variant reference for a product that belongs to a given `storeId` and has the given `sku`.
 
 A Product Snapshot consists of the following properties in order to present a Product to Vendr in a standard way. 
 
@@ -36,12 +41,15 @@ A Product Snapshot consists of the following properties in order to present a Pr
 public interface IProductSnapshot
 {
     string ProductReference { get; }
+    string ProductVariantReference { get; }
     string Sku { get; }
     string Name { get; }
     Guid StoreId { get; }
     Guid? TaxClassId { get; }
-    IEnumerable<ProductPrice> Prices { get; }
     IDictionary<string, string> Properties { get; }
+    IEnumerable<AttributeCombination> Attributes { get; }
+    IEnumerable<ProductPrice> Prices { get; }
+    bool IsGiftCard { get; }
 }
 
 ````
