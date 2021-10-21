@@ -40,15 +40,34 @@ A Product Snapshot consists of the following properties in order to present a Pr
 ````csharp
 public interface IProductSnapshot
 {
+    // The unique reference for the product
     string ProductReference { get; }
+
+    // The unique reference for the variant (if this is a variant snapshot)
     string ProductVariantReference { get; }
+
+    // The unique SKU for this product / variant
     string Sku { get; }
+
+    // The name of this product / variant
     string Name { get; }
+
+    // The ID of the store this product / variant belongs to
     Guid StoreId { get; }
+
+    // An optional Tax Class ID for this product / variant
     Guid? TaxClassId { get; }
+
+    // Any properties exposed by this product / variant that should be copied to the orderline
     IDictionary<string, string> Properties { get; }
+
+    // Any variant attributes for this product (if this is a variant snapshot)
     IEnumerable<AttributeCombination> Attributes { get; }
+
+    // The available prices for this product / variant
     IEnumerable<ProductPrice> Prices { get; }
+
+    // Flag indicating whether this product is a gift card product
     bool IsGiftCard { get; }
 }
 
