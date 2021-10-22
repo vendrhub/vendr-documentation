@@ -3,6 +3,35 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.1   
+**Date:** 2021-10-22  
+**Description:** Patch release with minor bug fixes 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed bug with doc types pipeline task failing due to changes in the doc type structure dur to the tabs update.
+
+</changelog-group>
+</changelog>
+
+## v2.0.0   
+**Date:** 2021-10-07   
+**Description:** Major new release with breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Breaking">  
+
+* Updated to work with Vendr 2.0.0 the dual targeted v8/v9 release.
+
+</changelog-group>
+</changelog>
+
+
 ## v1.2.0   
 **Date:** 2020-12-10    
 **Description:** Breaking change update targeting Vendr 1.4.0 
