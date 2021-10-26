@@ -3,6 +3,19 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.0.3  
+**Date:** 2021-10-26    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed issue with Opayo payment provider not working due to the `HttpRequestMessage` already having being read ([#4](https://github.com/vendrhub/vendr-payment-provider-opayo/issues/4)).
+* Fixed issue with Order Export Template rendering everything on one line due to newline characters being escaped ([#330](https://github.com/vendrhub/vendr/issues/330)).
+
+</changelog-group>
+</changelog>
+
 ## v2.0.2  
 **Date:** 2021-10-20    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
