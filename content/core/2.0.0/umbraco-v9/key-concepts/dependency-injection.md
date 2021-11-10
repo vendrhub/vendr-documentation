@@ -72,7 +72,7 @@ Registering a dependency is then achieved by working with the `IUmbracoBuilder` 
 ````csharp
 public static class UmbracoBuilderExtensions
 {
-    public static IUmbracoBuilder AddMyDependencies(IUmbracoBuilder builder)
+    public static IUmbracoBuilder AddMyDependencies(this IUmbracoBuilder builder)
     {
         // Registering an event handler
         builder.WithNotificationEvent<OrderSavedNotification>()
@@ -97,7 +97,7 @@ Where a feature is replaceable, replacing that dependency is also achieved via t
 ````csharp
 public static class UmbracoBuilderExtensions
 {
-    public static IUmbracoBuilder AddMyDependencies(IUmbracoBuilder builder)
+    public static IUmbracoBuilder AddMyDependencies(this IUmbracoBuilder builder)
     {
         // Replacing the product calculator implementation
         builder.Services.AddUnique<IProductCalculator, MyProductCalculator>();
