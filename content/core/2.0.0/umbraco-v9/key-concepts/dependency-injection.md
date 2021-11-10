@@ -39,7 +39,7 @@ Whilst it's possible to register some dependencies directly within this chain, t
 ````csharp
 public static class UmbracoBuilderExtensions
 {
-    public static IUmbracoBuilder AddMyDependencies(IUmbracoBuilder builder)
+    public static IUmbracoBuilder AddMyDependencies(this IUmbracoBuilder builder)
     {
         // Register my dependencies here via the builder parameter
         ...
