@@ -3,11 +3,11 @@ title: Product Bundles
 description: Creating bundles of products with Vendr, the eCommerce solution for Umbraco
 ---
 
-Occasionally you may need to create a product that is in fact made up of multiple sub products. A good example of this is when buying a computer where you may pick the computer as the main product, but then you can choose the different components to make up the computer such as the CPU or hard disk options. The final order line then becomes the composite order line of the selected primary product and all it's sub product options. To achieve this kind of configurable product in Vendr we can use a feature called product bundling.
+Occasionally you may need to create a product with multiple sub-products. A good example of this is when buying a computer where you may pick the computer as the main product, but then you can choose the different components to make up the computer, such as the CPU or hard disk options. The final order line then becomes the composite order line of the selected primary product and all its sub-product options. To achieve this kind of configurable product in Vendr, we can use a feature called product bundling.
 
 ## Creating a Bundle
 
-To create a bundle we first add the primary product to an order as we normally would, but in addition to the product / quantity information we also provide a unique `bundleId` to identify that by adding this product, it should create a bundle order line.
+To create a bundle, we first add the primary product to an order as we normally would, but in addition to the product/quantity information, we also provide a unique `bundleId` to identify that by adding this product, it should create a bundle order line.
 
 ````csharp
 // Define a unique bundle id for the order line
