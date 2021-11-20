@@ -35,7 +35,7 @@ public string Alias { get; }
 
 #### AllowedAttributes
 
-Gets the list of allowed Product Attribtues for this Product Attribute Preset
+Gets the list of allowed Product Attributes for this Product Attribute Preset
 
 ```csharp
 public IReadOnlyCollection<AllowedProductAttribute> AllowedAttributes { get; }

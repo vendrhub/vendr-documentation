@@ -17,7 +17,7 @@ public interface IVendrSettings
 
 #### BackOfficeMvcArea
 
-Gets the back office MVC area under which Vendr is installed
+Gets the backoffice MVC area under which Vendr is installed
 
 ```csharp
 public string BackOfficeMvcArea { get; }
@@ -28,7 +28,7 @@ public string BackOfficeMvcArea { get; }
 
 #### BackOfficePath
 
-Gets the back office path for this Vendr install
+Gets the backoffice path for this Vendr install
 
 ```csharp
 public string BackOfficePath { get; }

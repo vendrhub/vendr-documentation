@@ -77,7 +77,7 @@ Once created, the bulk action will then be displayed in the bulk actions bar for
 | `getConfirmMessage(total)` | A function that can provider a message to display before a bulk action is triggered should confirmation be required for the action to run. Returns an Promise that returns a string. |
 | `getStatusMessage(count, total)` | A function used to provider a status message after each item has been processed. Displayed in the bulk actions bar after each `itemAction` has been called. Returns an Promise that returns a string. |
 | `getSuccessMessage(total)` | A function to return a success message after all bulk actions have been performed. Returns an Promise that returns a string. |
-| `condition(context)` | As all bulk actions are registered globally for all entity types, the `condition` function can be used to filer when, and for which entities a bulk action will actually display. |
+| `condition(context)` | As all bulk actions are registered globally for all entity types, the `condition` function can be used to filter when, and for which entities a bulk action will display. |
 
 † Only a `itemAction` OR a `bulkAction` method should be defined for a bulk action configuration. If both are present, the `bulkAction` will be used and the `itemAction` will be ignored. If processing of items can be done individually, it is better to use the `itemAction` in order to provider user feedback. `bulkAction` should only be used where items need to be processed in a single action.
 
@@ -85,7 +85,7 @@ Once created, the bulk action will then be displayed in the bulk actions bar for
 
 * Most methods apart from `itemAction` or `bulkAction` are optional. If methods aren't present, a default implementation will be used, or, where those methods trigger specific functionality such as the `configure` or `getConfirmMessage` methods, that functionality will become disabled.
 * It's important to note the array based syntax for registering a bulk action with angular dependencies. Each bulk action is registered as an array, where all dependencies are defined first and then a factory function is defined last which returns the actual bulk action definition.
-* Whilst these docs outline how to define a bulk action, you will likely need to register further resources / services that can actually perform the given bulk operation and include these as a dependency for your action. 
+* Whilst these docs outline how to define a bulk action, you will likely need to register further resources/services that can perform the given bulk operation and include these as a dependency for your action. 
 
 ## Examples
 
