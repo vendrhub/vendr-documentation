@@ -43,7 +43,7 @@ Vendr uses Umbraco Migrations to install all of it's features meaning upgrades f
 
 ## Installing a License 
 
-Once you have purchased a license you can install it by dropping the license file directly into your sites `umbraco\Data` folder. Vendr will automatically scan this directory for any valid licenses.
+Once you have purchased a license you can install it by dropping the license file directly into your sites `umbraco\Licenses` folder. Vendr will automatically scan this directory for any valid licenses.
 
 If you need to store your licenses in an alternative directory, you can change where Vendr looks for licenses by setting a `Vendr.Licensing.LicensesDirectory` app setting with a path to the alternative location. 
 
