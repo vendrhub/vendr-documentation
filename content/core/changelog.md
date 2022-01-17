@@ -3,6 +3,42 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.0.5  
+**Date:** 2022-01-17    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+<changelog>
+<changelog-group category="Changed">  
+
+* Changed `EventBus` and `Pipeline` implementations to no use lazy dependencies as in some occassions it's possible in Umbraco that these get resolved too early before registration is complete and can end up caching a `null` value.
+* Changed from using `IStartupFilter` for some core starup configurations to using `IComponent` due to issues with Umbraco Deploy firing too early.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed regression in license limitations check for custom product adapter when using a lite license. Then namespace had changed but in v2, but we didn't update the limitation check.
+
+</changelog-group>
+</changelog>
+
+## v2.0.4  
+**Date:** 2021-12-06    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+<changelog>
+<changelog-group category="Changed">  
+
+* Changed the stock syncronizer to use an internal cache rather than rely on scoped dependencies.
+* Removed Matroyshka override styles as shouldn't be necesarry anymore.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed variants attribute group not showing in variants editor due to core changes in how tabs work.
+
+</changelog-group>
+</changelog>
+
 ## v2.0.3  
 **Date:** 2021-10-26    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
