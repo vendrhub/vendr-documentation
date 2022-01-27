@@ -3,6 +3,45 @@ title: Changelog
 description: Changelog for the PayPal Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.1   
+**Date:** 2022-01-27   
+**Description:** Patch release with minor bug fixes / enhancements 
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added order line descriptions.
+
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+    
+* Fixed issue with Webhook parser looking for request headers in the wrong location.
+
+
+</changelog-group>
+</changelog>
+
+## v2.0.0   
+**Date:** 2021-10-07   
+**Description:** Major new release with breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Breaking">  
+
+    
+* Rebuilt for Vendr 2.0.0.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.1.1  
 **Date:** 2021-07-22    
 **Description:** Patch release with minor bug fixes / enhancements 
