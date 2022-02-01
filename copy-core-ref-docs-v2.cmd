@@ -2,7 +2,7 @@
 SETLOCAL
 
 REM This currently points to NetCore folder but will need changing
-SET VENDR_DIR=.\..\Vendr_NetCore
+SET VENDR_DIR=.\..\Vendr_v2
 
 :MENU1
 CLS
