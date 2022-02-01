@@ -3,6 +3,35 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.0.6  
+**Date:** 2022-02-01    
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added explicit checks for use of CloudFlares Flexible SSL feature when resolving Vendr URLs.
+* Added extra null checks in exchange rate service implementations.
+* Added new `ExchangeRateHostCurrencyExchangeRateService` implementation.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Payment controller now only returns `BadRequest` status if the URL has been tampered with. All other code paths now return an `OK` status so that webhooks won't keep attempting notifications for orders / transaction that can't be handled.
+* Move the shipping company name field to be in the same location as the billing company name field.
+* Updated the resolution of the `order.editor.config.js` file to prefer a config on disk over a legacy entry in the database table.
+* Updated the default `ICurrencyExchangeRateService` to use the free `ExchangeRateHostCurrencyExchangeRateService`.
+* Updated the `ExchangeRatesApiCurrencyExchangeRateService` to require an API key as this now appears to be required.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed license domains list not displaying correctly in the Vendr settings dashboard.
+* Fixed divide by zero issue when applying exchange rates to an order.
+
+</changelog-group>
+</changelog>
+
 ## v2.0.5  
 **Date:** 2022-01-17    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
