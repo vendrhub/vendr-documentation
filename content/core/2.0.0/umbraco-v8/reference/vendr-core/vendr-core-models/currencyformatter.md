@@ -48,10 +48,18 @@ public string FormatTemplate { get; }
 
 ### Methods
 
-#### FormatValue
+#### FormatValue (1 of 2)
 
 ```csharp
 public string FormatValue(decimal value, bool includeSymbol = true)
+```
+
+---
+
+#### FormatValue (2 of 2)
+
+```csharp
+public string FormatValue(decimal value, int decimalPlaces, bool includeSymbol = true)
 ```
 
 

@@ -43,30 +43,19 @@ public Price(decimal valueWithoutTax, decimal tax, Guid currencyId)
 Instantiates a new [`Price`](../price/) instance
 
 ```csharp
-public Price(decimal valueWithoutTax, decimal tax, CurrencyReadOnly currency)
+public Price(decimal value, decimal tax, CurrencyReadOnly currency)
 ```
 
 **Parameters**
 
 | Parameter | Description |
 | --- | --- |
-| valueWithoutTax | The value of the price without tax |
+| value | The value of the price |
 | tax | The tax value of the price |
 | currency | The [`Currency`](../currency/) of the price |
 
 
 ### Properties
-
-#### CultureName
-
-Gets the Culture Name of the [`Currency`](../currency/) of the price
-
-```csharp
-public string CultureName { get; }
-```
-
-
----
 
 #### CurrencyId
 
@@ -161,7 +150,7 @@ A new [`Price`](../price/) instance
 
 ---
 
-#### OfSameCurrency (1 of 2)
+#### OfSameCurrency
 
 Create a new [`Price`](../price/) of the same [`Currency`](../currency/) as an existing price
 
@@ -176,30 +165,6 @@ public static Price OfSameCurrency(Price existingPrice, decimal valueWithoutTax,
 | existingPrice | The existing [`Price`](../price/) instance |
 | valueWithoutTax | The value of the new price without tax |
 | tax | The tax value of the new price |
-
-**Returns**
-
-A new [`Price`](../price/) instance
-
----
-
-#### OfSameCurrency (2 of 2)
-
-Create a new [`Price`](../price/) of the same [`Currency`](../currency/) as an existing price
-
-```csharp
-public static Price OfSameCurrency(Price existingPrice, decimal valueWithoutTax, decimal tax, 
-    decimal valueWithTax)
-```
-
-**Parameters**
-
-| Parameter | Description |
-| --- | --- |
-| existingPrice | The existing [`Price`](../price/) instance |
-| valueWithoutTax | The value of the new price without tax |
-| tax | The tax value of the new price |
-| valueWithTax | The value of the new price with tax |
 
 **Returns**
 
@@ -234,6 +199,21 @@ A zero value [`Price`](../price/) instance
 ```csharp
 public override object DeepClone()
 ```
+
+
+---
+
+#### Rounded
+
+Round the price to the given preceission
+
+```csharp
+public Price Rounded(int decimalPlaces)
+```
+
+**Returns**
+
+A rounded price value
 
 
 ### Operators

@@ -5,7 +5,7 @@ description: API reference for VendrComposer in Vendr, the eCommerce solution fo
 ## VendrComposer
 
 ```csharp
-public class VendrComposer : IUserComposer
+public class VendrComposer : IComposer
 ```
 
 **Namespace**

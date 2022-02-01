@@ -191,6 +191,7 @@ description: API reference for Vendr.Core.Events.Validation in Vendr, the eComme
 | class [ValidateStoreNotificationEmailTemplatesChange](validatestorenotificationemailtemplateschange/) |  |
 | class [ValidateStoreOrderEditorConfigChange](validatestoreordereditorconfigchange/) |  |
 | class [ValidateStoreOrderNumberTemplatesChange](validatestoreordernumbertemplateschange/) |  |
+| class [ValidateStoreOrderRoundingMethodChange](validatestoreorderroundingmethodchange/) |  |
 | class [ValidateStoreOrderStatusesChange](validatestoreorderstatuseschange/) |  |
 | class [ValidateStorePriceTaxInclusivityChange](validatestorepricetaxinclusivitychange/) |  |
 | class [ValidateStoreRemoveGiftCardPropertyAlias](validatestoreremovegiftcardpropertyalias/) |  |

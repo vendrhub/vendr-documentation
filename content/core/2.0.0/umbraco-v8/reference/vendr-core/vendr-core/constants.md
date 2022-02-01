@@ -15,6 +15,17 @@ public static class Constants
 
 ### Fields
 
+#### DefaultMonetaryPrecision
+
+The default precision of monetary values
+
+```csharp
+public static int DefaultMonetaryPrecision;
+```
+
+
+---
+
 #### InstanceId
 
 Defines a unique instance ID for this instance of Vendr.

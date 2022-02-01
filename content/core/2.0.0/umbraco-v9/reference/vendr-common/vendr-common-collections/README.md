@@ -6,13 +6,10 @@ description: API reference for Vendr.Common.Collections in Vendr, the eCommerce 
 
 | Public Type | Description |
 | --- | --- |
-| class [ComposedCollection&lt;T&gt;](composedcollection-1/) |  |
-| class [ConcurrentDictionary&lt;TKey,TValue&gt;](concurrentdictionary-2/) |  |
+| class [ComposedCollection&lt;T&gt;](composedcollection-1/) | Represents the base class of a collection composed by the DI container |
 | class [DictionaryAccessor&lt;TKey,TValue&gt;](dictionaryaccessor-2/) |  |
 | interface [IComposedCollection&lt;T&gt;](icomposedcollection-1/) |  |
-| interface [IConcurrentDictionary&lt;TKey,TValue&gt;](iconcurrentdictionary-2/) |  |
 | class [KeyedCollection&lt;TValue&gt;](keyedcollection-1/) |  |
-| class [LazyConcurrentDictionary&lt;TKey,TValue&gt;](lazyconcurrentdictionary-2/) |  |
 | class [NullSafeDictionary&lt;TKey,TValue&gt;](nullsafedictionary-2/) |  |
 | class [NullSafeReadOnlyDictionary&lt;TKey,TValue&gt;](nullsafereadonlydictionary-2/) |  |
 

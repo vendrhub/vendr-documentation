@@ -16,8 +16,7 @@ public class SynchronizeUmbracoStockOnSaved : INotificationHandler<ContentSavedN
 #### SynchronizeUmbracoStockOnSaved
 
 ```csharp
-public SynchronizeUmbracoStockOnSaved(IContentService contentService, 
-    UmbracoStockSynchronizerAccessor sync)
+public SynchronizeUmbracoStockOnSaved(IContentService contentService, UmbracoStockSynchronizer sync)
 ```
 
 

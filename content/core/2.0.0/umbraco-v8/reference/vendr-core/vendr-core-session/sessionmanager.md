@@ -30,6 +30,15 @@ public SessionManager(IStoreService storeService, IOrderService orderService,
 
 ### Methods
 
+#### CheckAndMoveSessionOrders
+
+```csharp
+public void CheckAndMoveSessionOrders()
+```
+
+
+---
+
 #### ClearCurrentAdminOrder
 
 ```csharp

@@ -14,6 +14,7 @@ description: API reference for Vendr.Umbraco.Web in Vendr, the eCommerce solutio
 | [Vendr.Umbraco.Web.Models](vendr-umbraco-web-models/) |
 | [Vendr.Umbraco.Web.Models.Mappers](vendr-umbraco-web-models-mappers/) |
 | [Vendr.Umbraco.Web.Models.Reporting](vendr-umbraco-web-models-reporting/) |
+| [Vendr.Umbraco.Web.Mvc](vendr-umbraco-web-mvc/) |
 | [Vendr.Umbraco.Web.Routing](vendr-umbraco-web-routing/) |
 | [Vendr.Umbraco.Web.Sections](vendr-umbraco-web-sections/) |
 | [Vendr.Umbraco.Web.Trees](vendr-umbraco-web-trees/) |

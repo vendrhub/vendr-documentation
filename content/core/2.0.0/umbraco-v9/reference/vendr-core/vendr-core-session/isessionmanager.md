@@ -13,6 +13,15 @@ public interface ISessionManager
 
 ### Methods
 
+#### CheckAndMoveSessionOrders
+
+```csharp
+public void CheckAndMoveSessionOrders()
+```
+
+
+---
+
 #### ClearCurrentOrder
 
 ```csharp

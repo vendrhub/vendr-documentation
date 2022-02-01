@@ -199,6 +199,15 @@ public string OrderNumberTemplate { get; set; }
 
 ---
 
+#### OrderRoundingMethod
+
+```csharp
+public string OrderRoundingMethod { get; set; }
+```
+
+
+---
+
 #### ProductPropertyAliases
 
 ```csharp

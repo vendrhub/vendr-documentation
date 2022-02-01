@@ -44,6 +44,15 @@ public T GetDefaultValue()
 
 ---
 
+#### GetTranslatedValues
+
+```csharp
+public IReadOnlyDictionary<string, T> GetTranslatedValues()
+```
+
+
+---
+
 #### GetValue
 
 ```csharp

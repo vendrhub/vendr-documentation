@@ -17,7 +17,7 @@ public class VariantsEditorPropertyEditor : BlockEditorPropertyEditor
 
 ```csharp
 public VariantsEditorPropertyEditor(IDataValueEditorFactory dataValueEditorFactory, 
-    Lazy<PropertyEditorCollection> propertyEditors, IIOHelper ioHelper)
+    PropertyEditorCollection propertyEditors, IIOHelper ioHelper)
 ```
 
 

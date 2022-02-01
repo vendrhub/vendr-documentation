@@ -19,10 +19,8 @@ public class ExchangeRatesApiCurrencyExchangeRateService : CurrencyExchangeRateS
 
 #### ExchangeRatesApiCurrencyExchangeRateService
 
-The default constructor.
-
 ```csharp
-public ExchangeRatesApiCurrencyExchangeRateService()
+public ExchangeRatesApiCurrencyExchangeRateService(string apiKey)
 ```
 
 

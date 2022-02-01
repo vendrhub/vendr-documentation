@@ -17,7 +17,7 @@ public class EmailContext
 
 ```csharp
 public EmailContext(EmailTemplateReadOnly emailTemplate, Order order, 
-    MailMessage mailMessage = null, SmtpClient client = null)
+    MailMessage mailMessage = null)
 ```
 
 ---
@@ -26,20 +26,11 @@ public EmailContext(EmailTemplateReadOnly emailTemplate, Order order,
 
 ```csharp
 public EmailContext(EmailTemplateReadOnly emailTemplate, object model, string toEmailAddress, 
-    string languageIsoCode, MailMessage mailMessage = null, SmtpClient client = null)
+    string languageIsoCode, MailMessage mailMessage = null)
 ```
 
 
 ### Properties
-
-#### Client
-
-```csharp
-public SmtpClient Client { get; set; }
-```
-
-
----
 
 #### EmailTemplate
 

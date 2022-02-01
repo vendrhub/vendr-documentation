@@ -498,6 +498,15 @@ public Store SetOrderNumberTemplates(string cartNumberTemplate, string orderNumb
 
 ---
 
+#### SetOrderRoundingMethod
+
+```csharp
+public Store SetOrderRoundingMethod(OrderRoundingMethod orderRoundingMethod)
+```
+
+
+---
+
 #### SetOrderStatuses (1 of 2)
 
 ```csharp

@@ -18,7 +18,7 @@ public class VariantsEditorValueConverter : PropertyValueConverterBase
 ```csharp
 public VariantsEditorValueConverter(IVariationContextAccessor variationContextAccessor, 
     IProfilingLogger proflog, BlockEditorConverter blockConverter, 
-    PublishedContentHelperAccessor publishedContentHelperAccessor, 
+    Lazy<PublishedContentHelperAccessor> publishedContentHelperAccessor, 
     IPublishedValueFallback publishedValueFallback)
 ```
 

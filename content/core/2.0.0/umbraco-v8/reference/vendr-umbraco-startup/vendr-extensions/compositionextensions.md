@@ -223,6 +223,16 @@ public static PipelineTaskCollectionBuilder<SendEmailPipeline, EmailContext> Wit
 
 ---
 
+#### WithTelemetryDataPipeline
+
+```csharp
+public static PipelineTaskCollectionBuilder<TelemetryDataPipeline, TelemetryData> 
+    WithTelemetryDataPipeline(this Composition composer)
+```
+
+
+---
+
 #### WithValidationEvent&lt;TEvent&gt;
 
 ```csharp

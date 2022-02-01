@@ -14,6 +14,17 @@ public interface IEntityStatePolicyCache<TState, TId>
 
 ### Methods
 
+#### CheckEntityCacheIntegrity
+
+```csharp
+public EntityCacheIntegrityCheckResult CheckEntityCacheIntegrity(
+    EntityCacheIntegrityCheckOptions options, Func<int> performCountAll, 
+    Func<TId[], IEnumerable<TState>> performGetAll)
+```
+
+
+---
+
 #### ClearAll
 
 ```csharp

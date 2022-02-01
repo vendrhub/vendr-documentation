@@ -53,10 +53,10 @@ public Type Type { get; }
 
 ### Methods
 
-#### CreateLimitedAdjustment
+#### CreateDerivativeAdjustment
 
 ```csharp
-public abstract object CreateLimitedAdjustment(Price limitedPrice)
+public abstract PriceAdjustment CreateDerivativeAdjustment(Price limitedPrice)
 ```
 
 

@@ -7,7 +7,8 @@ description: API reference for Vendr.Web in Vendr, the eCommerce solution for Um
 | Namespace |
 | --- |
 | [Vendr.Extensions](vendr-extensions/) |
-| [Vendr.Web.Hosting](vendr-web-hosting/) |
+| [Vendr.Web.Attributes](vendr-web-attributes/) |
+| [Vendr.Web.Mvc](vendr-web-mvc/) |
 | [Vendr.Web.Session](vendr-web-session/) |
 | [Vendr.Web.ViewEngines](vendr-web-viewengines/) |
 

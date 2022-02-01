@@ -18,10 +18,10 @@ public abstract class AmountAdjustment<TSelf> : AmountAdjustment
 
 ### Methods
 
-#### CreateLimitedAdjustment
+#### CreateDerivativeAdjustment
 
 ```csharp
-public override object CreateLimitedAdjustment(Amount limitedAmount)
+public override AmountAdjustment CreateDerivativeAdjustment(Amount limitedAmount)
 ```
 
 

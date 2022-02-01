@@ -22,6 +22,18 @@ public interface ICachedEntityService<TEntityType>
 
 ### Methods
 
+#### CheckEntityCacheIntegrity
+
+Checks/fixes the integrity of the entity cache
+
+```csharp
+public EntityCacheIntegrityCheckResult CheckEntityCacheIntegrity(
+    EntityCacheIntegrityCheckOptions options)
+```
+
+
+---
+
 #### InvalidateEntityCache
 
 Invalidates the entire services entity cache

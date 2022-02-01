@@ -13,10 +13,19 @@ public static class CurrencyExtensions
 
 ### Methods
 
-#### FormatValue
+#### FormatValue (1 of 2)
 
 ```csharp
 public static string FormatValue(this CurrencyReadOnly currency, decimal value, 
+    bool includeSymbol = true)
+```
+
+---
+
+#### FormatValue (2 of 2)
+
+```csharp
+public static string FormatValue(this CurrencyReadOnly currency, decimal value, int decimalPlaces, 
     bool includeSymbol = true)
 ```
 

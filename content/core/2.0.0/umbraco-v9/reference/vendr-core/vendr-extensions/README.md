@@ -7,10 +7,10 @@ description: API reference for Vendr.Extensions in Vendr, the eCommerce solution
 | Public Type | Description |
 | --- | --- |
 | static class [AdjustedPriceExtensions](adjustedpriceextensions/) | Extensions methods for !:DiscountedPrice entities |
+| static class [AmountExtensions](amountextensions/) | Extensions methods for [`IAmount`](vendr-core-models/iamount/) entities |
 | static class [CurrencyExtensions](currencyextensions/) |  |
 | static class [DictionaryExtensions](dictionaryextensions/) | Dictionary extension methods |
 | static class [EnumerableExtensions](enumerableextensions/) | Extensions for enumerable sources |
-| static class [IAmountExtensions](iamountextensions/) | Extensions methods for [`IAmount`](vendr-core-models/iamount/) entities |
 | static class [IProductServiceExtensions](iproductserviceextensions/) | Extension methods for the Vendr Product service |
 | static class [IProductSnapshotExtensions](iproductsnapshotextensions/) |  |
 | static class [ITranslationServiceExtensions](itranslationserviceextensions/) | Extension methods for the Vendr Translation service |

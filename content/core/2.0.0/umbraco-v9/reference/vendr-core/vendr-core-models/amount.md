@@ -55,17 +55,6 @@ public Amount(decimal value, CurrencyReadOnly currency)
 
 ### Properties
 
-#### CultureName
-
-Gets the Culture Name of the [`Currency`](../currency/) of the amount
-
-```csharp
-public string CultureName { get; }
-```
-
-
----
-
 #### CurrencyId
 
 Gets the ID of the [`Currency`](../currency/) of the amount
@@ -136,6 +125,21 @@ A zero value [`Amount`](../amount/) instance
 ```csharp
 public override object DeepClone()
 ```
+
+
+---
+
+#### Rounded
+
+Round the price to the given preceission
+
+```csharp
+public Amount Rounded(int decimalPlaces)
+```
+
+**Returns**
+
+A rounded price value
 
 
 ### Operators

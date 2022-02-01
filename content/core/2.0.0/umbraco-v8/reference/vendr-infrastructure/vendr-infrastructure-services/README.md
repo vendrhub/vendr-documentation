@@ -8,6 +8,7 @@ description: API reference for Vendr.Infrastructure.Services in Vendr, the eComm
 | --- | --- |
 | abstract class [CurrencyExchangeRateServiceBase](currencyexchangerateservicebase/) |  |
 | class [CurrencyLayerCurrencyExchangeRateService](currencylayercurrencyexchangerateservice/) |  |
+| class [ExchangeRateHostCurrencyExchangeRateService](exchangeratehostcurrencyexchangerateservice/) |  |
 | class [ExchangeRatesApiCurrencyExchangeRateService](exchangeratesapicurrencyexchangerateservice/) |  |
 | class [FixerCurrencyExchangeRateService](fixercurrencyexchangerateservice/) |  |
 

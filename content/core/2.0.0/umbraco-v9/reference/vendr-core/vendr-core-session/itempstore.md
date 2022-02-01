@@ -13,6 +13,15 @@ public interface ITempStore
 
 ### Methods
 
+#### GetStoreIds
+
+```csharp
+public Guid[] GetStoreIds()
+```
+
+
+---
+
 #### GetValue&lt;T&gt;
 
 ```csharp
@@ -27,6 +36,16 @@ public T? GetValue<T>(Guid storeId, string key)
 
 ```csharp
 public void SetValue<T>(Guid storeId, string key, T? value)
+    where T : struct
+```
+
+
+---
+
+#### TrySetValue&lt;T&gt;
+
+```csharp
+public bool TrySetValue<T>(Guid storeId, string key, T? value)
     where T : struct
 ```
 

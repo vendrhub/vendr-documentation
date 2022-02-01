@@ -216,6 +216,15 @@ public string OrderNumberTemplate { get; }
 
 ---
 
+#### OrderRoundingMethod
+
+```csharp
+public OrderRoundingMethod OrderRoundingMethod { get; }
+```
+
+
+---
+
 #### PricesIncludeTax
 
 ```csharp

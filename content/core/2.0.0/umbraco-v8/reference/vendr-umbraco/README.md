@@ -6,7 +6,6 @@ description: API reference for Vendr.Umbraco in Vendr, the eCommerce solution fo
 
 | Namespace |
 | --- |
-| [Vendr.Core.Discounts.Rules](vendr-core-discounts-rules/) |
 | [Vendr.Extensions](vendr-extensions/) |
 | [Vendr.Umbraco](vendr-umbraco/) |
 | [Vendr.Umbraco.Adapters](vendr-umbraco-adapters/) |
@@ -20,9 +19,11 @@ description: API reference for Vendr.Umbraco in Vendr, the eCommerce solution fo
 | [Vendr.Umbraco.Events.Notification](vendr-umbraco-events-notification/) |
 | [Vendr.Umbraco.Examine](vendr-umbraco-examine/) |
 | [Vendr.Umbraco.Extractors](vendr-umbraco-extractors/) |
+| [Vendr.Umbraco.HealthChecks](vendr-umbraco-healthchecks/) |
 | [Vendr.Umbraco.Helpers](vendr-umbraco-helpers/) |
 | [Vendr.Umbraco.Limiters](vendr-umbraco-limiters/) |
 | [Vendr.Umbraco.Logging](vendr-umbraco-logging/) |
+| [Vendr.Umbraco.Mail](vendr-umbraco-mail/) |
 | [Vendr.Umbraco.Models](vendr-umbraco-models/) |
 | [Vendr.Umbraco.PropertyEditors.Stock](vendr-umbraco-propertyeditors-stock/) |
 | [Vendr.Umbraco.PropertyEditors.VariantsEditor](vendr-umbraco-propertyeditors-variantseditor/) |

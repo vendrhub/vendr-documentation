@@ -6,7 +6,7 @@ description: API reference for Vendr.Core.Pipelines.OrderLine.Tasks in Vendr, th
 
 | Public Type | Description |
 | --- | --- |
-| class [CalculateOrderLineDiscountedPricesTask](calculateorderlinediscountedpricestask/) |  |
+| class [CalculateOrderLineAdjustedPricesTask](calculateorderlineadjustedpricestask/) |  |
 | class [CalculateOrderLineTaxRateTask](calculateorderlinetaxratetask/) |  |
 | class [CalculateOrderLineTotalPriceAdjustmentTask](calculateorderlinetotalpriceadjustmenttask/) |  |
 | class [CalculateOrderLineTotalPricePreviousAdjustmentsTask](calculateorderlinetotalpricepreviousadjustmentstask/) |  |

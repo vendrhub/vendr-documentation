@@ -45,6 +45,9 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | class [EmailTemplateReadOnly](emailtemplatereadonly/) |  |
 | abstract class [EntityBase&lt;TState&gt;](entitybase-1/) | Base class for a Vendr entity |
 | abstract class [EntityBase](entitybase/) | Base class for a Vendr entity |
+| class [EntityCacheIntegrityCheckOptions](entitycacheintegritycheckoptions/) |  |
+| class [EntityCacheIntegrityCheckResult](entitycacheintegritycheckresult/) |  |
+| class [EntityCacheIntegrityCheckResultEntry](entitycacheintegritycheckresultentry/) |  |
 | abstract class [EntityStateBase](entitystatebase/) |  |
 | enum [ExportStrategy](exportstrategy/) |  |
 | class [ExportTemplate](exporttemplate/) |  |
@@ -96,6 +99,7 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | enum [OrderPriceType](orderpricetype/) |  |
 | class [OrderReadOnly](orderreadonly/) | A Vendr read only Order entity |
 | class [OrderReference](orderreference/) |  |
+| enum [OrderRoundingMethod](orderroundingmethod/) |  |
 | class [OrderShippingInfo](ordershippinginfo/) | The shipping information for a Vendr order |
 | class [OrderStatus](orderstatus/) |  |
 | enum [OrderStatusCode](orderstatuscode/) |  |

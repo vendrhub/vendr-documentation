@@ -21,7 +21,7 @@ public class ValidateUniquePrintTemplateAlias :
 #### ValidateUniquePrintTemplateAlias
 
 ```csharp
-public ValidateUniquePrintTemplateAlias(IPrintTemplateService emailTemplateService)
+public ValidateUniquePrintTemplateAlias(IPrintTemplateService printTemplateService)
 ```
 
 

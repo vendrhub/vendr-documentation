@@ -26,11 +26,13 @@ description: API reference for Vendr.Core in Vendr, the eCommerce solution for U
 | [Vendr.Core.Events.Validation.Handlers.Currency](vendr-core-events-validation-handlers-currency/) |
 | [Vendr.Core.Events.Validation.Handlers.Discount](vendr-core-events-validation-handlers-discount/) |
 | [Vendr.Core.Events.Validation.Handlers.EmailTemplate](vendr-core-events-validation-handlers-emailtemplate/) |
+| [Vendr.Core.Events.Validation.Handlers.ExportTemplate](vendr-core-events-validation-handlers-exporttemplate/) |
 | [Vendr.Core.Events.Validation.Handlers.GiftCard](vendr-core-events-validation-handlers-giftcard/) |
 | [Vendr.Core.Events.Validation.Handlers.Order](vendr-core-events-validation-handlers-order/) |
 | [Vendr.Core.Events.Validation.Handlers.OrderStatus](vendr-core-events-validation-handlers-orderstatus/) |
 | [Vendr.Core.Events.Validation.Handlers.PaymentMethod](vendr-core-events-validation-handlers-paymentmethod/) |
 | [Vendr.Core.Events.Validation.Handlers.PrintTemplate](vendr-core-events-validation-handlers-printtemplate/) |
+| [Vendr.Core.Events.Validation.Handlers.ProductAttribute](vendr-core-events-validation-handlers-productattribute/) |
 | [Vendr.Core.Events.Validation.Handlers.Region](vendr-core-events-validation-handlers-region/) |
 | [Vendr.Core.Events.Validation.Handlers.ShippingMethod](vendr-core-events-validation-handlers-shippingmethod/) |
 | [Vendr.Core.Events.Validation.Handlers.Store](vendr-core-events-validation-handlers-store/) |
@@ -38,6 +40,7 @@ description: API reference for Vendr.Core in Vendr, the eCommerce solution for U
 | [Vendr.Core.Finders](vendr-core-finders/) |
 | [Vendr.Core.Generators](vendr-core-generators/) |
 | [Vendr.Core.Json](vendr-core-json/) |
+| [Vendr.Core.Mail](vendr-core-mail/) |
 | [Vendr.Core.Models](vendr-core-models/) |
 | [Vendr.Core.Models.Reporting](vendr-core-models-reporting/) |
 | [Vendr.Core.PaymentProviders](vendr-core-paymentproviders/) |
