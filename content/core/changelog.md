@@ -3,9 +3,48 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.1.0  
+**Date:** TBD    
+**Description:** Minor release with new features and some breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added `Carts` feature to `Commerce` section.
+* Added `ProductAdapterBase` as new base class for product adapters.
+* Added `Cart` category for email, print and export templates.
+* Added `cart.editor.config.js` file support for controlling editable cart fields differently to editable order fields.
+* Added `IUmbracoNodeStoreFinder` interface to allow custom ways of locating a store from an Umbraco node. OOTB finders and their order are `UmbracoPublishedContentStoreFinder`, `UmbracoLuceneStoreFinder` and `UmbracoContentStoreFinder`. Additional store finders can be added via the `WithUmbracoNodeStoreFinders` collection builder API available on the `IUmbracoBuilder` interface.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Order editor customer information dialog now allows the countries to be edited.
+* Order search now searches the customer email too.
+* Updated all places that located a store based on an Umbraco node / content item to use the new `IUmbracoNodeStoreFinder` implementations.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed bug when searching for orders that have an email address assigned (previously threw malformed SQL error).
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+* `IProductAdapter` now exposes `SearchProductSummaries`, `GetProductVariantAttributes` and `SearchProductVariantSummaries` methods for editable carts support.
+* `IProductAdapter`, `IStockService`, `IProductService`, `IVendrApi` methods that accept a `productReference` / `productVariantReference` parameter now receive a `storeId` parameter as well.
+* `IPaymentCalculator` and `IShippingCalculator` now accept a nullable `countrId` parameter.
+
+</changelog-group>
+</changelog>
+
 ## v2.0.6  
 **Date:** 2022-02-01    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
 
 <changelog>
 <changelog-group category="Added">  
@@ -36,6 +75,8 @@ description: Changelog for the Core Vendr product
 **Date:** 2022-01-17    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
 
+---  
+
 <changelog>
 <changelog-group category="Changed">  
 
@@ -53,6 +94,8 @@ description: Changelog for the Core Vendr product
 ## v2.0.4  
 **Date:** 2021-12-06    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
 
 <changelog>
 <changelog-group category="Changed">  
@@ -84,6 +127,8 @@ description: Changelog for the Core Vendr product
 ## v2.0.2  
 **Date:** 2021-10-20    
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
 
 <changelog>
 <changelog-group category="Fixed">  
@@ -124,6 +169,8 @@ description: Changelog for the Core Vendr product
 ## v2.0.0  
 **Date:** 2021-10-07   
 **Description:** Major new release with breaking changes
+
+---  
 
 <changelog>
 <changelog-group category="Added">  
