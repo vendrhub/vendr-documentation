@@ -22,6 +22,33 @@ public IQuerySpecification<OrderReadOnly> ByCustomer(string customerReferenceOrE
 
 ---
 
+#### CreatedAfter
+
+```csharp
+public IQuerySpecification<OrderReadOnly> CreatedAfter(DateTime date)
+```
+
+
+---
+
+#### CreatedBefore
+
+```csharp
+public IQuerySpecification<OrderReadOnly> CreatedBefore(DateTime date)
+```
+
+
+---
+
+#### CreatedBetween
+
+```csharp
+public IQuerySpecification<OrderReadOnly> CreatedBetween(DateTime fromDate, DateTime toDate)
+```
+
+
+---
+
 #### FromStore
 
 ```csharp
@@ -41,10 +68,40 @@ public IQuerySpecification<OrderReadOnly> HasCartNumber(string cartNumber,
 
 ---
 
-#### HasEmailAddress
+#### HasCustomerEmailAddress
 
 ```csharp
-public IQuerySpecification<OrderReadOnly> HasEmailAddress()
+public IQuerySpecification<OrderReadOnly> HasCustomerEmailAddress()
+```
+
+
+---
+
+#### HasCustomerEmailAddress
+
+```csharp
+public IQuerySpecification<OrderReadOnly> HasCustomerEmailAddress(string email, 
+    StringComparisonType comparisonType = StringComparisonType.Equals)
+```
+
+
+---
+
+#### HasCustomerFirstName
+
+```csharp
+public IQuerySpecification<OrderReadOnly> HasCustomerFirstName(string firstName, 
+    StringComparisonType comparisonType = StringComparisonType.Equals)
+```
+
+
+---
+
+#### HasCustomerLastName
+
+```csharp
+public IQuerySpecification<OrderReadOnly> HasCustomerLastName(string lastName, 
+    StringComparisonType comparisonType = StringComparisonType.Equals)
 ```
 
 
@@ -190,6 +247,24 @@ public IQuerySpecification<OrderReadOnly> HasShippingMethod(Guid paymentMethodId
 
 ```csharp
 public IQuerySpecification<OrderReadOnly> HasShippingMethod(IEnumerable<Guid> paymentMethodIds)
+```
+
+
+---
+
+#### HasTag
+
+```csharp
+public IQuerySpecification<OrderReadOnly> HasTag(string tag)
+```
+
+
+---
+
+#### HasTags
+
+```csharp
+public IQuerySpecification<OrderReadOnly> HasTags(IEnumerable<string> tags)
 ```
 
 

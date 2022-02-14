@@ -11,6 +11,7 @@ description: API reference for Vendr.Umbraco.Web in Vendr, the eCommerce solutio
 | [Vendr.Umbraco.Web.ContentEditing](vendr-umbraco-web-contentediting/) |
 | [Vendr.Umbraco.Web.Controllers](vendr-umbraco-web-controllers/) |
 | [Vendr.Umbraco.Web.Events.Notification](vendr-umbraco-web-events-notification/) |
+| [Vendr.Umbraco.Web.Filters](vendr-umbraco-web-filters/) |
 | [Vendr.Umbraco.Web.Models](vendr-umbraco-web-models/) |
 | [Vendr.Umbraco.Web.Models.Mappers](vendr-umbraco-web-models-mappers/) |
 | [Vendr.Umbraco.Web.Models.Reporting](vendr-umbraco-web-models-reporting/) |

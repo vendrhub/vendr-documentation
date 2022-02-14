@@ -29,6 +29,7 @@ description: API reference for Vendr.Umbraco.Web.Controllers in Vendr, the eComm
 | class [ProductController](productcontroller/) |  |
 | class [ShippingMethodController](shippingmethodcontroller/) |  |
 | class [StoreController](storecontroller/) |  |
+| class [TagController](tagcontroller/) |  |
 | class [TaxController](taxcontroller/) |  |
 | class [UtilsController](utilscontroller/) |  |
 | abstract class [VendrAuthorizedJsonControllerBase](vendrauthorizedjsoncontrollerbase/) |  |

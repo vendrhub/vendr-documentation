@@ -132,6 +132,15 @@ public static PipelineTaskCollectionBuilder<CalculateOrderTransactionAmountPipel
 
 ---
 
+#### WithCartAdvancedFilters
+
+```csharp
+public static CartAdvancedFilterCollectionBuilder WithCartAdvancedFilters(this Composition composer)
+```
+
+
+---
+
 #### WithDomainEvent&lt;TEvent&gt;
 
 ```csharp
@@ -169,6 +178,16 @@ public static PipelineTaskCollectionBuilder<LimitOrderDiscountsPipeline, OrderCa
 public static VendrEventHandlerComposer<TEvent, INotificationEvent> WithNotificationEvent<TEvent>(
     this Composition composer)
     where TEvent : INotificationEvent
+```
+
+
+---
+
+#### WithOrderAdvancedFilters
+
+```csharp
+public static OrderAdvancedFilterCollectionBuilder WithOrderAdvancedFilters(
+    this Composition composer)
 ```
 
 

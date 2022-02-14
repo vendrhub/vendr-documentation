@@ -8,7 +8,7 @@ A Vendr read only Order entity
 
 ```csharp
 public class OrderReadOnly : StoreAggregateBase<OrderReadOnly, Order, OrderState>, 
-    IHasReadableOrderLines, IHasReadableProperties
+    IHasReadableOrderLines, IHasReadableProperties, ITaggableReadOnlyEntity
 ```
 
 **Inheritance**
@@ -16,6 +16,7 @@ public class OrderReadOnly : StoreAggregateBase<OrderReadOnly, Order, OrderState
 * class [StoreAggregateBase&lt;TReadOnlySelf,TWritableSelf,TState&gt;](../storeaggregatebase-3/)
 * interface [IHasReadableOrderLines](../ihasreadableorderlines/)
 * interface [IHasReadableProperties](../ihasreadableproperties/)
+* interface [ITaggableReadOnlyEntity](../itaggablereadonlyentity/)
 
 **Namespace**
 * [Vendr.Core.Models](../)
@@ -248,6 +249,17 @@ Gets the subtotal price of the order
 
 ```csharp
 public ReadOnlyOrderSubtotalPrice SubtotalPrice { get; }
+```
+
+
+---
+
+#### Tags
+
+Gets the list of tags assigned to this order
+
+```csharp
+public virtual IReadOnlyCollection<string> Tags { get; }
 ```
 
 

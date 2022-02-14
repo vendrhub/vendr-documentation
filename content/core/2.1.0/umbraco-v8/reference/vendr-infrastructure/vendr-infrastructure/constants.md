@@ -462,6 +462,17 @@ public const string StoreAllowedUserRole;
 
 ---
 
+#### StoreEntityTag
+
+The Store Entity Tag database table name
+
+```csharp
+public const string StoreEntityTag;
+```
+
+
+---
+
 #### TaxClass
 
 The Tax Class database table name

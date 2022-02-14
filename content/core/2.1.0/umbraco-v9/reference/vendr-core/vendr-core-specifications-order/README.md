@@ -10,9 +10,12 @@ description: API reference for Vendr.Core.Specifications.Order in Vendr, the eCo
 | interface [IOrderSortSpecificationFactory](iordersortspecificationfactory/) |  |
 | interface [IOrderSpecificationVisitor](iorderspecificationvisitor/) |  |
 | class [OrderByCustomerSpecification](orderbycustomerspecification/) |  |
+| class [OrderCreatedBetweenSpecification](ordercreatedbetweenspecification/) |  |
 | class [OrderFromStoreSpecification](orderfromstorespecification/) |  |
 | class [OrderHasCartNumberSpecification](orderhascartnumberspecification/) |  |
-| class [OrderHasEmailAddressSpecification](orderhasemailaddressspecification/) |  |
+| class [OrderHasCustomerEmailAddressSpecification](orderhascustomeremailaddressspecification/) |  |
+| class [OrderHasCustomerFirstNameSpecification](orderhascustomerfirstnamespecification/) |  |
+| class [OrderHasCustomerLastNameSpecification](orderhascustomerlastnamespecification/) |  |
 | class [OrderHasOrderLinesSpecification](orderhasorderlinesspecification/) |  |
 | class [OrderHasOrderLineWithProductSpecification](orderhasorderlinewithproductspecification/) |  |
 | class [OrderHasOrderLineWithPropertySpecification](orderhasorderlinewithpropertyspecification/) |  |
@@ -22,6 +25,7 @@ description: API reference for Vendr.Core.Specifications.Order in Vendr, the eCo
 | class [OrderHasPaymentStatusSpecification](orderhaspaymentstatusspecification/) |  |
 | class [OrderHasPropertySpecification](orderhaspropertyspecification/) |  |
 | class [OrderHasShippingMethodSpecification](orderhasshippingmethodspecification/) |  |
+| class [OrderHasTagSpecification](orderhastagspecification/) |  |
 | class [OrderInCurrencySpecification](orderincurrencyspecification/) |  |
 | class [OrderIsDiscountedSpecification](orderisdiscountedspecification/) |  |
 | class [OrderIsFinalizedSpecification](orderisfinalizedspecification/) |  |

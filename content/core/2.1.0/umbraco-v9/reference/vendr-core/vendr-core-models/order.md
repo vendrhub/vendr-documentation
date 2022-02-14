@@ -7,12 +7,13 @@ description: API reference for Order in Vendr, the eCommerce solution for Umbrac
 A Vendr writable Order entity
 
 ```csharp
-public class Order : OrderReadOnly
+public class Order : OrderReadOnly, ITaggableWritableEntity<Order>
 ```
 
 **Inheritance**
 
 * class [OrderReadOnly](../orderreadonly/)
+* interface [ITaggableWritableEntity&lt;TEntity&gt;](../itaggablewritableentity-1/)
 
 **Namespace**
 * [Vendr.Core.Models](../)
@@ -196,6 +197,48 @@ The updated [`Order`](../order/) entity
 
 ---
 
+#### AddTag
+
+Adds a tag to the order
+
+```csharp
+public Order AddTag(string tag)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| tag | The tag to add |
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
+#### AddTags
+
+Adds a series of tag to the order
+
+```csharp
+public Order AddTags(IEnumerable<string> tags)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| tags | The tags to add |
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
 #### AssignToCustomer
 
 Assigns the order to a customer
@@ -268,6 +311,21 @@ Clears the current [`ShippingMethod`](../shippingmethod/) of the order
 
 ```csharp
 public Order ClearShippingMethod()
+```
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
+#### ClearTags
+
+Clears all the tags assigned to this order
+
+```csharp
+public Order ClearTags()
 ```
 
 **Returns**
@@ -486,6 +544,48 @@ public Order RemoveProperty(string alias)
 | Parameter | Description |
 | --- | --- |
 | alias | The alias of the property to remove |
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
+#### RemoveTag
+
+Removes a tag from the order
+
+```csharp
+public Order RemoveTag(string tag)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| tag | The tags to remove |
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
+#### RemoveTags
+
+Removes a series of from the order
+
+```csharp
+public Order RemoveTags(IEnumerable<string> tags)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| tags | The tags to remove |
 
 **Returns**
 
@@ -887,6 +987,28 @@ public Order SetShippingMethod(Guid? shippingMethodId)
 | Parameter | Description |
 | --- | --- |
 | shippingMethodId | The ID of the [`ShippingMethod`](../shippingmethod/) to set the order to |
+
+**Returns**
+
+The updated [`Order`](../order/) entity
+
+
+---
+
+#### SetTags
+
+Sets the rags of the order
+
+```csharp
+public Order SetTags(IEnumerable<string> tags, SetBehavior setBehavior = SetBehavior.Replace)
+```
+
+**Parameters**
+
+| Parameter | Description |
+| --- | --- |
+| tags | The tags to remove |
+| setBehavior | The behavior of the set operation, whether to `Merge` the tags into the orders existing tags collection or `Replace` the orders tags collection entirely |
 
 **Returns**
 

@@ -18,7 +18,7 @@ public interface IVendrApi : ICachedEntityService<CountryReadOnly>,
     IEmailTemplateService, IExportTemplateService, IGiftCardService, IOrderService, 
     IOrderStatusService, IPaymentMethodService, IPaymentProviderService, IPaymentService, 
     IPrintTemplateService, IProductAttributeService, IProductService, ISessionManager, 
-    IShippingMethodService, IStoreService, ITaxService
+    IShippingMethodService, IStoreService, ITagService, ITaxService
 ```
 
 **Inheritance**
@@ -41,6 +41,7 @@ public interface IVendrApi : ICachedEntityService<CountryReadOnly>,
 * interface [ISessionManager](../../vendr-core-session/isessionmanager/)
 * interface [IShippingMethodService](../../vendr-core-services/ishippingmethodservice/)
 * interface [IStoreService](../../vendr-core-services/istoreservice/)
+* interface [ITagService](../../vendr-core-services/itagservice/)
 * interface [ITaxService](../../vendr-core-services/itaxservice/)
 
 **Namespace**

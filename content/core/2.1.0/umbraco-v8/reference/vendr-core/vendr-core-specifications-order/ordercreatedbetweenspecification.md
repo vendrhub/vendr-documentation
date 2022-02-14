@@ -1,11 +1,11 @@
 ---
-title: OrderHasEmailAddressSpecification
-description: API reference for OrderHasEmailAddressSpecification in Vendr, the eCommerce solution for Umbraco
+title: OrderCreatedBetweenSpecification
+description: API reference for OrderCreatedBetweenSpecification in Vendr, the eCommerce solution for Umbraco
 ---
-## OrderHasEmailAddressSpecification
+## OrderCreatedBetweenSpecification
 
 ```csharp
-public class OrderHasEmailAddressSpecification : IQuerySpecification<OrderReadOnly>, 
+public class OrderCreatedBetweenSpecification : IQuerySpecification<OrderReadOnly>, 
     ISpecification<OrderReadOnly>
 ```
 
@@ -19,12 +19,28 @@ public class OrderHasEmailAddressSpecification : IQuerySpecification<OrderReadOn
 
 ### Constructors
 
-#### OrderHasEmailAddressSpecification
-
-The default constructor.
+#### OrderCreatedBetweenSpecification
 
 ```csharp
-public OrderHasEmailAddressSpecification()
+public OrderCreatedBetweenSpecification(DateTime? fromDate, DateTime? toDate)
+```
+
+
+### Fields
+
+#### FromDate
+
+```csharp
+public DateTime? FromDate;
+```
+
+
+---
+
+#### ToDate
+
+```csharp
+public DateTime? ToDate;
 ```
 
 

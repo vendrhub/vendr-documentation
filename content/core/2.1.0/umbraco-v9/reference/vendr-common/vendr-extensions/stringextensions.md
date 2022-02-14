@@ -115,6 +115,24 @@ public static bool InvariantContains(this IEnumerable<string> compare, string co
 
 ---
 
+#### InvariantEndsWith
+
+```csharp
+public static bool InvariantEndsWith(this string compare, string compareTo)
+```
+
+
+---
+
+#### InvariantStartsWith
+
+```csharp
+public static bool InvariantStartsWith(this string compare, string compareTo)
+```
+
+
+---
+
 #### IsComplexJson
 
 Tries to figure out if the input string is a serialized JSON object/array

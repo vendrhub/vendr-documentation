@@ -87,6 +87,8 @@ description: API reference for Vendr.Core.Models in Vendr, the eCommerce solutio
 | static class [Iso4217](iso4217/) |  |
 | interface [ISoftDeletable](isoftdeletable/) |  |
 | interface [ISortable](isortable/) |  |
+| interface [ITaggableReadOnlyEntity](itaggablereadonlyentity/) |  |
+| interface [ITaggableWritableEntity&lt;TEntity&gt;](itaggablewritableentity-1/) |  |
 | class [LazyProperty](lazyproperty/) |  |
 | enum [MatchType](matchtype/) |  |
 | class [Order](order/) | A Vendr writable Order entity |

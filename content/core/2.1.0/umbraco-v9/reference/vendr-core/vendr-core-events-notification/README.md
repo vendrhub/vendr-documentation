@@ -131,6 +131,9 @@ description: API reference for Vendr.Core.Events.Notification in Vendr, the eCom
 | class [OrderStatusSavingNotification](orderstatussavingnotification/) |  |
 | class [OrderStatusUpdatedNotification](orderstatusupdatednotification/) |  |
 | class [OrderStatusUpdatingNotification](orderstatusupdatingnotification/) |  |
+| class [OrderTagsChangedNotification](ordertagschangednotification/) |  |
+| abstract class [OrderTagsChangeNotificationBase&lt;TEntity&gt;](ordertagschangenotificationbase-1/) |  |
+| class [OrderTagsChangingNotification](ordertagschangingnotification/) |  |
 | class [OrderTaxClassChangedNotification](ordertaxclasschangednotification/) |  |
 | abstract class [OrderTaxClassChangeNotificationBase&lt;TEntity&gt;](ordertaxclasschangenotificationbase-1/) |  |
 | class [OrderTaxClassChangingNotification](ordertaxclasschangingnotification/) |  |

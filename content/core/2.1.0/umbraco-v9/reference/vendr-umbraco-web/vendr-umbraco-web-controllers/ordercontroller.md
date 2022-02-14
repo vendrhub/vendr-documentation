@@ -21,7 +21,7 @@ public class OrderController : OrderControllerBase
 
 ```csharp
 public OrderController(IBackOfficeSecurityAccessor backOfficeSecurityAccesor, 
-    VendrContext vendrContext)
+    VendrContext vendrContext, OrderAdvancedFilterCollection advancedFilters)
 ```
 
 
@@ -67,6 +67,15 @@ public IActionResult DeleteOrder(Guid orderId)
 
 ```csharp
 public IActionResult GetOrder(Guid orderId)
+```
+
+
+---
+
+#### GetOrderAdvancedFilters
+
+```csharp
+public IActionResult GetOrderAdvancedFilters()
 ```
 
 

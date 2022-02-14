@@ -20,7 +20,7 @@ public class OrderController : OrderControllerBase
 #### OrderController
 
 ```csharp
-public OrderController(VendrContext vendrContext)
+public OrderController(VendrContext vendrContext, OrderAdvancedFilterCollection advancedFilters)
 ```
 
 
@@ -66,6 +66,15 @@ public IHttpActionResult DeleteOrder(Guid orderId)
 
 ```csharp
 public IHttpActionResult GetOrder(Guid orderId)
+```
+
+
+---
+
+#### GetOrderAdvancedFilters
+
+```csharp
+public IHttpActionResult GetOrderAdvancedFilters()
 ```
 
 

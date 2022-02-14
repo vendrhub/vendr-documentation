@@ -289,6 +289,15 @@ public string SubtotalPriceWithPreviousAdjustments { get; set; }
 
 ---
 
+#### Tags
+
+```csharp
+public List<string> Tags { get; set; }
+```
+
+
+---
+
 #### TotalGiftCardAdjustment
 
 ```csharp

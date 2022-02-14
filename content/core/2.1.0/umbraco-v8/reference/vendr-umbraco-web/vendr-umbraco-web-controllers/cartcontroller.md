@@ -20,7 +20,7 @@ public class CartController : OrderControllerBase
 #### CartController
 
 ```csharp
-public CartController(VendrContext vendrContext)
+public CartController(VendrContext vendrContext, CartAdvancedFilterCollection advancedFilters)
 ```
 
 
@@ -57,6 +57,15 @@ public IHttpActionResult DeleteCart(Guid cartId)
 
 ```csharp
 public IHttpActionResult GetCart(Guid cartId)
+```
+
+
+---
+
+#### GetCartAdvancedFilters
+
+```csharp
+public IHttpActionResult GetCartAdvancedFilters()
 ```
 
 

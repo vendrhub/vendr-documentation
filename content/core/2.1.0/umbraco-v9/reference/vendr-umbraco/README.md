@@ -20,6 +20,8 @@ description: API reference for Vendr.Umbraco in Vendr, the eCommerce solution fo
 | [Vendr.Umbraco.Events.Notification](vendr-umbraco-events-notification/) |
 | [Vendr.Umbraco.Examine](vendr-umbraco-examine/) |
 | [Vendr.Umbraco.Extractors](vendr-umbraco-extractors/) |
+| [Vendr.Umbraco.Filters](vendr-umbraco-filters/) |
+| [Vendr.Umbraco.Filters.Implement](vendr-umbraco-filters-implement/) |
 | [Vendr.Umbraco.Finders](vendr-umbraco-finders/) |
 | [Vendr.Umbraco.HealthChecks](vendr-umbraco-healthchecks/) |
 | [Vendr.Umbraco.Helpers](vendr-umbraco-helpers/) |

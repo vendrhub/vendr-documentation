@@ -105,6 +105,8 @@ description: API reference for Vendr.Core.Events.Validation in Vendr, the eComme
 | class [ValidateOrderStatusNameChange](validateorderstatusnamechange/) |  |
 | class [ValidateOrderStatusSave](validateorderstatussave/) |  |
 | class [ValidateOrderStatusUpdate](validateorderstatusupdate/) |  |
+| class [ValidateOrderTagAdd](validateordertagadd/) |  |
+| class [ValidateOrderTagRemove](validateordertagremove/) |  |
 | class [ValidateOrderTaxClassChange](validateordertaxclasschange/) |  |
 | class [ValidateOrderTransactionUpdate](validateordertransactionupdate/) |  |
 | class [ValidateOrderUpdate](validateorderupdate/) |  |

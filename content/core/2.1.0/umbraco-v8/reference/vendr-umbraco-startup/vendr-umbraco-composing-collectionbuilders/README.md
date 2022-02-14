@@ -7,11 +7,13 @@ description: API reference for Vendr.Umbraco.Composing.CollectionBuilders in Ven
 | Public Type | Description |
 | --- | --- |
 | class [AmountAdjusterCollectionBuilder](amountadjustercollectionbuilder/) |  |
+| class [CartAdvancedFilterCollectionBuilder](cartadvancedfiltercollectionbuilder/) |  |
 | class [DiscountRewardProviderCollectionBuilder](discountrewardprovidercollectionbuilder/) |  |
 | class [DiscountRuleProviderCollectionBuilder](discountruleprovidercollectionbuilder/) |  |
 | class [DummyCollection&lt;TItem&gt;](dummycollection-1/) |  |
 | class [EventHandlerCollectionBuilder&lt;TEvent&gt;](eventhandlercollectionbuilder-1/) |  |
 | abstract class [LazyCollectionBuilderBase&lt;TBuilder,TCollection,TItem&gt;](lazycollectionbuilderbase-3/) |  |
+| class [OrderAdvancedFilterCollectionBuilder](orderadvancedfiltercollectionbuilder/) |  |
 | abstract class [OrderedCollectionBuilderBase&lt;TBuilder,TCollection,TItem&gt;](orderedcollectionbuilderbase-3/) |  |
 | class [OrderFinderCollectionBuilder](orderfindercollectionbuilder/) |  |
 | class [PaymentProviderCollectionBuilder](paymentprovidercollectionbuilder/) |  |

@@ -21,7 +21,7 @@ public class CartController : OrderControllerBase
 
 ```csharp
 public CartController(IBackOfficeSecurityAccessor backOfficeSecurityAccesor, 
-    VendrContext vendrContext)
+    VendrContext vendrContext, CartAdvancedFilterCollection advancedFilters)
 ```
 
 
@@ -58,6 +58,15 @@ public IActionResult DeleteCart(Guid cartId)
 
 ```csharp
 public IActionResult GetCart(Guid cartId)
+```
+
+
+---
+
+#### GetCartAdvancedFilters
+
+```csharp
+public IActionResult GetCartAdvancedFilters()
 ```
 
 

@@ -33,7 +33,8 @@ public VendrServiceContext(Lazy<ICountryService> countryService,
     Lazy<IProductAttributeService> productAttributeService, Lazy<IEntityService> entityService, 
     Lazy<IActivityLogService> activityLogService, Lazy<IAnalyticsService> analyticsService, 
     Lazy<LicensingService> licensingService, 
-    Lazy<IRegisteredCustomerInfoService> registeredCustomerInfoService)
+    Lazy<IRegisteredCustomerInfoService> registeredCustomerInfoService, 
+    Lazy<ITagService> tagService)
 ```
 
 **Parameters**
@@ -63,6 +64,7 @@ public VendrServiceContext(Lazy<ICountryService> countryService,
 | analyticsService |  |
 | licensingService |  |
 | registeredCustomerInfoService |  |
+| tagService |  |
 
 
 ### Properties
@@ -293,6 +295,17 @@ Gets the [`IStoreService`](../istoreservice/)
 
 ```csharp
 public IStoreService StoreService { get; }
+```
+
+
+---
+
+#### TagService
+
+Gets the [`ITagService`](../itagservice/)
+
+```csharp
+public ITagService TagService { get; }
 ```
 
 

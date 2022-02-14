@@ -43,6 +43,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | interface [IStockService](istockservice/) |  |
 | interface [IStoreAnalyticsService](istoreanalyticsservice/) |  |
 | interface [IStoreService](istoreservice/) | Define the Vendr Store service |
+| interface [ITagService](itagservice/) |  |
 | interface [ITaxService](itaxservice/) | Defines the Vendr Tax service |
 | interface [ITranslationService](itranslationservice/) | Defines the Vendr Translation service |
 | class [OrderService](orderservice/) |  |
@@ -59,6 +60,7 @@ description: API reference for Vendr.Core.Services in Vendr, the eCommerce solut
 | abstract class [ServiceBase&lt;TSelf&gt;](servicebase-1/) |  |
 | class [ShippingMethodService](shippingmethodservice/) |  |
 | class [StoreService](storeservice/) |  |
+| class [TagService](tagservice/) |  |
 | class [TaxService](taxservice/) |  |
 | class [VendrServiceContext](vendrservicecontext/) | A central service context for easy access to all of Vendr's services |
 | abstract class [VendrStockServiceBase&lt;TSelf&gt;](vendrstockservicebase-1/) |  |
