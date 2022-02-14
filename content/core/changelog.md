@@ -20,6 +20,7 @@ description: Changelog for the Core Vendr product
 * Added Change Status bulk action to allow changing the order status of multiple orders at once ([#335](https://github.com/vendrhub/vendr/issues/335)).
 * Added advanced search filter feature to allow searching for orders / carts in a more targeted way. This can also be extended by adding custom `AdvancedFilterBase` implementations to the DI container.
 * Added Order tagging support to allow taging orders with custom tags that can be used for filtering ([#324](https://github.com/vendrhub/vendr/issues/324)).
+* Added custom `OutfieldDigitalExchangeRateService` and set as the default implementation that just acts as a proxy to the exchangerate.host API. This is to ensure that we can fix this in the future without people needing to upgrade, should that service ever stop working like the Exchange Rates API service did.
 
 </changelog-group>
 <changelog-group category="Changed">  
