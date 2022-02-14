@@ -17,6 +17,9 @@ description: Changelog for the Core Vendr product
 * Added `Cart` category for email, print and export templates.
 * Added `cart.editor.config.js` file support for controlling editable cart fields differently to editable order fields.
 * Added `IUmbracoNodeStoreFinder` interface to allow custom ways of locating a store from an Umbraco node. OOTB finders and their order are `UmbracoPublishedContentStoreFinder`, `UmbracoLuceneStoreFinder` and `UmbracoContentStoreFinder`. Additional store finders can be added via the `WithUmbracoNodeStoreFinders` collection builder API available on the `IUmbracoBuilder` interface.
+* Added Change Status bulk action to allow changing the order status of multiple orders at once ([#335](https://github.com/vendrhub/vendr/issues/335)).
+* Added advanced search filter feature to allow searching for orders / carts in a more targeted way. This can also be extended by adding custom `AdvancedFilterBase` implementations to the DI container.
+* Added Order tagging support to allow taging orders with custom tags that can be used for filtering ([#324](https://github.com/vendrhub/vendr/issues/324)).
 
 </changelog-group>
 <changelog-group category="Changed">  
@@ -29,12 +32,18 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Fixed">  
 
 * Fixed bug when searching for orders that have an email address assigned (previously threw malformed SQL error).
+* Fixed bug where only admins could pick from store entity pickers ([#342](https://github.com/vendrhub/vendr/issues/342)).
+* Fixed path inconsistencies on Linux due to case sensitive file system ([#341](https://github.com/vendrhub/vendr/issues/341)).
+* Fixed variant item editor not showing variant attribute summary in Umbraco v8.
+* Fixed issue with sorting not working due to change to .NET Core.
+* Fixed error when deleting bundle order lines due to items being deleted in the wrong order and thus causing an FK violation.
+* Fixed styling issues in store entity picker pre-value editor UI.
 
 </changelog-group>
 <changelog-group category="Breaking">  
 
 * `IProductAdapter` now exposes `SearchProductSummaries`, `GetProductVariantAttributes` and `SearchProductVariantSummaries` methods for editable carts support.
-* `IProductAdapter`, `IStockService`, `IProductService`, `IVendrApi` methods that accept a `productReference` / `productVariantReference` parameter now receive a `storeId` parameter as well.
+* `IProductAdapter`, `IStockService`, `IProductService`, `IVendrApi` methods that accept a `productReference` / `productVariantReference` parameter now receive a `storeId` parameter as well ([#339](https://github.com/vendrhub/vendr/issues/339)).
 * `IPaymentCalculator` and `IShippingCalculator` now accept a nullable `countrId` parameter.
 
 </changelog-group>
