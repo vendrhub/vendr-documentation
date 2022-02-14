@@ -4,7 +4,7 @@ description: Changelog for the Core Vendr product
 ---
 
 ## v2.1.0  
-**Date:** TBD    
+**Date:** 2022-02-14  
 **Description:** Minor release with new features and some breaking changes
 
 ---  
