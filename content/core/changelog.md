@@ -45,7 +45,7 @@ description: Changelog for the Core Vendr product
 
 * `IProductAdapter` now exposes `SearchProductSummaries`, `GetProductVariantAttributes` and `SearchProductVariantSummaries` methods for editable carts support.
 * `IProductAdapter`, `IStockService`, `IProductService`, `IVendrApi` methods that accept a `productReference` / `productVariantReference` parameter now receive a `storeId` parameter as well ([#339](https://github.com/vendrhub/vendr/issues/339)).
-* `IPaymentCalculator` and `IShippingCalculator` now accept a nullable `countrId` parameter.
+* `IPaymentCalculator` and `IShippingCalculator` now accept a nullable `countryId` parameter.
 
 </changelog-group>
 </changelog>
