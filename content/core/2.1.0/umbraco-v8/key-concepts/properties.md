@@ -61,7 +61,7 @@ When there are occasions that Vendr needs to capture some information about an O
 
 ## Automatic Properties
 
-For Order Lines, as well as the ability to set Properties manually as outlined above, there is also a build in mechanism within Vendr that can be configured to automatically copy properties from a Product information source to the Order Line automatically, and that is by using the **Product Property Aliases** field on the Store settings screen.
+For Order Lines, as well as the ability to set Properties manually as outlined above, there is also a built-in mechanism within Vendr that can be configured to automatically copy properties from a Product information source to the Order Line automatically, and that is by using the **Product Property Aliases** field on the Store settings screen.
 
 ![Product Property Aliases Configuration](/media/screenshots/product_property_aliases.png)
 

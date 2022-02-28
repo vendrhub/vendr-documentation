@@ -5,7 +5,7 @@ description: Freezing prices for shopping carts in Vendr, the eCommerce solution
 
 Price Freezing in Vendr is the ability to freeze prices for products that are added to the shopping cart. Once an item is added to a cart, Vendr will take a snapshot of the products price and ensure that this price is honored for the life of the shopping cart. By freezing prices in this way it prevents a customers shopping cart suddenly changing in value should a price change occur whilst their cart session is in progress.
 
-By default a product's price is Frozen from the point a product is added to the current Order, and only for the current Currency of the Order. Should the Customer change the Currency of their Order, then a new snapshot of the product price will be taken for that Currency.
+By default, a product's price is frozen from the point a product is added to the current Order, and only for the current Currency of the Order. Should the Customer change the Currency of their Order, then a new snapshot of the product price will be taken for that Currency.
 
 ## Controlling Price Freezing
 
