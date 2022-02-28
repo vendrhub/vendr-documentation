@@ -11,7 +11,7 @@ With this configuration file, you can completely customize the Order Editor inte
 
 ## Example Order Editor Config File
 
-And example of an Order Editor config file would look something like this:
+An example of an Order Editor config file would look something like this:
 
 ````javascript
 {

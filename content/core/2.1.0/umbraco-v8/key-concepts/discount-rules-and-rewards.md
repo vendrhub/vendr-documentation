@@ -5,7 +5,7 @@ description: Define when a Discount should apply and what should be the Reward i
 
 When creating Discounts in the Vendr back-office they are defined using a series of rule and reward builders that let you configure exactly when a Discount should apply and what exactly the Reward should be for that Discount.
 
-Out of the box these builders come with a handful of the most common Rules / Rewards that should suit the majority of web stores needs, however if you should need to create your own Rules / Rewards then these are extendable via a Provider model allowing you to incorporate your own custom logic.
+Out of the box, these builders come with a handful of the most common Rules / Rewards that should suit the majority of web stores needs, however if you should need to create your own Rules / Rewards then these are extendable via a Provider model allowing you to incorporate your own custom logic.
 
 ## Discount Rules
 

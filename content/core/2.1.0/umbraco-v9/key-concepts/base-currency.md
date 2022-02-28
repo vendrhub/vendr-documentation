@@ -3,7 +3,7 @@ title: Base Currency
 description: Base Currency for standardized reporting in Vendr, the eCommerce solution for Umbraco
 ---
 
-Within Vendr we have support for showing analytics reports, including summaries of sales figures. At the same time, Vendr also supports orders being placed in multiple currencies. Together these pose a problem of how to display a succinct sales figure, when the orders that make up those figures are placed in multiple currencies. The answer to this in Vendr is the stores **Base Currency**.
+Within Vendr we have support for showing analytics reports, including summaries of sales figures. At the same time, Vendr also supports orders being placed in multiple currencies. Together these pose a problem of how to display a succinct sales figure, when the orders that make up those figures are placed in multiple currencies. The answer to this in Vendr is the store's **Base Currency**.
 
 When you configure a store you will need to assign a base currency to it. This currency is ultimately there to identify which currency the store should use as it's basis for reports and sales figures regardless of whatever currency the order was placed in.
 

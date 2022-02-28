@@ -13,9 +13,9 @@ The role of the Payment Form is to perform two tasks:
 
 <message-box type="warn" heading="Important">
 
-An Orders Order Number is assigned at the point of the Payment Form being rendered. This is to ensure that an Order has an Order Number prior to redirecting to the Payment Gateway, so that when the customer is redirected to the Confirmation page, there is always an Order number to display
+An Order's Order Number is assigned at the point of the Payment Form being rendered. This is to ensure that an Order has an Order Number prior to redirecting to the Payment Gateway, so that when the customer is redirected to the Confirmation page, there is always an Order Number to display
 
-The reason this is necessary is that many Payment Gateways finalize Orders asynchronously via webhooks, so it is possible that the Customer will be redirected to the Confirmation page prior to actual finalization, so we set it early to ensure it is always available.
+The reason this is necessary is that many Payment Gateways finalize Orders asynchronously via webhooks, so it is possible that the customer will be redirected to the Confirmation page prior to actual finalization, so we set it early to ensure it is always available.
 
 If a customer cancels a payment mid way through the capture process and returns to the Order to make modifications, a new Order Number will be assigned at the point of re-displaying the Payment Form.
 
@@ -36,6 +36,6 @@ Similar in concept to Umbraco's own `Html.BeginUmbracoForm()` method, the Paymen
 
 <message-box type="warn" heading="Important">
 
-It's important to know that the Form by default doesn't contain any button inputs to submit the Form. These must be supplied by the implementer. It is designed this way to ensure that the form will work with the design of the Site in question, so developers can provide any kind of button they wish.
+It's important to know that the Payment Form by default doesn't contain any button inputs to submit the Form. These must be supplied by the implementer. It is designed this way to ensure that the form will work with the design of the Site in question, so developers can provide any kind of button they wish.
 
 </message-box>
