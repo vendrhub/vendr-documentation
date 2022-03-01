@@ -3,6 +3,34 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.1.0   
+**Date:** 2022-03-01  
+**Description:** Minor release with some core refactoring
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added required validation to shipping fields when shipping address is different to billing address.
+* Added placeholders to country and region dropdowns so no value is auto selected.
+
+</changelog-group>
+<changelog-group category="Updated">  
+
+* Switched from an externally hosted Tailwind CSS file to a locally built and purged file of only the CSS used.
+* Updated to the latest Tailwind CSS colour scheme.
+* Removed the use of font-awesome in favour of a some embedded SVGs instead.
+* Removed the use of SSM.js for responsive javascript as it wasn't really necesarry.
+* Removed the use of jQuery entirely in favour of vanilla javascript so that no external JS dependency is required.
+* Switched the logo picker on the checkout doc type to be an Image Media Picker.
+* Updated order summary to use the `TransactionAmount` value rather than `TotalPrice` which doesn't show gift card adjustments.
+* Updated order summary to show address regions when present.
+* Updated shipping / payment method selection screens to take regions into account when looking up options.
+
+</changelog-group>
+</changelog>
+
 ## v2.0.1   
 **Date:** 2021-10-22  
 **Description:** Patch release with minor bug fixes 
