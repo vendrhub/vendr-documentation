@@ -40,7 +40,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 <changelog>
 <changelog-group category="Fixed">  
 
-* Fixed bug with doc types pipeline task failing due to changes in the doc type structure dur to the tabs update.
+* Fixed bug with doc types pipeline task failing due to changes in the doc type structure due to the tabs update.
 
 </changelog-group>
 </changelog>
