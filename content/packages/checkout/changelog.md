@@ -16,7 +16,7 @@ description: Changelog for the Checkout package for Vendr, the eCommerce solutio
 * Added placeholders to country and region dropdowns so no value is auto selected.
 
 </changelog-group>
-<changelog-group category="Updated">  
+<changelog-group category="Changed">  
 
 * Switched from an externally hosted Tailwind CSS file to a locally built and purged file of only the CSS used.
 * Updated to the latest Tailwind CSS colour scheme.
