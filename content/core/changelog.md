@@ -3,6 +3,34 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.1.1  
+**Date:** 2022-03-07  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added constants for the built in payment provider aliases.
+* Added `IUmbracoProductSnapshot` interface to allow snapshots to be swapped out, but still have the default Umbraco node based stock implementation work.
+* Added `ParentOrderLineId` and `ParentBundleId` properties to order lines to be able to easily identify an order lines parent.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Discount `UsageLimit` is set to `0` if `IsUnlimited` is set.
+* Payment provider callback handler without order info now returns OK status if it can't handle the supplied order, rather than Bad Request.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed cart edit form submitting on enter for Discount/Gift Card Codes field ([#344](https://github.com/vendrhub/vendr/issues/344)).
+* Fixed issue with discounts not updating correctly due to deep comparisons not working. Switched from using `DeepEqual` library to `CompareNetObject` library instead ([#347](https://github.com/vendrhub/vendr/issues/347)).
+
+</changelog-group>
+</changelog>
+
 ## v2.1.0  
 **Date:** 2022-02-14  
 **Description:** Minor release with new features and some breaking changes
