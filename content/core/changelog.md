@@ -19,7 +19,7 @@ description: Changelog for the Core Vendr product
 </changelog-group>
 <changelog-group category="Changed">  
 
-* Discount `UsageLimit` is set to `0` if `IsUnlimited` is set.
+* Discount `UsageLimit` is set to `0` if `IsUnlimited` is set to `true`.
 * Payment provider callback handler without order info now returns OK status if it can't handle the supplied order, rather than Bad Request.
 
 </changelog-group>
