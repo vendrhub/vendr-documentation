@@ -25,7 +25,7 @@ using Vendr.Web.Composing;
 
 namespace MyProject
 {
-    [ComposeAfter(typeof(VendrWebComposer))]
+    [ComposeAfter(typeof(VendrComposer))]
     public class Composer : IUserComposer
     {
         public void Compose(Composition composition)
