@@ -3,6 +3,32 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.1.2  
+**Date:** 2022-03-23  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added order activity log to order edit screen ([#351](https://github.com/vendrhub/vendr/issues/351)).
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* We no longer maintain a cache of ALL Gift Cards in memory, instead we do the same as we do with orders and just maintain active Gift Cards on a sliding expiration.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed issue when using `VariantsEditorValueConverter` in background threads due to the use of scoped services. Now no-longer require the affective services to be scoped.
+* Fixed activity logs not recording the user ID of the user that performed the given task ([#350](https://github.com/vendrhub/vendr/issues/350)).
+* Fixed error when saving product attributes due to bug in deep-equals logic ([#354](https://github.com/vendrhub/vendr/issues/354)).
+
+</changelog-group>
+</changelog>
+
 ## v2.1.1  
 **Date:** 2022-03-07  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
