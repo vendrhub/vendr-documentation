@@ -18,7 +18,7 @@ description: Changelog for the Core Vendr product
 </changelog-group>
 <changelog-group category="Fixed"> 
 
-* Fixed order table layour issue due to too large a `colspan` attribute.
+* Fixed order table layout issue due to too large a `colspan` attribute.
 * Fixed recuring tasks having the delay / interval in the wrong order in Umbraco v9.
 * Fixed conflicting routes issue in Umbraco v9.5RC due to Umbraco introducing a new AnalyticsController. Have now prefixed all Vendr controllers with `Vendr` ([#362](https://github.com/vendrhub/vendr/issues/362)).
 * Fixed product related analytics reports not passing the `storeId` into the product adapter when fetching up to date product info ([#364](https://github.com/vendrhub/vendr/issues/364)).
