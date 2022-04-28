@@ -3,6 +3,30 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.1.3  
+**Date:** 2022-04-28  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Changed">  
+
+* Updated price calculation process to set total prices temporarily as the pipelines goes along so that any stage within the calculation process you can get the total prices at the current state.
+* Updated the licensing dialog to display a warning if there is an inactive license installed which usually means the local environment has been updraded beyond the installed licenses upgrade window ([#360](https://github.com/vendrhub/vendr/issues/360)).
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed order table layour issue due to too large a `colspan` attribute.
+* Fixed recuring tasks having the delay / interval in the wrong order in Umbraco v9.
+* Fixed conflicting routes issue in Umbraco v9.5RC due to Umbraco introducing a new AnalyticsController. Have now prefixed all Vendr controllers with `Vendr` ([#362](https://github.com/vendrhub/vendr/issues/362)).
+* Fixed product related analytics reports not passing the `storeId` into the product adapter when fetching up to date product info ([#364](https://github.com/vendrhub/vendr/issues/364)).
+* Fixed bug when using own order editor config view where the order editor still trys to fix notes fields. Now does a null check before attempting. ([#363](https://github.com/vendrhub/vendr/issues/363)).
+
+</changelog-group>
+</changelog>
+
 ## v2.1.2  
 **Date:** 2022-03-23  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
