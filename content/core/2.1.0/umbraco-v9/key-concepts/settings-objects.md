@@ -5,7 +5,7 @@ description: Strongly typed Settings objects in Vendr, the eCommerce solution fo
 
 ## Settings Objects
 
-There are a number of places in Vendr where you can uses Settings Objects to pass configuration to a Provider, such as Discount Rule Providers, Reward Providers and Payment Providers.
+There are a number of places in Vendr where you can use Settings Objects to pass configuration to a Provider, such as Discount Rule Providers, Reward Providers and Payment Providers.
 
 The settings objects have a number of responsibilities.
 
