@@ -3,6 +3,31 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.2.0  
+**Date:** 2022-05-06  
+**Description:** Minor release with some breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added `GetCurrentOrder` method to `SessionManager` that accepts a `customerReference` to allow finding an order via `IOrderFinder`.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* `GetCurrentOrder` on `SessionManager` with no `customerReference` parameter now calls the new `GetCurrentOrder` method passing in the current logged in members ID. This shouldn't change any behaviour for the majority of stores without order finders, but if intalls do have order finders you'll now need to pass `null` to the `customerReference` parameter if you want to get the current order whilst avoiding using order finders.
+
+</changelog-group>
+<changelog-group category="Breaking"> 
+
+* `IOrderFinder.FindOrder` now accetps an additional `storeId` parameter.
+* `IOrderService.FindOrder` now accetps an additional `storeId` parameter.
+
+</changelog-group>
+</changelog>
+
 ## v2.1.3  
 **Date:** 2022-04-28  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
