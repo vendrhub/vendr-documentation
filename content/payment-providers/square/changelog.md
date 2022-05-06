@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the Square Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.0   
+**Date:** TBC
+**Description:** Major new release with breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Breaking">  
+
+    
+* Rebuilt for Vendr 2.0.0.
+
+
+</changelog-group>
+</changelog>
+
 ## v1.0.1/2   
 **Date:** 2021-10-14    
 **Description:** Bug fixes and minor enhancements 
