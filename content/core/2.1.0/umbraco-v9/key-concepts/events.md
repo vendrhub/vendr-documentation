@@ -22,7 +22,7 @@ public class MyOrderProductAddValidationHandler : ValidationEventHandlerBase<Val
 {
     public override void Validate(ValidateOrderProductAdd evt)
     {
-        if (evt.ProductReference == "MyProductRef" && evt.Quantity % 10 == 0)
+        if (evt.ProductReference == "MyProductRef" && evt.Quantity % 10 != 0)
             evt.Fail("This product can only be purchased in increments of 10");
     }
 }
