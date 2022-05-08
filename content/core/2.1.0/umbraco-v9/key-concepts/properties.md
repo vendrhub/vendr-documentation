@@ -3,7 +3,7 @@ title: Properties
 description: Order / Order Line meta data in Vendr, the eCommerce solution for Umbraco
 ---
 
-Out of the box, there is Very little information that Vendr really needs to know about a product in order for it to do it's job, however there are times when developers require an ability to store additional information against an Order / Order Line, such as the billing / shipping address of an Order, or any specific configuration details of a given Product on an Order Line.
+Out of the box, there is very little information that Vendr really needs to know about a product in order for it to do it's job, however there are times when developers require an ability to store additional information against an Order / Order Line, such as the billing / shipping address of an Order, or any specific configuration details of a given Product on an Order Line.
 
 To help facilitate this Vendr has the concept of a Properties collection on both the Order entity and the Order Line entity respectively. The Properties collection of these entities can be thought of as a general store for additional information required by an implementation, but not strictly required by Vendr itself.
 
@@ -29,7 +29,7 @@ order.RemoveProperty("propertyAlias");
 
 ````
 
- Property values can either be a `string`, or a Vendr `PropertyValue` which allows you define a value as being Server Side Only meaning it won't returned via non-server APIs or Read Only meaning it can't be updated once set.
+ Property values can either be a `string`, or a Vendr `PropertyValue` which allows you to define a value as being Server Side Only meaning it won't returned via non-server APIs or Read Only meaning it can't be updated once set.
 
  
 ````csharp
