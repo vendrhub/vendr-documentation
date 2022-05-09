@@ -11,7 +11,7 @@ Within Vendr, Calculators are small service implementations with the sole respon
 * **IOrderLineCalculator** - Responsible for calculating the price / tax rate of a given OrderLine.
 * **IOrderCalculator** - Responsible for calculating the entire Order.
 
-All Calculator services can be replaced with alternative implementations should you wish to change how Vendr performs it's calculations.
+All Calculator services can be replaced with alternative implementations should you wish to change how Vendr performs its calculations.
 
 ## Defining a custom Calculator implementation
 
