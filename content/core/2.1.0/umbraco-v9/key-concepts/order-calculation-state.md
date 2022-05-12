@@ -67,6 +67,6 @@ By using the prices from the `OrderCalculation` object you can ensure that your 
 
 <message-box type="info" heading="Top Tip">
 
-If you are performing a calculation and your values is based on another price held on an order, and you have access to an `OrderCalculation` object that isn't `null`, then **always** base your price on the `OrderCalculation` object's price values and only fall back to the order entity if there is no `OrderCalculation` available.
+If you are performing a calculation and your values are based on another price held on an order, and you have access to an `OrderCalculation` object that isn't `null`, then **always** base your price on the `OrderCalculation` object's price values and only fall back to the order entity if there is no `OrderCalculation` available.
 
 </message-box>
