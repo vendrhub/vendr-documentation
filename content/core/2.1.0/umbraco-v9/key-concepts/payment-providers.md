@@ -65,7 +65,7 @@ What follows is a generalized diagram in order to help in visualizing when each 
 
 ### Payment Management
 
-In addition to the initial payment capture flow, Payment Providers can also be set up to manage the payment post checkout, such as being able to Capture and Authorized transaction, or Refund a Captured transaction.
+In addition to the initial payment capture flow, Payment Providers can also be set up to manage the payment post checkout, such as being able to Capture an Authorized transaction, or Refund a Captured transaction.
 
 These features are optional, so are not required for Payment Provider developers to implement, however they do provide a much nicer user experience as it allows the store owner to manage payments directly in the back-office rather than having to log into the payment gateway's portal should they need to perform these types of actions.
 
