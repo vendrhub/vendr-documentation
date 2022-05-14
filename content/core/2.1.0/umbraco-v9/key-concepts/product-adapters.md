@@ -5,7 +5,7 @@ description: Converting product sources into understandable products for Vendr, 
 
 The role of a Product Adapter in Vendr is to provide an interface between a product information source (which by default will be an Umbraco node) and convert it into a standardized format such that Vendr doesn't need to be tied to that source.
 
-What his means for developers is that Product Adapters allow you to hook in alternative product information sources that may not be Umbraco node based. For example, you may hold your product information in a third party database table, and so a custom Product Adapter would provide a means for Vendr to interface with that custom data in the same way as it would the default Umbraco node data source.
+What this means for developers is that Product Adapters allow you to hook in alternative product information sources that may not be Umbraco node based. For example, you may hold your product information in a third party database table, and so a custom Product Adapter would provide a means for Vendr to interface with that custom data in the same way as it would the default Umbraco node data source.
 
 ## Example Product Adapter
 
@@ -32,7 +32,7 @@ public class MyCustomProductAdapter : IProductAdapter
 
 ````
 
-All Product Adapters implement the `IProductAdapter` interface which requires three method implementations. Two `GetProductSnapshot` methods which retrieves a Product Snapshot for either a product or product variant by reference parameters and a `TryGetProductReference` method which retrieves a product / variant reference for a product that belongs to a given `storeId` and has the given `sku`.
+All Product Adapters implement the `IProductAdapter` interface which requires three method implementations. Two `GetProductSnapshot` methods which retrieve a Product Snapshot for either a product or product variant by reference parameters and a `TryGetProductReference` method which retrieves a product / variant reference for a product that belongs to a given `storeId` and has the given `sku`.
 
 A Product Snapshot consists of the following properties in order to present a Product to Vendr in a standard way. 
 
