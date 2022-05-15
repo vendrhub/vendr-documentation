@@ -32,7 +32,7 @@ An example of displaying a Payment Form would look something like this:
 
 ````
 
-Similar in concept to Umbraco's own `Html.BeginUmbracoForm()` method, the Payment Form is rendered using a `using` statement to wrap any additional form elements you wish to add to add, such as a submit button. 
+Similar in concept to Umbraco's own `Html.BeginUmbracoForm()` method, the Payment Form is rendered using a `using` statement to wrap any additional form elements you wish to add, such as a submit button. 
 
 <message-box type="warn" heading="Important">
 
