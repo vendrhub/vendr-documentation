@@ -3,7 +3,7 @@ title: Price/Amount Adjustments
 description: Adjusting prices in Vendr, the eCommerce solution for Umbraco
 ---
 
-Quite often in a solution you may want to tweak the figures of an order, be that reducing the price of a product if a customer purchases a given amount of a product, or maybe specific customers incur an additional fee. To handle this, Vendr has the concept of Price/Amount Adjustments. What adjustments allow you to do is create a record/log of any changes that occur to a price/amount throughout the calculation process. Vendr then uses these adjustments in the calculation process to work out it's final pricing, and also provides this list of all the adjustments on the order for easy reference, making it clear exactly how the price was calculated.
+Quite often in a solution you may want to tweak the figures of an order, be that reducing the price of a product if a customer purchases a given amount of a product, or maybe specific customers incur an additional fee. To handle this, Vendr has the concept of Price/Amount Adjustments. What adjustments allow you to do is create a record/log of any changes that occur to a price/amount throughout the calculation process. Vendr then uses these adjustments in the calculation process to work out its final pricing, and also provides this list of all the adjustments on the order for easy reference, making it clear exactly how the price was calculated.
 
 Vendr has two types of adjustments:
 
@@ -20,7 +20,7 @@ public class MyPriceAdjuster : PriceAdjusterBase
     public override void ApplyPriceAdjustments(PriceAdjusterArgs args)
     {
         // Calculate Adjustment
-        // Discount adjustments should be negative in 
+        // Discount adjustments should be negative
         // where as Fee adjustments should be positive
 
         // Create a £10 discount
@@ -33,7 +33,7 @@ public class MyPriceAdjuster : PriceAdjusterBase
 }
 ````
 
-Adjusters apply adjustments to their given price they wish to affect. Adjustments are strongly typed and so each adjuster should defined their own adjustment type, providing properties to collect any relevant information for the adjustment (this "meta data" gets serialized with the adjustment as is constantly available when accessing the given adjustment).  
+Adjusters apply adjustments to their given price they wish to affect. Adjustments are strongly typed and so each adjuster should define their own adjustment type, providing properties to collect any relevant information for the adjustment (this "meta data" gets serialized with the adjustment as is constantly available when accessing the given adjustment).  
 
 ````csharp
 [Serializable]
