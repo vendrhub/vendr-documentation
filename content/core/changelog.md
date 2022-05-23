@@ -3,6 +3,27 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.1.2  
+**Date:** 2022-05-23  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added ability to change the tax class of an order line.
+* Added ability to set the number of decimal places a stock input field should accept.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed bug in stock input field formatting the number incorrectly for the current users culture ([#367](https://github.com/vendrhub/vendr/issues/367)).
+* Fixed error when saving stock due to setting property value to string `"-1"` when it expects to be the decimal `-1` ([#368](https://github.com/vendrhub/vendr/issues/368)).
+
+</changelog-group>
+</changelog>
+
 ## v2.2.0  
 **Date:** 2022-05-06  
 **Description:** Minor release with some breaking changes
