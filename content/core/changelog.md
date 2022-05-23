@@ -3,7 +3,7 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
-## v2.1.2  
+## v2.2.2  
 **Date:** 2022-05-23  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
 
