@@ -5,7 +5,7 @@ description: Changelog for the Core Vendr product
 
 ## v2.3.0  
 **Date:** 2022-06-21  
-**Description:** Minor release with new features and some breaking changes
+**Description:** Minor release with Umbraco v10 support
 
 ---  
 
