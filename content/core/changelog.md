@@ -4,7 +4,7 @@ description: Changelog for the Core Vendr product
 ---
 
 ## v2.3.1  
-**Date:** TBC  
+**Date:** 2022-06-21  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
 
 ---  
