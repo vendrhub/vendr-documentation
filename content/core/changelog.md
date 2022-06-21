@@ -13,7 +13,8 @@ description: Changelog for the Core Vendr product
 <changelog-group category="Fixed"> 
 
 * Fixed v10 regression due to Umbraco API change where saving / publishing content would cause a YSOD.
-* Fixed v10 regression due to Umbraco API change where internal index would not rebuild.
+* Fixed v10 regression due to Umbraco API change where internal index would not rebuild and so Vendr store finders would not run.
+* Fixed bug in Content based store finder due to incorrectly overriding base method.
 
 </changelog-group>
 </changelog>
