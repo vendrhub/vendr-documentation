@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.3.1  
+**Date:** TBC  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed v10 regression due to Umbraco API change where saving / publishing content would cause a YSOD.
+* Fixed v10 regression due to Umbraco API change where internal index would not rebuild.
+
+</changelog-group>
+</changelog>
+
 ## v2.3.0  
 **Date:** 2022-06-21  
 **Description:** Minor release with Umbraco v10 support
