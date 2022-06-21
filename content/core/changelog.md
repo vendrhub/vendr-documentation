@@ -3,6 +3,37 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.3.0  
+**Date:** 2022-06-21  
+**Description:** Minor release with new features and some breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added decimal place configuration to `Vendr: Price` property editor.
+* Added logging to payment callback handler.
+* Added validation events to payment capture, cancel and refund actions to allow validating whether those actions should occur or not ([#369](https://github.com/vendrhub/vendr/issues/369)).
+* Added support for default settings in payment providers and discounts rules / rewards. Can now set default values on settings Poco and these will apply during create.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Updated DB migrations to work with SQLite (v10 only).
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed v10 compatability issues.
+* Fixed order editor UI issue with bundle order lines showing the parent order line prices.
+* Fixed bug with unit price discounts being capped at a bundle order lines base price.
+* Fixed bug where deleting carts would restock items. Now only reverts an order if it has been finalized.
+* Fixed bug where Export Templates weren't being deleted ([#373](https://github.com/vendrhub/vendr/issues/373)).
+
+</changelog-group>
+</changelog>
+
 ## v2.2.1  
 **Date:** 2022-05-23  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
