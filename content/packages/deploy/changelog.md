@@ -3,6 +3,50 @@ title: Changelog
 description: Changelog for the Deploy package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.2   
+**Date:** 2022-06-29    
+**Description:** Minor release containing feature updates and bug fixes 
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added support for app settings config to ignore certain payment method settings from being transfered.
+
+</changelog-group>
+</changelog>
+
+## v2.0.1   
+**Date:** 2021-12-01    
+**Description:** Minor release containing feature updates and bug fixes 
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Registered UDI types for Umbraco v9
+
+</changelog-group>
+</changelog>
+
+
+## v2.0.0   
+**Date:** 2021-10-07    
+**Description:** Major release with breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Breaking">  
+
+* Updated Umbraco dependency of 9.0.0
+* Updated Vendr dependency of 2.0.0.
+
+</changelog-group>
+</changelog>
+
 ## v0.3.0   
 **Date:** 2021-05-10   
 **Description:** Minor release containing feature updates and bug fixes 
