@@ -3,6 +3,23 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.3.2  
+**Date:** 2022-07-06  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed v10 regression causing indexing of products / variants in lucene to fail.
+* Fixed null error in `RaiseOrderLineChangeEvents` as original Tax Class ID can be null for new order lines.
+* Fixed XSS issue in custom order table cell rendering. Now HTML escapes all user input before rendering.
+* Fixed bug on licenses dashboard now showing the Refresh button for subscription licenses.
+
+</changelog-group>
+</changelog>
+
 ## v2.3.1  
 **Date:** 2022-06-21  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
