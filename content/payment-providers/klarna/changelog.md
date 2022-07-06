@@ -4,7 +4,7 @@ description: Changelog for the Klarna Payment Provider for Vendr, the eCommerce 
 ---
 
 ## v2.0.1   
-**Date:** TBC   
+**Date:** 2022-07-06   
 **Description:** Major new release with breaking changes
 
 ---  
