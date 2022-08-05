@@ -13,7 +13,7 @@ description: Changelog for the Opayo Payment Provider for Vendr, the eCommerce s
 <changelog-group category="Fixed">  
 
     
-* Fixed bug where Opayo API connection would fail silently if missconfigured (#5)[https://github.com/vendrhub/vendr-payment-provider-opayo/issues/5].
+* Fixed bug where Opayo API connection would fail silently if missconfigured [#5](https://github.com/vendrhub/vendr-payment-provider-opayo/issues/5).
 
 
 </changelog-group>
