@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.3.3  
+**Date:** 2022-08-08  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed issue with `UmbracoStockSynchronizer` causing an exception if there is not previous data stored in the variants property editor.
+* Fixed bug in export logic where exporting multiple templates would actually just export the first template multiple times.
+* Fixes issue with `AsyncHelper` causing `AggregateException` by switching to our newer style of `AsyncHelper` from v3.
+
+</changelog-group>
+</changelog>
+
 ## v2.3.2  
 **Date:** 2022-07-06  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
