@@ -3,9 +3,25 @@ title: Changelog
 description: Changelog for the Klarna Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.2   
+**Date:** 2022-08-22   
+**Description:** Patch release with minor bug fixes / enhancements 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed bug where hard coded strings were not translatable. Strings are now advanced options in the payment provider settings.
+
+
+</changelog-group>
+</changelog>
+
 ## v2.0.1   
 **Date:** 2022-07-06   
-**Description:** Major new release with breaking changes
+**Description:** Patch release with minor bug fixes / enhancements 
 
 ---  
 
