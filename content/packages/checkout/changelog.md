@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.1.1   
+**Date:** 2022-03-01  
+**Description:** Patch release with minor bug fixes 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed issue with `IsAjaxRequest` reading `Request.Form` without checking the current request has form data and thus causing an error.
+* Updated maximum supported Umbraco versiont to v10.
+
+</changelog-group>
+</changelog>
+
 ## v2.1.0   
 **Date:** 2022-03-01  
 **Description:** Minor release with some core refactoring
