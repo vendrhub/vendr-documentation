@@ -3,6 +3,25 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.3.4  
+**Date:** 2022-08-22  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added more null checking to the `UmbracoStockSynchronizer` as the fix in 2.3.3 didn't quite fix the issue.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed regression with `AsyncHelper` causing error/hanging when attempting to send emails.
+
+</changelog-group>
+</changelog>
+
 ## v2.3.3  
 **Date:** 2022-08-08  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
@@ -12,7 +31,7 @@ description: Changelog for the Core Vendr product
 <changelog>
 <changelog-group category="Fixed"> 
 
-* Fixed issue with `UmbracoStockSynchronizer` causing an exception if there is not previous data stored in the variants property editor.
+* Fixed issue with `UmbracoStockSynchronizer` causing an exception if there is no previous data stored in the variants property editor.
 * Fixed bug in export logic where exporting multiple templates would actually just export the first template multiple times.
 * Fixes issue with `AsyncHelper` causing `AggregateException` by switching to our newer style of `AsyncHelper` from v3.
 
