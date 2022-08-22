@@ -21,7 +21,7 @@ _uowProvider.Execute(uow =>
 
 ````
 
-The anatomy of a Unit of Work then is a `using` statement, in the constructor for which we create our `uow` instance by calling the `Create()` method of the `IUnitOfWorkProvider`. Then, inside the using statement, we perform our tasks and confirm the Unit of Work as complete by calling `uow.Complete()`. If we fail to call `uow.Complete()` either due to forgetting to add the `uow.Complete()` call, or due to an exception in our code, then any write operations that occur within that code block will **NOT** be persisted to the database.
+The anatomy of a Unit of Work then is an `Execute` method call on the `IUnitOfWorkProvider` instance which accepts a delegate function with a `uow` argument. Inside the delate, we perform our tasks and confirm the Unit of Work as complete by calling `uow.Complete()`. If we fail to call `uow.Complete()` either due to forgetting to add the `uow.Complete()` call, or due to an exception in our code, then any write operations that occur within that code block will **NOT** be persisted to the database.
 
 ## Unit of Work Best Practice
 
