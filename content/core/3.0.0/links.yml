@@ -86,6 +86,10 @@
       link: /reference/vendr-core/
     - title: Vendr.Infrastructure
       link: /reference/vendr-infrastructure/
+    - title: Vendr.Persistence.Sqlite
+      link: /reference/vendr-persistence-sqlite/
+    - title: Vendr.Persistence.SqlServer
+      link: /reference/vendr-persistence-sqlserver/
     - title: Vendr.Web
       link: /reference/vendr-web/
     - title: Vendr.Umbraco
