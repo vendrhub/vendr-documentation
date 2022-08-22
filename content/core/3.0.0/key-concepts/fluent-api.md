@@ -10,7 +10,7 @@ An added side effect of having [ReadOnly and Writable entities](../readonly-and-
 Where we could perform a write operation as follows
 
 ````csharp
-using(var uow = _uowProvider.Create())
+_uowProvider.Execute(uow =>
 {
     // Fetch the currency
     var currency = _currencyService.GetCurrency(currencyId);
@@ -26,14 +26,14 @@ using(var uow = _uowProvider.Create())
 
     // Close the transaction
     uow.Complete();
-}
+});
 
 ````
 
 ...if we preferred, we could simplify this further by defining these actions fluently, chaining all of the entity methods into a succinct command sequence as follows
 
 ````csharp
-using(var uow = _uowProvider.Create())
+_uowProvider.Execute(uow =>
 {
     var currency = _currencyService.GetCurrency(currencyId)
         .AsWritable(uow)
@@ -42,7 +42,7 @@ using(var uow = _uowProvider.Create())
     _currencyService.SaveCurrency(currency);
 
     uow.Complete();
-}
+});
 
 ````
 

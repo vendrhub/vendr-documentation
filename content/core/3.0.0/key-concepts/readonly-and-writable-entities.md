@@ -18,7 +18,7 @@ The reason why we have split entities in this way is for a number of reasons, ho
 To convert a ReadOnly entity into it's Writable form, we achieve this by calling the entities `AsWritable(uow)` method, passing in a valid Unit of Work instance to perform the write operations on. Once we have a Writable entity, we can then perform the write operations we desire and persist those changes back to the database.
 
 ````csharp
-using(var uow = _uowProvider.Create())
+_uowProvider.Execute(uow =>
 {
     // Fetch the currency
     var currency = _currencyService.GetCurrency(currencyId);
@@ -34,7 +34,7 @@ using(var uow = _uowProvider.Create())
 
     // Close our transaction
     uow.Complete();
-}
+});
 
 ````
 

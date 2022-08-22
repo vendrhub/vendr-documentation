@@ -12,12 +12,12 @@ To create a unit of work will require access to Vendr's `IUnitOfWorkProvider` wh
 Once you have access to either of these entry points, you can define a Unit of Work as follows
 
 ````csharp
-using(var uow = _uowProvider.Create()) 
+_uowProvider.Execute(uow =>
 {
     // Perform your write operations here
 
     uow.Complete();
-}
+});
 
 ````
 
@@ -30,7 +30,7 @@ When using a Unit of Work it is best practice that you should perform **ALL** wr
 <tip type="good" heading="Perform all write operations in a single Unit of Work"></tip>
 
 ```csharp
-using(var uow = _uowProvider.Create()) 
+_uowProvider.Execute(uow =>
 {
     // Create a Country
     var country = Country.Create(uow, storeId, "DK", "Denmark");
@@ -43,13 +43,13 @@ using(var uow = _uowProvider.Create())
     _currencyService.Save(currency);
 
     uow.Complete();
-}
+});
 ```
 
 <tip type="bad" heading="Don't create a Unit of Work per write operation"></tip>
 
 ```csharp
-using(var uow = _uowProvider.Create()) 
+_uowProvider.Execute(uow =>
 {
     // Create a Country
     var country = Country.Create(uow, storeId, "DK", "Denmark");
@@ -57,9 +57,9 @@ using(var uow = _uowProvider.Create())
     _countryService.Save(country);
 
     uow.Complete();
-}
+});
 
-using(var uow = _uowProvider.Create()) 
+_uowProvider.Execute(uow =>
 {
     // Create a Currency
     var currency = Currency.Create(uow, storeId, "DKK", "Danish Kroner", "da-DK");
@@ -67,5 +67,5 @@ using(var uow = _uowProvider.Create())
     _currencyService.Save(currency);
 
     uow.Complete();
-}
+});
 ```
