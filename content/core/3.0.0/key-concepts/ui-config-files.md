@@ -297,7 +297,7 @@ Clicking the Additional Info `Edit` button will display an edit interface like s
 
 ![Additional Info Editor](/media/screenshots/order_additional_info_editor.png)
 
-### Custom Order Editor View
+### Custom Cart/Order Editor View
 
 If you wish to entirely replace the Cart/Order Editor view with a custom implementation you can create a Cart/Order Editor Config file with a single `view` config option which points the path of an alternative AngularJS view file to use for editing the Order.
 
