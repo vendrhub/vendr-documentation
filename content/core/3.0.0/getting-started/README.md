@@ -9,8 +9,8 @@ It is assumed that before we begin that you already have an Umbraco v9+ website 
 
 ## System Requirements
 At this time, the minimum requirements for using Vendr are as follows:
-* **Umbraco 9.0+**
-* **SQL Server Database** (CE is fine for testing, but not recommend for live deployments)
+* **Umbraco 10.0+**
+* **SQL Server Database** (SQLite is fine for testing, but not recommend for live deployments. See [Configuring SQLite support](../how-to-guides/configuring-sqlite-support/) for more details.)
 
 ## Versioning
 It's important to understanding Vendr's versioning strategy so that you can perform informed upgrades during the life of a project. For Vendr, our version numbers can be interpreted as follows **Product.Feature.Patch**.

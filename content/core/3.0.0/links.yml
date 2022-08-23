@@ -20,6 +20,8 @@
       link: /how-to-guides/
     - title: Use an Alternative Database for Vendr Tables
       link: /how-to-guides/use-an-alternative-database-for-vendr-tables/
+    - title: Configuring SQLite support
+      link: /how-to-guides/configuring-sqlite-support/
     - title: Limit Order Line Quantity
       link: /how-to-guides/limit-orderline-quantity/
 
