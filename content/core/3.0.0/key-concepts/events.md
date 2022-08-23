@@ -33,7 +33,7 @@ All Validation event handlers inherit from a base class `ValidationEventHandlerB
 
 ### Registering a Validation event handler
 
-Validation event handlers are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) using the `WithValidationEvent<TEvent>()` builder extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
+Validation event handlers are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) interface using the `WithValidationEvent<TEvent>()` builder extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
 
 
 ````csharp
@@ -98,7 +98,7 @@ All Notification event handlers inherit from a base class `NotificationEventHand
 
 ### Registering a Notification event handler
 
-Notification event handlers are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) using the `WithNotificationEvent<TEvent>()` builder extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
+Notification event handlers are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) interface using the `WithNotificationEvent<TEvent>()` builder extension method to identify the event you want to handle and then calling the `RegisterHandler<THandler>()` method to register your handler(s) for that event.
 
 
 ````csharp

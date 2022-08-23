@@ -34,7 +34,7 @@ All pipelines occur within a [Unit of Work](../unit-of-work/) and so should any 
 
 ## Registering a Pipeline task
 
-Pipeline tasks are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) using the appropriate `With{PipelineName}Pipeline()` builder extension method to identify the pipeline you want to extend and then calling the `Append<TTask>()` method to append your task onto the end of that pipeline.
+Pipeline tasks are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) interface using the appropriate `With{PipelineName}Pipeline()` builder extension method to identify the pipeline you want to extend and then calling the `Append<TTask>()` method to append your task onto the end of that pipeline.
 
 
 ````csharp

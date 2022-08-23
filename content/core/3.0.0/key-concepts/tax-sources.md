@@ -15,7 +15,7 @@ Out of the box, Vendr comes with two Tax Source Factory implementations:
 
 ## Changing the Tax Source Factory
 
-Tax Source Factories are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) using the `AddUnique<ITaxSourceFactory, TReplacementTaxSourceFactory>()` method on the `Services` property where the `TReplacementTaxSourceFactory` parameter is the Type of your replacement Tax Source Factory implementation.
+Tax Source Factories are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) interface using the `AddUnique<ITaxSourceFactory, TReplacementTaxSourceFactory>()` method on the `Services` property where the `TReplacementTaxSourceFactory` parameter is the Type of your replacement Tax Source Factory implementation.
 
 
 ````csharp

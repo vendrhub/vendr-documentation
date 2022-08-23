@@ -166,7 +166,7 @@ public interface IProductVariantSnapshot
 
 ## Registering a Product Adapter
 
-Product Adapters are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) using the `AddUnique<IProductAdapter, TReplacementAdapter>()` method on the `Services` property where the `TReplacementAdapter` parameter is the Type of our custom Product Adapter implementation.
+Product Adapters are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) interface using the `AddUnique<IProductAdapter, TReplacementAdapter>()` method on the `Services` property where the `TReplacementAdapter` parameter is the Type of our custom Product Adapter implementation.
 
 ````csharp
 public static class VendrBuilderExtensions
