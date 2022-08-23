@@ -27,7 +27,7 @@ public class Startup
 
 ## Registering Dependencies
 
-The `IVendrBuilder` interface gives you easy access to the current `IServiceCollection` and `IConfiguration` to allow you to register dependencies like you would with the [`IUmbracoBuilder` interface](../dependency-injection/#registering-dependencies) but it's primary use case would be to access Vendr's own collection builders, such as for registering validation or notification events.
+The `IVendrBuilder` interface gives you easy access to the current `IServiceCollection` and `IConfiguration` to allow you to register dependencies like you would with the [`IUmbracoBuilder` interface](../dependency-injection/#registering-dependencies) but it's primary use case would be to access Vendr's own collection builders, such as for registering validation or notification events, and any other Vendr specific configuration APIs.
 
 ````csharp
 ...
