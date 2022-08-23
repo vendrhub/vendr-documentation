@@ -41,7 +41,7 @@ The `IVendrBuilder` interface gives you easy access to the current `IServiceColl
 ...
 ````
 
-As per the [Dependency Injection docs](../dependency-injection/#registering-dependencies), whilst you can register your dependencies directly within the configuration delegate, you may prefer to group your dependencies registration code into an extension method.
+As per the [Dependency Injection docs](../dependency-injection/#registering-dependencies), whilst you can register your dependencies directly within this configuration delegate, you may prefer to group your dependencies registration code into an extension method.
 
 
 ````csharp
