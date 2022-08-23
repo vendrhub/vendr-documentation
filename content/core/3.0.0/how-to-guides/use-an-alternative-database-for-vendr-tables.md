@@ -5,7 +5,7 @@ description: How-To Guide to configure using an alternative database for the tab
 
 By default Vendr will use the same database as Umbraco to store it's data in, but as e-commerce and content management have very different database needs, it may be benefitial to house the Vendr database tables in an alternative database.
 
-To do this, you can configure a Vendr specific connection string in your app settings `ConnectionStrings` section.
+To do this, you can configure a Vendr specific connection string in your app settings `ConnectionStrings` section using the `vendrDbDSN` prefix.
 
 ````json
 {
