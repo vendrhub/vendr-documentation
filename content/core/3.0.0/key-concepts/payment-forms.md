@@ -26,7 +26,7 @@ If a customer cancels a payment mid way through the capture process and returns 
 An example of displaying a Payment Form would look something like this:
 
 ````html
-@using(Html.BeginPaymentForm(currentOrder)) {
+@using(await Html.BeginPaymentFormAsync(currentOrder)) {
     <button type="submit">Continue to Payment</button>
 }
 
