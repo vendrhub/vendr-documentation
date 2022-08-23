@@ -49,7 +49,7 @@ The following properties are supported.
 | `label` | A label to display as the table column header |
 | `align` | Sets the alignment of the column. Can be `left` (default), `center` or `right` |
 | `placeholder` | The placeholder value to display if there is now Order property value |
-| `template` | An angular template to use for rendering the property value. Defaults to `&lcub;&lcub; properties['alias'].value &rcub;&rcub;` |
+| `template` | An angular template to use for rendering the property value. Defaults to `{ { properties['alias'].value } }` |
 
 Properties configured to display in the list view will appear in order, after the cart name column.
 
