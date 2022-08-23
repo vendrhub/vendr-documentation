@@ -27,6 +27,8 @@
       link: /key-concepts/
     - title: Dependency Injection
       link: /key-concepts/dependency-injection/
+    - title: Vendr Builder
+      link: /key-concepts/vendr-builder/
     - title: Unit of Work
       link: /key-concepts/unit-of-work/
     - title: ReadOnly and Writable Entities

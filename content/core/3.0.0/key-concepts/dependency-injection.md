@@ -74,13 +74,11 @@ public static class UmbracoBuilderExtensions
 {
     public static IUmbracoBuilder AddMyDependencies(this IUmbracoBuilder builder)
     {
-        // Registering an event handler
-        builder.WithNotificationEvent<OrderSavedNotification>()
-            .RegisterHandler<MyNotificationEventHandler>();
+        // Register a singleton dependency
+        builder.Services.AddSingleton<IMySingletonService, MySingletonService>();
 
-        // Registering an event handler before another handler
-        builder.WithNotificationEvent<OrderSavedNotification>()
-            .RegisterHandlerBefore<SomeSystemEventHandler, MyNotificationEventHandler>();
+        // Register a transient dependency
+        builder.Services.AddTransient<IMyTransientService, MyTransientService>();
 
         // Return the builder to continue the chain
         return builder;

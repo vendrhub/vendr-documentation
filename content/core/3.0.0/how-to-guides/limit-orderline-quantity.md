@@ -65,12 +65,12 @@ public class OrderLineQuantityValidationHandler : ValidationEventHandlerBase<Val
 
 ## Register event handlers
 
-Finally we need to register the Vendr event handlers via an `IUmbracoBuilder` extension.
+Finally we need to register the Vendr event handlers via an `IVendrBuilder` extension.
 
 ````csharp
-public static class UmbracoBuilderExtensions
+public static class VendrBuilderExtensions
 {
-    public static IUmbracoBuilder AddEventHandlers(IUmbracoBuilder builder)
+    public static IVendrBuilder AddEventHandlers(IVendrBuilder builder)
     {
         // Register event handlers
         builder.WithValidationEvent<ValidateOrderProductAdd>()

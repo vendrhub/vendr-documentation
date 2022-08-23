@@ -71,9 +71,9 @@ Once defined, the adjuster should be registered with the DI container to enable 
 
 
 ````csharp
-public static class UmbracoBuilderExtensions
+public static class VendrBuilderExtensions
 {
-    public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
+    public static IVendrBuilder AddMyServices(IVendrBuilder builder)
     {
         // Register the price adjuster
         builder.WithPriceAdjusters()

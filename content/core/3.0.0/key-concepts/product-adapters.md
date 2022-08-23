@@ -166,12 +166,12 @@ public interface IProductVariantSnapshot
 
 ## Registering a Product Adapter
 
-Product Adapters are [registered via the IUmbracoBuilder](../dependency-injection/#registering-dependencies) using the `AddUnique<IProductAdapter, TReplacementAdapter>()` method on the `Services` property where the `TReplacementAdapter` parameter is the Type of our custom Product Adapter implementation.
+Product Adapters are [registered via the IVendrBuilder](../vendr-builder/#registering-dependencies) using the `AddUnique<IProductAdapter, TReplacementAdapter>()` method on the `Services` property where the `TReplacementAdapter` parameter is the Type of our custom Product Adapter implementation.
 
 ````csharp
-public static class UmbracoBuilderExtensions
+public static class VendrBuilderExtensions
 {
-    public static IUmbracoBuilder AddMyServices(IUmbracoBuilder builder)
+    public static IVendrBuilder AddMyServices(IVendrBuilder builder)
     {
         // Replacing the default Product Adapter implementation
         builder.Services.AddUnique<IProductAdapter, MyCustomProductAdapter>();
