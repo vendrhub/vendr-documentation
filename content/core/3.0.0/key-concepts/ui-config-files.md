@@ -1,15 +1,65 @@
 ---
-title: Order Editor Config
-description: Customizing the Order Editor interface in Vendr, the eCommerce solution for Umbraco
+title: UI Config Files
+description: Customizing the UI in Vendr, the eCommerce solution for Umbraco
 ---
 
-With Vendr, there are minimal rules about what information you are required to record about an Order, however, this does pose a problem for how we provide a User Interface for managing Orders when we don't know exactly what properties you are going to be recording.
+With Vendr, there are minimal rules about what information you are required to record about an Order, however, this does pose a problem for how we provide a User Interface for managing carts and orders when we don't know exactly what properties you are going to be recording.
 
-In order to allow this flexibility whilst still providing an ability to view and manage Orders in the back-office, Vendr's Order Editor interface make use a configuration file to map [Order/Order Line Properties](../properties/) to it's various UI elements.
+In order to allow this flexibility whilst still providing an ability to view and manage carts and orders in the back-office, Vendr supports a number of UI config files to map [Order/Order Line Properties](../properties/) to it's various UI elements.
 
-With this configuration file, you can completely customize the Order Editor interface to suit your particular needs.
+## Supported UI Config Files
 
-## Example Order Editor Config File
+The configuration files supported by Vendr are.
+
+* **cart.list.config.js** - Cart list view configuration.
+* **cart.editor.config.js** - Cart editor view configuration.
+* **order.list.config.js** - Order list view configuration.
+* **order.editor.config.js** - Order editor view configuration.
+
+<message-box type="info" heading="Fallbacks">
+
+If there are no cart config files defined, then Vendr will fallback tot he order config files.
+
+</message-box>
+
+## Assigning a UI Config File to a Store
+
+To assign a UI config file to a Store, this is done by file name convention where configs are looked for in `App_Plugins/Vendr/config` with the following file name format `{storeAlias}.{entityType}.{viewType}.config.js`. If no store specific file is found, it will fallback to the default `{entityType}.{viewType}.config.js`.
+
+## Cart/Order List Config Files
+
+With these configuration file, you can customise the columns displayed in the Cart/Order list view.
+
+### Example Cart/Order List Config File
+
+````javascript
+{
+    properties: [
+        { alias: "color", header: "Color", placeholder: "Undefined" },
+        { alias: "size", header: "Size", placeholder: "Undefined", align: "right" }
+    ]
+}
+````
+
+The following properties are supported.
+
+| Name | Description |
+| ---- | ----------- |
+| `alias` | The alias of the Order property to use |
+| `label` | A label to display as the table column header |
+| `align` | Sets the alignment of the column. Can be `left` (default), `center` or `right` |
+| `placeholder` | The placeholder value to display if there is now Order property value |
+| `template` | An angular template to use for rendering the property value. Defaults to `{{ properties['alias'].value }}` |
+
+Properties configured to display in the list view will appear in order, after the cart name column.
+
+![Order List Properties](/media/screenshots/cart_list_properties.png)
+
+## Cart/Order Editor Config Files
+
+With these configuration files, you can completely customize the Cart/Order Editor interface to suit your particular needs.
+
+### Example Cart/Order Editor Config File
 
 An example of an Order Editor config file would look something like this:
 
@@ -57,11 +107,11 @@ An example of an Order Editor config file would look something like this:
 }
 ````
 
-The Order Editor config file is broken up into a series of sections, each of which relate to a particular section of the Order Editor User Interface.
+The Cart/Order Editor config file is broken up into a series of sections, each of which relate to a particular section of the Cart/Order Editor User Interface.
 
 ### Order Line Config Options
 
-The Order Line config block configures which Order Line properties should be viewable and/or manageable within the Order Editor UI. For each Order Line Property you can provide the following options:
+The Order Line config block configures which Order Line properties should be viewable and/or manageable within the Cart/Order Editor UI. For each Order Line Property you can provide the following options:
 
 | Name | Description |
 | ---- | ----------- |
@@ -83,7 +133,7 @@ Where there are editable Order Line Properties for an Order Line, a pencil icon 
 
 ### Customer Config Options
 
-The Customer config block configures which Order properties relate to an Orders customer information. The following properties are supported.
+The Customer config block configures which Cart/Order properties relate to an Cart/Orders customer information. The following properties are supported.
 
 | Key | Description |
 | ---- | ----------- |
@@ -116,7 +166,7 @@ Clicking the Customer Details `Edit` button will display an edit interface like 
 
 ### Billing Config Options
 
-The Billing config block configures which Order properties relate to an Orders billing information. The following properties are supported.
+The Billing config block configures which Cart/Order properties relate to a Cart/Orders billing information. The following properties are supported.
 
 | Key | Description |
 | ---- | ----------- |
@@ -148,15 +198,9 @@ Clicking the Customer Details `Edit` button will display an edit interface like 
 
 ![Order Billing Address Editor](/media/screenshots/order_billing_address_editor.png)
 
-<message-box type="warn" heading="Important">
-
-It is not possible to modify an Orders billing Country once the Order has been finalized as changing the Country could affect the final cost of an Order. If a customer requires a Billing Country to be changed, the Order will need to be refunded and a new one placed.
-
-</message-box>
-
 ### Shipping Config Options
 
-The Shipping config block configures which Order properties relate to an Orders shipping information. The following properties are supported.
+The Shipping config block configures which Cart/Order properties relate to a Cart/Orders shipping information. The following properties are supported.
 
 | Key | Description |
 | ---- | ----------- |
@@ -205,19 +249,13 @@ Clicking the Customer Details `Edit` button will display an edit interface like 
 
 ![Order Shipping Address Editor](/media/screenshots/order_shipping_address_editor.png)
 
-<message-box type="warn" heading="Important">
-
-It is not possible to modify an Orders shipping Country once the Order has been finalized as changing the Country could affect the final cost of an Order. If a customer requires a Shipping Country to be changed, the Order will need to be refunded and a new one placed.
-
-</message-box>
-
-If the `sameAsBilling` toggle switch is toggled, the appropriate Order property will be toggled between the configured Properties true / false values, and the editor interface will be collapsed like so:
+If the `sameAsBilling` toggle switch is toggled, the appropriate Cart/Order property will be toggled between the configured Properties true / false values, and the editor interface will be collapsed like so:
 
 ![Order Shipping Address Editor - Same as Billing](/media/screenshots/order_shipping_address_editor_same_as_billing.png)
 
 ### Notes Config Options
 
-The Notes config block configures which Order properties relate to an Orders note information. The following properties are supported.
+The Notes config block configures which Cart/Order properties relate to a Cart/Orders note information. The following properties are supported.
 
 | Key | Description |
 | ---- | ----------- |
@@ -240,7 +278,7 @@ A fully configured Notes config block will produce an editor interface like so:
 
 ### Additional Info Config Options
 
-The Additional Info config block configures any other Order properties you wish to display in the Order editor interface in the **Additional Info** section. For each Order Property to display you can provide the following options:
+The Additional Info config block configures any other Cart/Order properties you wish to display in the Cart/Order editor interface in the **Additional Info** section. For each Order Property to display you can provide the following options:
 
 | Name | Description |
 | ---- | ----------- |
@@ -259,13 +297,9 @@ Clicking the Additional Info `Edit` button will display an edit interface like s
 
 ![Additional Info Editor](/media/screenshots/order_additional_info_editor.png)
 
-## Assigning an Order Editor Config File to a Store
+### Custom Order Editor View
 
-To assign an Order Editor Config file to a Store, this is done by file name convention where configs are looked for in `App_Plugins/Vendr/config` with the following file name format `{storeAlias}.order.editor.config.js`. If no store specific file is found, it will fallback to the default `order.editor.config.js`.
-
-## Custom Order Editor View
-
-If you wish to entirely replace the Order Editor view with a custom implementation you can create an Order Editor Config file with a single `view` config option which points the path of an alternative AngularJS view file to use for editing the Order.
+If you wish to entirely replace the Cart/Order Editor view with a custom implementation you can create a Cart/Order Editor Config file with a single `view` config option which points the path of an alternative AngularJS view file to use for editing the Order.
 
 ````javascript
 {
