@@ -5,7 +5,7 @@ description: Listening for changes within Vendr, the eCommerce solution for Umbr
 
 Much like the standard events in .NET, Vendr also has an events system to notify you when certain things happen within the application, however Vendr differs slightly in the types of events that are fired and how you register your event handlers.
 
-Events in Vendr are registered via the [`IVendrBuilder`](../vendr-builder/) interface, rather than via static event delegates. This has a number of advantages, such as being able to control the order of when event handlers are fired and it also allows us to inject dependencies into the event handlers making it a much more decoupled approach to eventing. 
+Events in Vendr are registered via the [`IVendrBuilder`](../vendr-builder/#registering-dependencies) interface, rather than via static event delegates. This has a number of advantages, such as being able to control the order of when event handlers are fired and it also allows us to inject dependencies into the event handlers making it a much more decoupled approach to eventing. 
 
 In Vendr, there are two main types of events you can create handlers for, and these are:
 
