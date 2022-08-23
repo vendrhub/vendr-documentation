@@ -3,7 +3,7 @@ title: Installation
 description: Installing Vendr, the eCommerce solution for Umbraco
 ---
 
-A change in Umbraco v9 from earlier versions is that it now [only supports NuGet packages](https://umbraco.com/blog/packages-in-umbraco-9-via-nuget/) and so this is the only way Vendr for v9 can be installed.
+A change in Umbraco v10 from earlier versions is that it now [only supports NuGet packages](https://umbraco.com/blog/packages-in-umbraco-9-via-nuget/) and so this is the only way Vendr for v10 can be installed.
 
 ## NuGet Package Installation
 
@@ -24,6 +24,9 @@ For most basic sites using a single solution/project, this should be all you nee
 * **Vendr.Common** A shared project of common, non Vendr specific patterns and helpers.
 * **Vendr.Core** The core Vendr functionality that doesn't require any infrastructure specific dependencies.
 * **Vendr.Infrastructure** Infrastructure specific project containing implementations of core Vendr functionality.
+* **Vendr.Persistence** Persistence specific project containing implementations of core Vendr persistence functionality.
+* **Vendr.Persistence.SqlServer** Persistence specific project containing implementations of core Vendr persistence functionality for SQL Server.
+* **Vendr.Persistence.Sqllite** Persistence specific project containing implementations of core Vendr persistence functionality for SQLite.
 * **Vendr.Web** The core Vendr functionality that requires a web context.
 * **Vendr.Umbraco** The Vendr functionality that requires an Umbraco dependency.
 * **Vendr.Umbraco.Web** The Vendr functionality for the Umbraco presentation layer.
