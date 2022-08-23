@@ -13,7 +13,7 @@ An example of a bare-bones Payment Provider would look something like this:
 
 ````csharp
 [PaymentProvider("my-payment-provider-alias", "My Payment Provider Name", "My Payment Provider Description")]
-public class MyPaymentProvider :  PaymentProviderBase<MyPaymentProviderSettings>
+public class MyPaymentProvider :  AsyncPaymentProviderBase<MyPaymentProviderSettings>
 {
     public MyPaymentProvider(VendrContext vendr)
         : base(vendr)
@@ -34,7 +34,7 @@ public class MyPaymentProviderSettings
 
 ````
 
-All Payment Providers inherit from a base class `PaymentProviderBase<TSettings>` where `TSettings` is the Type of a POCO model class representing the Payment Providers settings. The class must be decorated with `PaymentProviderAttribute` which defines the Payment Providers `alias`, `name` and `description`, and can also specify an `icon` to be displayed in the Vendr back-office.
+All Payment Providers inherit from a base class `AsyncPaymentProviderBase<TSettings>` where `TSettings` is the Type of a POCO model class representing the Payment Providers settings. The class must be decorated with `PaymentProviderAttribute` which defines the Payment Providers `alias`, `name` and `description`, and can also specify an `icon` to be displayed in the Vendr back-office.
 
 The settings class itself consists of a series of properties, each decorated with a `PaymentProviderSettingAttribute` defining a name, description, and possible angular editor view file which will all be used to dynamically build an editor interface for the given settings in the back-office.
 
