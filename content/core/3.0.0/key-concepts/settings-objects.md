@@ -41,3 +41,17 @@ Attributes define a property `key`, `name`, `description` to display in the UI a
 An example of a generated UI built from these properties would look something like this:
 
 ![Discount Rule UI](/media/screenshots/discount_rule_ui.png)
+
+### Default Values
+
+To define default values for a settings object, you can simply asign a value to a property in your model and Vendr will automatically fallback to that value if no explicit value is defined.
+
+````csharp
+public class MyDiscountRewardProviderSettings
+{
+    [DiscountRewardProviderSetting(Key = "title", Name = "Title", Description = "A friendly title for this item"]
+    public string Title { get; set; } = "Untitled";
+
+    ...
+}
+````
