@@ -7,7 +7,7 @@ Dependency Injection (DI) can be quite an intimidating subject, however at it's 
 
 The ability to "swap out" dependencies is a very powerful concept and is used in Vendr in a number of places to allow developers to provide alternative implementations of specific features, such as the ability to swap out the default Product Calculator to change how product prices are calculated, or to swap out the default Order Number Generator should you wish to provide an alternative order numbering strategy.
 
-Vendr makes heavy used of the dependency injection mechanism in Umbraco to manage many of it's features, so it is important to understand at the very least how to work with the registration process.
+Vendr makes heavy use of the dependency injection mechanism in Umbraco to manage many of it's features, so it is important to understand at the very least how to work with the registration process.
 
 What follows are examples of common tasks you'll need to be able to perform via the DI container in order to work effectively with Vendr, however for more detailed documentation, it is highly recommended that you read the [official Umbraco documentation on IoC and Dependency Injection](https://our.umbraco.com/documentation/reference/using-ioc/) on the Umbraco developer portal.
 
