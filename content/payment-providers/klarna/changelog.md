@@ -3,6 +3,22 @@ title: Changelog
 description: Changelog for the Klarna Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.0.3   
+**Date:** 2022-08-31   
+**Description:** Patch release with minor bug fixes / enhancements 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+    
+* Fixed bug where discounts/surcharges assumed the tax rate was that of the order resulting in a Klarna error. Tax rate is now dynamically calculated based on the cumulative adjustment amount.
+
+
+</changelog-group>
+</changelog>
+
 ## v2.0.2   
 **Date:** 2022-08-22   
 **Description:** Patch release with minor bug fixes / enhancements 

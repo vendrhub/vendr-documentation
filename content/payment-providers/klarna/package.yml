@@ -4,7 +4,7 @@ logo: klarna.svg
 type: PaymentProvider
 supportedBy: core
 
-packageVersion: 2.0.2
+packageVersion: 2.0.3
 docVersions:
   next: 
   current: 0.1.0
