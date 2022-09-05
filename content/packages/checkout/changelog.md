@@ -3,6 +3,20 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.1.2  
+**Date:** 2022-08-05  
+**Description:** Patch release with minor bug fixes 
+
+---  
+
+<changelog>
+<changelog-group category="Fixed">  
+
+* Fixed bug in Umbraco v10 when triggering an install causes an exception due to the base interface of the `IContentService` changing.
+
+</changelog-group>
+</changelog>
+
 ## v2.1.1   
 **Date:** 2022-03-01  
 **Description:** Patch release with minor bug fixes 
