@@ -3,6 +3,26 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v2.4.0  
+**Date:** 2022-08-13  
+**Description:** Minor release with additional features and bug fixes
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added support for Cart/Order list config files to enable displaying order properties in the order list view.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed bug in property editor dialog passing the `orderId` in the `storeId` config setting.
+* Fixed bug in the session manager storing the default payment method under the default country session ID.
+
+</changelog-group>
+</changelog>
+
 ## v2.3.4  
 **Date:** 2022-08-22  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
