@@ -4,11 +4,13 @@ type: Product
 description: 
 supportedBy: core
 
-packageVersion: 2.4.0
+packageVersion: 3.0.0
 docVersions:
-  next: 3.0.0
-  current: 2.1.0
+  next: 
+  current: 3.0.0
   previous: 
+  - 2.1.0
+  - 2.0.0
   - 1.8.0
   - 1.5.0
   - 1.4.0
