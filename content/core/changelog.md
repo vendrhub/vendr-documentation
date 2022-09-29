@@ -3,6 +3,64 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.1 
+**Date:** 2022-09-29  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed DB migration error due to `DF__vendrOrderLine__quantity` prevent a migration step to execute when  migrating from a v2 install.
+* Fixed bug where Azure would automatically use `System.Data.SqlClient` when it should use `Microsoft.Data.SqlClient`
+* Fixed Vendr health checks failing due to shipping method exception ([#388](https://github.com/vendrhub/vendr/issues/388)).
+* Fixed `Unit of work has already been completed` error when creating all countries from ISO country list ([#389](https://github.com/vendrhub/vendr/issues/389)).
+
+</changelog-group>
+</changelog>
+
+## v3.0.0  
+**Date:** 2022-09-21  
+**Description:** Minor release with additional features and bug fixes
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added `IVendrBuilder` concept to encapsulate Vendr's build configuration.
+* Added option SQLite support for testing purposes.
+* Added ability to store Vendr data in alternative database to Umbraco.
+* Added optomistic concurrency checks to ensure an entity hasn't changed since the last save.
+* Added databased indexes on all `storeId` and `orderId` columns to aid performance.
+* Added async support to `BeginPaymentForm` extension.
+* Added support for bundle base price adjustments.
+* Added new `BundleOrderLine` and `BundledOrderLine` entities for strongly typed access to bundle specific features.
+* Added new `IsBundle` and `GetBundles` methods to make working with bundles easier.
+* Added default values support to payment provider / discount settings objects.
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+* Changed Umbraco dependency persistence layer for our own implementation.
+* Changed Unit of Work to use an `Execute` method rather than using the `Create` method in a using statement.
+* Changed `AsWritable` to automatically fetch the latest entity from the database instead of copying the in memory state.
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Fixed issue where reverting a cart would revert stock levels when this should only occur for finalized orders.
+
+</changelog-group>
+<changelog-group category="Breaking"> 
+
+* Dropped Umbraco v8 and v9 support
+* Retargeted for Umbraco v10+
+
+</changelog-group>
+</changelog>
+
 ## v2.4.0  
 **Date:** 2022-08-13  
 **Description:** Minor release with additional features and bug fixes
