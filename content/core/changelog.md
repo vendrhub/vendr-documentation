@@ -3,6 +3,24 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.2
+**Date:** 2022-10-11  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed issue when deleting shipping method allowed countries causing an error due to them referencing a `paymentMethodId` in their SQL statements rather than `shippingMethodId`.
+* Fixed issue with NPoco `ExecuteScalar` not handling Guid conversions.
+* Fixed bug in order list not pulling back child entities correctly due to an inner join having it's order by clause removed causing a miss-match of orders being fetched.
+* Fixed issue where joins with order by's would throw an exception if there wasn't an offset applied to the query. We now always apply an offset, even if one isn't necesarry.
+* Fixed bug where `BeginPaymentForm` would overwrite the customer reference if one was already set. It now only sets the customer reference if one isn't already present.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.1 
 **Date:** 2022-09-29  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
@@ -57,6 +75,20 @@ description: Changelog for the Core Vendr product
 
 * Dropped Umbraco v8 and v9 support
 * Retargeted for Umbraco v10+
+
+</changelog-group>
+</changelog>
+
+## v2.4.1
+**Date:** 2022-10-11  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed bug where `BeginPaymentForm` would overwrite the customer reference if one was already set. It now only sets the customer reference if one isn't already present.
 
 </changelog-group>
 </changelog>
