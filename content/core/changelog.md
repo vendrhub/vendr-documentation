@@ -3,6 +3,21 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.3
+**Date:** 2022-10-17  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed YSOD when using dictionary input fields due to resolution of a scoped service from a singleton ([#392](https://github.com/vendrhub/vendr/issues/392)).
+* Fixed YSOD when generating models builder models in Umbraco 10.3.0 RC due to changes in block editor base classes ([#393](https://github.com/vendrhub/vendr/issues/393)).
+
+</changelog-group>
+</changelog>
+
 ## v3.0.2
 **Date:** 2022-10-11  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
