@@ -3,6 +3,32 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.4
+**Date:** 2022-11-08  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added"> 
+
+* Added Umbraco marketplace tag to main NuGet package.
+
+</changelog-group>
+<changelog-group category="Changed"> 
+
+* Check `X-Forwarded-Host` when determining the base URL for payment provider links.
+* Re-cache the order state if the order changes during save events.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed error when order properties are searched when not in the correct `alias:value` format. Now ignores values not in this format.
+* Fixed the tags order filter not actually taking supplied tag values into account.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.3
 **Date:** 2022-10-17  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
