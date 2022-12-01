@@ -3,6 +3,33 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.5
+**Date:** 2022-12-01  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added"> 
+
+* Added readme for new Umbraco marketplace.
+
+</changelog-group>
+<changelog-group category="Changed"> 
+
+* Changed the product adapeter so that it only searches for published products.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed issue where calls to entity services inside event handlers didn't have the most up to date entity because the temporary cache wasn't pushed back before the event handlers were called.
+* Fixed the telemetry data service failing in Umbraco v11 due it it using an obsolete constructor that got removed in v11.
+* Fixed the product adapeter search not working for multi word phrases.
+* Fixed bug with price property editor erroring if there is no fraction config.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.4
 **Date:** 2022-11-08  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
