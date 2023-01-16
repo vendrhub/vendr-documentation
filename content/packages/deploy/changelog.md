@@ -3,6 +3,25 @@ title: Changelog
 description: Changelog for the Deploy package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v3.1.0   
+**Date:** 2023-01-16    
+**Description:** Minor release targeted with some breaking changes
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+* Added ability to ignore payment provider settings on import as well as export.
+
+</changelog-group>
+<changelog-group category="Breaking">  
+
+* Retargeted for Umbraco v11+
+
+</changelog-group>
+</changelog>
+
 ## v3.0.0   
 **Date:** 2022-09-29    
 **Description:** Major release targeted for Vendr v3
@@ -15,7 +34,7 @@ description: Changelog for the Deploy package for Vendr, the eCommerce solution 
 * Added ability to deploy Product Attributes + Product Attribute Presets through the transfer queue.
 
 </changelog-group>
-<changelog-group category="Added">  
+<changelog-group category="Changed">  
 
 * Most dependency checks now just check if the entity exists rather than for exact matches.
 
