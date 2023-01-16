@@ -3,6 +3,26 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.6
+**Date:** 2023-01-16  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added"> 
+
+* Added extra `CalculatePrice` extension method to `IProductSnapshot` that can accept a current order as reference to save on processing if a current order is known to exist.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Product Attribute value sort order is now correctly honored.
+* Fixed entity controllers actions not working for users with only `Commerce` role assigned. We missunderstood how the authorize attribute works as we assumed it enforced them as an OR opporation, but it appears it enforces them as an AND opperation and so we now have an explicit `SettingsOrCommerce` section policy.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.5
 **Date:** 2022-12-01  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
