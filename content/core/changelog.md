@@ -3,6 +3,25 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.7
+**Date:** 2023-02-07  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added"> 
+
+* Added extra logging around payment request handler failures.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed error when processing payment requests and an order number can't be found. Now returns 200 status to allow webhook notification to stop, but logs the error locally.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.6
 **Date:** 2023-01-16  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
