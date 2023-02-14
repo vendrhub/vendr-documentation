@@ -3,6 +3,25 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.8
+**Date:** 2023-02-14  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Added"> 
+
+* Added debug symbols to NuGet packages.
+
+</changelog-group>
+<changelog-group category="Fixed"> 
+
+* Fixed session manager incorrectly storing the default shipping method in the default shipping country cookie value ([#404](https://github.com/vendrhub/vendr/issues/404)).
+
+</changelog-group>
+</changelog>
+
 ## v3.0.7
 **Date:** 2023-02-07  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
