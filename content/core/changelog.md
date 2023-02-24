@@ -3,6 +3,20 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.10
+**Date:** 2023-02-24  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed issue where discount codes wouldn't persist changes when being updated.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.8/9
 **Date:** 2023-02-14  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
