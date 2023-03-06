@@ -3,6 +3,27 @@ title: Changelog
 description: Changelog for the Stripe Payment Provider for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v2.1.0   
+**Date:** 2022-03-06   
+**Description:** Minor update with Stripe SDK dependency upgrade
+
+---  
+
+<changelog>
+<changelog-group category="Added">  
+
+    
+* Added Locale to Stripe order for localizing Stripe UI / emails.
+
+
+</changelog-group>
+<changelog-group category="Changed">  
+
+*  Updated Stripe SDK dependency to v41 ([#12](https://github.com/vendrhub/vendr-payment-provider-stripe/pull/12)).
+
+</changelog-group>
+</changelog>
+
 ## v2.0.1   
 **Date:** 2021-10-18   
 **Description:** Bug fixes and minor enhancements 
