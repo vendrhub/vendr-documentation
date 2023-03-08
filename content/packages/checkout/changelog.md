@@ -3,6 +3,41 @@ title: Changelog
 description: Changelog for the Checkout package for Vendr, the eCommerce solution for Umbraco v8+
 ---
 
+## v3.1.0  
+**Date:** 2023-03-08  
+**Description:** Minor version release
+
+---  
+
+<changelog>
+<changelog-group category="Updated">  
+
+* Vendr Checkout composer is now set to compose after the Vendr composer.
+* Vendr Checkout now compiled against Umbraco v11 and .NET 7
+
+</changelog-group>
+<changelog-group category="Fixed">  
+
+* Vendr Checkout confirmation email showing payment/shipping fees with TAX when all other prices are without TAX.
+* Vendr Checkout confirmation email incorrectly showing payment country in place of shipping country.
+
+</changelog-group>
+</changelog>
+
+## v3.0.0  
+**Date:** 2022-10-05  
+**Description:** Major version release
+
+---  
+
+<changelog>
+<changelog-group category="Updated">  
+
+* Updated to use Vendr v3 APIs.
+
+</changelog-group>
+</changelog>
+
 ## v2.1.2  
 **Date:** 2022-08-05  
 **Description:** Patch release with minor bug fixes 
