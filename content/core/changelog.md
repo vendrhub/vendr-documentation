@@ -3,6 +3,28 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.11
+**Date:** 2023-03-22  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed bug where order line quantities were being multipled by 10 due to culture related issues ([#405](https://github.com/vendrhub/vendr/issues/405)).
+* Fixed bug Vendr tree would vanish if installed with Umbraco Workflow due to controllers having the same class name. All Vendr trees have now been prefixed with `Vendr` ([#408](https://github.com/vendrhub/vendr/issues/408)).
+* Fixed bug where date based order advanced filters used UTC time when all other front end dates were in local time. Vendr now converts the dates to UTC before applying the filters ([#406](https://github.com/vendrhub/vendr/issues/406)).
+
+</changelog-group>
+<changelog-group category="Changed"> 
+
+* Changed the default product adapter to also search child variants names, not just SKUs.
+* Changed the multi-variants property editor to construct an SKU from the parent node if the variant node doesn't have an SKU defined.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.10
 **Date:** 2023-02-24  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
