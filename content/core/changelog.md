@@ -3,6 +3,27 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.12
+**Date:** 2023-06-16  
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed bug where price property editor wouldn't allow zero decimal places.
+* Fixed bug with hyphen parsing in back office composite ID's for non-english languages.
+    
+</changelog-group>
+<changelog-group category="Changed"> 
+
+* Fallback to fetching product name from database for top selling products widget if the name can't be returned from the product adapter
+* Move the BasePrice property from BundleOrderLine to OrderLine to allow base price discounts on all order line types
+
+</changelog-group>
+</changelog>
+
 ## v3.0.11
 **Date:** 2023-03-22  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
