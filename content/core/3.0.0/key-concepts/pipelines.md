@@ -40,7 +40,7 @@ Pipeline tasks are [registered via the IVendrBuilder](../vendr-builder/#register
 ````csharp
 public static class VendrBuilderExtensions
 {
-    public static IVendrBuilder AddMyPipelineTasks(IVendrBuilder builder)
+    public static IVendrBuilder AddMyPipelineTasks(this IVendrBuilder builder)
     {
         // Add our custom pipeline tasks
         builder.WithSendEmailPipeline()
@@ -57,7 +57,7 @@ You can also control the order of when Pipeline tasks run, before or after anoth
 ````csharp
 public static class VendrBuilderExtensions
 {
-    public static IVendrBuilder AddMyPipelineTasks(IVendrBuilder builder)
+    public static IVendrBuilder AddMyPipelineTasks(this IVendrBuilder builder)
     {
         // Register AddCustomAttachmentTask to execute before the SendSmtpEmail handler
         builder.WithSendEmailPipeline()
