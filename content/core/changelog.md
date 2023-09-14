@@ -3,6 +3,27 @@ title: Changelog
 description: Changelog for the Core Vendr product
 ---
 
+## v3.0.13
+**Date:** 2023-09-13 
+**Description:** Patch release with minor bug fixes and non-breaking enhancements
+
+---  
+
+<changelog>
+<changelog-group category="Fixed"> 
+
+* Fixed where VendrVariantsEditorExamineValueOptimizer broke after Umbraco 11.3 changed how they indexed block content. Variants property editor explicitly sets the PropertyIndexValueFactory to DefaultPropertyIndexValueFactory to maintain previous functionality.
+* Fixed default product adapter not falling back to parent product node for details when using child variants.
+* Fixes where multi-variant product data fetching failed when the multi-variant was on a node linked via a `productSource` property. Product adapeter now correctly follows a `productSource` if one exists.
+    
+</changelog-group>
+<changelog-group category="Changed"> 
+
+* Updated `productSource` resolution code to check for both `IPublishedContent` and `IEnumerable<IPublishedContent>` as it depends on the picker used what it's return type is.
+
+</changelog-group>
+</changelog>
+
 ## v3.0.12
 **Date:** 2023-06-16  
 **Description:** Patch release with minor bug fixes and non-breaking enhancements
