@@ -25,7 +25,7 @@ public ProductVariantCollection(Guid storeId, IList<ProductVariantItem> list)
 
 | Parameter | Description |
 | --- | --- |
-| storeId | The StoreId the product variants belogn to |
+| storeId | The StoreId the product variants belong to |
 | list | The list to wrap. |
 
 

@@ -195,7 +195,7 @@ public void SetStock(string productReference, string productVariantReference, de
 
 #### TryGetStock (1 of 2)
 
-Trys to get the stock level of a given product
+Tries to get the stock level of a given product
 
 ```csharp
 public bool TryGetStock(string productReference, out decimal? stock)

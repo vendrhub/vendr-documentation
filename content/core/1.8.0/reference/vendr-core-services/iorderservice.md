@@ -294,7 +294,7 @@ public PagedResult<OrderReadOnly> SearchOrders(IQuerySpecification<OrderReadOnly
 | Parameter | Description |
 | --- | --- |
 | query | The query specification to perform |
-| sort | The sort order specification describinng the sort order in which to return the results |
+| sort | The sort order specification describing the sort order in which to return the results |
 | currentPage | The page of results of which to retrieve |
 | itemsPerPage | The number of items per page to return |
 
@@ -344,7 +344,7 @@ public PagedResult<OrderReadOnly> SearchOrders(
 | Parameter | Description |
 | --- | --- |
 | query | The factory method to generate the query specification to perform |
-| sort | The factory method to generate the sort order specification describinng the sort order in which to return the results |
+| sort | The factory method to generate the sort order specification describing the sort order in which to return the results |
 | currentPage | The page of results of which to retrieve |
 | itemsPerPage | The number of items per page to return |
 
